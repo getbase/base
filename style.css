@@ -20,16 +20,81 @@ h4 {font-size: 1.692em; margin-bottom: 4px;}
 h5 {font-size: 1.384em; margin-bottom: 2px;}
 h6 {font-size: 1.076em;}
 
-/* Content Tags */
-strong, b {font-weight: bold;}
-i, em {font-style: italic;}
+/* Content Elements */
+.content p {}
+.content strong, .content b {font-weight: bold;}
+.content i, .content em {font-style: italic;}
+.content img {}
+.content hr {border: 0; background: none; outline: 0;}
+.content small {}
+.content span {}
 
-ul {list-style: none outside;}
-ol {list-style: decimal outside;}
+/* Content Links */
+.content a {color: #c00;}
+.content a:hover {text-decoration: none;}
+.content a:visited {color: #000;}
+.content a:active {margin-top: 3px;}
+
+/* List Items */
+.content ul {list-style: none outside;}
+.content ol {list-style: decimal outside;}
+
+
+/* Captions, Quotes and Stand Outs */
+.content aside {}
+.content blockquote {}
+.content q {}
+.content caption {}
+.content cite {}
+.content pre {}
+
+.content address {}
+
+/* Form and Elements */
+.content form {}
+.content legend {}
+.content fieldset {}
+.content label {}
+.content input {}
+.content select {}
+.content optgroup {}
+.content option {}
+.content textarea {}
+.content button {}
+
+/* Code Blocks */
+.content code {}
+.content kbd {}
+.content keygen {}
+.content samp {}
+
+
+/* Definition List */
+.content dl {}
+.content dd {}
+.content dt {}
+
+
+/* Misc. Tags */
+.content del {}
+.content dfn {}
+.content ins {}
+
+.content sub {}
+.content sup {}
+
+/* Tables */
+.content table {}
+.content thead {}
+.content th {}
+
+.content tbody {}
+.content tr {}
+.content td {}
 
 
 /* Rows and Columns */
-.content {display: table-cell; float: none;}
+.content {display: table-cell; float: none; position: relative;}
 .col.one {width: 8.333333333333%; /* this percent is approximately 80px of the base 960px grid */}
 .col.two {width: 16.666666666667%; /* this percent is approximately 160px of the base 960px grid */}
 .col.three {width: 25%; /* this percent is approximately 240px of the base 960px grid */}
@@ -91,7 +156,8 @@ html .accessibility {display: none;}
 }
 
 /* Accessibility (For Screen Readers) */
-.hide.focusable:active, .hide.focusable:focus {height: auto; overflow: visible; position: static; width: auto; text-indent: 0px; display: block; background: #000; color: #fff; text-decoration: none; outline: 0;}
+.hide.focusable:active,
+.hide.focusable:focus {height: auto; overflow: visible; position: static; width: auto; text-indent: 0px; display: block; background: #000; color: #fff; text-decoration: none; outline: 0;}
 
 /* General Classes */
 .left, .col {float: left;}
