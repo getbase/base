@@ -49,8 +49,8 @@ ol {list-style: decimal outside;}
 .push-twenty-before {margin-left: 2.083333333333%; /* this percent is approximately a 20px left margin */}
 .push-thirty-after {margin-right: 3.125%; /* this percent is approximately a 30px right margin */}
 .push-thirty-before {margin-left: 3.125%; /* this percent is approximately a 30px left margin */}
-.push-fourty-after {margin-right: 4.166666666667%; /* this percent is approximately a 40px right margin */}
-.push-fourty-before {margin-left: 4.166666666667%; /* this percent is approximately a 40px left margin */}
+.push-forty-after {margin-right: 4.166666666667%; /* this percent is approximately a 40px right margin */}
+.push-forty-before {margin-left: 4.166666666667%; /* this percent is approximately a 40px left margin */}
 
 .padding-ten {padding: 10px;}
 .padding-twenty {padding: 20px;}
@@ -70,8 +70,8 @@ html .body {width: 740px;}
 /* Mobile Layout */
 @media only screen and (min-width: 320px) and (max-width: 767px) {
 html .body {width: 100%; padding: 0;}
-html .row .col {float: none; width: 100%;}
-html .content {display: block;}
+html .row .col, html .row .col.right, html .row .col.left {float: none; width: 100%; margin: 0;}
+html .content {display: block; width: 100%;}
 
 /* Begin Remove of Additional Styling (for Demo Purposes) */
 html .content {background: #eee;} html .col {background: #ccc;}
@@ -95,6 +95,7 @@ html .accessibility {display: none;}
 
 /* General Classes */
 .left, .col {float: left;}
+.right {float: right;}
 .right {float: right;}
 .hide {text-align: -9999em; position: absolute; overflow: hidden; width: 1px; height: 1%;}
 .block {display: block;}
