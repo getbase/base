@@ -94,7 +94,8 @@ h6 {font-size: 1.076em;}
 
 
 /* Rows and Columns */
-.content {display: table-cell; float: none; position: relative;}
+.content {position: relative;}
+.flexible {display: table-cell; float: none;}
 .col.one {width: 8.333333333333%; /* this percent is approximately 80px of the base 960px grid */}
 .col.two {width: 16.666666666667%; /* this percent is approximately 160px of the base 960px grid */}
 .col.three {width: 25%; /* this percent is approximately 240px of the base 960px grid */}
@@ -169,4 +170,4 @@ html .accessibility {display: none;}
 
 /* Clear */
 .clear:before, .row:before, .clear:after, .row:after {content:""; display:table;}
-.clear:after, .row:after {clear:both;} .clear, .row, .content-block {zoom:1;}
+.clear:after, .row:after {clear:both;} .clear, .row, .flexible {zoom:1;}
