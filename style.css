@@ -5,10 +5,13 @@
 */
 
 /* Global Resets */
-html, body, div, span, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp,small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure,.footer, .header, hgroup, menu, .nav, section, summary,time, mark, audio, video {margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline;}
+html, body, div, span, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp,small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure,.footer, .header, hgroup, menu, .nav, section, summary, time, mark, audio, video {margin: 0; padding: 0; border: 0; font: inherit;}
 
-body {font: normal 13px/1.231 arial, helvetica, clean, sans-serif;}
+html {font-size: 100%;}
+body {font-size: 81.3%; /* 13px */ font-family: arial, helvetica, clean, sans-serif; line-height: 1.231;}
 .body {width: 960px; padding: 10px; margin: 0 auto; color: #000;}
+
+ul, ol {list-style: none;}
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
@@ -157,14 +160,14 @@ html .accessibility {display: none;}
 }
 
 /* Accessibility (For Screen Readers) */
-.hide.focusable:active,
-.hide.focusable:focus {height: auto; overflow: visible; position: static; width: auto; text-indent: 0px; display: block; background: #000; color: #fff; text-decoration: none; outline: 0;}
+.offscreen.focusable:active,
+.offscreen.focusable:focus {height: auto; overflow: visible; position: static; width: auto; text-indent: 0px; display: block; background: #000; color: #fff; text-decoration: none; outline: 0;}
 
 /* General Classes */
 .left, .col {float: left;}
 .right {float: right;}
 .right {float: right;}
-.hide {text-align: -9999em; position: absolute; overflow: hidden; width: 1px; height: 1%;}
+.offscreen {text-align: -9999em; position: absolute; overflow: hidden; width: 1px; height: 1%;}
 .block {display: block;}
 .none {display: none;}
 
