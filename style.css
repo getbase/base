@@ -1,7 +1,7 @@
 /*
 	Base Stylesheet - Copyright 2011 - 2012
 	Author - Matthew Hartman (www.matthewhartman.com.au)
-	Version - 1.0 (Last Update: 17th January, 2012)
+	Version - 1.0 (Last Update: 18th January, 2012)
 */
 
 /* Global Resets */
@@ -112,14 +112,14 @@ h6 {font-size: 1.076em;}
 .eleven {width: 91.666666666667%; /* this percent is approximately 880px of the base 960px grid */}
 .twelve {width: 100%; /* this percent is approximately 960px of the base 960px grid */}
 
-.push-ten-after {margin-right: 1.041666666667%; /* this percent is approximately a 10px right margin */}
-.push-ten-before {margin-left: 1.041666666667%; /* this percent is approximately a 10px left margin */}
-.push-twenty-after {margin-right: 2.083333333333%; /* this percent is approximately a 20px right margin */}
-.push-twenty-before {margin-left: 2.083333333333%; /* this percent is approximately a 20px left margin */}
-.push-thirty-after {margin-right: 3.125%; /* this percent is approximately a 30px right margin */}
-.push-thirty-before {margin-left: 3.125%; /* this percent is approximately a 30px left margin */}
-.push-forty-after {margin-right: 4.166666666667%; /* this percent is approximately a 40px right margin */}
-.push-forty-before {margin-left: 4.166666666667%; /* this percent is approximately a 40px left margin */}
+.push-ten {margin-right: 1.041666666667%; /* this percent is approximately a 10px right margin */}
+.pull-ten {margin-left: 1.041666666667%; /* this percent is approximately a 10px left margin */}
+.push-twenty {margin-right: 2.083333333333%; /* this percent is approximately a 20px right margin */}
+.pull-twenty {margin-left: 2.083333333333%; /* this percent is approximately a 20px left margin */}
+.push-thirty {margin-right: 3.125%; /* this percent is approximately a 30px right margin */}
+.pull-thirty {margin-left: 3.125%; /* this percent is approximately a 30px left margin */}
+.push-forty {margin-right: 4.166666666667%; /* this percent is approximately a 40px right margin */}
+.pull-forty {margin-left: 4.166666666667%; /* this percent is approximately a 40px left margin */}
 
 .padding-ten {padding: 10px;}
 .padding-twenty {padding: 20px;}
@@ -140,7 +140,7 @@ html .notablet {display: none;}
 html body, html .body {max-width: 100%; padding: 0; margin: 0;}
 
 .one, .two, .three, .four, .five, .six, .seven, .eight, .nine, .ten, .eleven, .twelve {width: 100%;}
-.push-ten-after, .push-ten-before, .push-twenty-after, .push-twenty-before, .push-thirty-after, .push-thirty-before, .push-forty-after, .push-forty-before {margin: 0;}
+.push-ten, .pull-ten, .push-twenty, .pull-twenty, .push-thirty, .pull-thirty, .push-forty, .pull-forty {margin: 0;}
 
 html .col, html .left, html .right {float: none;}
 html .content {display: block; width: 100%;}
