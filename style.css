@@ -8,8 +8,7 @@
 html, body, div, span, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp,small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure,.footer, .header, hgroup, menu, .nav, section, summary, time, mark, audio, video {margin: 0; padding: 0; border: 0; font: inherit;}
 
 html {font-size: 100%;}
-body {font-size: 81.3%; /* 13px */ font-family: arial, helvetica, clean, sans-serif; line-height: 1.231;}
-.body {width: 960px; padding: 10px; margin: 0 auto; color: #000;}
+body {font-size: 81.3%; /* 13px */ font-family: arial, helvetica, clean, sans-serif; line-height: 1.231; background: url(images/bg.png); min-width: 320px;}
 
 ul, ol {list-style: none;}
 
@@ -97,6 +96,7 @@ h6 {font-size: 1.076em;}
 
 
 /* Rows and Columns */
+.row {max-width: 960px; margin: 0 auto; padding: 0 20px;}
 .content {position: relative;}
 .flexible {display: table-cell; float: none;}
 .one {width: 8.333333333333%; /* this percent is approximately 80px of the base 960px grid */}
@@ -126,35 +126,27 @@ h6 {font-size: 1.076em;}
 .padding-thirty {padding: 30px;}
 
 
-/* Desktop Layout */
 
 
 /* Tablet Layout */
-
 @media only screen and (min-width: 700px) and (max-width: 959px) {
-html body, html .body {width: 100%; padding: 0; margin: 0;}
+html body, html .body {max-width: 959px; padding: 0; margin: 0;}
+html .notablet {display: none;}
 }
 
 
 /* Mobile Layout */
 @media only screen and (min-width: 320px) and (max-width: 699px) {
-html body, html .body {width: 100%; padding: 0; margin: 0;}
-.one, .two, .three, .four, .five, .six, .seven, .eight, .nine, .ten, .eleven, .twelve {width: 100%;}
+html body, html .body {max-width: 100%; padding: 0; margin: 0;}
 
-html .row .col, html .row .col.right, html .row .col.left {float: none; width: 100%; margin: 0;}
+.one, .two, .three, .four, .five, .six, .seven, .eight, .nine, .ten, .eleven, .twelve {width: 100%;}
+.push-ten-after, .push-ten-before, .push-twenty-after, .push-twenty-before, .push-thirty-after, .push-thirty-before, .push-forty-after, .push-forty-before {margin: 0;}
+
+html .col, html .left, html .right {float: none;}
 html .content {display: block; width: 100%;}
 
 html .nophone {display: none;}
-
-/* Begin Remove of Additional Styling (for Demo Purposes) */
-html .content {background: #eee;} html .col {background: #ccc;}
-html .row {margin: 0; border: 0;}
-/* End Remove of Additionl Styling (for Demo Purposes) */
 }
-
-/* Begin Remove of Additional Styling (for Demo Purposes) */
-.row {margin: 5px 0; border: 1px solid #ccc;}
-/* End Remove of Additionl Styling (for Demo Purposes) */
 
 /* Print Stylesheet */
 @media print {
@@ -178,3 +170,8 @@ html .accessibility {display: none;}
 /* Clear */
 .clear:before, .row:before, .clear:after, .row:after {content:""; display:table;}
 .clear:after, .row:after {clear:both;} .clear, .row, .flexible {zoom:1;}
+
+/* Begin Remove of Additional Styling (for Demo Purposes) */
+html .content {background: #eee;} html .col {background: #ccc;}
+html .row {margin: 0; border: 0;}
+/* End Remove of Additionl Styling (for Demo Purposes) */
