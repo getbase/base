@@ -1,5 +1,28 @@
-/*
-	Base - Copyright 2011 - 2012
-	Author - Matthew Hartman (www.matthewhartman.com.au)
-	Version - 1.0 (Last Update: 22nd January, 2012)
-*/
+Welcome to Base
+===============
+
+Base is a super simple, responsive framework designed to work for mobile devices, tablets, netbooks and desktop computers. It's built with accessibility in mind and doesn't rely on any javascript and only weighs in at under 4kb! (minified)
+
+It includes a 12-column grid with some base styles for headings, content, links, tables, blockquotes and much more.
+
+Feel free to clone the repo /or give feedback to me on twitter (@hartmanmatthew) and most importantly, have fun using Base!
+
+
+Repo Contents
+=============
+
+· readme
+· index.html - An example page with Base in action
+· style.css - Base stylesheets
+
+Base was built by Matthew Hartman (@hartmanmatthew), a passionate front end developer based in Melbourne, Australia.
+
+
+MIT Open Source License
+=======================
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
