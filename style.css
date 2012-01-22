@@ -179,7 +179,7 @@ html .accessibility {display: none;}
 .block {display: block;}
 .none {display: none;}
 
-/* Clear */
+/* Nicolas Gallagher's Micro Clearfix */
 .clear:before, .section:before, .clear:after, .section:after {content:""; display:table;}
 .clear:after, .section:after {clear:both;} .clear, .section, .flexible {zoom:1;}
 
