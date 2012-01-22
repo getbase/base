@@ -1,7 +1,7 @@
 /*
 	Base Stylesheet - Copyright 2011 - 2012
 	Author - Matthew Hartman (www.matthewhartman.com.au)
-	Version - 1.0 (Last Update: 18th January, 2012)
+	Version - 1.0 (Last Update: 22nd January, 2012)
 */
 
 /* Global Resets */
@@ -95,8 +95,9 @@ h6 {font-size: 1.076em;}
 .content td {}
 
 
-/* Rows and Columns */
-.row {max-width: 960px; margin: 0 auto; padding: 0 20px;}
+/* sections and Columns */
+/* sections and Columns */
+.section {min-width: 280px; max-width: 960px; margin: 0 auto; padding: 0 20px;}
 .content {position: relative;}
 .flexible {display: table-cell; float: none;}
 .one {width: 8.333333333333%; /* this percent is approximately 80px of the base 960px grid */}
@@ -112,20 +113,31 @@ h6 {font-size: 1.076em;}
 .eleven {width: 91.666666666667%; /* this percent is approximately 880px of the base 960px grid */}
 .twelve {width: 100%; /* this percent is approximately 960px of the base 960px grid */}
 
-.push-ten {margin-right: 1.041666666667%; /* this percent is approximately a 10px right margin */}
-.pull-ten {margin-left: 1.041666666667%; /* this percent is approximately a 10px left margin */}
-.push-twenty {margin-right: 2.083333333333%; /* this percent is approximately a 20px right margin */}
-.pull-twenty {margin-left: 2.083333333333%; /* this percent is approximately a 20px left margin */}
-.push-thirty {margin-right: 3.125%; /* this percent is approximately a 30px right margin */}
-.pull-thirty {margin-left: 3.125%; /* this percent is approximately a 30px left margin */}
-.push-forty {margin-right: 4.166666666667%; /* this percent is approximately a 40px right margin */}
-.pull-forty {margin-left: 4.166666666667%; /* this percent is approximately a 40px left margin */}
+.push-one {margin-right: 1.041666666667%; /* this percent is approximately a 10px right margin */}
+.pull-one {margin-left: 1.041666666667%; /* this percent is approximately a 10px left margin */}
+.push-two {margin-right: 2.083333333333%; /* this percent is approximately a 20px right margin */}
+.pull-two {margin-left: 2.083333333333%; /* this percent is approximately a 20px left margin */}
+.push-three {margin-right: 3.125%; /* this percent is approximately a 30px right margin */}
+.pull-three {margin-left: 3.125%; /* this percent is approximately a 30px left margin */}
+.push-four {margin-right: 4.166666666667%; /* this percent is approximately a 40px right margin */}
+.pull-four {margin-left: 4.166666666667%; /* this percent is approximately a 40px left margin */}
+.push-five {margin-right: 5.208333333333%; /* this percent is approximately a 50px right margin */}
+.pull-five {margin-left: 5.208333333333%; /* this percent is approximately a 50px left margin */}
+
+.push-one-offset {margin-right: 10.416666666667%; /* this percent is approximately a 10px right margin */}
+.pull-one-offset {margin-left: 10.416666666667%; /* this percent is approximately a 10px left margin */}
+.push-two-offset {margin-right: 20.833333333333%; /* this percent is approximately a 20px right margin */}
+.pull-two-offset {margin-left: 20.833333333333%; /* this percent is approximately a 20px left margin */}
+.push-three-offset {margin-right: 31.25%; /* this percent is approximately a 30px right margin */}
+.pull-three-offset {margin-left: 31.25%; /* this percent is approximately a 30px left margin */}
+.push-four-offset {margin-right: 41.66666666667%; /* this percent is approximately a 40px right margin */}
+.pull-four-offset {margin-left: 41.66666666667%; /* this percent is approximately a 40px left margin */}
+.push-five-offset {margin-right: 52.08333333333%; /* this percent is approximately a 50px right margin */}
+.pull-five-offset {margin-left: 52.08333333333%; /* this percent is approximately a 50px left margin */}
 
 .padding-ten {padding: 10px;}
 .padding-twenty {padding: 20px;}
 .padding-thirty {padding: 30px;}
-
-
 
 
 /* Tablet Layout */
@@ -140,7 +152,7 @@ html .notablet {display: none;}
 html body, html .body {max-width: 100%; padding: 0; margin: 0;}
 
 .one, .two, .three, .four, .five, .six, .seven, .eight, .nine, .ten, .eleven, .twelve {width: 100%;}
-.push-ten, .pull-ten, .push-twenty, .pull-twenty, .push-thirty, .pull-thirty, .push-forty, .pull-forty {margin: 0;}
+.push-one, .pull-one, .push-two, .pull-two, .push-three, .pull-three, .push-four, .pull-four, .push-five, .pull-five {margin: 0;}
 
 html .col, html .left, html .right {float: none;}
 html .content {display: block; width: 100%;}
@@ -168,10 +180,10 @@ html .accessibility {display: none;}
 .none {display: none;}
 
 /* Clear */
-.clear:before, .row:before, .clear:after, .row:after {content:""; display:table;}
-.clear:after, .row:after {clear:both;} .clear, .row, .flexible {zoom:1;}
+.clear:before, .section:before, .clear:after, .section:after {content:""; display:table;}
+.clear:after, .section:after {clear:both;} .clear, .section, .flexible {zoom:1;}
 
 /* Begin Remove of Additional Styling (for Demo Purposes) */
 html .content {background: #eee;} html .col {background: #ccc;}
-html .row {margin: 0; border: 0;}
+html .section {margin: 0; border: 0;}
 /* End Remove of Additionl Styling (for Demo Purposes) */
