@@ -117,5 +117,5 @@ html .accessibility {display: none;}
 .clear:after {clear:both;} .clear, .content-block {zoom:1;}
 
 /* Begin Remove of Additional Styling (for Demo Purposes) */
-html .content-block {background: #eee;} html .col {background: #ccc;}
+html .content-block {background: #eee;} html .col {background: #ccc;} p {padding: 10px 0;}
 /* End Remove of Additionl Styling (for Demo Purposes) */
