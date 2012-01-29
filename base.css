@@ -1,0 +1,121 @@
+/*
+	Base Stylesheet - Copyright 2011 - 2012
+	Author - Matthew Hartman (www.matthewhartman.com.au)
+	Version - 1.1 (Last Update: 29th January, 2012)
+*/
+
+/* Global Resets */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {margin: 0; padding: 0; border: 0; outline: 0; vertical-align: baseline;}
+
+/* HTML5 Block Elements */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, .header, .footer, .menu, .nav, .section, .block {display: block;}
+
+/* General Resets */
+ol, ul {list-style: none;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after, q:before, q:after {content: '';}
+hr {border: 0; background: none; outline: 0;}
+table {border-collapse: collapse; border-spacing: 0;}
+
+/* Consistent Font Family on Form Elements */
+button, input, select, textarea {font-family: sans-serif;}
+
+html {font-size: 100%;}
+body {font: normal 81.3%/1.231 arial, helvetica, clean, sans-serif; background: #fff; color: #000; min-width: 320px;}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {font-family: "Georgia", "Times New Roman", Helvetica, Arial, sans-serif;}
+h1 {font-size: 3.538em; margin-bottom: 10px;}
+h2 {font-size: 2.769em; margin-bottom: 8px;}
+h3 {font-size: 2em; margin-bottom: 6px;}
+h4 {font-size: 1.692em; margin-bottom: 4px;}
+h5 {font-size: 1.384em; margin-bottom: 2px;}
+h6 {font-size: 1.076em;}
+
+/* Content Elements */
+p {}
+
+/* Content Links */
+a {color: #c00;}
+a:hover {text-decoration: none;}
+a:visited {color: #000;}
+a:active {margin-top: 3px;}
+
+/* Tables */
+table {}
+thead {}
+th {}
+
+tbody {}
+tr {}
+td {}
+
+/* Sections and Columns */
+.section {min-width: 280px; max-width: 960px; margin: 0 auto; padding: 0 20px; overflow: hidden;}
+.content-block {position: relative; display: table-cell; float: none;}
+.col {margin-left: 4.166666666667%; /* this percent is approximately a 40px from a 960px grid */}
+.col:first-child {margin-left: 0; margin-right: 4.166666666667%}
+
+.one {width: 8.333333333333%; /* this percent is approximately 80px from a 960px grid */}
+.two {width: 16.666666666667%; /* this percent is approximately 160px from a 960px grid */}
+.three {width: 25%; /* this percent is approximately 240px from a 960px grid */}
+.four {width: 33.333333333333%; /* this percent is approximately 320px from a 960px grid */}
+.five {width: 41.666666666667%; /* this percent is approximately 400px from a 960px grid */}
+.six {width: 50%; /* this percent is approximately 480px from a 960px grid */}
+.seven {width: 58.333333333333%; /* this percent is approximately 560px from a 960px grid */}
+.eight {width: 66.666666666667%; /* this percent is approximately 640px from a 960px grid */}
+.nine {width: 75%; /* this percent is approximately 720px from a 960px grid */}
+.ten {width: 83.333333333333%; /* this percent is approximately 800px from a 960px grid */}
+.eleven {width: 91.666666666667%; /* this percent is approximately 880px from a 960px grid */}
+.twelve {width: 100%; /* this percent is approximately 960px from a 960px grid */}
+
+/* Tablet Layout */
+@media only screen and (min-width: 700px) and (max-width: 959px) {
+html body, html .body {max-width: 959px; padding: 0; margin: 0;}
+html .notablet {display: none;}
+}
+
+
+/* Mobile Layout */
+@media only screen and (min-width: 320px) and (max-width: 699px) {
+html body, html .body {max-width: 100%; padding: 0; margin: 0;}
+
+.one, .two, .three, .four, .five, .six, .seven, .eight, .nine, .ten, .eleven, .twelve {width: 100%;}
+.col {margin-right: 0;}
+
+html .col, html .left, html .right {float: none;}
+html .col.right {margin-left: 0;}
+html .content {display: block; width: 100%;}
+
+html .nophone {display: none;}
+}
+
+/* Print Stylesheet */
+@media print {
+body {margin: 0.5cm;}
+.body * {position: static; float: none; }
+html .accessibility {display: none;}
+}
+
+/* Accessibility (For Screen Readers) */
+.accessibility li {float: left; width: 100%;}
+.offscreen.focusable:active,
+.offscreen.focusable:focus {height: auto; overflow: visible; position: static; width: 100%; text-indent: 0px; display: block; background: #000; color: #fff; text-decoration: none; outline: 0;}
+
+/* General Classes */
+.left, .col {float: left;}
+.right {float: right;}
+.offscreen {text-align: -9999em; position: absolute; overflow: hidden; width: 1px; height: 1%;}
+.none {display: none; visibility: hidden;}
+.padding-ten {padding: 10px;}
+.padding-twenty {padding: 20px;}
+.padding-thirty {padding: 30px;}
+
+/* Nicolas Gallagher's Micro Clearfix */
+.clear:before, .clear:after {content:""; display:table;}
+.clear:after {clear:both;} .clear, .content-block {zoom:1;}
+
+/* Begin Remove of Additional Styling (for Demo Purposes) */
+html .content-block {background: #eee;} html .col {background: #ccc;}
+/* End Remove of Additionl Styling (for Demo Purposes) */
