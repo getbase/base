@@ -55,7 +55,7 @@ td {}
 .section {min-width: 280px; max-width: 960px; margin: 0 auto; padding: 0 20px; overflow: hidden;}
 .content-block {position: relative; display: table-cell; float: none;}
 .col {margin-left: 4.166666666667%; /* this percent is approximately a 40px from a 960px grid */}
-.col:first-child {margin-left: 0; margin-right: 4.166666666667%}
+.col:first-child {margin-left: 0; margin-right: 0;}
 
 .one {width: 8.333333333333%; /* this percent is approximately 80px from a 960px grid */}
 .two {width: 16.666666666667%; /* this percent is approximately 160px from a 960px grid */}
