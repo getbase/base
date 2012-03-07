@@ -4,25 +4,14 @@
 	Version - 1.1 (Last Update: 29th January, 2012)
 */
 
-/* Global Resets */
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
-dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {margin: 0; padding: 0; border: 0; outline: 0; vertical-align: baseline;}
-
 /* HTML5 Block Elements */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, .header, .footer, .menu, .nav, .section, .block {display: block;}
-
-/* General Resets */
-ol, ul {list-style: none;}
-blockquote, q {quotes: none;}
-blockquote:before, blockquote:after, q:before, q:after {content: '';}
-hr {border: 0; background: none; outline: 0;}
-table {border-collapse: collapse; border-spacing: 0;}
 
 /* Consistent Font Family on Form Elements */
 button, input, select, textarea {font-family: sans-serif;}
 
 html {font-size: 100%;}
-body {font: normal 81.3%/1.231 arial, helvetica, clean, sans-serif; background: #fff; color: #000; min-width: 320px;}
+body {font: normal 81.3%/1.231 arial, helvetica, clean, sans-serif; background: #fff; color: #000; min-width: 320px; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {font-family: "Georgia", "Times New Roman", Helvetica, Arial, sans-serif;}
@@ -42,6 +31,8 @@ a:hover {text-decoration: none;}
 a:visited {color: #000;}
 a:active {margin-top: 3px;}
 
+hr {border: 0; background: none; outline: 0;}
+
 /* Tables */
 table {}
 thead {}
@@ -51,11 +42,16 @@ tbody {}
 tr {}
 td {}
 
+/* Blockquotes */
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after, q:before, q:after {content: '';}
+
 /* Sections and Columns */
-.section {min-width: 280px; max-width: 960px; margin: 0 auto; padding: 0 20px; overflow: hidden;}
+.section {overflow: hidden; position: relative;}
+.container {min-width: 280px; max-width: 960px; margin: 0 auto; padding: 0 20px;}
 .content-block {position: relative; display: table-cell; float: none;}
 .col {margin-left: 4.166666666667%; /* this percent is approximately a 40px from a 960px grid */}
-.col:first-child {margin-left: 0; margin-right: 0;}
+.section .col:first-child {margin-left: 0; margin-right: 0;}
 
 .one {width: 8.333333333333%; /* this percent is approximately 80px from a 960px grid */}
 .two {width: 16.666666666667%; /* this percent is approximately 160px from a 960px grid */}
@@ -81,20 +77,17 @@ html .notablet {display: none;}
 @media only screen and (min-width: 320px) and (max-width: 699px) {
 html body, html .body {max-width: 100%; padding: 0; margin: 0;}
 
-.one, .two, .three, .four, .five, .six, .seven, .eight, .nine, .ten, .eleven, .twelve {width: 100%;}
-.col {margin-right: 0; margin-left: 0;}
+.one, .two, .three, .four, .five, .six, .seven, .eight, .nine, .ten, .eleven, .twelve {width: 100%; margin-left: 0; margin-right: 0; float: none;}
 
-html .col, html .left, html .right {float: none;}
-html .col.right {margin-left: 0;}
-html .content {display: block; width: 100%;}
+.col.right {margin-left: 0;}
 
-html .nophone {display: none;}
+.nophone {display: none;}
 }
 
 /* Print Stylesheet */
 @media print {
 body {margin: 0.5cm;}
-.body * {position: static; float: none; }
+.body * {position: static; float: none;}
 html .accessibility {display: none;}
 }
 
