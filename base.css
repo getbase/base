@@ -1,7 +1,7 @@
 /*
 	Base Stylesheet - Copyright 2011 - 2012
 	Author - Matthew Hartman - http://www.matthewhartman.com.au
-	Version - 1.1 - Last Updated: 7th March, 2012
+	Version - 1.1 - Last Updated: 28th March, 2012
 */
 
 /* HTML5 Block Elements */
@@ -14,13 +14,11 @@ html {font-size: 100%;}
 body {font: normal 81.3%/1.231 arial, helvetica, clean, sans-serif; background: #fff; color: #000; min-width: 320px; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; margin: 0;}
 
 /* Headings */
-h1, h2, h3, h4, h5, h6 {font-family: "Georgia", "Times New Roman", Helvetica, Arial, sans-serif;}
-h1 {font-size: 3.538em; margin-bottom: 10px;}
-h2 {font-size: 2.769em; margin-bottom: 8px;}
-h3 {font-size: 2em; margin-bottom: 6px;}
-h4 {font-size: 1.692em; margin-bottom: 4px;}
-h5 {font-size: 1.384em; margin-bottom: 2px;}
-h6 {font-size: 1.076em;}
+h1, h2, h3, h4, h5, h6 {font-family: "Georgia", "Times New Roman", Helvetica, Arial, sans-serif; margin: 0;}
+h1 {font-size: 2.769em; margin-bottom: 10px;}
+h2 {font-size: 2em; margin-bottom: 8px;}
+h3 {font-size: 1.692em; margin-bottom: 6px;}
+h4 {font-size: 1.384em; margin-bottom: 4px;}
 
 /* Content Elements */
 p {margin: 1em 0;}
@@ -48,35 +46,34 @@ blockquote:before, blockquote:after, q:before, q:after {content: '';}
 
 /* Sections and Columns */
 .section {overflow: hidden; position: relative;}
-.container {min-width: 280px; max-width: 960px; margin: 0 auto; padding: 0 20px;}
+.container {min-width: 280px; max-width: 1140px; margin: 0 auto;}
 .content-block {position: relative; display: table-cell; float: none;}
-.col {margin-left: 4.166666666667%; /* this percent is approximately a 40px from a 960px grid */}
-.section .col:first-child {margin-left: 0; margin-right: 0;}
+.col {margin-left: 1.04%; margin-right: 1.04%;}
 
-.one {width: 8.333333333333%; /* this percent is approximately 80px from a 960px grid */}
-.two {width: 16.666666666667%; /* this percent is approximately 160px from a 960px grid */}
-.three {width: 25%; /* this percent is approximately 240px from a 960px grid */}
-.four {width: 33.333333333333%; /* this percent is approximately 320px from a 960px grid */}
-.five {width: 41.666666666667%; /* this percent is approximately 400px from a 960px grid */}
-.six {width: 50%; /* this percent is approximately 480px from a 960px grid */}
-.seven {width: 58.333333333333%; /* this percent is approximately 560px from a 960px grid */}
-.eight {width: 66.666666666667%; /* this percent is approximately 640px from a 960px grid */}
-.nine {width: 75%; /* this percent is approximately 720px from a 960px grid */}
-.ten {width: 83.333333333333%; /* this percent is approximately 800px from a 960px grid */}
-.eleven {width: 91.666666666667%; /* this percent is approximately 880px from a 960px grid */}
-.twelve {width: 100%; /* this percent is approximately 960px from a 960px grid */}
+.one {width: 6.25%;}
+.two {width: 14.585%;}
+.three {width: 22.918%;}
+.four {width: 31.25%;}
+.five {width: 39.585%;}
+.six {width: 47.918%;}
+.seven {width: 56.251%;}
+.eight {width: 64.584%;}
+.nine {width: 72.918%;}
+.ten {width: 81.25%;}
+.eleven {width: 89.584%;}
+.twelve {width: 97.918%;}
 
 /* Tablet Layout */
-@media only screen and (min-width: 700px) and (max-width: 959px) {
-html body, html .body {max-width: 959px; padding: 0; margin: 0;}
-html .notablet {display: none;}
+@media only screen and (min-width: 600px) and (max-width: 959px) {
+html body {max-width: 959px; padding: 0; margin: 0;}
+.notablet {display: none;}
 }
 
 
 /* Mobile Layout */
-@media only screen and (min-width: 320px) and (max-width: 699px) {
-html body, html .body {max-width: 100%; padding: 0; margin: 0;}
-
+@media only screen and (min-width: 320px) and (max-width: 599px) {
+html body {max-width: 100%; padding: 0; margin: 0;}
+html .container {margin-left: 10px; margin-right: 10px;}
 .one, .two, .three, .four, .five, .six, .seven, .eight, .nine, .ten, .eleven, .twelve {width: 100%; margin-left: 0; margin-right: 0; float: none;}
 
 .col.right {margin-left: 0;}
@@ -105,5 +102,8 @@ html .accessibility {display: none;}
 .clear:after {clear:both;} .clear, .content-block {zoom:1;}
 
 /* Begin Remove of Additional Styling (for Demo Purposes) */
-html .content-block {background: #eee;} html .col {background: #ccc;}
+html .col {background: #ccc; text-align: center;}
+html .section {padding: 5px 0; background: #f1f1f1;}
+html .section:first-child {padding: 5px 0; background: #fff;}
+html .section:first-child .col {background: #fff; text-align: left;}
 /* End Remove of Additionl Styling (for Demo Purposes) */
