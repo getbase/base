@@ -1,7 +1,7 @@
 Welcome to Base
 ===============
 
-Base is a super simple, responsive framework designed to work for mobile devices, tablets, netbooks and desktop computers. It's built with accessibility in mind and uses minimal javascript for maximum awesomeness.
+Base is a super simple, responsive framework designed to work for mobile devices, tablets, netbooks and desktop computers. It's built with accessibility in mind for maximum awesomeness.
 
 It includes a 12-column grid with some basic styles for headings, links, tables, block quotes and much more.
 
@@ -14,14 +14,11 @@ Repo Contents
 · readme
 · index.html - An example page with Base in action
 · base.css - Core Stylesheet for Base
-· respond.min.js - A fast & lightweight polyfill for min/max-width CSS3 Media Queries (for IE 6-8, and more)
 
 Base was built by Matthew Hartman (@hartmanmatthew), a passionate front end developer based in Melbourne, Australia.
 
 Thank You / Credits
 ===================
-· Scott Jehl, Paul Irish, Nicholas Zakas (@modernizr) for Modernizr
-· Scott Jehl for respond.js script
 · Nicolas Gallagher (@necolas) for Micro ClearFix
 
 
