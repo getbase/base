@@ -1,0 +1,468 @@
+/* ==========================================================================
+
+    Theme Name: Base Stylesheet
+    Theme URI: http://github.com/matthewhartman/base/
+    Description: A base template for your next web project!
+    Author: Matthew Hartman
+    Author URI: http://www.matthewhartman.com.au
+    Version: 1.0 - Last Updated: 18th June, 2012
+
+========================================================================== */
+
+
+/* ==========================================================================
+/* -- HTML5, Resets, Common Classes & Nicolas Gallagher's Micro Clearfix
+   ========================================================================== */
+/* HTML 5 Block Elements */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, .header, .footer, .menu, .nav, .section, { display: block; }
+
+/* Nicholas Gallagher's Clearfix */
+.clear:before, .clear:after { content:""; display:table; } .clear:after { clear:both; } .clear { zoom:1; }
+
+/* General Resets */
+html { font-size: 100%; } /* Start base font size at 100% */
+button, input, select, textarea { font-family: sans-serif; } /* Make all form fonts consistent */
+form, fieldset, a img { border: 0; } /* Remove all default borders */
+
+/* Common Classes */
+.left { float: left; }
+.right { float: right; }
+.visuallyhidden { text-align: -9999em; position: absolute; overflow: hidden; width: 1px; height: 1%; }
+.none,
+.nodesktop {
+    display: none;
+    visibility: hidden;
+}
+
+/* ==========================================================================
+/* 1.0 - Document Setup (body, links, headings, code, tables, forms etc)
+   ========================================================================== */
+/* Body */
+body {
+    font-family: arial, helvetica, clean, sans-serif;
+    background: #ffffff;
+    color: #000000;
+    margin: 0;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+/* Links */
+a {
+    color: #333333;
+}
+a:hover {
+    text-decoration: none;
+}
+a:visited {
+    color: #000000;
+    text-decoration: underline;
+}
+
+/* Default Buttons (CSS3) */
+.button {
+    display: inline-block;
+    *display: inline;
+    text-decoration: none;
+    padding: 4px 10px 4px;
+    margin-bottom: 0;
+    *margin-left: .3em;
+    font-size: 13px;
+    line-height: 18px;
+    *line-height: 20px;
+    color: #333333;
+    text-align: center;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+    vertical-align: middle;
+    cursor: pointer;
+    background-color: #f5f5f5;
+    *background-color: #e6e6e6;
+    background-image: -ms-linear-gradient(top, #ffffff, #e6e6e6);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+    background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+    background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+    background-image: linear-gradient(top, #ffffff, #e6e6e6);
+    background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+    background-repeat: repeat-x;
+    border: 1px solid #cccccc;
+    *border: 0;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+    border-bottom-color: #b3b3b3;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ffffff', endColorstr='#e6e6e6', GradientType=0);
+    filter: progid:dximagetransform.microsoft.gradient(enabled=false);
+    *zoom: 1;
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* Default Button Active States */
+.button:hover,
+.button:active,
+.button.active,
+.button.disabled,
+.button[disabled] {
+    background-color: #e6e6e6;
+    *background-color: #d9d9d9;
+}
+
+.button:active,
+.button.active {
+    background-color: #cccccc \9;
+}
+/* Default Button Hovers */
+.button:hover {
+    color: #333333;
+    text-decoration: none;
+    background-color: #e6e6e6;
+    *background-color: #d9d9d9;
+    /* Buttons in IE7 don't get borders, so darken on hover */
+    background-position: 0 -15px;
+    -webkit-transition: background-position 0.1s linear;
+    -moz-transition: background-position 0.1s linear;
+    -ms-transition: background-position 0.1s linear;
+    -o-transition: background-position 0.1s linear;
+    transition: background-position 0.1s linear;
+}
+/* Default Button Focus */
+.button:focus {
+    outline: thin dotted #333;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+}
+.button.active,
+.button:active {
+    background-color: #e6e6e6;
+    background-color: #d9d9d9 \9;
+    background-image: none;
+    outline: 0;
+    -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+/* Default Button Disabled States */
+.button.disabled,
+.button[disabled] {
+    cursor: default;
+    background-color: #e6e6e6;
+    background-image: none;
+    opacity: 0.65;
+    filter: alpha(opacity=65);
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+/* Blue Button */
+.button.blue-button { color: #ffffff; text-shadow: 0 1px 1px rgba(51, 51, 51, 0.75); }
+.blue-button {
+    background-color: #0074cc;
+    *background-color: #0055cc;
+    background-image: -ms-linear-gradient(top, #0088cc, #0055cc);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0088cc), to(#0055cc));
+    background-image: -webkit-linear-gradient(top, #0088cc, #0055cc);
+    background-image: -o-linear-gradient(top, #0088cc, #0055cc);
+    background-image: -moz-linear-gradient(top, #0088cc, #0055cc);
+    background-image: linear-gradient(top, #0088cc, #0055cc);
+    background-repeat: repeat-x;
+    border-color: #0055cc #0055cc #003580;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    filter: progid:dximagetransform.microsoft.gradient(startColorstr='#0088cc', endColorstr='#0055cc', GradientType=0);
+    filter: progid:dximagetransform.microsoft.gradient(enabled=false);
+}
+/* Blue Button Hover States */
+.blue-button:hover,
+.blue-button:active,
+.blue-button.active,
+.blue-button.disabled,
+.blue-button[disabled] {
+    background-color: #0055cc;
+    *background-color: #004ab3;
+}
+/* Blue Button Active States */
+.blue-button:active,
+.blue-button.active {
+    background-color: #004099 \9;
+}
+/* Black Button */
+.button.black-button { color: #ffffff; text-shadow: 0 1px 1px rgba(51, 51, 51, 0.75); }
+.black-button {
+    background-color: #414141;
+    *background-color: #222222;
+    background-image: -ms-linear-gradient(top, #555555, #222222);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#555555), to(#222222));
+    background-image: -webkit-linear-gradient(top, #555555, #222222);
+    background-image: -o-linear-gradient(top, #555555, #222222);
+    background-image: -moz-linear-gradient(top, #555555, #222222);
+    background-image: linear-gradient(top, #555555, #222222);
+    background-repeat: repeat-x;
+    border-color: #222222 #222222 #000000;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    filter: progid:dximagetransform.microsoft.gradient(startColorstr='#555555', endColorstr='#222222', GradientType=0);
+    filter: progid:dximagetransform.microsoft.gradient(enabled=false);
+}
+/* Black Button Hover States */
+.black-button:hover,
+.black-button:active,
+.black-button.active,
+.black-button.disabled,
+.black-button[disabled] {
+    background-color: #222222;
+    *background-color: #151515;
+}
+/* Black Button Active States */
+.black-button:active,
+.black-button.active {
+    background-color: #080808 \9;
+}
+
+/* 1.1 Headings - h1, h2, h3, h4, h5, h6 & other (if any)
+   ========================================================================== */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Georgia", "Times New Roman", sans-serif;
+    margin: 0;
+}
+h1 {
+    font-size: 2.769em;
+    margin-bottom: 10px;
+}
+h2 {
+    font-size: 2em;
+    margin-bottom: 8px;
+}
+h3 {
+    font-size: 1.692em;
+    margin-bottom: 6px;
+}
+h4 {
+    font-size: 1.384em;
+    margin-bottom: 4px;
+}
+
+
+/* 1.2 Paragraphs, block quotes, code, pre, etc
+   ========================================================================== */
+p {
+    margin: 0 0 1em 0;
+}
+
+/* Block Quotes */
+blockquote,
+q {
+    quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+}
+
+/* Code Blocks & Pre */
+code,
+pre {
+    padding: 0 3px 2px;
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+    font-size: 12px;
+    color: #333;
+    border-radius: 3px;
+}
+code {
+    padding: 2px 4px;
+    color: #d14;
+    background-color: #f7f7f9;
+    border: 1px solid #e1e1e8;
+}
+pre {
+    display: block;
+    padding: 8.5px;
+    margin: 0 0 9px;
+    font-size: 12.025px;
+    line-height: 18px;
+    word-break: break-all;
+    word-wrap: break-word;
+    white-space: pre;
+    white-space: pre-wrap;
+    background: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+pre code {
+    padding: 0;
+    color: inherit;
+    background-color: transparent;
+    border: 0;
+}
+.pre-scrollable {
+    max-height: 340px;
+    overflow-y: scroll;
+}
+
+hr {
+    border: 0;
+    background: none;
+    outline: 0;
+    visibility: hidden;
+    height: 1em;
+}
+
+/* 1.3 Tables
+   ========================================================================== */
+table {
+    width: 100%;
+    border: 1px solid #dddddd;
+    border-collapse: separate;
+    *border-collapse: collapsed;
+    border-left: 0;
+    background-color: #fff;
+    border-spacing: 0;
+}
+table th,
+table td {
+    padding: 8px;
+    line-height: 18px;
+    text-align: left;
+    vertical-align: top;
+    border-top: 1px solid #dddddd;
+    border-left: 1px solid #dddddd;
+}
+table thead th {
+    vertical-align: bottom;
+    font-weight: bold;
+    background: #000000;
+    color: #ffffff;
+    border-left: 1px solid #555555;
+}
+table caption + thead tr:first-child th,
+table caption + thead tr:first-child td,
+table colgroup + thead tr:first-child th,
+table colgroup + thead tr:first-child td,
+table thead:first-child tr:first-child th,
+table thead:first-child tr:first-child td {
+    border-top: 0;
+}
+table tbody tr:nth-child(odd) td,
+table tbody tr:nth-child(odd) th {
+    background-color: #f1f1f1;
+}
+
+/* 1.4 Forms, Labels, Inputs, Buttons, etc
+   ========================================================================== */
+
+/* To Do:
+    // Forms
+    // Labels
+    // Inputs
+    // Buttons    
+*/
+
+
+/* ==========================================================================
+/* 2.0 - Grid Layout (Fluid and Responsive) — Thanks to SprySoft (@sprysoft)
+   ========================================================================== */
+/* Sections & Content Blocks */
+.section {position: relative;}
+.container {min-width: 280px; max-width: 1140px; margin: 0 auto;}
+.content-block {position: relative; display: table-cell; float: none;}
+
+/* Grid Layout */
+.column {
+    margin-right: 3.8%;
+    min-height: 1%;
+    float: left;
+}
+
+/* Fluid Layout */
+.fluid-row {
+    width: 100%;
+}
+.fluid-row .column {
+    margin-left: 1%;
+    margin-right: 1%;
+}
+.one { width:6.333%; }
+.two { width:14.667%; }
+.three { width:23.0%; }
+.four { width:31.333%; }
+.five { width:39.667%; }
+.six { width:48.0%; }
+.seven { width:56.333%; }
+.eight { width:64.667%; }
+.nine { width:73.0%; }
+.ten { width:81.333%; }
+.eleven { width:89.667%; }
+.twelve { width:98.0%; }
+
+
+/* Fixed Layout */
+.fixed-row {
+    width: 940px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.fixed-row .one { width: 60px; }
+.fixed-row .two { width: 140px; }
+.fixed-row .three { width: 220px; }
+.fixed-row .four { width: 300px; }
+.fixed-row .five { width:380px; }
+.fixed-row .six { width: 460px; }
+.fixed-row .seven { width: 540px; }
+.fixed-row .eight { width: 620px; }
+.fixed-row .nine { width: 700px; }
+.fixed-row .ten { width: 780px; }
+.fixed-row .eleven { width: 860px; }
+.fixed-row .twelve { width: 940px; }
+
+.last { margin-right: 0; }
+
+
+/* ==========================================================================
+/* -- Tablet Devices (Layout, Modifications, etc)
+   ========================================================================== */
+@media only screen and (min-width: 600px) and (max-width: 959px) {
+html body {max-width: 959px; padding: 0; margin: 0;}
+.notablet {display: none;}
+}
+
+
+/* ==========================================================================
+/* -- Mobile Devices (Layout, Modifications, etc)
+   ========================================================================== */
+@media only screen and (min-width: 320px) and (max-width: 599px) {
+html body {max-width: 100%; padding: 0; margin: 0;}
+html .container {margin-left: 10px; margin-right: 10px;}
+.one,
+.two,
+.three,
+.four,
+.five,
+.six,
+.seven,
+.eight,
+.nine,
+.ten,
+.eleven,
+.twelve {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    float: none;
+}
+
+.nomobile {display: none;}
+}
+
+
+/* ==========================================================================
+/* -- Print Layout
+   ========================================================================== */
+@media print {
+body {margin: 0.5cm;}
+}
