@@ -462,7 +462,7 @@ html body {max-width: 959px; padding: 0; margin: 0;}
 /* ==========================================================================
 /* -- Mobile Devices (Layout, Modifications, etc)
    ========================================================================== */
-@media only screen and (min-width: 320px) and (max-width: 719px) {
+@media only screen and (max-width: 719px) {
 html body {max-width: 100%; padding: 0; margin: 0;}
 html .container {margin-left: 1em; margin-right: 1em; width: auto;}
 .one,
