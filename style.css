@@ -27,7 +27,14 @@ form, fieldset, a img { border: 0; } /* Remove all default borders */
 /* Common Classes */
 .left { float: left; }
 .right { float: right; }
-.visuallyhidden { text-align: -9999em; position: absolute; overflow: hidden; width: 1px; height: 1%; }
+.block { display: block; }
+.visuallyhidden {
+    text-align: -9999em;
+    position: absolute;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+}
 .none,
 .nodesktop {
     display: none;
@@ -61,83 +68,35 @@ a:visited {
 /* Default Buttons (CSS3) */
 .button {
     display: inline-block;
-    *display: inline;
-    text-decoration: none;
-    padding: 4px 10px 4px;
-    margin-bottom: 0;
-    *margin-left: .3em;
+    padding: 0 10px;
+    height: 28px;
     font-size: 13px;
     line-height: 18px;
-    *line-height: 20px;
-    color: #333333;
     text-align: center;
-    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
     vertical-align: middle;
     cursor: pointer;
     background-color: #f5f5f5;
-    *background-color: #e6e6e6;
-    background-image: -ms-linear-gradient(top, #ffffff, #e6e6e6);
-    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
-    background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
-    background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
-    background-image: linear-gradient(top, #ffffff, #e6e6e6);
-    background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
     background-repeat: repeat-x;
-    border: 1px solid #cccccc;
-    *border: 0;
-    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-    border-color: #e6e6e6 #e6e6e6 #bfbfbf;
-    border-bottom-color: #b3b3b3;
+    border: 1px solid #ccc;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 4px;
-    filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ffffff', endColorstr='#e6e6e6', GradientType=0);
-    filter: progid:dximagetransform.microsoft.gradient(enabled=false);
-    *zoom: 1;
-    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
-    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
-}
-
-/* Default Button Active States */
-.button:hover,
-.button:active,
-.button.active,
-.button.disabled,
-.button[disabled] {
-    background-color: #e6e6e6;
-    *background-color: #d9d9d9;
+    overflow: visible;
+    outline: 0;
 }
 
 .button:active,
 .button.active {
-    background-color: #cccccc \9;
+    background-color: #eee;
+    outline: 0;
 }
 /* Default Button Hovers */
 .button:hover {
-    color: #333333;
-    text-decoration: none;
-    background-color: #e6e6e6;
-    *background-color: #d9d9d9;
-    /* Buttons in IE7 don't get borders, so darken on hover */
-    background-position: 0 -15px;
-    -webkit-transition: background-position 0.1s linear;
-    -moz-transition: background-position 0.1s linear;
-    -ms-transition: background-position 0.1s linear;
-    -o-transition: background-position 0.1s linear;
-    transition: background-position 0.1s linear;
-}
-/* Default Button Focus */
-.button:focus {
-    outline: thin dotted #333;
-    outline: 5px auto -webkit-focus-ring-color;
-    outline-offset: -2px;
+    background-color: #eee;
 }
 .button.active,
 .button:active {
-    background-color: #e6e6e6;
-    background-color: #d9d9d9 \9;
-    background-image: none;
+    background: #f1f1f1;
     outline: 0;
     -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
     -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
@@ -151,26 +110,12 @@ a:visited {
     background-image: none;
     opacity: 0.65;
     filter: alpha(opacity=65);
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
 }
 /* Blue Button */
-.button.blue-button { color: #ffffff; text-shadow: 0 1px 1px rgba(51, 51, 51, 0.75); }
+.button.blue-button { color: #fff; }
 .blue-button {
     background-color: #0074cc;
-    *background-color: #0055cc;
-    background-image: -ms-linear-gradient(top, #0088cc, #0055cc);
-    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0088cc), to(#0055cc));
-    background-image: -webkit-linear-gradient(top, #0088cc, #0055cc);
-    background-image: -o-linear-gradient(top, #0088cc, #0055cc);
-    background-image: -moz-linear-gradient(top, #0088cc, #0055cc);
-    background-image: linear-gradient(top, #0088cc, #0055cc);
-    background-repeat: repeat-x;
-    border-color: #0055cc #0055cc #003580;
-    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-    filter: progid:dximagetransform.microsoft.gradient(startColorstr='#0088cc', endColorstr='#0055cc', GradientType=0);
-    filter: progid:dximagetransform.microsoft.gradient(enabled=false);
+    border-color: #0055cc;
 }
 /* Blue Button Hover States */
 .blue-button:hover,
@@ -179,29 +124,19 @@ a:visited {
 .blue-button.disabled,
 .blue-button[disabled] {
     background-color: #0055cc;
-    *background-color: #004ab3;
 }
 /* Blue Button Active States */
 .blue-button:active,
 .blue-button.active {
-    background-color: #004099 \9;
+    -webkit-box-shadow: inset 0 2px 4px rgba(1, 1, 1, 0.3), 0 1px 2px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: inset 0 2px 4px rgba(1, 1, 1, 0.3), 0 1px 2px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 2px 4px rgba(1, 1, 1, 0.3), 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 /* Black Button */
-.button.black-button { color: #ffffff; text-shadow: 0 1px 1px rgba(51, 51, 51, 0.75); }
+.button.black-button { color: #fff; }
 .black-button {
     background-color: #414141;
-    *background-color: #222222;
-    background-image: -ms-linear-gradient(top, #555555, #222222);
-    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#555555), to(#222222));
-    background-image: -webkit-linear-gradient(top, #555555, #222222);
-    background-image: -o-linear-gradient(top, #555555, #222222);
-    background-image: -moz-linear-gradient(top, #555555, #222222);
-    background-image: linear-gradient(top, #555555, #222222);
-    background-repeat: repeat-x;
-    border-color: #222222 #222222 #000000;
-    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-    filter: progid:dximagetransform.microsoft.gradient(startColorstr='#555555', endColorstr='#222222', GradientType=0);
-    filter: progid:dximagetransform.microsoft.gradient(enabled=false);
+    border-color: #222;
 }
 /* Black Button Hover States */
 .black-button:hover,
@@ -209,13 +144,12 @@ a:visited {
 .black-button.active,
 .black-button.disabled,
 .black-button[disabled] {
-    background-color: #222222;
-    *background-color: #151515;
+    background-color: #333;
 }
 /* Black Button Active States */
 .black-button:active,
 .black-button.active {
-    background-color: #080808 \9;
+    background-color: #000;
 }
 
 /* 1.1 Headings - h1, h2, h3, h4, h5, h6 & other (if any)
@@ -375,14 +309,22 @@ table tbody .odd td {
     background-color: #f1f1f1;
 }
 
-/* 1.4 Forms, Labels, Inputs, Buttons, etc
+/* 1.4 Forms, Labels and Inputs
    ========================================================================== */
+/* Inputs (Text, Search, Email, etc) */
+input[type=text],
+input[type=email],
+input[type=search] {
+    border: 1px solid #ccc;
+    padding: 4px;
+    height: 18px;
+    display: inline-block;
+    vertical-align: middle;
+}
 
 /* To Do:
     // Forms
     // Labels
-    // Inputs
-    // Buttons    
 */
 
 
@@ -464,7 +406,7 @@ html body {max-width: 959px; padding: 0; margin: 0;}
    ========================================================================== */
 @media only screen and (max-width: 719px) {
 html body {max-width: 100%; padding: 0; margin: 0;}
-html .container {margin-left: 1em; margin-right: 1em; width: auto;}
+
 .one,
 .two,
 .three,
