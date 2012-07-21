@@ -5,7 +5,8 @@
 
     	1. Plugins Combined (respond.js)
     	2. Initiations / Default Functions
-    		2.1 Add Zebra Stripes for Tables
+    		2.0 Toggle JS Class
+            2.1 Add Zebra Stripes for Tables
 */
 
 /* ==========================================================
@@ -20,6 +21,10 @@
 */
 
 $(document).ready(function(){
+
+    // 2.0. Toggle JS Class
+    $("html").removeClass('no-js');
+    $("html").addClass('js');
 
 	// 2.1 Add Zebra Stripes for Tables
 	$('table tbody tr:odd, table tbody tr:odd').addClass('odd');
