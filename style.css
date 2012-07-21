@@ -272,13 +272,14 @@ input[type=search] {
    ========================================================================== */
 /* Sections & Content Blocks */
 .section {position: relative;}
-.container {min-width: 280px; max-width: 960px; margin: 0 auto;}
+.container {min-width: 280px; max-width: 960px; margin: 0 auto; padding-left: 10px; padding-right: 10px;}
 .content-block {position: relative; display: table-cell; float: none;}
 
 /* Fluid Grid */
 .col {
     margin-left: 1%;
     margin-right: 1%;
+    float: left;
 }
 .col:first-child { margin: 0; }
 
@@ -303,7 +304,7 @@ input[type=search] {
 @media only screen and (min-width: 720px) and (max-width: 959px) {
 html body {max-width: 959px; padding: 0; margin: 0;}
 
-.container {width: 720px;}
+.container {width: 700px;}
 
 .notablet {display: none;}
 .nodesktop {
