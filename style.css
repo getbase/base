@@ -623,9 +623,6 @@ h1 {
     padding: 0;
 }
 
-.content .col:first-child {
-    border: 0;
-}
 .content .col {
     text-align: center;
     border-top: 1px solid #ccc;
