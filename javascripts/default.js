@@ -23,8 +23,7 @@
 $(document).ready(function(){
 
     // 2.0. Toggle JS Class
-    $("html").removeClass('no-js');
-    $("html").addClass('js');
+    $("html").removeClass('no-js').addClass('js');
 
 	// 2.1 Add Zebra Stripes for Tables
 	$('table tbody tr:odd, table tbody tr:odd').addClass('odd');
