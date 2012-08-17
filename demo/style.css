@@ -296,7 +296,6 @@ dl dt {
     clear: left;
     padding: 1%;
     margin: 0 0 .5em;
-    border-bottom: 1px solid #cccccc;
     font-weight: bold;
 }
 dl dd {
@@ -304,7 +303,6 @@ dl dd {
     float: left;
     padding: 1%;
     margin: 0 0 .5em;
-    border-bottom: 1px solid #cccccc;
 }
 
 
@@ -495,6 +493,28 @@ html body {
     margin-left: 0;
     margin-right: 0;
     float: none;
+}
+
+/* Inputs (Text, Search, Email, etc) */
+input[type=text],
+input[type=email],
+input[type=search],
+input[type=tel],
+input[type=file] {
+    width: 100%;
+    display: flex;
+        display: -webkit-flex;
+}
+textarea {
+    width: 100%;
+    display: flex;
+        display: -webkit-flex;
+}
+
+select {
+    width: 100%;
+    display: flex;
+        display: -webkit-flex;
 }
 
 .nomobile { display: none; }
