@@ -1,11 +1,10 @@
 /* ==========================================================================
 
     Theme Name: Base Stylesheet
-    Theme URI: http://github.com/matthewhartman/base/
+    Theme URI: http://matthewhartman.github.com/base/
     Description: A base template for your next web project!
-    Author: Matthew Hartman
-    Author URI: http://www.matthewhartman.com.au
-    Version: 1.0 - Last Updated: 15th August, 2012
+    Author: Matthew Hartman - http://www.matthewhartman.com.au/
+    Version: 1.0 - Last Updated: 17th August, 2012
 
 ========================================================================== */
 
@@ -54,6 +53,7 @@ body {
     background: #ffffff;
     color: #000000;
     margin: 0;
+    font-size: 87.5%; /* base font size 14px */
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
 }
@@ -109,7 +109,6 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Georgia", "Times New Roman", sans-serif;
     margin: 0;
 }
 h1 {
