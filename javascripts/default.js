@@ -1,6 +1,6 @@
 /* ==========================================================
 	Base Default JavaScript
-	http://github.com.au/matthewhartman/base/js/default.js
+    https://github.com/matthewhartman/base/blob/master/javascripts/default.js
     	-- Table of Contents --
 
     	1. Plugins Combined (respond.js)
