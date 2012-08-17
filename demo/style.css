@@ -92,6 +92,8 @@ a:active { color: #333333; }
 input[type=submit].button,
 input[type=reset].button {
     border-radius: 4px;
+        -webkit-appearance: none; /* Remove Default Browser Behaviour for Safari */
+            -moz-appearance:none; /* Remove Default Browser Behaviour for Firefox */
 }
 
 .button:hover {
