@@ -101,7 +101,7 @@ html body { max-width: 959px; }
 h1 { height: auto; }
 
 .notablet { display: none; }
-.showtablet { display: none; }
+.showtablet { display: block; }
 
 /* End Tablet Media Query */
 }
