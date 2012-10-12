@@ -86,6 +86,12 @@ p { margin: 0 0 1em 0; }
 .footer a:hover { color: #545a42; text-decoration: none; }
 .footer a:active { color: #000000; }
 
+.alert {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
 
 /* ==========================================================================
 /* -- Tablet Devices (Layout, Modifications, etc)
