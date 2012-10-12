@@ -91,6 +91,7 @@ p { margin: 0 0 1em 0; }
     top: 0;
     left: 0;
     background-color: #ffc;
+    width: 100%;
 }
 .alert p {
     margin: 0;
