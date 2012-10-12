@@ -90,8 +90,13 @@ p { margin: 0 0 1em 0; }
     position: absolute;
     top: 0;
     left: 0;
+    background-color: #ffc;
 }
-
+.alert p {
+    margin: 0;
+    text-align: center;
+    padding: 5px;
+}
 
 /* ==========================================================================
 /* -- Tablet Devices (Layout, Modifications, etc)
