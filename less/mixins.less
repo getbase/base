@@ -1,0 +1,31 @@
+// ==========================================================================
+
+//  Base Mixins - built with LESS - http://www.lesscss.org
+//  Theme URI: http://matthewhartman.github.com/base/
+//  Author: Matthew Hartman - http://www.matthewhartman.com.au/
+//  Version: 0.1 - Last Updated: 18th October, 2012
+
+// ==========================================================================
+
+
+// Font Icon
+.font-icon (@fontname, @fontfile) {
+  @font-face {
+    font-family: @fontname;
+    src: url('fonts/@{fontfile}-webfont.eot');
+    src: url('fonts/@{fontfile}-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/@{fontfile}-webfont.woff') format('woff'),
+         url('fonts/@{fontfile}-webfont.ttf') format('truetype'),
+         url('fonts/@{fontfile}-webfont.svg#@{fontfile}') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+}
+
+// Border Rounded Corners
+.roundedcorners(@radius: 1px) {
+-webkit-border-radius: @radius;
+-moz-border-radius: @radius;
+border-radius: @radius;
+-moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box; 
+}
