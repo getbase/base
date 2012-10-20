@@ -1,0 +1,587 @@
+/* ==========================================================================
+
+  Base Stylesheet - http://matthewhartman.github.com/base/
+  Author: Matthew Hartman - http://www.matthewhartman.com.au/
+  Version: 1.1 - Last Updated: 20th October, 2012
+
+========================================================================== */
+
+  @import "mixins.less"; // Import the base mixins
+
+  // Global Defaults
+
+  // Typography
+  @fontBase:              arial, helvetica, clean, sans-serif;
+  @fontCode:              Menlo, Monaco, Consolas, "Courier New", monospace;
+  @serif:                 serif;
+  @sansSerif:             sans-serif;
+
+  @defaultFontSize:       14;
+  @fontDefault:           @defaultFontSize / 16 * 100%; // works out your base font size in percent
+
+  @12px:                  12 / @defaultFontSize * 1em;
+  @13px:                  13 / @defaultFontSize * 1em;
+  @14px:                  14 / @defaultFontSize * 1em;
+  @16px:                  16 / @defaultFontSize * 1em;
+  @18px:                  18 / @defaultFontSize * 1em;
+  @20px:                  20 / @defaultFontSize * 1em;
+  @22px:                  22 / @defaultFontSize * 1em;
+  @26px:                  26 / @defaultFontSize * 1em;
+  @28px:                  28 / @defaultFontSize * 1em;
+  @36px:                  36 / @defaultFontSize * 1em;
+  @40px:                  40 / @defaultFontSize * 1em;
+
+  // Headings
+  @headingFont:           "Georgia", "Times New Roman", sans-serif;
+
+  @h1:                    @40px;
+  @h2:                    @20px;
+  @h3:                    @26px;
+  @h4:                    @20px;
+
+  // Colours
+
+  @black:                 #000;
+  @darkestGrey:           #111;
+  @darkerGrey:            #333;
+  @darkGrey:              #666;
+  @grey:                  #999;
+  @lightGrey:             #ddd;
+  @lighterGrey:           #eee;
+  @lightestGrey:          #f1f1f1;
+  @white:                 #fff;
+
+  @darkestBlue:           #0f1b26;
+  @darkBlue:              #202f3c;
+  @blue:                  #1c415e;
+  @lightBlue:             #a9c2d7;
+  @lighterBlue:           #cfe6f8;
+  @lightestBlue:          #e7f2fb;
+
+  @orange:                #f30;
+  @midOrange:             #c34119;
+  @lightOrange:           #ffc9b3;
+  @lighterOrange:         #fddfd3;
+  @lightestOrange:        #fff0ea;
+
+
+
+/* ==========================================================================
+/* --  Micro Clearfix, Resets and Common Classes
+   ========================================================================== */
+
+/* Micro Clearfix */
+.clear:before, .clear:after { content: ""; display: table; } .clear:after { clear: both; } .clear { zoom: 1; }
+.section:before, .section:after { content: ""; display: table; } .section:after { clear: both; } .section { zoom: 1; }
+
+/* General Resets */
+  /* Start font size at 100% */
+html { font-size: 100%; }
+  /* Make all form fonts consistent */
+button, input, select, textarea { font-family: sans-serif; }
+  /* Remove all default borders */
+form, fieldset, a img { border: 0; }
+
+/* Common Classes */
+.left { float: left; }
+.right { float: right; }
+.nofloat { float: none; }
+.block { display: block; }
+.inline-block { display: inline-block; }
+.inline { display: inline; }
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  left: -9999em;
+}
+.visuallyvisible {
+  clip: (auto);
+  clip: auto;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  left: 0;
+}
+
+.strong {
+  font-weight: bold;
+}
+
+.alignleft { text-align: left; }
+.alignright { text-align: right; }
+.aligncenter { text-align: center; }
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nolist { list-style: none; }
+.nopadding { padding: 0; }
+.nomargin { margin: 0; }
+
+.none,
+.nodesktop {
+  display: none;
+}
+
+/* ==========================================================================
+/* 1.0 - Document Setup (body, links, headings, code, tables, forms etc)
+   ========================================================================== */
+/* Body */
+body {
+  font-family: @fontBase;
+  background: @white;
+  color: @darkestGrey;
+  margin: 0;
+  font-size: @fontDefault;
+  line-height: 140%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+/* Links */
+a {
+  color: @orange;
+  text-decoration: underline;
+}
+a:visited {
+  color: @orange;
+}
+a:hover {
+  text-decoration: none;
+}
+a:active {
+  color: @darkerGrey;
+}
+
+
+/* 1.1 Headings - h1, h2, h3, h4, h5, h6 & other (if any)
+   ========================================================================== */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+h1 {
+    font-size: @h1;
+    margin-bottom: 10px;
+}
+h2 {
+    font-size: @h2;
+    margin-bottom: 8px;
+}
+h3 {
+    font-size: @h3;
+    margin-bottom: 6px;
+}
+h4 {
+    font-size: @h4;
+    margin-bottom: 4px;
+}
+
+
+/* 1.2 Paragraphs, block quotes, code, pre, etc
+   ========================================================================== */
+p {
+    margin: 0 0 1em 0;
+}
+
+abbr {
+    border-bottom: 1px dotted #000;
+    cursor: help;
+}
+
+address {
+    font-style: italic;
+    line-height: 1.384em;
+}
+small {
+    font-size: 67.5%;
+}
+/* Block Quotes */
+blockquote,
+q {
+    quotes: none;
+    border-left: 7px solid #cccccc;
+    font-style: italic;
+    padding-left: 1em;
+    margin: 1em;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+}
+
+/* Code Blocks & Pre */
+code,
+pre {
+    padding: 0 3px 2px;
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+    font-size: 12px;
+    color: #333;
+    border-radius: 3px;
+}
+code {
+    padding: 2px 4px;
+    color: #d14;
+    background-color: #f7f7f9;
+    border: 1px solid #e1e1e8;
+}
+pre {
+    display: block;
+    padding: 8.5px;
+    margin: 0 0 9px;
+    font-size: 12.025px;
+    line-height: 18px;
+    word-break: break-all;
+    word-wrap: break-word;
+    white-space: pre;
+    white-space: pre-wrap;
+    background: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+pre code {
+    padding: 0;
+    color: inherit;
+    background-color: transparent;
+    border: 0;
+}
+.pre-scrollable {
+    max-height: 340px;
+    overflow-y: scroll;
+}
+
+hr {
+    border: 0;
+    background: none;
+    outline: 0;
+    height: 1px;
+    background-color: #dddddd;
+    margin: 2em 0;
+}
+
+/* 1.3 Tables
+   ========================================================================== */
+table {
+    width: 100%;
+    border: 1px solid #dddddd;
+    border-collapse: collapse;
+    border-left: 0;
+    background-color: #fff;
+    border-spacing: 0;
+}
+table th,
+table td {
+    padding: 8px;
+    line-height: 18px;
+    text-align: left;
+    vertical-align: top;
+    border-top: 1px solid #dddddd;
+    border-left: 1px solid #dddddd;
+}
+table thead th {
+    vertical-align: bottom;
+    font-weight: bold;
+    background: #ffffff;
+    color: #000000;
+    border-left: 1px solid #dddddd;
+}
+table caption + thead tr:first-child th,
+table caption + thead tr:first-child td,
+table colgroup + thead tr:first-child th,
+table colgroup + thead tr:first-child td,
+table thead:first-child tr:first-child th,
+table thead:first-child tr:first-child td {
+    border-top: 0;
+}
+table tbody tr:nth-child(odd) td,
+table tbody tr:nth-child(odd) th {
+    background-color: #f1f1f1;
+}
+table tbody tr:nth-child(even) td,
+table tbody tr:nth-child(even) th {
+    background-color: #ffffff;
+}
+
+table tbody .odd td,
+table tbody .odd td {
+    background-color: #f1f1f1;
+}
+
+table tfoot td {
+    background: #eeeeee;
+    font-weight: bold;
+}
+
+table caption {
+    padding: .5em;
+    font-style: italic;
+    background-color: #eeeeee;
+    border: 1px solid #cccccc;
+    border-bottom: 0;
+    font-weight: bold;
+}
+
+/* 1.4 Lists
+   ========================================================================== */
+ul, ul ul {
+    list-style: disc;
+    margin: .5em;
+}
+
+ol, ol ol {
+    list-style: decimal;
+    margin: .5em;
+}
+
+dl:before, dl:after { content: ""; display: table; } dl:after { clear: both; } dl { zoom: 1; }
+dl {
+    width: 100%;
+}
+dl dt {
+    width: 28%;
+    float: left;
+    clear: left;
+    padding: 1%;
+    margin: 0 0 .5em;
+    font-weight: bold;
+}
+dl dd {
+    width: 68%;
+    float: left;
+    padding: 1%;
+    margin: 0 0 .5em;
+}
+
+
+/* 1.5 Forms, Labels and Inputs
+   ========================================================================== */
+legend {
+    font-size: @h2;
+    font-family: @headingFont;
+    font-weight: bold;
+    display: block;
+    width: 100%;
+    padding-bottom: 1em;
+}
+
+label {
+
+}
+
+.field {
+    padding: 10px 0;
+    
+    label {
+        display: inline-block;
+        min-width: 20%;
+    } // end label
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    } // end ul
+} // end .field
+
+/* Inputs (Text, Search, Email, etc) */
+input[type=text],
+input[type=email],
+input[type=search],
+input[type=tel],
+input[type=file] {
+    border-radius: 0;
+    outline: 0;
+    border: 1px solid #ccc;
+    padding: .5%;
+    height: 18px;
+    width: 30%;
+    display: inline-block;
+    vertical-align: middle;
+        -webkit-appearance: none; /* Remove Default Browser Behaviour for Safari */
+            -moz-appearance:none; /* Remove Default Browser Behaviour for Firefox */
+}
+
+input[type=file] {
+    border: 0;
+    height: 20px;
+}
+
+input[type=button]::-moz-focus-inner,
+input[type=submit]::-moz-focus-inner {
+    padding: 0;
+    border: 0
+}
+
+input[type="search"]::-webkit-search-cancel-button { -webkit-appearance: none; }
+
+input[type=submit],
+input[type=button] {
+    line-height: normal;
+    cursor: pointer;
+    border-radius: 0;
+        -webkit-appearance: none; /* Remove Default Browser Behaviour for Safari */
+        -moz-appearance:none; /* Remove Default Browser Behaviour for Firefox */
+}
+
+textarea {
+    vertical-align: top;
+    display: inline-block;
+    border: 1px solid #cccccc;
+    min-height: 80px;
+    padding: .5%;
+    width: 30%;
+}
+
+select {
+    font-size: 14px;
+    outline: 0;
+    height: 34px;
+    border: 1px solid #cccccc;
+    padding: .5%;
+    width: 31%;
+    -webkit-border-radius: 0 3px 3px 0;
+        -moz-border-radius: 0 3px 3px 0;
+}
+select:focus {
+    border: 1px solid #cccccc;
+    outline: 0;
+}
+select[multiple] {
+    min-height: 100px;
+    vertical-align: top;
+    border: 1px solid #ccc;
+}
+
+select:focus {
+    border: 1px solid #999999;
+}
+
+
+/* ==========================================================================
+/* 2.0 - Grid Layout (Responsive)
+   ========================================================================== */
+/* Sections & Content Blocks */
+.section { position: relative; }
+
+.container {
+  min-width: 280px;
+  max-width: 960px;
+  margin: 0 auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.container-full {
+  min-width: 280px;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+/* Fluid Grid */
+.col {
+  margin-left: 2%;
+  float: left;
+}
+.col:first-child { margin-left: 0; }
+
+/* Columns */
+.one { width: 6.333%; }
+.two { width: 14.667%; }
+.three { width: 23.0%; }
+.four { width: 31.333%; }
+.five { width: 39.667%; }
+.six { width: 48.0%; }
+.seven { width: 56.333%; }
+.eight { width: 64.667%; }
+.nine { width: 73.0%; }
+.ten { width: 81.333%; }
+.eleven { width: 89.667%; }
+.twelve { width: 100%; }
+
+
+// ==========================================================================
+// -- Custom Website Styles
+// ==========================================================================
+
+// Your custom website styles go here...
+
+/* ==========================================================================
+/* -- Tablet Devices (Layout, Modifications, etc)
+   ========================================================================== */
+@media only screen and (min-width: 720px) and (max-width: 959px) {
+html body {
+  max-width: 959px;
+  padding: 0;
+  margin: 0;
+}
+
+.container { width: 700px; }
+
+.notablet { display: none; }
+.showtablet { display: none; }
+
+
+} /* End Tablet Media Query */
+
+
+/* ==========================================================================
+/* -- Mobile Devices (Layout, Modifications, etc)
+   ========================================================================== */
+@media only screen and (max-width: 719px) {
+html body {
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.one,
+.two,
+.three,
+.four,
+.five,
+.six,
+.seven,
+.eight,
+.nine,
+.ten,
+.eleven,
+.twelve {
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  float: none;
+}
+
+.container {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.nomobile { display: none; }
+.showmobile { display: block; }
+
+
+} /* End Mobile Media Query */
+
+
+/* ==========================================================================
+/* -- Print Layout
+   ========================================================================== */
+@media print {
+body {
+  font-family: @serif; /* Serif is easier to read offscreen */ 
+  margin: 0.5cm;
+}
+
+
+} /* End Print Media Query */
