@@ -59,17 +59,20 @@ body {
 }
 /* Links */
 a {
-    color: #333333;
+    color: #f30;
     text-decoration: underline;
 }
 a:visited {
-    color: #000000;
+    color: #f30;
 }
 a:hover {
-    color: #000000;
+    color: #f30;
     text-decoration: none;
 }
-a:active { color: #333333; }
+a:active {
+    color: #f90;
+    text-decoration: none;
+}
 
 /* Default Buttons (CSS3) */
 .button {
