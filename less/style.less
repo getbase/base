@@ -475,14 +475,12 @@ select:focus {
 .section { position: relative; }
 
 .container {
-  min-width: 280px;
   max-width: 960px;
   margin: 0 auto;
   padding-left: 10px;
   padding-right: 10px;
 }
 .container-full {
-  min-width: 280px;
   max-width: 980px;
   margin: 0 auto;
 }
@@ -527,8 +525,8 @@ html body {
 
 .container { width: 700px; }
 
-.notablet { display: none; }
-.showtablet { display: none; }
+.notablet { .none(); }
+.showtablet { .block(); }
 
 
 } /* End Tablet Media Query */
@@ -567,8 +565,8 @@ html body {
   padding-right: 20px;
 }
 
-.nomobile { display: none; }
-.showmobile { display: block; }
+.nomobile { .none(); }
+.showmobile { .block(); }
 
 
 } /* End Mobile Media Query */
