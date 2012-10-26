@@ -1,13 +1,14 @@
 /* ==========================================================
-	Base Default JavaScript
+    Base Default JavaScript
     https://github.com/matthewhartman/base/blob/master/javascripts/default.js
-    	-- Table of Contents --
+        -- Table of Contents --
 
-    	1. Plugins Combined (respond.js)
-    	2. Initiations / Default Functions
-    		2.0 Toggle JS Class
-            2.1 Add Zebra Stripes for Tables
-            2.2 Get latest commit from Github
+        1. Plugins Combined (respond.js)
+        2. Initiations / Default Functions
+            2.0 Toggle JS Class
+            2.1 Get latest commit from Github
+            2.2 Google Analytics
+            
 */
 
 /* ==========================================================
@@ -26,10 +27,7 @@ $(document).ready(function(){
     // 2.0. Toggle JS Class
     $("html").removeClass('no-js').addClass('js');
 
-	// 2.1 Add Zebra Stripes for Tables
-	$('table tbody tr:odd, table tbody tr:odd').addClass('odd');
-
-    // 2.2 Get latest commit
+    // 2.1 Get latest commit
 
     $('#github .no-js').remove();
     $('#github').append('<span class="block date">loading...</span> <span class="block description"></span> <a href="#" class="block commit"></a>');
@@ -42,6 +40,7 @@ $(document).ready(function(){
         $("#github .commit").attr("href","https://github.com/matthewhartman/base/commit/"+b.sha);
         }
     });
+    // 2.2 Google Analytics
+    var _gaq = _gaq || []; _gaq.push(['_setAccount', 'UA-34161986-1']); _gaq.push(['_trackPageview']); (function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();
 
-
-});
+}); //end document ready();
