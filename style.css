@@ -2,7 +2,7 @@
 
   Base Stylesheet - http://matthewhartman.github.com/base/
   Author: Matthew Hartman - http://www.matthewhartman.com.au/
-  Version: 1.1 - Last Updated: 20th October, 2012
+  Version: 1.1 - Last Updated: 4th December, 2012
 
 ========================================================================== */
 /* ==========================================================================
@@ -124,7 +124,6 @@ body {
   color: #111111;
   margin: 0;
   font-size: 87.5%;
-  line-height: 140%;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
 }
@@ -502,6 +501,12 @@ select:focus {
 }
 .twelve {
   width: 100%;
+}
+.half {
+  width: 48.0%;
+}
+.one-third {
+  width: 31.333%;
 }
 /* ==========================================================================
 /* -- Tablet Devices (Layout, Modifications, etc)
