@@ -1,12 +1,14 @@
 /* ==========================================================
-	Base Default JavaScript
+  Base Default JavaScript
     https://github.com/matthewhartman/base/blob/master/javascripts/default.js
-    	-- Table of Contents --
+      -- Table of Contents --
 
-    	1. Plugins Combined (respond.js)
-    	2. Initiations / Default Functions
-    		2.0 Toggle JS Class
+      1. Plugins Combined (respond.js)
+      2. Initiations / Default Functions
+        2.0 Toggle JS Class
             2.1 Add Zebra Stripes for Tables
+            2.2 Menu for Mobile Devices
+            2.3 Jump to Anchored Sections
 */
 
 /* ==========================================================
@@ -22,10 +24,37 @@
 
 $(document).ready(function(){
 
-    // 2.0. Toggle JS Class
-    $("html").removeClass('no-js').addClass('js');
+  // 2.0 Toggle JS Class
+  $("html").removeClass('no-js').addClass('js');
 
-	// 2.1 Add Zebra Stripes for Tables
-	$('table tbody tr:odd, table tbody tr:odd').addClass('odd');
+  // 2.1 Add Zebra Stripes for Tables
+  $('table tbody tr:odd, table tbody tr:odd').addClass('odd');
 
-});
+  // 2.2 Menu for Mobile Devices
+  // If JS is enabled, attach the 'hide' class (only affects mobiles - special media query class)
+  $('.navigation').prepend('<a href="#" class="nav-toggle nodesktop notablet nomobile">Navigation <span class="arrow">+</span></a>');
+  $(".nav-toggle").removeClass('nomobile').addClass('showmobile');
+  $('.menu').addClass("nomobile");
+
+  // When the navigation button is clicked, toggle menu
+  $(".nav-toggle").click(function() {
+    if ( $('.menu:visible').length < 1 ) {
+      $('.menu').stop(true, true).slideDown(200, function() {
+        $('.nav-toggle .arrow').html('-');
+        $(this).removeClass('nomobile').removeAttr('style');
+      });
+    } else {
+      $('.menu').stop(true, true).slideUp(200, function() {
+        $('.nav-toggle .arrow').html('+');
+        $(this).addClass('nomobile').removeAttr('style');
+      });
+    };
+    return false;
+  });
+  
+
+
+
+    
+
+}); // end document ready

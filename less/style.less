@@ -567,6 +567,32 @@ html body {
   padding-right: 20px;
 }
 
+.navigation {
+  a {
+    &:active, &:visited {
+      color: @white;
+    } // end active
+    &:hover {
+      background-color: @darkerGrey;
+    } // end hover
+  } // end a
+} // end navigation
+
+.menu {
+  .nolist();
+  .nopadding();
+  .nomargin();
+}
+.nav-toggle, .menu a {
+  .block();
+  background-color: @darkestGrey;
+  .aligncenter();
+  color: @white;
+  padding: 10px;
+  margin-top: 1px;
+  text-decoration: none;
+}
+
 .nomobile { .none(); }
 .showmobile { .block(); }
 
