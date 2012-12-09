@@ -7,7 +7,8 @@
         2. Initiations / Default Functions
             2.0 Toggle JS Class
             2.1 Get latest commit from Github
-            2.2 Google Analytics
+            2.2 Menu for Mobile Devices
+            2.3 Google Analytics
             
 */
 
@@ -24,23 +25,46 @@
 
 $(document).ready(function(){
 
-    // 2.0. Toggle JS Class
-    $("html").removeClass('no-js').addClass('js');
+  // 2.0. Toggle JS Class
+  $("html").removeClass('no-js').addClass('js');
 
-    // 2.1 Get latest commit
+  // 2.1 Get latest commit
 
-    $('#github .no-js').remove();
-    $('#github').append('<span class="block date">loading...</span> <span class="block description"></span> <a href="#" class="block commit"></a>');
+  $('#github .no-js').remove();
+  $('#github').append('<span class="block date">loading...</span> <span class="block description"></span> <a href="#" class="block commit"></a>');
 
-    var a=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
-        $.ajax({url:"https://api.github.com/repos/matthewhartman/base/commits",dataType:"jsonp",success:function(d){
-        var b=d.data[0], c=new Date(b.commit.committer.date), e=a[c.getMonth()]+" "+c.getDate()+", "+c.getFullYear();
-        $("#github .description").text(b.commit.message);
-        $("#github .date").text(e);$("#github .commit").html("Commit "+b.sha+" &raquo;");
-        $("#github .commit").attr("href","https://github.com/matthewhartman/base/commit/"+b.sha);
-        }
-    });
-    // 2.2 Google Analytics
-    var _gaq = _gaq || []; _gaq.push(['_setAccount', 'UA-34161986-1']); _gaq.push(['_trackPageview']); (function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();
+  var a=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+      $.ajax({url:"https://api.github.com/repos/matthewhartman/base/commits",dataType:"jsonp",success:function(d){
+      var b=d.data[0], c=new Date(b.commit.committer.date), e=a[c.getMonth()]+" "+c.getDate()+", "+c.getFullYear();
+      $("#github .description").text(b.commit.message);
+      $("#github .date").text(e);$("#github .commit").html("Commit "+b.sha+" &raquo;");
+      $("#github .commit").attr("href","https://github.com/matthewhartman/base/commit/"+b.sha);
+      }
+  });
+
+  // 2.2 Menu for Mobile Devices
+  // If JS is enabled, attach the 'hide' class (only affects mobiles - special media query class)
+  $('.navigation').prepend('<a href="#" class="nav-toggle nodesktop notablet nomobile">Navigation <span class="arrow">+</span></a>');
+  $(".nav-toggle").removeClass('nomobile').addClass('showmobile');
+  $('.menu').addClass("nomobile");
+
+  // When the navigation button is clicked, toggle menu
+  $(".nav-toggle").click(function() {
+    if ( $('.menu:visible').length < 1 ) {
+      $('.menu').stop(true, true).slideDown(200, function() {
+        $('.nav-toggle .arrow').html('-');
+        $(this).removeClass('nomobile').removeAttr('style');
+      });
+    } else {
+      $('.menu').stop(true, true).slideUp(200, function() {
+        $('.nav-toggle .arrow').html('+');
+        $(this).addClass('nomobile').removeAttr('style');
+      });
+    };
+    return false;
+  });
+
+  // 2.3 Google Analytics
+  var _gaq = _gaq || []; _gaq.push(['_setAccount', 'UA-34161986-1']); _gaq.push(['_trackPageview']); (function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();
 
 }); //end document ready();
