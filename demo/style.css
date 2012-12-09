@@ -558,6 +558,28 @@ select:focus {
     padding-left: 20px;
     padding-right: 20px;
   }
+  .navigation a:active,
+  .navigation a:visited {
+    color: #ffffff;
+  }
+  .navigation a:hover {
+    background-color: #333333;
+  }
+  .menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .nav-toggle,
+  .menu a {
+    display: block;
+    background-color: #111111;
+    text-align: center;
+    color: #ffffff;
+    padding: 10px;
+    margin-top: 1px;
+    text-decoration: none;
+  }
   .nomobile {
     display: none;
   }
