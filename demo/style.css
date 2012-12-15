@@ -520,6 +520,11 @@ select:focus {
   .container {
     width: 700px;
   }
+
+  h1 {
+    font-size: 2em;
+  }
+
   .notablet {
     display: none;
   }
@@ -537,6 +542,11 @@ select:focus {
     padding: 0;
     margin: 0;
   }
+  
+  h1 {
+  font-size: 3em;
+  }
+  
   .one,
   .two,
   .three,
