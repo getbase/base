@@ -30,7 +30,6 @@ Preview the [demo page](http://matthewhartman.github.com/base/demo/) to see the 
 Base was built by Matthew Hartman (@hartmanmatthew), a passionate front end developer based in Melbourne, Australia.
 
 ## Thank You / Credits
-- Mark Otto (@mdo) & Jacob Thornton (@fat) for some base styles taken from BootStrap
 - Nicolas Gallagher (@necolas) for the Micro ClearFix :)
 
 
