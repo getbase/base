@@ -1,0 +1,167 @@
+// Delete anything after this as it's for the base docs //
+
+.header {
+  background-color: #d6511d;
+  margin-bottom: 10px;
+}
+.logo {
+  margin: 14px 0 0 0;
+  color: #fff;
+  font-size: 2em;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  .small {
+    font-size: 11px;
+    position: relative;
+    top: -20px;
+  }
+  &:hover, &:active, &:visited {
+    color: #fff;
+    } // end active
+}
+.navigation {
+  line-height: normal;
+  padding-top: 12px;
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      float: left;
+      margin-left: 10px;
+      &:first-child {
+          margin-left: 0;
+        } // end first child
+        a {
+          text-transform: uppercase;
+          color: #fff;
+          padding: 8px 24px;
+          border: 1px solid #d6511d;
+          text-decoration: none;
+          font-size: 12px;
+          &.current {
+            border-color: #fff;
+          } // end current
+          &:hover {
+            border-color: #fff0ea;
+            } // end hover
+            &:active {
+              background-color: #ffc9b3;
+              border-color: #ffc9b3;
+              color: #222;
+            }
+          } // end a
+      } // end li
+  } // end ul
+} // end navigation
+
+.content-inner {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+// Delete to this point (base docs custom styling) //
+
+
+
+
+
+
+
+// ==========================================================================
+// -- Custom Website Styles
+// ==========================================================================
+
+// Your custom website styles go here...
+
+// Delete anything after this as it's for the base docs //
+@media only screen and (min-width: 720px) and (max-width: 959px) {
+.navigation {
+  ul {
+    li {
+      margin-left: 5px;
+      a {
+        padding: 10px 15px;
+      } // end a
+    } // end li
+  } // end ul
+  } // end navigation
+
+
+// Delete to this point (base docs custom styling) //
+
+} // end tablet docs styling
+
+
+
+
+
+@media only screen and (max-width: 719px) {
+.header {
+  padding-top: 10px;
+  text-align: center;
+  .container {
+    padding: 0;
+  }
+}
+
+.logo {
+  float: none;
+  margin: 0 auto;
+  display: inline-block;
+  *zoom: 1;
+  *display: inline;
+  .small {
+    font-size: 1em;
+    position: static;
+  }
+}
+
+.nav-toggle {
+  display: block;
+  background-color: #fddfd3;
+  text-align: center;
+  color: #222;
+  padding: 10px;
+  text-decoration: none;
+  &:hover, &.active {
+    background-color: #fff0ea;
+    } // end hover and active
+} // end nav toggle
+.navigation {
+  float: none;
+  ul {
+    li {
+      float: none;
+      margin-left: 0;
+      a {
+        color: #222;
+        padding: 10px;
+        display: block;
+        font-size: 1em;
+        text-transform: none;
+        background-color: #fddfd3;
+        border: 0;
+        &:hover {
+          background-color: #fff0ea;
+        } // end hover
+      } // end a
+    } // end li
+  } // end ul
+} // end navigation
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.showmobile.inline-block {
+  display: inline-block;
+  *zoom: 1;
+  *display: inline;
+}
+
+} // end mobile docs styling

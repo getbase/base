@@ -2,47 +2,50 @@
 
   Base Stylesheet - http://matthewhartman.github.com/base/
   Author: Matthew Hartman - http://www.matthewhartman.com.au/
-  Version: 1.1 - Last Updated: 4th December, 2012
+  Version: 1.2 - Last Updated: 5th January, 2013
 
 ========================================================================== */
 
   @import "mixins.less"; // Import the base mixins
 
-  // Global Defaults
+  // Global Defaults //
 
-  // Typography
-  @fontBase:              arial, helvetica, clean, sans-serif;
-  @fontCode:              Menlo, Monaco, Consolas, "Courier New", monospace;
+  // Setup Typography
+  @baseFont:              arial, helvetica, clean, sans-serif;
+  @codeFont:              Menlo, Monaco, Consolas, "Courier New", monospace;
   @serif:                 serif;
   @sansSerif:             sans-serif;
 
-  @defaultFontSize:       14;
-  @fontDefault:           @defaultFontSize / 16 * 100%; // works out your base font size in percent
+  @fontSize:              14; // default font size
+  @lineHeight:            22; // default line height size
+ 
+  @baseFontSize:          @fontSize / 16 * 1em; // calculate the font size in em
+  @baseLineHeight:        @lineHeight / @fontSize * 1em; // calculate the line height size in em
 
-  @12px:                  12 / @defaultFontSize * 1em;
-  @13px:                  13 / @defaultFontSize * 1em;
-  @14px:                  14 / @defaultFontSize * 1em;
-  @16px:                  16 / @defaultFontSize * 1em;
-  @18px:                  18 / @defaultFontSize * 1em;
-  @20px:                  20 / @defaultFontSize * 1em;
-  @22px:                  22 / @defaultFontSize * 1em;
-  @26px:                  26 / @defaultFontSize * 1em;
-  @28px:                  28 / @defaultFontSize * 1em;
-  @36px:                  36 / @defaultFontSize * 1em;
-  @40px:                  40 / @defaultFontSize * 1em;
+  @12px:                  12 / @fontSize * 1em; // calculate 12px in em
+  @13px:                  13 / @fontSize * 1em; // calculate 13px in em
+  @14px:                  14 / @fontSize * 1em; // calculate 14px in em
+  @16px:                  16 / @fontSize * 1em; // calculate 16px in em
+  @18px:                  18 / @fontSize * 1em; // calculate 18px in em
+  @20px:                  20 / @fontSize * 1em; // calculate 20px in em
+  @22px:                  22 / @fontSize * 1em; // calculate 22px in em
+  @26px:                  26 / @fontSize * 1em; // calculate 26px in em
+  @28px:                  28 / @fontSize * 1em; // calculate 28px in em
+  @32px:                  32 / @fontSize * 1em; // calculate 32px in em
+  @40px:                  40 / @fontSize * 1em; // calculate 40px in em
 
-  // Headings
-  @headingFont:           "Georgia", "Times New Roman", sans-serif;
+  // Setup Headings
+  @headingFont:           arial, helvetica, clean, sans-serif;
 
   @h1:                    @40px;
-  @h2:                    @20px;
+  @h2:                    @32px;
   @h3:                    @26px;
   @h4:                    @20px;
 
-  // Colours
+  // Setup Colours
 
   @black:                 #000;
-  @darkestGrey:           #111;
+  @darkestGrey:           #222;
   @darkerGrey:            #333;
   @darkGrey:              #666;
   @grey:                  #999;
@@ -85,9 +88,8 @@ form, fieldset, a img { border: 0; }
 /* Common Classes */
 .left { float: left; }
 .right { float: right; }
-.nofloat { float: none; }
 .block { display: block; }
-.inline-block { display: inline-block; }
+.inline-block { display: inline-block; *zoom: 1; *display: inline; }
 .inline { display: inline; }
 .visuallyhidden {
   border: 0;
@@ -112,14 +114,6 @@ form, fieldset, a img { border: 0; }
   font-weight: bold;
 }
 
-.alignleft { text-align: left; }
-.alignright { text-align: right; }
-.aligncenter { text-align: center; }
-.center {
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .nolist { list-style: none; }
 .nopadding { padding: 0; }
 .nomargin { margin: 0; }
@@ -134,11 +128,12 @@ form, fieldset, a img { border: 0; }
    ========================================================================== */
 /* Body */
 body {
-  font-family: @fontBase;
-  background: @white;
+  font-family: @baseFont;
+  font-size: @baseFontSize;
+  line-height: @baseLineHeight;
+  background-color: @white;
   color: @darkestGrey;
   margin: 0;
-  font-size: @fontDefault;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
 }
@@ -167,20 +162,21 @@ h4,
 h5,
 h6 {
     margin: 0;
+    line-height: normal;
 }
-h1 {
+h1, .h1 {
     font-size: @h1;
     margin-bottom: 10px;
 }
-h2 {
+h2, .h2 {
     font-size: @h2;
     margin-bottom: 8px;
 }
-h3 {
+h3, .h3 {
     font-size: @h3;
     margin-bottom: 6px;
 }
-h4 {
+h4, .h4 {
     font-size: @h4;
     margin-bottom: 4px;
 }
@@ -189,22 +185,13 @@ h4 {
 /* 1.2 Paragraphs, block quotes, code, pre, etc
    ========================================================================== */
 p {
-    margin: 0 0 1em 0;
-}
-
-abbr {
-    border-bottom: 1px dotted #000;
-    cursor: help;
-}
-
-address {
-    font-style: italic;
-    line-height: 1.384em;
+    margin-bottom: @baseLineHeight / 2;
 }
 small {
     font-size: 67.5%;
 }
-/* Block Quotes */
+
+/* Block Quotes, Pre and Code Blocks */
 blockquote,
 q {
     quotes: none;
@@ -213,59 +200,26 @@ q {
     padding-left: 1em;
     margin: 1em;
 }
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-    content: '';
-}
 
-/* Code Blocks & Pre */
 code,
 pre {
-    padding: 0 3px 2px;
-    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
-    font-size: 12px;
-    color: #333;
-    border-radius: 3px;
-}
-code {
     padding: 2px 4px;
-    color: #d14;
+    font-family: @codeFont;
+    font-size: @12px;
     background-color: #f7f7f9;
     border: 1px solid #e1e1e8;
-}
-pre {
-    display: block;
-    padding: 8.5px;
-    margin: 0 0 9px;
-    font-size: 12.025px;
-    line-height: 18px;
-    word-break: break-all;
-    word-wrap: break-word;
-    white-space: pre;
-    white-space: pre-wrap;
-    background: #f5f5f5;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-pre code {
-    padding: 0;
-    color: inherit;
-    background-color: transparent;
-    border: 0;
-}
-.pre-scrollable {
-    max-height: 340px;
-    overflow-y: scroll;
+    line-height: normal;
+    color: @orange;
+    .roundedcorners(3px);
 }
 
+/* Horizontal Rule */
 hr {
     border: 0;
     background: none;
     outline: 0;
     height: 1px;
-    background-color: #dddddd;
+    background-color: @lightGrey;
     margin: 2em 0;
 }
 
@@ -273,7 +227,7 @@ hr {
    ========================================================================== */
 table {
     width: 100%;
-    border: 1px solid #dddddd;
+    border: 1px solid @lightGrey;
     border-collapse: collapse;
     border-left: 0;
     background-color: #fff;
@@ -285,15 +239,15 @@ table td {
     line-height: 18px;
     text-align: left;
     vertical-align: top;
-    border-top: 1px solid #dddddd;
-    border-left: 1px solid #dddddd;
+    border-top: 1px solid @lightGrey;
+    border-left: 1px solid @lightGrey;
 }
 table thead th {
     vertical-align: bottom;
     font-weight: bold;
     background: #ffffff;
     color: #000000;
-    border-left: 1px solid #dddddd;
+    border-left: 1px solid @lightGrey;
 }
 table caption + thead tr:first-child th,
 table caption + thead tr:first-child td,
@@ -334,32 +288,13 @@ table caption {
 /* 1.4 Lists
    ========================================================================== */
 ul, ul ul {
-    list-style: disc;
-    margin: .5em;
+  list-style: disc;
+  margin: 4px 0 4px 25px;
 }
 
 ol, ol ol {
     list-style: decimal;
-    margin: .5em;
-}
-
-dl:before, dl:after { content: ""; display: table; } dl:after { clear: both; } dl { zoom: 1; }
-dl {
-    width: 100%;
-}
-dl dt {
-    width: 28%;
-    float: left;
-    clear: left;
-    padding: 1%;
-    margin: 0 0 .5em;
-    font-weight: bold;
-}
-dl dd {
-    width: 68%;
-    float: left;
-    padding: 1%;
-    margin: 0 0 .5em;
+    margin: 4px 0 4px 25px;
 }
 
 
@@ -515,6 +450,8 @@ select:focus {
 
 // Your custom website styles go here...
 
+
+
 /* ==========================================================================
 /* -- Tablet Devices (Layout, Modifications, etc)
    ========================================================================== */
@@ -529,6 +466,8 @@ html body {
 
 .notablet { .none(); }
 .showtablet { .block(); }
+
+
 
 
 } /* End Tablet Media Query */
@@ -567,32 +506,6 @@ html body {
   padding-right: 20px;
 }
 
-.navigation {
-  a {
-    &:active, &:visited {
-      color: @white;
-    } // end active
-    &:hover {
-      background-color: @darkerGrey;
-    } // end hover
-  } // end a
-} // end navigation
-
-.menu {
-  .nolist();
-  .nopadding();
-  .nomargin();
-}
-.nav-toggle, .menu a {
-  .block();
-  background-color: @darkestGrey;
-  .aligncenter();
-  color: @white;
-  padding: 10px;
-  margin-top: 1px;
-  text-decoration: none;
-}
-
 .nomobile { .none(); }
 .showmobile { .block(); }
 
@@ -611,3 +524,6 @@ body {
 
 
 } /* End Print Media Query */
+
+
+@import "docs.less"; // delete this line, it's styles for the docs section of Base.
