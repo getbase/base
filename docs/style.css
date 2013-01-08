@@ -265,11 +265,13 @@ ul,
 ul ul {
   list-style: disc;
   margin: 4px 0 4px 25px;
+  padding: 0;
 }
 ol,
 ol ol {
   list-style: decimal;
   margin: 4px 0 4px 25px;
+  padding: 0;
 }
 /* 1.5 Forms, Labels and Inputs
    ========================================================================== */
