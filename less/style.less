@@ -161,93 +161,92 @@ h3,
 h4,
 h5,
 h6 {
-    margin: 0;
-    line-height: normal;
+  margin: 0;
+  line-height: normal;
 }
 h1, .h1 {
-    font-size: @h1;
-    margin-bottom: 10px;
+  font-size: @h1;
+  margin-bottom: 10px;
 }
 h2, .h2 {
-    font-size: @h2;
-    margin-bottom: 8px;
+  font-size: @h2;
+  margin-bottom: 8px;
 }
 h3, .h3 {
-    font-size: @h3;
-    margin-bottom: 6px;
+  font-size: @h3;
+  margin-bottom: 6px;
 }
 h4, .h4 {
-    font-size: @h4;
-    margin-bottom: 4px;
+  font-size: @h4;
+  margin-bottom: 4px;
 }
 
 
 /* 1.2 Paragraphs, block quotes, code, pre, etc
    ========================================================================== */
 p {
-    margin-bottom: @baseLineHeight / 2;
+  margin-bottom: @baseLineHeight / 2;
 }
 small {
-    font-size: 67.5%;
+  font-size: 67.5%;
 }
 
 /* Block Quotes, Pre and Code Blocks */
 blockquote,
 q {
-    quotes: none;
-    border-left: 7px solid #cccccc;
-    font-style: italic;
-    padding-left: 1em;
-    margin: 1em;
+  quotes: none;
+  background-color: #f7f7f9;
+  border: 1px solid #e1e1e8;
+  .roundedcorners(3px);
+  padding: .5em 1em;
+  margin: 0;
+  font-style: italic;
 }
 
 code,
 pre {
-    padding: 2px 4px;
-    font-family: @codeFont;
-    font-size: @12px;
-    background-color: #f7f7f9;
-    border: 1px solid #e1e1e8;
-    line-height: normal;
-    color: @orange;
-    .roundedcorners(3px);
+  padding: 2px 4px;
+  font-family: @codeFont;
+  font-size: @12px;
+  background-color: #f7f7f9;
+  border: 1px solid #e1e1e8;
+  line-height: normal;
+  color: @orange;
+  .roundedcorners(3px);
 }
 
 /* Horizontal Rule */
 hr {
-    border: 0;
-    background: none;
-    outline: 0;
-    height: 1px;
-    background-color: @lightGrey;
-    margin: 2em 0;
+  border: 0;
+  background: none;
+  outline: 0;
+  height: 1px;
+  background-color: @lightGrey;
+  margin: 2em 0;
 }
 
 /* 1.3 Tables
    ========================================================================== */
 table {
-    width: 100%;
-    border: 1px solid @lightGrey;
-    border-collapse: collapse;
-    border-left: 0;
-    background-color: #fff;
-    border-spacing: 0;
+  width: 100%;
+  border-collapse: collapse;
+  border-left: 0;
+  background-color: #fff;
+  border-spacing: 0;
 }
 table th,
 table td {
-    padding: 8px;
-    line-height: 18px;
-    text-align: left;
-    vertical-align: top;
-    border-top: 1px solid @lightGrey;
-    border-left: 1px solid @lightGrey;
+  padding: 8px;
+  line-height: 18px;
+  text-align: left;
+  vertical-align: top;
+  border-top: 1px solid @lighterGrey;
 }
 table thead th {
-    vertical-align: bottom;
-    font-weight: bold;
-    background: #ffffff;
-    color: #000000;
-    border-left: 1px solid @lightGrey;
+  vertical-align: bottom;
+  font-weight: bold;
+  background-color: @white;
+  color: @darkestGrey;
 }
 table caption + thead tr:first-child th,
 table caption + thead tr:first-child td,
@@ -255,34 +254,54 @@ table colgroup + thead tr:first-child th,
 table colgroup + thead tr:first-child td,
 table thead:first-child tr:first-child th,
 table thead:first-child tr:first-child td {
-    border-top: 0;
-}
-table tbody tr:nth-child(odd) td,
-table tbody tr:nth-child(odd) th {
-    background-color: #f1f1f1;
-}
-table tbody tr:nth-child(even) td,
-table tbody tr:nth-child(even) th {
-    background-color: #ffffff;
+  border-top: 0;
 }
 
-table tbody .odd td,
-table tbody .odd td {
-    background-color: #f1f1f1;
-}
+
+
 
 table tfoot td {
-    background: #eeeeee;
-    font-weight: bold;
+  font-weight: bold;
 }
 
 table caption {
-    padding: .5em;
-    font-style: italic;
-    background-color: #eeeeee;
-    border: 1px solid #cccccc;
-    border-bottom: 0;
-    font-weight: bold;
+  padding: .5em;
+  font-style: italic;
+  background-color: @lighterGrey;
+  border-bottom: 0;
+  font-weight: bold;
+}
+
+/* Bordered Table */
+.bordered { border: 1px solid @lightGrey }
+.bordered caption {
+  margin-right: -1px;
+  border-top: 1px solid #cccccc;
+  border-left: 1px solid #cccccc;
+  border-right: 1px solid #cccccc;
+}
+.bordered thead th { border-left: 1px solid @lightGrey }
+.bordered th,
+.bordered td {
+  border-top: 1px solid @lightGrey;
+  border-left: 1px solid @lightGrey;
+}
+
+/* Stripped Table */
+.striped tbody .odd td,
+.striped tbody .odd td {
+  background-color: #f1f1f1;
+}
+.striped tbody tr:nth-child(odd) td,
+.striped tbody tr:nth-child(odd) th {
+  background-color: #f1f1f1;
+}
+.striped tbody tr:nth-child(even) td,
+.striped tbody tr:nth-child(even) th {
+  background-color: @white;
+}
+.striped tfoot {
+  background-color: @lighterGrey;
 }
 
 /* 1.4 Lists
@@ -290,23 +309,25 @@ table caption {
 ul, ul ul {
   list-style: disc;
   margin: 4px 0 4px 25px;
+  .nopadding();
 }
 
 ol, ol ol {
     list-style: decimal;
     margin: 4px 0 4px 25px;
+    .nopadding();
 }
 
 
 /* 1.5 Forms, Labels and Inputs
    ========================================================================== */
 legend {
-    font-size: @h2;
-    font-family: @headingFont;
-    font-weight: bold;
-    display: block;
-    width: 100%;
-    padding-bottom: 1em;
+  font-size: @h2;
+  font-family: @headingFont;
+  font-weight: bold;
+  display: block;
+  width: 100%;
+  padding-bottom: 1em;
 }
 
 label {
@@ -334,16 +355,16 @@ input[type=email],
 input[type=search],
 input[type=tel],
 input[type=file] {
-    border-radius: 0;
-    outline: 0;
-    border: 1px solid #ccc;
-    padding: .5%;
-    height: 18px;
-    width: 30%;
-    display: inline-block;
-    vertical-align: middle;
-        -webkit-appearance: none; /* Remove Default Browser Behaviour for Safari */
-            -moz-appearance:none; /* Remove Default Browser Behaviour for Firefox */
+  border-radius: 0;
+  outline: 0;
+  border: 1px solid #ccc;
+  padding: .5%;
+  height: 18px;
+  width: 30%;
+  display: inline-block;
+  vertical-align: middle;
+      -webkit-appearance: none; /* Remove Default Browser Behaviour for Safari */
+          -moz-appearance:none; /* Remove Default Browser Behaviour for Firefox */
 }
 
 input[type=file] {
@@ -361,44 +382,44 @@ input[type="search"]::-webkit-search-cancel-button { -webkit-appearance: none; }
 
 input[type=submit],
 input[type=button] {
-    line-height: normal;
-    cursor: pointer;
-    border-radius: 0;
-        -webkit-appearance: none; /* Remove Default Browser Behaviour for Safari */
-        -moz-appearance:none; /* Remove Default Browser Behaviour for Firefox */
+  line-height: normal;
+  cursor: pointer;
+  border-radius: 0;
+      -webkit-appearance: none; /* Remove Default Browser Behaviour for Safari */
+      -moz-appearance:none; /* Remove Default Browser Behaviour for Firefox */
 }
 
 textarea {
-    vertical-align: top;
-    display: inline-block;
-    border: 1px solid #cccccc;
-    min-height: 80px;
-    padding: .5%;
-    width: 30%;
+  vertical-align: top;
+  display: inline-block;
+  border: 1px solid #cccccc;
+  min-height: 80px;
+  padding: .5%;
+  width: 30%;
 }
 
 select {
-    font-size: 14px;
-    outline: 0;
-    height: 34px;
-    border: 1px solid #cccccc;
-    padding: .5%;
-    width: 31%;
-    -webkit-border-radius: 0 3px 3px 0;
-        -moz-border-radius: 0 3px 3px 0;
+  font-size: 14px;
+  outline: 0;
+  height: 34px;
+  border: 1px solid #cccccc;
+  padding: .5%;
+  width: 31%;
+  -webkit-border-radius: 0 3px 3px 0;
+      -moz-border-radius: 0 3px 3px 0;
 }
 select:focus {
-    border: 1px solid #cccccc;
-    outline: 0;
+  border: 1px solid #cccccc;
+  outline: 0;
 }
 select[multiple] {
-    min-height: 100px;
-    vertical-align: top;
-    border: 1px solid #ccc;
+  min-height: 100px;
+  vertical-align: top;
+  border: 1px solid #ccc;
 }
 
 select:focus {
-    border: 1px solid #999999;
+  border: 1px solid #999999;
 }
 
 
@@ -407,6 +428,8 @@ select:focus {
    ========================================================================== */
 /* Sections & Content Blocks */
 .section { position: relative; }
+
+.row { margin-bottom: 1em; }
 
 .container {
   max-width: 960px;
