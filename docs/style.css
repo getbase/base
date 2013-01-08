@@ -171,10 +171,17 @@ small {
 blockquote,
 q {
   quotes: none;
-  border-left: 7px solid #cccccc;
+  background-color: #f7f7f9;
+  border: 1px solid #e1e1e8;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  padding: .5em 1em;
+  margin: 0;
   font-style: italic;
-  padding-left: 1em;
-  margin: 1em;
 }
 code,
 pre {
@@ -205,7 +212,6 @@ hr {
    ========================================================================== */
 table {
   width: 100%;
-  border: 1px solid #dddddd;
   border-collapse: collapse;
   border-left: 0;
   background-color: #fff;
@@ -217,15 +223,13 @@ table td {
   line-height: 18px;
   text-align: left;
   vertical-align: top;
-  border-top: 1px solid #dddddd;
-  border-left: 1px solid #dddddd;
+  border-top: 1px solid #eeeeee;
 }
 table thead th {
   vertical-align: bottom;
   font-weight: bold;
-  background: #ffffff;
-  color: #000000;
-  border-left: 1px solid #dddddd;
+  background-color: #ffffff;
+  color: #222222;
 }
 table caption + thead tr:first-child th,
 table caption + thead tr:first-child td,
@@ -235,29 +239,49 @@ table thead:first-child tr:first-child th,
 table thead:first-child tr:first-child td {
   border-top: 0;
 }
-table tbody tr:nth-child(odd) td,
-table tbody tr:nth-child(odd) th {
-  background-color: #f1f1f1;
-}
-table tbody tr:nth-child(even) td,
-table tbody tr:nth-child(even) th {
-  background-color: #ffffff;
-}
-table tbody .odd td,
-table tbody .odd td {
-  background-color: #f1f1f1;
-}
 table tfoot td {
-  background: #eeeeee;
   font-weight: bold;
 }
 table caption {
   padding: .5em;
   font-style: italic;
   background-color: #eeeeee;
-  border: 1px solid #cccccc;
   border-bottom: 0;
   font-weight: bold;
+}
+/* Bordered Table */
+.bordered {
+  border: 1px solid #dddddd;
+}
+.bordered caption {
+  margin-right: -1px;
+  border-top: 1px solid #cccccc;
+  border-left: 1px solid #cccccc;
+  border-right: 1px solid #cccccc;
+}
+.bordered thead th {
+  border-left: 1px solid #dddddd;
+}
+.bordered th,
+.bordered td {
+  border-top: 1px solid #dddddd;
+  border-left: 1px solid #dddddd;
+}
+/* Stripped Table */
+.striped tbody .odd td,
+.striped tbody .odd td {
+  background-color: #f1f1f1;
+}
+.striped tbody tr:nth-child(odd) td,
+.striped tbody tr:nth-child(odd) th {
+  background-color: #f1f1f1;
+}
+.striped tbody tr:nth-child(even) td,
+.striped tbody tr:nth-child(even) th {
+  background-color: #ffffff;
+}
+.striped tfoot {
+  background-color: #eeeeee;
 }
 /* 1.4 Lists
    ========================================================================== */
@@ -377,7 +401,9 @@ select:focus {
 .section {
   position: relative;
 }
-.row { margin-bottom: 2%; }
+.row {
+  margin-bottom: 1em;
+}
 .container {
   max-width: 960px;
   margin: 0 auto;

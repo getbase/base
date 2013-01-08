@@ -14,7 +14,6 @@
     <a href="index.html" class="left block logo">Base <span class="small">( Docs )</span></a>
     <div class="navigation right">
       <ul class="menu clear">
-        <li><a href="/base/">Base Home</a></li>
         <li><a href="index.html">Welcome</a></li>
         <li><a class="current" href="base-css.html">Base CSS</a></li>
         <li><a href="grid-layout.html">Grid Layout</a></li>
@@ -69,26 +68,12 @@
     </li>
     <li>Lorem ipsum point</li>
   </ol>
-  
-  <hr/>
-
-  <h3>Definition List</h3>
-  <dl>
-    <dt>Definition Term</dt>
-    <dd>Definition Description.</dd>
-    <dt>Definition Term</dt>
-    <dd>Definition Description.</dd>
-    <dt>Definition Term</dt>
-    <dd>Definition Description.</dd>
-    <dt>Definition Term</dt>
-    <dd>Definition Description.</dd>
-  </dl>
 
   <hr>
 
   <h2>Tables</h2>
   <table>
-    <caption>Default Table</caption>
+    <caption>Default Table (this is the table caption)</caption>
     <thead>
       <tr>
         <th>Table Heading 1</th>
@@ -110,6 +95,27 @@
         <td>Data Cell Three</td>
         <td>Data Cell Four</td>
       </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="4">Table Footer Details (this is the <code>tfoot</code> of the table)</td>
+      </tr>
+    </tfoot>
+  </table>
+
+  <hr>
+
+  <table class="bordered">
+    <caption>Bordered Table (this is the table caption)</caption>
+    <thead>
+      <tr>
+        <th>Table Heading 1</th>
+        <th>Table Heading 2</th>
+        <th>Table Heading 3</th>
+        <th>Table Heading 4</th>
+      </tr>
+    </thead>
+    <tbody>
       <tr>
         <td>Data Cell One</td>
         <td>Data Cell Two</td>
@@ -125,7 +131,73 @@
     </tbody>
     <tfoot>
       <tr>
-        <td colspan="4">Table Footer Details</td>
+        <td colspan="4">Table Footer Details (this is the <code>tfoot</code> of the table)</td>
+      </tr>
+    </tfoot>
+  </table>
+
+  <hr>
+
+  <table class="striped">
+    <caption>Striped Table (this is the table caption)</caption>
+    <thead>
+      <tr>
+        <th>Table Heading 1</th>
+        <th>Table Heading 2</th>
+        <th>Table Heading 3</th>
+        <th>Table Heading 4</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Data Cell One</td>
+        <td>Data Cell Two</td>
+        <td>Data Cell Three</td>
+        <td>Data Cell Four</td>
+      </tr>
+      <tr>
+        <td>Data Cell One</td>
+        <td>Data Cell Two</td>
+        <td>Data Cell Three</td>
+        <td>Data Cell Four</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="4">Table Footer Details (this is the <code>tfoot</code> of the table)</td>
+      </tr>
+    </tfoot>
+  </table>
+
+  <hr>
+
+  <table class="striped bordered">
+    <caption>Striped + Bordered Table (this is the table caption)</caption>
+    <thead>
+      <tr>
+        <th>Table Heading 1</th>
+        <th>Table Heading 2</th>
+        <th>Table Heading 3</th>
+        <th>Table Heading 4</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Data Cell One</td>
+        <td>Data Cell Two</td>
+        <td>Data Cell Three</td>
+        <td>Data Cell Four</td>
+      </tr>
+      <tr>
+        <td>Data Cell One</td>
+        <td>Data Cell Two</td>
+        <td>Data Cell Three</td>
+        <td>Data Cell Four</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="4">Table Footer Details (this is the <code>tfoot</code> of the table)</td>
       </tr>
     </tfoot>
   </table>
@@ -140,85 +212,74 @@
   
   <hr>
 
-  <div id="forms">
-    <form action="#" method="get">
-      <fieldset>
-        <legend>Form Example</legend>
-        <div class="field">
-          <label for="name">Field Name</label>
-          <input type="text" name="name" id="name">
-        </div>
-        <div class="field">
-          <label for="email">Email Field</label>
-          <input type="text" name="email" id="email">
-        </div>
-        <div class="field">
-          <label for="comments">Textarea</label>
-          <textarea rows="10" cols="30" name="comments" id="comments"></textarea>
-        </div>
-        <div class="field">
-          <label for="select">Select:</label>
-          <select name="select" id="select">
-            <optgroup label="Option Group 1">
-              <option value="1">Option 1</option>
-              <option value="2">Option 2</option>
-              <option value="3">Option 3</option>
-            </optgroup>
-            <optgroup label="Option Group 2">
-              <option value="1">Option 1</option>
-              <option value="2">Option 2</option>
-              <option value="3">Option 3</option>
-            </optgroup>
-          </select>
-        </div>
-        <div class="field">
-          <ul>
-            <li>
-              <input type="radio" class="radio" name="radio" id="radio1" value="1" />
-              <label for="radio1">Radio 1</label>
-            </li>
-            <li>
-              <input type="radio" class="radio" name="radio" id="radio2" value="2" />
-              <label for="radio2">Radio 2</label>
-            </li>
-            <li>
-              <input type="radio" class="radio" name="radio" id="radio3" value="3" />
-              <label for="radio3">Radio 3</label>
-            </li>
-          </ul>
-        </div>
-        <div class="field">
-          <ul>
-            <li>
-              <input type="checkbox" class="checkbox" name="checkbox" id="checkbox1" value="1" />
-              <label for="checkbox1">Checkbox 1</label>
-            </li>
-            <li>
-              <input type="checkbox" class="checkbox" name="checkbox" id="checkbox2" value="2" />
-              <label for="checkbox2">Checkbox 2</label>
-            </li>
-            <li>
-              <input type="checkbox" class="checkbox" name="checkbox" id="checkbox3" value="3" />
-              <label for="checkbox3">Checkbox 3</label>
-            </li>
-          </ul>
-        </div>
-        <div class="field">
-          <input class="button" type="submit" value="Submit">
-          <input class="button" type="reset" value="Reset">
-        </div>
-      </fieldset>
-    </form>
-  </div>
-
-  <div id="misc">
-    <address>
-      22 Test Street Melbourne, Victoria, 3000<br>
-      <abbr title="Telephone">T:</abbr> <strong>1234 1234</strong> &nbsp;|&nbsp; <a href="mailto:">Send us an email!</a>
-    </address>
-  </div>
-
-  <hr>
+  <form action="#" method="get">
+    <fieldset>
+      <legend>Form Example</legend>
+      <div class="field">
+        <label for="name">Field Name</label>
+        <input type="text" name="name" id="name">
+      </div>
+      <div class="field">
+        <label for="email">Email Field</label>
+        <input type="text" name="email" id="email">
+      </div>
+      <div class="field">
+        <label for="comments">Textarea</label>
+        <textarea rows="10" cols="30" name="comments" id="comments"></textarea>
+      </div>
+      <div class="field">
+        <label for="select">Select:</label>
+        <select name="select" id="select">
+          <optgroup label="Option Group 1">
+            <option value="1">Option 1</option>
+            <option value="2">Option 2</option>
+            <option value="3">Option 3</option>
+          </optgroup>
+          <optgroup label="Option Group 2">
+            <option value="1">Option 1</option>
+            <option value="2">Option 2</option>
+            <option value="3">Option 3</option>
+          </optgroup>
+        </select>
+      </div>
+      <div class="field">
+        <ul>
+          <li>
+            <input type="radio" class="radio" name="radio" id="radio1" value="1" />
+            <label for="radio1">Radio 1</label>
+          </li>
+          <li>
+            <input type="radio" class="radio" name="radio" id="radio2" value="2" />
+            <label for="radio2">Radio 2</label>
+          </li>
+          <li>
+            <input type="radio" class="radio" name="radio" id="radio3" value="3" />
+            <label for="radio3">Radio 3</label>
+          </li>
+        </ul>
+      </div>
+      <div class="field">
+        <ul>
+          <li>
+            <input type="checkbox" class="checkbox" name="checkbox" id="checkbox1" value="1" />
+            <label for="checkbox1">Checkbox 1</label>
+          </li>
+          <li>
+            <input type="checkbox" class="checkbox" name="checkbox" id="checkbox2" value="2" />
+            <label for="checkbox2">Checkbox 2</label>
+          </li>
+          <li>
+            <input type="checkbox" class="checkbox" name="checkbox" id="checkbox3" value="3" />
+            <label for="checkbox3">Checkbox 3</label>
+          </li>
+        </ul>
+      </div>
+      <div class="field">
+        <input class="button" type="submit" value="Submit">
+        <input class="button" type="reset" value="Reset">
+      </div>
+    </fieldset>
+  </form>
   
 </div>
 
