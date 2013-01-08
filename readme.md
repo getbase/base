@@ -18,7 +18,7 @@ Well commented CSS to ensure your implementation is a breeze.
 Covers IE7+ and modern browsers such as Chrome, Firefox and Opera.
 
 ### Base is Awesome!
-Preview the [demo page](http://matthewhartman.github.com/base/demo/) to see the Base Framework in all its glory! :)
+Preview the [docs](http://matthewhartman.github.com/base/docs/) to see the Base Framework in all its glory! :)
 
 
 ## Repo Contents
