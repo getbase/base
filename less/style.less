@@ -321,107 +321,7 @@ ol, ol ol {
 
 /* 1.5 Forms, Labels and Inputs
    ========================================================================== */
-legend {
-  font-size: @h2;
-  font-family: @headingFont;
-  font-weight: bold;
-  display: block;
-  width: 100%;
-  padding-bottom: 1em;
-}
-
-label {
-
-}
-
-.field {
-    padding: 10px 0;
-    
-    label {
-        display: inline-block;
-        min-width: 20%;
-    } // end label
-
-    ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    } // end ul
-} // end .field
-
-/* Inputs (Text, Search, Email, etc) */
-input[type=text],
-input[type=email],
-input[type=search],
-input[type=tel],
-input[type=file] {
-  border-radius: 0;
-  outline: 0;
-  border: 1px solid #ccc;
-  padding: .5%;
-  height: 18px;
-  width: 30%;
-  display: inline-block;
-  vertical-align: middle;
-      -webkit-appearance: none; /* Remove Default Browser Behaviour for Safari */
-          -moz-appearance:none; /* Remove Default Browser Behaviour for Firefox */
-}
-
-input[type=file] {
-    border: 0;
-    height: 20px;
-}
-
-input[type=button]::-moz-focus-inner,
-input[type=submit]::-moz-focus-inner {
-    padding: 0;
-    border: 0
-}
-
-input[type="search"]::-webkit-search-cancel-button { -webkit-appearance: none; }
-
-input[type=submit],
-input[type=button] {
-  line-height: normal;
-  cursor: pointer;
-  border-radius: 0;
-      -webkit-appearance: none; /* Remove Default Browser Behaviour for Safari */
-      -moz-appearance:none; /* Remove Default Browser Behaviour for Firefox */
-}
-
-textarea {
-  vertical-align: top;
-  display: inline-block;
-  border: 1px solid #cccccc;
-  min-height: 80px;
-  padding: .5%;
-  width: 30%;
-}
-
-select {
-  font-size: 14px;
-  outline: 0;
-  height: 34px;
-  border: 1px solid #cccccc;
-  padding: .5%;
-  width: 31%;
-  -webkit-border-radius: 0 3px 3px 0;
-      -moz-border-radius: 0 3px 3px 0;
-}
-select:focus {
-  border: 1px solid #cccccc;
-  outline: 0;
-}
-select[multiple] {
-  min-height: 100px;
-  vertical-align: top;
-  border: 1px solid #ccc;
-}
-
-select:focus {
-  border: 1px solid #999999;
-}
-
+// Work in progress...
 
 /* ==========================================================================
 /* 2.0 - Grid Layout (Responsive)
@@ -527,6 +427,11 @@ html body {
 .container {
   padding-left: 20px;
   padding-right: 20px;
+}
+
+table th,
+table td {
+  padding: 4px;
 }
 
 .nomobile { .none(); }
