@@ -6,7 +6,7 @@ A super simple, responsive framework built to work on mobile devices, tablets, n
 Built for all devices big and small, base has got you covered.
 
 ### Foundation Styles
-Custom styles for headings, tables, blockquotes forms and much more.
+Custom styles for headings, tables, blockquotes and much more.
 
 ### Accessibility in mind
 Works with screen readers in mind and has JS fallbacks.
