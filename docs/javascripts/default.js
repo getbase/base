@@ -39,7 +39,7 @@ $(document).ready(function(){
   $("html").removeClass('no-js').addClass('js');
 
   // 2.1 Add Zebra Stripes for Tables
-  $('table tbody tr:odd, table tbody tr:odd').addClass('odd');
+  $('table tbody tr:odd').addClass('odd');
 
   // 2.2 Menu for Mobile Devices
   // If JS is enabled, attach the 'hide' class (only affects mobiles - special media query class)
