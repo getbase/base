@@ -31,7 +31,9 @@
   <hr>
 
   <h2>Body and Typography</h2>
-  <p>Base has a global default font size of 14px and a line-height of 22px (which is converted into em's for scalability and accessibility). This is applied to the <code>&lt;body&gt;</code> and all paragraphs. In addition, (paragraphs) receive a bottom margin of half their line-height (11px by default).</p>
+  <p>Base has a global default font size of 14px and a line-height of 22px (which is converted into <code>rem</code> units for scalability and accessibility). This is applied to the <code>&lt;body&gt;</code> and all paragraphs. In addition, (paragraphs) receive a bottom margin of half their line-height (11px by default).</p>
+
+  <p class="alert"><strong>NOTE:</strong> rem units are not supported in some browser, so a px fallback has been provided.</p>
 
   <hr>
 
@@ -71,9 +73,9 @@
 
   <hr>
 
-  <h2>Tables</h2>
+  <h2>Table</h2>
   <table>
-    <caption>Default Table (this is the table caption)</caption>
+    <caption>Table Caption (optional)</caption>
     <thead>
       <tr>
         <th>Table Heading 1</th>
@@ -84,120 +86,24 @@
     </thead>
     <tbody>
       <tr>
-        <td>Data Cell One</td>
-        <td>Data Cell Two</td>
-        <td>Data Cell Three</td>
-        <td>Data Cell Four</td>
+        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed.</td>
+        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed.</td>
+        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed.</td>
+        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed.</td>
       </tr>
       <tr>
-        <td>Data Cell One</td>
-        <td>Data Cell Two</td>
-        <td>Data Cell Three</td>
-        <td>Data Cell Four</td>
-      </tr>
-    </tbody>
-    <tfoot>
-      <tr>
-        <td colspan="4">Table Footer Details (this is the <code>tfoot</code> of the table)</td>
-      </tr>
-    </tfoot>
-  </table>
-
-  <hr>
-
-  <table class="bordered">
-    <caption>Bordered Table (this is the table caption)</caption>
-    <thead>
-      <tr>
-        <th>Table Heading 1</th>
-        <th>Table Heading 2</th>
-        <th>Table Heading 3</th>
-        <th>Table Heading 4</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Data Cell One</td>
-        <td>Data Cell Two</td>
-        <td>Data Cell Three</td>
-        <td>Data Cell Four</td>
-      </tr>
-      <tr>
-        <td>Data Cell One</td>
-        <td>Data Cell Two</td>
-        <td>Data Cell Three</td>
-        <td>Data Cell Four</td>
+        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed.</td>
+        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed.</td>
+        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed.</td>
+        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed.</td>
       </tr>
     </tbody>
     <tfoot>
       <tr>
-        <td colspan="4">Table Footer Details (this is the <code>tfoot</code> of the table)</td>
-      </tr>
-    </tfoot>
-  </table>
-
-  <hr>
-
-  <table class="striped">
-    <caption>Striped Table (this is the table caption)</caption>
-    <thead>
-      <tr>
-        <th>Table Heading 1</th>
-        <th>Table Heading 2</th>
-        <th>Table Heading 3</th>
-        <th>Table Heading 4</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Data Cell One</td>
-        <td>Data Cell Two</td>
-        <td>Data Cell Three</td>
-        <td>Data Cell Four</td>
-      </tr>
-      <tr>
-        <td>Data Cell One</td>
-        <td>Data Cell Two</td>
-        <td>Data Cell Three</td>
-        <td>Data Cell Four</td>
-      </tr>
-    </tbody>
-    <tfoot>
-      <tr>
-        <td colspan="4">Table Footer Details (this is the <code>tfoot</code> of the table)</td>
-      </tr>
-    </tfoot>
-  </table>
-
-  <hr>
-
-  <table class="striped bordered">
-    <caption>Striped + Bordered Table (this is the table caption)</caption>
-    <thead>
-      <tr>
-        <th>Table Heading 1</th>
-        <th>Table Heading 2</th>
-        <th>Table Heading 3</th>
-        <th>Table Heading 4</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Data Cell One</td>
-        <td>Data Cell Two</td>
-        <td>Data Cell Three</td>
-        <td>Data Cell Four</td>
-      </tr>
-      <tr>
-        <td>Data Cell One</td>
-        <td>Data Cell Two</td>
-        <td>Data Cell Three</td>
-        <td>Data Cell Four</td>
-      </tr>
-    </tbody>
-    <tfoot>
-      <tr>
-        <td colspan="4">Table Footer Details (this is the <code>tfoot</code> of the table)</td>
+        <td>Table Footer 1</td>
+        <td>Table Footer 2</td>
+        <td>Table Footer 3</td>
+        <td>Table Footer 4</td>
       </tr>
     </tfoot>
   </table>
@@ -220,6 +126,7 @@
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 <script src="../javascripts/default.js"></script>
+<script src="javascripts/docs.js"></script>
 
 </body>
 </html>

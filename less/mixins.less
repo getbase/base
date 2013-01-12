@@ -22,8 +22,24 @@
   }
 }
 
+// Font Sizes (REMs with PX fallback for older browsers)
+.font-size (@sizeValue) {
+  @remValue: @sizeValue / 16;
+  @pxValue: (@sizeValue);
+  font-size: ~"@{pxValue}px"; 
+  font-size: ~"@{remValue}rem";
+}
+
+// Line Height Sizes (REMs with PX fallback for older browsers)
+.line-height (@sizeValue) {
+  @remValue: @sizeValue / 16;
+  @pxValue: (@sizeValue);
+  line-height: ~"@{pxValue}px"; 
+  line-height: ~"@{remValue}rem";
+}
+
 // Border Rounded Corners
-.roundedcorners(@radius: 1px) {
+.roundedcorners (@radius: 1px) {
 -webkit-border-radius: @radius;
 -moz-border-radius: @radius;
 border-radius: @radius;

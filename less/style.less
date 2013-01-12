@@ -2,7 +2,7 @@
 
   Base Stylesheet - http://matthewhartman.github.com/base/
   Author: Matthew Hartman - http://www.matthewhartman.com.au/
-  Version: 1.2 - Last Updated: 5th January, 2013
+  Version: 1.2 - Last Updated: 12th January, 2013
 
 ========================================================================== */
 
@@ -18,29 +18,14 @@
 
   @fontSize:              14; // default font size
   @lineHeight:            22; // default line height size
- 
-  @baseFontSize:          @fontSize / 16 * 1em; // calculate the font size in em
-  @baseLineHeight:        @lineHeight / @fontSize * 1em; // calculate the line height size in em
-
-  @12px:                  12 / @fontSize * 1em; // calculate 12px in em
-  @13px:                  13 / @fontSize * 1em; // calculate 13px in em
-  @14px:                  14 / @fontSize * 1em; // calculate 14px in em
-  @16px:                  16 / @fontSize * 1em; // calculate 16px in em
-  @18px:                  18 / @fontSize * 1em; // calculate 18px in em
-  @20px:                  20 / @fontSize * 1em; // calculate 20px in em
-  @22px:                  22 / @fontSize * 1em; // calculate 22px in em
-  @26px:                  26 / @fontSize * 1em; // calculate 26px in em
-  @28px:                  28 / @fontSize * 1em; // calculate 28px in em
-  @32px:                  32 / @fontSize * 1em; // calculate 32px in em
-  @40px:                  40 / @fontSize * 1em; // calculate 40px in em
 
   // Setup Headings
   @headingFont:           arial, helvetica, clean, sans-serif;
 
-  @h1:                    @40px;
-  @h2:                    @32px;
-  @h3:                    @26px;
-  @h4:                    @20px;
+  @h1:                    40;
+  @h2:                    32;
+  @h3:                    26;
+  @h4:                    20;
 
   // Setup Colours
 
@@ -60,6 +45,8 @@
   @lightBlue:             #a9c2d7;
   @lighterBlue:           #cfe6f8;
   @lightestBlue:          #e7f2fb;
+
+  @lightestYellow:        #ffc;
 
   @orange:                #f30;
   @midOrange:             #c34119;
@@ -89,7 +76,11 @@ form, fieldset, a img { border: 0; }
 .left { float: left; }
 .right { float: right; }
 .block { display: block; }
-.inline-block { display: inline-block; *zoom: 1; *display: inline; }
+.inline-block {
+  display: inline-block;
+  *zoom: 1;
+  *display: inline;
+}
 .inline { display: inline; }
 .visuallyhidden {
   border: 0;
@@ -114,6 +105,13 @@ form, fieldset, a img { border: 0; }
   font-weight: bold;
 }
 
+.alert {
+  background-color: @lightestYellow;
+  .block();
+  padding: 4px 8px;
+  .roundedcorners(3px);
+}
+
 .nolist { list-style: none; }
 .nopadding { padding: 0; }
 .nomargin { margin: 0; }
@@ -129,8 +127,8 @@ form, fieldset, a img { border: 0; }
 /* Body */
 body {
   font-family: @baseFont;
-  font-size: @baseFontSize;
-  line-height: @baseLineHeight;
+  .font-size(@fontSize);
+  .line-height(@lineHeight);
   background-color: @white;
   color: @darkestGrey;
   margin: 0;
@@ -165,19 +163,19 @@ h6 {
   line-height: normal;
 }
 h1, .h1 {
-  font-size: @h1;
+  .font-size(@h1);
   margin-bottom: 10px;
 }
 h2, .h2 {
-  font-size: @h2;
+  .font-size(@h2);
   margin-bottom: 8px;
 }
 h3, .h3 {
-  font-size: @h3;
+  .font-size(@h3);
   margin-bottom: 6px;
 }
 h4, .h4 {
-  font-size: @h4;
+  .font-size(@h4);
   margin-bottom: 4px;
 }
 
@@ -185,10 +183,10 @@ h4, .h4 {
 /* 1.2 Paragraphs, block quotes, code, pre, etc
    ========================================================================== */
 p {
-  margin-bottom: @baseLineHeight / 2;
+  //margin-bottom: @baseLineHeight / 2;
 }
 small {
-  font-size: 67.5%;
+  .font-size(12);
 }
 
 /* Block Quotes, Pre and Code Blocks */
@@ -205,13 +203,13 @@ q {
 
 code,
 pre {
-  padding: 2px 4px;
+  padding: 2px 6px;
   font-family: @codeFont;
-  font-size: @12px;
-  background-color: #f7f7f9;
-  border: 1px solid #e1e1e8;
+  .font-size(12);
+  background-color: @lightestGrey;
+  border: 1px solid @lightGrey;
   line-height: normal;
-  color: @orange;
+  color: @darkestGrey;
   .roundedcorners(3px);
 }
 
@@ -248,14 +246,6 @@ table thead th {
   background-color: @white;
   color: @darkestGrey;
 }
-table caption + thead tr:first-child th,
-table caption + thead tr:first-child td,
-table colgroup + thead tr:first-child th,
-table colgroup + thead tr:first-child td,
-table thead:first-child tr:first-child th,
-table thead:first-child tr:first-child td {
-  border-top: 0;
-}
 
 
 
@@ -270,38 +260,6 @@ table caption {
   background-color: @lighterGrey;
   border-bottom: 0;
   font-weight: bold;
-}
-
-/* Bordered Table */
-.bordered { border: 1px solid @lightGrey }
-.bordered caption {
-  margin-right: -1px;
-  border-top: 1px solid #cccccc;
-  border-left: 1px solid #cccccc;
-  border-right: 1px solid #cccccc;
-}
-.bordered thead th { border-left: 1px solid @lightGrey }
-.bordered th,
-.bordered td {
-  border-top: 1px solid @lightGrey;
-  border-left: 1px solid @lightGrey;
-}
-
-/* Stripped Table */
-.striped tbody .odd td,
-.striped tbody .odd td {
-  background-color: #f1f1f1;
-}
-.striped tbody tr:nth-child(odd) td,
-.striped tbody tr:nth-child(odd) th {
-  background-color: #f1f1f1;
-}
-.striped tbody tr:nth-child(even) td,
-.striped tbody tr:nth-child(even) th {
-  background-color: @white;
-}
-.striped tfoot {
-  background-color: @lighterGrey;
 }
 
 /* 1.4 Lists
