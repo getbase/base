@@ -22,10 +22,13 @@ Preview the [docs](http://matthewhartman.github.com/base/docs/) to see the Base 
 
 
 ## Repo Contents
-1. readme.md - Feel free to delete this! ;)
-2. index.html - An example page with Base in action
-3. style.css - Base stylesheet including styles for headings, tables, body content, etc
-4. default.js - Base javascript file to get you started
+1. readme.md - Feel free to delete this
+2. index.html - A basic html template
+3. style.css - Base stylesheet for headings, tables, body content, etc
+4. javascripts/default.js - Base javascript file to get you started (includes respond.js)
+5. less/style.less - The base stylesheet in LESS format
+6. docs - Documentation for Base
+7. grid/base-grid.psd - PSD template for Base
 
 Base was built by Matthew Hartman (@hartmanmatthew), a passionate front end developer based in Melbourne, Australia.
 
