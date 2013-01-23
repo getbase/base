@@ -232,6 +232,10 @@ table {
   border-left: 0;
   background-color: #fff;
   border-spacing: 0;
+  table-layout: fixed;
+  word-wrap: break-word;
+  -ms-word-wrap: break-word;
+  *white-space: normal;
 }
 table th,
 table td {
