@@ -12,7 +12,8 @@
 
   // Setup Typography
   @baseFont:              arial, helvetica, clean, sans-serif;
-  @codeFont:              Menlo, Monaco, Consolas, "Courier New", monospace;
+  @codeFont:              Monaco, Andale Mono, "Courier New", monospace;
+  @quoteFont:             "Georgia", "Times";
   @serif:                 serif;
   @sansSerif:             sans-serif;
 
@@ -52,7 +53,10 @@
   @midOrange:             #c34119;
   @lightOrange:           #ffc9b3;
   @lighterOrange:         #fddfd3;
-  @lightestOrange:        #fff0ea;
+  @lightestOrange:        #fee9cc;
+  
+  @buttonOrange:          #ffe0b5;
+  @activeOrange:          #fdeed8;
 
 
 
@@ -63,14 +67,17 @@
 /* Micro Clearfix */
 .clear:before, .clear:after { content: ""; display: table; } .clear:after { clear: both; } .clear { zoom: 1; }
 .section:before, .section:after { content: ""; display: table; } .section:after { clear: both; } .section { zoom: 1; }
+.checkbox:before, .checkbox:after { content: ""; display: table; } .checkbox:after { clear: both; } .checkbox { zoom: 1; }
 
 /* General Resets */
   /* Start font size at 100% */
 html { font-size: 100%; }
   /* Make all form fonts consistent */
 button, input, select, textarea { font-family: sans-serif; }
-  /* Remove all default borders */
+  /* Remove default borders */
 form, fieldset, a img { border: 0; }
+/* Remove default spacing */
+form, fieldset { margin: 0; padding: 0; }
 
 /* Common Classes */
 .left { float: left; }
@@ -192,22 +199,40 @@ small {
 /* Block Quotes, Pre and Code Blocks */
 blockquote,
 q {
-  quotes: none;
-  background-color: #f7f7f9;
-  border: 1px solid #e1e1e8;
-  .roundedcorners(3px);
-  padding: .5em 1em;
-  margin: 0;
+  .font-size(20);
+  .line-height(32);
+  padding: 20px 30px;
+  margin: 20px 0;
+  font-family: @quoteFont;
   font-style: italic;
 }
 
-code,
-pre {
+blockquote:before,
+q:before,
+blockquote:after,
+q:after {
+  .font-size(80);
+  color: @grey;
+}
+blockquote:before,
+q:before {
+  content:"\201C";
+  margin-left: -0.5em;
+  float: left;
+}
+blockquote:after,
+q:after {
+  content:"\201D";
+  margin-right: -0.5em;
+  float: right;
+}
+
+code {
   padding: 2px 6px;
   font-family: @codeFont;
   .font-size(12);
-  background-color: @lightestGrey;
-  border: 1px solid @lightGrey;
+  background-color: @lightestOrange;
+  border: 1px solid @lightOrange;
   line-height: normal;
   color: @darkestGrey;
   .roundedcorners(3px);
@@ -280,10 +305,186 @@ ol, ol ol {
     .nopadding();
 }
 
-
 /* 1.5 Forms, Labels and Inputs
    ========================================================================== */
-// Work in progress...
+fieldset {
+  margin: 1.5em 0;
+}
+legend {
+  font-family: @headingFont;
+  .font-size(32);
+  line-height: normal;
+  font-weight: bold;
+  width: 100%;
+  .block();
+  border: 0;
+  *margin-left: -5px; //fix alignment for ie7
+}
+label {
+  font-weight: bold;
+}
+.inline-field label {
+  .inline-block();
+  margin-right: 1em;
+}
+.field {
+  padding: 0.2em 0;
+  
+  label {
+    .block();
+  } // end label
+}
+
+.checkbox {
+  .block();
+  position: relative;
+  line-height: normal;
+  padding: 0.2em 0;
+  label {
+    display: table-cell;
+    *zoom: 1;
+  } // end label
+}
+.checkbox input[type=checkbox],
+.checkbox input[type=radio] {
+  float: left;
+  top: -2px;
+  position: relative;
+  margin-right: 1em;
+}
+/* Inputs (Text, Search, Email, etc) */
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=search],
+input[type=tel],
+input[type=file] {
+  outline: 0;
+  padding: 2px 5px;
+  height: 28px;
+  -webkit-appearance: none; // Remove Default Browser Behaviour for Safari
+  -moz-appearance: none; // Remove Default Browser Behaviour for Firefox
+
+  vertical-align: middle;
+  .font-size(21);
+  font-weight: bold;
+  background-color: @white;
+  color: @darkGrey;
+  border: 1px solid @lightGrey;
+  border-top: 1px solid @grey;
+  .roundedcorners(3px);
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+input[type=file] {
+  border: 0;
+  height: 20px;
+}
+input[type=button]::-moz-focus-inner,
+input[type=submit]::-moz-focus-inner,
+input[type=reset]::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+input[type=submit],
+input[type=button],
+input[type=reset] {
+  line-height: normal;
+  cursor: pointer;
+  -webkit-appearance: none;
+  /* Remove Default Browser Behaviour for Safari */
+
+  -moz-appearance: none;
+  /* Remove Default Browser Behaviour for Firefox */
+
+}
+textarea {
+  .font-size(21);
+  font-weight: bold;
+  background-color: @white;
+  color: @darkGrey;
+  outline: 0;
+  padding: 2px 5px;
+  vertical-align: top;
+  border: 1px solid @lightGrey;
+  min-height: 80px;
+  padding: 10px;
+  resize: none; // disable user resizing
+  .roundedcorners(3px);
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+select {
+  outline: 0;
+  border: 0;
+  padding: 5px;
+  width: 140px;
+  .inline-block();
+  vertical-align: middle;
+  *border: 10px solid @white;
+  outline: 1px solid @grey;
+}
+select[multiple] {
+  min-height: 100px;
+  vertical-align: top;
+  border: 1px solid @lightGrey;
+}
+
+/* Buttons */
+.buttons {
+  padding: 1em 0;
+}
+.button {
+  .font-size(14);
+  border: 0;
+  padding: 0.8em 3em;
+  color: @darkestGrey;
+  text-decoration: none;
+  text-align: center;
+}
+
+.orange-button {
+  background-color: @lightestOrange;
+
+  &:hover {
+    background-color: @buttonOrange;
+  } // end hover
+  &:active {
+    background-color: @activeOrange;
+  } // end hover
+}
+.button[disabled],
+.button.disabled {
+  color: @grey;
+  background-color: @lightestGrey;
+}
+
+.no-style-button {
+  .font-size(13);
+  color: @orange;
+  text-decoration: underline;
+  border: 0;
+  background: transparent;
+  height: auto;
+  padding: 0;
+
+  &:hover {
+  text-decoration: none;
+  } // end hover
+}
+.no-style-button[disabled],
+.no-style-button.disabled {
+  text-decoration: none;
+  color: @grey;
+}
+
+
+
 
 /* ==========================================================================
 /* 2.0 - Grid Layout (Responsive)
