@@ -31,6 +31,17 @@
 .section {
   zoom: 1;
 }
+.checkbox:before,
+.checkbox:after {
+  content: "";
+  display: table;
+}
+.checkbox:after {
+  clear: both;
+}
+.checkbox {
+  zoom: 1;
+}
 /* General Resets */
 /* Start font size at 100% */
 html {
@@ -43,11 +54,17 @@ select,
 textarea {
   font-family: sans-serif;
 }
-/* Remove all default borders */
+/* Remove default borders */
 form,
 fieldset,
 a img {
   border: 0;
+}
+/* Remove default spacing */
+form,
+fieldset {
+  margin: 0;
+  padding: 0;
 }
 /* Common Classes */
 .left {
@@ -185,27 +202,42 @@ small {
 /* Block Quotes, Pre and Code Blocks */
 blockquote,
 q {
-  quotes: none;
-  background-color: #f7f7f9;
-  border: 1px solid #e1e1e8;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  -moz-background-clip: padding;
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box;
-  padding: .5em 1em;
-  margin: 0;
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 32px;
+  line-height: 2rem;
+  padding: 20px 30px;
+  margin: 20px 0;
+  font-family: "Georgia", "Times";
   font-style: italic;
 }
-code,
-pre {
+blockquote:before,
+q:before,
+blockquote:after,
+q:after {
+  font-size: 80px;
+  font-size: 5rem;
+  color: #999999;
+}
+blockquote:before,
+q:before {
+  content: "\201C";
+  margin-left: -0.5em;
+  float: left;
+}
+blockquote:after,
+q:after {
+  content: "\201D";
+  margin-right: -0.5em;
+  float: right;
+}
+code {
   padding: 2px 6px;
-  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-family: Monaco, Andale Mono, "Courier New", monospace;
   font-size: 12px;
   font-size: 0.75rem;
-  background-color: #f1f1f1;
-  border: 1px solid #dddddd;
+  background-color: #fee9cc;
+  border: 1px solid #ffc9b3;
   line-height: normal;
   color: #222222;
   -webkit-border-radius: 3px;
@@ -277,6 +309,186 @@ ol ol {
 }
 /* 1.5 Forms, Labels and Inputs
    ========================================================================== */
+fieldset {
+  margin: 1.5em 0;
+}
+legend {
+  font-family: arial, helvetica, clean, sans-serif;
+  font-size: 32px;
+  font-size: 2rem;
+  line-height: normal;
+  font-weight: bold;
+  width: 100%;
+  display: block;
+  border: 0;
+  *margin-left: -5px;
+}
+label {
+  font-weight: bold;
+}
+.inline-field label {
+  display: inline-block;
+  *zoom: 1;
+  *display: inline;
+  margin-right: 1em;
+}
+.field {
+  padding: 0.2em 0;
+}
+.field label {
+  display: block;
+}
+.checkbox {
+  display: block;
+  position: relative;
+  line-height: normal;
+  padding: 0.2em 0;
+}
+.checkbox label {
+  display: table-cell;
+  *zoom: 1;
+}
+.checkbox input[type=checkbox],
+.checkbox input[type=radio] {
+  float: left;
+  top: -2px;
+  position: relative;
+  margin-right: 1em;
+}
+/* Inputs (Text, Search, Email, etc) */
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=search],
+input[type=tel],
+input[type=file] {
+  outline: 0;
+  padding: 2px 5px;
+  height: 28px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  vertical-align: middle;
+  font-size: 21px;
+  font-size: 1.3125rem;
+  font-weight: bold;
+  background-color: #ffffff;
+  color: #666666;
+  border: 1px solid #dddddd;
+  border-top: 1px solid #999999;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+input[type=file] {
+  border: 0;
+  height: 20px;
+}
+input[type=button]::-moz-focus-inner,
+input[type=submit]::-moz-focus-inner,
+input[type=reset]::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+input[type=submit],
+input[type=button],
+input[type=reset] {
+  line-height: normal;
+  cursor: pointer;
+  -webkit-appearance: none;
+  /* Remove Default Browser Behaviour for Safari */
+
+  -moz-appearance: none;
+  /* Remove Default Browser Behaviour for Firefox */
+
+}
+textarea {
+  font-size: 21px;
+  font-size: 1.3125rem;
+  font-weight: bold;
+  background-color: #ffffff;
+  color: #666666;
+  outline: 0;
+  padding: 2px 5px;
+  vertical-align: top;
+  border: 1px solid #dddddd;
+  min-height: 80px;
+  padding: 10px;
+  resize: none;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+select {
+  outline: 0;
+  border: 0;
+  padding: 5px;
+  width: 140px;
+  display: inline-block;
+  *zoom: 1;
+  *display: inline;
+  vertical-align: middle;
+  *border: 10px solid #ffffff;
+  outline: 1px solid #999999;
+}
+select[multiple] {
+  min-height: 100px;
+  vertical-align: top;
+  border: 1px solid #dddddd;
+}
+/* Buttons */
+.buttons {
+  padding: 1em 0;
+}
+.button {
+  font-size: 14px;
+  font-size: 0.875rem;
+  border: 0;
+  padding: 0.8em 3em;
+  color: #222222;
+  text-decoration: none;
+  text-align: center;
+}
+.orange-button {
+  background-color: #fee9cc;
+}
+.orange-button:hover {
+  background-color: #ffe0b5;
+}
+.orange-button:active {
+  background-color: #fdeed8;
+}
+.button[disabled],
+.button.disabled {
+  color: #999999;
+  background-color: #f1f1f1;
+}
+.no-style-button {
+  font-size: 13px;
+  font-size: 0.8125rem;
+  color: #ff3300;
+  text-decoration: underline;
+  border: 0;
+  background: transparent;
+  height: auto;
+  padding: 0;
+}
+.no-style-button:hover {
+  text-decoration: none;
+}
+.no-style-button[disabled],
+.no-style-button.disabled {
+  text-decoration: none;
+  color: #999999;
+}
 /* ==========================================================================
 /* 2.0 - Grid Layout (Responsive)
    ========================================================================== */
@@ -410,147 +622,3 @@ ol ol {
   }
 }
 /* End Mobile Media Query */
-/* ==========================================================================
-/* -- Print Layout
-   ========================================================================== */
-@media print {
-  body {
-    font-family: serif;
-    /* Serif is easier to read offscreen */
-    margin: 0.5cm;
-  }
-}
-/* End Print Media Query */
-.header {
-  background-color: #d6511d;
-  margin-bottom: 10px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-.logo {
-  margin: 14px 0 0 0;
-  color: #fff;
-  font-size: 32px;
-  font-size: 2rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-decoration: none;
-}
-.logo .small {
-  font-size: 11px;
-  position: relative;
-  top: -20px;
-}
-.logo:hover,
-.logo:active,
-.logo:visited {
-  color: #fff;
-}
-.navigation {
-  line-height: normal;
-  padding-top: 12px;
-}
-.navigation ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.navigation ul li {
-  float: left;
-  margin-left: 10px;
-}
-.navigation ul li:first-child {
-  margin-left: 0;
-}
-.navigation ul li a {
-  text-transform: uppercase;
-  color: #fff;
-  padding: 8px 24px;
-  border: 1px solid #d6511d;
-  text-decoration: none;
-  font-size: 12px;
-}
-.navigation ul li a.current {
-  border-color: #fff;
-}
-.navigation ul li a:hover {
-  border-color: #fff0ea;
-}
-.navigation ul li a:active {
-  background-color: #ffc9b3;
-  border-color: #ffc9b3;
-  color: #222;
-}
-.content-inner {
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-@media only screen and (min-width: 720px) and (max-width: 959px) {
-  .navigation ul li {
-    margin-left: 5px;
-  }
-  .navigation ul li a {
-    padding: 10px 15px;
-  }
-}
-@media only screen and (max-width: 719px) {
-  .header {
-    padding-bottom: 0;
-    text-align: center;
-  }
-  .header .container {
-    padding: 0;
-  }
-  .logo {
-    float: none;
-    margin: 0 auto;
-    display: inline-block;
-    *zoom: 1;
-    *display: inline;
-  }
-  .logo .small {
-    font-size: 1em;
-    position: static;
-  }
-  .nav-toggle {
-    display: block;
-    background-color: #fddfd3;
-    text-align: center;
-    color: #222;
-    padding: 10px;
-    text-decoration: none;
-  }
-  .nav-toggle:hover,
-  .nav-toggle.active {
-    background-color: #fff0ea;
-  }
-  .navigation {
-    float: none;
-  }
-  .navigation ul li {
-    float: none;
-    margin-left: 0;
-  }
-  .navigation ul li a {
-    color: #222;
-    padding: 10px;
-    display: block;
-    font-size: 1em;
-    text-transform: none;
-    background-color: #fddfd3;
-    border: 0;
-  }
-  .navigation ul li a:hover {
-    background-color: #fff0ea;
-  }
-  .menu {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  .showmobile.inline-block {
-    display: inline-block;
-    *zoom: 1;
-    *display: inline;
-  }
-}
