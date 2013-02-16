@@ -2,7 +2,7 @@
 
   Base Stylesheet - http://matthewhartman.github.com/base/
   Author: Matthew Hartman - http://www.matthewhartman.com.au/
-  Version: 1.2 - Last Updated: 12th January, 2013
+  Version: 1.2 - Last Updated: 16th January, 2013
 
 ========================================================================== */
 /* ==========================================================================
@@ -448,7 +448,11 @@ select[multiple] {
   border: 1px solid #dddddd;
 }
 select,
-input[type=text] {
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=search],
+input[type=tel] {
   width: 280px;
 }
 textarea {
@@ -630,6 +634,10 @@ textarea {
   }
   /* Mobile Forms */
   input[type=text],
+  input[type=password],
+  input[type=email],
+  input[type=search],
+  input[type=tel],
   textarea {
     width: 90%;
     padding: 5%;
