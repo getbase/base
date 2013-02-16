@@ -322,6 +322,7 @@ legend {
 }
 label {
   font-weight: bold;
+  cursor: pointer;
 }
 .inline-field label {
   .inline-block();
@@ -411,7 +412,6 @@ textarea {
   padding: 2px 5px;
   vertical-align: top;
   border: 1px solid @lightGrey;
-  min-height: 80px;
   padding: 10px;
   resize: none; // disable user resizing
   .roundedcorners(3px);
@@ -420,10 +420,12 @@ textarea {
   background-clip: padding-box;
 }
 select {
+  .font-size(14);
   outline: 0;
   border: 0;
   padding: 5px;
-  width: 140px;
+  height: 24px;
+  line-height: normal;
   .inline-block();
   vertical-align: middle;
   *border: 10px solid @white;
@@ -431,9 +433,16 @@ select {
 }
 select[multiple] {
   min-height: 100px;
+  border: 1px solid @lightGrey;
   vertical-align: top;
   border: 1px solid @lightGrey;
 }
+
+select,
+input[type=text] {
+  width: 280px;
+}
+textarea { width: 260px; }
 
 /* Buttons */
 .buttons {
@@ -441,6 +450,8 @@ select[multiple] {
 }
 .button {
   .font-size(14);
+  line-height: normal;
+  cursor: pointer;
   border: 0;
   padding: 0.8em 3em;
   color: @darkestGrey;
@@ -531,10 +542,10 @@ select[multiple] {
 
 
 // ==========================================================================
-// -- Custom Website Styles
+// -- Custom Website Styles for Desktop
 // ==========================================================================
 
-// Your custom website styles go here...
+// Your custom website styles for desktop go here...
 
 
 
@@ -554,6 +565,13 @@ html body {
 .showtablet { .block(); }
 
 
+// ==========================================================================
+// -- Custom Website Styles for Tablet Devices
+// ==========================================================================
+
+// Your custom website styles for tablet devices go here...
+
+
 
 
 } /* End Tablet Media Query */
@@ -569,6 +587,7 @@ html body {
   margin: 0;
 }
 
+/* Mobile Grid */
 .one,
 .two,
 .three,
@@ -592,13 +611,31 @@ html body {
   padding-right: 20px;
 }
 
+/* Mobile Tables */
 table th,
 table td {
   padding: 4px;
 }
 
+/* Mobile Forms */
+input[type=text],
+textarea {
+  width: 90%;
+  padding: 5%;
+}
+select {
+  width: 100%;
+}
+
 .nomobile { .none(); }
 .showmobile { .block(); }
+
+
+// ==========================================================================
+// -- Custom Website Styles for Mobile Devices
+// ==========================================================================
+
+// Your custom website styles for mobile devices go here...
 
 
 } /* End Mobile Media Query */

@@ -325,6 +325,7 @@ legend {
 }
 label {
   font-weight: bold;
+  cursor: pointer;
 }
 .inline-field label {
   display: inline-block;
@@ -417,7 +418,6 @@ textarea {
   padding: 2px 5px;
   vertical-align: top;
   border: 1px solid #dddddd;
-  min-height: 80px;
   padding: 10px;
   resize: none;
   -webkit-border-radius: 3px;
@@ -428,10 +428,13 @@ textarea {
   background-clip: padding-box;
 }
 select {
+  font-size: 14px;
+  font-size: 0.875rem;
   outline: 0;
   border: 0;
   padding: 5px;
-  width: 140px;
+  height: 24px;
+  line-height: normal;
   display: inline-block;
   *zoom: 1;
   *display: inline;
@@ -444,6 +447,13 @@ select[multiple] {
   vertical-align: top;
   border: 1px solid #dddddd;
 }
+select,
+input[type=text] {
+  width: 280px;
+}
+textarea {
+  width: 260px;
+}
 /* Buttons */
 .buttons {
   padding: 1em 0;
@@ -451,6 +461,8 @@ select[multiple] {
 .button {
   font-size: 14px;
   font-size: 0.875rem;
+  line-height: normal;
+  cursor: pointer;
   border: 0;
   padding: 0.8em 3em;
   color: #222222;
@@ -589,6 +601,7 @@ select[multiple] {
     padding: 0;
     margin: 0;
   }
+  /* Mobile Grid */
   .one,
   .two,
   .three,
@@ -610,9 +623,19 @@ select[multiple] {
     padding-left: 20px;
     padding-right: 20px;
   }
+  /* Mobile Tables */
   table th,
   table td {
     padding: 4px;
+  }
+  /* Mobile Forms */
+  input[type=text],
+  textarea {
+    width: 90%;
+    padding: 5%;
+  }
+  select {
+    width: 100%;
   }
   .nomobile {
     display: none;

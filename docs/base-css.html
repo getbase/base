@@ -121,11 +121,10 @@
   
   <hr>
 
-  
+  <h2>Form</h2>
   <form action="#" method="get">
     <fieldset>
-      <legend>Form Elements + Buttons</legend>
-        <p>Forms and buttons are going to be refactored from the ground up. Please stay tuned :)</p>    
+      <legend class="h3">Input</legend>
       <div class="field">
         <label for="name">Your Full Name: (normal field)</label>
         <input type="text" name="name" id="name" value="" placeholder="Your Name...">
@@ -133,7 +132,7 @@
     </fieldset>
 
     <fieldset>
-      <legend class="h3">Options</legend>
+      <legend class="h3">Checkboxes + Radios</legend>
       <span class="checkbox">
         <input type="checkbox" name="checkbox" id="checkbox">
         <label for="checkbox">A single line label</label>
@@ -153,12 +152,41 @@
     </fieldset>
 
     <fieldset>
-      <legend class="h3">Other</legend>
+      <legend class="h3">Select + Multiple</legend>
       <div class="field">
-        <label for="textarea">Your Message:</label>
-        <textarea name="textarea" id="textarea"></textarea>
+        <label for="select">Select</label>
+        <select name="select" id="select">
+          <optgroup label="Example">
+          <option value="excellent">Excellent</option>
+          <option value="average">Average</option>
+          <option value="poor">Poor</option>
+        </select>
       </div>
 
+
+
+      <div class="field">
+        <label for="multi-select">Multiple Select</label>
+        <select name="multi-select" id="multi-select" multiple>
+          <optgroup label="Example">
+          <option value="excellent">Excellent</option>
+          <option value="average">Average</option>
+          <option value="poor">Poor</option>
+        </select>
+      </div>
+
+    </fieldset>
+
+    <fieldset>
+      <legend class="h3">Textarea</legend>
+      <div class="field">
+        <label for="textarea">Your Message:</label>
+        <textarea name="textarea" id="textarea" rows="3"></textarea>
+      </div>
+
+      <hr>
+
+      <h2>Buttons</h2>
       <div class="buttons">
         <input class="button orange-button" type="submit" value="Submit">
         <input class="button orange-button" type="reset" value="Reset">
@@ -171,13 +199,13 @@
     </fieldset>
   </form>
   
-  <h2>Buttons</h2>
+  <h3>Link Button</h3>
   <a href="#" class="button orange-button" title="">Hello</a>
 
 </div>
 
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src="../javascripts/default.js"></script>
 <script src="javascripts/docs.js"></script>
 
