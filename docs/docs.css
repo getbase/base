@@ -62,13 +62,6 @@
   padding-top: 20px;
   padding-bottom: 20px;
 }
-.row .col {
-  background: #ccc;
-  color: #111;
-  text-align: center;
-  line-height: 30px;
-  height: 30px;
-}
 @media only screen and (min-width: 720px) and (max-width: 959px) {
   .navigation ul li {
     margin-left: 5px;
