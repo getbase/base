@@ -2,7 +2,7 @@
 
   Base Stylesheet - http://matthewhartman.github.com/base/
   Author: Matthew Hartman - http://www.matthewhartman.com.au/
-  Version: 1.2 - Last Updated: 12th January, 2013
+  Version: 1.2 - Last Updated: 16th January, 2013
 
 ========================================================================== */
 /* ==========================================================================
@@ -432,8 +432,8 @@ select {
   font-size: 0.875rem;
   outline: 0;
   border: 0;
-  padding: 5px;
-  height: 24px;
+  padding: 7px;
+  height: 30px;
   line-height: normal;
   display: inline-block;
   *zoom: 1;
@@ -448,7 +448,11 @@ select[multiple] {
   border: 1px solid #dddddd;
 }
 select,
-input[type=text] {
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=search],
+input[type=tel] {
   width: 280px;
 }
 textarea {
@@ -474,6 +478,7 @@ textarea {
 }
 .orange-button:hover {
   background-color: #ffe0b5;
+  -webkit-tap-highlight-color: #fdeed8;
 }
 .orange-button:active {
   background-color: #fdeed8;
@@ -566,6 +571,9 @@ textarea {
 .twelve {
   width: 100%;
 }
+.quarter {
+  width: 23.0%;
+}
 .half {
   width: 48.0%;
 }
@@ -584,6 +592,57 @@ textarea {
   .container {
     width: 700px;
   }
+  /* Tablet Grid
+    * For stacking full width columns, please use the new class .tablet-full
+    * New tablet columns have been added
+  */
+  .tablet-one {
+    width: 6.333%;
+  }
+  .tablet-two {
+    width: 14.667%;
+  }
+  .tablet-three {
+    width: 23.0%;
+  }
+  .tablet-four {
+    width: 31.333%;
+  }
+  .tablet-five {
+    width: 39.667%;
+  }
+  .tablet-six {
+    width: 48.0%;
+  }
+  .tablet-seven {
+    width: 56.333%;
+  }
+  .tablet-eight {
+    width: 64.667%;
+  }
+  .tablet-nine {
+    width: 73.0%;
+  }
+  .tablet-ten {
+    width: 81.333%;
+  }
+  .tablet-eleven {
+    width: 89.667%;
+  }
+  .tablet-twelve {
+    width: 100%;
+  }
+  .tablet-full {
+    clear: both;
+    float: none;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 1em;
+  }
+  .tablet-full:first-child {
+    margin-top: 0;
+  }
   .notablet {
     display: none;
   }
@@ -601,23 +660,54 @@ textarea {
     padding: 0;
     margin: 0;
   }
-  /* Mobile Grid */
-  .one,
-  .two,
-  .three,
-  .four,
-  .five,
-  .six,
-  .seven,
-  .eight,
-  .nine,
-  .ten,
-  .eleven,
-  .twelve {
+  /* Mobile Grid
+    * For stacking full width columns, please use the new class .mobile-full
+    * New mobile columns have been added
+  */
+  .mobile-one {
+    width: 6.333%;
+  }
+  .mobile-two {
+    width: 14.667%;
+  }
+  .mobile-three {
+    width: 23.0%;
+  }
+  .mobile-four {
+    width: 31.333%;
+  }
+  .mobile-five {
+    width: 39.667%;
+  }
+  .mobile-six {
+    width: 48.0%;
+  }
+  .mobile-seven {
+    width: 56.333%;
+  }
+  .mobile-eight {
+    width: 64.667%;
+  }
+  .mobile-nine {
+    width: 73.0%;
+  }
+  .mobile-ten {
+    width: 81.333%;
+  }
+  .mobile-eleven {
+    width: 89.667%;
+  }
+  .mobile-twelve {
     width: 100%;
-    margin-left: 0;
-    margin-right: 0;
+  }
+  .mobile-full {
+    clear: both;
     float: none;
+    width: 100%;
+    margin: 1em 0 0 0;
+  }
+  .mobile-full:first-child {
+    margin-top: 0;
   }
   .container {
     padding-left: 20px;
@@ -630,6 +720,10 @@ textarea {
   }
   /* Mobile Forms */
   input[type=text],
+  input[type=password],
+  input[type=email],
+  input[type=search],
+  input[type=tel],
   textarea {
     width: 90%;
     padding: 5%;
