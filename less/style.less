@@ -468,6 +468,7 @@ textarea { width: 260px; }
 
   &:hover {
     background-color: @buttonOrange;
+    -webkit-tap-highlight-color: @activeOrange;
   } // end hover
   &:active {
     background-color: @activeOrange;
@@ -541,9 +542,9 @@ textarea { width: 260px; }
 .eleven { width: 89.667%; }
 .twelve { width: 100%; }
 
+.quarter { .three(); }
 .half { .six(); }
 .one-third { .four(); }
-
 
 // ==========================================================================
 // -- Custom Website Styles for Desktop
@@ -564,6 +565,36 @@ html body {
 }
 
 .container { width: 700px; }
+
+/* Tablet Grid
+  * For stacking full width columns, please use the new class .tablet-full
+  * New tablet columns have been added
+*/
+.tablet-one { width: 6.333%; }
+.tablet-two { width: 14.667%; }
+.tablet-three { width: 23.0%; }
+.tablet-four { width: 31.333%; }
+.tablet-five { width: 39.667%; }
+.tablet-six { width: 48.0%; }
+.tablet-seven { width: 56.333%; }
+.tablet-eight { width: 64.667%; }
+.tablet-nine { width: 73.0%; }
+.tablet-ten { width: 81.333%; }
+.tablet-eleven { width: 89.667%; }
+.tablet-twelve { width: 100%; }
+
+.tablet-full {
+  clear: both;
+  float: none;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 1em;
+}
+.tablet-full:first-child {
+  margin-top: 0;
+}
+
 
 .notablet { .none(); }
 .showtablet { .block(); }
@@ -591,23 +622,31 @@ html body {
   margin: 0;
 }
 
-/* Mobile Grid */
-.one,
-.two,
-.three,
-.four,
-.five,
-.six,
-.seven,
-.eight,
-.nine,
-.ten,
-.eleven,
-.twelve {
-  width: 100%;
-  margin-left: 0;
-  margin-right: 0;
+/* Mobile Grid
+  * For stacking full width columns, please use the new class .mobile-full
+  * New mobile columns have been added
+*/
+.mobile-one { width: 6.333%; }
+.mobile-two { width: 14.667%; }
+.mobile-three { width: 23.0%; }
+.mobile-four { width: 31.333%; }
+.mobile-five { width: 39.667%; }
+.mobile-six { width: 48.0%; }
+.mobile-seven { width: 56.333%; }
+.mobile-eight { width: 64.667%; }
+.mobile-nine { width: 73.0%; }
+.mobile-ten { width: 81.333%; }
+.mobile-eleven { width: 89.667%; }
+.mobile-twelve { width: 100%; }
+
+.mobile-full {
+  clear: both;
   float: none;
+  width: 100%;
+  margin: 1em 0 0 0;
+}
+.mobile-full:first-child {
+  margin-top: 0;
 }
 
 .container {
