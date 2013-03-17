@@ -28,48 +28,52 @@
 
 <div class="container content-inner">
 
-<h1>Grid Demo</h1>
+<h1>
+  <span class="nomobile notablet">Desktop Grid</span>
+  <span class="nomobile showtablet nodesktop">Tablet Grid</span>
+  <span class="showmobile notablet nodesktop">Mobile Grid</span>
+</h1>
 <p>You can wrap columns within a <code>.section</code> or <code>.clear</code> div to clear the floats.</p>
   
   <div class="section row">
-    <div class="col one">col one</div>
-    <div class="col eleven">col eleven</div>
+    <div class="col one tablet-four mobile-six">col 1</div>
+    <div class="col eleven tablet-eight mobile-six">col 11</div>
   </div>
 
   <div class="section row">
-    <div class="col two">col two</div>
-    <div class="col ten">col ten</div>
+    <div class="col two tablet-eight mobile-nine">col 2</div>
+    <div class="col ten tablet-four mobile-three">col 10</div>
   </div>
 
   <div class="section row">
-    <div class="col three">col three</div>
-    <div class="col nine">col nine</div>
+    <div class="col three tablet-full mobile-full">col 3</div>
+    <div class="col nine tablet-full mobile-full">col 9</div>
   </div>
 
   <div class="section row">
-    <div class="col four">col four</div>
-    <div class="col eight">col eight</div>
+    <div class="col four tablet-full mobile-full">col 4</div>
+    <div class="col eight notablet nomobile">col 8</div>
   </div>
 
   <div class="section row">
-    <div class="col five">col five</div>
-    <div class="col seven">col seven</div>
+    <div class="col five tablet-full">col 5</div>
+    <div class="col seven tablet-full">col 7</div>
   </div>
 
   <div class="section row">
-    <div class="col six">col six</div>
-    <div class="col six">col six</div>
+    <div class="col six">col 6</div>
+    <div class="col six">col 6</div>
   </div>
 
   <div class="section row">
-    <div class="col half">col half</div>
-    <div class="col half">col half</div>
+    <div class="col half">col 1/2</div>
+    <div class="col half">col 1/2</div>
   </div>
 
   <div class="section row">
-    <div class="col one-third">col one third</div>
-    <div class="col one-third">col one third</div>
-    <div class="col one-third">col one third</div>
+    <div class="col one-third">col 1/3</div>
+    <div class="col one-third">col 1/3</div>
+    <div class="col one-third">col 1/3</div>
   </div>
 
 </div>
