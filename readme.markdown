@@ -34,6 +34,7 @@ Base was built by Matthew Hartman (@hartmanmatthew), a passionate front end deve
 
 ## Other Contributions / Downloads
 - [base_css-rails](https://github.com/rkrdo/base_css-rails) - a gem that adds the Base Framework to the applicaton's asset pipeline by Ricardo Cruz
+- Thanks to Beau Smith (@beau) for the custom breakpoint suggestion
 
 ## Thank You / Credits
 - Nicolas Gallagher (@necolas) for the Micro ClearFix :)
