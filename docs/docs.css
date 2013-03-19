@@ -63,11 +63,15 @@
   padding-bottom: 20px;
 }
 .row .col {
+  font-size: 11px;
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  font-weight: bold;
   background: #ccc;
   color: #111;
   text-align: center;
-  line-height: 30px;
-  height: 30px;
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 @media only screen and (min-width: 720px) and (max-width: 959px) {
   .navigation ul li {
