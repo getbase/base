@@ -584,11 +584,6 @@ textarea {
 /* -- Tablet Devices (Layout, Modifications, etc)
    ========================================================================== */
 @media only screen and (min-width: 720px) and (max-width: 959px) {
-  html body {
-    max-width: 959px;
-    padding: 0;
-    margin: 0;
-  }
   .container {
     width: 700px;
   }
@@ -655,11 +650,6 @@ textarea {
 /* -- Mobile Devices (Layout, Modifications, etc)
    ========================================================================== */
 @media only screen and (max-width: 719px) {
-  html body {
-    max-width: 100%;
-    padding: 0;
-    margin: 0;
-  }
   /* Mobile Grid
     * For stacking full width columns, please use the new class .mobile-full
     * New mobile columns have been added

@@ -9,55 +9,70 @@
   @import "mixins.less"; // Import the base mixins
 
   // Global Defaults //
+  @mobile-width:              100%;
+  @tablet-width:              720px;
+  @desktop-width:             960px;
 
-  // Setup Typography
-  @baseFont:              arial, helvetica, clean, sans-serif;
-  @codeFont:              Monaco, Andale Mono, "Courier New", monospace;
-  @quoteFont:             "Georgia", "Times";
-  @serif:                 serif;
-  @sansSerif:             sans-serif;
 
-  @fontSize:              14; // default font size
-  @lineHeight:            22; // default line height size
+  // Resonsive Design Break Points
+  @phone-breakpoint:          @tablet-width - 1px;
+  @tablet-breakpoint:         @tablet-width;
+  @desktop-breakpoint:        @desktop-width - 1px;
 
-  // Setup Headings
-  @headingFont:           arial, helvetica, clean, sans-serif;
 
-  @h1:                    40;
-  @h2:                    32;
-  @h3:                    26;
-  @h4:                    20;
+  // Setup Typography         Fonts
+  @baseFont:                  arial, helvetica, clean, sans-serif;
+  @codeFont:                  Monaco, Andale Mono, "Courier New", monospace;
+  @quoteFont:                 "Georgia", "Times";
+  @serif:                     serif;
+  @sansSerif:                 sans-serif;
+
+  @fontSize:                  14; // default font size
+  @lineHeight:                22; // default line height size
+
+  // Headings                 Fonts
+  @headingFont:               arial, helvetica, clean, sans-serif;
+
+  // Heading                  Size
+  @h1:                        40;
+  @h2:                        32;
+  @h3:                        26;
+  @h4:                        20;
 
   // Setup Colours
 
-  @black:                 #000;
-  @darkestGrey:           #222;
-  @darkerGrey:            #333;
-  @darkGrey:              #666;
-  @grey:                  #999;
-  @lightGrey:             #ddd;
-  @lighterGrey:           #eee;
-  @lightestGrey:          #f1f1f1;
-  @white:                 #fff;
+  // Grey Scale
+  @black:                     #000;
+  @darkestGrey:               #222;
+  @darkerGrey:                #333;
+  @darkGrey:                  #666;
+  @grey:                      #999;
+  @lightGrey:                 #ddd;
+  @lighterGrey:               #eee;
+  @lightestGrey:              #f1f1f1;
+  @white:                     #fff;
 
-  @darkestBlue:           #0f1b26;
-  @darkBlue:              #202f3c;
-  @blue:                  #1c415e;
-  @lightBlue:             #a9c2d7;
-  @lighterBlue:           #cfe6f8;
-  @lightestBlue:          #e7f2fb;
+  // Custom Colour 1:         Blues
+  @darkestBlue:               #0f1b26;
+  @darkBlue:                  #202f3c;
+  @blue:                      #1c415e;
+  @lightBlue:                 #a9c2d7;
+  @lighterBlue:               #cfe6f8;
+  @lightestBlue:              #e7f2fb;
 
-  @lightestYellow:        #ffc;
+  // Custom Colour 2:         Yellows
+  @lightestYellow:            #ffc;
 
-  @orange:                #f30;
-  @midOrange:             #c34119;
-  @lightOrange:           #ffc9b3;
-  @lighterOrange:         #fddfd3;
-  @lightestOrange:        #fee9cc;
+  // Custom Colour 3:         Oranges
+  @orange:                    #f30;
+  @midOrange:                 #c34119;
+  @lightOrange:               #ffc9b3;
+  @lighterOrange:             #fddfd3;
+  @lightestOrange:            #fee9cc;
   
-  @buttonOrange:          #ffe0b5;
-  @activeOrange:          #fdeed8;
-
+  // Button Colours           Custom
+  @buttonOrange:              #ffe0b5;
+  @activeOrange:              #fdeed8;
 
 
 /* ==========================================================================
@@ -511,7 +526,7 @@ textarea { width: 260px; }
 .row { margin-bottom: 1em; }
 
 .container {
-  max-width: 960px;
+  max-width: @desktop-width;
   margin: 0 auto;
   padding-left: 10px;
   padding-right: 10px;
@@ -557,14 +572,11 @@ textarea { width: 260px; }
 /* ==========================================================================
 /* -- Tablet Devices (Layout, Modifications, etc)
    ========================================================================== */
-@media only screen and (min-width: 720px) and (max-width: 959px) {
-html body {
-  max-width: 959px;
-  padding: 0;
-  margin: 0;
-}
+@media only screen and (min-width: @tablet-breakpoint) and (max-width: @desktop-breakpoint) {
 
-.container { width: 700px; }
+.container {
+  width: @tablet-width - 20;
+}
 
 /* Tablet Grid
   * For stacking full width columns, please use the new class .tablet-full
@@ -615,12 +627,7 @@ html body {
 /* ==========================================================================
 /* -- Mobile Devices (Layout, Modifications, etc)
    ========================================================================== */
-@media only screen and (max-width: 719px) {
-html body {
-  max-width: 100%;
-  padding: 0;
-  margin: 0;
-}
+@media only screen and (max-width: @phone-breakpoint) {
 
 /* Mobile Grid
   * For stacking full width columns, please use the new class .mobile-full
