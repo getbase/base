@@ -73,7 +73,7 @@
   padding-top: 2px;
   padding-bottom: 2px;
 }
-@media only screen and (min-width: 720px) and (max-width: 959px) {
+@media only screen and (min-width: 762px) and (max-width: 939px) {
   .navigation ul li {
     margin-left: 5px;
   }
@@ -81,7 +81,7 @@
     padding: 10px 15px;
   }
 }
-@media only screen and (max-width: 719px) {
+@media only screen and (max-width: 761px) {
   .header {
     padding-bottom: 0;
     text-align: center;
