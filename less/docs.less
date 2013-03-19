@@ -2,6 +2,17 @@
 
 @import "mixins.less"; // Import the base mixins
 
+  // Global Defaults //
+  @mobile-width:              100%;
+  @tablet-width:              720px;
+  @desktop-width:             940px;
+
+
+  // Resonsive Design Break Points
+  @mobile-breakpoint:         @tablet-width + 41px; // max width for tablet .container - 1px
+  @tablet-breakpoint:         @tablet-width + 42px; // max width for tablet .container
+  @desktop-breakpoint:        @desktop-width - 1px; // max width for desktop .container - 1px
+
 .header {
   background-color: #d6511d;
   margin-bottom: 10px;
@@ -82,7 +93,7 @@
 // ==========================================================================
 
 // Delete anything after this as it's for the base docs //
-@media only screen and (min-width: 720px) and (max-width: 959px) {
+@media only screen and (min-width: @tablet-breakpoint) and (max-width: @desktop-breakpoint) {
 .navigation {
   ul {
     li {
@@ -103,7 +114,7 @@
 // ==========================================================================
 // -- Custom Mobile Styles for Docs
 // ==========================================================================
-@media only screen and (max-width: 719px) {
+@media only screen and (max-width: @mobile-breakpoint) {
 .header {
   padding-bottom: 0;
   text-align: center;

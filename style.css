@@ -517,13 +517,13 @@ textarea {
   margin-bottom: 1em;
 }
 .container {
-  max-width: 960px;
+  max-width: 940px;
   margin: 0 auto;
   padding-left: 10px;
   padding-right: 10px;
 }
 .container-full {
-  max-width: 980px;
+  max-width: 960px;
   margin: 0 auto;
 }
 /* Fluid Grid */
@@ -536,93 +536,95 @@ textarea {
 }
 /* Columns */
 .one {
-  width: 6.333%;
+  width: 6.5%;
 }
 .two {
-  width: 14.667%;
+  width: 15%;
 }
 .three {
-  width: 23.0%;
+  width: 23.5%;
 }
 .four {
-  width: 31.333%;
+  width: 32%;
 }
 .five {
-  width: 39.667%;
+  width: 40.5%;
 }
 .six {
-  width: 48.0%;
+  width: 49.0%;
 }
 .seven {
-  width: 56.333%;
+  width: 57.5%;
 }
 .eight {
-  width: 64.667%;
+  width: 66%;
 }
 .nine {
-  width: 73.0%;
+  width: 74.5%;
 }
 .ten {
-  width: 81.333%;
+  width: 83%;
 }
 .eleven {
-  width: 89.667%;
+  width: 91.5%;
 }
 .twelve {
   width: 100%;
 }
 .quarter {
-  width: 23.0%;
+  width: 23.5%;
 }
 .half {
-  width: 48.0%;
+  width: 49.0%;
 }
 .one-third {
-  width: 31.333%;
+  width: 32%;
 }
 /* ==========================================================================
 /* -- Tablet Devices (Layout, Modifications, etc)
    ========================================================================== */
-@media only screen and (min-width: 720px) and (max-width: 959px) {
+@media only screen and (min-width: 762px) and (max-width: 939px) {
   .container {
-    width: 700px;
+    width: 720px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
   /* Tablet Grid
     * For stacking full width columns, please use the new class .tablet-full
     * New tablet columns have been added
   */
   .tablet-one {
-    width: 6.333%;
+    width: 6.5%;
   }
   .tablet-two {
-    width: 14.667%;
+    width: 15%;
   }
   .tablet-three {
-    width: 23.0%;
+    width: 23.5%;
   }
   .tablet-four {
-    width: 31.333%;
+    width: 32%;
   }
   .tablet-five {
-    width: 39.667%;
+    width: 40.5%;
   }
   .tablet-six {
-    width: 48.0%;
+    width: 49.0%;
   }
   .tablet-seven {
-    width: 56.333%;
+    width: 57.5%;
   }
   .tablet-eight {
-    width: 64.667%;
+    width: 66%;
   }
   .tablet-nine {
-    width: 73.0%;
+    width: 74.5%;
   }
   .tablet-ten {
-    width: 81.333%;
+    width: 83%;
   }
   .tablet-eleven {
-    width: 89.667%;
+    width: 91.5%;
   }
   .tablet-twelve {
     width: 100%;
@@ -649,43 +651,43 @@ textarea {
 /* ==========================================================================
 /* -- Mobile Devices (Layout, Modifications, etc)
    ========================================================================== */
-@media only screen and (max-width: 719px) {
+@media only screen and (max-width: 761px) {
   /* Mobile Grid
     * For stacking full width columns, please use the new class .mobile-full
     * New mobile columns have been added
   */
   .mobile-one {
-    width: 6.333%;
+    width: 6.5%;
   }
   .mobile-two {
-    width: 14.667%;
+    width: 15%;
   }
   .mobile-three {
-    width: 23.0%;
+    width: 23.5%;
   }
   .mobile-four {
-    width: 31.333%;
+    width: 32%;
   }
   .mobile-five {
-    width: 39.667%;
+    width: 40.5%;
   }
   .mobile-six {
-    width: 48.0%;
+    width: 49.0%;
   }
   .mobile-seven {
-    width: 56.333%;
+    width: 57.5%;
   }
   .mobile-eight {
-    width: 64.667%;
+    width: 66%;
   }
   .mobile-nine {
-    width: 73.0%;
+    width: 74.5%;
   }
   .mobile-ten {
-    width: 81.333%;
+    width: 83%;
   }
   .mobile-eleven {
-    width: 89.667%;
+    width: 91.5%;
   }
   .mobile-twelve {
     width: 100%;
