@@ -529,6 +529,7 @@ textarea {
 /* Fluid Grid */
 .col {
   margin-left: 2%;
+  *margin-left: 1.7%;
   float: left;
 }
 .col:first-child {
