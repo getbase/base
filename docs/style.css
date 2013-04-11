@@ -168,6 +168,7 @@ h5,
 h6 {
   margin: 0;
   line-height: normal;
+  font-weight: normal;
 }
 h1,
 .h1 {
@@ -192,6 +193,11 @@ h4,
   font-size: 20px;
   font-size: 1.25rem;
   margin-bottom: 4px;
+}
+.no-style-heading {
+  margin-bottom: 0;
+  font-size: 14px;
+  font-size: 0.875rem;
 }
 /* 1.2 Paragraphs, block quotes, code, pre, etc
    ========================================================================== */
@@ -315,7 +321,6 @@ legend {
   font-size: 32px;
   font-size: 2rem;
   line-height: normal;
-  font-weight: bold;
   width: 100%;
   display: block;
   border: 0;

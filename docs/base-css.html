@@ -122,19 +122,15 @@
   
   <hr>
 
-  <h2>Form</h2>
+  <h2>Form Elements</h2>
   <form action="#" method="get">
     <fieldset class="fieldset">
-      <legend class="h3">Input</legend>
+      <legend class="h3">Standard Input</legend>
       <div class="field">
         <label for="name">Your Full Name: (normal field)</label>
         <input type="text" name="name" id="name" value="" placeholder="Your Name...">
       </div>
 
-      <div class="inline-field">
-        <label for="name2">Your Full Name: (inline field)</label>
-        <input type="text" name="name2" id="name2" value="" placeholder="Your Name...">
-      </div>
     </fieldset>
 
     <fieldset class="fieldset">
@@ -169,29 +165,7 @@
         </select>
       </div>
 
-      <div class="inline-field">
-        <label for="select">Select</label>
-        <select name="select" id="select">
-          <optgroup label="Example">
-          <option value="excellent">Excellent</option>
-          <option value="average">Average</option>
-          <option value="poor">Poor</option>
-        </select>
-      </div>
-
-
-
       <div class="field">
-        <label for="multi-select">Multiple Select</label>
-        <select name="multi-select" id="multi-select" multiple>
-          <optgroup label="Example">
-          <option value="excellent">Excellent</option>
-          <option value="average">Average</option>
-          <option value="poor">Poor</option>
-        </select>
-      </div>
-
-      <div class="inline-field">
         <label for="multi-select">Multiple Select</label>
         <select name="multi-select" id="multi-select" multiple>
           <optgroup label="Example">
@@ -209,29 +183,67 @@
         <label for="textarea">Your Message:</label>
         <textarea name="textarea" id="textarea" rows="5"></textarea>
       </div>
+    </fieldset>
 
+    <hr>
+
+    <h2>Inline Field Examples</h2>
+    <fieldset class="fieldset">
+
+      <div class="inline-field">
+        <label for="name2">Your Full Name: (inline field)</label>
+        <input type="text" name="name2" id="name2" value="" placeholder="Your Name...">
+      </div>
+
+    </fieldset>
+
+    <fieldset class="fieldset">
+      <div class="inline-field">
+        <label for="select2">Select (inline)</label>
+        <select name="select2" id="select2">
+          <optgroup label="Example">
+          <option value="excellent">Excellent</option>
+          <option value="average">Average</option>
+          <option value="poor">Poor</option>
+        </select>
+      </div>
+    </fieldset>
+      
+    <fieldset class="fieldset">
+      <div class="inline-field">
+        <label for="multi-select2">Multiple Select (inline)</label>
+        <select name="multi-select2" id="multi-select2" multiple>
+          <optgroup label="Example">
+          <option value="excellent">Excellent</option>
+          <option value="average">Average</option>
+          <option value="poor">Poor</option>
+        </select>
+      </div>
+    </fieldset>
+
+    <fieldset class="fieldset">
       <div class="inline-field">
         <label for="textarea2">Inline Message:</label>
         <textarea name="textarea2" id="textarea2" rows="5"></textarea>
       </div>
-
-      <hr>
-
-      <h2>Buttons</h2>
-      <div class="buttons">
-        <input class="button orange-button" type="submit" value="Submit">
-        <input class="button orange-button" type="reset" value="Reset">
-        <input class="button orange-button" disabled type="submit" value="Disabled Submit">
-        <input class="button orange-button" disabled type="reset" value="Disabled Reset">
-
-        <input class="no-style-button" type="submit" value="No Style Submit">
-        <input class="no-style-button" type="submit" value="No Style Submit Disabled" disabled>
-      </div>
     </fieldset>
+
+    <h2>Input Buttons</h2>
+    <input class="button orange-button" type="submit" value="Submit">
+    <input class="button orange-button" type="reset" value="Reset">
+    <input class="button orange-button" disabled type="submit" value="Disabled Submit">
+    <input class="button orange-button" disabled type="reset" value="Disabled Reset">
+
+    <input class="no-style-button" type="submit" value="No Style Submit">
+    <input class="no-style-button" type="submit" value="No Style Submit Disabled" disabled>
+
   </form>
   
-  <h3>Link Button</h3>
-  <a href="#" class="button orange-button" title="">Hello</a>
+  <hr>
+
+  <h3>Link Buttons</h3>
+  <a href="#" class="button orange-button" title="Hello :)">Hello</a>
+  <a href="#" class="no-style-button" title="Hello :)">Hello</a>
 
 </div>
 
