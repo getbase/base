@@ -183,6 +183,7 @@ h5,
 h6 {
   margin: 0;
   line-height: normal;
+  font-weight: normal;
 }
 h1, .h1 {
   .font-size(@h1);
@@ -199,6 +200,10 @@ h3, .h3 {
 h4, .h4 {
   .font-size(@h4);
   margin-bottom: 4px;
+}
+.no-style-heading {
+  margin-bottom: 0;
+  .font-size(@fontSize);
 }
 
 
@@ -329,7 +334,6 @@ legend {
   font-family: @headingFont;
   .font-size(32);
   line-height: normal;
-  font-weight: bold;
   width: 100%;
   .block();
   border: 0;
