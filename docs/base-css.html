@@ -123,15 +123,20 @@
 
   <h2>Form</h2>
   <form action="#" method="get">
-    <fieldset>
+    <fieldset class="fieldset">
       <legend class="h3">Input</legend>
       <div class="field">
         <label for="name">Your Full Name: (normal field)</label>
         <input type="text" name="name" id="name" value="" placeholder="Your Name...">
       </div>
+
+      <div class="inline-field">
+        <label for="name2">Your Full Name: (inline field)</label>
+        <input type="text" name="name2" id="name2" value="" placeholder="Your Name...">
+      </div>
     </fieldset>
 
-    <fieldset>
+    <fieldset class="fieldset">
       <legend class="h3">Checkboxes + Radios</legend>
       <span class="checkbox">
         <input type="checkbox" name="checkbox" id="checkbox">
@@ -151,9 +156,19 @@
       </span>
     </fieldset>
 
-    <fieldset>
+    <fieldset class="fieldset">
       <legend class="h3">Select + Multiple</legend>
       <div class="field">
+        <label for="select">Select</label>
+        <select name="select" id="select">
+          <optgroup label="Example">
+          <option value="excellent">Excellent</option>
+          <option value="average">Average</option>
+          <option value="poor">Poor</option>
+        </select>
+      </div>
+
+      <div class="inline-field">
         <label for="select">Select</label>
         <select name="select" id="select">
           <optgroup label="Example">
@@ -175,13 +190,28 @@
         </select>
       </div>
 
+      <div class="inline-field">
+        <label for="multi-select">Multiple Select</label>
+        <select name="multi-select" id="multi-select" multiple>
+          <optgroup label="Example">
+          <option value="excellent">Excellent</option>
+          <option value="average">Average</option>
+          <option value="poor">Poor</option>
+        </select>
+      </div>
+
     </fieldset>
 
-    <fieldset>
+    <fieldset class="fieldset">
       <legend class="h3">Textarea</legend>
       <div class="field">
         <label for="textarea">Your Message:</label>
-        <textarea name="textarea" id="textarea" rows="3"></textarea>
+        <textarea name="textarea" id="textarea" rows="5"></textarea>
+      </div>
+
+      <div class="inline-field">
+        <label for="textarea2">Inline Message:</label>
+        <textarea name="textarea2" id="textarea2" rows="5"></textarea>
       </div>
 
       <hr>

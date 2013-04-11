@@ -1,8 +1,8 @@
 /* ==========================================================================
 
-  Base Stylesheet - http://matthewhartman.github.com/base/
+  Base Stylesheet - http://matthewhartman.github.io/base/
   Author: Matthew Hartman - http://www.matthewhartman.com.au/
-  Version: 1.2 - Last Updated: 16th January, 2013
+  Version: 1.2 - Last Updated: 11th April, 2013
 
 ========================================================================== */
 /* ==========================================================================
@@ -287,7 +287,7 @@ table tfoot td {
   font-weight: bold;
 }
 table caption {
-  padding: .5em;
+  padding: 0.5em;
   font-style: italic;
   background-color: #eeeeee;
   border-bottom: 0;
@@ -295,21 +295,19 @@ table caption {
 }
 /* 1.4 Lists
    ========================================================================== */
-ul,
-ul ul {
+ul {
   list-style: disc;
-  margin: 4px 0 4px 25px;
-  padding: 0;
+  padding: 0 0 0 25px;
+  margin: 0;
 }
-ol,
-ol ol {
+ol {
   list-style: decimal;
-  margin: 4px 0 4px 25px;
-  padding: 0;
+  padding: 0 0 0 25px;
+  margin: 0;
 }
 /* 1.5 Forms, Labels and Inputs
    ========================================================================== */
-fieldset {
+.fieldset {
   margin: 1.5em 0;
 }
 legend {
@@ -369,8 +367,8 @@ input[type=file] {
   -webkit-appearance: none;
   -moz-appearance: none;
   vertical-align: middle;
-  font-size: 21px;
-  font-size: 1.3125rem;
+  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: bold;
   background-color: #ffffff;
   color: #666666;
@@ -382,6 +380,9 @@ input[type=file] {
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 input[type=file] {
   border: 0;
@@ -409,8 +410,8 @@ input[type=reset] {
 
 }
 textarea {
-  font-size: 21px;
-  font-size: 1.3125rem;
+  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: bold;
   background-color: #ffffff;
   color: #666666;
@@ -426,6 +427,9 @@ textarea {
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 select {
   font-size: 14px;
@@ -433,14 +437,13 @@ select {
   outline: 0;
   border: 0;
   padding: 7px;
-  height: 30px;
+  height: 22px;
   line-height: normal;
   display: inline-block;
   *zoom: 1;
   *display: inline;
   vertical-align: middle;
-  *border: 10px solid #ffffff;
-  outline: 1px solid #999999;
+  border: 1px solid #999999;
 }
 select[multiple] {
   min-height: 100px;
