@@ -2,7 +2,7 @@
 
   Base Stylesheet - http://matthewhartman.github.io/base/
   Author: Matthew Hartman - http://www.matthewhartman.com.au/
-  Version: 1.2 - Last Updated: 11th April, 2013
+  Version: 1.2 - Last Updated: 12th April, 2013
 
 ========================================================================== */
 /* ==========================================================================
@@ -349,7 +349,9 @@ label {
   padding: 0.2em 0;
 }
 .checkbox label {
-  display: table-cell;
+  display: inline-block;
+  *display: inline;
+  overflow: hidden;
   *zoom: 1;
 }
 .checkbox input[type=checkbox],
