@@ -349,7 +349,9 @@ label {
   padding: 0.2em 0;
 }
 .checkbox label {
-  display: table-cell;
+  display: inline-block;
+  *display: inline;
+  overflow: hidden;
   *zoom: 1;
 }
 .checkbox input[type=checkbox],
