@@ -290,12 +290,7 @@ label {
   padding: 0.2em 0;
 }
 .checkbox label {
-<<<<<<< HEAD
-  display: block;
-  overflow: hidden;
-=======
   display: inline-block;
->>>>>>> Updated Docs
   *zoom: 1;
   *display: inline;
   line-height: normal;
@@ -368,7 +363,6 @@ textarea {
 select {
   font-size: 14px;
   font-size: 0.875rem;
-  padding: 7px;
   padding-top: 4px;
   padding-left: 4px;
   line-height: normal;
