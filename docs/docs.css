@@ -88,22 +88,10 @@ h1, h2, h3, h4, .logo {
 }
 @media only screen and (max-width: 761px) {
   .header {
-    padding-bottom: 0;
     text-align: center;
   }
   .header .container {
     padding: 0;
-  }
-  .logo {
-    float: none;
-    margin: 0 auto;
-    display: inline-block;
-    *zoom: 1;
-    *display: inline;
-  }
-  .logo .small {
-    font-size: 1em;
-    position: static;
   }
   .nav-toggle {
     display: block;
