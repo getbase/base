@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <title>Base - CSS</title>
+  <meta name="description" content="Base CSS">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" media="screen" href="style.css">
+  <link rel="stylesheet" media="screen" href="docs.css">
+</head>
+<body>
+
+<div class="section header">
+  <div class="container clear">
+    <a href="index.html" class="left block logo">Base <span class="small">( Docs )</span></a>
+    <div class="navigation right">
+      <ul class="menu clear">
+        <li><a href="/base/">Base Home</a></li>
+        <li><a href="index.html">Welcome</a></li>
+        <li><a class="current" href="base-css.html">Base CSS</a></li>
+        <li><a href="grid-layout.html">Grid Layout</a></li>
+        <li><a href="https://github.com/matthewhartman/base/zipball/master">Download</a></li>
+      </ul>
+    </div>
+  </div>
+</div> <!-- Header -->
+
+<div class="container content-inner">
+
+  <h1>Base CSS</h1>
+  <p>All the stylesheets are contained within the <code>less/</code> directory and WinLess should be used to export the final output to the root <code>/</code> directory</p>
+  
+  <p>The main CSS file that should be edited is <code>style.less</code> and the structure is is set out neatly with guided comments</p>
+
+  <hr>
+
+  <h2>Body and Typography</h2>
+  <p>Base has a global default font size of 14px (which is converted into <code>rem</code> units for scalability and accessibility). This is applied to the <code>&lt;body&gt;</code> and all <code>&lt;p&gt;</code> tags.</p>
+
+  <p class="alert"><strong>NOTE:</strong> rem units are not supported in some browsers, so a px fallback occurs.</p>
+
+  <hr>
+
+  <h2>Lists</h2>
+  <h3>Unordered List</h3>
+  <ul>
+    <li>Lorem ipsum point
+      <ul>
+        <li>Lorem ipsum point</li>
+        <li>Lorem ipsum point</li>
+        <li>Lorem ipsum point
+          <ol>
+            <li>Numbered Item</li>
+            <li>Numbered Item</li>
+            <li>Numbered Item</li>
+          </ol>
+        </li>
+      </ul>
+    </li>
+    <li>Lorem ipsum point</li>
+    <li>Lorem ipsum point</li>
+  </ul>
+  
+  <hr>
+
+  <h3>Ordered List</h3>
+  <ol>
+    <li>Lorem ipsum point
+      <ol>
+        <li>Lorem ipsum point</li>
+        <li>Lorem ipsum point</li>
+        <li>Lorem ipsum point</li>
+      </ol>
+    </li>
+    <li>Lorem ipsum point</li>
+  </ol>
+
+  <hr>
+
+  <h2>Table</h2>
+  <table>
+    <caption>Table Caption (optional)</caption>
+    <thead>
+      <tr>
+        <th>Table Heading 1</th>
+        <th>Table Heading 2</th>
+        <th>Table Heading 3</th>
+        <th>Table Heading 4</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed.</td>
+        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed.</td>
+        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed.</td>
+        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed.</td>
+      </tr>
+      <tr>
+        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed.</td>
+        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed.</td>
+        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed.</td>
+        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed.</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td>Table Footer 1</td>
+        <td>Table Footer 2</td>
+        <td>Table Footer 3</td>
+        <td>Table Footer 4</td>
+      </tr>
+    </tfoot>
+  </table>
+
+  <hr>
+  
+  <h2>Blockquote</h2>
+  <blockquote>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <cite>— John Doe</cite>
+  </blockquote>
+  
+  <hr>
+
+  <form action="#" method="get">
+    <fieldset>
+      <legend class="h2">Form Elements</legend>
+      <div class="row">
+        <label for="name">Your Full Name: (normal field)</label>
+        <input type="text" name="name" id="name" value="" placeholder="Your Name...">
+      </div>
+
+      <div class="row">
+        <span class="checkbox">
+          <input type="checkbox" name="checkbox" id="checkbox">
+          <label for="checkbox">A single line label</label>
+        </span>
+        <span class="checkbox">
+          <input type="checkbox" name="multi-checkbox" id="multi-checkbox">
+          <label for="multi-checkbox">A label with <br> multiple <br> lines </label>
+        </span>
+        <span class="checkbox">
+          <input type="radio" name="radio" id="radio">
+          <label for="radio">A single line radio example</label>
+        </span>
+        <span class="checkbox">
+          <input type="radio" name="radio" id="multi-radio">
+          <label for="multi-radio">A label<br> with multiple <br> lines</label>
+        </span>
+      </div>
+
+      <div class="row">
+        <label for="select">Select</label>
+        <select name="select" id="select">
+          <optgroup label="Example">
+          <option value="excellent">Excellent</option>
+          <option value="average">Average</option>
+          <option value="poor">Poor</option>
+        </select>
+      </div>
+
+      <div class="row">
+        <label for="multi-select">Multiple Select</label>
+        <select name="multi-select" id="multi-select" multiple>
+          <optgroup label="Example">
+          <option value="excellent">Excellent</option>
+          <option value="average">Average</option>
+          <option value="poor">Poor</option>
+        </select>
+      </div>
+
+      <div class="row">
+        <label for="textarea">Textarea:</label>
+        <textarea name="textarea" id="textarea" rows="5"></textarea>
+      </div>
+
+    <hr>
+
+    
+    <h2>Form Buttons</h2>
+    <input class="button orange-button mobile-full" type="submit" value="Submit">
+    <input class="button orange-button mobile-full" type="reset" value="Reset">
+    <input class="button orange-button mobile-full" disabled type="submit" value="Disabled Submit">
+    <input class="button orange-button mobile-full" disabled type="reset" value="Disabled Reset">
+
+    <input class="no-style-button" type="submit mobile-full" value="No Style Submit">
+    <input class="no-style-button" type="submit mobile-full" value="No Style Submit Disabled" disabled>
+
+  </form>
+  
+  <hr>
+
+  <h2>Standard Buttons</h2>
+  <a href="#" class="button orange-button mobile-full" title="Hello :)">Hello</a>
+  <a href="#" class="no-style-button mobile-full" title="Hello :)">Hello</a>
+
+</div>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="../javascripts/default.js"></script>
+
+</body>
+</html>
