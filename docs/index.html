@@ -3,8 +3,9 @@
 <head>
   <meta charset="utf-8">
   <title>Base - Welcome</title>
-  <meta name="description" content="">
+  <meta name="description" content="Welcome to the official documentation for the Base Framework">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="http://fonts.googleapis.com/css?family=Raleway:900,400,200,600" rel="stylesheet">
   <link rel="stylesheet" media="screen" href="style.css">
   <link rel="stylesheet" media="screen" href="docs.css">
 </head>
@@ -12,41 +13,97 @@
 
 <div class="section header">
   <div class="container clear">
-    <a href="index.html" class="left block logo">Base <span class="small">( Docs )</span></a>
-    <div class="navigation right">
-      <ul class="menu clear">
-        <li><a href="/base/">Base Home</a></li>
-        <li><a class="current" href="index.html">Welcome</a></li>
-        <li><a href="base-css.html">Base CSS</a></li>
-        <li><a href="grid-layout.html">Grid Layout</a></li>
-        <li><a href="https://github.com/matthewhartman/base/zipball/master">Download</a></li>
-      </ul>
-    </div>
+    <a href="index.html" class="left block logo">Base Documentation</span></a>
   </div>
 </div> <!-- Header -->
+
+<div class="navigation">
+  <div class="container-full">
+    <ul class="menu clear right">
+      <li><a class="current" href="index.html">Welcome to Base!</a></li>
+      <li><a href="css-overview.html">CSS Overview</a></li>
+      <li><a href="grid.html">Grid Layout</a></li>
+      <li><a href="typography.html">Typography</a></li>
+      <li><a href="tables.html">Tables</a></li>
+      <li><a href="forms.html">Forms</a></li>
+      <li><a href="https://github.com/matthewhartman/base/zipball/master">Download</a></li>
+    </ul>
+  </div>
+</div>
 
 <div class="container content-inner">
 
   <h1>Welcome to Base!</h1>
-  <p>A super <em>simple, responsive framework</em> built to work on mobile devices, tablets, netbooks and desktop computers.</p>
+  <p class="intro">
+    A super simple, responsive framework built to work on mobile devices, tablets, netbooks and desktop computers.
+  </p>
 
-  <p>Base is developed in LESS, a powerful CSS pre-processor that helps you write cleaner and more organized CSS that you can more easily maintain over time without the typical headaches of vanilla CSS. On top of our minimal styling, we've written a few Javascript plugins that will make useful interactions easier to implement across screen sizes.</p>
+  <p>
+    Base is developed in <a target="_blank" href="http://lesscss.org/">LESS</a>, a powerful CSS pre-processor that helps you write cleaner, more organized, well structured CSS that you can easily maintain over time. Base supports all major browsers and legacy browsers such as IE7.
+  </p>
+
+  <h2 class="h4 strong">Let's Get Started</h2>
+  <p>
+    Before we begin, you should have the following prerequisites:
+  </p>
+
+  <ol>
+    <li>
+      A good understanding of HTML and CSS
+    </li>
+    <li>
+      The latest build of Base - <a href="https://github.com/matthewhartman/base/zipball/master">Download from Github</a>
+    </li>
+    <li>
+      An awesome code editor such as <a target="_blank" href="http://www.sublimetext.com/2">Sublime Text Editor</a>
+    </li>
+    <li>
+      <strong>A LESS compiler</strong>
+      <ul>
+        <li>
+          <a target="_blank" href="http://alphapixels.com/prepros/">Prepros</a> for Windows
+        </li>
+        <li>
+          <a target="_blank" href="http://incident57.com/codekit/">CodeKit</a> for Mac
+        </li>
+      </ul>
+    </li>
+    <li>
+      A <em>calm</em> and open mind :)
+    </li>
+  </ol>
 
   <hr>
 
-  <h2>Getting Started</h2>
-  <p>Whether you're using LESS or just plain old CSS, Base is easy enough to start a new responsive project with ease.</p>
+  <h2>What Comes with Base?</h2>
+  <p>
+    A small and minimal download which includes the following:
+  </p>
+    <ol>
+      <li>
+        <strong>grid/base-grid.psd</strong> - PSD grid based on 960.gs
+      </li>
+      <li>
+        <strong>javascripts/default.js</strong> - Default javascript file which includes responsive.js and other base initiations
+      </li>
+      <li>
+        <strong>less/mixins.less</strong> - Basic Mixins which include font-size properties and more
+      </li>
+      <li>
+        <strong>less/style.less</strong> - The base stylesheet in LESS format
+      </li>
+      <li>
+        <strong>index.html</strong> - Basic HTML template which includes jQuery
+      </li>
+      <li>
+        <strong>readme.markdown</strong> - The Read Me file for Base (feel free to delete this)
+      </li>
+      <li>
+        <strong>style.css</strong> - Base stylesheet for typography, headings, tables, form elements, etc
+      </li>
+    </ol>
 
-  <p>Before we get started, you should have the following prerequisites...</p>
 
-  <ul>
-    <li>A good understanding of HTML and CSS</li>
-    <li>An awesome code editor such as <a target="_blank" href="http://www.sublimetext.com/2">Sublime Text Editor</a></li>
-    <li>LESS compiler like <a target="_blank" href="http://incident57.com/codekit/">CodeKit</a> or <a target="_blank" href="http://crunchapp.net/">Crunch!</a> (optional) </li>
-  </ul>
-
-  <hr>
-  
 </div>
 
 
