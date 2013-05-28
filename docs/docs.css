@@ -101,6 +101,7 @@ h1, h2, h3, h4, .logo {
     text-decoration: none;
   }
   .nav-toggle:hover,
+  .nav-toggle:active,
   .nav-toggle.active {
     background-color: #444;
     color: #fff;
