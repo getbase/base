@@ -26,6 +26,8 @@ h1, h2, h3, h4, .logo {
   font-size: 0.8125rem;
   line-height: normal;
   position: absolute;
+  top: 0;
+  left: 0;
   z-index: 9999;
   width: 100%;
   background-color: #222;
