@@ -368,14 +368,9 @@ textarea {
 select {
   font-size: 14px;
   font-size: 0.875rem;
-<<<<<<< HEAD
-  outline: 0;
-  border: 0;
   padding: 7px;
-=======
   padding-top: 4px;
   padding-left: 4px;
->>>>>>> Updated Docs
   line-height: normal;
   display: inline-block;
   *zoom: 1;
