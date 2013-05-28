@@ -92,9 +92,6 @@ h1, h2, h3, h4, .logo {
   .header {
     text-align: center;
   }
-  .header .container {
-    padding: 0;
-  }
   .nav-toggle {
     display: block;
     background-color: #222;
