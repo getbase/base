@@ -5,56 +5,87 @@
   Version: 1.4 - Last Updated: 28th May, 2013
 
 ========================================================================== */
-
-  @import "mixins.less"; // Import the base mixins
-
-  // Global Defaults //
-  @mobile-width:              100%;
-  @tablet-width:              720px;
-  @desktop-width:             940px;
-
-
-  // Resonsive Design Break Points
-  @mobile-breakpoint:         @tablet-width + 41px;
-  @tablet-breakpoint:         @tablet-width + 42px;
-  @desktop-breakpoint:        @desktop-width - 1px;
-
-  // Heading                  Size
-  @h1:                        40;
-  @h2:                        32;
-  @h3:                        26;
-  @h4:                        20;
-
-
 /* ==========================================================================
 /* --  Micro Clearfix, Resets and Common Classes
    ========================================================================== */
-
 /* Micro Clearfix */
-.clear:before, .clear:after { content: ""; display: table; } .clear:after { clear: both; } .clear { zoom: 1; }
-.section:before, .section:after { content: ""; display: table; } .section:after { clear: both; } .section { zoom: 1; }
-.checkbox:before, .checkbox:after { content: ""; display: table; } .checkbox:after { clear: both; } .checkbox { zoom: 1; }
-
+.clear:before,
+.clear:after {
+  content: "";
+  display: table;
+}
+.clear:after {
+  clear: both;
+}
+.clear {
+  zoom: 1;
+}
+.section:before,
+.section:after {
+  content: "";
+  display: table;
+}
+.section:after {
+  clear: both;
+}
+.section {
+  zoom: 1;
+}
+.checkbox:before,
+.checkbox:after {
+  content: "";
+  display: table;
+}
+.checkbox:after {
+  clear: both;
+}
+.checkbox {
+  zoom: 1;
+}
 /* General Resets */
-  /* Start font size at 100% */
-html { font-size: 100%; }
-  /* Make all form fonts consistent */
-button, input, select, textarea { font-family: sans-serif; }
-  /* Remove default borders */
-form, fieldset, legend, a img { border: 0; }
+/* Start font size at 100% */
+html {
+  font-size: 100%;
+}
+/* Make all form fonts consistent */
+button,
+input,
+select,
+textarea {
+  font-family: sans-serif;
+}
+/* Remove default borders */
+form,
+fieldset,
+legend,
+a img {
+  border: 0;
+}
 /* Remove default spacing */
-body, form, fieldset { margin: 0; padding: 0; }
-
+body,
+form,
+fieldset {
+  margin: 0;
+  padding: 0;
+}
 /* Common Classes */
-.left { float: left; }
-.right { float: right; }
-.block { display: block; }
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.block {
+  display: block;
+}
 .inline-block {
   display: inline-block;
   *zoom: 1;
   *display: inline;
 }
-.inline { display: inline; }
+.inline {
+  display: inline;
+}
 .visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -66,36 +97,32 @@ body, form, fieldset { margin: 0; padding: 0; }
   left: -9999em;
 }
 .visuallyvisible {
-  clip: (auto);
   clip: auto;
   width: auto;
   height: auto;
   overflow: visible;
   left: 0;
 }
-
 .strong {
   font-weight: bold;
 }
-
 .alert {
   background-color: #ffc;
-  .block();
+  display: block;
   padding: 4px 8px;
 }
-
 .none,
 .nodesktop {
   display: none;
 }
-
 /* ==========================================================================
 /* 1.0 - Document Setup (body, links, headings, code, tables, forms etc)
    ========================================================================== */
 /* Body */
 body {
   font-family: arial, helvetica, clean, sans-serif;
-  .font-size(14);
+  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.5;
   color: #222;
   background-color: #fff;
@@ -111,8 +138,6 @@ a:hover {
 a:active {
   color: #333;
 }
-
-
 /* 1.1 Headings - h1, h2, h3, h4, h5, h6 & other (if any)
    ========================================================================== */
 h1,
@@ -125,57 +150,65 @@ h6 {
   font-weight: normal;
   line-height: normal;
 }
-h1, .h1 {
-  .font-size(@h1);
+h1,
+.h1 {
+  font-size: 40px;
+  font-size: 2.5rem;
   margin-bottom: 10px;
 }
-h2, .h2 {
-  .font-size(@h2);
+h2,
+.h2 {
+  font-size: 32px;
+  font-size: 2rem;
   margin-bottom: 8px;
 }
-h3, .h3 {
-  .font-size(@h3);
+h3,
+.h3 {
+  font-size: 26px;
+  font-size: 1.625rem;
   margin-bottom: 6px;
 }
-h4, .h4 {
-  .font-size(@h4);
+h4,
+.h4 {
+  font-size: 20px;
+  font-size: 1.25rem;
   margin-bottom: 4px;
 }
 .no-style-heading {
   margin-bottom: 0;
-  .font-size(14);
+  font-size: 14px;
+  font-size: 0.875rem;
 }
-
-
 /* 1.2 Paragraphs, block quotes, code, pre, etc
    ========================================================================== */
 p {
-  word-wrap: break-word; // CSS3 Browsers
-  -ms-word-wrap: break-word; // IE8
-  *white-space: normal;  // IE7
+  word-wrap: break-word;
+  -ms-word-wrap: break-word;
+  *white-space: normal;
   margin: 0 0 2% 0;
 }
 small {
-  .font-size(12);
+  font-size: 12px;
+  font-size: 0.75rem;
 }
-
 /* Block Quotes, Pre and Code Blocks */
 blockquote,
 q {
-  .font-size(20);
+  font-size: 20px;
+  font-size: 1.25rem;
   margin: 20px 0;
   font-family: "Georgia", "Times";
   font-style: italic;
 }
 code {
   font-family: Monaco, Andale Mono, "Courier New", monospace;
-  .font-size(12);
+  font-size: 12px;
+  font-size: 0.75rem;
   color: #222;
   background-color: #f8f8f8;
   border: 1px solid #ccc;
-  padding: 2px 6px;  
+  padding: 2px 6px;
 }
-
 /* Horizontal Rule */
 hr {
   border: 0;
@@ -185,7 +218,6 @@ hr {
   background-color: #ddd;
   margin: 2em 0;
 }
-
 /* 1.3 Tables
    ========================================================================== */
 table {
@@ -195,9 +227,9 @@ table {
   background-color: #fff;
   border-spacing: 0;
   table-layout: fixed;
-  word-wrap: break-word; // CSS3 Browsers
-  -ms-word-wrap: break-word; // IE8
-  *white-space: normal;  // IE7
+  word-wrap: break-word;
+  -ms-word-wrap: break-word;
+  *white-space: normal;
 }
 table th,
 table td {
@@ -222,46 +254,46 @@ table caption {
   border-bottom: 0;
   font-weight: bold;
 }
-
 /* 1.4 Lists
    ========================================================================== */
 ul {
-list-style: disc;
-padding: 0 0 0 25px;
-margin: 0;
+  list-style: disc;
+  padding: 0 0 0 25px;
+  margin: 0;
 }
-
 ol {
   list-style: decimal;
   padding: 0 0 0 25px;
   margin: 0;
 }
-
-.nolist { list-style: none; }
-
+.nolist {
+  list-style: none;
+}
 /* 1.5 Forms, Labels and Inputs
    ========================================================================== */
 legend {
   font-family: arial, helvetica, clean, sans-serif;
-  .font-size(32);
+  font-size: 32px;
+  font-size: 2rem;
   width: 100%;
-  .block();
-  *margin-left: -5px; //fix alignment for ie7
+  display: block;
+  *margin-left: -5px;
 }
 label {
-  .block();
+  display: block;
   font-weight: bold;
   cursor: pointer;
 }
-
 .checkbox {
-  .block();
+  display: block;
   position: relative;
   padding: 0.2em 0;
-  label {
-    .inline-block();
-    line-height: normal;
-  } // end label
+}
+.checkbox label {
+  display: inline-block;
+  *zoom: 1;
+  *display: inline;
+  line-height: normal;
 }
 .checkbox input[type=checkbox],
 .checkbox input[type=radio] {
@@ -278,17 +310,16 @@ input[type=tel] {
   outline: 0;
   padding: 2px 5px;
   height: 28px;
-  -webkit-appearance: none; // Remove Default Browser Behaviour for Safari
-  -moz-appearance: none; // Remove Default Browser Behaviour for Firefox
-
+  -webkit-appearance: none;
+  -moz-appearance: none;
   vertical-align: middle;
-  .font-size(14);
+  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: bold;
   background-color: #fff;
   color: #666;
   border: 1px solid #ddd;
   border-top: 1px solid #999;
-
   -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
@@ -314,7 +345,8 @@ input[type=reset] {
 
 }
 textarea {
-  .font-size(14);
+  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: bold;
   background-color: #fff;
   color: #666;
@@ -323,26 +355,26 @@ textarea {
   vertical-align: top;
   border: 1px solid #ddd;
   padding: 10px;
-  resize: none; // disable user resizing
-
+  resize: none;
   -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 select {
-  .font-size(14);
+  font-size: 14px;
+  font-size: 0.875rem;
   padding-top: 4px;
   padding-left: 4px;
   line-height: normal;
-  .inline-block();
+  display: inline-block;
+  *zoom: 1;
+  *display: inline;
 }
 select[multiple] {
   min-height: 100px;
-  border: 1px solid #ddd;
   vertical-align: top;
   border: 1px solid #ddd;
 }
-
 select,
 input[type=text],
 input[type=password],
@@ -351,14 +383,16 @@ input[type=search],
 input[type=tel] {
   width: 280px;
 }
-textarea { width: 260px; }
-
+textarea {
+  width: 260px;
+}
 /* Buttons */
 .buttons {
   padding: 1em 0;
 }
 .button {
-  .font-size(14);
+  font-size: 14px;
+  font-size: 0.875rem;
   cursor: pointer;
   border: 0;
   padding: 0.8em 3em;
@@ -366,26 +400,24 @@ textarea { width: 260px; }
   text-decoration: none;
   text-align: center;
 }
-
 .orange-button {
   background-color: #fee9cc;
-
-  &:hover {
-    background-color: #ffe0b5;
-    -webkit-tap-highlight-color: #fdeed8;
-  } // end hover
-  &:active {
-    background-color: #fdeed8;
-  } // end hover
+}
+.orange-button:hover {
+  background-color: #ffe0b5;
+  -webkit-tap-highlight-color: #fdeed8;
+}
+.orange-button:active {
+  background-color: #fdeed8;
 }
 .button[disabled],
 .button.disabled {
   color: #999;
   background-color: #f1f1f1;
 }
-
 .no-style-button {
-  .font-size(13);
+  font-size: 13px;
+  font-size: 0.8125rem;
   color: #f30;
   text-decoration: underline;
   border: 0;
@@ -394,232 +426,256 @@ textarea { width: 260px; }
   padding: 0;
   cursor: pointer;
   outline: 0;
-
-  &:hover {
+}
+.no-style-button:hover {
   text-decoration: none;
-  } // end hover
 }
 .no-style-button[disabled],
 .no-style-button.disabled {
   text-decoration: none;
   color: #999;
 }
-
-
 /* ==========================================================================
 /* 2.0 - Grid Layout (Responsive)
    ========================================================================== */
 /* Sections & Content Blocks */
-.section { position: relative; }
-
-.row { margin-bottom: 2%; }
-
-.center { margin: 0 auto; }
-
+.section {
+  position: relative;
+}
+.row {
+  margin-bottom: 2%;
+}
+.center {
+  margin: 0 auto;
+}
 .container {
-  max-width: @desktop-width;
+  max-width: 940px;
   margin: 0 auto;
   padding-left: 10px;
   padding-right: 10px;
 }
 .container-full {
-  max-width: @desktop-width + 20px;
+  max-width: 960px;
   margin: 0 auto;
 }
-
 /* Fluid Grid */
 .col {
   margin-left: 2%;
-  *margin-left: 20px; // ie7
+  *margin-left: 20px;
   float: left;
 }
-.col:first-child { margin-left: 0; }
-
+.col:first-child {
+  margin-left: 0;
+}
 /* Columns */
 .one {
   width: 6.5%;
-  *width: 60px; // ie7
+  *width: 60px;
 }
 .two {
   width: 15%;
-  *width: 140px; // ie7
+  *width: 140px;
 }
 .three {
   width: 23.5%;
-  *width: 220px; // ie7
+  *width: 220px;
 }
 .four {
   width: 32%;
-  *width: 300px; // ie7
+  *width: 300px;
 }
 .five {
   width: 40.5%;
-  *width: 380px; // ie7
+  *width: 380px;
 }
 .six {
   width: 49.0%;
-  *width: 460px; // ie7
+  *width: 460px;
 }
 .seven {
   width: 57.5%;
-  *width: 540px; // ie7
+  *width: 540px;
 }
 .eight {
   width: 66%;
-  *width: 620px; // ie7
+  *width: 620px;
 }
 .nine {
   width: 74.5%;
-  *width: 700px; // ie7
+  *width: 700px;
 }
 .ten {
   width: 83%;
-  *width: 780px; // ie7
+  *width: 780px;
 }
 .eleven {
   width: 91.5%;
-  *width: 860px; // ie7
+  *width: 860px;
 }
 .twelve {
   width: 100%;
-  *width: 940px; // ie7
+  *width: 940px;
 }
-
-.quarter { .three(); }
-.half { .six(); }
-.one-third { .four(); }
-
-// ==========================================================================
-// -- Custom Website Styles for Desktop
-// ==========================================================================
-
-// Your custom website styles for desktop go here...
-
-
-
+.quarter {
+  width: 23.5%;
+  *width: 220px;
+}
+.half {
+  width: 49.0%;
+  *width: 460px;
+}
+.one-third {
+  width: 32%;
+  *width: 300px;
+}
 /* ==========================================================================
 /* -- Tablet Devices (Layout, Modifications, etc)
    ========================================================================== */
-@media only screen and (min-width: @tablet-breakpoint) and (max-width: @desktop-breakpoint) {
-
-.container {
-  width: @tablet-width;
-  padding-left: 10px;
-  padding-right: 10px;
+@media only screen and (min-width: 762px) and (max-width: 939px) {
+  .container {
+    width: 720px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  /* Tablet Grid
+    * For stacking full width columns, please use the new class .tablet-full
+    * New tablet columns have been added
+  */
+  .tablet-one {
+    width: 6.5%;
+  }
+  .tablet-two {
+    width: 15%;
+  }
+  .tablet-three {
+    width: 23.5%;
+  }
+  .tablet-four {
+    width: 32%;
+  }
+  .tablet-five {
+    width: 40.5%;
+  }
+  .tablet-six {
+    width: 49.0%;
+  }
+  .tablet-seven {
+    width: 57.5%;
+  }
+  .tablet-eight {
+    width: 66%;
+  }
+  .tablet-nine {
+    width: 74.5%;
+  }
+  .tablet-ten {
+    width: 83%;
+  }
+  .tablet-eleven {
+    width: 91.5%;
+  }
+  .tablet-twelve {
+    width: 100%;
+  }
+  .tablet-full {
+    clear: both;
+    float: none;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 1em;
+  }
+  .tablet-full:first-child {
+    margin-top: 0;
+  }
+  .notablet {
+    display: none;
+  }
+  .showtablet {
+    display: block;
+  }
 }
-
-/* Tablet Grid
-  * For stacking full width columns, please use the new class .tablet-full
-  * New tablet columns have been added
-*/
-.tablet-one { width: 6.5%; }
-.tablet-two { width: 15%; }
-.tablet-three { width: 23.5%; }
-.tablet-four { width: 32%; }
-.tablet-five { width: 40.5%; }
-.tablet-six { width: 49.0%; }
-.tablet-seven { width: 57.5%; }
-.tablet-eight { width: 66%; }
-.tablet-nine { width: 74.5%; }
-.tablet-ten { width: 83%; }
-.tablet-eleven { width: 91.5%; }
-.tablet-twelve { width: 100%; }
-
-.tablet-full {
-  clear: both;
-  float: none;
-  width: 100%;
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 1em;
-}
-.tablet-full:first-child {
-  margin-top: 0;
-}
-
-
-.notablet { .none(); }
-.showtablet { .block(); }
-
-
-// ==========================================================================
-// -- Custom Website Styles for Tablet Devices
-// ==========================================================================
-
-// Your custom website styles for tablet devices go here...
-
-
-
-
-} /* End Tablet Media Query */
-
-
+/* End Tablet Media Query */
 /* ==========================================================================
 /* -- Mobile Devices (Layout, Modifications, etc)
    ========================================================================== */
-@media only screen and (max-width: @mobile-breakpoint) {
-
-/* Mobile Grid
-  * For stacking full width columns, please use the new class .mobile-full
-  * New mobile columns have been added
-*/
-.mobile-one { width: 6.5%; }
-.mobile-two { width: 15%; }
-.mobile-three { width: 23.5%; }
-.mobile-four { width: 32%; }
-.mobile-five { width: 40.5%; }
-.mobile-six { width: 49.0%; }
-.mobile-seven { width: 57.5%; }
-.mobile-eight { width: 66%; }
-.mobile-nine { width: 74.5%; }
-.mobile-ten { width: 83%; }
-.mobile-eleven { width: 91.5%; }
-.mobile-twelve { width: 100%; }
-
-.mobile-full {
-  clear: both;
-  float: none;
-  width: 100%;
-  margin: 1em 0 0 0;
+@media only screen and (max-width: 761px) {
+  /* Mobile Grid
+    * For stacking full width columns, please use the new class .mobile-full
+    * New mobile columns have been added
+  */
+  .mobile-one {
+    width: 6.5%;
+  }
+  .mobile-two {
+    width: 15%;
+  }
+  .mobile-three {
+    width: 23.5%;
+  }
+  .mobile-four {
+    width: 32%;
+  }
+  .mobile-five {
+    width: 40.5%;
+  }
+  .mobile-six {
+    width: 49.0%;
+  }
+  .mobile-seven {
+    width: 57.5%;
+  }
+  .mobile-eight {
+    width: 66%;
+  }
+  .mobile-nine {
+    width: 74.5%;
+  }
+  .mobile-ten {
+    width: 83%;
+  }
+  .mobile-eleven {
+    width: 91.5%;
+  }
+  .mobile-twelve {
+    width: 100%;
+  }
+  .mobile-full {
+    clear: both;
+    float: none;
+    width: 100%;
+    margin: 1em 0 0 0;
+  }
+  .mobile-full:first-child {
+    margin-top: 0;
+  }
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  /* Mobile Tables */
+  table th,
+  table td {
+    padding: 4px;
+  }
+  /* Mobile Forms */
+  input[type=text],
+  input[type=password],
+  input[type=email],
+  input[type=search],
+  input[type=tel],
+  textarea {
+    width: 94%;
+    padding: 1% 3%;
+  }
+  select {
+    width: 90%;
+  }
+  .nomobile {
+    display: none;
+  }
+  .showmobile {
+    display: block;
+  }
 }
-.mobile-full:first-child {
-  margin-top: 0;
-}
-
-.container {
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-/* Mobile Tables */
-table th,
-table td {
-  padding: 4px;
-}
-
-/* Mobile Forms */
-input[type=text],
-input[type=password],
-input[type=email],
-input[type=search],
-input[type=tel],
-textarea {
-  width: 94%;
-  padding: 1% 3%;
-}
-select {
-  width: 90%;
-}
-
-.nomobile { .none(); }
-.showmobile { .block(); }
-
-
-// ==========================================================================
-// -- Custom Website Styles for Mobile Devices
-// ==========================================================================
-
-// Your custom website styles for mobile devices go here...
-
-
-} /* End Mobile Media Query */
+/* End Mobile Media Query */
