@@ -1,8 +1,8 @@
 /* ==========================================================================
 
-  Base Stylesheet - http://matthewhartman.github.io/base/
+  Base Stylesheet - http://git.io/base
   Author: Matthew Hartman - http://www.matthewhartman.com.au/
-  Version: 1.2 - Last Updated: 12th April, 2013
+  Version: 1.4 - Last Updated: 28th May, 2013
 
 ========================================================================== */
 /* ==========================================================================
@@ -57,10 +57,12 @@ textarea {
 /* Remove default borders */
 form,
 fieldset,
+legend,
 a img {
   border: 0;
 }
 /* Remove default spacing */
+body,
 form,
 fieldset {
   margin: 0;
@@ -105,24 +107,9 @@ fieldset {
   font-weight: bold;
 }
 .alert {
-  background-color: #ffffcc;
+  background-color: #ffc;
   display: block;
   padding: 4px 8px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  -moz-background-clip: padding;
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box;
-}
-.nolist {
-  list-style: none;
-}
-.nopadding {
-  padding: 0;
-}
-.nomargin {
-  margin: 0;
 }
 .none,
 .nodesktop {
@@ -136,27 +123,20 @@ body {
   font-family: arial, helvetica, clean, sans-serif;
   font-size: 14px;
   font-size: 0.875rem;
-  line-height: 22px;
-  line-height: 1.375rem;
-  background-color: #ffffff;
-  color: #222222;
-  margin: 0;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
+  line-height: 1.5;
+  color: #222;
+  background-color: #fff;
 }
 /* Links */
 a {
-  color: #ff3300;
+  color: #f30;
   text-decoration: underline;
-}
-a:visited {
-  color: #ff3300;
 }
 a:hover {
   text-decoration: none;
 }
 a:active {
-  color: #333333;
+  color: #333;
 }
 /* 1.1 Headings - h1, h2, h3, h4, h5, h6 & other (if any)
    ========================================================================== */
@@ -167,8 +147,8 @@ h4,
 h5,
 h6 {
   margin: 0;
-  line-height: normal;
   font-weight: normal;
+  line-height: normal;
 }
 h1,
 .h1 {
@@ -201,6 +181,12 @@ h4,
 }
 /* 1.2 Paragraphs, block quotes, code, pre, etc
    ========================================================================== */
+p {
+  word-wrap: break-word;
+  -ms-word-wrap: break-word;
+  *white-space: normal;
+  margin-bottom: 1em;
+}
 small {
   font-size: 12px;
   font-size: 0.75rem;
@@ -210,8 +196,6 @@ blockquote,
 q {
   font-size: 20px;
   font-size: 1.25rem;
-  line-height: 32px;
-  line-height: 2rem;
   padding: 20px 30px;
   margin: 20px 0;
   font-family: "Georgia", "Times";
@@ -223,7 +207,7 @@ blockquote:after,
 q:after {
   font-size: 80px;
   font-size: 5rem;
-  color: #999999;
+  color: #999;
 }
 blockquote:before,
 q:before {
@@ -238,20 +222,13 @@ q:after {
   float: right;
 }
 code {
-  padding: 2px 6px;
   font-family: Monaco, Andale Mono, "Courier New", monospace;
   font-size: 12px;
   font-size: 0.75rem;
+  color: #222;
   background-color: #fee9cc;
   border: 1px solid #ffc9b3;
-  line-height: normal;
-  color: #222222;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  -moz-background-clip: padding;
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box;
+  padding: 2px 6px;
 }
 /* Horizontal Rule */
 hr {
@@ -259,7 +236,7 @@ hr {
   background: none;
   outline: 0;
   height: 1px;
-  background-color: #dddddd;
+  background-color: #ddd;
   margin: 2em 0;
 }
 /* 1.3 Tables
@@ -278,16 +255,15 @@ table {
 table th,
 table td {
   padding: 8px;
-  line-height: 18px;
   text-align: left;
   vertical-align: top;
-  border-top: 1px solid #eeeeee;
+  border-top: 1px solid #eee;
 }
 table thead th {
   vertical-align: bottom;
   font-weight: bold;
-  background-color: #ffffff;
-  color: #222222;
+  background-color: #fff;
+  color: #222;
 }
 table tfoot td {
   font-weight: bold;
@@ -295,7 +271,7 @@ table tfoot td {
 table caption {
   padding: 0.5em;
   font-style: italic;
-  background-color: #eeeeee;
+  background-color: #eee;
   border-bottom: 0;
   font-weight: bold;
 }
@@ -311,6 +287,9 @@ ol {
   padding: 0 0 0 25px;
   margin: 0;
 }
+.nolist {
+  list-style: none;
+}
 /* 1.5 Forms, Labels and Inputs
    ========================================================================== */
 .fieldset {
@@ -320,10 +299,8 @@ legend {
   font-family: arial, helvetica, clean, sans-serif;
   font-size: 32px;
   font-size: 2rem;
-  line-height: normal;
   width: 100%;
   display: block;
-  border: 0;
   *margin-left: -5px;
 }
 label {
@@ -345,18 +322,17 @@ label {
 .checkbox {
   display: block;
   position: relative;
-  line-height: normal;
   padding: 0.2em 0;
 }
 .checkbox label {
-  display: block;
-  overflow: hidden;
+  display: inline-block;
   *zoom: 1;
+  *display: inline;
+  line-height: normal;
 }
 .checkbox input[type=checkbox],
 .checkbox input[type=radio] {
   float: left;
-  top: -2px;
   position: relative;
   margin-right: 1em;
 }
@@ -365,34 +341,24 @@ input[type=text],
 input[type=password],
 input[type=email],
 input[type=search],
-input[type=tel],
-input[type=file] {
+input[type=tel] {
   outline: 0;
   padding: 2px 5px;
   height: 28px;
+  line-height: 28px;
   -webkit-appearance: none;
   -moz-appearance: none;
   vertical-align: middle;
   font-size: 14px;
   font-size: 0.875rem;
   font-weight: bold;
-  background-color: #ffffff;
-  color: #666666;
-  border: 1px solid #dddddd;
-  border-top: 1px solid #999999;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  -moz-background-clip: padding;
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box;
+  background-color: #fff;
+  color: #666;
+  border: 1px solid #ddd;
+  border-top: 1px solid #999;
   -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
-}
-input[type=file] {
-  border: 0;
-  height: 20px;
 }
 input[type=button]::-moz-focus-inner,
 input[type=submit]::-moz-focus-inner,
@@ -406,7 +372,6 @@ input[type="search"]::-webkit-search-cancel-button {
 input[type=submit],
 input[type=button],
 input[type=reset] {
-  line-height: normal;
   cursor: pointer;
   -webkit-appearance: none;
   /* Remove Default Browser Behaviour for Safari */
@@ -419,20 +384,14 @@ textarea {
   font-size: 14px;
   font-size: 0.875rem;
   font-weight: bold;
-  background-color: #ffffff;
-  color: #666666;
+  background-color: #fff;
+  color: #666;
   outline: 0;
   padding: 2px 5px;
   vertical-align: top;
-  border: 1px solid #dddddd;
+  border: 1px solid #ddd;
   padding: 10px;
   resize: none;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  -moz-background-clip: padding;
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box;
   -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
@@ -440,20 +399,15 @@ textarea {
 select {
   font-size: 14px;
   font-size: 0.875rem;
-  outline: 0;
-  border: 0;
   padding: 7px;
-  line-height: normal;
   display: inline-block;
   *zoom: 1;
   *display: inline;
-  vertical-align: middle;
-  border: 1px solid #999999;
 }
 select[multiple] {
   min-height: 100px;
   vertical-align: top;
-  border: 1px solid #dddddd;
+  border: 1px solid #ddd;
 }
 select,
 input[type=text],
@@ -473,11 +427,10 @@ textarea {
 .button {
   font-size: 14px;
   font-size: 0.875rem;
-  line-height: normal;
   cursor: pointer;
   border: 0;
   padding: 0.8em 3em;
-  color: #222222;
+  color: #222;
   text-decoration: none;
   text-align: center;
 }
@@ -493,13 +446,13 @@ textarea {
 }
 .button[disabled],
 .button.disabled {
-  color: #999999;
+  color: #999;
   background-color: #f1f1f1;
 }
 .no-style-button {
   font-size: 13px;
   font-size: 0.8125rem;
-  color: #ff3300;
+  color: #f30;
   text-decoration: underline;
   border: 0;
   background: transparent;
@@ -512,7 +465,7 @@ textarea {
 .no-style-button[disabled],
 .no-style-button.disabled {
   text-decoration: none;
-  color: #999999;
+  color: #999;
 }
 /* ==========================================================================
 /* 2.0 - Grid Layout (Responsive)
@@ -522,7 +475,10 @@ textarea {
   position: relative;
 }
 .row {
-  margin-bottom: 1em;
+  margin-bottom: 2%;
+}
+.middle {
+  margin: 0 auto;
 }
 .container {
   max-width: 940px;
@@ -537,7 +493,7 @@ textarea {
 /* Fluid Grid */
 .col {
   margin-left: 2%;
-  *margin-left: 1.7%;
+  *margin-left: 20px;
   float: left;
 }
 .col:first-child {
@@ -546,48 +502,63 @@ textarea {
 /* Columns */
 .one {
   width: 6.5%;
+  *width: 60px;
 }
 .two {
   width: 15%;
+  *width: 140px;
 }
 .three {
   width: 23.5%;
+  *width: 220px;
 }
 .four {
   width: 32%;
+  *width: 300px;
 }
 .five {
   width: 40.5%;
+  *width: 380px;
 }
 .six {
   width: 49.0%;
+  *width: 460px;
 }
 .seven {
   width: 57.5%;
+  *width: 540px;
 }
 .eight {
   width: 66%;
+  *width: 620px;
 }
 .nine {
   width: 74.5%;
+  *width: 700px;
 }
 .ten {
   width: 83%;
+  *width: 780px;
 }
 .eleven {
   width: 91.5%;
+  *width: 860px;
 }
 .twelve {
   width: 100%;
+  *width: 940px;
 }
 .quarter {
   width: 23.5%;
+  *width: 220px;
 }
 .half {
   width: 49.0%;
+  *width: 460px;
 }
 .one-third {
   width: 32%;
+  *width: 300px;
 }
 /* ==========================================================================
 /* -- Tablet Devices (Layout, Modifications, etc)
@@ -726,11 +697,11 @@ textarea {
   input[type=search],
   input[type=tel],
   textarea {
-    width: 90%;
-    padding: 5%;
+    width: 94%;
+    padding: 3%;
   }
   select {
-    width: 100%;
+    width: 90%;
   }
   .nomobile {
     display: none;

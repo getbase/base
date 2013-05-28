@@ -1,26 +1,11 @@
 // ==========================================================================
 
-//  Base Mixins - built with LESS - http://www.lesscss.org
-//  Theme URI: http://matthewhartman.github.com/base/
+//  Base Mixins - built with LESS - http://lesscss.org/
+//  Theme URI: http://git.io/base
 //  Author: Matthew Hartman - http://www.matthewhartman.com.au/
-//  Version: 0.1 - Last Updated: 11th April, 2013
+//  Version: 0.2 - Last Updated: 28th May, 2013
 
 // ==========================================================================
-
-
-// Font Icon
-.font-icon (@fontname, @fontfile) {
-  @font-face {
-    font-family: @fontname;
-    src: url('fonts/@{fontfile}-webfont.eot');
-    src: url('fonts/@{fontfile}-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/@{fontfile}-webfont.woff') format('woff'),
-         url('fonts/@{fontfile}-webfont.ttf') format('truetype'),
-         url('fonts/@{fontfile}-webfont.svg#@{fontfile}') format('svg');
-    font-weight: normal;
-    font-style: normal;
-  }
-}
 
 // Font Sizes (REMs with PX fallback for older browsers)
 .font-size (@sizeValue) {
@@ -36,12 +21,4 @@
   @pxValue: (@sizeValue);
   line-height: ~"@{pxValue}px"; 
   line-height: ~"@{remValue}rem";
-}
-
-// Border Rounded Corners
-.roundedcorners (@radius: 1px) {
--webkit-border-radius: @radius;
--moz-border-radius: @radius;
-border-radius: @radius;
--moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box; 
 }

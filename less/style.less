@@ -1,8 +1,8 @@
 /* ==========================================================================
 
-  Base Stylesheet - http://matthewhartman.github.io/base/
+  Base Stylesheet - http://git.io/base
   Author: Matthew Hartman - http://www.matthewhartman.com.au/
-  Version: 1.2 - Last Updated: 12th April, 2013
+  Version: 1.4 - Last Updated: 28th May, 2013
 
 ========================================================================== */
 
@@ -19,60 +19,11 @@
   @tablet-breakpoint:         @tablet-width + 42px;
   @desktop-breakpoint:        @desktop-width - 1px;
 
-
-  // Setup Typography         Fonts
-  @baseFont:                  arial, helvetica, clean, sans-serif;
-  @codeFont:                  Monaco, Andale Mono, "Courier New", monospace;
-  @quoteFont:                 "Georgia", "Times";
-  @serif:                     serif;
-  @sansSerif:                 sans-serif;
-
-  @fontSize:                  14; // default font size
-  @lineHeight:                22; // default line height size
-
-  // Headings                 Fonts
-  @headingFont:               arial, helvetica, clean, sans-serif;
-
   // Heading                  Size
   @h1:                        40;
   @h2:                        32;
   @h3:                        26;
   @h4:                        20;
-
-  // Setup Colours
-
-  // Grey Scale
-  @black:                     #000;
-  @darkestGrey:               #222;
-  @darkerGrey:                #333;
-  @darkGrey:                  #666;
-  @grey:                      #999;
-  @lightGrey:                 #ddd;
-  @lighterGrey:               #eee;
-  @lightestGrey:              #f1f1f1;
-  @white:                     #fff;
-
-  // Custom Colour 1:         Blues
-  @darkestBlue:               #0f1b26;
-  @darkBlue:                  #202f3c;
-  @blue:                      #1c415e;
-  @lightBlue:                 #a9c2d7;
-  @lighterBlue:               #cfe6f8;
-  @lightestBlue:              #e7f2fb;
-
-  // Custom Colour 2:         Yellows
-  @lightestYellow:            #ffc;
-
-  // Custom Colour 3:         Oranges
-  @orange:                    #f30;
-  @midOrange:                 #c34119;
-  @lightOrange:               #ffc9b3;
-  @lighterOrange:             #fddfd3;
-  @lightestOrange:            #fee9cc;
-  
-  // Button Colours           Custom
-  @buttonOrange:              #ffe0b5;
-  @activeOrange:              #fdeed8;
 
 
 /* ==========================================================================
@@ -90,9 +41,9 @@ html { font-size: 100%; }
   /* Make all form fonts consistent */
 button, input, select, textarea { font-family: sans-serif; }
   /* Remove default borders */
-form, fieldset, a img { border: 0; }
+form, fieldset, legend, a img { border: 0; }
 /* Remove default spacing */
-form, fieldset { margin: 0; padding: 0; }
+body, form, fieldset { margin: 0; padding: 0; }
 
 /* Common Classes */
 .left { float: left; }
@@ -128,15 +79,10 @@ form, fieldset { margin: 0; padding: 0; }
 }
 
 .alert {
-  background-color: @lightestYellow;
+  background-color: #ffc;
   .block();
   padding: 4px 8px;
-  .roundedcorners(3px);
 }
-
-.nolist { list-style: none; }
-.nopadding { padding: 0; }
-.nomargin { margin: 0; }
 
 .none,
 .nodesktop {
@@ -148,28 +94,22 @@ form, fieldset { margin: 0; padding: 0; }
    ========================================================================== */
 /* Body */
 body {
-  font-family: @baseFont;
-  .font-size(@fontSize);
-  .line-height(@lineHeight);
-  background-color: @white;
-  color: @darkestGrey;
-  margin: 0;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
+  font-family: arial, helvetica, clean, sans-serif;
+  .font-size(14);
+  line-height: 1.5;
+  color: #222;
+  background-color: #fff;
 }
 /* Links */
 a {
-  color: @orange;
+  color: #f30;
   text-decoration: underline;
-}
-a:visited {
-  color: @orange;
 }
 a:hover {
   text-decoration: none;
 }
 a:active {
-  color: @darkerGrey;
+  color: #333;
 }
 
 
@@ -182,8 +122,8 @@ h4,
 h5,
 h6 {
   margin: 0;
-  line-height: normal;
   font-weight: normal;
+  line-height: normal;
 }
 h1, .h1 {
   .font-size(@h1);
@@ -203,14 +143,17 @@ h4, .h4 {
 }
 .no-style-heading {
   margin-bottom: 0;
-  .font-size(@fontSize);
+  .font-size(14);
 }
 
 
 /* 1.2 Paragraphs, block quotes, code, pre, etc
    ========================================================================== */
 p {
-  //margin-bottom: @baseLineHeight / 2;
+  word-wrap: break-word; // CSS3 Browsers
+  -ms-word-wrap: break-word; // IE8
+  *white-space: normal;  // IE7
+  margin-bottom: 1em;
 }
 small {
   .font-size(12);
@@ -220,10 +163,9 @@ small {
 blockquote,
 q {
   .font-size(20);
-  .line-height(32);
   padding: 20px 30px;
   margin: 20px 0;
-  font-family: @quoteFont;
+  font-family: "Georgia", "Times";
   font-style: italic;
 }
 
@@ -232,7 +174,7 @@ q:before,
 blockquote:after,
 q:after {
   .font-size(80);
-  color: @grey;
+  color: #999;
 }
 blockquote:before,
 q:before {
@@ -248,14 +190,12 @@ q:after {
 }
 
 code {
-  padding: 2px 6px;
-  font-family: @codeFont;
+  font-family: Monaco, Andale Mono, "Courier New", monospace;
   .font-size(12);
-  background-color: @lightestOrange;
-  border: 1px solid @lightOrange;
-  line-height: normal;
-  color: @darkestGrey;
-  .roundedcorners(3px);
+  color: #222;
+  background-color: #fee9cc;
+  border: 1px solid #ffc9b3;
+  padding: 2px 6px;  
 }
 
 /* Horizontal Rule */
@@ -264,7 +204,7 @@ hr {
   background: none;
   outline: 0;
   height: 1px;
-  background-color: @lightGrey;
+  background-color: #ddd;
   margin: 2em 0;
 }
 
@@ -284,29 +224,23 @@ table {
 table th,
 table td {
   padding: 8px;
-  line-height: 18px;
   text-align: left;
   vertical-align: top;
-  border-top: 1px solid @lighterGrey;
+  border-top: 1px solid #eee;
 }
 table thead th {
   vertical-align: bottom;
   font-weight: bold;
-  background-color: @white;
-  color: @darkestGrey;
+  background-color: #fff;
+  color: #222;
 }
-
-
-
-
 table tfoot td {
   font-weight: bold;
 }
-
 table caption {
   padding: 0.5em;
   font-style: italic;
-  background-color: @lighterGrey;
+  background-color: #eee;
   border-bottom: 0;
   font-weight: bold;
 }
@@ -325,18 +259,18 @@ ol {
   margin: 0;
 }
 
+.nolist { list-style: none; }
+
 /* 1.5 Forms, Labels and Inputs
    ========================================================================== */
 .fieldset {
   margin: 1.5em 0;
 }
 legend {
-  font-family: @headingFont;
+  font-family: arial, helvetica, clean, sans-serif;
   .font-size(32);
-  line-height: normal;
   width: 100%;
   .block();
-  border: 0;
   *margin-left: -5px; //fix alignment for ie7
 }
 label {
@@ -358,18 +292,15 @@ label {
 .checkbox {
   .block();
   position: relative;
-  line-height: normal;
   padding: 0.2em 0;
   label {
-    .block();
-    overflow: hidden;
-    *zoom: 1;
+    .inline-block();
+    line-height: normal;
   } // end label
 }
 .checkbox input[type=checkbox],
 .checkbox input[type=radio] {
   float: left;
-  top: -2px;
   position: relative;
   margin-right: 1em;
 }
@@ -378,32 +309,25 @@ input[type=text],
 input[type=password],
 input[type=email],
 input[type=search],
-input[type=tel],
-input[type=file] {
+input[type=tel] {
   outline: 0;
   padding: 2px 5px;
   height: 28px;
+  line-height: 28px;
   -webkit-appearance: none; // Remove Default Browser Behaviour for Safari
   -moz-appearance: none; // Remove Default Browser Behaviour for Firefox
 
   vertical-align: middle;
   .font-size(14);
   font-weight: bold;
-  background-color: @white;
-  color: @darkGrey;
-  border: 1px solid @lightGrey;
-  border-top: 1px solid @grey;
-  .roundedcorners(3px);
-  -moz-background-clip: padding;
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box;
+  background-color: #fff;
+  color: #666;
+  border: 1px solid #ddd;
+  border-top: 1px solid #999;
+
   -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
-}
-input[type=file] {
-  border: 0;
-  height: 20px;
 }
 input[type=button]::-moz-focus-inner,
 input[type=submit]::-moz-focus-inner,
@@ -417,7 +341,6 @@ input[type="search"]::-webkit-search-cancel-button {
 input[type=submit],
 input[type=button],
 input[type=reset] {
-  line-height: normal;
   cursor: pointer;
   -webkit-appearance: none;
   /* Remove Default Browser Behaviour for Safari */
@@ -429,37 +352,29 @@ input[type=reset] {
 textarea {
   .font-size(14);
   font-weight: bold;
-  background-color: @white;
-  color: @darkGrey;
+  background-color: #fff;
+  color: #666;
   outline: 0;
   padding: 2px 5px;
   vertical-align: top;
-  border: 1px solid @lightGrey;
+  border: 1px solid #ddd;
   padding: 10px;
   resize: none; // disable user resizing
-  .roundedcorners(3px);
-  -moz-background-clip: padding;
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box;
+
   -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 select {
   .font-size(14);
-  outline: 0;
-  border: 0;
   padding: 7px;
-  line-height: normal;
   .inline-block();
-  vertical-align: middle;
-  border: 1px solid @grey;
 }
 select[multiple] {
   min-height: 100px;
-  border: 1px solid @lightGrey;
+  border: 1px solid #ddd;
   vertical-align: top;
-  border: 1px solid @lightGrey;
+  border: 1px solid #ddd;
 }
 
 select,
@@ -478,35 +393,34 @@ textarea { width: 260px; }
 }
 .button {
   .font-size(14);
-  line-height: normal;
   cursor: pointer;
   border: 0;
   padding: 0.8em 3em;
-  color: @darkestGrey;
+  color: #222;
   text-decoration: none;
   text-align: center;
 }
 
 .orange-button {
-  background-color: @lightestOrange;
+  background-color: #fee9cc;
 
   &:hover {
-    background-color: @buttonOrange;
-    -webkit-tap-highlight-color: @activeOrange;
+    background-color: #ffe0b5;
+    -webkit-tap-highlight-color: #fdeed8;
   } // end hover
   &:active {
-    background-color: @activeOrange;
+    background-color: #fdeed8;
   } // end hover
 }
 .button[disabled],
 .button.disabled {
-  color: @grey;
-  background-color: @lightestGrey;
+  color: #999;
+  background-color: #f1f1f1;
 }
 
 .no-style-button {
   .font-size(13);
-  color: @orange;
+  color: #f30;
   text-decoration: underline;
   border: 0;
   background: transparent;
@@ -520,7 +434,7 @@ textarea { width: 260px; }
 .no-style-button[disabled],
 .no-style-button.disabled {
   text-decoration: none;
-  color: @grey;
+  color: #999;
 }
 
 
@@ -532,7 +446,9 @@ textarea { width: 260px; }
 /* Sections & Content Blocks */
 .section { position: relative; }
 
-.row { margin-bottom: 1em; }
+.row { margin-bottom: 2%; }
+
+.middle { margin: 0 auto; }
 
 .container {
   max-width: @desktop-width;
@@ -548,24 +464,60 @@ textarea { width: 260px; }
 /* Fluid Grid */
 .col {
   margin-left: 2%;
-  *margin-left: 1.7%; // ie7 fix
+  *margin-left: 20px; // ie7
   float: left;
 }
 .col:first-child { margin-left: 0; }
 
 /* Columns */
-.one { width: 6.5%; }
-.two { width: 15%; }
-.three { width: 23.5%; }
-.four { width: 32%; }
-.five { width: 40.5%; }
-.six { width: 49.0%; }
-.seven { width: 57.5%; }
-.eight { width: 66%; }
-.nine { width: 74.5%; }
-.ten { width: 83%; }
-.eleven { width: 91.5%; }
-.twelve { width: 100%; }
+.one {
+  width: 6.5%;
+  *width: 60px; // ie7
+}
+.two {
+  width: 15%;
+  *width: 140px; // ie7
+}
+.three {
+  width: 23.5%;
+  *width: 220px; // ie7
+}
+.four {
+  width: 32%;
+  *width: 300px; // ie7
+}
+.five {
+  width: 40.5%;
+  *width: 380px; // ie7
+}
+.six {
+  width: 49.0%;
+  *width: 460px; // ie7
+}
+.seven {
+  width: 57.5%;
+  *width: 540px; // ie7
+}
+.eight {
+  width: 66%;
+  *width: 620px; // ie7
+}
+.nine {
+  width: 74.5%;
+  *width: 700px; // ie7
+}
+.ten {
+  width: 83%;
+  *width: 780px; // ie7
+}
+.eleven {
+  width: 91.5%;
+  *width: 860px; // ie7
+}
+.twelve {
+  width: 100%;
+  *width: 940px; // ie7
+}
 
 .quarter { .three(); }
 .half { .six(); }
@@ -686,11 +638,11 @@ input[type=email],
 input[type=search],
 input[type=tel],
 textarea {
-  width: 90%;
-  padding: 5%;
+  width: 94%;
+  padding: 3%;
 }
 select {
-  width: 100%;
+  width: 90%;
 }
 
 .nomobile { .none(); }
