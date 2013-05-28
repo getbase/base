@@ -6,30 +6,28 @@ A super simple, responsive framework built to work on mobile devices, tablets, n
 Built for all devices big and small, base has got you covered.
 
 ### Foundation Styles
-Custom styles for headings, tables, blockquotes and much more.
-
-### Accessibility in mind
-Works with screen readers in mind and has JS fallbacks.
+Custom styles for typography, headings, tables, form elements and much more.
 
 ### Easy to learn
-Well commented CSS to ensure your implementation is a breeze.
+Well organised and commented CSS to ensure your implementation is a breeze.
 
 ### Cross-Browser
-Covers IE7+ and modern browsers such as Chrome, Firefox and Opera.
+Covers IE7+ and all modern browsers such as Chrome, Safari, Firefox and Opera.
 
 ### Base is Awesome!
 Preview the [docs](http://matthewhartman.github.io/base/docs/) to see the Base Framework in all its glory! :)
 
 
 ## Repo Contents
-1. readme.markdown - Feel free to delete this
-2. index.html - A basic html template
-3. style.css - Base stylesheet for headings, tables, body content, etc
-4. javascripts/default.js - Base javascript file to get you started (includes respond.js)
-5. less/style.less - The base stylesheet in LESS format
-7. grid/base-grid.psd - PSD template for Base
+1. grid/base-grid.psd - PSD grid based on 960.gs
+2. javascripts/default.js - Default javascript file which includes responsive.js and other base initiations
+3. less/mixins.less - Basic Mixins which include font-size properties and more
+4. less/style.less - The base stylesheet in LESS format
+5. index.html - Basic HTML template which includes jQuery
+6. readme.markdown - The Read Me file for Base (feel free to delete this)
+7. style.css - Base stylesheet for typography, headings, tables, form elements, etc
 
-Base was built by Matthew Hartman (@hartmanmatthew), a passionate front end developer based in Melbourne, Australia.
+Base was built by Matthew Hartman [(@hartmanmatthew)](http://twitter.com/hartmanmatthew), a passionate front end developer based in Melbourne, Australia.
 
 ## Other Contributions / Downloads
 - [base_css-rails](https://github.com/rkrdo/base_css-rails) - a gem that adds the Base Framework to the applicaton's asset pipeline by Ricardo Cruz
