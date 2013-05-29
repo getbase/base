@@ -94,7 +94,7 @@ pre {
   *zoom: 1;
   text-align: right;
 }
-@media only screen and (min-width: 762px) and (max-width: 939px) {
+@media only screen and (min-width: 740px) and (max-width: 959px) {
   .navigation ul li {
     margin-left: 5px;
   }
@@ -106,7 +106,7 @@ pre {
     overflow-y: none;
   }
 }
-@media only screen and (max-width: 761px) {
+@media only screen and (max-width: 739px) {
   .header {
     margin-top: 0;
     margin-bottom: 0;
