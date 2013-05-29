@@ -3,16 +3,16 @@
   margin-top: 30px;
   margin-bottom: 10px;
   padding-top: 10px;
-  padding-bottom: 10px;
+  padding-bottom: 7px;
 }
 h1, h2, h3, h4, .logo {
   font-family: "Raleway", arial, sans-serif;
 }
 .logo {
-  margin: 14px 0 0 0;
   color: #fff;
   font-size: 32px;
   font-size: 2rem;
+  line-height: normal;
   font-weight: 900;
   text-transform: uppercase;
   text-decoration: none;
