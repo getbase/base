@@ -93,7 +93,6 @@ h1, h2, h3, h4, .logo {
   .nav-toggle {
     display: block;
     background-color: #222;
-    text-align: center;
     color: #fff;
     padding: 10px;
     text-decoration: none;
@@ -116,7 +115,6 @@ h1, h2, h3, h4, .logo {
   .navigation ul li {
     float: none;
     margin-left: 0;
-    text-align: center;
   }
   .navigation ul li a {
     color: #fff;
