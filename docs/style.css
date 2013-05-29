@@ -126,6 +126,8 @@ body {
   line-height: 1.25;
   color: #222;
   background-color: #fff;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
 }
 /* Links */
 a {
