@@ -302,6 +302,15 @@ label {
   margin-right: 1em;
 }
 /* Inputs (Text, Search, Email, etc) */
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  *vertical-align: middle;
+}
 input[type=text],
 input[type=password],
 input[type=email],
@@ -310,12 +319,12 @@ input[type=tel] {
   outline: 0;
   padding: 2px 5px;
   height: 28px;
+  line-height: 28px;
   -webkit-appearance: none;
   -moz-appearance: none;
   vertical-align: middle;
   font-size: 14px;
   font-size: 0.875rem;
-  font-weight: bold;
   background-color: #fff;
   color: #666;
   border: 1px solid #ddd;
