@@ -278,6 +278,7 @@ legend {
   width: 100%;
   display: block;
   *margin-left: -5px;
+  white-space: normal;
 }
 label {
   display: block;
