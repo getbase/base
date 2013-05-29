@@ -443,7 +443,7 @@ textarea {
   position: relative;
 }
 .row {
-  margin-bottom: 2%;
+  margin-bottom: 10px;
 }
 .center {
   margin: 0 auto;
