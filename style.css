@@ -310,9 +310,7 @@ input[type=email],
 input[type=search],
 input[type=tel] {
   outline: 0;
-  padding: 2px 5px;
-  height: 28px;
-  line-height: 28px;
+  padding: 5px;
   -webkit-appearance: none;
   -moz-appearance: none;
   vertical-align: middle;
