@@ -314,6 +314,7 @@ input[type=tel] {
   line-height: 28px;
   -webkit-appearance: none;
   -moz-appearance: none;
+  font-weight: bold;
   vertical-align: middle;
   font-size: 14px;
   font-size: 0.875rem;
