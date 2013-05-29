@@ -310,6 +310,7 @@ input[type=tel] {
   outline: 0;
   padding: 2px 5px;
   height: 28px;
+  line-height: 28px;
   -webkit-appearance: none;
   -moz-appearance: none;
   vertical-align: middle;
@@ -363,8 +364,6 @@ textarea {
 select {
   font-size: 14px;
   font-size: 0.875rem;
-  padding-top: 4px;
-  padding-left: 4px;
   line-height: normal;
   display: inline-block;
   *zoom: 1;
