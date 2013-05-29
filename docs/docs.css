@@ -91,6 +91,8 @@ h1, h2, h3, h4, .logo {
 @media only screen and (max-width: 761px) {
   .header {
     text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
   }
   .nav-toggle {
     display: block;
@@ -108,6 +110,7 @@ h1, h2, h3, h4, .logo {
   }
   .navigation {
     float: none;
+    position: static;
   }
   .navigation ul {
     float: none;
