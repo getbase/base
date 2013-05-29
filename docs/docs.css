@@ -22,6 +22,8 @@ h1, h2, h3, h4, .logo {
   color: #fff;
 }
 .navigation {
+  font-size: 12px;
+  font-size: 0.75rem;
   line-height: normal;
   position: absolute;
   top: 0;
