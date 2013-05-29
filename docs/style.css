@@ -188,7 +188,6 @@ p {
   -ms-word-wrap: break-word;
   *white-space: normal;
   margin: 0 0 22px 0;
-  margin: 0 0 1.375rem 0;
 }
 small {
   font-size: 12px;
@@ -311,7 +310,7 @@ input[type=email],
 input[type=search],
 input[type=tel] {
   outline: 0;
-  padding: 5px;
+  padding: 7px 5px;
   -webkit-appearance: none;
   -moz-appearance: none;
   vertical-align: middle;
@@ -369,6 +368,7 @@ select {
   display: inline-block;
   *zoom: 1;
   *display: inline;
+  padding: 6px;
 }
 select[multiple] {
   min-height: 100px;
