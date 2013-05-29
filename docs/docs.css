@@ -65,8 +65,10 @@ h1, h2, h3, h4, .logo {
   background: #ccc;
   color: #111;
   text-align: center;
-  padding-top: 2px;
-  padding-bottom: 2px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  font-size: 12px;
+  font-size: 0.75rem;
 }
 
 .intro {
@@ -77,13 +79,31 @@ h1, h2, h3, h4, .logo {
   line-height: normal;
   color: #777;
 }
-
+pre {
+  padding: 0;
+  line-height: normal;
+  background-color: #fff1d5;
+}
+.line-number {
+  background-color: #222;
+  color: #fff;
+  padding: 4px;
+  width: 20px;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  text-align: right;
+}
 @media only screen and (min-width: 762px) and (max-width: 939px) {
   .navigation ul li {
     margin-left: 5px;
   }
   .navigation ul li a {
     padding: 10px 15px;
+  }
+  pre {
+    overflow-x: scroll;
+    overflow-y: none;
   }
 }
 @media only screen and (max-width: 761px) {
@@ -136,5 +156,9 @@ h1, h2, h3, h4, .logo {
     display: inline-block;
     *zoom: 1;
     *display: inline;
+  }
+  pre {
+    overflow-x: scroll;
+    overflow-y: none;
   }
 }

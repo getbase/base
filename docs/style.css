@@ -443,7 +443,7 @@ textarea {
   position: relative;
 }
 .row {
-  margin-bottom: 2%;
+  margin-bottom: 10px;
 }
 .center {
   margin: 0 auto;
@@ -581,9 +581,7 @@ textarea {
     clear: both;
     float: none;
     width: 100%;
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 1em;
+    margin: 10px 0 0 0;
   }
   .tablet-full:first-child {
     margin-top: 0;
@@ -644,7 +642,7 @@ textarea {
     clear: both;
     float: none;
     width: 100%;
-    margin: 1em 0 0 0;
+    margin: 10px 0 0 0;
   }
   .mobile-full:first-child {
     margin-top: 0;
@@ -670,6 +668,10 @@ textarea {
   }
   select {
     width: 90%;
+  }
+  pre {
+    overflow-x: scroll;
+    overflow-y: none;
   }
   .nomobile {
     display: none;

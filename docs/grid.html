@@ -34,91 +34,157 @@
 
 <div class="container content-inner">
 
-<h1>
-  <span class="nomobile notablet">Desktop Grid</span>
-  <span class="nomobile showtablet nodesktop">Tablet Grid</span>
-  <span class="showmobile notablet nodesktop">Mobile Grid</span>
-</h1>
-<p>You can wrap columns within a <code>.section</code> or <code>.clear</code> div to clear the floats.</p>
+  <h1>The Grid System</h1>
+
+  <p class="intro">
+    The powerful grid system uses a variation of the 960 grid system. The syntax is super simple and it works accross all major browsers including Chrome, Safari, Firefox and even Internet Explorer 7+.
+  </p>
+
+  <p>
+    For a better understanding of how the grid system works, please reivew the examples and comments below.
+  </p>
+    
+  <hr>
   
+  <h2 class="h4">Example 1</h2>
+  <div class="row">
+    This is the most basic example of how to use the grid.
+  </div>
   <div class="section row">
-    <div class="col one tablet-four mobile-six">
-      <span class="notablet nomobile">col 1</span>
-      <span class="nodesktop showtablet nomobile">col 4</span>
-      <span class="nodesktop notablet showmobile">col 6</span>
-    </div>
-    <div class="col eleven tablet-eight mobile-six">
-      <span class="notablet nomobile">col 11</span>
-      <span class="nodesktop showtablet nomobile">col 8</span>
-      <span class="nodesktop notablet showmobile">col 6</span>
-    </div>
+    <div class="col seven">7</div>
+    <div class="col five">5</div>
+  </div>
+
+  <h2 class="h4">Code</h2>
+<pre>
+<span class="line-number">1</span>  ## Example 1 ##
+<span class="line-number">3</span>  &lt;!-- wrap columns within a .section or .clear div to clear the floating columns --&gt;
+<span class="line-number">4</span>  &lt;div class="section row"&gt;
+<span class="line-number">5</span>
+<span class="line-number">6</span>    &lt;!-- Add a .col class followed with the column width in word value (one, two, three..., twelve) --&gt;
+<span class="line-number">7</span>      &lt;div class="col seven"&gt;7&lt;/div&gt;
+<span class="line-number">8</span>      &lt;div class="col five"&gt;5&lt;/div&gt;
+<span class="line-number">9</span>
+<span class="line-number">10</span>  &lt;/div&gt; &lt;!--/section or clear --&gt;
+</pre>
+
+  <hr>
+
+  <h2 class="h4">Example 2</h2>
+
+  <div class="row">
+    To make columns full width for Tablet, simply add the .tablet-full class
   </div>
 
   <div class="section row">
-    <div class="col two tablet-eight mobile-nine">
-      <span class="notablet nomobile">col 2</span>
-      <span class="nodesktop showtablet nomobile">col 8</span>
-      <span class="nodesktop notablet showmobile">col 9</span>
-    </div>
-    <div class="col ten tablet-four mobile-three">
-      <span class="notablet nomobile">col 10</span>
-      <span class="nodesktop showtablet nomobile">col 4</span>
-      <span class="nodesktop notablet showmobile">col 3</span>
-    </div>
+    <div class="col seven tablet-full">7</div>
+    <div class="col five tablet-full">5</div>
+  </div>
+
+  <h2 class="h4">Code</h2>
+<pre>
+<span class="line-number">1</span>  ## Example 2 ##
+<span class="line-number">3</span>  &lt;!-- wrap columns within a .section or .clear div to clear the floating columns --&gt;
+<span class="line-number">4</span>  &lt;div class="section row"&gt;
+<span class="line-number">5</span>
+<span class="line-number">6</span>    &lt;!-- Add the .tablet-full class to make columns 100% width on tablet view --&gt;
+<span class="line-number">7</span>      &lt;div class="col seven tablet-full"&gt;7&lt;/div&gt;
+<span class="line-number">8</span>      &lt;div class="col five tablet-full"&gt;5&lt;/div&gt;
+<span class="line-number">9</span>
+<span class="line-number">10</span>  &lt;/div&gt; &lt;!--/section or clear --&gt;
+</pre>
+
+  <hr>
+
+  <h2 class="h4">Example 3</h2>
+
+  <div class="row">
+    Furthermore, you can make columns full width on Mobile by adding the .mobile-full class.
   </div>
 
   <div class="section row">
-    <div class="col three tablet-full mobile-full">
-      <span class="notablet nomobile">col 3</span>
-      <span class="nodesktop showtablet nomobile">full</span>
-      <span class="nodesktop notablet showmobile">full</span>
-    </div>
-    <div class="col nine tablet-full mobile-full">
-      <span class="notablet nomobile">col 9</span>
-      <span class="nodesktop showtablet nomobile">full</span>
-      <span class="nodesktop notablet showmobile">full</span>
-    </div>
+    <div class="col seven tablet-full mobile-full">7</div>
+    <div class="col five tablet-full mobile-full">5</div>
+  </div>
+
+  <h2 class="h4">Code</h2>
+<pre>
+<span class="line-number">1</span>  ## Example 3 ##
+<span class="line-number">3</span>  &lt;!-- wrap columns within a .section or .clear div to clear the floating columns --&gt;
+<span class="line-number">4</span>  &lt;div class="section row"&gt;
+<span class="line-number">5</span>
+<span class="line-number">6</span>    &lt;!-- Add the .mobile-full class to make columns 100% width on mobile view --&gt;
+<span class="line-number">7</span>      &lt;div class="col seven tablet-full mobile-full"&gt;7&lt;/div&gt;
+<span class="line-number">8</span>      &lt;div class="col five tablet-full mobile-full"&gt;5&lt;/div&gt;
+<span class="line-number">9</span>
+<span class="line-number">10</span>  &lt;/div&gt; &lt;!--/section or clear --&gt;
+</pre>
+
+  <hr>
+
+
+  <h2 class="h4">Mixed Example</h2>
+
+  <div class="row">
+    The grid system also includes tablet and mobile specific column widths in case you would like to override the inherited default. See the example below for a better understanding.
   </div>
 
   <div class="section row">
-    <div class="col four tablet-full mobile-full">
-      <span class="notablet nomobile">col 4</span>
-      <span class="nodesktop showtablet nomobile">full</span>
-      <span class="nodesktop notablet showmobile">full</span>
-    </div>
-    <div class="col eight notablet nomobile">
-      col 8
-    </div>
+    <div class="col one tablet-four mobile-eight">1</div>
+    <div class="col eleven tablet-eight mobile-four">11</div>
   </div>
 
   <div class="section row">
-    <div class="col five tablet-full mobile-ten">
-      <span class="notablet nomobile">col 5</span>
-      <span class="nodesktop showtablet nomobile">full</span>
-      <span class="nodesktop notablet showmobile">col 10</span>
-    </div>
-    <div class="col seven tablet-full mobile-two">
-      <span class="notablet nomobile">col 7</span>
-      <span class="nodesktop showtablet nomobile">full</span>
-      <span class="nodesktop notablet showmobile">col 2</span>
-    </div>
+    <div class="col two tablet-three mobile-nine">2</div>
+    <div class="col ten tablet-nine mobile-three">10</div>
   </div>
 
   <div class="section row">
-    <div class="col six">col 6</div>
-    <div class="col six">col 6</div>
+    <div class="col three tablet-eleven mobile-one">3</div>
+    <div class="col nine tablet-one mobile-eleven">9</div>
   </div>
 
   <div class="section row">
-    <div class="col half">col 1/2</div>
-    <div class="col half">col 1/2</div>
+    <div class="col four tablet-three mobile-nine">4</div>
+    <div class="col eight tablet-nine mobile-three">8</div>
   </div>
 
   <div class="section row">
-    <div class="col one-third">col 1/3</div>
-    <div class="col one-third">col 1/3</div>
-    <div class="col one-third">col 1/3</div>
+    <div class="col five tablet-full mobile-full">5</div>
+    <div class="col seven tablet-full mobile-full">7</div>
   </div>
+
+
+  <h2 class="h4">Code</h2>
+<pre>
+<span class="line-number">1</span>  ## Mixed Example ##
+<span class="line-number">2</span>  &lt;div class="section row"&gt;
+<span class="line-number">3</span>    &lt;div class="col one tablet-four mobile-eight"&gt;1&lt;/div&gt;
+<span class="line-number">4</span>    &lt;div class="col eleven tablet-eight mobile-four"&gt;11&lt;/div&gt;
+<span class="line-number">5</span>  &lt;/div&gt;
+<span class="line-number">6</span>
+<span class="line-number">7</span>  &lt;div class="section row"&gt;
+<span class="line-number">8</span>    &lt;div class="col two tablet-three mobile-nine"&gt;2&lt;/div&gt;
+<span class="line-number">9</span>    &lt;div class="col ten tablet-nine mobile-three"&gt;10&lt;/div&gt;
+<span class="line-number">10</span>  &lt;/div&gt;
+<span class="line-number">11</span>
+<span class="line-number">12</span>  &lt;div class="section row"&gt;
+<span class="line-number">13</span>    &lt;div class="col three tablet-eleven mobile-one"&gt;3&lt;/div&gt;
+<span class="line-number">14</span>    &lt;div class="col nine tablet-one mobile-eleven"&gt;9&lt;/div&gt;
+<span class="line-number">15</span>  &lt;/div&gt;
+<span class="line-number">16</span>
+<span class="line-number">17</span>  &lt;div class="section row"&gt;
+<span class="line-number">18</span>    &lt;div class="col four tablet-three mobile-nine"&gt;4&lt;/div&gt;
+<span class="line-number">19</span>    &lt;div class="col eight tablet-nine mobile-three"&gt;8&lt;/div&gt;
+<span class="line-number">20</span>  &lt;/div&gt;
+<span class="line-number">21</span>
+<span class="line-number">22</span>  &lt;div class="section row"&gt;
+<span class="line-number">23</span>    &lt;div class="col five tablet-full mobile-full"&gt;5&lt;/div&gt;
+<span class="line-number">24</span>    &lt;div class="col seven tablet-full mobile-full"&gt;7&lt;/div&gt;
+<span class="line-number">25</span>  &lt;/div&gt;
+</pre>
+
+  <hr>
 
 </div>
 
