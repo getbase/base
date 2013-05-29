@@ -94,7 +94,7 @@ h1, h2, h3, h4, .logo {
     display: block;
     background-color: #222;
     color: #fff;
-    padding: 10px;
+    padding: 10px 20px;
     text-decoration: none;
   }
   .nav-toggle:hover,
@@ -118,7 +118,7 @@ h1, h2, h3, h4, .logo {
   }
   .navigation ul li a {
     color: #fff;
-    padding: 10px;
+    padding: 10px 20px;
     display: block;
     text-transform: none;
     background-color: #222;
