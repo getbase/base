@@ -122,7 +122,6 @@ fieldset {
 body {
   font-family: arial, helvetica, clean, sans-serif;
   font-size: 14px;
-  font-size: 0.875rem;
   line-height: 1.25;
   color: #222;
   background-color: #fff;
@@ -153,31 +152,26 @@ h6 {
 h1,
 .h1 {
   font-size: 40px;
-  font-size: 2.5rem;
   margin-bottom: 10px;
 }
 h2,
 .h2 {
   font-size: 32px;
-  font-size: 2rem;
   margin-bottom: 8px;
 }
 h3,
 .h3 {
   font-size: 26px;
-  font-size: 1.625rem;
   margin-bottom: 6px;
 }
 h4,
 .h4 {
   font-size: 20px;
-  font-size: 1.25rem;
   margin-bottom: 4px;
 }
 .no-style-heading {
   margin-bottom: 0;
   font-size: 14px;
-  font-size: 0.875rem;
 }
 /* 1.2 Paragraphs, block quotes, code, pre, etc
    ========================================================================== */
@@ -189,13 +183,11 @@ p {
 }
 small {
   font-size: 12px;
-  font-size: 0.75rem;
 }
 /* Block Quotes, Pre and Code Blocks */
 blockquote,
 q {
   font-size: 20px;
-  font-size: 1.25rem;
   margin: 20px 0;
   font-family: "Georgia", "Times";
   font-style: italic;
@@ -203,7 +195,6 @@ q {
 code {
   font-family: Monaco, Andale Mono, "Courier New", monospace;
   font-size: 12px;
-  font-size: 0.75rem;
   color: #222;
   background-color: #f8f8f8;
   border: 1px solid #ccc;
@@ -274,7 +265,6 @@ ol {
 legend {
   font-family: arial, helvetica, clean, sans-serif;
   font-size: 32px;
-  font-size: 2rem;
   width: 100%;
   display: block;
   *margin-left: -5px;
@@ -317,7 +307,6 @@ input[type=tel] {
   font-weight: bold;
   vertical-align: middle;
   font-size: 14px;
-  font-size: 0.875rem;
   background-color: #fff;
   color: #666;
   border: 1px solid #ddd;
@@ -348,7 +337,6 @@ input[type=reset] {
 }
 textarea {
   font-size: 14px;
-  font-size: 0.875rem;
   font-weight: bold;
   background-color: #fff;
   color: #666;
@@ -364,7 +352,6 @@ textarea {
 }
 select {
   font-size: 14px;
-  font-size: 0.875rem;
   padding-top: 4px;
   padding-left: 4px;
   line-height: normal;
@@ -394,7 +381,6 @@ textarea {
 }
 .button {
   font-size: 14px;
-  font-size: 0.875rem;
   cursor: pointer;
   border: 0;
   padding: 0.8em 3em;
@@ -419,7 +405,6 @@ textarea {
 }
 .no-style-button {
   font-size: 13px;
-  font-size: 0.8125rem;
   color: #f30;
   text-decoration: underline;
   border: 0;
