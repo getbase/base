@@ -83,6 +83,8 @@ pre {
   padding: 0;
   line-height: normal;
   background-color: #fff1d5;
+  overflow-x: scroll;
+  overflow-y: none;
 }
 .line-number {
   background-color: #222;
