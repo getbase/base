@@ -531,7 +531,7 @@ textarea {
 /* ==========================================================================
 /* -- Tablet Devices (Layout, Modifications, etc)
    ========================================================================== */
-@media only screen and (min-width: 762px) and (max-width: 939px) {
+@media only screen and (min-width: 762px) and (max-width: 959px) {
   .container {
     width: 720px;
     padding-left: 10px;
