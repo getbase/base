@@ -20,7 +20,7 @@ Preview the [docs](http://matthewhartman.github.io/base/docs/) to see the Base F
 
 ## Repo Contents
 1. grid/base-grid.psd - PSD grid based on 960.gs
-2. javascripts/default.js - Default javascript file which includes responsive.js and other base initiations
+2. js/default.js - Default javascript file which includes responsive.js and other base initiations
 3. less/mixins.less - Basic Mixins which include font-size properties and more
 4. less/style.less - The base stylesheet in LESS format
 5. index.html - Basic HTML template which includes jQuery
@@ -34,8 +34,7 @@ Base was built by Matthew Hartman [(@hartmanmatthew)](http://twitter.com/hartman
 - Thanks to Beau Smith (@beau) for the custom breakpoint suggestion
 
 ## Thank You / Credits
-- Nicolas Gallagher (@necolas) for the Micro ClearFix :)
-
+- Nicolas Gallagher (@necolas) for Normalize.css and Micro ClearFix.
 
 ## MIT Open Source License
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:

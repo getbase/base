@@ -3,7 +3,7 @@
 //  Base Mixins - built with LESS - http://lesscss.org/
 //  Theme URI: http://git.io/base
 //  Author: Matthew Hartman - http://www.matthewhartman.com.au/
-//  Version: 0.2 - Last Updated: 28th May, 2013
+//  Version: 0.2 - Last Updated: 6th June, 2013
 
 // ==========================================================================
 
@@ -21,4 +21,11 @@
   @pxValue: (@sizeValue);
   line-height: ~"@{pxValue}px"; 
   line-height: ~"@{remValue}rem";
+}
+
+// Rounded Corners
+.rounded(@radius) {
+  -webkit-border-radius: ~"@{radius}px";
+  -moz-border-radius: ~"@{radius}px";
+  border-radius: ~"@{radius}px";
 }
