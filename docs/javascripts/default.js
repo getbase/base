@@ -38,9 +38,9 @@ $(document).ready(function(){
 
   // 2.1 Menu for Mobile Devices
   // If JS is enabled, attach the 'hide' class (only affects mobiles - special media query class)
-  $('.navigation').prepend('<a href="#" class="nav-toggle nodesktop notablet nomobile">Navigation <span class="arrow">+</span></a>');
-  $(".nav-toggle").removeClass('nomobile').addClass('showmobile');
-  $('.menu').addClass("nomobile");
+  $('.navigation').prepend('<a href="#" class="nav-toggle no-desktop no-tablet no-mobile">Navigation <span class="arrow">+</span></a>');
+  $(".nav-toggle").removeClass('no-mobile').addClass('show-mobile');
+  $('.menu').addClass("no-mobile");
 
   // When the navigation button is clicked, toggle menu
   $(".nav-toggle").click(function() {
