@@ -48,13 +48,13 @@ $(document).ready(function(){
       $('.menu').stop(true, true).slideDown(200, function() {
         $('.nav-toggle .arrow').html('-');
         $('.nav-toggle').toggleClass('active');
-        $(this).removeClass('nomobile').removeAttr('style');
+        $(this).removeClass('no-mobile').removeAttr('style');
       });
     } else {
       $('.menu').stop(true, true).slideUp(200, function() {
         $('.nav-toggle .arrow').html('+');
         $('.nav-toggle').toggleClass('active');
-        $(this).addClass('nomobile').removeAttr('style');
+        $(this).addClass('no-mobile').removeAttr('style');
       });
     };
     return false;
