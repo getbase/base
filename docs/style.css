@@ -119,9 +119,6 @@ html {
   background-color: #ffc;
   display: block;
   padding: 8px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
 }
 .no-desktop {
   display: none;
@@ -506,9 +503,6 @@ textarea {
 }
 /* Custom Buttons */
 .button {
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
   border: 0;
   padding: 1em 3em;
   color: #333;
