@@ -601,13 +601,26 @@ textarea {
 .col {
   margin-left: 2%;
   float: left;
+}
+.col:first-child {
+  margin-left: 0;
+}
+.one,
+.two,
+.three,
+.four,
+.five,
+.six,
+.seven,
+.eight,
+.nine,
+.ten,
+.eleven,
+.twelve {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   *behavior: url(/js/boxsizing.htc);
-}
-.col:first-child {
-  margin-left: 0;
 }
 /* Columns */
 .one {
@@ -659,14 +672,26 @@ textarea {
   *width: 940px;
 }
 .quarter {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  *behavior: url(/js/boxsizing.htc);
   width: 23.5%;
   *width: 220px;
 }
 .half {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  *behavior: url(/js/boxsizing.htc);
   width: 49.0%;
   *width: 460px;
 }
 .one-third {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  *behavior: url(/js/boxsizing.htc);
   width: 32%;
   *width: 300px;
 }
@@ -681,6 +706,24 @@ textarea {
   }
   /* Tablet Grid
   * For stacking full width columns, please use the new class .tablet-full */
+  .tablet-one,
+  .tablet-two,
+  .tablet-three,
+  .tablet-four,
+  .tablet-five,
+  .tablet-six,
+  .tablet-seven,
+  .tablet-eight,
+  .tablet-nine,
+  .tablet-ten,
+  .tablet-eleven,
+  .tablet-twelve,
+  .tablet-full {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    *behavior: url(/js/boxsizing.htc);
+  }
   .tablet-one {
     width: 6.5%;
   }
@@ -740,6 +783,24 @@ textarea {
 @media only screen and (max-width: 739px) {
   /* Mobile Grid
   * For stacking full width columns, please use the new class .mobile-full */
+  .mobile-one,
+  .mobile-two,
+  .mobile-three,
+  .mobile-four,
+  .mobile-five,
+  .mobile-six,
+  .mobile-seven,
+  .mobile-eight,
+  .mobile-nine,
+  .mobile-ten,
+  .mobile-eleven,
+  .mobile-twelve,
+  .mobile-full {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    *behavior: url(/js/boxsizing.htc);
+  }
   .mobile-one {
     width: 6.5%;
   }
