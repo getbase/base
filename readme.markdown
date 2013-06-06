@@ -19,13 +19,17 @@ Preview the [docs](http://matthewhartman.github.io/base/docs/) to see the Base F
 
 
 ## Repo Contents
-1. grid/base-grid.psd - PSD grid based on 960.gs
-2. js/default.js - Default javascript file which includes responsive.js and other base initiations
-3. less/mixins.less - Basic Mixins which include font-size properties and more
-4. less/style.less - The base stylesheet in LESS format
-5. index.html - Basic HTML template which includes jQuery
-6. readme.markdown - The Read Me file for Base (feel free to delete this)
-7. style.css - Base stylesheet for typography, headings, tables, form elements, etc
+- index.html: Basic HTML template which includes jQuery
+- style.css: Base stylesheet for typography, headings, tables, form elements, etc
+- readme.markdown - The Read Me file for Base (feel free to delete this)
+- less (folder):
+  - mixins.less - Basic Mixins which include font-size properties and more
+  - style.less - The base stylesheet in LESS format
+- images (folder):
+ - favicon.ico: Standard 32x32 favicon
+ - apple-touch-icon (x3): All three sizes of Apple touch icons for iPhone 3, iPad and iPhone 4 with retina.
+- grid (folder):
+  - base-grid.psd - PSD grid based on 960.gs
 
 Base was built by Matthew Hartman [(@hartmanmatthew)](http://twitter.com/hartmanmatthew), a passionate front end developer based in Melbourne, Australia.
 
