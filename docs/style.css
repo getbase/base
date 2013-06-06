@@ -348,7 +348,7 @@ ol,
 ul {
   margin: 1em 0;
 }
-ol ol, ul ul { margin: 0; }
+ol ol, ul ul, ol ul, ul ol { margin: 0; }
 dd {
   margin: 0 0 0 40px;
 }
