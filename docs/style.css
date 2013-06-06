@@ -143,6 +143,7 @@ html {
 /* Body */
 body {
   font-size: 14px;
+  line-height: 1.5;
   font-size: 0.875rem;
   color: #555;
   background-color: #fff;
