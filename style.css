@@ -55,6 +55,17 @@ html {
 .clear {
   zoom: 1;
 }
+.section:before,
+.section:after {
+  content: "";
+  display: table;
+}
+.section:after {
+  clear: both;
+}
+.section {
+  zoom: 1;
+}
 .checkbox:before,
 .checkbox:after {
   content: "";
