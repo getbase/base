@@ -55,6 +55,17 @@ html {
 .clear {
   zoom: 1;
 }
+.section:before,
+.section:after {
+  content: "";
+  display: table;
+}
+.section:after {
+  clear: both;
+}
+.section {
+  zoom: 1;
+}
 .checkbox:before,
 .checkbox:after {
   content: "";
@@ -119,6 +130,9 @@ html {
   background-color: #ffc;
   display: block;
   padding: 8px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
 }
 .no-desktop {
   display: none;
@@ -503,6 +517,9 @@ textarea {
 }
 /* Custom Buttons */
 .button {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
   border: 0;
   padding: 1em 3em;
   color: #333;
