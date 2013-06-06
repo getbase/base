@@ -108,7 +108,7 @@ pre {
     overflow-y: none;
   }
 }
-@media only screen and (max-width: 739px) {
+@media only screen and (max-width: 719px) {
   .header {
     margin-top: 0;
     margin-bottom: 0;
