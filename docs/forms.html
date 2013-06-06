@@ -33,44 +33,48 @@
 
 <div class="container content-inner">
 
-  <h1>Forms</h1>
+  <h1>Form Elements</h1>
   <form action="#" method="get">
-    <fieldset>
-      <legend class="h2">Form Elements</legend>
-      <div class="row">
+    <fieldset class="row">
+      <legend>Standard Input</legend>
         <label for="name">Your Full Name: (normal field)</label>
         <input type="text" name="name" id="name" value="" placeholder="Your Name...">
-      </div>
+    </fieldset>
 
-      <div class="row">
-        <span class="checkbox">
-          <input type="checkbox" name="checkbox" id="checkbox">
-          <label for="checkbox">A single line label</label>
-        </span>
-        <span class="checkbox">
-          <input type="checkbox" name="multi-checkbox" id="multi-checkbox">
-          <label for="multi-checkbox">A label with <br> multiple <br> lines </label>
-        </span>
-        <span class="checkbox">
-          <input type="radio" name="radio" id="radio">
-          <label for="radio">A single line radio example</label>
-        </span>
-        <span class="checkbox">
-          <input type="radio" name="radio" id="multi-radio">
-          <label for="multi-radio">A label<br> with multiple <br> lines</label>
-        </span>
-      </div>
+    <hr>
 
-      <div class="row">
-        <label for="select">Select</label>
-        <select name="select" id="select">
-          <optgroup label="Example">
-          <option value="excellent">Excellent</option>
-          <option value="average">Average</option>
-          <option value="poor">Poor</option>
-        </select>
-      </div>
+    <fieldset class="row">
+      <legend>Checkboxes and Radios</legend>
+      <span class="checkbox">
+        <input type="checkbox" name="checkbox" id="checkbox">
+        <label for="checkbox">A single line label</label>
+      </span>
+      <span class="checkbox">
+        <input type="checkbox" name="multi-checkbox" id="multi-checkbox">
+        <label for="multi-checkbox">A label with <br> multiple <br> lines </label>
+      </span>
+      <span class="checkbox">
+        <input type="radio" name="radio" id="radio">
+        <label for="radio">A single line radio example</label>
+      </span>
+      <span class="checkbox">
+        <input type="radio" name="radio" id="multi-radio">
+        <label for="multi-radio">A label<br> with multiple <br> lines</label>
+      </span>
+    </fieldset>
 
+    <hr>
+
+    <fieldset class="row">
+      <legend>Selects and Multi-Selects</legend>
+      <label for="select">Select</label>
+      <select name="select" id="select">
+        <optgroup label="Example">
+        <option value="excellent">Excellent</option>
+        <option value="average">Average</option>
+        <option value="poor">Poor</option>
+      </select>
+      
       <div class="row">
         <label for="multi-select">Multiple Select</label>
         <select name="multi-select" id="multi-select" multiple>
@@ -80,13 +84,16 @@
           <option value="poor">Poor</option>
         </select>
       </div>
+    </fieldset>
 
-      <div class="row">
+    <hr>
+
+    <fieldset class="row">
+      <legend>Textarea</legend>
         <label for="textarea">Textarea:</label>
         <textarea name="textarea" id="textarea" rows="5"></textarea>
-      </div>
-        
     </fieldset>
+
   </form>
   
 </div>
