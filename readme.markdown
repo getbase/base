@@ -25,6 +25,9 @@ Preview the [docs](http://matthewhartman.github.io/base/docs/) to see the Base F
 - less (folder):
   - mixins.less - Basic Mixins which include font-size properties and more
   - style.less - The base stylesheet in LESS format
+  - sass (folder):
+    - mixins.scss - Basic Mixins which include font-size properties and more
+    - style.scss - The base stylesheet in SASS format
 - images (folder):
  - favicon.ico: Standard 32x32 favicon
  - apple-touch-icon (x3): All three sizes of Apple touch icons for iPhone 3, iPad and iPhone 4 with retina.
