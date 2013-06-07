@@ -6,26 +6,26 @@
 
 ========================================================================== */
 
-  @import "mixins.less"; // Import the base mixins
+  @import "mixins"; // Import the base mixins
 
   // Global Defaults
-  @mobile-width:              100%;
-  @tablet-width:              700px;
-  @desktop-width:             940px;
+  $mobile-width:              100%;
+  $tablet-width:              700px;
+  $desktop-width:             940px;
 
 
   // Resonsive Design Break Points
-  @mobile-breakpoint:         @tablet-width + 19px;
-  @tablet-breakpoint:         @tablet-width + 20px;
-  @desktop-breakpoint:        @desktop-width + 19px;
+  $mobile-breakpoint:         $tablet-width + 19px;
+  $tablet-breakpoint:         $tablet-width + 20px;
+  $desktop-breakpoint:        $desktop-width + 19px;
 
   // Heading                  Size
-  @h1:                        40;
-  @h2:                        32;
-  @h3:                        26;
-  @h4:                        20;
-  @h5:                        18;
-  @h6:                        16;
+  $h1:                        40;
+  $h2:                        32;
+  $h3:                        26;
+  $h4:                        20;
+  $h5:                        18;
+  $h6:                        16;
 
 
 /* General Resets */
@@ -82,19 +82,19 @@ html { font-size: 100%; }
 /* Alert */
 .alert {
   background-color: #ffc;
-  .block();
+  @extend .block;
   padding: 8px;
-  .rounded(5);
+  @include rounded(5);
 }
 
-.no-desktop { .none(); }
+.no-desktop { @extend .none; }
 
 /* ==========================================================================
 /* 1.0 - Document Setup (typography, links, paragraph, etc)
    ========================================================================== */
 /* Body */
 body {
-  .font-size(14);
+  @include font-size(14);
   color: #555;
   background-color: #fff;
   -webkit-text-size-adjust: 100%;
@@ -102,7 +102,7 @@ body {
 }
 
 /* Strong and Italic */
-b, strong { .strong(); }
+b, strong { @extend .strong; }
 
 /* Links */
 a { color: #f30; }
@@ -120,10 +120,10 @@ abbr[title] { border-bottom: 1px dotted; }
 
 /* Audio */
 audio, canvas, video {
-  .inline-block();
+  @extend .inline-block;
 }
 audio:not([controls]) {
-  .none();
+  @extend .none;
   height: 0;
 }
 
@@ -140,7 +140,7 @@ sup { top: -.5em; }
 sub { bottom: -.25em; }
 
 /* Definition */
-dfn { .italic(); }
+dfn { @extend .italic; }
 
 /* Images */
 img {
@@ -161,27 +161,27 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
 }
 h1, .h1 {
-  .font-size(@h1);
+  @include font-size($h1);
   margin-bottom: .2em;
 }
 h2, .h2 {
-  .font-size(@h2);
+  @include font-size($h2);
   margin-bottom: .33em;
 }
 h3, .h3 { 
-  .font-size(@h3);
+  @include font-size($h3);
   margin-bottom: .5em;
 }
 h4, .h4 {
-  .font-size(@h4);
+  @include font-size($h4);
   margin-bottom: .5em;
 }
 h5, .h5 {
-  .font-size(@h5);
+  @include font-size($h5);
   margin-bottom: .5em;
 }
 h6, .h6 {
-  .font-size(@h6);
+  @include font-size($h6);
   margin-bottom: .5em;
 }
 /* Reset Heading */
@@ -206,10 +206,10 @@ hr {
 /* Block Quotes and Quotes */
 blockquote {
   font-family: "Georgia", "Times" serif;
-  .font-size(20);
+  @include font-size(20);
   color: #777;
   margin: 1em 0;
-  .italic();
+  @extend .italic;
 }
 cite {
   color: #222;
@@ -238,7 +238,7 @@ code {
   color: #111;
   padding: 2px 5px;
   background-color: #f1f1f1;
-  .rounded(3);
+  @include rounded(3);
 }
 
 /* 1.3 Lists
@@ -248,7 +248,7 @@ dl, menu, ol, ul {
 }
 ul ul, ol ol, ul ol, ol ul { margin: 0; }
 dd { margin: 0 0 0 40px; }
-dt { .strong(); }
+dt { @extend .strong; }
 menu, ol, ul { padding: 0 0 0 40px; }
 nav ul, nav ol {
   list-style: none;
@@ -310,7 +310,7 @@ legend {
   padding: 0;
   white-space: normal;
   *margin-left: -7px;
-  .strong();
+  @extend .strong;
 }
 label { cursor: pointer; }
 
@@ -332,7 +332,7 @@ textarea {
   padding: 5px 7px;
   -webkit-appearance: none; // Remove Default Browser Behaviour for Safari
   -moz-appearance: none; // Remove Default Browser Behaviour for Firefox
-  .strong();
+  @extend .strong;
   background-color: #fff;
   color: #777;
   border: 1px solid #ddd;
@@ -351,11 +351,11 @@ input[type=radio] {
 }
 
 .checkbox {
-  .block();
+  @extend .block;
   margin: .2em 0;
   input[type=checkbox], 
   input[type=radio] {
-    .left();
+    @extend .left;
   }
   label {
     padding-left: 5px;
@@ -402,13 +402,13 @@ textarea {
 
 /* Custom Buttons */
 .button {
-  .rounded(5);
+  @include rounded(5);
   border: 0;
   padding: 1em 3em;
   color: #333;
   text-decoration: none;
   text-align: center;
-  .inline-block();
+  @extend .inline-block;
 }
 
 .orange-button {
@@ -429,7 +429,7 @@ textarea {
 }
 
 .no-style-button {
-  .font-size(13);
+  @include font-size(13);
   color: #f30;
   text-decoration: underline;
   border: 0;
@@ -466,14 +466,14 @@ textarea {
 .center { margin: 0 auto; }
 
 .container {
-  max-width: @desktop-width;
-  .center();
+  max-width: $desktop-width;
+  @extend .center;
   padding-left: 10px;
   padding-right: 10px;
 }
 .container-full {
-  max-width: @desktop-width + 20px;
-  .center();
+  max-width: $desktop-width + 20px;
+  @extend .center;
 }
 
 /* Fluid Grid */
@@ -538,9 +538,9 @@ textarea {
   *width: 940px; // ie7
 }
 
-.quarter { .three(); }
-.half { .six(); }
-.one-third { .four(); }
+.quarter { @extend .three; }
+.half { @extend .six; }
+.one-third { @extend .four; }
 
 // ==========================================================================
 // -- Custom Website Styles for Desktop
@@ -553,9 +553,9 @@ textarea {
 /* ==========================================================================
 /* -- Tablet Devices (Layout, Modifications, etc)
    ========================================================================== */
-@media only screen and (min-width: @tablet-breakpoint) and (max-width: @desktop-breakpoint) {
+@media only screen and (min-width: $tablet-breakpoint) and (max-width: $desktop-breakpoint) {
 .container {
-  width: @tablet-width;
+  width: $tablet-width;
   padding-left: 10px;
   padding-right: 10px;
 }
@@ -590,9 +590,8 @@ textarea {
   margin-top: 0;
 }
 
-
-.no-tablet { .none(); }
-.show-tablet { .block(); }
+.no-tablet { display: none; }
+.show-tablet { display: block; }
 
 
 // ==========================================================================
@@ -610,7 +609,7 @@ textarea {
 /* ==========================================================================
 /* -- Mobile Devices (Layout, Modifications, etc)
    ========================================================================== */
-@media only screen and (max-width: @mobile-breakpoint) {
+@media only screen and (max-width: $mobile-breakpoint) {
 
 /* Mobile Grid
 * For stacking full width columns, please use the new class .mobile-full */
@@ -653,8 +652,8 @@ table td {
   padding: 4px;
 }
 
-.no-mobile { .none(); }
-.show-mobile { .block(); }
+.no-mobile { display: none; }
+.show-mobile { display: block; }
 
 
 // ==========================================================================
