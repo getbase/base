@@ -877,6 +877,7 @@ textarea {
   padding: 0 20px;
   background-color: #fff;
 }
+/* Icons */
 .icon {
   background: url(images/icons.svg) no-repeat;
   background-position: 0 0;
@@ -886,18 +887,15 @@ textarea {
   background: url(images/icons.png) no-repeat;
   background-position: 0 0;
 }
-.tick, .no-svg .tick {
-  background-position: 0 -225px;
-}
-.code, .no-svg .code {
-  background-position: 0 -83px;
-}
-.cloud, .no-svg .cloud {
-  background-position: 0 -152px;
-}
-.github, .no-svg .github {
-  background-position: 0 -10px;
-}
+.tick { background-position: 0 -208px; }
+.no-svg .tick { background-position: 0 -225px; }
+.code { background-position: 0 -65px; }
+.no-svg .code { background-position: 0 -225px; }
+.cloud { background-position: 0 -152px; }
+.no-svg .cloud { background-position: 0 -135px; }
+.github { background-position: 0 -10px; }
+.no-svg .github { background-position: 0 7px; }
+
 .github-logo {
   width: 260px;
   height: 180px;
