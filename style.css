@@ -861,9 +861,9 @@ textarea {
   background-position: 0 0;
 }
 .tick { background-position: 0 -224px; }
-.no-svg .tick { background-position: 0 -225px; }
+.no-svg .tick { background-position: 0 -208px; }
 .code { background-position: 0 -82px; }
-.no-svg .code { background-position: 0 -225px; }
+.no-svg .code { background-position: 0 -65px; }
 .cloud { background-position: 0 -152px; }
 .no-svg .cloud { background-position: 0 -135px; }
 .github { background-position: 0 -10px; }
