@@ -299,8 +299,7 @@ h6,
 /* Reset Heading */
 .no-style-heading {
   font-family: sans-serif;
-  color: inherit;
-  font-size: inherit;
+  font-size: 100%;
   margin: 0;
 }
 /* Horizontal Rule */
@@ -852,6 +851,7 @@ textarea {
   color: #fff;
   padding: 50px 0;
 }
+.features h2 { color: #fff; }
 .features p {
   margin: 0;
 }
