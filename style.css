@@ -591,17 +591,20 @@ textarea {
   margin: 3em 0;
 }
 .center {
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 .container {
   max-width: 940px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   padding-left: 10px;
   padding-right: 10px;
 }
 .container-full {
   max-width: 960px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 /* Fluid Grid */
 .col {
