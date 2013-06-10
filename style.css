@@ -884,17 +884,18 @@ textarea {
 }
 .no-svg .icon {
   background: url(images/icons.png) no-repeat;
+  background-position: 0 0;
 }
-.tick {
+.tick, .no-svg .tick {
   background-position: 0 -225px;
 }
-.code {
+.code, .no-svg .code {
   background-position: 0 -83px;
 }
-.cloud {
+.cloud, .no-svg .cloud {
   background-position: 0 -152px;
 }
-.github {
+.github, .no-svg .github {
   background-position: 0 -10px;
 }
 .github-logo {
