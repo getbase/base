@@ -463,7 +463,10 @@ textarea {
 .row-two { margin: 2em 0; }
 .row-three { margin: 3em 0; }
 
-.center { margin: 0 auto; }
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .container {
   max-width: $desktop-width;
@@ -590,6 +593,16 @@ textarea {
   margin-top: 0;
 }
 
+.tablet-center {
+  margin-left: auto;
+  margin-right: auto;
+  float: none;
+}
+.tablet-center:first-child { margin-left: auto; }
+.tablet-center-text {
+  text-align: center;
+}
+
 .no-tablet { display: none; }
 .show-tablet { display: block; }
 
@@ -639,6 +652,15 @@ textarea {
 }
 .mobile-full:first-child {
   margin-top: 0;
+}
+.mobile-center {
+  margin-left: auto;
+  margin-right: auto;
+  float: none;
+}
+.mobile-center:first-child { margin-left: auto; }
+.mobile-center-text {
+  text-align: center;
 }
 
 .container {
