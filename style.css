@@ -832,6 +832,7 @@ textarea {
 .content {
   padding: 40px 0;
 }
+.conent img { width: 241px; }
 .blue-bg {
   background-color: #e7f2fb;
 }
