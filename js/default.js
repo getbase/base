@@ -28,7 +28,7 @@ $(document).ready(function(){
 
   // 2.2 Get latest commit from GitHub
   $('#github .no-js').remove();
-  $('#github').append('<span class="block date">loading...</span> <span class="block description"></span> <a href="#" class="block commit"></a>');
+  $('#github').html('<span class="block date">loading...</span> <span class="block description"></span> <a href="#" class="block commit"></a>');
 
   var a=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
       $.ajax({url:"https://api.github.com/repos/matthewhartman/base/commits",dataType:"jsonp",success:function(d){
