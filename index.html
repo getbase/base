@@ -2,149 +2,180 @@
 <html lang="en" class="no-js">
 <head>
   <meta charset="utf-8">
-  <title>Base - A super simple, responsive framework designed to work for mobile devices, tablets, netbooks and desktop computers.</title>
+  <title>>Base - A super simple, responsive framework designed to work for mobile devices, tablets, netbooks and desktop computers.</title>
   <meta name="description" content="Base is a super simple, responsive framework designed to work for mobile devices, tablets, netbooks and desktop computers.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="http://matthewhartman.github.com/base/images/favicon.png" type="image/x-icon">
+  <link rel="shortcut icon" href="/images/favicon.ico">
+  <link rel="apple-touch-icon" sizes="57x57" href="/images/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/images/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/images/apple-touch-icon-114x114.png">
   <link rel="stylesheet" media="screen" href="style.css">
-  <link href="http://fonts.googleapis.com/css?family=Raleway:900,400,200,600|Lobster" rel="stylesheet">
-
+  <link href="http://fonts.googleapis.com/css?family=Raleway:900,500,200|Lobster" rel="stylesheet">
 </head>
 <body>
 
-<div class="section header">
-  
-  <div class="section header-top">
-    <div class="container">
-      <a href="/base/" class="left block logo">Base</a>
-      <div class="nav right nomobile">
-        <ul class="clear">
-          <li><a href="/base/">Home</a></li>
-          <li><a href="/base/docs/">Docs</a></li>
-          <li><a class="highlight" href="https://github.com/matthewhartman/base/zipball/master">Download</a></li>
+<header class="header">
+  <div class="header-top">
+    <div class="container clear">
+      <h1 class="logo left block"><a href="/base/">Base</a></h1>
+      <nav class="nav right no-mobile">
+        <ul class="no-style-list">
+          <li><a class="primary-link" href="/base/">Home</a></li>
+          <li><a class="primary-link" href="/base/docs/">Docs</a></li>
+          <li><a class="primary-link active" href="https://github.com/matthewhartman/base/zipball/master">Download</a></li>
         </ul>
-      </div>
+      </nav>
+    </div>
+  </div>
+  
+  <div class="container center-text">
+    <h2 class="tagline">Super Simple Responsive Framework</h2>
+    <p class="slogan">built to work on mobile devices, tablets, netbooks and desktop computers</p>
+
+    <div class="feature-buttons">
+      <a class="button big-button orange-button mobile-full" href="https://github.com/matthewhartman/base/zipball/master">Download latest build</a>
+      <a class="button big-button blue-button mobile-full" href="/base/docs/">View demos and docs</a>
+    </div>
+
+    <h3 class="visuallyhidden">Built for the following devices:</h3>
+    <ul class="devices no-style-list clear no-mobile">
+      <li class="device phone no-tablet"><span class="visuallyhidden">Phone</span></li>
+      <li class="device desktop"><span class="visuallyhidden">Desktop</span></li>
+      <li class="device tablet no-tablet"><span class="visuallyhidden">Tablet</span></li>
+    </ul>
+  </div>
+
+</header>
+
+
+<section class="features">
+  <div class="container clear">
+    <div class="col three mobile-full">
+      <h2 class="no-style-heading strong uppercase icon tick">Responsive design</h2>
+      <p>
+        Built for all devices big and small, Base has got you covered.
+      </p>
+    </div>
+    <hr class="no-desktop no-tablet show-mobile">
+    <div class="col three mobile-full">
+      <h2 class="no-style-heading strong uppercase icon code">Base stylesheet</h2>
+      <p>
+        Styles for typography, tables, blockquotes, forms and more.
+      </p>
+    </div>
+    <hr class="no-desktop no-tablet show-mobile">
+    <div class="col three mobile-full">
+      <h2 class="no-style-heading strong uppercase icon cloud">Cross browser</h2>
+      <p>
+        IE7+ and modern browsers such as Chrome, Firefox<span class="no-tablet"> and Opera</span>.
+      </p>
+    </div>
+    <hr class="no-desktop no-tablet show-mobile">
+    <div class="col three mobile-full">
+      <h2 class="no-style-heading strong uppercase icon github">Awesome foundation</h2>
+      <p>
+        Built on Normalize.css and includes most styles and layout.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<section role="content" class="content">
+  <h2 class="h4 heading">
+    <span class="heading-text uppercase strong">
+      Get started with Base
+    </span>
+  </h2>
+
+  <div class="container row-one clear">
+    <img class="col block bordered no-mobile no-tablet" src="images/code.jpg" alt="Code">
+    <div class="col six tablet-ten tablet-center mobile-full">
+      <h3>Download a Code Editor and Base</h3>
+      <p>
+        Before downloading Base, get your hands on a good code editor such as <a href="http://www.sublimetext.com/2">Sublime Text Editor 2</a>. Some working knowledge of HTML and CSS is highly recommended too.
+      </p>
+      <span class="block buttons">
+        <a class="button orange-button mobile-full" href="http://www.sublimetext.com/2">Get Sublime Text Editor</a>
+        <a class="button mobile-full" href="https://github.com/matthewhartman/base/zipball/master">Download Base</a>
+      </span>
     </div>
   </div>
 
-  <div class="section banner container">
-    <h1>Super Simple Responsive Framework</h1>
-    <p>built to work on mobile devices, tablets, netbooks and desktop computers</p>
-
-    <span class="buttons block clear">
-      <a href="https://github.com/matthewhartman/base/zipball/master" class="orange-button button big">Download latest build</a>
-      <a href="/base/docs/" class="button big">View demos and docs</a>
-    </span>
-
-    <div class="devices nomobile section">
-      <span class="mobile notablet nomobile"><span class="visuallyhidden">Mobile</span></span>
-      <span class="desktop"><span class="visuallyhidden">Mobile</span></span>
-      <span class="tablet notablet nomobile"><span class="visuallyhidden">Tablet</span></span>
-    </div>
-
-  </div> <!--/Banner -->
-</div> <!-- Header -->
-
-<div class="features">
-  <ul class="container section">
-    <li class="col three">
-      <strong class="feature-heading"><i class="icon">/</i> Responsive Design</strong>
-      <p>Built for all devices big and small, base has got you covered.</p>
-    </li>
-    <li class="col three">
-      <strong class="feature-heading"><i class="icon">&lt; &gt;</i> Base Stylesheet</strong>
-      <p>Basic styles for headings, tables, blockquotes, forms and more.</p>
-    </li>
-    <li class="col three">
-      <strong class="feature-heading"><i class="icon">C</i> Cross Browser</strong>
-      <p>IE7+ and modern browsers such as Chrome, Firefox and Opera.</p>
-    </li>
-    <li class="col three">
-      <strong class="feature-heading"> <i class="icon">Q</i> More Accessible</strong>
-      <p>Works with screen readers in mind and has nice no-js fallbacks.</p>
-    </li>
-  </ul>
-</div> <!--/Features -->
-
-<div class="content">
-  <h2 class="heading"><span>Get started with Base</span></h2>
-
-  <div class="section content-block container">
-    <div class="col six notablet nomobile">
-      <img class="block bordered" src="images/code.png" alt="Code">
-    </div>
-    <div class="col six">
-      <h3>Download a Code Editor and Base</h3>
-      Before downloading Base, get your hands on a good code editor (<a href="http://www.sublimetext.com/2" target="_blank">Sublime Text Editor 2</a> is highly recommended) and some working knowledge of HTML and CSS.
-      <div class="buttons clear">
-        <a href="http://www.sublimetext.com/2" target="_blank" class="button orange-button">Get sublime text editor</a>
-        <a href="https://github.com/matthewhartman/base/zipball/master" class="button">Download Base</a>
-      </div>
-    </div>
-  </div> <!-- /Container -->
-  
-  <div class="blue-bg">
-    <div class="section content-block container">
-      <div class="col six">
+  <div class="blue-bg content">
+    <div class="container clear">
+      <div class="col six tablet-ten tablet-center mobile-full">
         <h3>Diving into Base’s Structure</h3>
         <strong>Includes the following set of files:</strong>
         <ul>
           <li>The grid template in PSD format (desktop, tablet and mobile)</li>
-          <li>LESS file to easily customise your base stylesheet</li>
-          <li>Basic HTML5 template including jQuery to get you started</li>
-          <li>Default javascript file with base enhancements and fallbacks</li>
-          <li>Base stylesheet which contains the 12 column fluid grid + styes for <span class="break">typography, blockquotes, tables and much more</span></li>
+          <li>LESS and SASS files to easily customise your base stylesheet</li>
+          <li>Basic HTML5 template which includes jQuery to get you started</li>
+          <li>Default javascript file with base enhancements and modernizr.js</li>
+          <li>All three sizes of Apple touch icons for iPhone 3, iPad and iPhone 4 with retina + the standard favicon for all other web browsers</li>
+          <li>Base stylesheet which contains styes for typography, blockquotes, tables, forms and more + a 12 column fluid grid</li>
         </ul>
       </div>
-      <div class="col six notablet nomobile">
-        <img class="block bordered" src="images/structure.png" alt="File Structure">
-      </div>
-    </div> <!-- /Container -->
-  </div> <!-- Content Block -->
-
-  <div class="section content-block container">
-  <div class="col six notablet nomobile">
-    <img class="block bordered" src="images/documentation.png" alt="Documentation">
+      <img class="image-right right block bordered no-tablet no-mobile" src="images/files.png" alt="Files">
+    </div>
   </div>
-  <div class="col six">
-    <h3>View the Documentation and Demos</h3>
-    <a class="block strong" href="/base/docs/">Base CSS</a>
-    <p>Styles for common HTML elements for typography, list items, tables and more.</p>
 
-    <a class="block strong" href="/base/docs/grid.html">Grid Layout</a>
-    <p>12 Column fluid and responsive grid to cater for mobile devices, tablets and desktop computers.</p>
+
+  <div class="container row-one clear">
+    <img class="left block bordered no-tablet no-mobile" src="images/docs.png" alt="Docs">
+    <div class="col six tablet-ten tablet-center mobile-full">
+      <h3>View the Documentation and Demos</h3>
+      <h4 class="no-style-heading strong"><a href="/base/docs/">Introduction</a></h4>
+      <p class="no-margin">
+        An overview of Base and the files and components included.
+      </p>
+      <hr>
+      <h4 class="no-style-heading strong"><a href="/base/docs/grid.html">Grid Layout</a></h4>
+      <p class="no-margin">
+        The powerful grid system which uses a variation of the 960 grid system.
+      </p>
+      <hr>
+      <h4 class="no-style-heading strong"><a href="/base/docs/typography.html">Typography</a></h4>
+      <p class="no-margin">
+        From global defaults to all typograhy, this section has got it all.
+      </p>
+    </div>
   </div>
-</div> <!-- /Container -->
 
-
-  <div class="orange-bg">
-    <div class="section container">
-      <div class="col four clear nomobile">
-        <img class="block center" src="images/github.png" alt="Github">
-      </div>
-      <div class="col right seven" id="github">
+  <div class="orange-bg row">
+    <div class="container clear section">
+      <div class="right eight tablet-seven mobile-full">
         <h3>Latest Update on Github</h3>
           <p class="no-js">It seems you don't have javascript enabled. You can check the updates directly at <a target="_blank" href="https://github.com/matthewhartman/base/">Github</a></p>
       </div>
-    </div> <!-- /Container -->
-  </div> <!-- Content Block -->
-
-</div> <!-- /Content -->
-
-<div class="footer">
-  <h4 class="heading"><span>Go forth <strong class="and">&amp;</strong> Conquer</span></h4>
-  <div class="container">
-      <p>Base Framework is in active development and any feedback / improvements are most welcome. <span class="break">Feel free to <a href="https://github.com/matthewhartman/base/">watch this repo on Github</a>.</span></p>
+      <span class="github-logo block no-mobile">
+        <span class="visuallyhidden">Github</span>
+      </span>
+    </div>
   </div>
-</div>
+</section>
 
+
+<footer class="footer center-text">
+  <strong class="h4 heading block">
+    <span class="heading-text uppercase strong">
+      Go forth <span class="and">&amp;</span> Conquer
+    </span>
+  </strong>
+  <p>Base is in active development and any feedback / improvements are most welcome. Feel free to <a href="https://github.com/matthewhartman/base/">watch this repo on Github</a>.</p>
+</footer>
 
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script src="javascripts/default.js"></script>
+<script src="js/default.js"></script>
+
 <!-- Google Analytics -->
-<script> var _gaq=[['_setAccount','UA-34161986-1'],['_trackPageview']]; (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0]; g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js'; s.parentNode.insertBefore(g,s)}(document,'script')); </script>
-<!-- /Google Analytics -->
+<script>
+  var _gaq=[['_setAccount','UA-34161986-1'],['_trackPageview']];
+  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+  s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
 
 </body>
 </html>
