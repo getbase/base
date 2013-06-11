@@ -99,7 +99,7 @@ pre {
   *zoom: 1;
   text-align: right;
 }
-@media only screen and (min-width: 720px) and (max-width: 959px) {
+@media only screen and (min-width: 720px) and (max-width: 979px) {
   .navigation ul li {
     margin-left: 5px;
   }
