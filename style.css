@@ -970,6 +970,7 @@ textarea {
     font-size: 13px;
     font-size: 0.8125rem;
   }
+  .github-logo { top: -40px; }
 }
 /* End Tablet Media Query */
 /* ==========================================================================
