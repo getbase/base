@@ -874,9 +874,6 @@ textarea {
   width: 260px;
   height: 180px;
   background: url(images/github.svg) 0 0 no-repeat;
-  position: absolute;
-  top: 0;
-  left: 0;
 }
 .no-svg .github-logo {
   background: url(images/github.png) 0 0 no-repeat;
@@ -970,7 +967,6 @@ textarea {
     font-size: 13px;
     font-size: 0.8125rem;
   }
-  .github-logo { top: -40px; }
 }
 /* End Tablet Media Query */
 /* ==========================================================================
