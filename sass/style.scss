@@ -17,7 +17,7 @@
   // Resonsive Design Break Points
   $mobile-breakpoint:         $tablet-width + 19px;
   $tablet-breakpoint:         $tablet-width + 20px;
-  $desktop-breakpoint:        $desktop-width + 19px;
+  $desktop-breakpoint:        $desktop-width + 39px;
 
   // Heading                  Size
   $h1:                        40;
@@ -553,7 +553,7 @@ textarea {
 /* -- Tablet Devices (Layout, Modifications, etc)
    ========================================================================== */
 @media only screen and (min-width: $tablet-breakpoint) and (max-width: $desktop-breakpoint) {
-.container {
+.container, .tablet-container {
   width: $tablet-width;
   padding-left: 10px;
   padding-right: 10px;
@@ -649,7 +649,7 @@ textarea {
   text-align: center;
 }
 
-.container {
+.container, .mobile-container {
   padding-left: 20px;
   padding-right: 20px;
 }
