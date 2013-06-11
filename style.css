@@ -888,7 +888,7 @@ textarea {
 /* -- Tablet Devices (Layout, Modifications, etc)
    ========================================================================== */
 @media only screen and (min-width: 720px) and (max-width: 959px) {
-  .container {
+  .container, .tablet-container {
     width: 700px;
     padding-left: 10px;
     padding-right: 10px;
@@ -1023,7 +1023,7 @@ textarea {
   .mobile-full:first-child {
     margin-top: 0;
   }
-  .container {
+  .container, .mobile-container {
     padding-left: 20px;
     padding-right: 20px;
   }
