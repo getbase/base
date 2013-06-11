@@ -10,7 +10,7 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  *behavior: url(/js/boxsizing.htc);
+  *behavior: url(/base/js/boxsizing.htc);
 }
 article,
 aside,
