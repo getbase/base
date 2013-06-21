@@ -2,7 +2,7 @@
 
   Base Stylesheet - http://git.io/base
   Author: Matthew Hartman - http://www.matthewhartman.com.au/
-  Version: 1.5 - Last Updated: 6th June, 2013
+  Version: 1.5 - Last Updated: 21st June, 2013
 
 ========================================================================== */
 /* General Resets */
@@ -746,6 +746,15 @@ textarea {
   .tablet-center-text {
     text-align: center;
   }
+  .tablet-left {
+    float: left;
+  }
+  .tablet-right {
+    float: right;
+  }
+  .tablet-no-float {
+    float: none;
+  }
   .no-tablet {
     display: none;
   }
@@ -815,6 +824,15 @@ textarea {
   }
   .mobile-center-text {
     text-align: center;
+  }
+  .mobile-left {
+    float: left;
+  }
+  .mobile-right {
+    float: right;
+  }
+  .mobile-no-float {
+    float: none;
   }
   .container,
   .mobile-container {

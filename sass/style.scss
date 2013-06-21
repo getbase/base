@@ -2,22 +2,22 @@
 
   Base Stylesheet - http://git.io/base
   Author: Matthew Hartman - http://www.matthewhartman.com.au/
-  Version: 1.5 - Last Updated: 6th June, 2013
+  Version: 1.5 - Last Updated: 21st June, 2013
 
 ========================================================================== */
 
   @import "mixins"; // Import the base mixins
 
   // Global Defaults
-  $mobile-width:              100%;
-  $tablet-width:              700px;
-  $desktop-width:             940px;
+  $mobile-container:              100%;
+  $tablet-container:              700px;
+  $desktop-container:             940px;
 
 
   // Resonsive Design Break Points
-  $mobile-breakpoint:         $tablet-width + 19px;
-  $tablet-breakpoint:         $tablet-width + 20px;
-  $desktop-breakpoint:        $desktop-width + 39px;
+  $mobile-breakpoint:         $tablet-container + 19px;
+  $tablet-breakpoint:         $tablet-container + 20px;
+  $desktop-breakpoint:        $desktop-container + 39px;
 
   // Heading                  Size
   $h1:                        40;
@@ -470,13 +470,13 @@ textarea {
 }
 
 .container {
-  max-width: $desktop-width;
+  max-width: $desktop-container;
   @extend .center;
   padding-left: 10px;
   padding-right: 10px;
 }
 .container-full {
-  max-width: $desktop-width + 20px;
+  max-width: $desktop-container + 20px;
   @extend .center;
 }
 
@@ -554,7 +554,7 @@ textarea {
    ========================================================================== */
 @media only screen and (min-width: $tablet-breakpoint) and (max-width: $desktop-breakpoint) {
 .container, .tablet-container {
-  width: $tablet-width;
+  width: $tablet-container;
   padding-left: 10px;
   padding-right: 10px;
 }
@@ -589,6 +589,10 @@ textarea {
   margin-right: auto;
   float: none;
 }
+.tablet-left { float: left; }
+.tablet-right { float: right; }
+.tablet-no-float { float: none; }
+
 .tablet-center:first-child { margin-left: auto; }
 .tablet-center-text {
   text-align: center;
@@ -648,6 +652,9 @@ textarea {
 .mobile-center-text {
   text-align: center;
 }
+.mobile-left { float: left; }
+.mobile-right { float: right; }
+.mobile-no-float { float: none; }
 
 .container, .mobile-container {
   padding-left: 20px;
