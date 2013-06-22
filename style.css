@@ -598,14 +598,14 @@ textarea {
   margin-right: auto;
 }
 .container {
-  max-width: 940px;
+  max-width: 960px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 10px;
   padding-right: 10px;
 }
 .container-full {
-  max-width: 960px;
+  max-width: 980px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -681,10 +681,10 @@ textarea {
 /* ==========================================================================
 /* -- Tablet Devices (Layout, Modifications, etc)
    ========================================================================== */
-@media only screen and (min-width: 720px) and (max-width: 979px) {
+@media only screen and (min-width: 740px) and (max-width: 999px) {
   .container,
   .tablet-container {
-    width: 700px;
+    width: 720px;
     padding-left: 10px;
     padding-right: 10px;
   }
@@ -766,7 +766,7 @@ textarea {
 /* ==========================================================================
 /* -- Mobile Devices (Layout, Modifications, etc)
    ========================================================================== */
-@media only screen and (max-width: 719px) {
+@media only screen and (max-width: 739px) {
   /* Mobile Grid
   * For stacking full width columns, please use the new class .mobile-full */
   .mobile-one {
