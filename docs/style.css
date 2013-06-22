@@ -598,7 +598,7 @@ textarea {
   margin-right: auto;
 }
 .container {
-  max-width: 940px;
+  max-width: 960px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 10px;
@@ -684,7 +684,7 @@ textarea {
 @media only screen and (min-width: 720px) and (max-width: 979px) {
   .container,
   .tablet-container {
-    width: 700px;
+    width: 720px;
     padding-left: 10px;
     padding-right: 10px;
   }
