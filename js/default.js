@@ -10,7 +10,7 @@
 /* ==========================================================
   1.0 jQuery Plugins Combined
 */
-  
+
   // Plugins...
 
 
@@ -21,9 +21,9 @@
 $(document).ready(function(){
 
   // 2.1 Toggle JS Class
-  $("html").removeClass('no-js').addClass('js');
+  $('html').removeClass('no-js').addClass('js');
 
   // Other initiations go here within the document ready...
-    
+
 
 }); // end document ready
