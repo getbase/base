@@ -731,6 +731,7 @@ textarea {
     float: none;
     width: 100%;
     margin: 10px 0 0 0;
+    display: block;
   }
   .tablet-full:first-child {
     margin-top: 0;
@@ -810,6 +811,7 @@ textarea {
     float: none;
     width: 100%;
     margin: 10px 0 0 0;
+    display: block;
   }
   .mobile-full:first-child {
     margin-top: 0;
