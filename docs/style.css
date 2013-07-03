@@ -2,7 +2,7 @@
 
   Base Stylesheet - http://git.io/base
   Author: Matthew Hartman - http://www.matthewhartman.com.au/
-  Version: 1.5 - Last Updated: 6th June, 2013
+  Version: 1.5 - Last Updated: 21st June, 2013
 
 ========================================================================== */
 /* General Resets */
@@ -10,7 +10,6 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  *behavior: url(/base/js/boxsizing.htc);
 }
 article,
 aside,
@@ -605,7 +604,7 @@ textarea {
   padding-right: 10px;
 }
 .container-full {
-  max-width: 960px;
+  max-width: 980px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -620,68 +619,67 @@ textarea {
 /* Columns */
 .one {
   width: 6.5%;
-  *width: 60px;
+  *width: expression(Math.floor(0.065 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) +  px ")";
 }
 .two {
   width: 15%;
-  *width: 140px;
+  *width: expression(Math.floor(0.15 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) +  px ")";
 }
 .three {
   width: 23.5%;
-  *width: 220px;
+  *width: expression(Math.floor(0.235 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) +  px ")";
 }
 .four {
   width: 32%;
-  *width: 300px;
+  *width: expression(Math.floor(0.32 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) +  px ")";
 }
 .five {
   width: 40.5%;
-  *width: 380px;
+  *width: expression(Math.floor(0.40.5 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) +  px ")";
 }
 .six {
   width: 49.0%;
-  *width: 460px;
+  *width: expression(Math.floor(0.49 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) +  px ")";
 }
 .seven {
   width: 57.5%;
-  *width: 540px;
+  *width: expression(Math.floor(0.575 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) +  px ")";
 }
 .eight {
   width: 66%;
-  *width: 620px;
+  *width: expression(Math.floor(0.66 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) +  px ")";
 }
 .nine {
   width: 74.5%;
-  *width: 700px;
+  *width: expression(Math.floor(0.745 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) +  px ")";
 }
 .ten {
   width: 83%;
-  *width: 780px;
+  *width: expression(Math.floor(0.83 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) +  px ")";
 }
 .eleven {
   width: 91.5%;
-  *width: 860px;
+  *width: expression(Math.floor(0.915 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) +  px ")";
 }
 .twelve {
   width: 100%;
-  *width: 940px;
 }
 .quarter {
   width: 23.5%;
-  *width: 220px;
+  *width: expression(Math.floor(0.235 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) +  px ")";
 }
 .half {
   width: 49.0%;
-  *width: 460px;
+  *width: expression(Math.floor(0.49 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) +  px ")";
 }
 .one-third {
   width: 32%;
-  *width: 300px;
+  *width: expression(Math.floor(0.32 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) +  px ")";
 }
 /* ==========================================================================
 /* -- Tablet Devices (Layout, Modifications, etc)
    ========================================================================== */
-@media only screen and (min-width: 720px) and (max-width: 979px) {
+@media only screen and (min-width: 740px) and (max-width: 999px) {
   .container,
   .tablet-container {
     width: 720px;
@@ -731,6 +729,7 @@ textarea {
     float: none;
     width: 100%;
     margin: 10px 0 0 0;
+    display: block;
   }
   .tablet-full:first-child {
     margin-top: 0;
@@ -746,6 +745,15 @@ textarea {
   .tablet-center-text {
     text-align: center;
   }
+  .tablet-left {
+    float: left;
+  }
+  .tablet-right {
+    float: right;
+  }
+  .tablet-no-float {
+    float: none;
+  }
   .no-tablet {
     display: none;
   }
@@ -757,7 +765,7 @@ textarea {
 /* ==========================================================================
 /* -- Mobile Devices (Layout, Modifications, etc)
    ========================================================================== */
-@media only screen and (max-width: 719px) {
+@media only screen and (max-width: 739px) {
   /* Mobile Grid
   * For stacking full width columns, please use the new class .mobile-full */
   .mobile-one {
@@ -801,6 +809,7 @@ textarea {
     float: none;
     width: 100%;
     margin: 10px 0 0 0;
+    display: block;
   }
   .mobile-full:first-child {
     margin-top: 0;
@@ -815,6 +824,15 @@ textarea {
   }
   .mobile-center-text {
     text-align: center;
+  }
+  .mobile-left {
+    float: left;
+  }
+  .mobile-right {
+    float: right;
+  }
+  .mobile-no-float {
+    float: none;
   }
   .container,
   .mobile-container {
