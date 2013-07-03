@@ -29,7 +29,7 @@
 
 
 /* General Resets */
-* { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; *behavior: url(/js/boxsizing.htc); }
+* { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary { display: block; }
 html, button, input, select, textarea { font-family: sans-serif; }
 body, form, fieldset, legend, input, select, textarea, button { margin: 0; }
@@ -490,51 +490,51 @@ textarea {
 /* Columns */
 .one {
   width: 6.5%;
-  *width: 60px; // ie7
+  *width: expression(Math.floor(0.065 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
 }
 .two {
   width: 15%;
-  *width: 140px; // ie7
+  *width: expression(Math.floor(0.15 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
 }
 .three {
   width: 23.5%;
-  *width: 220px; // ie7
+  *width: expression(Math.floor(0.235 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
 }
 .four {
   width: 32%;
-  *width: 300px; // ie7
+  *width: expression(Math.floor(0.32 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
 }
 .five {
   width: 40.5%;
-  *width: 380px; // ie7
+  *width: expression(Math.floor(0.405 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+
 }
 .six {
   width: 49.0%;
-  *width: 460px; // ie7
+  *width: expression(Math.floor(0.49 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
 }
 .seven {
   width: 57.5%;
-  *width: 540px; // ie7
+  *width: expression(Math.floor(0.575 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
 }
 .eight {
   width: 66%;
-  *width: 620px; // ie7
+  *width: expression(Math.floor(0.66 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
 }
 .nine {
   width: 74.5%;
-  *width: 700px; // ie7
+  *width: expression(Math.floor(0.745 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
 }
 .ten {
   width: 83%;
-  *width: 780px; // ie7
+  *width: expression(Math.floor(0.83 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
 }
 .eleven {
   width: 91.5%;
-  *width: 860px; // ie7
+  *width: expression(Math.floor(0.915 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
 }
 .twelve {
   width: 100%;
-  *width: 940px; // ie7
 }
 
 .quarter { @extend .three; }
