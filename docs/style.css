@@ -619,62 +619,62 @@ textarea {
 /* Columns */
 .one {
   width: 6.5%;
-  *width: expression(Math.floor(0.065 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) +  px ")";
+  *width: expression(Math.floor(0.065 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) +  px ");
 }
 .two {
   width: 15%;
-  *width: expression(Math.floor(0.15 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) +  px ")";
+  *width: expression(Math.floor(0.15 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) +  px ");
 }
 .three {
   width: 23.5%;
-  *width: expression(Math.floor(0.235 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) +  px ")";
+  *width: expression(Math.floor(0.235 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) +  px ");
 }
 .four {
   width: 32%;
-  *width: expression(Math.floor(0.32 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) +  px ")";
+  *width: expression(Math.floor(0.32 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) +  px ");
 }
 .five {
   width: 40.5%;
-  *width: expression(Math.floor(0.40.5 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) +  px ")";
+  *width: expression(Math.floor(0.40.5 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) +  px ");
 }
 .six {
   width: 49.0%;
-  *width: expression(Math.floor(0.49 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) +  px ")";
+  *width: expression(Math.floor(0.49 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) +  px ");
 }
 .seven {
   width: 57.5%;
-  *width: expression(Math.floor(0.575 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) +  px ")";
+  *width: expression(Math.floor(0.575 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) +  px ");
 }
 .eight {
   width: 66%;
-  *width: expression(Math.floor(0.66 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) +  px ")";
+  *width: expression(Math.floor(0.66 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) +  px ");
 }
 .nine {
   width: 74.5%;
-  *width: expression(Math.floor(0.745 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) +  px ")";
+  *width: expression(Math.floor(0.745 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) +  px ");
 }
 .ten {
   width: 83%;
-  *width: expression(Math.floor(0.83 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) +  px ")";
+  *width: expression(Math.floor(0.83 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) +  px ");
 }
 .eleven {
   width: 91.5%;
-  *width: expression(Math.floor(0.915 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) +  px ")";
+  *width: expression(Math.floor(0.915 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) +  px ");
 }
 .twelve {
   width: 100%;
 }
 .quarter {
   width: 23.5%;
-  *width: expression(Math.floor(0.235 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) +  px ")";
+  *width: expression(Math.floor(0.235 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) +  px ");
 }
 .half {
   width: 49.0%;
-  *width: expression(Math.floor(0.49 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) +  px ")";
+  *width: expression(Math.floor(0.49 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) +  px ");
 }
 .one-third {
   width: 32%;
-  *width: expression(Math.floor(0.32 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) +  px ")";
+  *width: expression(Math.floor(0.32 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) +  px ");
 }
 /* ==========================================================================
 /* -- Tablet Devices (Layout, Modifications, etc)
