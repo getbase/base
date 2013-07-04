@@ -31,6 +31,9 @@ Preview the [docs](http://matthewhartman.github.io/base/docs/) to see the Base F
 - images (folder):
  - favicon.ico: Standard 32x32 favicon
  - apple-touch-icon (x3): All three sizes of Apple touch icons for iPhone 3, iPad and iPhone 4 with retina.
+- js (folder):
+  - default.js - Default javascript file (includes combined plugins and scripts)
+  - shiv.js - Enables HTML5 support for legacy versions of Internet Explorer 
 - grid (folder):
   - base-grid.psd - PSD grid based on 960.gs
 
