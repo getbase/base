@@ -11,108 +11,112 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-main,
-nav,
-section,
-summary {
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
   display: block;
 }
-html,
-button,
-input,
-select,
-textarea {
+
+html, button, input, select, textarea {
   font-family: sans-serif;
 }
-body,
-form,
-fieldset,
-legend,
-input,
-select,
-textarea,
-button {
+
+body, form, fieldset, legend, input, select, textarea, button {
   margin: 0;
 }
+
 html {
   font-size: 100%;
 }
+
 /* ==========================================================================
 /* --  Micro Clearfix and Helpers
    ========================================================================== */
 /* Micro Clearfix */
-.clear:before,
-.clear:after {
+.clear:before, .clear:after {
   content: "";
   display: table;
 }
+
 .clear:after {
   clear: both;
 }
+
 .clear {
   zoom: 1;
 }
-.section:before,
-.section:after {
+
+.section:before, .section:after {
   content: "";
   display: table;
 }
+
 .section:after {
   clear: both;
 }
+
 .section {
   zoom: 1;
 }
-.checkbox:before,
-.checkbox:after {
+
+.checkbox:before, .checkbox:after {
   content: "";
   display: table;
 }
+
 .checkbox:after {
   clear: both;
 }
+
 .checkbox {
   zoom: 1;
 }
+
 /* Helpers */
-.left {
+.left, .checkbox input[type=checkbox],
+.checkbox input[type=radio] {
   float: left;
 }
+
 .right {
   float: right;
 }
-.block {
+
+.block, .alert, .checkbox {
   display: block;
 }
-.inline-block {
+
+.inline-block, audio, canvas, video, .button {
   display: inline-block;
   *zoom: 1;
   *display: inline;
 }
+
 .inline {
   display: inline;
 }
-.strong {
+
+.strong, b, strong, dt, legend, input[type=text],
+input[type=password],
+input[type=email],
+input[type=search],
+input[type=tel],
+textarea {
   font-weight: bold;
 }
-.italic {
+
+.italic, dfn, blockquote {
   font-style: italic;
 }
+
 .center-text {
   text-align: center;
 }
-.none,
+
+.none, .no-desktop, audio:not([controls]),
 [hidden] {
   display: none;
 }
+
 .visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -123,25 +127,25 @@ html {
   width: 1px;
   left: -9999em;
 }
+
 .visuallyvisible {
+  clip: auto;
   clip: auto;
   width: auto;
   height: auto;
   overflow: visible;
   left: 0;
 }
+
 /* Alert */
 .alert {
   background-color: #ffc;
-  display: block;
   padding: 8px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
 }
-.no-desktop {
-  display: none;
-}
+
 /* ==========================================================================
 /* 1.0 - Document Setup (typography, links, paragraph, etc)
    ========================================================================== */
@@ -154,140 +158,137 @@ body {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
 }
+
 /* Strong and Italic */
-b,
-strong {
-  font-weight: bold;
-}
 /* Links */
 a {
   color: #f30;
 }
+
 a:hover {
   text-decoration: none;
 }
+
 a:focus {
   outline: thin dotted;
 }
-a:active,
-a:hover {
+
+a:active, a:hover {
   outline: 0;
 }
+
 /* Paragraph and Small */
-p,
-pre {
+p, pre {
   margin: 1em 0;
 }
+
 small {
   font-size: 80%;
 }
+
 /* Abbreviations */
 abbr[title] {
   border-bottom: 1px dotted;
 }
+
 /* Audio */
-audio,
-canvas,
-video {
-  display: inline-block;
-  *zoom: 1;
-  *display: inline;
-}
 audio:not([controls]) {
-  display: none;
   height: 0;
 }
+
 /* Small, 
 Sub and Sup */
 small {
   font-size: 80%;
 }
-sub,
-sup {
+
+sub, sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
   vertical-align: baseline;
 }
+
 sup {
-  top: -0.5em;
+  top: -.5em;
 }
+
 sub {
-  bottom: -0.25em;
+  bottom: -.25em;
 }
+
 /* Definition */
-dfn {
-  font-style: italic;
-}
 /* Images */
 img {
   border: 0;
   -ms-interpolation-mode: bicubic;
 }
+
 svg:not(:root) {
   overflow: hidden;
 }
+
 figure {
   margin: 0;
 }
+
 .image-left {
   margin-right: 20px;
 }
+
 .image-right {
   margin-left: 20px;
 }
+
 /* 1.1 Headings - h1, h2, h3, h4, h5, h6 & other (if any)
    ========================================================================== */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   margin: 0;
   font-weight: normal;
 }
-h1,
-.h1 {
+
+h1, .h1 {
   font-size: 40px;
   font-size: 2.5rem;
   margin-bottom: .2em;
 }
-h2,
-.h2 {
+
+h2, .h2 {
   font-size: 32px;
   font-size: 2rem;
   margin-bottom: .33em;
 }
-h3,
-.h3 {
+
+h3, .h3 {
   font-size: 26px;
   font-size: 1.625rem;
   margin-bottom: .5em;
 }
-h4,
-.h4 {
+
+h4, .h4 {
   font-size: 20px;
   font-size: 1.25rem;
   margin-bottom: .5em;
 }
-h5,
-.h5 {
+
+h5, .h5 {
   font-size: 18px;
   font-size: 1.125rem;
   margin-bottom: .5em;
 }
-h6,
-.h6 {
+
+h6, .h6 {
   font-size: 16px;
   font-size: 1rem;
   margin-bottom: .5em;
 }
+
 /* Reset Heading */
 .no-style-heading {
-  margin: 0;
   font-size: 100%;
+  margin: 0;
 }
+
 /* Horizontal Rule */
 hr {
   border: 0;
@@ -300,6 +301,7 @@ hr {
   box-sizing: content-box;
   height: 1px;
 }
+
 /* 1.2 Quotes and Code - block quotes, quotes, code, pre, etc
    ========================================================================== */
 /* Block Quotes and Quotes */
@@ -309,34 +311,35 @@ blockquote {
   font-size: 1.25rem;
   color: #777;
   margin: 1em 0;
-  font-style: italic;
 }
+
 cite {
   color: #222;
   font-style: normal;
 }
+
 q {
   quotes: none;
 }
-q:before,
-q:after {
+
+q:before, q:after {
   content: '';
   content: none;
 }
+
 /* Mark */
 mark {
   background: #ff0;
   color: #111;
 }
+
 /* Code */
-code,
-kbd,
-pre,
-samp {
+code, kbd, pre, samp {
   font-family: monospace, serif;
   _font-family: 'courier new', monospace;
   font-size: 1em;
 }
+
 code {
   color: #111;
   padding: 2px 5px;
@@ -345,42 +348,37 @@ code {
   -moz-border-radius: 3px;
   border-radius: 3px;
 }
+
 /* 1.3 Lists
    ========================================================================== */
-dl,
-menu,
-ol,
-ul {
+dl, menu, ol, ul {
   margin: 1em 0;
 }
-ul ul,
-ol ol,
-ul ol,
-ol ul {
+
+ul ul, ol ol, ul ol, ol ul {
   margin: 0;
 }
+
 dd {
   margin: 0 0 0 40px;
 }
-dt {
-  font-weight: bold;
-}
-menu,
-ol,
-ul {
+
+menu, ol, ul {
   padding: 0 0 0 40px;
 }
-nav ul,
-nav ol {
+
+nav ul, nav ol {
   list-style: none;
   list-style-image: none;
 }
+
 /* Remove Styling from List */
 .no-style-list {
   list-style: none;
   padding: 0;
   margin: 0;
 }
+
 /* 1.4 Tables
    ========================================================================== */
 table {
@@ -394,6 +392,7 @@ table {
   -ms-word-wrap: break-word;
   *white-space: normal;
 }
+
 table th,
 table td {
   padding: 8px;
@@ -402,15 +401,18 @@ table td {
   border-top: 1px solid #eee;
   border-left: 1px solid #eee;
 }
+
 table thead th {
   vertical-align: bottom;
   font-weight: bold;
   background-color: #e1e1e1;
   color: #333;
 }
+
 table tfoot td {
   font-weight: bold;
 }
+
 table caption {
   padding: 0.5em;
   font-style: italic;
@@ -418,30 +420,31 @@ table caption {
   border-bottom: 0;
   font-weight: bold;
 }
+
 /* 1.5 Forms, Labels and Inputs
    ========================================================================== */
 fieldset {
   border: 0;
   padding: 0;
 }
+
 legend {
   border: 0;
   padding: 0;
   white-space: normal;
   *margin-left: -7px;
-  font-weight: bold;
 }
+
 label {
   cursor: pointer;
 }
-button,
-input,
-select,
-textarea {
+
+button, input, select, textarea {
   font-size: 100%;
   vertical-align: baseline;
   *vertical-align: middle;
 }
+
 input[type=text],
 input[type=password],
 input[type=email],
@@ -451,7 +454,6 @@ textarea {
   padding: 5px 7px;
   -webkit-appearance: none;
   -moz-appearance: none;
-  font-weight: bold;
   background-color: #fff;
   color: #777;
   border: 1px solid #ddd;
@@ -460,6 +462,7 @@ textarea {
   -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
 }
+
 input[type=checkbox],
 input[type=radio] {
   cursor: pointer;
@@ -468,13 +471,9 @@ input[type=radio] {
   *height: 13px;
   *width: 13px;
 }
+
 .checkbox {
-  display: block;
   margin: .2em 0;
-}
-.checkbox input[type=checkbox],
-.checkbox input[type=radio] {
-  float: left;
 }
 .checkbox label {
   padding-left: 5px;
@@ -482,47 +481,55 @@ input[type=radio] {
   display: table;
   *zoom: 1;
 }
-button,
-input {
+
+button, input {
   line-height: normal;
 }
-button,
-select {
+
+button, select {
   text-transform: none;
 }
+
 /* Buttons */
 button,
 html input[type="button"],
 input[type="reset"],
 input[type="submit"] {
+  cursor: pointer;
   -webkit-appearance: button;
   cursor: pointer;
   *overflow: visible;
 }
+
 button[disabled],
 html input[disabled] {
   cursor: default;
 }
+
 input[type="search"] {
   -webkit-appearance: textfield;
   -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
 }
+
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
+
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
+
 textarea {
   overflow: auto;
   vertical-align: top;
   resize: none;
 }
+
 /* Custom Buttons */
 .button {
   -webkit-border-radius: 5px;
@@ -533,10 +540,8 @@ textarea {
   color: #333;
   text-decoration: none;
   text-align: center;
-  display: inline-block;
-  *zoom: 1;
-  *display: inline;
 }
+
 .orange-button {
   background-color: #fee9cc;
 }
@@ -547,11 +552,13 @@ textarea {
 .orange-button:active {
   background-color: #fdeed8;
 }
+
 .button[disabled],
 .button.disabled {
   color: #999;
   background-color: #f1f1f1;
 }
+
 .no-style-button {
   font-size: 13px;
   font-size: 0.8125rem;
@@ -567,11 +574,13 @@ textarea {
 .no-style-button:hover {
   text-decoration: none;
 }
+
 .no-style-button[disabled],
 .no-style-button.disabled {
   text-decoration: none;
   color: #999;
 }
+
 /* ==========================================================================
 /* 2.0 - Grid Layout (Responsive)
    ========================================================================== */
@@ -579,151 +588,169 @@ textarea {
 .section {
   position: relative;
 }
+
 /* Rows */
 .row {
   margin: .5em 0;
 }
+
 .row-one {
   margin: 1em 0;
 }
+
 .row-two {
   margin: 2em 0;
 }
+
 .row-three {
   margin: 3em 0;
 }
-.center {
+
+.center, .container, .container-full {
   margin-left: auto;
   margin-right: auto;
 }
+
 .container {
   max-width: 960px;
-  margin-left: auto;
-  margin-right: auto;
   padding-left: 10px;
   padding-right: 10px;
 }
+
 .container-full {
   max-width: 980px;
-  margin-left: auto;
-  margin-right: auto;
 }
+
 /* Fluid Grid */
 .col {
   margin-left: 2%;
   float: left;
 }
+
 .col:first-child {
   margin-left: 0;
 }
+
 /* Columns */
 .one {
   width: 6.5%;
   *width: expression(Math.floor(0.065 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
 }
+
 .two {
   width: 15%;
   *width: expression(Math.floor(0.15 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
 }
-.three {
+
+.three, .quarter {
   width: 23.5%;
   *width: expression(Math.floor(0.235 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
 }
-.four {
+
+.four, .one-third {
   width: 32%;
   *width: expression(Math.floor(0.32 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
 }
+
 .five {
   width: 40.5%;
-  *width: expression(Math.floor(0.40.5 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+  *width: expression(Math.floor(0.405 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
 }
-.six {
+
+.six, .half {
   width: 49.0%;
   *width: expression(Math.floor(0.49 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
 }
+
 .seven {
   width: 57.5%;
   *width: expression(Math.floor(0.575 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
 }
+
 .eight {
   width: 66%;
   *width: expression(Math.floor(0.66 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
 }
+
 .nine {
   width: 74.5%;
   *width: expression(Math.floor(0.745 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
 }
+
 .ten {
   width: 83%;
   *width: expression(Math.floor(0.83 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
 }
+
 .eleven {
   width: 91.5%;
   *width: expression(Math.floor(0.915 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
 }
+
 .twelve {
   width: 100%;
 }
-.quarter {
-  width: 23.5%;
-  *width: expression(Math.floor(0.235 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
-}
-.half {
-  width: 49.0%;
-  *width: expression(Math.floor(0.49 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
-}
-.one-third {
-  width: 32%;
-  *width: expression(Math.floor(0.32 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
-}
+
 /* ==========================================================================
 /* -- Tablet Devices (Layout, Modifications, etc)
    ========================================================================== */
 @media only screen and (min-width: 740px) and (max-width: 999px) {
-  .container,
-  .tablet-container {
+  .container, .tablet-container {
     width: 720px;
     padding-left: 10px;
     padding-right: 10px;
   }
+
   /* Tablet Grid
   * For stacking full width columns, please use the new class .tablet-full */
   .tablet-one {
     width: 6.5%;
   }
+
   .tablet-two {
     width: 15%;
   }
+
   .tablet-three {
     width: 23.5%;
   }
+
   .tablet-four {
     width: 32%;
   }
+
   .tablet-five {
     width: 40.5%;
   }
+
   .tablet-six {
     width: 49.0%;
   }
+
   .tablet-seven {
     width: 57.5%;
   }
+
   .tablet-eight {
     width: 66%;
   }
+
   .tablet-nine {
     width: 74.5%;
   }
+
   .tablet-ten {
     width: 83%;
   }
+
   .tablet-eleven {
     width: 91.5%;
   }
+
   .tablet-twelve {
     width: 100%;
   }
+
   .tablet-full {
     clear: both;
     float: none;
@@ -731,32 +758,41 @@ textarea {
     margin: 10px 0 0 0;
     display: block;
   }
+
   .tablet-full:first-child {
     margin-top: 0;
   }
+
   .tablet-center {
     margin-left: auto;
     margin-right: auto;
     float: none;
   }
-  .tablet-center:first-child {
-    margin-left: auto;
-  }
-  .tablet-center-text {
-    text-align: center;
-  }
+
   .tablet-left {
     float: left;
   }
+
   .tablet-right {
     float: right;
   }
+
   .tablet-no-float {
     float: none;
   }
+
+  .tablet-center:first-child {
+    margin-left: auto;
+  }
+
+  .tablet-center-text {
+    text-align: center;
+  }
+
   .no-tablet {
     display: none;
   }
+
   .show-tablet {
     display: block;
   }
@@ -771,39 +807,51 @@ textarea {
   .mobile-one {
     width: 6.5%;
   }
+
   .mobile-two {
     width: 15%;
   }
+
   .mobile-three {
     width: 23.5%;
   }
+
   .mobile-four {
     width: 32%;
   }
+
   .mobile-five {
     width: 40.5%;
   }
+
   .mobile-six {
     width: 49.0%;
   }
+
   .mobile-seven {
     width: 57.5%;
   }
+
   .mobile-eight {
     width: 66%;
   }
+
   .mobile-nine {
     width: 74.5%;
   }
+
   .mobile-ten {
     width: 83%;
   }
+
   .mobile-eleven {
     width: 91.5%;
   }
+
   .mobile-twelve {
     width: 100%;
   }
+
   .mobile-full {
     clear: both;
     float: none;
@@ -811,42 +859,52 @@ textarea {
     margin: 10px 0 0 0;
     display: block;
   }
+
   .mobile-full:first-child {
     margin-top: 0;
   }
+
   .mobile-center {
     margin-left: auto;
     margin-right: auto;
     float: none;
   }
+
   .mobile-center:first-child {
     margin-left: auto;
   }
+
   .mobile-center-text {
     text-align: center;
   }
+
   .mobile-left {
     float: left;
   }
+
   .mobile-right {
     float: right;
   }
+
   .mobile-no-float {
     float: none;
   }
-  .container,
-  .mobile-container {
+
+  .container, .mobile-container {
     padding-left: 20px;
     padding-right: 20px;
   }
+
   /* Mobile Tables */
   table th,
   table td {
     padding: 4px;
   }
+
   .no-mobile {
     display: none;
   }
+
   .show-mobile {
     display: block;
   }

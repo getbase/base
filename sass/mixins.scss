@@ -8,15 +8,15 @@
 // ==========================================================================
 
 // Font Sizes (REMs with PX fallback for older browsers)
-@mixin font-size($sizeValue: 1.6) {
-  font-size: ($sizeValue * 16) + px;
-  font-size: $sizeValue + rem;
+@mixin font-size($size) {
+    font-size: $size + px;
+    font-size: ($size/16) + rem;
 }
 
 // Line Height Sizes (REMs with PX fallback for older browsers)
-@mixin line-height($sizeValue: 1.6) {
-  line-height: ($sizeValue * 16) + px;
-  line-height: $sizeValue + rem;
+@mixin line-height($size) {
+    font-size: $size + px;
+    font-size: ($size/16) + rem;
 }
 
 // Rounded Corners
