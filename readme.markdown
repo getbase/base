@@ -40,7 +40,7 @@ Preview the [docs](http://matthewhartman.github.io/base/docs/) to see the Base F
 Base was built by Matthew Hartman [(@hartmanmatthew)](http://twitter.com/hartmanmatthew), a passionate front end developer based in Melbourne, Australia.
 
 ## Other Contributions / Downloads
-- [base_css-rails](https://github.com/rkrdo/base_css-rails) - a gem that adds the Base Framework to the applicaton's asset pipeline by Ricardo Cruz
+- [base_css-rails](https://github.com/rkrdo/base_css-rails) - a gem that adds the Base Framework to the applications asset pipeline by Ricardo Cruz
 - Thanks to Beau Smith (@beau) for the custom breakpoint suggestion
 
 ## Thank You / Credits
