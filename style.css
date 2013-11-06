@@ -10,6 +10,7 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  *behavior: url(/js/boxsizing.htc);
 }
 article,
 aside,
@@ -465,6 +466,10 @@ textarea {
   font-size: 100%;
   vertical-align: baseline;
   *vertical-align: middle;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  *behavior: url(/js/boxsizing.htc);
 }
 input[type=text],
 input[type=password],
@@ -641,7 +646,7 @@ textarea {
   margin-right: auto;
 }
 .container {
-  max-width: 960px;
+  max-width: 940px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 10px;
@@ -663,62 +668,63 @@ textarea {
 /* Columns */
 .one {
   width: 6.5%;
-  *width: expression(Math.floor(0.065 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+  *width: 60px;
 }
 .two {
   width: 15%;
-  *width: expression(Math.floor(0.15 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+  *width: 140px;
 }
 .three {
   width: 23.5%;
-  *width: expression(Math.floor(0.235 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+  *width: 220px;
 }
 .four {
   width: 32%;
-  *width: expression(Math.floor(0.32 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+  *width: 300px;
 }
 .five {
   width: 40.5%;
-  *width: expression(Math.floor(0.40.5 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+  *width: 380px;
 }
 .six {
   width: 49.0%;
-  *width: expression(Math.floor(0.49 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+  *width: 460px;
 }
 .seven {
   width: 57.5%;
-  *width: expression(Math.floor(0.575 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+  *width: 540px;
 }
 .eight {
   width: 66%;
-  *width: expression(Math.floor(0.66 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+  *width: 620px;
 }
 .nine {
   width: 74.5%;
-  *width: expression(Math.floor(0.745 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+  *width: 700px;
 }
 .ten {
   width: 83%;
-  *width: expression(Math.floor(0.83 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+  *width: 780px;
 }
 .eleven {
   width: 91.5%;
-  *width: expression(Math.floor(0.915 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+  *width: 860px;
 }
 .twelve {
   width: 100%;
+  *width: 940px;
 }
 .quarter {
   width: 23.5%;
-  *width: expression(Math.floor(0.235 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+  *width: 220px;
 }
 .half {
   width: 49.0%;
-  *width: expression(Math.floor(0.49 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+  *width: 460px;
 }
 .one-third {
   width: 32%;
-  *width: expression(Math.floor(0.32 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+  *width: 300px;
 }
 /* Header */
 .header {
@@ -794,43 +800,99 @@ textarea {
   margin-bottom: 30px;
 }
 .devices {
-  height: 130px;
+  height: 160px;
   overflow: hidden;
 }
 .device {
-  background: url(images/devices.png) no-repeat;
-  height: 130px;
+  height: 160px;
   display: inline-block;
   *zoom: 1;
   *display: inline;
+  position: relative;
 }
 .phone {
+  border: 2px solid #333;
+  background: #dedede;
+  border-radius: 10px 10px 0px 0px;
+  -moz-border-radius: 10px 10px 0px 0px;
+  -webkit-border-radius: 10px 10px 0px 0px;
   width: 160px;
-  background-position: 0 0;
+  padding: 10px 10px 0 10px;
+}
+.screen {
+  width: 100%;
+  height: 131px;
+  background-color: #262629;
+}
+.camera {
+  background-color: #222;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 7px;
+}
+.mobile-camera {
+  width: 40px;
+  height: 8px;
+  border-radius: 100px;
+  -moz-border-radius: 100px;
+  -webkit-border-radius: 100px;
+}
+.tablet-camera {
+  width: 8px;
+  height: 8px;
+  background-color: transparent;
+  border: 2px solid #222;
+  border-radius: 100%;
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
+}
+.desktop-camera {
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
 }
 .desktop {
   width: 508px;
-  background-position: -200px 0;
-  margin: 0 30px;
+  border: 2px solid #333;
+  background: #dedede;
+  border-radius: 15px 15px 0px 0px;
+  -moz-border-radius: 15px 15px 0px 0px;
+  -webkit-border-radius: 15px 15px 0px 0px;
+  padding: 10px 20px 0 20px;
+  margin: 0 44px;
 }
 .tablet {
   width: 180px;
-  background-position: -750px 0;
+  border: 2px solid #333;
+  background: #dedede;
+  border-radius: 10px 10px 0px 0px;
+  -moz-border-radius: 10px 10px 0px 0px;
+  -webkit-border-radius: 10px 10px 0px 0px;
+  padding: 10px 20px 0 20px;
+}
+.carbonads-container {
+  position: absolute;
+  top: 30px;
+  left: 90px;
 }
 .features {
   background-color: #202f3c;
   color: #fff;
   padding: 50px 0;
 }
-.features h2 { color: #fff; }
 .features p {
   margin: 0;
+}
+.features h2 {
+  color: #fff;
 }
 /* Content */
 .content {
   padding: 40px 0;
 }
-.img { width: 440px; }
 .blue-bg {
   background-color: #e7f2fb;
 }
@@ -859,15 +921,42 @@ textarea {
   background: url(images/icons.png) no-repeat;
   background-position: 0 0;
 }
-.tick { background-position: 0 -224px; }
-.no-svg .tick { background-position: 0 -208px; }
-.code { background-position: 0 -82px; }
-.no-svg .code { background-position: 0 -65px; }
-.cloud { background-position: 0 -152px; }
-.no-svg .cloud { background-position: 0 -135px; }
-.github { background-position: 0 -10px; }
-.no-svg .github { background-position: 0 7px; }
-
+.tick {
+  background-position: 0 -225px;
+}
+.code {
+  background-position: 0 -83px;
+}
+.cloud {
+  background-position: 0 -152px;
+}
+.github {
+  background-position: 0 -10px;
+}
+.tick {
+  background-position: 0 -224px;
+}
+.no-svg .tick {
+  background-position: 0 -208px;
+}
+.code {
+  background-position: 0 -82px;
+}
+.no-svg .code {
+  background-position: 0 -65px;
+}
+.cloud {
+  background-position: 0 -152px;
+}
+.no-svg .cloud {
+  background-position: 0 -135px;
+}
+.github {
+  background-position: 0 -10px;
+}
+.no-svg .github {
+  background-position: 0 7px;
+}
 .github-logo {
   width: 260px;
   height: 180px;
@@ -883,7 +972,8 @@ textarea {
 /* -- Tablet Devices (Layout, Modifications, etc)
    ========================================================================== */
 @media only screen and (min-width: 720px) and (max-width: 979px) {
-  .container, .tablet-container {
+  .container,
+  .tablet-container {
     width: 700px;
     padding-left: 10px;
     padding-right: 10px;
@@ -1018,7 +1108,8 @@ textarea {
   .mobile-full:first-child {
     margin-top: 0;
   }
-  .container, .mobile-container {
+  .container,
+  .mobile-container {
     padding-left: 20px;
     padding-right: 20px;
   }

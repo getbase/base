@@ -654,28 +654,84 @@ textarea {
   margin-bottom: 30px;
 }
 .devices {
-  height: 130px;
+  height: 160px;
   overflow: hidden;
 }
 .device {
-  background: url(images/devices.png) no-repeat;
-  height: 130px;
+  height: 160px;
   .inline-block();
+  position: relative;
 }
 .phone {
+  border: 2px solid #333;
+  background: #dedede;
+  border-radius: 10px 10px 0px 0px;
+  -moz-border-radius: 10px 10px 0px 0px;
+  -webkit-border-radius: 10px 10px 0px 0px;
   width: 160px;
-  background-position: 0 0;
+  padding: 10px 10px 0 10px;
+}
+.screen {
+  width: 100%;
+  height: 131px;
+  background-color: #262629;
+}
+.camera {
+  background-color: #222;
+  .block();
+  .center();
+  margin-bottom: 7px;
+}
+.mobile-camera {
+  width: 40px;
+  height: 8px;
+  border-radius: 100px;
+  -moz-border-radius: 100px;
+  -webkit-border-radius: 100px;
+}
+.tablet-camera {
+  width: 8px;
+  height: 8px;
+  background-color: transparent;
+  border: 2px solid #222;
+  border-radius: 100%;
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
+}
+.desktop-camera {
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
 }
 .desktop {
   width: 508px;
-  background-position: -200px 0;
-  margin: 0 30px;
+  border: 2px solid #333;
+  background: #dedede;
+  border-radius: 15px 15px 0px 0px;
+  -moz-border-radius: 15px 15px 0px 0px;
+  -webkit-border-radius: 15px 15px 0px 0px;
+  padding: 10px 20px 0 20px;
+  margin: 0 44px;
 }
 .tablet {
   width: 180px;
-  background-position: -750px 0;
+  border: 2px solid #333;
+  background: #dedede;
+  border-radius: 10px 10px 0px 0px;
+  -moz-border-radius: 10px 10px 0px 0px;
+  -webkit-border-radius: 10px 10px 0px 0px;
+  padding: 10px 20px 0 20px;
 }
-
+.carbonads-container {
+  position: absolute;
+  top: 30px;
+  left: 90px;
+}
+.carbonad {
+  //border-color: #393939;
+}
 .features {
   background-color: #202f3c;
   color: #fff;
