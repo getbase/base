@@ -2,7 +2,7 @@
 
   Base Stylesheet - http://git.io/base
   Author: Matthew Hartman - http://www.matthewhartman.com.au/
-  Version: 1.5 - Last Updated: 21st June, 2013
+  Version: 1.6 - Last Updated: 31st of January, 2014
 
 ========================================================================== */
 
@@ -17,7 +17,7 @@
   // Resonsive Design Break Points
   $mobile-breakpoint:         $tablet-container + 19px;
   $tablet-breakpoint:         $tablet-container + 20px;
-  $desktop-breakpoint:        $desktop-container + 39px;
+  $desktop-breakpoint:        $desktop-container;
 
   // Heading                  Size
   $h1:                        40;
@@ -28,7 +28,7 @@
   $h6:                        16;
 
 
-/* General Resets */
+/* Resets */
 * { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary { display: block; }
 html, button, input, select, textarea { font-family: sans-serif; }
@@ -36,66 +36,14 @@ body, form, fieldset, legend, input, select, textarea, button { margin: 0; }
 html { font-size: 100%; }
 
 /* ==========================================================================
-/* --  Micro Clearfix and Helpers
-   ========================================================================== */
-
-/* Micro Clearfix */
-.clear:before, .clear:after { content: ""; display: table; } .clear:after { clear: both; } .clear { zoom: 1; }
-.section:before, .section:after { content: ""; display: table; } .section:after { clear: both; } .section { zoom: 1; }
-.checkbox:before, .checkbox:after { content: ""; display: table; } .checkbox:after { clear: both; } .checkbox { zoom: 1; }
-
-/* Helpers */
-.left { float: left; }
-.right { float: right; }
-.block { display: block; }
-.inline-block {
-  display: inline-block;
-  *zoom: 1;
-  *display: inline;
-}
-.inline { display: inline; }
-.strong { font-weight: bold; }
-.italic { font-style: italic; }
-.center-text { text-align: center; }
-.none, 
-[hidden] {
-  display: none;
-}
-.visuallyhidden {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-  left: -9999em;
-}
-.visuallyvisible {
-  clip: auto;
-  width: auto;
-  height: auto;
-  overflow: visible;
-  left: 0;
-}
-
-/* Alert */
-.alert {
-  background-color: #ffc;
-  @extend .block;
-  padding: 8px;
-  @include rounded(5);
-}
-
-.no-desktop { @extend .none; }
-
-/* ==========================================================================
 /* 1.0 - Document Setup (typography, links, paragraph, etc)
    ========================================================================== */
 /* Body */
 body {
-  @include font-size(14);
-  color: #555;
+  font-family: sans-serif;
+  @include font-size(16);
+  @include line-height(21);
+  color: #434343;
   background-color: #fff;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -103,16 +51,19 @@ body {
 
 /* Strong and Italic */
 b, strong { @extend .strong; }
+i, em, .em { @extend .italic; }
 
 /* Links */
-a { color: #f30; }
+a { color: #27ae61; }
 a:hover { text-decoration: none; }
 a:focus { outline: thin dotted; }
 a:active, a:hover { outline: 0; }
 
 
 /* Paragraph and Small */
-p, pre { margin: 1em 0; }
+p { margin: 0 0 1.6em 0; }
+pre { margin: 1em 0; }
+ul + p, ul + pre, ol + p, ol + pre { margin-top: 0; }
 small { font-size: 80%; }
 
 /* Abbreviations */
@@ -157,37 +108,32 @@ figure { margin: 0; }
 /* 1.1 Headings - h1, h2, h3, h4, h5, h6 & other (if any)
    ========================================================================== */
 h1, h2, h3, h4, h5, h6 {
-  margin: 0;
+  line-height: normal;
   font-weight: normal;
+  margin: 0 0 .33em 0;
 }
 h1, .h1 {
   @include font-size($h1);
-  margin-bottom: .2em;
 }
 h2, .h2 {
   @include font-size($h2);
-  margin-bottom: .33em;
 }
 h3, .h3 { 
   @include font-size($h3);
-  margin-bottom: .5em;
 }
 h4, .h4 {
   @include font-size($h4);
-  margin-bottom: .5em;
 }
 h5, .h5 {
   @include font-size($h5);
-  margin-bottom: .5em;
 }
 h6, .h6 {
   @include font-size($h6);
-  margin-bottom: .5em;
 }
 /* Reset Heading */
 .no-style-heading {
-  font-size: 100%;
   margin: 0;
+  font-size: 100%;
 }
 
 /* Horizontal Rule */
@@ -208,18 +154,27 @@ hr {
    ========================================================================== */
 /* Block Quotes and Quotes */
 blockquote {
-  font-family: "Georgia", "Times" serif;
-  @include font-size(20);
-  color: #777;
+  @include font-size(22);
+  @include line-height(32);
+  color: #434343;
   margin: 1em 0;
   @extend .italic;
+  p {
+    margin: 1em 0;
+  }
 }
 cite {
-  color: #222;
+  color: #434343;
   font-style: normal;
+  @extend .normal;
+  @include font-size(16);
+  line-height: normal;
 }
 
-q { quotes: none; }
+q {
+  @extend .italic;
+  quotes: none;
+}
 q:before, q:after {
   content: '';
   content: none;
@@ -233,46 +188,65 @@ mark {
 
 /* Code */
 code, kbd, pre, samp {
-  font-family: monospace, serif;
-  _font-family: 'courier new', monospace;
-  font-size: 1em;
+  word-wrap: break-word;
+  font-family: 'courier new', monospace, serif;
+  @include font-size(13);
+  line-height: normal;
+  font-weight: normal;
+  background-color: #f1f1f1;
+  padding: 10px;
 }
 code {
   color: #111;
-  padding: 2px 5px;
-  background-color: #f1f1f1;
-  @include rounded(3);
 }
 
 /* 1.3 Lists
    ========================================================================== */
-dl, menu, ol, ul {
-  margin: 1em 0;
+dl, menu, ol, ul { margin: 1em 0; }
+dd,
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+  margin: 0;
 }
-ul ul, ol ol, ul ol, ol ul { margin: 0; }
-dd { margin: 0 0 0 40px; }
-dt { @extend .strong; }
-menu, ol, ul { padding: 0 0 0 40px; }
+dt { @extend .normal; }
+dd {
+  margin-bottom: 1em;
+}
+menu, ol, ul { padding: 0 0 0 22px; }
 nav ul, nav ol {
   list-style: none;
   list-style-image: none;
 }
 /* Remove Styling from List */
-.no-style-list {
+.unstyled-list {
   list-style: none;
   padding: 0;
   margin: 0;
+  li {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+.inline-list {
+  @extend .unstyled-list;
+  @extend .inline-block;
+  li {
+    @extend .inline-block;
+  }
 }
 
 /* 1.4 Tables
    ========================================================================== */
 table {
   width: 100%;
+  margin: 1em 0;
   table-layout: fixed;
   border-collapse: collapse;
   border-spacing: 0;
-  border-right: 1px solid #eee;
-  border-bottom: 1px solid #eee;
+  border-right: 1px solid #f1f1f1;
+  border-bottom: 1px solid #f1f1f1;
   word-wrap: break-word; // CSS3 Browsers
   -ms-word-wrap: break-word; // IE8
   *white-space: normal;  // IE7
@@ -285,21 +259,20 @@ table td {
   border-top: 1px solid #eee;
   border-left: 1px solid #eee;
 }
-table thead th {
+table thead th,
+table tfoot th {
   vertical-align: bottom;
-  font-weight: bold;
-  background-color: #e1e1e1;
+  @extend .normal;
+  background-color: #f1f1f1;
   color: #333;
 }
-table tfoot td {
-  font-weight: bold;
-}
 table caption {
-  padding: 0.5em;
-  font-style: italic;
-  background-color: #eee;
+  padding: 8px;
+  font-weight: normal;
+  font-style: normal;
+  @extend .left-text;
+  @extend .normal;
   border-bottom: 0;
-  font-weight: bold;
 }
 
 /* 1.5 Forms, Labels and Inputs
@@ -313,9 +286,12 @@ legend {
   padding: 0;
   white-space: normal;
   *margin-left: -7px;
-  @extend .strong;
+  @extend .normal;
 }
-label { cursor: pointer; }
+label {
+  margin: 0;
+  cursor: pointer;
+}
 
 button, input, select, textarea {
   font-size: 100%;
@@ -329,22 +305,22 @@ input[type=email],
 input[type=search], 
 input[type=tel],
 textarea {
-  padding: 5px 7px;
+  padding: 5px;
   -webkit-appearance: none; // Remove Default Browser Behaviour for Safari
   -moz-appearance: none; // Remove Default Browser Behaviour for Firefox
-  @extend .strong;
+  @extend .normal;
+  line-height: normal;
   background-color: #fff;
-  color: #777;
-  border: 1px solid #ddd;
-  border-top: 1px solid #999;
-  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ccc;
+  color: #111;
+  border: 1px solid #ccc;
 }
 input[type=checkbox], 
 input[type=radio] {
   cursor: pointer;
   box-sizing: border-box;
+  line-height: normal;
+  margin: 0;
   padding: 0;
   *height: 13px;
   *width: 13px;
@@ -355,6 +331,7 @@ input[type=radio] {
   margin: .2em 0;
   input[type=checkbox], 
   input[type=radio] {
+    margin-top: .05em;
     @extend .left;
   }
   label {
@@ -402,35 +379,39 @@ textarea {
 
 /* Custom Buttons */
 .button {
-  @include rounded(5);
   border: 0;
   padding: 1em 3em;
-  color: #333;
+  background-color: #e74b3c;
+  color: #fff;
   text-decoration: none;
-  text-align: center;
+  @extend .center-text;
   @extend .inline-block;
+  position: relative;
+}
+.button:hover {
+  background-color: #fc5547;
+}
+.button:active {
+  top: 1px;
 }
 
-.orange-button {
-  background-color: #fee9cc;
-
-  &:hover {
-    background-color: #ffe0b5;
-    -webkit-tap-highlight-color: #fdeed8;
-  } // end hover
-  &:active {
-    background-color: #fdeed8;
-  } // end hover
+.grey-button {
+  background-color: #eee;
+  color: #434343;
 }
+.grey-button:hover {
+  background-color: #f1f1f1;
+}
+
 .button[disabled],
 .button.disabled {
   color: #999;
   background-color: #f1f1f1;
 }
 
-.no-style-button {
-  @include font-size(13);
-  color: #f30;
+.unstyled-button {
+  @include font-size(16);
+  color: #27ae61;
   text-decoration: underline;
   border: 0;
   background: transparent;
@@ -438,15 +419,15 @@ textarea {
   padding: 0;
   cursor: pointer;
   outline: 0;
-
   &:hover {
   text-decoration: none;
   } // end hover
 }
-.no-style-button[disabled],
-.no-style-button.disabled {
+.unstyled-button[disabled],
+.unstyled-button.disabled {
   text-decoration: none;
   color: #999;
+  background-color: #ccc;
 }
 
 
@@ -456,27 +437,17 @@ textarea {
 /* Sections & Content Blocks */
 .section { position: relative; }
 
-
-/* Rows */
-.row { margin: .5em 0; }
-.row-one { margin: 1em 0; }
-.row-two { margin: 2em 0; }
-.row-three { margin: 3em 0; }
-
-.center {
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .container {
   max-width: $desktop-container;
-  @extend .center;
+  margin-left: auto;
+  margin-right: auto;
   padding-left: 10px;
   padding-right: 10px;
 }
 .container-full {
   max-width: $desktop-container + 20px;
-  @extend .center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Fluid Grid */
@@ -487,115 +458,261 @@ textarea {
 .col:first-child { margin-left: 0; }
 
 /* Columns */
-.one {
+.col-1 {
   width: 6.5%;
   *width: expression(Math.floor(0.065 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
 }
-.two {
+.col-2 {
   width: 15%;
   *width: expression(Math.floor(0.15 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
 }
-.three {
+.col-3 {
   width: 23.5%;
   *width: expression(Math.floor(0.235 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
 }
-.four {
+.col-4 {
   width: 32%;
   *width: expression(Math.floor(0.32 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
 }
-.five {
+.col-5 {
   width: 40.5%;
-  *width: expression(Math.floor(0.405 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
-
+  *width: expression(Math.floor(0.40.5 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
 }
-.six {
+.col-6 {
   width: 49.0%;
   *width: expression(Math.floor(0.49 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
 }
-.seven {
+.col-7 {
   width: 57.5%;
   *width: expression(Math.floor(0.575 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
 }
-.eight {
+.col-8 {
   width: 66%;
   *width: expression(Math.floor(0.66 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
 }
-.nine {
+.col-9 {
   width: 74.5%;
   *width: expression(Math.floor(0.745 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
 }
-.ten {
+.col-10 {
   width: 83%;
   *width: expression(Math.floor(0.83 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
 }
-.eleven {
+.col-11 {
   width: 91.5%;
   *width: expression(Math.floor(0.915 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
 }
-.twelve {
+.col-12 {
   width: 100%;
 }
 
-.quarter { @extend .three; }
-.half { @extend .six; }
-.one-third { @extend .four; }
+.col-1-4 { @extend .col-3; }
+.col-1-2 { @extend .col-6; }
+.col-1-3 { @extend .col-4; }
 
-// ==========================================================================
-// -- Custom Website Styles for Desktop
-// ==========================================================================
-
-// Your custom website styles for desktop go here...
-
-
-
-/* ==========================================================================
-/* -- Tablet Devices (Layout, Modifications, etc)
-   ========================================================================== */
-@media only screen and (min-width: $tablet-breakpoint) and (max-width: $desktop-breakpoint) {
-.container, .tablet-container {
-  width: $tablet-container;
-  padding-left: 10px;
-  padding-right: 10px;
+/* Desktop Rows */
+.row {
+  padding-top: .5em;
+  padding-bottom: .5em;
+}
+.row-1 {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+.row-2 {
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+.row-3 {
+  padding-top: 3em;
+  padding-bottom: 3em;
+}
+.row-4 {
+  padding-top: 4em;
+  padding-bottom: 4em;
+}
+.row-5 {
+  padding-top: 5em;
+  padding-bottom: 5em;
+}
+.row-6 {
+  padding-top: 6em;
+  padding-bottom: 6em;
+}
+.row-7 {
+  padding-top: 7em;
+  padding-bottom: 7em;
 }
 
-/* Tablet Grid
-* For stacking full width columns, please use the new class .tablet-full */
-.tablet-one { width: 6.5%; }
-.tablet-two { width: 15%; }
-.tablet-three { width: 23.5%; }
-.tablet-four { width: 32%; }
-.tablet-five { width: 40.5%; }
-.tablet-six { width: 49.0%; }
-.tablet-seven { width: 57.5%; }
-.tablet-eight { width: 66%; }
-.tablet-nine { width: 74.5%; }
-.tablet-ten { width: 83%; }
-.tablet-eleven { width: 91.5%; }
-.tablet-twelve { width: 100%; }
+/* ==========================================================================
+/* 3.0 - CSS Helpers / Extras
+   ========================================================================== */
+
+/* Clearfix */
+.clear:before, .clear:after { content: ""; display: table; } .clear:after { clear: both; } .clear { zoom: 1; }
+
+/* Floats */
+.left { float: left; }
+.right { float: right; }
+
+/* Display */
+.block { display: block; }
+.inline { display: inline; }
+.inline-block {
+  display: inline-block;
+  *zoom: 1;
+  *display: inline;
+}
+.none, 
+[hidden],
+.no-desktop {
+  display: none;
+}
+
+/* Font Weights */
+.heavy { font-weight: 900; }
+.strong { font-weight: 700; }
+.normal { font-weight: normal; }
+.thin { font-weight: 300; }
+.italic { font-style: italic; }
+
+/* Font Styles */
+.capitalize { text-transform: capitalize; }
+.uppercase { text-transform: uppercase; }
+
+/* Text Position */
+.left-text { text-align: left; }
+.right-text { text-align: right; }
+.center-text { text-align: center; }
+
+/* Accessibility (offscreen text for screen readers) */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  left: -9999em;
+}
+.visuallyvisible {
+  clip: auto;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  left: 0;
+}
+/* Margin and Padding Reset */
+.no-margin { margin: 0; }
+.no-padding { padding: 0; }
+
+// ==========================================================================
+// -- 4.0 Custom Website Styles for Desktop
+// ==========================================================================
+
+  // Desktop Styles go here...
+
+/* ==========================================================================
+/* -- 5.0 Tablet Devices (Layout, Modifications, etc)
+   ========================================================================== */
+@media only screen and (min-width: $tablet-breakpoint) and (max-width: $desktop-breakpoint) {
+
+.container, .tablet-container {
+  max-width: $desktop-container;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  float: none;
+  &:first-child { margin-left: auto; }
+}
+.tablet-container-full {
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  float: none;
+  &:first-child { margin-left: auto; }
+}
+
+/* Tablet Grid */
+.tablet-col-1 { width: 6.5%; }
+.tablet-col-2 { width: 15%; }
+.tablet-col-3 { width: 23.5%; }
+.tablet-col-4 { width: 32%; }
+.tablet-col-5 { width: 40.5%; }
+.tablet-col-6 { width: 49.0%; }
+.tablet-col-7 { width: 57.5%; }
+.tablet-col-8 { width: 66%; }
+.tablet-col-9 { width: 74.5%; }
+.tablet-col-10 { width: 83%; }
+.tablet-col-11 { width: 91.5%; }
+.tablet-col-12 { width: 100%; }
+
+.tablet-col-1-2 {
+  @extend .tablet-col-6;
+}
+.tablet-col-1-3 {
+  @extend .tablet-col-4;
+}
+.tablet-col-1-4 {
+  @extend .tablet-col-3;
+}
 
 .tablet-full {
   clear: both;
   float: none;
   width: 100%;
-  margin: 10px 0 0 0;
+  margin: 1em 0 0 0;
   display: block;
 }
-.tablet-full:first-child {
-  margin-top: 0;
-}
+.tablet-full:first-child { margin-top: 0; }
 
-.tablet-center {
-  margin-left: auto;
-  margin-right: auto;
-  float: none;
-}
+.tablet-left-text { text-align: left; }
+.tablet-right-text { text-align: right; }
+.tablet-center-text { text-align: center; }
+
 .tablet-left { float: left; }
 .tablet-right { float: right; }
 .tablet-no-float { float: none; }
 
-.tablet-center:first-child { margin-left: auto; }
-.tablet-center-text {
-  text-align: center;
+/* Margin and Padding Reset */
+.tablet-no-margin { margin: 0; }
+.tablet-no-padding { padding: 0; }
+
+/* Tablet Rows */
+.tablet-row {
+  padding-top: .5em;
+  padding-bottom: .5em;
+}
+.tablet-row-1 {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+.tablet-row-2 {
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+.tablet-row-3 {
+  padding-top: 3em;
+  padding-bottom: 3em;
+}
+.tablet-row-4 {
+  padding-top: 4em;
+  padding-bottom: 4em;
+}
+.tablet-row-5 {
+  padding-top: 5em;
+  padding-bottom: 5em;
+}
+.tablet-row-6 {
+  padding-top: 6em;
+  padding-bottom: 6em;
+}
+.tablet-row-7 {
+  padding-top: 7em;
+  padding-bottom: 7em;
 }
 
 .no-tablet { display: none; }
@@ -603,63 +720,96 @@ textarea {
 
 
 // ==========================================================================
-// -- Custom Website Styles for Tablet Devices
+// -- 6.0 Custom Website Styles for Tablet Devices
 // ==========================================================================
 
-// Your custom website styles for tablet devices go here...
-
-
-
+  // Tablet Styles goes here...
 
 } /* End Tablet Media Query */
 
 
 /* ==========================================================================
-/* -- Mobile Devices (Layout, Modifications, etc)
+/* -- 7.0 Mobile Devices (Layout, Modifications, etc)
    ========================================================================== */
 @media only screen and (max-width: $mobile-breakpoint) {
 
-/* Mobile Grid
-* For stacking full width columns, please use the new class .mobile-full */
-.mobile-one { width: 6.5%; }
-.mobile-two { width: 15%; }
-.mobile-three { width: 23.5%; }
-.mobile-four { width: 32%; }
-.mobile-five { width: 40.5%; }
-.mobile-six { width: 49.0%; }
-.mobile-seven { width: 57.5%; }
-.mobile-eight { width: 66%; }
-.mobile-nine { width: 74.5%; }
-.mobile-ten { width: 83%; }
-.mobile-eleven { width: 91.5%; }
-.mobile-twelve { width: 100%; }
+.container, .mobile-container {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  float: none;
+  &:first-child { margin-left: auto; }
+}
+.mobile-container-full {
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  float: none;
+  &:first-child { margin-left: auto; }
+}
+
+/* Mobile Grid */
+.mobile-1-2 { width: 49.0%; }
+.mobile-1-3 { width: 32%; }
+.mobile-1-4 { width: 23.5%; }
 
 .mobile-full {
   clear: both;
   float: none;
   width: 100%;
-  margin: 10px 0 0 0;
+  margin: .2em 0 0 0;
   display: block;
 }
 .mobile-full:first-child {
-  margin-top: 0;
+  margin: 0;
 }
-.mobile-center {
-  margin-left: auto;
-  margin-right: auto;
-  float: none;
-}
-.mobile-center:first-child { margin-left: auto; }
-.mobile-center-text {
-  text-align: center;
-}
+
+.mobile-left-text { text-align: left; }
+.mobile-right-text { text-align: right; }
+.mobile-center-text { text-align: center; }
+
 .mobile-left { float: left; }
 .mobile-right { float: right; }
 .mobile-no-float { float: none; }
 
-.container, .mobile-container {
-  padding-left: 20px;
-  padding-right: 20px;
+/* Margin and Padding Reset */
+.mobile-no-margin { margin: 0; }
+.mobile-no-padding { padding: 0; }
+
+/* Mobile Rows */
+.mobile-row {
+  padding-top: .5em;
+  padding-bottom: .5em;
+}
+.mobile-row-1 {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+.mobile-row-2 {
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+.mobile-row-3 {
+  padding-top: 3em;
+  padding-bottom: 3em;
+}
+.mobile-row-4 {
+  padding-top: 4em;
+  padding-bottom: 4em;
+}
+.mobile-row-5 {
+  padding-top: 5em;
+  padding-bottom: 5em;
+}
+.mobile-row-6 {
+  padding-top: 6em;
+  padding-bottom: 6em;
+}
+.mobile-row-7 {
+  padding-top: 7em;
+  padding-bottom: 7em;
 }
 
 /* Mobile Tables */
@@ -673,10 +823,29 @@ table td {
 
 
 // ==========================================================================
-// -- Custom Website Styles for Mobile Devices
+// -- 8.0 Custom Website Styles for Mobile Devices
 // ==========================================================================
 
-// Your custom website styles for mobile devices go here...
-
+  // Mobile Styles go here...
 
 } /* End Mobile Media Query */
+
+// ==========================================================================
+// -- 9.0 Printer Styles
+// ==========================================================================
+@media print {
+
+* { background: transparent; }
+a, a:visited { text-decoration: underline; }
+
+abbr[title]:after { content: " (" attr(title) ")"; }
+
+pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+thead { display: table-header-group; }
+tr, img { page-break-inside: avoid; }
+img { max-width: 100%; }
+@page { margin: 0.5cm; }
+p, h2, h3 { orphans: 3; widows: 3; }
+h2, h3 { page-break-after: avoid; }
+
+} // End Print Styles
