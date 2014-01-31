@@ -1,132 +1,150 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" class="no-js">
 <head>
   <meta charset="utf-8">
-  <title>Base - Welcome</title>
-  <meta name="description" content="Welcome to the official documentation for the Base Framework">
+  <title>Base Docs - Overview</title>
+
+  <meta name="description" content="Welcome to the official documentation for Base.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="http://fonts.googleapis.com/css?family=Raleway:900,400,200,600" rel="stylesheet">
-  <!--[if lt IE 9]>
-    <script src="js/shiv.js"></script>
-  <![endif]-->
-  <link rel="stylesheet" media="screen" href="style.css">
-  <link rel="stylesheet" media="screen" href="docs.css">
+
+  <link rel="shortcut icon" href="/base/images/favicon.png">
+  <link rel="apple-touch-icon" sizes="57x57" href="/base/images/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/base/images/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/base/images/apple-touch-icon-114x114.png">
+  <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,900" rel="stylesheet" type="text/css">
+  <script>
+  ;window.Modernizr=function(a,b,c){function x(a){j.cssText=a}function y(a,b){return x(m.join(a+";")+(b||""))}function z(a,b){return typeof a===b}function A(a,b){return!!~(""+a).indexOf(b)}function B(a,b,d){for(var e in a){var f=b[a[e]];if(f!==c)return d===!1?a[e]:z(f,"function")?f.bind(d||b):f}return!1}function C(){e.input=function(c){for(var d=0,e=c.length;d<e;d++)q[c[d]]=c[d]in k;return q.list&&(q.list=!!b.createElement("datalist")&&!!a.HTMLDataListElement),q}("autocomplete autofocus list placeholder max min multiple pattern required step".split(" "))}var d="2.7.1",e={},f=!0,g=b.documentElement,h="modernizr",i=b.createElement(h),j=i.style,k=b.createElement("input"),l={}.toString,m=" -webkit- -moz- -o- -ms- ".split(" "),n={svg:"http://www.w3.org/2000/svg"},o={},p={},q={},r=[],s=r.slice,t,u=function(a,c,d,e){var f,i,j,k,l=b.createElement("div"),m=b.body,n=m||b.createElement("body");if(parseInt(d,10))while(d--)j=b.createElement("div"),j.id=e?e[d]:h+(d+1),l.appendChild(j);return f=["&#173;",'<style id="s',h,'">',a,"</style>"].join(""),l.id=h,(m?l:n).innerHTML+=f,n.appendChild(l),m||(n.style.background="",n.style.overflow="hidden",k=g.style.overflow,g.style.overflow="hidden",g.appendChild(n)),i=c(l,a),m?l.parentNode.removeChild(l):(n.parentNode.removeChild(n),g.style.overflow=k),!!i},v={}.hasOwnProperty,w;!z(v,"undefined")&&!z(v.call,"undefined")?w=function(a,b){return v.call(a,b)}:w=function(a,b){return b in a&&z(a.constructor.prototype[b],"undefined")},Function.prototype.bind||(Function.prototype.bind=function(b){var c=this;if(typeof c!="function")throw new TypeError;var d=s.call(arguments,1),e=function(){if(this instanceof e){var a=function(){};a.prototype=c.prototype;var f=new a,g=c.apply(f,d.concat(s.call(arguments)));return Object(g)===g?g:f}return c.apply(b,d.concat(s.call(arguments)))};return e}),o.touch=function(){var c;return"ontouchstart"in a||a.DocumentTouch&&b instanceof DocumentTouch?c=!0:u(["@media (",m.join("touch-enabled),("),h,")","{#modernizr{top:9px;position:absolute}}"].join(""),function(a){c=a.offsetTop===9}),c},o.svg=function(){return!!b.createElementNS&&!!b.createElementNS(n.svg,"svg").createSVGRect};for(var D in o)w(o,D)&&(t=D.toLowerCase(),e[t]=o[D](),r.push((e[t]?"":"no-")+t));return e.input||C(),e.addTest=function(a,b){if(typeof a=="object")for(var d in a)w(a,d)&&e.addTest(d,a[d]);else{a=a.toLowerCase();if(e[a]!==c)return e;b=typeof b=="function"?b():b,typeof f!="undefined"&&f&&(g.className+=" "+(b?"":"no-")+a),e[a]=b}return e},x(""),i=k=null,e._version=d,e._prefixes=m,e.testStyles=u,g.className=g.className.replace(/(^|\s)no-js(\s|$)/,"$1$2")+(f?" js "+r.join(" "):""),e}(this,this.document);
+  </script>
+  <link rel="stylesheet" href="/base/style.css">
 </head>
 <body>
 
-<div class="section header">
+<div class="header dark-blue-row">
+  <div class="container row-3 tablet-row-3 mobile-row-1">
+    <div class="clear mobile-center-text">
+      <a href="/base/" class="logo left mobile-no-float uppercase"><span class="icon"></span>Base</a>
+      <ul class="navigation inline-list right mobile-full mobile-container-full">
+        <li><a class="active" href="/base/docs/index.html">Overview</a></li>
+        <li><a href="/base/docs/css.html">CSS</a></li>
+        <li><a href="/base/docs/grid.html">Grid</a></li>
+        <li><a href="https://github.com/matthewhartman/base/zipball/master">Download</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container mobile-container-full">
+    <div class="row-2 clear mobile-row">
+      <div class="left col-8 tablet-col-6 mobile-full mobile-container mobile-center-text">
+        <h1 class="h2">Welcome to Base!</h1>
+        <p class="thin col-11 tablet-col-12">
+          Base is developed in SASS / LESS, a powerful CSS pre-processor that helps you write cleaner, more organized, well structured CSS that you can easily maintain over time. Base supports all major browsers and legacy browsers such as IE7.
+        </p>
+      </div>
+      <div id="carbonads-container" class="right mobile-full mobile-container-full carbonads-container"><div class="carbonad mobile-container-full"><div id="azcarbon"></div><script type="text/javascript">var z = document.createElement("script"); z.type = "text/javascript"; z.async = true; z.src = "http://engine.carbonads.com/z/53383/azcarbon_2_1_0_HORIZDARK"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(z, s);</script></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="grey-row">
+  <div class="container row-2 thin">
+      <div class="clear row mobile-row tablet-left-text mobile-left-text">
+        <h2 class="h3 thin">Getting started</h2>
+        <p>
+          Before diving in, please make sure you have the following prerequisites to ensure a smooth and productive development.
+        </p>
+        <ol>
+          <li>A good understanding of HTML and CSS</li>
+          <li>A code editor such as <a href="http://www.sublimetext.com/2">Sublime Text Editor</a></li>
+          <li>A LESS or SASS compiler such as <a href="#">Prepros App</a></li>
+          <li>A calm and open mind :)</li>
+        </ol>
+      </div>
+  </div>
+</div>
+
+<div class="smoke-row">
+  <div class="container row-2 thin">
+      <div class="clear row mobile-row tablet-left-text mobile-left-text">
+        <h2 class="h3 thin">What's in the box?</h2>
+          <p>
+            A small and minimal download which includes the following:
+          </p>
+          <ul>
+            <li><strong class="normal">index.html</strong> - Basic HTML template which includes jQuery</li>
+            <li><strong class="normal">style.css</strong> - Base stylesheet for typography, headings, tables, form elements, etc</li>
+            <li><strong class="normal">readme.markdown</strong> - The Read Me file for Base (feel free to delete this)</li>
+            <li><strong class="normal">.htaccess</strong> - Apache server caching, compression, and other configuration defaults for Grade-A performance (taken from <a href="https://github.com/h5bp/html5-boilerplate">HTML5 Boilerplate</a>).</li>
+            <li><strong class="normal">less</strong> (folder):
+              <ul>
+                <li><strong class="normal">mixins.less</strong> - Basic Mixins which include font-size properties and more</li>
+                <li><strong class="normal">style.less</strong> - The base stylesheet in LESS format</li>
+              </ul>
+            </li>
+            <li><strong class="normal">sass</strong> (folder):
+              <ul>
+                <li><strong class="normal">mixins.scss</strong> - Basic Mixins which include font-size properties and more</li>
+                <li><strong class="normal">style.scss</strong> - The base stylesheet in SASS format</li>
+              </ul>
+            </li>
+            <li><strong class="normal">images</strong> (folder):
+              <ul>
+                <li><strong class="normal">favicon.ico</strong> - Standard 32x32 favicon</li>
+                <li><strong class="normal">apple-touch-icon (x3)</strong> - All three sizes of Apple touch icons for iPhone 3, iPad and iPhone 4 with retina</li>
+              </ul>
+            </li>
+            <li><strong class="normal">js</strong> (folder):
+              <ul>
+                <li><strong class="normal">default.js</strong> - Default javascript file (includes combined plugins and scripts)</li>
+                <li><strong class="normal">modernizr.js</strong> - A custom built Modernizr which checks for JS and SVG support</li>
+              </ul>
+            </li>
+            <li><strong class="normal">grid</strong> (folder):
+              <ul>
+                <li><strong class="normal">base-grid.psd</strong> - PSD grid based on 960.gs</li>
+              </ul>
+            </li>
+          </ul>
+      </div>
+  </div>
+</div>
+
+<div class="grey-row">
+  <div class="container row-2 thin">
+      <div class="clear row mobile-row tablet-left-text mobile-left-text">
+        <h2 class="h3 thin">Let's get moving!</h2>
+        <p class="no-margin">
+          Now that you have the latest download and great prerequisites, let's take a closer look at the <a href="/base/docs/css.html">global CSS</a>.
+        </p>
+      </div>
+  </div>
+</div>
+
+
+<div class="footer">
   <div class="container clear">
-    <a href="index.html" class="logo">Base Docs</a>
-  </div>
-</div> <!-- Header -->
-
-<div class="navigation">
-  <div class="container-full">
-    <ul class="menu clear right">
-      <li><a class="current" href="index.html">Welcome to Base!</a></li>
-      <li><a href="grid.html">Grid Layout</a></li>
-      <li><a href="typography.html">Typography</a></li>
-      <li><a href="tables.html">Tables</a></li>
-      <li><a href="forms.html">Forms</a></li>
-      <li><a href="buttons.html">Buttons</a></li>
-      <li><a href="https://github.com/matthewhartman/base/zipball/master">Download</a></li>
-    </ul>
+    <div class="left col-6 left-text mobile-full mobile-left-text">
+      Built with love by <a title=":)" href="http://www.matthewhartman.com.au">Matthew Hartman</a> in Australia.
+    </div>
+    <div class="right col-6 right-text mobile-full mobile-left-text">
+      <ul class="inline-list footer-list">
+      <li><a href="https://github.com/matthewhartman/base">View Source on Github</a></li>
+      <li><a href="https://github.com/matthewhartman/base/issues?state=open">Current Issues</a></li>
+      <li><a href="/base/docs/">Docs</a></li>
+      </ul>
+    </div>
   </div>
 </div>
 
-<div class="container content-inner">
 
-  <h1>Welcome to Base!</h1>
-  <p class="intro">
-    A super simple, responsive framework built to work on mobile devices, tablets, netbooks and desktop computers.
-  </p>
-
-  <p>
-    Base is developed in <a target="_blank" href="http://lesscss.org/">LESS</a>, a powerful CSS pre-processor that helps you write cleaner, more organized, well structured CSS that you can easily maintain over time. Base supports all major browsers and legacy browsers such as IE7.
-  </p>
-
-  <div id="carbonads-container"><div class="carbonad"><div id="azcarbon"></div><script type="text/javascript">var z = document.createElement("script"); z.type = "text/javascript"; z.async = true; z.src = "http://engine.carbonads.com/z/53383/azcarbon_2_1_0_HORIZ"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(z, s);</script></div></div>
-
-  <hr>
-
-  <h2>Getting Started</h2>
-  <p>
-    Before we begin, you should have the following prerequisites:
-  </p>
-
-  <ol>
-    <li>
-      A good understanding of HTML and CSS
-    </li>
-    <li>
-      The latest build of Base - <a href="https://github.com/matthewhartman/base/zipball/master">Download from Github</a>
-    </li>
-    <li>
-      An awesome code editor such as <a target="_blank" href="http://www.sublimetext.com/2">Sublime Text Editor</a>
-    </li>
-    <li>
-      <strong>A LESS compiler</strong>
-      <ul>
-        <li>
-          <a target="_blank" href="http://alphapixels.com/prepros/">Prepros</a> for Windows
-        </li>
-        <li>
-          <a target="_blank" href="http://incident57.com/codekit/">CodeKit</a> for Mac
-        </li>
-      </ul>
-    </li>
-    <li>
-      A <em>calm</em> and open mind :)
-    </li>
-  </ol>
-
-  <hr>
-
-  <h2>What Comes with Base?</h2>
-  <p>
-    A small and minimal download which includes the following:
-  </p>
-  <ul>
-    <li><strong>index.html</strong> - Basic HTML template which includes jQuery</li>
-    <li><strong>style.css</strong> - Base stylesheet for typography, headings, tables, form elements, etc</li>
-    <li><strong>readme.markdown</strong> - The Read Me file for Base (feel free to delete this)</li>
-    <li><strong>less</strong> (folder):
-      <ul>
-        <li><strong>mixins.less</strong> - Basic Mixins which include font-size properties and more</li>
-        <li><strong>style.less</strong> - The base stylesheet in LESS format</li>
-      </ul>
-    </li>
-    <li><strong>sass</strong> (folder):
-      <ul>
-        <li><strong>mixins.scss</strong> - Basic Mixins which include font-size properties and more</li>
-        <li><strong>style.scss</strong> - The base stylesheet in SASS format</li>
-      </ul>
-    </li>
-    <li><strong>images</strong> (folder):
-      <ul>
-        <li><strong>favicon.ico</strong> - Standard 32x32 favicon</li>
-        <li><strong>apple-touch-icon (x3)</strong> - All three sizes of Apple touch icons for iPhone 3, iPad and iPhone 4 with retina</li>
-      </ul>
-    </li>
-    <li><strong>js</strong> (folder):
-      <ul>
-        <li><strong>default.js</strong> - Default javascript file (includes combined plugins and scripts)</li>
-        <li><strong>shiv.js</strong> - Enables HTML5 support for legacy versions of Internet Explorer</li>
-      </ul>
-    </li>
-    <li><strong>grid</strong> (folder):
-      <ul>
-        <li><strong>base-grid.psd</strong> - PSD grid based on 960.gs</li>
-      </ul>
-    </li>
-  </ul>
-
-
-</div>
-
-
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-<script src="js/default.js"></script>
+<!-- Google Analytics -->
+<script>
+  (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+  function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+  e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+  e.src='//www.google-analytics.com/analytics.js';
+  r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+  ga('create','UA-34161986-1');ga('send','pageview');
+</script>
 
 </body>
 </html>
