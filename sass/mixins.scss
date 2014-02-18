@@ -15,8 +15,8 @@
 
 // Line Height Sizes (REMs with PX fallback for older browsers)
 @mixin line-height($size) {
-    font-size: $size + px;
-    font-size: ($size/16) + rem;
+    line-height: $size + px;
+    line-height: ($size/16) + rem;
 }
 
 // Rounded Corners
