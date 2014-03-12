@@ -1,5 +1,5 @@
 # Welcome to Base
-A super simple, responsive boilerplate built for all devices big, small and in-between
+A super simple, responsive framework built for all devices big, small and in-between
 
 ## Reasons to use base for your next web project
 ### Responsive Design
@@ -12,13 +12,13 @@ Built on Normalize.css, it includes all the foundation styles for typography, li
 Perfected to work with older browsers (IE7+) and modern browsers such as Chrome, Safari, Firefox and Opera.
 
 ### Base is Awesome!
-Preview the [docs](http://matthewhartman.github.io/base/docs/) to see the Base Boilerplate in all its glory! :)
+Preview the [docs](http://matthewhartman.github.io/base/docs/) to see the Base framework in all its glory! :)
 
 ## Repo Contents
 - index.html: Basic HTML template which includes jQuery
 - style.css: Base stylesheet for typography, headings, tables, form elements, etc
 - readme.markdown - The Read Me file for Base (feel free to delete this)
-- .htaccess - Apache server caching, compression, and other configuration defaults for Grade-A performance (taken from [HTML5 Boilerplate](https://github.com/h5bp/html5-boilerplate))
+- .htaccess - Apache server caching, compression, and other configuration defaults for Grade-A performance (taken from [HTML5 framework](https://github.com/h5bp/html5-framework))
 - less (folder):
   - mixins.less - Basic Mixins which include font-size properties and more
   - style.less - The base stylesheet in LESS format
@@ -37,9 +37,9 @@ Preview the [docs](http://matthewhartman.github.io/base/docs/) to see the Base B
 Base was built by Matthew Hartman [(@hartmanmatthew)](http://twitter.com/hartmanmatthew), a passionate front end developer based in Melbourne, Australia.
 
 ## Thank You / Credits
-- [base_css-rails](https://github.com/rkrdo/base_css-rails) - a gem that adds the Base Boilerplate to the application's asset pipeline by Ricardo Cruz
+- [base_css-rails](https://github.com/rkrdo/base_css-rails) - a gem that adds the Base framework to the application's asset pipeline by Ricardo Cruz
 - Thanks to Beau Smith (@beau) for the custom breakpoint suggestion
-- Thanks to HTML5 Boilerplate for the .htaccess file
+- Thanks to HTML5 framework for the .htaccess file
 - Nicolas Gallagher (@necolas) for Normalize.css and Micro ClearFix.
 
 ## MIT Open Source License
