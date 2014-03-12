@@ -426,15 +426,13 @@ textarea {
   padding-right: 10px; }
 
 .container-full {
-  max-width: 960px;
+  max-width: 980px;
   margin-left: auto;
   margin-right: auto; }
 
 /* Fluid Grid */
 [class^="col-"], [class*=" col-"] {
-  float: left;
-  padding-left: 10px;
-  padding-right: 10px; }
+  float: left; }
 
 [class*="pull-"], [class*="push-"] {
   position: relative; }
