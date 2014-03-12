@@ -445,13 +445,17 @@ textarea {
   padding-right: 10px;
 }
 .container-full {
-  max-width: $desktop-container + 20px;
+  max-width: $desktop-container;
   margin-left: auto;
   margin-right: auto;
 }
 
 /* Fluid Grid */
-[class^="col-"], [class*=" col-"] { float: left; }
+[class^="col-"], [class*=" col-"] {
+  float: left;
+  padding-left: 10px;
+  padding-right: 10px;
+}
 [class*="pull-"], [class*="push-"] { position: relative; }
 
 /* Columns */
