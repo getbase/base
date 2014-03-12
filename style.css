@@ -2,7 +2,7 @@
 
   Base Stylesheet - http://git.io/base
   Author: Matthew Hartman - http://www.matthewhartman.com.au/
-  Version: 1.7 - Last Updated: 10th of March, 2014
+  Version: 1.7.2 - Last Updated: 12th of March, 2014
 
 ========================================================================== */
 /* Resets */
@@ -540,8 +540,7 @@ textarea {
   margin-right: auto;
 }
 /* Fluid Grid */
-[class^="col-"],
-[class*=" col-"] {
+.col {
   float: left;
   padding-left: 10px;
   padding-right: 10px;
@@ -549,6 +548,10 @@ textarea {
 [class*="pull-"],
 [class*="push-"] {
   position: relative;
+}
+.no-gutter {
+  padding-left: 0;
+  padding-right: 0;
 }
 /* Columns */
 .col-1 {
@@ -787,6 +790,10 @@ textarea {
   .tablet-container-full:first-child {
     margin-left: auto;
   }
+  .tablet-no-gutter {
+    padding-left: 0;
+    padding-right: 0;
+  }
   /* Tablet Grid */
   .tablet-col-1 {
     width: 8.33333%;
@@ -973,6 +980,10 @@ textarea {
   }
   .mobile-container-full:first-child {
     margin-left: auto;
+  }
+  .mobile-no-gutter {
+    padding-left: 0;
+    padding-right: 0;
   }
   /* Mobile Grid */
   .mobile-col-1-2 {
