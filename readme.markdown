@@ -18,7 +18,7 @@ Preview the [docs](http://matthewhartman.github.io/base/docs/) to see the Base f
 - index.html: Basic HTML template which includes jQuery
 - style.css: Base stylesheet for typography, headings, tables, form elements, etc
 - readme.markdown - The Read Me file for Base (feel free to delete this)
-- .htaccess - Apache server caching, compression, and other configuration defaults for Grade-A performance (taken from [HTML5 framework](https://github.com/h5bp/html5-framework))
+- .htaccess - Apache server caching, compression, and other configuration defaults for Grade-A performance (taken from [HTML5 Boilerplate](https://github.com/h5bp/html5-boilerplate)
 - less (folder):
   - mixins.less - Basic Mixins which include font-size properties and more
   - style.less - The base stylesheet in LESS format
@@ -30,9 +30,7 @@ Preview the [docs](http://matthewhartman.github.io/base/docs/) to see the Base f
  - apple-touch-icon (x3): All three sizes of Apple touch icons for iPhone 3, iPad and iPhone 4 with retina.
 - js (folder):
   - default.js - Default javascript file (includes combined plugins and scripts)
-  - shiv.js - Enables HTML5 support for legacy versions of Internet Explorer 
-- grid (folder):
-  - base-grid.psd - PSD grid based on 960.gs
+  - modernizr.js - Custom build of Modernizr to check for JS and SVG support
 
 Base was built by Matthew Hartman [(@hartmanmatthew)](http://twitter.com/hartmanmatthew), a passionate front end developer based in Melbourne, Australia.
 
