@@ -2,7 +2,7 @@
 
   Base Stylesheet - http://git.io/base
   Author: Matthew Hartman - http://www.matthewhartman.com.au/
-  Version: 1.7.3 - Last Updated: 13th of March, 2014
+  Version: 1.8.0 - Last Updated: 6th of April, 2014
 
 ========================================================================== */
 
@@ -463,46 +463,212 @@ textarea {
 }
 
 /* Columns */
-.col-1 { width: 8.33333%; }
-.col-2 { width: 16.66667%; }
-.col-3 { width: 25%; }
-.col-4 { width: 33%; }
-.col-5 { width: 41.66665%; }
-.col-6 { width: 50%; }
-.col-7 { width: 58.33333%; }
-.col-8 { width: 66.66666%; }
-.col-9 { width: 75%; }
-.col-10 { width: 83.33333%; }
-.col-11 { width: 91.66666%; }
+.col-1 {
+  width: 8.33333%; // Fallback if Calc() is not supported
+  width: calc(100% / 12 * 1);
+  width: -webkit-calc(100% / 12 * 1);
+  width: -moz-calc(100% / 12 * 1);
+}
+.col-2 {
+  width: 16.66667%; // Fallback if Calc() is not supported
+  width: calc(100% / 12 * 2);
+  width: -webkit-calc(100% / 12 * 2);
+  width: -moz-calc(100% / 12 * 2);
+}
+.col-3 {
+  width: 25%; // Fallback if Calc() is not supported
+  width: calc(100% / 12 * 3);
+  width: -webkit-calc(100% / 12 * 3);
+  width: -moz-calc(100% / 12 * 3);
+}
+.col-4 {
+  width: 33.33333%; // Fallback if Calc() is not supported
+  width: calc(100% / 12 * 4);
+  width: -webkit-calc(100% / 12 * 4);
+  width: -moz-calc(100% / 12 * 4);
+}
+.col-5 {
+  width: 41.66665%; // Fallback if Calc() is not supported
+  width: calc(100% / 12 * 5);
+  width: -webkit-calc(100% / 12 * 5);
+  width: -moz-calc(100% / 12 * 5);
+}
+.col-6 {
+  width: 50%; // Fallback if Calc() is not supported
+  width: calc(100% / 12 * 6);
+  width: -webkit-calc(100% / 12 * 6);
+  width: -moz-calc(100% / 12 * 6);
+}
+.col-7 {
+  width: 58.33333%; // Fallback if Calc() is not supported
+  width: calc(100% / 12 * 7);
+  width: -webkit-calc(100% / 12 * 7);
+  width: -moz-calc(100% / 12 * 7);
+}
+.col-8 {
+  width: 66.66666%; // Fallback if Calc() is not supported
+  width: calc(100% / 12 * 8);
+  width: -webkit-calc(100% / 12 * 8);
+  width: -moz-calc(100% / 12 * 8);
+}
+.col-9 {
+  width: 75%; // Fallback if Calc() is not supported
+  width: calc(100% / 12 * 9);
+  width: -webkit-calc(100% / 12 * 9);
+  width: -moz-calc(100% / 12 * 9);
+}
+.col-10 {
+  width: 83.33333%; // Fallback if Calc() is not supported
+  width: calc(100% / 12 * 10);
+  width: -webkit-calc(100% / 12 * 10);
+  width: -moz-calc(100% / 12 * 10);
+}
+.col-11 {
+  width: 91.66666%; // Fallback if Calc() is not supported
+  width: calc(100% / 12 * 11);
+  width: -webkit-calc(100% / 12 * 11);
+  width: -moz-calc(100% / 12 * 11);
+}
 .col-12 { width: 100%; }
 
 .col-1-4 { @extend .col-3; }
 .col-1-2 { @extend .col-6; }
 .col-1-3 { @extend .col-4; }
+.col-3-4 { @extend .col-9; }
 
 /* Push/Pull */
-.push-1 { left: 8.33333%; }
-.pull-1 { left: -8.33333%; }
-.push-2 { left: 16.66667%; }
-.pull-2 { left: -16.66667%; }
-.push-3 { left: 25%; }
-.pull-3 { left: -25%; }
-.push-4 { left: 33%; }
-.pull-4 { left: -33%; }
-.push-5 { left: 41.66665%; }
-.pull-5 { left: -41.66665%; }
-.push-6 { left: 50%; }
-.pull-6 { left: -50%; }
-.push-7 { left: 58.33333%; }
-.pull-7 { left: -58.33333%; }
-.push-8 { left: 66.66666%; }
-.pull-8 { left: -66.66666%; }
-.push-9 { left: 75%; }
-.pull-9 { left: -75%; }
-.push-10 { left: 83.33333%; }
-.pull-10 { left: -83.33333%; }
-.push-11 { left: 91.66666%; }
-.pull-11 { left: -91.66666%; }
+.push-1 {
+  left: 8.33333%; // Fallback if calc() is not supported
+  left: calc(100% / 12 * 1);
+  left: -webkit-calc(100% / 12 * 1);
+  left: -moz-calc(100% / 12 * 1);
+}
+.pull-1 {
+  left: -8.33333%; // Fallback if calc() is not supported
+  left: calc(-100% / 12 * 1);
+  left: -webkit-calc(-100% / 12 * 1);
+  left: -moz-calc(-100% / 12 * 1);
+}
+.push-2 {
+  left: 16.66667%; // Fallback if calc() is not supported
+  left: calc(100% / 12 * 2);
+  left: -webkit-calc(100% / 12 * 2);
+  left: -moz-calc(100% / 12 * 2);
+}
+.pull-2 {
+  left: -16.66667%; // Fallback if calc() is not supported
+  left: calc(-100% / 12 * 2);
+  left: -webkit-calc(-100% / 12 * 2);
+  left: -moz-calc(-100% / 12 * 2);
+}
+.push-3 {
+  left: 25%; // Fallback if calc() is not supported
+  left: calc(100% / 12 * 3);
+  left: -webkit-calc(100% / 12 * 3);
+  left: -moz-calc(100% / 12 * 3);
+}
+.pull-3 {
+  left: -25%; // Fallback if calc() is not supported
+  left: calc(-100% / 12 * 3);
+  left: -webkit-calc(-100% / 12 * 3);
+  left: -moz-calc(-100% / 12 * 3);
+}
+.push-4 {
+  left: 33.33333%; // Fallback if calc() is not supported
+  left: calc(100% / 12 * 4);
+  left: -webkit-calc(100% / 12 * 4);
+  left: -moz-calc(100% / 12 * 4);
+}
+.pull-4 {
+  left: -33.33333%; // Fallback if calc() is not supported
+  left: calc(-100% / 12 * 4);
+  left: -webkit-calc(-100% / 12 * 4);
+  left: -moz-calc(-100% / 12 * 4);
+}
+.push-5 {
+  left: 41.66665%; // Fallback if calc() is not supported
+  left: calc(100% / 12 * 5);
+  left: -webkit-calc(100% / 12 * 5);
+  left: -moz-calc(100% / 12 * 5);
+}
+.pull-5 {
+  left: -41.66665%; // Fallback if calc() is not supported
+  left: calc(-100% / 12 * 5);
+  left: -webkit-calc(-100% / 12 * 5);
+  left: -moz-calc(-100% / 12 * 5);
+}
+.push-6 {
+  left: 50%; // Fallback if calc() is not supported
+  left: calc(100% / 12 * 6);
+  left: -webkit-calc(100% / 12 * 6);
+  left: -moz-calc(100% / 12 * 6);
+}
+.pull-6 {
+  left: -50%; // Fallback if calc() is not supported
+  left: calc(-100% / 12 * 6);
+  left: -webkit-calc(-100% / 12 * 6);
+  left: -moz-calc(-100% / 12 * 6);
+}
+.push-7 {
+  left: 58.33333%; // Fallback if calc() is not supported
+  left: calc(100% / 12 * 7);
+  left: -webkit-calc(100% / 12 * 7);
+  left: -moz-calc(100% / 12 * 7);
+}
+.pull-7 {
+  left: -58.33333%; // Fallback if calc() is not supported
+  left: calc(-100% / 12 * 7);
+  left: -webkit-calc(-100% / 12 * 7);
+  left: -moz-calc(-100% / 12 * 7);
+}
+.push-8 {
+  left: 66.66666%; // Fallback if calc() is not supported
+  left: calc(100% / 12 * 8);
+  left: -webkit-calc(100% / 12 * 8);
+  left: -moz-calc(100% / 12 * 8);
+}
+.pull-8 {
+  left: -66.66666%; // Fallback if calc() is not supported
+  left: calc(-100% / 12 * 8);
+  left: -webkit-calc(-100% / 12 * 8);
+  left: -moz-calc(-100% / 12 * 8);
+}
+.push-9 {
+  left: 75%; // Fallback if calc() is not supported
+  left: calc(100% / 12 * 9);
+  left: -webkit-calc(100% / 12 * 9);
+  left: -moz-calc(100% / 12 * 9);
+}
+.pull-9 {
+  left: -75%; // Fallback if calc() is not supported
+  left: calc(-100% / 12 * 9);
+  left: -webkit-calc(-100% / 12 * 9);
+  left: -moz-calc(-100% / 12 * 9);
+}
+.push-10 {
+  left: 83.33333%; // Fallback if calc() is not supported
+  left: calc(100% / 12 * 10);
+  left: -webkit-calc(100% / 12 * 10);
+  left: -moz-calc(100% / 12 * 10);
+}
+.pull-10 {
+  left: -83.33333%; // Fallback if calc() is not supported
+  left: calc(-100% / 12 * 10);
+  left: -webkit-calc(-100% / 12 * 10);
+  left: -moz-calc(-100% / 12 * 10);
+}
+.push-11 {
+  left: 91.66666%; // Fallback if calc() is not supported
+  left: calc(100% / 12 * 11);
+  left: -webkit-calc(100% / 12 * 11);
+  left: -moz-calc(100% / 12 * 11);
+}
+.pull-11 {
+  left: -91.66666%; // Fallback if calc() is not supported
+  left: calc(-100% / 12 * 11);
+  left: -webkit-calc(-100% / 12 * 11);
+  left: -moz-calc(-100% / 12 * 11);
+}
 
 /* Rows */
 .row {
@@ -608,46 +774,212 @@ textarea {
 }
 
 /* Tablet Grid */
-.tablet-col-1 { width: 8.33333%; }
-.tablet-col-2 { width: 16.66667%; }
-.tablet-col-3 { width: 25%; }
-.tablet-col-4 { width: 33%; }
-.tablet-col-5 { width: 41.66665%; }
-.tablet-col-6 { width: 50%; }
-.tablet-col-7 { width: 58.33333%; }
-.tablet-col-8 { width: 66.66666%; }
-.tablet-col-9 { width: 75%; }
-.tablet-col-10 { width: 83.33333%; }
-.tablet-col-11 { width: 91.66666%; }
+.tablet-col-1 {
+  width: 8.33333%; // Fallback if calc() is not supported
+  width: calc(100% / 12 * 1);
+  width: -webkit-calc(100% / 12 * 1);
+  width: -moz-calc(100% / 12 * 1);
+}
+.tablet-col-2 {
+  width: 16.66667%; // Fallback if calc() is not supported
+  width: calc(100% / 12 * 2);
+  width: -webkit-calc(100% / 12 * 2);
+  width: -moz-calc(100% / 12 * 2);
+}
+.tablet-col-3 {
+  width: 25%; // Fallback if calc() is not supported
+  width: calc(100% / 12 * 3);
+  width: -webkit-calc(100% / 12 * 3);
+  width: -moz-calc(100% / 12 * 3);
+}
+.tablet-col-4 {
+  width: 33.33333%; // Fallback if calc() is not supported
+  width: calc(100% / 12 * 4);
+  width: -webkit-calc(100% / 12 * 4);
+  width: -moz-calc(100% / 12 * 4);
+}
+.tablet-col-5 {
+  width: 41.66665%; // Fallback if calc() is not supported
+  width: calc(100% / 12 * 5);
+  width: -webkit-calc(100% / 12 * 5);
+  width: -moz-calc(100% / 12 * 5);
+}
+.tablet-col-6 {
+  width: 50%; // Fallback if calc() is not supported
+  width: calc(100% / 12 * 6);
+  width: -webkit-calc(100% / 12 * 6);
+  width: -moz-calc(100% / 12 * 6);
+}
+.tablet-col-7 {
+  width: 58.33333%; // Fallback if calc() is not supported
+  width: calc(100% / 12 * 7);
+  width: -webkit-calc(100% / 12 * 7);
+  width: -moz-calc(100% / 12 * 7);
+}
+.tablet-col-8 {
+  width: 66.66666%; // Fallback if calc() is not supported
+  width: calc(100% / 12 * 8);
+  width: -webkit-calc(100% / 12 * 8);
+  width: -moz-calc(100% / 12 * 8);
+}
+.tablet-col-9 {
+  width: 75%; // Fallback if calc() is not supported
+  width: calc(100% / 12 * 9);
+  width: -webkit-calc(100% / 12 * 9);
+  width: -moz-calc(100% / 12 * 9);
+}
+.tablet-col-10 {
+  width: 83.33333%; // Fallback if calc() is not supported
+  width: calc(100% / 12 * 10);
+  width: -webkit-calc(100% / 12 * 10);
+  width: -moz-calc(100% / 12 * 10);
+}
+.tablet-col-11 {
+  width: 91.66666%; // Fallback if calc() is not supported
+  width: calc(100% / 12 * 11);
+  width: -webkit-calc(100% / 12 * 11);
+  width: -moz-calc(100% / 12 * 11);
+}
 .tablet-col-12 { width: 100%; }
 
 .tablet-col-1-2 { @extend .tablet-col-6; }
 .tablet-col-1-3 { @extend .tablet-col-4; }
 .tablet-col-1-4 { @extend .tablet-col-3; }
+.tablet-col-3-4 { @extend .tablet-col-9; }
 
 /* Tablet Push/Pull */
-.tablet-push-1 { left: 8.33333%; }
-.tablet-pull-1 { left: -8.33333%; }
-.tablet-push-2 { left: 16.66667%; }
-.tablet-pull-2 { left: -16.66667%; }
-.tablet-push-3 { left: 25%; }
-.tablet-pull-3 { left: -25%; }
-.tablet-push-4 { left: 33%; }
-.tablet-pull-4 { left: -33%; }
-.tablet-push-5 { left: 41.66665%; }
-.tablet-pull-5 { left: -41.66665%; }
-.tablet-push-6 { left: 50%; }
-.tablet-pull-6 { left: -50%; }
-.tablet-push-7 { left: 58.33333%; }
-.tablet-pull-7 { left: -58.33333%; }
-.tablet-push-8 { left: 66.66666%; }
-.tablet-pull-8 { left: -66.66666%; }
-.tablet-push-9 { left: 75%; }
-.tablet-pull-9 { left: -75%; }
-.tablet-push-10 { left: 83.33333%; }
-.tablet-pull-10 { left: -83.33333%; }
-.tablet-push-11 { left: 91.66666%; }
-.tablet-pull-11 { left: -91.66666%; }
+.tablet-push-1 {
+  left: 8.33333%; // Fallback if Calc() is not supported
+  left: calc(100% / 12 * 1);
+  left: -webkit-calc(100% / 12 * 1);
+  left: -moz-calc(100% / 12 * 1);
+}
+.tablet-pull-1 {
+  left: -8.33333%; // Fallback if Calc() is not supported
+  left: calc(-100% / 12 * 1);
+  left: -webkit-calc(-100% / 12 * 1);
+  left: -moz-calc(-100% / 12 * 1);
+}
+.tablet-push-2 {
+  left: 16.66667%; // Fallback if Calc() is not supported
+  left: calc(100% / 12 * 2);
+  left: -webkit-calc(100% / 12 * 2);
+  left: -moz-calc(100% / 12 * 2);
+}
+.tablet-pull-2 {
+  left: -16.66667%; // Fallback if Calc() is not supported
+  left: calc(-100% / 12 * 2);
+  left: -webkit-calc(-100% / 12 * 2);
+  left: -moz-calc(-100% / 12 * 2);
+}
+.tablet-push-3 {
+  left: 25%; // Fallback if Calc() is not supported
+  left: calc(100% / 12 * 3);
+  left: -webkit-calc(100% / 12 * 3);
+  left: -moz-calc(100% / 12 * 3);
+}
+.tablet-pull-3 {
+  left: -25%; // Fallback if Calc() is not supported
+  left: calc(-100% / 12 * 3);
+  left: -webkit-calc(-100% / 12 * 3);
+  left: -moz-calc(-100% / 12 * 3);
+}
+.tablet-push-4 {
+  left: 33.33333%; // Fallback if Calc() is not supported
+  left: calc(100% / 12 * 4);
+  left: -webkit-calc(100% / 12 * 4);
+  left: -moz-calc(100% / 12 * 4);
+}
+.tablet-pull-4 {
+  left: -33.33333%; // Fallback if Calc() is not supported
+  left: calc(-100% / 12 * 4);
+  left: -webkit-calc(-100% / 12 * 4);
+  left: -moz-calc(-100% / 12 * 4);
+}
+.tablet-push-5 {
+  left: 41.66665%; // Fallback if Calc() is not supported
+  left: calc(100% / 12 * 5);
+  left: -webkit-calc(100% / 12 * 5);
+  left: -moz-calc(100% / 12 * 5);
+}
+.tablet-pull-5 {
+  left: -41.66665%; // Fallback if Calc() is not supported
+  left: calc(-100% / 12 * 5);
+  left: -webkit-calc(-100% / 12 * 5);
+  left: -moz-calc(-100% / 12 * 5);
+}
+.tablet-push-6 {
+  left: 50%; // Fallback if Calc() is not supported
+  left: calc(100% / 12 * 6);
+  left: -webkit-calc(100% / 12 * 6);
+  left: -moz-calc(100% / 12 * 6);
+}
+.tablet-pull-6 {
+  left: -50%; // Fallback if Calc() is not supported
+  left: calc(-100% / 12 * 6);
+  left: -webkit-calc(-100% / 12 * 6);
+  left: -moz-calc(-100% / 12 * 6);
+}
+.tablet-push-7 {
+  left: 58.33333%; // Fallback if Calc() is not supported
+  left: calc(100% / 12 * 7);
+  left: -webkit-calc(100% / 12 * 7);
+  left: -moz-calc(100% / 12 * 7);
+}
+.tablet-pull-7 {
+  left: -58.33333%; // Fallback if Calc() is not supported
+  left: calc(-100% / 12 * 7);
+  left: -webkit-calc(-100% / 12 * 7);
+  left: -moz-calc(-100% / 12 * 7);
+}
+.tablet-push-8 {
+  left: 66.66666%; // Fallback if Calc() is not supported
+  left: calc(100% / 12 * 8);
+  left: -webkit-calc(100% / 12 * 8);
+  left: -moz-calc(100% / 12 * 8);
+}
+.tablet-pull-8 {
+  left: -66.66666%; // Fallback if Calc() is not supported
+  left: calc(-100% / 12 * 8);
+  left: -webkit-calc(-100% / 12 * 8);
+  left: -moz-calc(-100% / 12 * 8);
+}
+.tablet-push-9 {
+  left: 75%; // Fallback if Calc() is not supported
+  left: calc(100% / 12 * 9);
+  left: -webkit-calc(100% / 12 * 9);
+  left: -moz-calc(100% / 12 * 9);
+}
+.tablet-pull-9 {
+  left: -75%; // Fallback if Calc() is not supported
+  left: calc(-100% / 12 * 9);
+  left: -webkit-calc(-100% / 12 * 9);
+  left: -moz-calc(-100% / 12 * 9);
+}
+.tablet-push-10 {
+  left: 83.33333%; // Fallback if Calc() is not supported
+  left: calc(100% / 12 * 10);
+  left: -webkit-calc(100% / 12 * 10);
+  left: -moz-calc(100% / 12 * 10);
+}
+.tablet-pull-10 {
+  left: -83.33333%; // Fallback if Calc() is not supported
+  left: calc(-100% / 12 * 10);
+  left: -webkit-calc(-100% / 12 * 10);
+  left: -moz-calc(-100% / 12 * 10);
+}
+.tablet-push-11 {
+  left: 91.66666%; // Fallback if Calc() is not supported
+  left: calc(100% / 12 * 11);
+  left: -webkit-calc(100% / 12 * 11);
+  left: -moz-calc(100% / 12 * 11);
+}
+.tablet-pull-11 {
+  left: -91.66666%; // Fallback if Calc() is not supported
+  left: calc(-100% / 12 * 11);
+  left: -webkit-calc(-100% / 12 * 11);
+  left: -moz-calc(-100% / 12 * 11);
+}
 
 .tablet-no-push, .tablet-no-pull { left: auto; }
 
@@ -720,17 +1052,80 @@ textarea {
 }
 
 /* Mobile Grid */
-.mobile-col-1-2 { width: 50%; }
-.mobile-col-1-3 { width: 33%; }
-.mobile-col-1-4 { width: 25%; }
+.mobile-col-1-2 {
+  width: 50%; // Fallback if calc() is not supported
+  width: calc(100% / 12 * 6);
+  width: -webkit-calc(100% / 12 * 6);
+  width: -moz-calc(100% / 12 * 6);
+}
+.mobile-col-1-3 {
+  width: 33.33333%; // Fallback if calc() is not supported
+  width: calc(100% / 12 * 4);
+  width: -webkit-calc(100% / 12 * 4);
+  width: -moz-calc(100% / 12 * 4);
+}
+.mobile-col-1-4 {
+  width: 25%; // Fallback if calc() is not supported
+  width: calc(100% / 12 * 3);
+  width: -webkit-calc(100% / 12 * 3);
+  width: -moz-calc(100% / 12 * 3);
+}
+.mobile-col-3-4 {
+  width: 75%; // Fallback if calc() is not supported
+  width: calc(100% / 12 * 9);
+  width: -webkit-calc(100% / 12 * 9);
+  width: -moz-calc(100% / 12 * 9);
+}
 
 /* Push/Pull */
-.mobile-push-1-2 { left: 50%; }
-.mobile-pull-1-2 { left: -50%; }
-.mobile-push-1-3 { left: 33%; }
-.mobile-pull-1-3 { left: -33%; }
-.mobile-push-1-4 { left: 25%; }
-.mobile-pull-1-4 { left: -25%; }
+.mobile-push-1-2 {
+  left: 50%; // Fallback if calc() is not supported
+  left: calc(100% / 12 * 6);
+  left: -webkit-calc(100% / 12 * 6);
+  left: -moz-calc(100% / 12 * 6);
+}
+.mobile-pull-1-2 {
+  left: -50%; // Fallback if calc() is not supported
+  left: calc(-100% / 12 * 6);
+  left: -webkit-calc(-100% / 12 * 6);
+  left: -moz-calc(-100% / 12 * 6);
+}
+.mobile-push-1-3 {
+  left: 25%; // Fallback if calc() is not supported
+  left: calc(100% / 12 * 3);
+  left: -webkit-calc(100% / 12 * 3);
+  left: -moz-calc(100% / 12 * 3);
+}
+.mobile-pull-1-3 {
+  left: -25%; // Fallback if calc() is not supported
+  left: calc(-100% / 12 * 3);
+  left: -webkit-calc(-100% / 12 * 3);
+  left: -moz-calc(-100% / 12 * 3);
+}
+.mobile-push-1-4 {
+  left: 33.33333%; // Fallback if calc() is not supported
+  left: calc(100% / 12 * 4);
+  left: -webkit-calc(100% / 12 * 4);
+  left: -moz-calc(100% / 12 * 4);
+}
+.mobile-pull-1-4 {
+  left: -33.33333%; // Fallback if calc() is not supported
+  left: calc(-100% / 12 * 4);
+  left: -webkit-calc(-100% / 12 * 4);
+  left: -moz-calc(-100% / 12 * 4);
+}
+.mobile-push-3-4 {
+  left: 75%; // Fallback if calc() is not supported
+  left: calc(100% / 12 * 9);
+  left: -webkit-calc(100% / 12 * 9);
+  left: -moz-calc(100% / 12 * 9);
+}
+.mobile-pull-3-4 {
+  left: -75%; // Fallback if calc() is not supported
+  left: calc(-100% / 12 * 9);
+  left: -webkit-calc(-100% / 12 * 9);
+  left: -moz-calc(-100% / 12 * 9);
+}
 
 .mobile-no-push, .mobile-no-pull { left: auto; }
 
