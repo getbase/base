@@ -36,7 +36,7 @@
       <div class="left col-8 tablet-col-6 mobile-full mobile-container mobile-center-text">
         <h1 class="h2">The Grid</h1>
         <p class="thin col-11 tablet-col-12">
-          The powerful grid system uses a variation of the 960 grid system. The syntax is super simple and it works accross all major browsers including Chrome, Safari, Firefox and even Internet Explorer 7+.
+          A powerful 12 column grid system. The syntax is super simple and it works accross all major browsers including Chrome, Safari, Firefox and even Internet Explorer 7+.
         </p>
       </div>
       <div id="carbonads-container" class="right mobile-full mobile-container-full carbonads-container"><div class="carbonad mobile-container-full"><div id="azcarbon"></div><script type="text/javascript">var z = document.createElement("script"); z.type = "text/javascript"; z.async = true; z.src = "http://engine.carbonads.com/z/53383/azcarbon_2_1_0_HORIZDARK"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(z, s);</script></div></div>
@@ -54,41 +54,167 @@
           Start by adding a parent element with a class of <span class="normal">.clear</span> as this will ensure all the columns are cleared correctly.
         </p>
         <p>
-          You can then add elements with a <span class="normal">.col</span> class to define a column.
+          A grid can be centered by adding the <span class="normal">.container</span> helper which adds a left and right padding of 10px.
         </p>
         <p>
-          Column widths can then be specified with the <span class="normal">.mobile-col-#</span>, <span class="normal">.tablet-col-#</span> and <span class="normal">.col-#</span> classes.
+          You can then add elements with a <span class="normal">.col</span> class to define a column and column widths can be specified with the <span class="normal">.mobile-col-#</span>, <span class="normal">.tablet-col-#</span> or <span class="normal">.col-#</span> classes.
         </p>
         <p class="note">
-          * Column width helpers can be used without .col to resize elements accordingly.
+          * Column width helpers can be used without .col to resize elements accordingly (form inputs, headings, etc).
         </p>
         <div class="grid">
-          <div class="clear">
-            <div class="col col-4 tablet-col-9 mobile-col-1-2">
-              <div class="inner-content">
-                <span class="no-tablet no-mobile">Desktop Column 4</span>
-                <span class="no-desktop show-tablet no-mobile">Tablet Column 9</span>
-                <span class="no-desktop no-tablet show-mobile">Mobile Column 1-2</span>
-              </div>
+          <div class="row clear">
+            <div class="col col-1 tablet-col-11 mobile-col-1-2">
+              <span class="no-tablet no-mobile">1</span>
+              <span class="no-desktop show-tablet no-mobile">11</span>
+              <span class="no-desktop no-tablet show-mobile">1-2</span>
             </div>
-            <div class="col col-8 tablet-col-3 mobile-col-1-2">
-              <div class="inner-content">
-                <span class="no-tablet no-mobile">Desktop Column 8</span>
-                <span class="no-desktop show-tablet no-mobile">Tablet Column 3</span>
-                <span class="no-desktop no-tablet show-mobile">Mobile Column 1-2</span>
-              </div>
+            <div class="col col-11 tablet-col-1 mobile-col-1-2">
+              <span class="no-tablet no-mobile">11</span>
+              <span class="no-desktop show-tablet no-mobile">1</span>
+              <span class="no-desktop no-tablet show-mobile">1-2</span>
+            </div>
+          </div>
+          <div class="row clear">
+            <div class="col col-2 tablet-col-10 mobile-col-3-4">
+              <span class="no-tablet no-mobile">2</span>
+              <span class="no-desktop show-tablet no-mobile">10</span>
+              <span class="no-desktop no-tablet show-mobile">3-4</span>
+            </div>
+            <div class="col col-10 tablet-col-2 mobile-col-1-4">
+              <span class="no-tablet no-mobile">10</span>
+              <span class="no-desktop show-tablet no-mobile">2</span>
+              <span class="no-desktop no-tablet show-mobile">1-4</span>
+            </div>
+          </div>
+          <div class="row clear">
+            <div class="col col-3 tablet-col-9 mobile-col-1-2">
+              <span class="no-tablet no-mobile">3</span>
+              <span class="no-desktop show-tablet no-mobile">9</span>
+              <span class="no-desktop no-tablet show-mobile">1-2</span>
+            </div>
+            <div class="col col-9 tablet-col-3 mobile-col-1-2">
+              <span class="no-tablet no-mobile">9</span>
+              <span class="no-desktop show-tablet no-mobile">3</span>
+              <span class="no-desktop no-tablet show-mobile">1-2</span>
+            </div>
+          </div>
+          <div class="row clear">
+            <div class="col col-4 tablet-col-8 mobile-col-1-2">
+              <span class="no-tablet no-mobile">4</span>
+              <span class="no-desktop show-tablet no-mobile">8</span>
+              <span class="no-desktop no-tablet show-mobile">1-2</span>
+            </div>
+            <div class="col col-8 tablet-col-4 mobile-col-1-2">
+              <span class="no-tablet no-mobile">8</span>
+              <span class="no-desktop show-tablet no-mobile">4</span>
+              <span class="no-desktop no-tablet show-mobile">1-2</span>
+            </div>
+          </div>
+          <div class="row clear">
+            <div class="col col-5 tablet-col-7 mobile-full">
+              <span class="no-tablet no-mobile">5</span>
+              <span class="no-desktop show-tablet no-mobile">7</span>
+              <span class="no-desktop no-tablet show-mobile">full</span>
+            </div>
+            <div class="col col-7 tablet-col-5 mobile-full">
+              <span class="no-tablet no-mobile">7</span>
+              <span class="no-desktop show-tablet no-mobile">5</span>
+              <span class="no-desktop no-tablet show-mobile">full</span>
+            </div>
+          </div>
+          <div class="row clear">
+            <div class="col col-6 tablet-col-6 mobile-col-1-2">
+              <span class="no-tablet no-mobile">6</span>
+              <span class="no-desktop show-tablet no-mobile">6</span>
+              <span class="no-desktop no-tablet show-mobile">1-2</span>
+            </div>
+            <div class="col col-6 tablet-col-6 mobile-col-1-2">
+              <span class="no-tablet no-mobile">6</span>
+              <span class="no-desktop show-tablet no-mobile">6</span>
+              <span class="no-desktop no-tablet show-mobile">1-2</span>
             </div>
           </div>
 
+
         <div class="row">
           <pre>
-<strong>&lt;!-- Grid Example --&gt;</strong>
-&lt;div class="<strong>clear</strong>"&gt;
-  &lt;div class="<strong>col col-4 tablet-col-9 mobile-col-1-2</strong>"&gt;
-    Column Content
+<strong>&lt;!-- Grid Examples --&gt;</strong>
+&lt;div class="row <strong>clear</strong>"&gt;
+  &lt;div class="<strong>col col-1 tablet-col-11 mobile-col-1-2</strong>"&gt;
+    &lt;span class="no-tablet no-mobile"&gt;1&lt;/span&gt;
+    &lt;span class="no-desktop show-tablet no-mobile"&gt;11&lt;/span&gt;
+    &lt;span class="no-desktop no-tablet show-mobile"&gt;1-2&lt;/span&gt;
   &lt;/div&gt;
-  &lt;div class="<strong>col col-8 tablet-col-3 mobile-col-1-2</strong>"&gt;
-    Column Content
+  &lt;div class="<strong>col col-11 tablet-col-1 mobile-col-1-2</strong>"&gt;
+    &lt;span class="no-tablet no-mobile"&gt;11&lt;/span&gt;
+    &lt;span class="no-desktop show-tablet no-mobile"&gt;1&lt;/span&gt;
+    &lt;span class="no-desktop no-tablet show-mobile"&gt;1-2&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="row <strong>clear</strong>"&gt;
+  &lt;div class="<strong>col col-2 tablet-col-10 mobile-col-3-4</strong>"&gt;
+    &lt;span class="no-tablet no-mobile"&gt;2&lt;/span&gt;
+    &lt;span class="no-desktop show-tablet no-mobile"&gt;10&lt;/span&gt;
+    &lt;span class="no-desktop no-tablet show-mobile"&gt;3-4&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class="<strong>col col-10 tablet-col-2 mobile-col-1-4</strong>"&gt;
+    &lt;span class="no-tablet no-mobile"&gt;10&lt;/span&gt;
+    &lt;span class="no-desktop show-tablet no-mobile"&gt;2&lt;/span&gt;
+    &lt;span class="no-desktop no-tablet show-mobile"&gt;1-4&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="row <strong>clear</strong>"&gt;
+  &lt;div class="<strong>col col-3 tablet-col-9 mobile-col-1-2</strong>"&gt;
+    &lt;span class="no-tablet no-mobile"&gt;3&lt;/span&gt;
+    &lt;span class="no-desktop show-tablet no-mobile"&gt;9&lt;/span&gt;
+    &lt;span class="no-desktop no-tablet show-mobile"&gt;1-2&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class="<strong>col col-9 tablet-col-3 mobile-col-1-2</strong>"&gt;
+    &lt;span class="no-tablet no-mobile"&gt;9&lt;/span&gt;
+    &lt;span class="no-desktop show-tablet no-mobile"&gt;3&lt;/span&gt;
+    &lt;span class="no-desktop no-tablet show-mobile"&gt;1-2&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="row <strong>clear</strong>"&gt;
+  &lt;div class="<strong>col col-4 tablet-col-8 mobile-col-1-2</strong>"&gt;
+    &lt;span class="no-tablet no-mobile"&gt;4&lt;/span&gt;
+    &lt;span class="no-desktop show-tablet no-mobile"&gt;8&lt;/span&gt;
+    &lt;span class="no-desktop no-tablet show-mobile"&gt;1-2&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class="<strong>col col-8 tablet-col-4 mobile-col-1-2</strong>"&gt;
+    &lt;span class="no-tablet no-mobile"&gt;8&lt;/span&gt;
+    &lt;span class="no-desktop show-tablet no-mobile"&gt;4&lt;/span&gt;
+    &lt;span class="no-desktop no-tablet show-mobile"&gt;1-2&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="row <strong>clear</strong>"&gt;
+  &lt;div class="<strong>col col-5 tablet-col-7 mobile-full</strong>"&gt;
+    &lt;span class="no-tablet no-mobile"&gt;5&lt;/span&gt;
+    &lt;span class="no-desktop show-tablet no-mobile"&gt;7&lt;/span&gt;
+    &lt;span class="no-desktop no-tablet show-mobile"&gt;full&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class="<strong>col col-7 tablet-col-5 mobile-full</strong>"&gt;
+    &lt;span class="no-tablet no-mobile"&gt;7&lt;/span&gt;
+    &lt;span class="no-desktop show-tablet no-mobile"&gt;5&lt;/span&gt;
+    &lt;span class="no-desktop no-tablet show-mobile"&gt;full&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="row <strong>clear</strong>"&gt;
+  &lt;div class="<strong>col col-6 tablet-col-6 mobile-col-1-2</strong>"&gt;
+    &lt;span class="no-tablet no-mobile"&gt;6&lt;/span&gt;
+    &lt;span class="no-desktop show-tablet no-mobile"&gt;6&lt;/span&gt;
+    &lt;span class="no-desktop no-tablet show-mobile"&gt;1-2&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class="<strong>col col-6 tablet-col-6 mobile-col-1-2</strong>"&gt;
+    &lt;span class="no-tablet no-mobile"&gt;6&lt;/span&gt;
+    &lt;span class="no-desktop show-tablet no-mobile"&gt;6&lt;/span&gt;
+    &lt;span class="no-desktop no-tablet show-mobile"&gt;1-2&lt;/span&gt;
   &lt;/div&gt;
 &lt;/div&gt;
           </pre>
@@ -99,7 +225,7 @@
           In addition to the above example, a full list of all column helpers are listed below.
         </p>
         <table>
-          <caption class="visuallyhidden">Grid Classes</caption>
+          <caption class="visuallyhidden">Additional Grid Classes</caption>
           <thead>
             <tr>
               <th class="normal">Class / Helper</th>
@@ -128,6 +254,10 @@
               <td>sets column width to 25% for all devices</td>
             </tr>
             <tr>
+              <td>.col-3-4</td>
+              <td>sets column width to 75% for all devices</td>
+            </tr>
+            <tr>
               <td>.tablet-col-1-2</td>
               <td>sets column width to 50% for tablet devices</td>
             </tr>
@@ -140,6 +270,10 @@
               <td>sets column width to 25% for tablet devices</td>
             </tr>
             <tr>
+              <td>.tablet-col-3-4</td>
+              <td>sets column width to 75% for tablet devices</td>
+            </tr>
+            <tr>
               <td>.mobile-col-1-2</td>
               <td>sets column width to 50% for mobile devices</td>
             </tr>
@@ -150,6 +284,10 @@
             <tr>
               <td>.mobile-col-1-4</td>
               <td>sets column width to 25% for mobile devices</td>
+            </tr>
+            <tr>
+              <td>.mobile-col-3-4</td>
+              <td>sets column width to 75% for mobile devices</td>
             </tr>
           </tbody>
         </table>
