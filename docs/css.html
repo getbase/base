@@ -21,9 +21,9 @@
 
 <div class="header dark-blue-row">
   <div class="container row-3 tablet-row-3 mobile-row-1">
-    <div class="clear mobile-center-text">
+    <div class="clear mobile-text-center">
       <a href="/base/" class="logo left mobile-no-float uppercase"><span class="icon"></span>Base</a>
-      <ul class="navigation inline-list right mobile-full mobile-container-full">
+      <ul class="navigation list-inline right mobile-full mobile-container-full">
         <li><a href="/base/docs/index.html">Overview</a></li>
         <li><a class="active" href="/base/docs/css.html">CSS</a></li>
         <li><a href="/base/docs/grid.html">Grid</a></li>
@@ -33,9 +33,9 @@
   </div>
   <div class="container mobile-container-full">
     <div class="row-2 clear mobile-row">
-      <div class="left col-8 tablet-col-6 mobile-full mobile-container mobile-center-text">
+      <div class="left col-8 tablet-col-6 mobile-full mobile-container mobile-text-center">
         <h1 class="h2">Global CSS</h1>
-        <p class="thin col-11 tablet-col-12">
+        <p class="font-light col-11 tablet-col-12">
           Base uses relative sizing (rems, not pixels) for global typography. Sans-serif is the default font family and the global size is 16rem with a line height of 21rem.
         </p>
       </div>
@@ -46,8 +46,8 @@
 </div>
 
 <div class="grey-row" id="headings">
-  <div class="container row-2 thin">
-      <div class="clear row mobile-row tablet-left-text mobile-left-text">
+  <div class="container row-2 font-light">
+      <div class="clear row mobile-row tablet-text-left mobile-text-left">
         <h1>Headings (h1)</h1>
         <p>
           The font size of headings can easily be configured at the top of the LESS / SASS file accordingly.
@@ -69,9 +69,9 @@
 </div>
 
 <div class="white-row" id="typography">
-  <div class="container row-2 thin">
-      <div class="clear row mobile-row tablet-left-text mobile-left-text">
-        <h2 class="h3 thin">Global Typography Helpers / Classes</h2>
+  <div class="container row-2 font-light">
+      <div class="clear row mobile-row tablet-text-left mobile-text-left">
+        <h2 class="h3 font-light">Global Typography Helpers / Classes</h2>
           <p>
             Along with the heading helpers (classes), there are additional typography helpers too.
           </p>
@@ -95,20 +95,24 @@
                 <td>Sets element to be block</td>
               </tr>
               <tr>
-                <td>.thin</td>
-                <td class="thin">Applies a thin body weight (in base docs, the thin class is applied to most typography so you won't see any change on this example as the font is already thin).</td>
+                <td>.font-thin</td>
+                <td class="font-thin">Applies a thin font weight</td>
               </tr>
               <tr>
-                <td>.normal</td>
-                <td class="normal">Applies a normal body weight</td>
+                <td>.font-light</td>
+                <td class="font-light">Applies a font-light font weight (in base docs, the font-light class is applied to most typography so you won't see any change on this example as the font is already font-light).</td>
               </tr>
               <tr>
-                <td>.strong</td>
-                <td class="strong">Applies a strong body weight</td>
+                <td>.font-normal</td>
+                <td class="font-normal">Applies a normal font weight</td>
               </tr>
               <tr>
-                <td>.heavy</td>
-                <td class="heavy">Applies a heavy body weight</td>
+                <td>.font-bold</td>
+                <td class="font-bold">Applies a strong font weight</td>
+              </tr>
+              <tr>
+                <td>.font-ultra-bold</td>
+                <td class="font-ultra-bold">Applies a heavy font weight</td>
               </tr>
               <tr>
                 <td>.capitalize</td>
@@ -123,40 +127,40 @@
                 <td class="em">Gives an element emphasis</td>
               </tr>
               <tr>
-                <td>.left-text</td>
-                <td class="left-text">Aligns text to the left for all devices</td>
+                <td>.text-left</td>
+                <td class="text-left">Aligns text to the left for all devices</td>
               </tr>
               <tr>
-                <td>.center-text</td>
-                <td class="center-text">Aligns text to the center for all devices</td>
+                <td>.text-center</td>
+                <td class="text-center">Aligns text to the center for all devices</td>
               </tr>
               <tr>
-                <td>.right-text</td>
-                <td class="right-text">Aligns text to the right for all devices</td>
+                <td>.text-right</td>
+                <td class="text-right">Aligns text to the right for all devices</td>
               </tr>
               <tr>
-                <td>.tablet-left-text</td>
-                <td class="tablet-left-text">Aligns text to the left only for tablet devices</td>
+                <td>.tablet-text-left</td>
+                <td class="tablet-text-left">Aligns text to the left only for tablet devices</td>
               </tr>
               <tr>
-                <td>.tablet-center-text</td>
-                <td class="tablet-center-text">Aligns text to the center only for tablet devices</td>
+                <td>.tablet-text-center</td>
+                <td class="tablet-text-center">Aligns text to the center only for tablet devices</td>
               </tr>
               <tr>
-                <td>.tablet-right-text</td>
-                <td class="tablet-right-text">Aligns text to the right only for tablet devices</td>
+                <td>.tablet-text-right</td>
+                <td class="tablet-text-right">Aligns text to the right only for tablet devices</td>
               </tr>
               <tr>
-                <td>.mobile-left-text</td>
-                <td class="mobile-left-text">Aligns text to the left only for mobile devices</td>
+                <td>.mobile-text-left</td>
+                <td class="mobile-text-left">Aligns text to the left only for mobile devices</td>
               </tr>
               <tr>
-                <td>.mobile-center-text</td>
-                <td class="mobile-center-text">Aligns text to the center only for mobile devices</td>
+                <td>.mobile-text-center</td>
+                <td class="mobile-text-center">Aligns text to the center only for mobile devices</td>
               </tr>
               <tr>
-                <td>.mobile-right-text</td>
-                <td class="mobile-right-text">Aligns text to the right only for mobile devices</td>
+                <td>.mobile-text-right</td>
+                <td class="mobile-text-right">Aligns text to the right only for mobile devices</td>
               </tr>
               <tr>
                 <td>.left</td>
@@ -222,9 +226,9 @@
 
 
 <div class="grey-row" id="lists">
-  <div class="container row-2 thin">
-      <div class="clear row mobile-row tablet-left-text mobile-left-text">
-        <h2 class="h3 thin">List Items</h2>
+  <div class="container row-2 font-light">
+      <div class="clear row mobile-row tablet-text-left mobile-text-left">
+        <h2 class="h3 font-light">List Items</h2>
         <p class="no-margin">
           Base includes default styles for ordered, unordered, unstyled, and definition lists.
         </p>
@@ -260,7 +264,7 @@
 </pre>
           </div>
           <div class="col col-1-3 mobile-full">
-            <ul class="unstyled-list row-1">
+            <ul class="list-unstyled row-1">
               <li>Unstyled List Item 1</li>
               <li>Unstyled List Item 2</li>
               <li>Unstyled List Item 3</li>
@@ -268,7 +272,7 @@
 
 <pre>
 <strong>&lt;!-- Unstyled List --&gt;</strong>
-&lt;ul class="unstyled-list"&gt;
+&lt;ul class="list-unstyled"&gt;
   &lt;li&gt;Unstyled List Item 1&lt;/li&gt;
   &lt;li&gt;Unstyled List Item 2&lt;/li&gt;
   &lt;li&gt;Unstyled List Item 3&lt;/li&gt;
@@ -278,7 +282,7 @@
         </div>
 
       <div class="row-2">
-        <h2 class="h3 thin">Definition Lists</h2>
+        <h2 class="h3 font-light">Definition Lists</h2>
         <dl>
           <dt>Definition List</dt>
           <dd>The DL element should be used when you want incorporate a definition of a term in your document, it is often used in glossaries to define many terms, it is also used in “normal” documents when the author wishes to explain a term in a more detail (Like this definition).</dd>
@@ -299,14 +303,14 @@
 
 
 <div class="smoke-row" id="blockquote">
-  <div class="container row-2 thin">
-      <div class="clear row mobile-row tablet-left-text mobile-left-text">
-        <h2 class="h3 thin">Blockquote</h2>
+  <div class="container row-2 font-light">
+      <div class="clear row mobile-row tablet-text-left mobile-text-left">
+        <h2 class="h3 font-light">Blockquote</h2>
         <blockquote>
           <p>
             I was able to put together the Beauty Secrets website
             in under 3 hours using Base which gave me more time to
-            do other things such as troll the internet :)
+            do other font-lightgs such as troll the internet :)
           </p>
           <cite>Matthew Hartman via Twitter</cite>
           </blockquote>
@@ -317,7 +321,7 @@
   &lt;p&gt;
     I was able to put together the Beauty Secrets website
     in under 3 hours using Base which gave me more time to
-    do other things such as troll the internet :)
+    do other font-lightgs such as troll the internet :)
   &lt;/p&gt;
   &lt;cite&gt;Matthew Hartman via Twitter&lt;/cite&gt;
 &lt;/blockquote&gt;
@@ -329,9 +333,9 @@
 
 
 <div class="white-row" id="tables">
-  <div class="container row-2 thin">
-      <div class="clear row mobile-row tablet-left-text mobile-left-text">
-        <h2 class="h3 thin">Tables</h2>
+  <div class="container row-2 font-light">
+      <div class="clear row mobile-row tablet-text-left mobile-text-left">
+        <h2 class="h3 font-light">Tables</h2>
         <p>Tables just have 1 basic style with some borders and background colour fills.</p>
         <table>
           <caption>Example Table (caption)</caption>
@@ -378,9 +382,9 @@
 
 
 <div class="grey-row" id="forms">
-  <div class="container row-2 thin">
-      <div class="clear row mobile-row tablet-left-text mobile-left-text">
-        <h2 class="h3 thin">Forms and Buttons</h2>
+  <div class="container row-2 font-light">
+      <div class="clear row mobile-row tablet-text-left mobile-text-left">
+        <h2 class="h3 font-light">Forms and Buttons</h2>
         <p>
           The grid system can be used to add structure and layout to your forms.
         </p>
@@ -403,7 +407,7 @@
                 </select>
               </div>
               <div class="row">
-                <strong class="normal">What is your gender?</strong>
+                <strong class="font-normal">What is your gender?</strong>
                 <span class="checkbox">
                   <input type="radio" name="gender" id="male">
                   <label for="male">Male</label>
@@ -414,7 +418,7 @@
                 </span>
               </div>
               <div class="row col-4 tablet-col-6 mobile-full">
-                <strong class="normal">What hobbies do you enjoy?</strong>
+                <strong class="font-normal">What hobbies do you enjoy?</strong>
                 <span class="checkbox">
                   <input type="checkbox" id="sports" name="sports">
                   <label for="sports">Sports like Volleyball, Tennis, Table Tennis, Soccer and Football</label>
@@ -432,7 +436,7 @@
                 <input type="disabled" value="Disabled Submit Button" disabled class="button tablet-full mobile-full">
               </div>
               <div class="row">
-                <input type="submit" value="Unstyled Submit Button" class="unstyled-button">
+                <input type="submit" value="Unstyled Submit Button" class="button-unstyled">
               </div>
             </fieldset>
           </form>
@@ -459,14 +463,14 @@
       &lt;/select&gt;
 
       <strong>&lt;!-- Radio --&gt;</strong>
-      &lt;strong class="normal block"&gt;What is your gender?&lt;/strong&gt;
+      &lt;strong class="font-normal block"&gt;What is your gender?&lt;/strong&gt;
       &lt;span class="checkbox"&gt;
         &lt;input type="radio" name="gender" id="male"&gt;
         &lt;label for="male"&gt;Male&lt;/label&gt;
       &lt;/span&gt;
 
       <strong>&lt;!-- For multi-line checkboxes / radios, a parent .checkbox element must be wrapped --&gt;</strong>
-      &lt;strong class="normal block"&gt;What hobbies do you enjoy?&lt;/strong&gt;
+      &lt;strong class="font-normal block"&gt;What hobbies do you enjoy?&lt;/strong&gt;
       &lt;span class="checkbox"&gt;
         &lt;input type="checkbox" id="sports" name="sports"&gt;
         &lt;label for="sports"&gt;Sports like Volleyball, Tennis, Table Tennis, Soccer and Football&lt;/label&gt;
@@ -486,7 +490,7 @@
       &lt;input type="disabled" value="Disabled Submit Button" disabled class="button"&gt;
 
       <strong>&lt;!-- Unstyled Button --&gt;</strong>
-      &lt;input type="submit" value="Unstyled Submit Button" class="unstyled-button"&gt;
+      &lt;input type="submit" value="Unstyled Submit Button" class="button-unstyled"&gt;
 
   &lt;/fieldset&gt;
 &lt;/form&gt;
@@ -499,11 +503,11 @@
 
 <div class="footer">
   <div class="container clear">
-    <div class="left col-6 left-text mobile-full mobile-left-text">
+    <div class="left col-6 text-left mobile-full mobile-text-left">
       Built with love by <a title=":)" href="http://www.matthewhartman.com.au">Matthew Hartman</a> in Australia.
     </div>
-    <div class="right col-6 right-text mobile-full mobile-left-text">
-      <ul class="inline-list footer-list">
+    <div class="right col-6 text-right mobile-full mobile-text-left">
+      <ul class="list-inline footer-list">
       <li><a href="https://github.com/matthewhartman/base">View Source on Github</a></li>
       <li><a href="https://github.com/matthewhartman/base/issues?state=open">Current Issues</a></li>
       <li><a href="/base/docs/">Docs</a></li>

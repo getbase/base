@@ -7,7 +7,7 @@
   100% {color: #161b22;}
 }
 
-@-webkit-keyframes blinking /* Safari and Chrome */
+@-webkit-keyframes blinking
 {
   0%   {color: #161b22;}
   40%  {color: #fff;}
@@ -60,7 +60,7 @@ a:active {
     color: #fff;
     text-decoration: none;
     font-weight: 900;
-    .inline-block();
+    .inline-block;
   }
   .logo > .icon {
     content: "";
@@ -125,10 +125,10 @@ a:active {
   }
 
 .navigation {
-  .unstyled-list();
-  .uppercase();
+  .list-unstyled;
+  .uppercase;
   .font-size(14);
-  .normal();
+  .font-normal;
   li {
     padding: 10px 20px;
     a {
@@ -153,7 +153,7 @@ a:active {
         width: 100%;
         height: 1px;
         background-color: #fff;
-        .block();
+        .block;
         -webkit-transition: all 0.2s ease-in-out 0s;
         -moz-transition: all 0.2s ease-in-out 0s;
         transition: all 0.2s ease-in-out 0s;
@@ -188,7 +188,7 @@ a:active {
   padding: 4px 20px 0 20px;
   *padding: 10px 20px 0 20px;
   height: 280px;
-  .center-text();
+  .text-center;
   overflow: hidden;
   width: 55%;
   *width: ~'expression(Math.floor(0.55 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px")';
@@ -198,24 +198,24 @@ a:active {
   border-radius: 100%;
   width: 6px;
   height: 6px;
-  .inline-block();
+  .inline-block;
   *margin-bottom: 8px;
 }
 .screen {
   margin-top: 4px;
   background-color: #3f5467;
   height: 284px;
-  .center-text();
+  .text-center;
   border-radius: 6px 6px 0 0;
 }
 .toolbar {
   border-radius: 6px 6px 0 0;
   background-color: #fff;
-  .left-text();
+  .text-left;
   padding: 10px;
 }
 .address-bar {
-  .block();
+  .block;
   border-radius: 3px;
   .font-size(11);
   padding: 3px;
@@ -234,8 +234,8 @@ a:active {
   border-radius: 100%;
   width: 10px;
   height: 10px;
-  .block();
-  .left();
+  .block;
+  .left;
   background-color: #ececec;
   &.active {
     background-color: #ed4538;
@@ -245,13 +245,13 @@ a:active {
   margin-right: 10px;
 }
 .carbonads-container {
-  .inline-block();
+  .inline-block;
   margin: 0 !important;
 }
 .carbonad {
   background-color: #22323f !important;
   margin-top: 5px !important;
-  .left-text();
+  .text-left;
   border: 0 !important;
 }
 .screen .carbonad {
@@ -272,14 +272,14 @@ a:active {
 .sub-heading {
   color: #2c3f50;
   border-top: 1px solid #2c3f50;
-  .center-text();
-  .block();
-  .h4();
-  .normal();
+  .text-center;
+  .block;
+  .h4;
+  .font-normal;
   position: relative;
   top: 44px;
   span {
-    .inline-block();
+    .inline-block;
     padding-left: 1.2em;
     padding-right: 1.2em;
     position: relative;
@@ -312,7 +312,7 @@ a:active {
   margin-top: 30px;
   padding: 5px 10px;
   height: 130px;
-  .thin();
+  .font-light;
   pre {
     padding: 0;
     .font-size(13);
@@ -328,18 +328,18 @@ a:active {
   .comment { color: #ccc; }
 }
 .blinking {
-  .heavy();
+  .font-ultra-bold;
   animation: blinking 1s infinite;
   -webkit-animation: blinking 1s infinite; /* Safari and Chrome */
 }
 .website {
-  .block();
+  .block;
   padding: 0 10px;
   margin: 2px;
   text-decoration: none;
   position: relative;
   height: 80px;
-  .center-text();
+  .text-center;
   &:hover {
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
     filter: alpha(opacity=80);
@@ -424,9 +424,9 @@ a:active {
 
 .grid {
    .col {
-    .center-text();
+    .text-center;
     .font-size(12);
-    .strong();
+    .strong;
     background-color: #ccc;
     &:first-child {
       background-color: #ddd;
