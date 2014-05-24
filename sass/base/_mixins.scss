@@ -1,27 +1,22 @@
 // ==========================================================================
-
-//  Base Mixins - built with SASS - http://sass-lang.com/
-//  Theme URI: http://git.io/base
-//  Author: Matthew Hartman - http://www.matthewhartman.com.au/
-//  Version: 0.1 - Last Updated: 7th June, 2013
-
+// Base – Mixins
 // ==========================================================================
 
 // Font Sizes (REMs with PX fallback for older browsers)
 @mixin font-size($size) {
     font-size: $size + px;
-    font-size: ($size/16) + rem;
+    font-size: ($size / $default-font-size) + rem;
 }
 
 // Line Height Sizes (REMs with PX fallback for older browsers)
 @mixin line-height($size) {
     line-height: $size + px;
-    line-height: ($size/16) + rem;
+    line-height: ($size / $default-font-size) + rem;
 }
 
 // Rounded Corners
-@mixin rounded($radius) {
-  -webkit-border-radius: ($radius) + px;
-  -moz-border-radius: ($radius) + px;
-  border-radius: ($radius) + px;
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
 }

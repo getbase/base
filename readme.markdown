@@ -38,7 +38,8 @@ Base was built by Matthew Hartman [(@hartmanmatthew)](http://twitter.com/hartman
 - [base_css-rails](https://github.com/rkrdo/base_css-rails) - a gem that adds the Base framework to the application's asset pipeline by Ricardo Cruz
 - Thanks to Beau Smith (@beau) for the custom breakpoint suggestion
 - Thanks to HTML5 framework for the .htaccess file
-- Nicolas Gallagher (@necolas) for Normalize.css and Micro ClearFix.
+- Nicolas Gallagher (@necolas) for Normalize.css and Micro ClearFix
+- Tristan McNab for adding bower support
 
 ## MIT Open Source License
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
