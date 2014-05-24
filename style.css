@@ -418,7 +418,7 @@ input::-moz-focus-inner {
   color: #999;
   background-color: #f1f1f1;
 }
-.unstyled-button {
+.button-unstyled {
   font-size: 16px;
   font-size: 1rem;
   color: #27ae61;
@@ -430,11 +430,11 @@ input::-moz-focus-inner {
   cursor: pointer;
   outline: 0;
 }
-.unstyled-button:hover {
+.button-unstyled:hover {
   text-decoration: none;
 }
-.unstyled-button[disabled],
-.unstyled-button.disabled {
+.button-unstyled[disabled],
+.button-unstyled.disabled {
   text-decoration: none;
   color: #999;
   background-color: #ccc;
