@@ -20,11 +20,41 @@ Preview the [docs](http://matthewhartman.github.io/base/docs/) to see the Base f
 - readme.markdown - The Read Me file for Base (feel free to delete this)
 - .htaccess - Apache server caching, compression, and other configuration defaults for Grade-A performance (taken from [HTML5 Boilerplate](https://github.com/h5bp/html5-boilerplate)
 - less (folder):
-  - mixins.less - Basic Mixins which include font-size properties and more
   - style.less - The base stylesheet in LESS format
+    - base (folder):
+      - _blockquotes.less (Styles for blockquotes)
+      - _buttons.less (Base Buttons)
+      - _code.less (Styles for code blocks)
+      - _desktop-grid.less (Tablet grid and helpers)
+      - _forms.less (Styles for form elements)
+      - _global.less (Global typography and heading styles)
+      - _grid.less (Base Grid)
+      - _helpers.less (Base helpers)
+      - _lists.less (Styles for ordered, unordered lists and navigation)
+      - _mixins.less (Basic Mixins which include font-size properties and more)
+      - _print.less (Basic print stylesheet - taken from HTML5 Boilerplate)
+      - _resets.less (Global Resets)
+      - _tables.less (Styles for tables)
+      - _tablet-grid.less (Tablet grid and helpers)
+      - _variables.less (Base variables including default font sizes and colours)
 - sass (folder):
-  - mixins.scss - Basic Mixins which include font-size properties and more
   - style.scss - The base stylesheet in SASS format
+  - base (folder):
+    - _blockquotes.scss (Styles for blockquotes)
+    - _buttons.scss (Base Buttons)
+    - _code.scss (Styles for code blocks)
+    - _desktop-grid.scss (Tablet grid and helpers)
+    - _forms.scss (Styles for form elements)
+    - _global.scss (Global typography and heading styles)
+    - _grid.scss (Base Grid)
+    - _helpers.scss (Base helpers)
+    - _lists.scss (Styles for ordered, unordered lists and navigation)
+    - _mixins.scss (Basic Mixins which include font-size properties and more)
+    - _print.scss (Basic print stylesheet - taken from HTML5 Boilerplate)
+    - _resets.scss (Global Resets)
+    - _tables.scss (Styles for tables)
+    - _tablet-grid.scss (Tablet grid and helpers)
+    - _variables.scss (Base variables including default font sizes and colours)
 - images (folder):
  - favicon.ico: Standard 32x32 favicon
  - apple-touch-icon (x3): All three sizes of Apple touch icons for iPhone 3, iPad and iPhone 4 with retina.
