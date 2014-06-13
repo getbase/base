@@ -10,8 +10,9 @@
     "css",
     "less",
     "sass",
+    "scss",
     "framework",
-    "mobile-first",
+    "desktop-first",
     "lightweight",
     "responsive"
   ],

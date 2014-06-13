@@ -37,8 +37,8 @@ Preview the [docs](http://matthewhartman.github.io/base/docs/) to see the Base f
       - _tables.less (Styles for tables)
       - _tablet-grid.less (Tablet grid and helpers)
       - _variables.less (Base variables including default font sizes and colours)
-- sass (folder):
-  - style.scss - The base stylesheet in SASS format
+- scss (folder):
+  - style.scss - The base stylesheet in SCSS format
   - base (folder):
     - _blockquotes.scss (Styles for blockquotes)
     - _buttons.scss (Base Buttons)
