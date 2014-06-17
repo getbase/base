@@ -17,11 +17,11 @@
   @import "base/_code";         // Code
   @import "base/_tables";       // Tables
   @import "base/_forms";        // Forms, Input Types and Buttons
-
   @import "base/_buttons";      // Custom Base Buttons
-  @import "base/_helpers";      // Custom Base Helpers
   
   @import "base/_grid";         // Grid
   @import "base/_tablet-grid";  // Tablet Grid
   @import "base/_mobile-grid";  // Mobile Grid
   @import "base/_print";        // Print Page Styles
+  
+  @import "base/_helpers";      // Custom Base Helpers
