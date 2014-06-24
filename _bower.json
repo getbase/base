@@ -2,10 +2,6 @@
   "name": "base",
   "version": "1.8.3",
   "homepage": "http://matthewhartman.github.io/base/",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/matthewhartman/base.git"
-    },
   "authors": [
     "Matthew Hartman <hello@matthewhartman.com.au>"
   ],
