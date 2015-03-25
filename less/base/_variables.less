@@ -1,35 +1,74 @@
 // ==========================================================================
-// Base – Global Variables
+// Base – Variables
 // ==========================================================================
 
-// Container Defaults
-@mobile-container:   100%;
-@tablet-container:   720px;
-@desktop-container:  960px;
+// Global Typography
+@base-background-color:                         #fff;
+@base-font-family:                              "Montserrat", sans-serif;
+@base-font-size:                                16;
+@base-line-height:                              22;
+@base-font-weight:                              400;
+@base-font-color:                               #585858;
+@base-link-color:                               #cd5c5c;
 
+// Font Weights
+@font-thin:                                     100;
+@font-light:                                    300;
+@font-regular:                                  400;
+@font-medium:                                   500;
+@font-semi-bold:                                600;
+@font-bold:                                     700;
+@font-extra-bold:                               800;
+@font-ultra-bold:                               900;
 
-// Resonsive Design Break Points
-@mobile-breakpoint:  (@tablet-container + 19px);
-@tablet-breakpoint:  (@tablet-container + 20px);
-@desktop-breakpoint: (@desktop-container);
+// Headings
+@heading-font-family:                           "Montserrat", sans-serif;
+@h1-font-size:                                  32;
+@h1-line-height:                                38;
+@h1-font-weight:                                @font-regular;
+@h1-color:                                      #343434;
+@h2-font-size:                                  26;
+@h2-line-height:                                32;
+@h2-font-weight:                                @font-regular;
+@h2-color:                                      #343434;
+@h3-font-size:                                  22;
+@h3-line-height:                                28;
+@h3-font-weight:                                @font-regular;
+@h3-color:                                      #343434;
+@h4-font-size:                                  18;
+@h4-line-height:                                24;
+@h4-font-weight:                                @font-regular;
+@h4-color:                                      #343434;
+@h5-font-size:                                  16;
+@h5-line-height:                                22;
+@h5-font-weight:                                @font-regular;
+@h5-color:                                      #343434;
+@h6-font-size:                                  14;
+@h6-line-height:                                20;
+@h6-font-weight:                                @font-regular;
+@h6-color:                                      #343434;
 
-// Default Fonts
-@default-font-family:      sans-serif;
-@default-code-font-family: 'courier new', monospace, serif;
+// Blockquotes
+@base-blockquote-font-size:                     22;
+@base-blockquote-line-height:                   28;
+@base-blockquote-color:                         #424242;
+@base-blockquote-cite-color:                    #777;
 
-// Font Size Defaults
-@h1: 40;
-@h2: 32;
-@h3: 26;
-@h4: 20;
-@h5: 18;
-@h6: 16;
+// Code
+@base-code-font-family:                         'courier new', monospace, serif;
+@base-code-font-size:                           13;
+@base-code-line-height:                         18;
+@base-code-color:                               #272727;
+@base-code-background-color:                    #f1f1f1;
+@base-code-border-color:                        #d7d7d7;
 
-@default-font-size:   16;
-@default-line-height: 21;
+// Grid Containers
+@mobile-container:                              100%;
+@tablet-container:                              720px;
+@desktop-container:                             980px;
+@hd-container:                                  1140px;
 
-// Default Colours
-@default-font-color:          #434343;
-@default-link-color:          #27ae61;
-@default-button-color:        #e74b3c;
-@default-button-hover-color:  #f43f3f;
+// Responsive Breakpoints
+@tablet-breakpoint:                             (@tablet-container - 1);
+@desktop-breakpoint:                            (@desktop-container - 1);
+@hd-breakpoint:                                 (@hd-container - 1);

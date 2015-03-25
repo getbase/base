@@ -1,53 +1,197 @@
 // ==========================================================================
-// Base – CSS Helpers / Extras
+// Base – Helpers
 // ==========================================================================
+
+// General Resets
+.no-margin { margin: 0; }
+.no-padding { padding: 0; }
+.no-float { float: none; }
+.no-background { background: transparent; }
+.no-border { border: 0; }
+
+// Font Weights
+.font-thin { font-weight: @font-thin; }
+.font-light { font-weight: @font-light; }
+.font-regular { font-weight: @font-regular; }
+.font-medium { font-weight: @font-medium; }
+.font-semi-bold { font-weight: @font-semi-bold; }
+.font-bold { font-weight: @font-bold; }
+.font-extra-bold { font-weight: @font-extra-bold; }
+.font-ultra-bold { font-weight: @font-ultra-bold; }
+
+// Font Styles
+.font-normal { font-style: normal; }
+.font-italic { font-style: italic; }
+
+// Text Modifications
+.uppercase { text-transform: uppercase; }
+.lowercase { text-transform: lowercase; }
+.capitalize { text-transform: capitalize; }
+
+// Text Alignments
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+.text-center { text-align: center; }
+.text-justify { text-align: justify; }
+
+// Positions
+.relative { position: relative; }
+.absolute { position: absolute; }
+.static { position: static; }
+
+// Display Types
+.block { display: block; }
+.inline-block { display: inline-block; }
+.inline { display: inline; }
 
 // Floats
 .left { float: left; }
 .right { float: right; }
 
-// Display
-.block { display: block; }
-.inline { display: inline; }
-.inline-block {
-  display: inline-block;
-  *zoom: 1;
-  *display: inline;
-}
-.none, 
-[hidden] {
-  display: none;
+// Alignments
+.center-element {
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-// Font Weights
-.font-ultra-bold { font-weight: 900; }
-.font-bold { font-weight: 700; }
-.font-normal { font-weight: 500; }
-.font-light { font-weight: 300; }
-.font-thin { font-weight: 100; }
-
-// Font Styles
-.font-normal { font-style: normal; }
-.capitalize { text-transform: capitalize; }
-.uppercase { text-transform: uppercase; }
-
-// Text Position
-.text-left { text-align: left; }
-.text-right { text-align: right; }
-.text-center { text-align: center; }
-
-// Accessibility (offscreen text for screen readers)
-.visuallyhidden {
+// Hide only visually, but have it available for screenreaders: : h5bp.com/v
+.sr {
   border: 0;
   clip: rect(0 0 0 0);
   height: 1px;
+  margin: -1px;
   overflow: hidden;
   padding: 0;
   position: absolute;
   width: 1px;
-  left: -9999em;
 }
 
-// Image Spacing
-.image-left { margin-right: 20px; }
-.image-right { margin-left: 20px; }
+// Lists
+.list-unstyled {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  li {
+    margin: 0;
+    padding: 0;
+  }
+}
+.list-inline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  li {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+  }
+}
+
+// Image Positions
+.img-left {
+  float: left;
+  margin-right: 20px;
+}
+.img-right {
+  float: right;
+  margin-left: 20px;
+}
+
+// Grouped Fields
+.field-group {
+  padding-top: .5em;
+  padding-bottom: .5em;
+  overflow: hidden;
+  label {
+    padding-top: 8px;
+  }
+}
+.field { width: 100%; }
+
+// Custom Buttons
+.button {
+  border: 1px solid #d7d7d7;
+  background-color: #f3f3f3;
+  line-height: normal;
+  padding: .5em 1em;
+  text-decoration: none;
+  color: #363636;
+  display: inline-block;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+  &:hover { background: #f9f9f9; }
+  &:active { background: #fff; }
+}
+.button-primary {
+  // Add your styles here
+}
+.button-secondary {
+  // Add your styles here
+}
+.button-link {
+  color: @base-link-color;
+  text-decoration: underline;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  &:hover { text-decoration: none; }
+  &:active { outline: 0; }
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: .5;
+}
+
+// Custom Select
+.select {
+  border: 1px solid #ccc;
+  overflow: hidden;
+  height: 36px;
+  line-height: 32px;
+  position: relative;
+  display: block;
+  &:before {
+    content: "";
+    border: 6px solid transparent;
+    border-top-color: #676767;
+    top: 50%;
+    right: 10px;
+    margin-top: -3px;
+    pointer-events: none;
+    position: absolute;
+  }
+  select {
+    -webkit-appearance: none;
+    width: 110%;
+    height: 36px;
+    padding: 0 .4em;
+    line-height: normal;
+    border: 0;
+    background: transparent;
+    display: block;
+    &:focus { outline: 0; }
+  }
+}
+
+// Checkbox and Radio
+.checkbox,
+.radio {
+  display: inline-block;
+  position: relative;
+  margin-top: .5em;
+  margin-bottom: .5em;
+  label {
+    padding-left: 20px;
+    padding-top: 0;
+    display: inline-block;
+  }
+  input[type="checkbox"],
+  input[type="radio"] {
+    position: absolute;
+    top: 4px;
+    left: 0;
+  }
+}

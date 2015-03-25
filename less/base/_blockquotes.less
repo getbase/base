@@ -1,29 +1,22 @@
 // ==========================================================================
-// Base – Blockquotes
+// Base – Blockquote
 // ==========================================================================
-blockquote {
-  .font-size(22);
-  .line-height(32);
-  color: #434343;
-  margin: 1em 0;
-  &:extend(.em);
+blockquote,
+.blockquote {
+  margin: 3em 0;
+  color: @base-blockquote-color;
+  font-style: italic;
+  font-weight: @base-font-weight;
   p {
-    margin: 1em 0;
+    .font-size(@base-blockquote-font-size);
+    .line-height(@base-blockquote-line-height);
+    margin-bottom: .4em;
   }
-}
-cite {
-  color: #434343;
-  font-style: normal;
-  &:extend(.font-normal);
-  .font-size(16);
-  line-height: normal;
-}
-
-q {
-  &:extend(.em);
-  quotes: none;
-}
-q:before, q:after {
-  content: '';
-  content: none;
+  cite {
+    .font-size(@base-font-size - 3);
+    .line-height(@base-line-height - 3);
+    font-weight: @font-bold;
+    font-style: normal;
+    color: @base-blockquote-cite-color;
+  }
 }

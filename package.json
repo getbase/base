@@ -1,11 +1,11 @@
 {
   "name": "base",
-  "version": "1.8.3",
+  "version": "2.0.0",
   "homepage": "http://matthewhartman.github.io/base/",
   "repository": {
     "type": "git",
     "url": "https://github.com/matthewhartman/base.git"
-    },
+  },
   "authors": [
     "Matthew Hartman <hello@matthewhartman.com.au>"
   ],
@@ -13,10 +13,8 @@
   "keywords": [
     "css",
     "less",
-    "sass",
-    "scss",
     "framework",
-    "desktop-first",
+    "mobile-first",
     "lightweight",
     "responsive"
   ],
@@ -27,5 +25,12 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "devDependencies": {
+    "gulp": "^3.8.10",
+    "gulp-less": "^2.0.1",
+    "gulp-notify": "^2.2.0",
+    "gulp-watch": "^4.1.0",
+    "path": "^0.11.14"
+  }
 }

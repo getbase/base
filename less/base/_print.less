@@ -1,19 +1,29 @@
-// ==========================================================================
-// Base – Print Styles
-// ==========================================================================
-@media print {
+// All Elements
+*,
+*:before,
+*:after {
+  background: transparent;
+  color: #000;
+  box-shadow: none;
+  text-shadow: none;
+}
 
-* { background: transparent; }
+// Links
 a, a:visited { text-decoration: underline; }
+a[href]:after { content: " (" attr(href) ")"; }
+a[href^="#"]:after, a[href^="javascript:"]:after { content: ""; }
 
-abbr[title]:after { content: " (" attr(title) ")"; }
+// Code and Blockquotes
+pre, blockquote { page-break-inside: avoid; }
 
-pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+// Tables
 thead { display: table-header-group; }
-tr, img { page-break-inside: avoid; }
-img { max-width: 100%; }
-@page { margin: 0.5cm; }
+tr { page-break-inside: avoid; }
+
+// Images
+img { page-break-inside: avoid; max-width: 100%;}
+
+// Typography
 p, h2, h3 { orphans: 3; widows: 3; }
 h2, h3 { page-break-after: avoid; }
-
-} // End Print Styles
+abbr[title]:after { content: " (" attr(title) ")"; }

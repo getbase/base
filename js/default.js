@@ -1,7 +1,6 @@
-/* ==========================================================
-  Base Default JavaScript
-  -- Table of Contents --
-*/
+// Default JavaScript Functions and Initiations
+$(document).ready(function() {
 
-
-// JS functions and initiations go here...
+  // Functions go here...
+  
+}); // end document ready
