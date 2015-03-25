@@ -2,7 +2,7 @@
 
 // Base Stylesheet - http://git.io/base
 // Author: Matthew Hartman - http://www.matthewhartman.com.au/
-// Version: 1.8.5 - Last Updated: 25th of June, 2014
+// Version: 1.8.6 - Last Updated: 25th of March, 2015
 
 // ==========================================================================
 
@@ -19,9 +19,8 @@
   @import "base/_forms";        // Forms, Input Types and Buttons
 
   @import "base/_buttons";      // Custom Base Buttons
-  @import "base/_helpers";      // Custom Base Helpers
-  
   @import "base/_grid";         // Grid
+  @import "base/_helpers";      // Custom Base Helpers
   @import "base/_tablet-grid";  // Tablet Grid
   @import "base/_mobile-grid";  // Mobile Grid
   @import "base/_print";        // Print Page Styles
