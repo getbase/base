@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Base</title>
+  <meta name="description" content="A set of helpful mixins for setting font size, line heights, rounded borders, rotating elements, SVG backgrounds with PNG fallbacks, background colors with opacity and more.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="/img/favicon.png">
+  <link rel="apple-touch-icon" sizes="57x57" href="/img/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/img/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/img/apple-touch-icon-114x114.png">
+  <link rel="stylesheet" href="../style.css">
+  <script src="../js/vendor/modernizr.min.js"></script>
+  <!--[if lt IE 9 ]>
+    <style>
+        #menu {
+          display: none;
+        }
+        .checkbox--checked #menu {
+            top: 0;
+            display: block !important;
+            z-index: 900;
+        }
+    </style>
+    <script src="../js/ie.min.js"></script>
+    <script>checkboxHackPolyfill('toggle-menu');</script>
+  <![endif]-->
+</head>
+<body>
+
+<section class="banner docs-banner">
+  <header class="header">
+    <div class="container">
+      <div class="clear">
+        <h1 class="logo"><a href="/base/"><span class="sr">Base</span></a></h1>
+        <input type="checkbox" class="menu-toggle" id="navigation" name="navigation">
+        <label class="menu-label" for="navigation" id="toggle-menu"><span class="menu-label-inner">Menu</span></label>
+        <div class="navigation" id="menu">
+          <nav class="menu container">
+            <ul class="menu-inner">
+              <li><a href="/base/">Base - Home</a></li>
+              <li><a href="/base/docs/">Introduction</a></li>
+              <li><a href="/base/docs/html.html">HTML</a></li>
+              <li><a href="/base/docs/css.html">CSS</a></li>
+              <li><a href="/base/docs/helpers.html">Helpers</a></li>
+              <li><a href="/base/docs/grid.html">Grid</a></li>
+              <li><a href="/base/docs/mixins.html">Mixins</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+</section>
+
+<section class="content container">
+  <div class="content-inner">
+
+    <div class="text-center">
+      <h1>Mixins</h1>
+      <p class="lead">
+      A set of helpful mixins for setting font size, line heights, rounded borders, rotating elements,
+      SVG backgrounds with PNG fallbacks, background colors with opacity and more.
+      </p>
+    </div>
+
+    <!--[if gt IE 8]><!--> 
+    <div id="carbonads-container" class="carbonads-container">
+      <div class="carbonad">
+          <div id="azcarbon"></div>
+          <script type="text/javascript">
+            var z = document.createElement("script");
+            z.type = "text/javascript";
+            z.async = true;
+            z.src = "http://engine.carbonads.com/z/53383/azcarbon_2_1_0_HORIZDARK";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(z, s);
+          </script>
+      </div>
+    </div>
+    <!--<![endif]-->
+
+    <hr>
+
+    <h2>Overview</h2>
+    <p>
+      All Mixins are stored within <code>_mixins.less</code>.
+    </p>
+    <p>
+      Below is a list of the current mixins.
+    </p>
+
+    <table class="mixins-table">
+      <caption>Base Mixins</caption>
+      <thead>
+        <tr>
+          <th>Mixin</th>
+          <th>Purpose</th>
+          <th>Example usage</th>
+          <th>Outcome</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="mobile-table-header" data-title="Mixin">
+            <span class="data-content"><code>.font-size(number)</code></span>
+          </td>
+          <td data-title="Purpose">
+            <span class="data-content">Applies font size in <code>rem</code> units with a <code>px</code> fallback</span>
+          </td>
+          <td data-title="Example">
+            <span class="data-content"><code>.font-size(16)</code></span>
+          </td>
+          <td data-title="Outcome">
+            <span class="data-content">Applies font size to 1rem with 16px fallback</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="mobile-table-header" data-title="Mixin">
+            <span class="data-content"><code>.line-height(number)</code></span>
+          </td>
+          <td data-title="Purpose">
+            <span class="data-content">Applies line height in <code>rem</code> units with a <code>px</code> fallback</span>
+          </td>
+          <td data-title="Example">
+            <span class="data-content"><code>.line-height(22)</code></span>
+          </td>
+          <td data-title="Output"><span class="data-content">Applies line height to 1.375rem with 22px fallback</span></td>
+        </tr>
+        <tr>
+          <td class="mobile-table-header" data-title="Mixin">
+            <span class="data-content"><code>.border-radius(number)</code></span>
+          </td>
+          <td data-title="Purpose">
+            <span class="data-content">Applies rounded corners to an element and includes all browser prefixes</span>
+          </td>
+          <td data-title="Example">
+            <span class="data-content"><code>.border-radius(3)</code></span>
+          </td>
+          <td data-title="Outcome">
+            <span class="data-content">Applies a border radius of 3px</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="mobile-table-header" data-title="Mixin">
+            <span class="data-content"><code>.rotate(number)</code></span>
+          </td>
+          <td data-title="Purpose">
+            <span class="data-content">Applies rotate transform to an element and includes all browser prefixes</span>
+          </td>
+          <td data-title="Example">
+            <span class="data-content"><code>.rotate(45)</code></span>
+          </td>
+          <td data-title="Output"><span class="data-content">Rotates an element 45 degrees clockwise (note you can use negative values to rotate anti-clockwise)</span></td>
+        </tr>
+        <tr>
+          <td class="mobile-table-header" data-title="Mixin">
+            <span class="data-content"><code>.bg-svg("svg", "png", xPositon percentage, yPosition percentage, repeat mode)</code></span>
+          </td>
+          <td data-title="Purpose">
+            <span class="data-content">Applies an SVG background image with PNG fallback (needs modernizr to work 100%)</span>
+          </td>
+          <td data-title="Example">
+            <span class="data-content"><code>.bg-svg("img/logo.svg", "img/logo.png", 50%, 50%, no-repeat)</code></span>
+          </td>
+          <td data-title="Output">
+            <span class="data-content">
+              Applies a background image of logo.svg with a fallback of logo.png. The background x position is set
+              to 50% and the y position to 50% with no repeat
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td class="mobile-table-header" data-title="Mixin">
+            <span class="data-content"><code>.bg-rgba(hex, percentage)</code></span>
+          </td>
+          <td data-title="Purpose">
+            <span class="data-content">Applies a background color with opacity</span>
+          </td>
+          <td data-title="Example">
+            <span class="data-content"><code>.bg-rgba(#000, 50%)</code></span>
+          </td>
+          <td data-title="Output"><span class="data-content">Applies a background color of black with opacity set to 50%</span></td>
+        </tr>
+        <tr>
+          <td class="mobile-table-header" data-title="Mixin">
+            <span class="data-content"><code>.opacity(percentage)</code></span>
+          </td>
+          <td data-title="Purpose">
+            <span class="data-content">Applies opacity</span>
+          </td>
+          <td data-title="Example">
+            <span class="data-content"><code>.opacity(50%)</code></span>
+          </td>
+          <td data-title="Output"><span class="data-content">Applies an opacity of 50%</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner clear">
+      <div class="col-desktop-6">
+        <p>
+          Built with love in the land down under by <a href="http://matthewhartman.com.au">Matthew Hartman</a>.
+        </p>
+      </div>
+      <div class="col-desktop-6">
+        <ul class="footer-list">
+          <li><a href="https://github.com/matthewhartman/base/issues">Current issues</a></li>
+          <li><a href="https://github.com/matthewhartman/base">View source on Github</a></li>
+          <li><a href="/base/docs/">Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Google Analytics -->
+<script>
+  (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+  function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+  e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+  e.src='//www.google-analytics.com/analytics.js';
+  r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+  ga('create','UA-34161986-1');ga('send','pageview');
+</script>
+
+</body>
+</html>

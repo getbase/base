@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Base</title>
+  <meta name="description" content="Global CSS helpers for removing styles, modifying typography, font weights, text positioning, general layout, form elements and accessibility helpers.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="/img/favicon.png">
+  <link rel="apple-touch-icon" sizes="57x57" href="/img/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/img/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/img/apple-touch-icon-114x114.png">
+  <link rel="stylesheet" href="../style.css">
+  <script src="../js/vendor/modernizr.min.js"></script>
+  <!--[if lt IE 9 ]>
+    <style>
+        #menu {
+          display: none;
+        }
+        .checkbox--checked #menu {
+            top: 0;
+            display: block !important;
+            z-index: 900;
+        }
+    </style>
+    <script src="../js/ie.min.js"></script>
+    <script>checkboxHackPolyfill('toggle-menu');</script>
+  <![endif]-->
+</head>
+<body>
+
+<section class="banner docs-banner">
+  <header class="header">
+    <div class="container">
+      <div class="clear">
+        <h1 class="logo"><a href="/base/"><span class="sr">Base</span></a></h1>
+        <input type="checkbox" class="menu-toggle" id="navigation" name="navigation">
+        <label class="menu-label" for="navigation" id="toggle-menu"><span class="menu-label-inner">Menu</span></label>
+        <div class="navigation" id="menu">
+          <nav class="menu container">
+            <ul class="menu-inner">
+              <li><a href="/base/">Base - Home</a></li>
+              <li><a href="/base/docs/">Introduction</a></li>
+              <li><a href="/base/docs/html.html">HTML</a></li>
+              <li><a href="/base/docs/css.html">CSS</a></li>
+              <li><a href="/base/docs/helpers.html">Helpers</a></li>
+              <li><a href="/base/docs/grid.html">Grid</a></li>
+              <li><a href="/base/docs/mixins.html">Mixins</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+</section>
+
+<section class="content container">
+  <div class="content-inner">
+
+    <div class="text-center">
+      <h1>CSS Helpers</h1>
+      <p class="lead">
+        Global helpers for removing styles, modifying typography, font weights, text positioning, general layout, form elements and
+        accessibility helpers.
+      </p>
+    </div>
+
+    <!--[if gt IE 8]><!--> 
+    <div id="carbonads-container" class="carbonads-container">
+      <div class="carbonad">
+          <div id="azcarbon"></div>
+          <script type="text/javascript">
+            var z = document.createElement("script");
+            z.type = "text/javascript";
+            z.async = true;
+            z.src = "http://engine.carbonads.com/z/53383/azcarbon_2_1_0_HORIZDARK";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(z, s);
+          </script>
+      </div>
+    </div>
+    <!--<![endif]-->
+
+    <hr>
+
+    <h2>Overview</h2>
+    <p>
+      A full list of helpers are categorised and listed below.
+    </p>
+
+    <ul>
+      <li><a href="#reset-helpers">Reset Helpers</a></li>
+      <li><a href="#typography-helpers">Typography Helpers</a></li>
+      <li><a href="#display-helpers">Display Helpers</a></li>
+      <li><a href="#float-helpers">Float Helpers</a></li>
+      <li><a href="#position-helpers">Position Helpers</a></li>
+      <li><a href="#accessibility-helpers">Accessibility Helpers</a></li>
+      <li><a href="#image-placement-helpers">Image Placement Helpers</a></li>
+    </ul>
+
+    <table id="reset-helpers">
+      <caption>Reset Helpers</caption>
+      <thead>
+        <tr>
+          <th>Class</th>
+          <th>Purpose</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <code>.no-margin</code>
+          </td>
+          <td>
+            Removes all margin
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>.no-padding</code>
+          </td>
+          <td>
+            Removes all padding
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>.no-float</code>
+          </td>
+          <td>
+            Removes all floats
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>.no-background</code>
+          </td>
+          <td>
+            Removes background
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>.no-border</code>
+          </td>
+          <td>
+            Removes all borders
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <hr class="spacer">
+
+    <table id="typography-helpers">
+      <caption>Typography Helpers</caption>
+      <thead>
+        <tr>
+          <th>Class</th>
+          <th>Purpose</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <code>.strong</code>
+          </td>
+          <td>
+            <span class="strong">Applies strong styles</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>.em</code>
+          </td>
+          <td>
+            <span class="em">Applies italic styles</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>.abbr</code>
+          </td>
+          <td>
+            <span class="abbr" title="Abbreviation title">Applies abbreviation styles</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>.small</code>
+          </td>
+          <td>
+            <span class="small">Applies small styles</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>.mark</code>
+          </td>
+          <td>
+            <span class="mark">Applies mark styles</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>.sub</code>
+          </td>
+          <td>
+            Applies <span class="sub">sub styles</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>.sup</code>
+          </td>
+          <td>
+            Applies <span class="sup">sup styles</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>.del</code>
+          </td>
+          <td>
+            <span class="del">Applies del styles</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>.font-thin</code>
+          </td>
+          <td>
+            <span class="font-thin">Applies a thin font weight</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>.font-light</code>
+          </td>
+          <td>
+            <span class="font-light">Applies a light font weight</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>.font-regular</code>
+          </td>
+          <td>
+            <span class="font-regular">Applies a regular font weight</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>.font-medium</code>
+          </td>
+          <td>
+            <span class="font-medium">Applies a medium font weight</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>.font-semi-bold</code>
+          </td>
+          <td>
+            <span class="font-semi-bold">Applies a semi-bold font weight</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>.font-bold</code>
+          </td>
+          <td>
+            <soan class="font-bold">Applies a bold font weight</soan>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>.font-extra-bold</code>
+          </td>
+          <td>
+            <span class="font-extra-bold">Applies a extra-bold font weight</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>.font-ultra-bold</code>
+          </td>
+          <td>
+            <span class="font-ultra-bold">Applies a ultra-bold font weight</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>.font-normal</code>
+          </td>
+          <td>
+            <span class="font-normal">Applies normal font style</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>.font-italic</code>
+          </td>
+          <td>
+            <span class="font-italic">Applies italic font style</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>.uppercase</code>
+          </td>
+          <td>
+            <span class="uppercase">Transforms text to uppercase</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>.lowercase</code>
+            <td>
+              <span class="lowercase">Transforms text to lowercase</span>
+            </td>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>.capitalize</code>
+          </td>
+          <td>
+            <span class="capitalize">Transforms text to capitalize</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>.text-left</code>
+          </td>
+          <td class="text-left">Left align text</td>
+        </tr>
+        <tr>
+          <td>
+            <code>.text-right</code>
+          </td>
+          <td class="text-right">Right align text</td>
+        </tr>
+        <tr>
+          <td>
+            <code>.text-center</code>
+          </td>
+          <td class="text-center">Center align text</td>
+        </tr>
+        <tr>
+          <td>
+            <code>.text-justify</code>
+          </td>
+          <td class="text-justify">Justifies text</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <hr class="spacer">
+
+    <table id="display-helpers">
+      <caption>Display Helpers</caption>
+      <thead>
+        <tr>
+          <th>Class</th>
+          <th>Purpose</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <code>.block</code>
+          </td>
+          <td>Sets element to display block</td>
+        </tr>
+        <tr>
+          <td>
+            <code>.inline-block</code>
+          </td>
+          <td>Sets element to display inline-block</td>
+        </tr>
+        <tr>
+          <td>
+            <code>.inline</code>
+          </td>
+          <td>Sets element to display inline</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <hr class="spacer">
+
+    <table id="float-helpers">
+      <caption>Float Helpers</caption>
+      <thead>
+        <tr>
+          <th>Class</th>
+          <th>Purpose</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <code>.left</code>
+          </td>
+          <td>Sets element to float left</td>
+        </tr>
+        <tr>
+          <td>
+            <code>.right</code>
+          </td>
+          <td>Sets element to float right</td>
+        </tr>
+        <tr>
+          <td>
+            <code>.center-element</code>
+          </td>
+          <td>Center aligns an element with a width (removes float)</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <hr class="spacer">
+
+    <table id="position-helpers">
+      <caption>Position Helpers</caption>
+      <thead>
+        <tr>
+          <th>Class</th>
+          <th>Purpose</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <code>.relative</code>
+          </td>
+          <td>Sets element to position relative</td>
+        </tr>
+        <tr>
+          <td>
+            <code>.absolute</code>
+          </td>
+          <td>Sets element to position absolute</td>
+        </tr>
+        <tr>
+          <td>
+            <code>.static</code>
+          </td>
+          <td>Sets element to position static</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <hr class="spacer">
+
+    <table id="accessibility-helpers">
+      <caption>Accessibility Helpers</caption>
+      <thead>
+        <tr>
+          <th>Class</th>
+          <th>Purpose</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <code>.sr</code>
+          </td>
+          <td>Hides an element visually, but is available for screenreaders</td>
+        </tr>
+      </tbody>
+    </table>
+
+
+    <hr class="spacer">
+
+    <table id="image-placement-helpers">
+      <caption>Image Placement Helpers</caption>
+      <thead>
+        <tr>
+          <th>Class</th>
+          <th>Purpose</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <code>.img-left</code>
+          </td>
+          <td>Floats an image left and applies a right margin of 20px</td>
+        </tr>
+        <tr>
+          <td>
+            <code>.img-right</code>
+          </td>
+          <td>Floats an image right and applies a left margin of 20px</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <hr class="spacer">
+    <hr class="hr">
+
+    <h2>Grid</h2>
+    <p>
+      A powerful and <a href="/base/docs/grid.html">responsive grid</a> to easily create your page layout.
+    </p>
+
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner clear">
+      <div class="col-desktop-6">
+        <p>
+          Built with love in the land down under by <a href="http://matthewhartman.com.au">Matthew Hartman</a>.
+        </p>
+      </div>
+      <div class="col-desktop-6">
+        <ul class="footer-list">
+          <li><a href="https://github.com/matthewhartman/base/issues">Current issues</a></li>
+          <li><a href="https://github.com/matthewhartman/base">View source on Github</a></li>
+          <li><a href="/base/docs/">Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Google Analytics -->
+<script>
+  (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+  function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+  e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+  e.src='//www.google-analytics.com/analytics.js';
+  r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+  ga('create','UA-34161986-1');ga('send','pageview');
+</script>
+
+</body>
+</html>

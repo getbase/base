@@ -1,26 +1,67 @@
 // ==========================================================================
 // Base – Mixins
 // ==========================================================================
-
-// Font Sizes (REMs with PX fallback for older browsers)
+// Font sizes (primary sizing in `rem` units with a fallback of `px`)
+// Example usage .font-size(18);
 .font-size (@size) {
-  @remValue: @size / @default-font-size;
+  @remValue: @size / 16;
   @pxValue: (@size);
   font-size: ~"@{pxValue}px"; 
   font-size: ~"@{remValue}rem";
 }
 
-// Line Height Sizes (REMs with PX fallback for older browsers)
+// Line height sizes (primary sizing in `rem` units with a fallback of `px`)
+// Example usage .line-height(22);
 .line-height (@size) {
-  @remValue: @size / @default-font-size;
+  @remValue: @size / 16;
   @pxValue: (@size);
   line-height: ~"@{pxValue}px"; 
   line-height: ~"@{remValue}rem";
 }
 
-// Rounded Corners
+// Border Radius
+// Example usage .border-radius(2px) || .border-radius(100%);
 .border-radius(@radius) {
   -webkit-border-radius: @radius;
   -moz-border-radius: @radius;
   border-radius: @radius;
 }
+
+// Rotate (Transformation)
+// Example usage .rotate(180) || .rotate(-45);
+.rotate(@rotate) {
+  -ms-transform: rotate(~"@{rotate}deg");
+  -webkit-transform: rotate(~"@{rotate}deg");
+  transform: rotate(~"@{rotate}deg");
+}
+
+// SVG background with PNG fallback
+// Example Usage .svg-bg("img/banner.svg", "img/banner.png", 50%, 50%, no-repeat);
+.bg-svg(@svg, @png, @x: 0, @y: 0, @repeat: no-repeat) {
+  background: url(@svg) @x @y @repeat;
+  .no-svg & {
+    background: url(@png) @x @y @repeat;
+  }
+}
+
+// Background Color with Opacity
+// Example Usage: .bg-rgba(#111, 50%);
+.bg-rgba(@color,@alpha){
+  @rgba: rgba(red(@color),green(@color),blue(@color),@alpha);
+  @argb: argb(@rgba);
+  background-color: @color;
+  background-color: @rgba;
+  filter: ~"progid:DXImageTransform.Microsoft.gradient(startColorstr=@{argb}, endColorstr=@{argb})";
+  -ms-filter: ~"progid:DXImageTransform.Microsoft.gradient(startColorstr=@{argb}, endColorstr=@{argb})";
+}
+
+// Opacity
+// Example Usage: .opacity(50%);
+.opacity (@percentOpacity: 50%) {
+  @opacity: unit(@percentOpacity) / 100;
+  -webkit-opacity: @opacity;
+  -moz-opacity: @opacity;
+  opacity: @opacity;
+}
+
+// Not enough mixins? – Please make some suggestions or contribute more! :)

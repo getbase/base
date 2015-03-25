@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Base</title>
-  <meta name="description" content="Get started with Base and build a new web app or mobile-first website in no time.">
+  <meta name="description" content="A simple HTML template which includes the core essentials.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="/img/favicon.png">
   <link rel="apple-touch-icon" sizes="57x57" href="/img/apple-touch-icon.png">
@@ -56,11 +56,10 @@
 
 <section class="content container">
   <div class="content-inner">
-    <div class="text-center col-tablet-11 no-float center-element">
-      <h1>Welcome to Base!</h1>
+  <div class="text-center col-tablet-10 no-float center-element">
+    <h1>HTML Template</h1>
       <p class="lead">
-        Getting started with Base is very easy. Whether you're building a new web app or creating
-        a mobile-first website, it has got your back.
+        A 99% fat free HTML template which includes the core essentials to get you started on your next web project.
       </p>
     </div>
 
@@ -79,86 +78,72 @@
       </div>
     </div>
     <!--<![endif]-->
-    
-    <hr>
-
-
-    <div class="clear">
-      <div class="col-desktop-6">
-        <h2>Before you start coding</h2>
-        <p>
-          Please make sure you have the following:
-        </p>
-        <ul>
-          <li>Good understanding of HTML and CSS</li>
-          <li>Code editor such as <a rel="nofollow" href="http://www.sublimetext.com/">Sublime Text</a></li>
-          <li>LESS compiler such as <a rel="nofollow" href="http://alphapixels.com/prepros/">Prepros</a></li>
-          <li>A calm and open mind :)</li>
-        </ul>
-      </div>
-      <div class="col-desktop-6">
-        <h2>Grab the latest download</h2>
-        <p>
-          Below are a few ways to get the latest build:
-        </p>
-        
-        <ol>
-          <li>
-            Download the source code directly from <a href="https://github.com/matthewhartman/base/zipball/master">Github</a>
-          </li>
-          <li>
-            Install and manage Base using <a rel="nofollow" href="http://bower.io/">Bower</a> <br>
-            <pre>bower install base</pre>
-          </li>
-        </ol>
-      </div>
-    </div>
-    
-    <hr>
-
-    <h2>What's in the box?</h2>
-    <p>
-      After extracting Base, you will find the following folder / file structure:
-    </p>
-    <pre>base/
-  |-- index.html
-  |-- style.css
-  |-- readme.markdown
-  |-- .htaccess
-  |-- less/
-    |-- style.less
-    |-- base/
-      |-- _blockquotes.less
-      |-- _code.less
-      |-- _forms.less
-      |-- _global.less
-      |-- _grid.less
-      |-- _helpers.less
-      |-- _lists.less
-      |-- _mixins.less
-      |-- _print.less
-      |-- _resets.less
-      |-- _tables.less
-      |-- _variables.less
-  |-- img/
-    |-- favicon.png
-    |-- apple-touch-icon.png
-    |-- apple-touch-icon-72x72.png
-    |-- apple-touch-icon-114x114.png
-  |-- js/
-    |-- default.js
-    |-- ie8.min.js
-    |-- vendor/
-      |-- jquery-1.11.2.min.js
-      |-- modernizr.min.js
-    </pre>
 
     <hr class="hr">
 
-    <h2>Let's get moving!</h2>
+    <h2 class="h3">Break down of the template file:</h2>
+
+    <h3 class="h4">Language Attribute</h3>
     <p>
-      Now that you have the latest download, let's take a closer look
-      at the <a href="/base/docs/html.html">HTML template</a>.
+      By default, the language attribute <code>lang</code> is set to English <code>en</code>. It is recommended you update
+      this to your <a rel="nofollow" href="http://www.w3.org/International/questions/qa-choosing-language-tags">local language</a>.
+    </p>
+    
+    <hr class="hr">
+
+    <h3 class="h4">NO-JS Class</h3>
+    <p>
+      By default, the html template has a <code>.no-js</code> class applied to the <code>html</code> tag. When JavaScript is active,
+      Modernizr will re-write this class to <code>.js</code>. This allows fallback styles to be added quite easily when JavaScript is disabled.
+    </p>
+
+    <hr class="hr">
+
+    <h3 class="h4">X-UA-Compatible</h3>
+    <p>
+      Makes sure the latest rendering mode for IE is triggered.
+    </p>
+
+    <hr class="hr">
+
+    <h3 class="h4">Mobile Viewport</h3>
+    <p>    
+      Ensures scale settings remain consistent when switching orientations on phones.
+    </p>
+
+    <hr class="hr">
+    
+    <h3 class="h4">Favicons</h3>
+    <p>
+      The standard favicon for desktop devices and 3 icons for mobile and tablet devices.
+    </p>
+
+    <hr class="hr">
+
+    <h3 class="h4">Custom Modernizr</h3>
+    <p>    
+      A custom build of Modernizr is included which checks support for JS, SVG, touch support and adds appropriate classes to the <code>html</code> element if the features are supported or unsupported.
+    </p>
+
+    <hr class="hr">
+
+    <h3 class="h4">jQuery (Google CDN)</h3>
+    <p>    
+      The latest jQuery version is included (referenced from Google's CDN) along with a local fallback for offline development.
+    </p>
+    
+    <hr class="hr">
+
+    <h3 class="h4">Google Analytics</h3>
+    <p>    
+      An optimized version of Google Analytics taken from <a rel="nofollow" href="http://html5boilerplate.com/">HTML5 Boilerplate</a>.
+    </p>
+
+    <hr class="hr">
+    
+    <h3 class="h4">That's all folks!</h3>
+    <p>
+      Now that you have an idea of what's inside the HTML template, let's check out the <a href="/base/docs/css.html">CSS</a>.
     </p>
   </div>
 </section>

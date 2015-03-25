@@ -1,35 +1,95 @@
-.banner { padding-top: 0; }
+// ==========================================================================
+// Tablet Custom Styles
+// ==========================================================================
 
-/* Tablet Rows */
-.tablet-row {
-  padding-top: .5em;
-  padding-bottom: .5em;
+.banner {
+  .lead-block {
+    .center-element;
+    .col-9;
+    .no-float;
+  }
 }
-.tablet-row-1 {
-  padding-top: 1em;
-  padding-bottom: 1em;
+.introduction-block-inner {
+  .col-10;
+  .no-float;
+  .center-element;
 }
-.tablet-row-2 {
-  padding-top: 2em;
-  padding-bottom: 2em;
+.features-block-inner {
+  .text-center;
+  .feature-item {
+    .col-4;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-bottom: 0;
+    .no-border;
+  }
 }
-.tablet-row-3 {
-  padding-top: 3em;
-  padding-bottom: 3em;
+
+
+.getting-started-inner {
+  .col-12;
+  .no-float;
+  .center-element;
+  .text-center;
 }
-.tablet-row-4 {
-  padding-top: 4em;
-  padding-bottom: 4em;
+
+.footer {
+  padding-top: 30px;
+  padding-bottom: 20px;
+  padding-left: 0;
+  padding-right: 0;
+  .text-center;
 }
-.tablet-row-5 {
-  padding-top: 5em;
-  padding-bottom: 5em;
+.footer-list {
+  .list-inline;
+  .text-center;
+  padding-top: 10px;
+  margin-top: 0;
+  border-top: 0;
+  li {
+    &:before {
+      content: "•";
+      margin-left: 5px;
+      margin-right: 7px;
+    }
+    &:first-child {
+      &:before {
+        .no-margin;
+        content: "";
+      }
+    }
+  }
 }
-.tablet-row-6 {
-  padding-top: 6em;
-  padding-bottom: 6em;
+
+// Docs
+.content-inner {
+  .container;
 }
-.tablet-row-7 {
-  padding-top: 7em;
-  padding-bottom: 7em;
+
+// Mixins Table
+.mixins-table {
+  thead {
+    display: table-header-group;
+  }
+  tbody {
+    td {
+      display: table-cell;
+    }
+    .mobile-table-header {
+      background: transparent;
+      margin-top: 0;
+    }
+  }
+  [data-title]:before {
+    content: "";
+    display: none;
+  }
+  .data-content {
+    display: table-cell;
+    overflow: none;
+    padding-left: 0;
+    code {
+      background-color: transparent;
+    }
+  }
 }

@@ -1,118 +1,141 @@
 // ==========================================================================
-// Base – Global Typography
+// Base – Global
 // ==========================================================================
+
+
+
+// Body
 body {
-  font-family: @default-font-family;
-  .font-size(@default-font-size);
-  .line-height(@default-line-height);
-  color: @default-font-color;
-  background-color: #fff;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
+  font-family: @base-font-family;
+  .font-size(@base-font-size);
+  .line-height(@base-line-height);
+  color: @base-font-color;
+  font-weight: @base-font-weight;
+  background: @base-background-color;
 }
 
-// Clearfix
-.clear:before, .clear:after {
-  content: "";
-  display: table;
-}
-.clear:after { clear: both; }
-.clear { zoom: 1; } // IE7
-
-// Font Style
-b, strong, .strong { &:extend(.font-bold); }
-i, em, .em { font-style: italic; }
+// Paragraph
+p { margin: 0 0 1em 0; }
 
 // Links
-a { color: @default-link-color; }
-a:hover { text-decoration: none; }
-a:focus { outline: thin dotted; }
-a:active, a:hover { outline: 0; }
+a {
+  color: @base-link-color;
+  background: transparent;
+  text-decoration: underline;
+  &:active,
+  &:hover {
+    outline: 0;
+    text-decoration: none;
+  }
+}
 
-// Paragraph and Small
-p { margin: 0 0 1.6em 0; }
-pre { margin: 1em 0; }
-ul + p, ul + pre, ol + p, ol + pre { margin-top: 0; }
+// Headings
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  margin: 0;
+}
+h1, .h1 {
+  .font-size(@h1-font-size);
+  .line-height(@h1-line-height);
+  margin-top: .7em;
+  margin-bottom: .5em;
+  color: @h1-color;
+  font-weight: @h1-font-weight;
+}
+h2, .h2 {
+  .font-size(@h2-font-size);
+  .line-height(@h2-line-height);
+  margin-top: 1.4em;
+  margin-bottom: .2em;
+  color: @h2-color;
+  font-weight: @h2-font-weight;
+}
+h3, .h3 {
+  .font-size(@h3-font-size);
+  .line-height(@h3-line-height);
+  margin-top: 1em;
+  margin-bottom: .2em;
+  color: @h3-color;
+  font-weight: @h3-font-weight;
+}
+h4, .h4 {
+  .font-size(@h4-font-size);
+  .line-height(@h4-line-height);
+  margin-top: 1em;
+  margin-bottom: .2em;
+  color: @h4-color;
+  font-weight: @h4-font-weight;
+}
+h5, .h5 {
+  .font-size(@h5-font-size);
+  .line-height(@h5-line-height);
+  margin-top: 1em;
+  margin-bottom: .1em;
+  color: @h5-color;
+  font-weight: @h5-font-weight;
+}
+h6, .h6 {
+  .font-size(@h6-font-size);
+  .line-height(@h6-line-height);
+  margin-top: 1em;
+  margin-bottom: .1em;
+  color: @h6-color;
+  font-weight: @h6-font-weight;
+}
 
-// Abbreviations
-abbr[title] { border-bottom: 1px dotted; }
+// Bold and Italics
+b,
+strong,
+.strong {
+  font-weight: @font-bold;
+}
+em,
+.em {
+  font-style: italic;
+}
+
+// Abbreviation
+abbr[title], .abbr[title] { border-bottom: 1px dotted; }
+
+// Definition
+dfn { font-style: italic; }
+
+// Small
+small, .small { font-size: 80%; }
 
 // Mark
-mark {
+mark,
+.mark {
   background: #ff0;
-  color: #111;
+  color: #000;
 }
 
-// Audio
-audio, canvas, video {
-  &:extend(.inline-block);
-}
-audio:not([controls]) {
-  &:extend(.none);
-  height: 0;
-}
-
-// Small, Sub and Sup
-small { font-size:80%; }
-sub, sup {
+// Sub and Sup
+sub,
+.sub,
+sup,
+.sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
   vertical-align: baseline;
 }
-sup { top: -0.5em; }
-sub { bottom: -0.25em; }
+sup, .sup { top: -0.5em; }
+sub, .sub { bottom: -0.25em; }
 
-// Definition
-dfn { &:extend(.em); }
+// Del
+del, .del { text-decoration: line-through; }
 
 // Images
-img {
-  border: 0;
-  -ms-interpolation-mode: bicubic;
-}
-svg:not(:root) { overflow: hidden; }
-figure { margin: 0; }
+figure { margin: 1em 40px; }
 
-// Horizontal Rule
-hr {
-  border: 0;
-  background: none;
-  outline: 0;
-  background-color: #ddd;
-  margin: 2em 0;
-  *margin: 1em 0;
+// Horizontal Rules
+hr,
+.hr {
   -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 1px;
-}
-
-// Headings
-h1, h2, h3, h4, h5, h6 {
-  line-height: normal;
-  font-weight: normal;
-  margin: 0 0 0.33em 0;
-}
-h1, .h1 {
-  .font-size(@h1);
-}
-h2, .h2 {
-  .font-size(@h2);
-}
-h3, .h3 { 
-  .font-size(@h3);
-}
-h4, .h4 {
-  .font-size(@h4);
-}
-h5, .h5 {
-  .font-size(@h5);
-}
-h6, .h6 {
-  .font-size(@h6);
-}
-// Remove Heading Styling
-.no-style-heading {
-  &:extend(.no-margin);
-  font-size: 100%;
+  background: #eee;
+  border: 0;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
