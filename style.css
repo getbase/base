@@ -64,7 +64,7 @@ svg:not(:root) {
   overflow: hidden;
 }
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: sans-serif;
   font-size: 16px;
   font-size: 1rem;
   line-height: 22px;
