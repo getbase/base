@@ -1030,10 +1030,11 @@ a:active {
   font-weight: 300;
 }
 .code-screen pre {
+  border: 0;
   padding: 0;
   font-size: 13px;
   font-size: 0.8125rem;
-  background-color: transparent;
+  background: transparent;
   color: #fff;
 }
 .code-screen pre p {
