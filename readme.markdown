@@ -1,4 +1,5 @@
-# Base
+# Base 2
+[![Build Status](https://travis-ci.org/matthewhartman/base.svg?branch=v2.0.1)](https://travis-ci.org/matthewhartman/base)
 
 A super simple, responsive framework built for all devices big, small and in-between
 
@@ -15,6 +16,9 @@ Perfected to work with older browsers (IE8+) and modern browsers such as Chrome,
 Preview the [docs](http://matthewhartman.github.io/base/docs/) to see the Base framework in all its glory! :)
 
 * * *
+
+### Looking for the old Base?
+Base 1 is still avilable for [download](https://github.com/matthewhartman/base/archive/v1.zip) and [documentation](http://matthewhartman.github.io/base/docs/v1-docs/) is avilable. 
 
 Base was built by Matthew Hartman [(@hartmanmatthew)](http://twitter.com/matthewhartmans), a passionate front end developer based in Melbourne, Australia.
 

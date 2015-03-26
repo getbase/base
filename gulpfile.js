@@ -22,4 +22,11 @@ gulp.task('watch', function () {
    gulp.watch('less/**/*', ['less']);
 });
 
+
+gulp.task('build', function () {
+  gulp.src('less/style.less')
+  .pipe(gulp.dest('./'))
+});
+
 gulp.task('default', ['watch']);
+gulp.task('build', ['less']);
