@@ -1,4 +1,6 @@
-* {
+*,
+*:before,
+*:after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -188,6 +190,10 @@ ol,
 ul {
   margin: 1em 0;
 }
+ol li,
+ul li {
+  margin: .2em 0;
+}
 dd,
 ul ul,
 ol ol,
@@ -255,8 +261,9 @@ samp {
   font-size: 0.8125rem;
   line-height: normal;
   font-weight: normal;
-  background-color: #f1f1f1;
-  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #eee;
+  padding: 3px 8px;
 }
 code {
   color: #111;
@@ -438,124 +445,6 @@ input::-moz-focus-inner {
   text-decoration: none;
   color: #999;
   background-color: #ccc;
-}
-.left,
-.checkbox input[type=checkbox],
-.checkbox input[type=radio] {
-  float: left;
-}
-.right {
-  float: right;
-}
-.block,
-.checkbox {
-  display: block;
-}
-.inline {
-  display: inline;
-}
-.inline-block,
-audio,
-canvas,
-video,
-.list-inline,
-.list-inline li,
-.button {
-  display: inline-block;
-  *zoom: 1;
-  *display: inline;
-}
-.none,
-[hidden],
-.no-desktop,
-audio:not([controls]) {
-  display: none;
-}
-.font-ultra-bold {
-  font-weight: 900;
-}
-.font-bold,
-b,
-strong,
-.strong,
-.grid .col {
-  font-weight: 700;
-}
-.font-normal,
-dt,
-cite,
-table thead th,
-table tfoot th,
-table caption,
-legend,
-input[type=text],
-input[type=password],
-input[type=email],
-input[type=search],
-input[type=tel],
-textarea {
-  font-weight: 500;
-}
-.font-light {
-  font-weight: 300;
-}
-.font-thin {
-  font-weight: 100;
-}
-.font-normal,
-dt,
-cite,
-table thead th,
-table tfoot th,
-table caption,
-legend,
-input[type=text],
-input[type=password],
-input[type=email],
-input[type=search],
-input[type=tel],
-textarea {
-  font-style: normal;
-}
-.capitalize {
-  text-transform: capitalize;
-}
-.uppercase {
-  text-transform: uppercase;
-}
-.text-left,
-table caption {
-  text-align: left;
-}
-.text-right {
-  text-align: right;
-}
-.text-center,
-.button {
-  text-align: center;
-}
-.visuallyhidden {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-  left: -9999em;
-}
-.no-margin,
-.no-style-heading {
-  margin: 0;
-}
-.no-padding {
-  padding: 0;
-}
-.image-left {
-  margin-right: 20px;
-}
-.image-right {
-  margin-left: 20px;
 }
 .section {
   position: relative;
@@ -801,6 +690,9 @@ table caption {
 .row {
   padding-top: 1em;
   padding-bottom: 1em;
+}
+.no-desktop {
+  display: none;
 }
 @keyframes blinking {
   0% {
@@ -1272,6 +1164,230 @@ a:active {
 .grid .row {
   padding-top: 10px;
   padding-bottom: 0;
+}
+.prettyprint {
+  border: 1px solid white !important;
+  color: #111 !important;
+  background: white !important;
+  padding: 10px !important;
+}
+.pln {
+  color: #000000;
+}
+@media screen {
+  .str {
+    color: #008800;
+  }
+  .kwd {
+    color: #000088;
+  }
+  .com {
+    color: #880000;
+  }
+  .typ {
+    color: #660066;
+  }
+  .lit {
+    color: #006666;
+  }
+  .pun,
+  .opn,
+  .clo {
+    color: #666600;
+  }
+  .tag {
+    color: #000088;
+  }
+  .atn {
+    color: #660066;
+  }
+  .atv {
+    color: #008800;
+  }
+  .dec,
+  .var {
+    color: #660066;
+  }
+  .fun {
+    color: red;
+  }
+}
+@media print, projection {
+  .str {
+    color: #006600;
+  }
+  .kwd {
+    color: #006;
+    font-weight: bold;
+  }
+  .com {
+    color: #600;
+    font-style: italic;
+  }
+  .typ {
+    color: #404;
+    font-weight: bold;
+  }
+  .lit {
+    color: #004444;
+  }
+  .pun,
+  .opn,
+  .clo {
+    color: #444400;
+  }
+  .tag {
+    color: #006;
+    font-weight: bold;
+  }
+  .atn {
+    color: #440044;
+  }
+  .atv {
+    color: #006600;
+  }
+}
+pre.prettyprint {
+  padding: 2px;
+  border: 1px solid #888888;
+}
+ol.linenums {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+li.L0,
+li.L1,
+li.L2,
+li.L3,
+li.L5,
+li.L6,
+li.L7,
+li.L8 {
+  list-style-type: none;
+}
+li.L1,
+li.L3,
+li.L5,
+li.L7,
+li.L9 {
+  background: #eee;
+}
+.left,
+.checkbox input[type=checkbox],
+.checkbox input[type=radio] {
+  float: left;
+}
+.right {
+  float: right;
+}
+.no-margin,
+.no-style-heading {
+  margin: 0;
+}
+.no-padding {
+  padding: 0;
+}
+.block,
+.checkbox {
+  display: block;
+}
+.inline {
+  display: inline;
+}
+.inline-block,
+audio,
+canvas,
+video,
+.list-inline,
+.list-inline li,
+.button {
+  display: inline-block;
+  *zoom: 1;
+  *display: inline;
+}
+.none,
+[hidden],
+audio:not([controls]) {
+  display: none;
+}
+.font-ultra-bold {
+  font-weight: 900;
+}
+.font-bold,
+b,
+strong,
+.strong,
+.grid .col {
+  font-weight: 700;
+}
+.font-normal,
+dt,
+cite,
+table thead th,
+table tfoot th,
+table caption,
+legend,
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=search],
+input[type=tel],
+textarea {
+  font-weight: 500;
+}
+.font-light {
+  font-weight: 300;
+}
+.font-thin {
+  font-weight: 100;
+}
+.font-normal,
+dt,
+cite,
+table thead th,
+table tfoot th,
+table caption,
+legend,
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=search],
+input[type=tel],
+textarea {
+  font-style: normal;
+}
+.capitalize {
+  text-transform: capitalize;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.text-left,
+table caption {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+.text-center,
+.button {
+  text-align: center;
+}
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  left: -9999em;
+}
+.image-left {
+  margin-right: 20px;
+}
+.image-right {
+  margin-left: 20px;
 }
 @media only screen and (min-width: 740px) and (max-width: 959px) {
   .container,
