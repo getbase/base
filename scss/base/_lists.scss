@@ -9,6 +9,11 @@ ul ol,
 ol ul {
   margin: 0;
 }
+ul li,
+ol li {
+  margin-top: .2em;
+  margin-bottom: .2em;
+}
 dt { @extend .font-normal; }
 dd {
   margin-bottom: 1em;
