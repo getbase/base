@@ -1,4 +1,6 @@
 # Welcome to Base
+[![Build Status](https://travis-ci.org/matthewhartman/base.svg?branch=v1)](https://travis-ci.org/matthewhartman/base)
+
 A super simple, responsive framework built for all devices big, small and in-between
 
 ## Reasons to use base for your next web project
@@ -62,7 +64,7 @@ Preview the [docs](http://matthewhartman.github.io/base/docs/) to see the Base f
   - default.js - Default javascript file (includes combined plugins and scripts)
   - modernizr.js - Custom build of Modernizr to check for JS and SVG support
 
-Base was built by Matthew Hartman [(@hartmanmatthew)](http://twitter.com/hartmanmatthew), a passionate front end developer based in Melbourne, Australia.
+Base was built by Matthew Hartman [(@matthewhartmans)](http://twitter.com/matthewhartmans), a passionate front end developer based in Melbourne, Australia.
 
 ## Thank You / Credits
 - [base_css-rails](https://github.com/rkrdo/base_css-rails) - a gem that adds the Base framework to the application's asset pipeline by Ricardo Cruz

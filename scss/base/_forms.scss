@@ -86,12 +86,7 @@ input[type="submit"] {
 button[disabled], 
 html input[disabled] { cursor: default; }
 
-input[type="search"] {
-  -webkit-appearance: textfield;
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
-  box-sizing: content-box;
-}
+input[type="search"] { -webkit-appearance: textfield; }
 input[type="search"]::-webkit-search-cancel-button, 
 input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
 button::-moz-focus-inner, 

@@ -29,9 +29,17 @@ gulp.task('less', function () {
   .pipe(notify("LESS Compiled Successfully :)"));
 });
 
+gulp.task('build', function () {
+  gulp.src('scss/style.scss')
+  .pipe(gulp.dest('./'))
+  gulp.src('less/style.less')
+  .pipe(gulp.dest('./'))
+});
+
 gulp.task('watch', function () {
    gulp.watch('scss/**/*', ['sass']),
    gulp.watch('less/**/*', ['less']);
 });
 
 gulp.task('default', ['watch']);
+gulp.task('build', ['less', 'sass']);
