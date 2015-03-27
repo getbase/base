@@ -18,9 +18,11 @@ Preview the [docs](http://matthewhartman.github.io/base/docs/) to see the Base f
 * * *
 
 ### Looking for the old Base?
-Base 1 is still avilable for [download](https://github.com/matthewhartman/base/archive/v1.zip) and [documentation](http://matthewhartman.github.io/base/docs/v1-docs/) is avilable. 
+Base 1 is still [available](http://matthewhartman.github.io/base/v1-docs/). 
 
-Base was built by Matthew Hartman [(@hartmanmatthew)](http://twitter.com/matthewhartmans), a passionate front end developer based in Melbourne, Australia.
+* * *
+
+Base was built by Matthew Hartman [(@matthewhartmans)](http://twitter.com/matthewhartmans), a passionate front end developer based in Melbourne, Australia.
 
 ## Thank You / Credits
 - [base_css-rails](https://github.com/rkrdo/base_css-rails) - a gem that adds the Base framework to the application's asset pipeline by Ricardo Cruz
