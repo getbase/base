@@ -1,13 +1,20 @@
 # Base 2 Change Log
 
+## [2.0.4] - 2015-04-17
+### Base V2.0.4
+- Added animation-delay mixin
+- Removed default font of 'Montserrat' in _variables.less
+- Minor version bump on the style.less file
+
+
 ## [2.0.3] - 2015-04-17
 ### Base V2.0.3
 - Added animation mixins
 - Added animations (thanks to [animate.css](http://daneden.github.io/animate.css/) by Daniel Eden)
-  • animations/_bounce.less
-  • animations/_fade.less
-  • animations/_flip.less
-  • animations/_zoom.less
+  - animations/_bounce.less
+  - animations/_fade.less
+  - animations/_flip.less
+  - animations/_zoom.less
 - Added animation mixin
 - Added animation helper for infinite loops
 - Minor updates on readme
