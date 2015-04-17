@@ -27,6 +27,7 @@ Base was built by Matthew Hartman [(@matthewhartmans)](http://twitter.com/matthe
 ## Thank You / Credits
 - [base_css-rails](https://github.com/rkrdo/base_css-rails) - a gem that adds the Base framework to the application's asset pipeline by Ricardo Cruz
 - Thanks to [HTML5 boilerplate](https://html5boilerplate.com/) for the base HTML template and .htaccess file
+- Daniel Eden for the CSS3 animations - taken from [animate.css](http://daneden.github.io/animate.css/)
 - Nicolas Gallagher [@necolas](https://twitter.com/necolas) for normalize.css and micro clearfix
 - Tristan McNab for adding bower support
 
