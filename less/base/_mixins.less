@@ -64,4 +64,20 @@
   opacity: @opacity;
 }
 
+// Animations
+// Example Usage .animation(1s);
+.animate(@duration: 1s;) {
+  -webkit-animation-duration: @duration;
+  animation-duration: @duration;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+// Animation Delay
+// Example Usage .animation-delay(1s)
+.animate-delay(@delay: 1s) {
+  -webkit-animation-delay: @delay;
+  animation-delay: @delay;
+}
+
 // Not enough mixins? – Please make some suggestions or contribute more! :)

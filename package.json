@@ -1,0 +1,37 @@
+{
+  "name": "base",
+  "version": "2.0.3",
+  "homepage": "http://matthewhartman.github.io/base/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/matthewhartman/base.git"
+  },
+  "authors": [
+    "Matthew Hartman <hello@matthewhartman.com.au>"
+  ],
+  "description": "Base is a super simple, responsive framework, built to work on all devices big, small and in-between.",
+  "keywords": [
+    "css",
+    "less",
+    "framework",
+    "mobile-first",
+    "lightweight",
+    "responsive"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "gulp": "^3.8.10",
+    "gulp-less": "^3.0.0",
+    "gulp-sass": "^1.3.3",
+    "gulp-notify": "^2.2.0",
+    "gulp-watch": "^4.1.0",
+    "path": "^0.11.14"
+  }
+}

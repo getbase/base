@@ -1,6 +1,4 @@
-
 config.codekit
-
 .DS_Store
-
 images/.DS_Store
+node_modules
