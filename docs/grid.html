@@ -782,22 +782,28 @@
 
     <ol>
       <li>
-        Open <code>style.less</code> in your favourite code editor
+        Rename <code>_mobile-styles.less</code> to <code>_styles.less</code> within <code>less/base/</code>
       </li>
       <li>
-        Replace line 25 <code>@import "base/_grid";</code> with <code>@import "base/_grid-non-responsive";</code>
+        Open up <code>style.less</code> in your favourite code editor
       </li>
       <li>
-        Replace line 27: <code>@import "_mobile-styles";</code> with <code>@import "_styles";</code>
+        Comment out line 21: <code>@import "base/_grid";</code>
       </li>
       <li>
-        Remove / comment out lines 29 - 42 (Tablet Styles, Desktop Styles, HD Styles)
+        Uncomment out line 22: <code>@import "base/_grid-non-responsive";</code>
+      </li>
+      <li>
+        Replace line 24: <code>@import "_mobile-styles";</code> to <code>@import "_styles";</code>
+      </li>
+      <li>
+        Comment out lines 26 - 39 (Tablet Styles, Desktop Styles, HD Styles)
       </li>
       <li>
         Save the above changes and close <code>_style.less</code>
       </li>
       <li>
-        Web styles for your project are now stored within <code>_styles.less</code>
+        Styles for your project are now stored within <code>_styles.less</code>
       </li>
       <li>
         Open <code>index.html</code> and remove line 9: <br>
