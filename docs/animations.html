@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Base</title>
-  <meta name="description" content="A simple HTML template which includes the core essentials.">
+  <meta name="description" content="A set of helpful mixins for setting font size, line heights, rounded borders, rotating elements, SVG backgrounds with PNG fallbacks, background colors with opacity and more.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="/base/img/favicon.png">
   <link rel="apple-touch-icon" sizes="57x57" href="/base/img/apple-touch-icon.png">
@@ -57,10 +57,12 @@
 
 <section class="content container">
   <div class="content-inner">
-  <div class="text-center col-tablet-10 no-float center-element">
-    <h1>HTML Template</h1>
+
+    <div class="text-center">
+      <h1>Animations</h1>
       <p class="lead">
-        A 99% fat free HTML template which includes the core essentials to get you started on your next web project.
+          A handful of animations including bounce ins, fade ins, zoom ins and flipping. Make your website / web app look even
+          better than ever with this set of awesome animations.
       </p>
     </div>
 
@@ -80,75 +82,37 @@
     </div>
     <!--<![endif]-->
 
-    <hr class="hr">
+    <hr>
 
-    <h2 class="h3">Break down of the template file:</h2>
-
-    <h3 class="h4">Language Attribute</h3>
+    <h2>Overview</h2>
     <p>
-      By default, the language attribute <code>lang</code> is set to English <code>en</code>. It is recommended you update
-      this to your <a rel="nofollow" href="http://www.w3.org/International/questions/qa-choosing-language-tags">local language</a>.
+      Make your website pop with these cool animations thanks
+      to <a rel="nofollow" href="http://daneden.github.io/animate.css/">Animate.css</a>
+      by <a rel="nofollow" href="http://daneden.me/">Daniel Eden</a>.
     </p>
-    
-    <hr class="hr">
-
-    <h3 class="h4">NO-JS Class</h3>
     <p>
-      By default, the html template has a <code>.no-js</code> class applied to the <code>html</code> tag. When JavaScript is active,
-      Modernizr will re-write this class to <code>.js</code>. This allows fallback styles to be added quite easily when JavaScript is disabled.
+      All Animations are stored within <code>less/base/animations/</code>.
     </p>
-
-    <hr class="hr">
-
-    <h3 class="h4">X-UA-Compatible</h3>
     <p>
-      Makes sure the latest rendering mode for IE is triggered.
+      We've included a core set of animations to get you started:
     </p>
-
-    <hr class="hr">
-
-    <h3 class="h4">Mobile Viewport</h3>
-    <p>    
-      Ensures scale settings remain consistent when switching orientations on phones.
-    </p>
-
-    <hr class="hr">
-    
-    <h3 class="h4">Favicons</h3>
+    <ul>
+      <li>_bounce.less</li>
+      <li>_fade.less</li>
+      <li>_flip.less</li>
+      <li>_zoom.less</li>
+    </ul>
     <p>
-      The standard favicon for desktop devices and 3 icons for mobile and tablet devices.
+      Below is a list of the current animations.
     </p>
 
-    <hr class="hr">
-
-    <h3 class="h4">Custom Modernizr</h3>
-    <p>    
-      A custom build of Modernizr is included which checks support for JS, SVG, touch support and adds appropriate classes to the <code>html</code> element if the features are supported or unsupported.
-    </p>
-
-    <hr class="hr">
-
-    <h3 class="h4">jQuery (Google CDN)</h3>
-    <p>    
-      The latest jQuery version is included (referenced from Google's CDN) along with a local fallback for offline development.
-    </p>
-    
-    <hr class="hr">
-
-    <h3 class="h4">Google Analytics</h3>
-    <p>    
-      An optimized version of Google Analytics taken from <a rel="nofollow" href="http://html5boilerplate.com/">HTML5 Boilerplate</a>.
-    </p>
-
-    <hr class="hr">
-    
-    <h3 class="h4">That's all folks!</h3>
     <p>
-      Now that you have an idea of what's inside the HTML template, let's check out the <a href="/base/docs/css.html">CSS</a>.
+      Docs coming shortly.
     </p>
+
+
   </div>
 </section>
-
 
 <footer class="footer">
   <div class="container">
