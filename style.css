@@ -63,7 +63,7 @@ svg:not(:root) {
   overflow: hidden;
 }
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: sans-serif;
   font-size: 16px;
   font-size: 1rem;
   line-height: 22px;
@@ -1079,6 +1079,9 @@ dl:after {
 .inline {
   display: inline;
 }
+.none {
+  display: none;
+}
 .left {
   float: left;
 }
@@ -1224,6 +1227,12 @@ dl:after {
   position: absolute;
   top: 4px;
   left: 0;
+}
+.animate {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
 }
 .animate-infinite {
   -webkit-animation-iteration-count: infinite;

@@ -1,5 +1,13 @@
 # Base 2 Change Log
 
+## [2.0.5] - 2015-04-18
+### Base V2.0.5
+- Added animation helper
+- Added more zoom animations
+- Added new .none helper (display: none;)
+- Minor version bump on the style.less file
+
+
 ## [2.0.4] - 2015-04-17
 ### Base V2.0.4
 - Added animation-delay mixin
