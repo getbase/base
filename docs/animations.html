@@ -97,22 +97,236 @@
       We've included a core set of animations to get you started:
     </p>
     <ul>
-      <li>_bounce.less</li>
-      <li>_fade.less</li>
-      <li>_flip.less</li>
-      <li>_zoom.less</li>
+      <li><a href="#bounce-animations">_bounce.less</a></li>
+      <li><a href="#fade-animations">_fade.less</a></li>
+      <li><a href="#flip-animations">_flip.less</a></li>
+      <li><a href="#zoom-animations">_zoom.less</a></li>
     </ul>
     <p>
       Below is a list of the current animations.
     </p>
 
-    <p>
-      Docs coming shortly.
-    </p>
+    <table id="bounce-animations">
+      <caption>Bounce Animations</caption>
+      <thead>
+        <tr>
+          <th>Class</th>
+          <th>Outcome</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <code>.animate.bounce-in</code>
+          </td>
+          <td>
+            <span data-classes="animate bounce-in" class="animate-example">Click to bounce in</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>.animate.bounce-in-down</code>
+          </td>
+          <td>
+            <span data-classes="animate bounce-in-down" class="animate-example">Click to bounce in down</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>.animate.bounce-in-left</code>
+          </td>
+          <td>
+            <span data-classes="animate bounce-in-left" class="animate-example">Click to bounce in left</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>.animate.bounce-in-right</code>
+          </td>
+          <td>
+            <span data-classes="animate bounce-in-right" class="animate-example">Click to bounce in right</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>.animate.bounce-in-up</code>
+          </td>
+          <td>
+            <span data-classes="animate bounce-in-up" class="animate-example">Click to bounce in up</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <hr class="spacer">
+
+    <table id="fade-animations">
+      <caption>Fade Animations</caption>
+      <thead>
+        <tr>
+          <th>Class</th>
+          <th>Outcome</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <code>.animate.fade-in</code>
+          </td>
+          <td>
+            <span data-classes="animate fade-in" class="animate-example">Click to fade in</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>.animate.fade-in-down</code>
+          </td>
+          <td>
+            <span data-classes="animate fade-in-down" class="animate-example">Click to fade in down</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>.animate.fade-in-left</code>
+          </td>
+          <td>
+            <span data-classes="animate fade-in-left" class="animate-example">Click to fade in left</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>.animate.fade-in-right</code>
+          </td>
+          <td>
+            <span data-classes="animate fade-in-right" class="animate-example">Click to fade in right</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>.animate.fade-in-up</code>
+          </td>
+          <td>
+            <span data-classes="animate fade-in-up" class="animate-example">Click to fade in up</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <hr class="spacer">
+
+    <table id="zoom-animations">
+      <caption>Zoom Animations</caption>
+      <thead>
+        <tr>
+          <th>Class</th>
+          <th>Outcome</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <code>.animate.zoom-in</code>
+          </td>
+          <td>
+            <span data-classes="animate zoom-in" class="animate-example">Click to zoom in</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>.animate.zoom-in-down</code>
+          </td>
+          <td>
+            <span data-classes="animate zoom-in-down" class="animate-example">Click to zoom in down</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>.animate.zoom-in-left</code>
+          </td>
+          <td>
+            <span data-classes="animate zoom-in-left" class="animate-example">Click to zoom in left</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>.animate.zoom-in-right</code>
+          </td>
+          <td>
+            <span data-classes="animate zoom-in-right" class="animate-example">Click to zoom in right</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>.animate.zoom-in-up</code>
+          </td>
+          <td>
+            <span data-classes="animate zoom-in-up" class="animate-example">Click to zoom in up</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <hr class="spacer">
+
+    <table id="flip-animations">
+      <caption>Flip Animations</caption>
+      <thead>
+        <tr>
+          <th>Class</th>
+          <th>Outcome</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <code>.animate.flip-in-x</code>
+          </td>
+          <td>
+            <span data-classes="animate flip-in-x" class="animate-example">Click to flip in x</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>.animate.flip-in-y</code>
+          </td>
+          <td>
+            <span data-classes="animate flip-in-y" class="animate-example">Click to flip in y</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
 
 
   </div>
 </section>
+
+<script>
+  var animateExample = document.querySelectorAll('.animate-example');
+  for (var i = 0; i < animateExample.length; i++) {
+    animateExample[i].addEventListener('click', function() {
+      var _this = this,
+          currentClasses = _this.getAttribute('class'),
+          dataAttr = _this.getAttribute('data-classes');
+          if ( !hasClass(_this, dataAttr) ) {
+            checkAnimationCompletion(_this, currentClasses, dataAttr);
+          }
+    });
+  }
+
+
+
+
+  function hasClass(element, className) {
+    return (' ' + element.className + ' ').indexOf(' ' + className + ' ') > -1;
+  }
+
+  function checkAnimationCompletion(el, currentClasses, dataClasses) {
+    el.className = currentClasses + " " + dataClasses;
+    el.addEventListener( 'webkitAnimationEnd', function( event ) { el.className = currentClasses; }, false );
+    el.addEventListener( 'animationend', function( event ) { el.className = currentClasses; }, false );
+    el.addEventListener( 'oanimationend', function( event ) { el.className = currentClasses; }, false );
+  }
+</script>
 
 <footer class="footer">
   <div class="container">
