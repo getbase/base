@@ -1141,7 +1141,7 @@ body {
 }
 .banner .menu-label:before {
   position: absolute;
-  top: 2px;
+  top: 3px;
   left: 0;
   content: "";
   width: 14px;
@@ -1151,7 +1151,7 @@ body {
 }
 .banner .menu-label:after {
   position: absolute;
-  top: 7px;
+  top: 8px;
   left: 0;
   content: "";
   width: 14px;
@@ -1161,7 +1161,7 @@ body {
 }
 .banner .menu-label .menu-label-inner:before {
   position: absolute;
-  top: 12px;
+  top: 13px;
   left: 0;
   content: "";
   width: 14px;
@@ -1222,7 +1222,7 @@ body {
   -ms-transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
-  top: 7px;
+  top: 8px;
 }
 .banner .menu-toggle[type=checkbox]:checked + .menu-label:after {
   -ms-transform: rotate(-45deg);
