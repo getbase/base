@@ -1,5 +1,11 @@
 # Base 2 Change Log
 
+## [2.0.6] - 2015-05-21
+### Base V2.0.5
+- Cleaned up animations
+- Minor version bump on the style.less file
+
+
 ## [2.0.5] - 2015-04-18
 ### Base V2.0.5
 - Added animation helper
