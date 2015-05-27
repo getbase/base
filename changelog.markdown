@@ -1,7 +1,14 @@
 # Base 2 Change Log
 
+## [2.0.7] - 2015-05-27
+### Base V2.0.7
+- Added minimal grid version
+- Minor updates to readme.markdown and packages.json (links)
+- Minor version bump on the style.less file
+
+
 ## [2.0.6] - 2015-05-21
-### Base V2.0.5
+### Base V2.0.6
 - Cleaned up animations
 - Minor version bump on the style.less file
 

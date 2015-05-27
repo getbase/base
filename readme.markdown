@@ -13,12 +13,12 @@ Built on Normalize.css, it includes all the foundation styles for typography, he
 Perfected to work with older browsers (IE8+) and modern browsers such as Chrome, Safari, Firefox and Opera.
 
 ### Base is Awesome!
-Preview the [docs](http://matthewhartman.github.io/base/docs/) to see the Base framework in all its glory! :)
+Preview the [docs](http://getbase.org/docs/) to see the Base framework in all its glory! :)
 
 * * *
 
 ### Looking for the old Base?
-Base 1 is still [available](http://matthewhartman.github.io/base/v1-docs/). 
+Base 1 is still [available](http://getbase.org/v1-docs/). 
 
 * * *
 

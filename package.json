@@ -1,7 +1,7 @@
 {
   "name": "base",
-  "version": "2.0.3",
-  "homepage": "http://matthewhartman.github.io/base/",
+  "version": "2.0.7",
+  "homepage": "http://getbase.org/",
   "repository": {
     "type": "git",
     "url": "https://github.com/matthewhartman/base.git"
