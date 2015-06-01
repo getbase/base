@@ -1,5 +1,11 @@
 # Base 2 Change Log
 
+## [2.0.8] - 2015-06-02
+### Base V2.0.8
+- Added push and pull resets for tablet, desktop and hd devices
+- Minor version bump on the style.less file
+
+
 ## [2.0.7] - 2015-05-27
 ### Base V2.0.7
 - Added minimal grid version
