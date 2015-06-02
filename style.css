@@ -722,6 +722,10 @@ dl:after {
   .tablet-no-padding {
     padding: 0;
   }
+  .tablet-no-push,
+  .tablet-no-pull {
+    left: 0;
+  }
 }
 @media only screen and (min-width: 979px) {
   .col-desktop-1,
@@ -858,6 +862,10 @@ dl:after {
   .desktop-no-padding {
     padding: 0;
   }
+  .desktop-no-push,
+  .desktop-no-pull {
+    left: 0;
+  }
 }
 @media only screen and (min-width: 1139px) {
   .col-hd-1,
@@ -993,6 +1001,10 @@ dl:after {
   }
   .hd-no-padding {
     padding: 0;
+  }
+  .hd-no-push,
+  .hd-no-pull {
+    left: 0;
   }
 }
 html,
@@ -2006,6 +2018,12 @@ li.L9 {
   position: absolute;
   top: 4px;
   left: 0;
+}
+.animate {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
 }
 .animate-infinite {
   -webkit-animation-iteration-count: infinite;
