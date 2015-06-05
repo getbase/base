@@ -97,6 +97,7 @@ h5,
 .h5,
 h6,
 .h6 {
+  font-family: sans-serif;
   margin: 0;
 }
 h1,
@@ -245,10 +246,11 @@ dl dd {
 }
 blockquote,
 .blockquote {
-  margin: 3em 0;
+  font-family: sans-serif;
+  font-weight: 400;
   color: #424242;
   font-style: italic;
-  font-weight: 400;
+  margin: 3em 0;
 }
 blockquote p,
 .blockquote p {
@@ -1273,8 +1275,8 @@ dl:after {
 @-webkit-keyframes fadeInDown {
   0% {
     opacity: 0;
-    -webkit-transform: translate3d(0, -50px, 0);
-    transform: translate3d(0, -100%, 0);
+    -webkit-transform: translate3d(0, -30px, 0);
+    transform: translate3d(0, -30px, 0);
   }
   100% {
     opacity: 1;
@@ -1285,8 +1287,8 @@ dl:after {
 @keyframes fadeInDown {
   0% {
     opacity: 0;
-    -webkit-transform: translate3d(0, -50px, 0);
-    transform: translate3d(0, -100%, 0);
+    -webkit-transform: translate3d(0, -30px, 0);
+    transform: translate3d(0, -30px, 0);
   }
   100% {
     opacity: 1;
@@ -1329,8 +1331,8 @@ dl:after {
 @-webkit-keyframes fadeInLeft {
   0% {
     opacity: 0;
-    -webkit-transform: translate3d(-50px, 0, 0);
-    transform: translate3d(-50px, 0, 0);
+    -webkit-transform: translate3d(-30px, 0, 0);
+    transform: translate3d(-30px, 0, 0);
   }
   100% {
     opacity: 1;
@@ -1341,8 +1343,8 @@ dl:after {
 @keyframes fadeInLeft {
   0% {
     opacity: 0;
-    -webkit-transform: translate3d(-50px, 0, 0);
-    transform: translate3d(-50px, 0, 0);
+    -webkit-transform: translate3d(-30px, 0, 0);
+    transform: translate3d(-30px, 0, 0);
   }
   100% {
     opacity: 1;
@@ -1385,8 +1387,8 @@ dl:after {
 @-webkit-keyframes fadeInRight {
   0% {
     opacity: 0;
-    -webkit-transform: translate3d(50px, 0, 0);
-    transform: translate3d(50px, 0, 0);
+    -webkit-transform: translate3d(30px, 0, 0);
+    transform: translate3d(30px, 0, 0);
   }
   100% {
     opacity: 1;
@@ -1397,8 +1399,8 @@ dl:after {
 @keyframes fadeInRight {
   0% {
     opacity: 0;
-    -webkit-transform: translate3d(50px, 0, 0);
-    transform: translate3d(50px, 0, 0);
+    -webkit-transform: translate3d(30px, 0, 0);
+    transform: translate3d(30px, 0, 0);
   }
   100% {
     opacity: 1;
@@ -1441,8 +1443,8 @@ dl:after {
 @-webkit-keyframes fadeInUp {
   0% {
     opacity: 0;
-    -webkit-transform: translate3d(0, 50px, 0);
-    transform: translate3d(0, 50px, 0);
+    -webkit-transform: translate3d(0, 30px, 0);
+    transform: translate3d(0, 30px, 0);
   }
   100% {
     opacity: 1;
@@ -1453,8 +1455,8 @@ dl:after {
 @keyframes fadeInUp {
   0% {
     opacity: 0;
-    -webkit-transform: translate3d(0, 50px, 0);
-    transform: translate3d(0, 50px, 0);
+    -webkit-transform: translate3d(0, 30px, 0);
+    transform: translate3d(0, 30px, 0);
   }
   100% {
     opacity: 1;

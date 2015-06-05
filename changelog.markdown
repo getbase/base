@@ -1,5 +1,15 @@
 # Base 2 Change Log
 
+## [2.1.0] - 2015-06-05
+### Base V2.1.0
+- Added transition mixin
+- Added default font family to headings
+- Updated variables to include font family for blockquotes
+- Added default blockquote font family from variable
+- Updated _animations.less
+- Minor version bump on the style.less file
+
+
 ## [2.0.9] - 2015-06-03
 ### Base V2.0.9
 - Updated minimal grid
