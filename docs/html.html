@@ -17,7 +17,6 @@
   <link rel="apple-touch-icon" sizes="72x72" href="/img/apple-touch-icon-72x72.png">
   <link rel="apple-touch-icon" sizes="114x114" href="/img/apple-touch-icon-114x114.png">
   <link rel="stylesheet" href="../style.css">
-  <script src="../js/vendor/modernizr.min.js"></script>
   <!--[if lt IE 9 ]>
     <style>
         #menu {
@@ -35,15 +34,15 @@
 </head>
 <body>
 
-<section class="banner docs-banner">
-  <header class="header">
+<div class="banner docs-banner">
+  <div class="header">
     <div class="container">
       <div class="clear">
         <h1 class="logo"><a href="/"><span class="sr">Base</span></a></h1>
         <input type="checkbox" class="menu-toggle" id="navigation" name="navigation">
         <label class="menu-label" for="navigation" id="toggle-menu"><span class="menu-label-inner">Menu</span></label>
         <div class="navigation" id="menu">
-          <nav class="menu container">
+          <div class="menu container">
             <ul class="menu-inner">
               <li><a href="/">Base - Home</a></li>
               <li><a href="/docs/">Introduction</a></li>
@@ -54,14 +53,14 @@
               <li><a href="/docs/mixins.html">Mixins</a></li>
               <li><a href="/docs/animations.html">Animations</a></li>
             </ul>
-          </nav>
+          </div>
         </div>
       </div>
     </div>
-  </header>
-</section>
+  </div>
+</div>
 
-<section class="content container">
+<div class="content container">
   <div class="content-inner">
   <div class="text-center col-tablet-10 no-float center-element">
     <h1>HTML Template</h1>
@@ -153,10 +152,10 @@
       Now that you have an idea of what's inside the HTML template, let's check out the <a href="/docs/css.html">CSS</a>.
     </p>
   </div>
-</section>
+</div>
 
 
-<footer class="footer">
+<div class="footer">
   <div class="container">
     <div class="footer-inner clear">
       <div class="col-desktop-6">
@@ -173,7 +172,7 @@
       </div>
     </div>
   </div>
-</footer>
+</div>
 
 <!-- Google Analytics -->
 <script>

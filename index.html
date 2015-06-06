@@ -18,7 +18,6 @@
   <link rel="apple-touch-icon" sizes="72x72" href="/img/apple-touch-icon-72x72.png">
   <link rel="apple-touch-icon" sizes="114x114" href="/img/apple-touch-icon-114x114.png">
   <link rel="stylesheet" href="style.css">
-  <script src="js/vendor/modernizr.min.js"></script>
   <!--[if lt IE 9 ]>
     <style>
         #menu {
@@ -36,14 +35,14 @@
 </head>
 <body>
 
-<section class="banner">
-  <header class="header">
+<div class="banner">
+  <div class="header">
     <div class="container clear">
       <h1 class="logo animated fade-in-left"><a href="/"><span class="sr">Base</span></a></h1>
       <input type="checkbox" class="menu-toggle" id="navigation" name="navigation">
       <label class="menu-label animated fade-in-right" for="navigation" id="toggle-menu"><span class="menu-label-inner">Menu</span></label>
       <div class="navigation" id="menu">
-        <nav class="menu container">
+        <div class="menu container">
           <ul class="menu-inner">
             <li><a href="/">Home</a></li>
             <li><a href="/docs/">Documentation</a></li>
@@ -51,10 +50,10 @@
             <li><a href="https://github.com/matthewhartman/base/issues?state=open">Current Issues</a></li>
             <li><a href="https://github.com/matthewhartman/base">View Source on Github</a></li>
           </ul>
-        </nav>
+        </div>
       </div>
     </div>
-  </header>
+  </div>
   <div class="container">
     <div class="lead-block">
       <h2 class="animated fade-in-down delay-1">A super simple, responsive framework built for all devices big, small and in-between</h2>
@@ -64,9 +63,9 @@
       </ul>
     </div>
   </div>
-</section>
+</div>
 
-<section class="introduction-block">
+<div class="introduction-block">
   <div class="container">
     <div class="introduction-block-inner">
       <h2>A rock sold boilerplate ready to be built on</h2>
@@ -91,11 +90,11 @@
     </div>
   </div>
   <!--<![endif]-->
-</section>
+</div>
 
 <hr>
 
-<section class="features-block">
+<div class="features-block">
   <div class="container">
     <ul class="features-block-inner row clear">
       <li class="feature-item">
@@ -112,10 +111,10 @@
       </li>
     </ul>
   </div>
-</section>
+</div>
 
 
-<section class="getting-started-block">
+<div class="getting-started-block">
   <div class="container">
     <div class="getting-started-inner clear">
       <h2 class="h3">Ready to rock and roll <span class="no-mobile show-tablet-inline">on your next exciting project</span></h2>
@@ -125,10 +124,10 @@
       </p>
     </div>
   </div>
-</section>
+</div>
 
 
-<footer class="footer">
+<div class="footer">
   <div class="container">
     <div class="footer-inner clear">
       <div class="col-desktop-6">
@@ -145,7 +144,7 @@
       </div>
     </div>
   </div>
-</footer>
+</div>
 
 <!-- Google Analytics -->
 <script>
