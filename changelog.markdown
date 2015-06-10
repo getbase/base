@@ -1,5 +1,11 @@
 # Base 2 Change Log
 
+## [2.1.1] - 2015-06-10
+### Base V2.1.1
+- Added transition delay mixin
+- Minor version bump on the style.less file
+
+
 ## [2.1.0] - 2015-06-05
 ### Base V2.1.0
 - Added transition mixin
