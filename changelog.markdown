@@ -1,5 +1,12 @@
 # Base 2 Change Log
 
+## [2.1.2] - 2015-06-12
+### Base V2.1.2
+- Added container-full for tablet, desktop and HD (_grid.less and _minimal-grid.less)
+- Updated container widths for desktop and HD responsive breakpoints
+- Minor version bump on the style.less file
+
+
 ## [2.1.1] - 2015-06-10
 ### Base V2.1.1
 - Added transition delay mixin

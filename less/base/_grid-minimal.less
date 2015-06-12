@@ -20,6 +20,8 @@
   margin-right: auto;
 }
 .container-full {
+  padding-left: 0;
+  padding-right: 0;
   margin-left: auto;
   margin-right: auto;
 }
@@ -28,17 +30,59 @@
   .container, .container-full {
     width: @tablet-container;
   }
+  .tablet-container {
+    width: @tablet-container;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .tablet-container-full {
+    width: @tablet-container;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 // Desktop Container
 @media only screen and (min-width: @desktop-breakpoint) {
   .container, .container-full {
     width: @desktop-container;
   }
+  .desktop-container {
+    width: @desktop-container;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .desktop-container-full {
+    width: @desktop-container;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 // HD Container
 @media only screen and (min-width: @hd-breakpoint) {
   .container, .container-full {
     width: @hd-container;
+  }
+  .hd-container {
+    width: @hd-container;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hd-container-full {
+    width: @hd-container;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
