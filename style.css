@@ -437,6 +437,8 @@ dl:after {
   margin-right: auto;
 }
 .container-full {
+  padding-left: 0;
+  padding-right: 0;
   margin-left: auto;
   margin-right: auto;
 }
@@ -445,17 +447,59 @@ dl:after {
   .container-full {
     width: 720px;
   }
-}
-@media only screen and (min-width: 979px) {
-  .container,
-  .container-full {
-    width: 980px;
+  .tablet-container {
+    width: 720px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .tablet-container-full {
+    width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
-@media only screen and (min-width: 1139px) {
+@media only screen and (min-width: 980px) {
   .container,
   .container-full {
-    width: 1140px;
+    width: 960px;
+  }
+  .desktop-container {
+    width: 960px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .desktop-container-full {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+@media only screen and (min-width: 1140px) {
+  .container,
+  .container-full {
+    width: 1120px;
+  }
+  .hd-container {
+    width: 1120px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hd-container-full {
+    width: 1120px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 .col-1,
@@ -729,7 +773,7 @@ dl:after {
     left: 0;
   }
 }
-@media only screen and (min-width: 979px) {
+@media only screen and (min-width: 980px) {
   .col-desktop-1,
   .col-desktop-2,
   .col-desktop-3,
@@ -869,7 +913,7 @@ dl:after {
     left: 0;
   }
 }
-@media only screen and (min-width: 1139px) {
+@media only screen and (min-width: 1140px) {
   .col-hd-1,
   .col-hd-2,
   .col-hd-3,
@@ -1727,7 +1771,7 @@ li.L9 {
     padding-left: 0;
   }
 }
-@media only screen and (min-width: 979px) {
+@media only screen and (min-width: 980px) {
   .introduction-block-inner {
     padding-left: 15px;
     padding-right: 15px;
