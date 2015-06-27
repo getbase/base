@@ -1265,24 +1265,6 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
-.carbonads-container {
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-.carbonads-container .carbonad {
-  float: none;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: left;
-  background: #f1f1f1 !important;
-  border: 2px solid #f1f1f1 !important;
-}
-.carbonads-container .carbonad .carbonad-text {
-  color: #111;
-}
-.carbonads-container .carbonad .carbonad-text a {
-  color: #111;
-}
 .features-block-inner {
   list-style: none;
   margin: 0;
