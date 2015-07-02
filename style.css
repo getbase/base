@@ -1326,10 +1326,23 @@ body {
 .features-block-inner .feature-item:first-child {
   border-top: 0;
 }
-.getting-started-block {
-  border-top: 1px solid #eee;
-  padding-top: 10px;
-  padding-bottom: 20px;
+.freebies-block {
+  text-align: center;
+  padding-top: 30px;
+  border-top: 1px solid #f1f1f1;
+}
+.getting-started {
+  text-align: center;
+}
+.newsletter-block {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  margin-top: 40px;
+  border-top: 1px solid #f1f1f1;
+}
+.newsletter-email {
+  margin-bottom: 10px;
 }
 .footer {
   font-size: 13px;
@@ -1478,7 +1491,18 @@ table thead th {
 }
 .adsbygoogle {
   margin-top: 40px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
+  position: relative;
+}
+.adsbygoogle:before {
+  content: "// Advertisement";
+  color: #999;
+  position: absolute;
+  font-size: 13px;
+  font-size: 0.8125rem;
+  top: -22px;
+  left: 50%;
+  margin-left: -60px;
 }
 .base-background-color {
   background: #ffffff;
@@ -1682,6 +1706,11 @@ li.L9 {
     float: none\0/ !important;
     float: none;
   }
+  .introduction-block {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #f1f1f1;
+  }
   .introduction-block-inner {
     padding-left: 15px;
     padding-right: 15px;
@@ -1702,22 +1731,28 @@ li.L9 {
     position: relative;
     float: left;
     width: 33.33333333%;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 5px;
+    padding-right: 5px;
     margin-bottom: 0;
     border: 0;
   }
-  .getting-started-inner {
+  .freebies-block {
+    padding-top: 20px;
+    padding-bottom: 30px;
+  }
+  .newsletter-inner {
     padding-left: 15px;
     padding-right: 15px;
     position: relative;
     float: left;
-    width: 100%;
+    width: 83.33333333%;
     float: none\0/ !important;
     float: none;
     margin-left: auto;
     margin-right: auto;
-    text-align: center;
+  }
+  .newsletter-email {
+    margin-bottom: 0;
   }
   .footer {
     padding-top: 30px;
@@ -1787,18 +1822,31 @@ li.L9 {
     margin-left: auto;
     margin-right: auto;
   }
+  .features-block-inner .feature-item {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
   .getting-started-inner {
     padding-left: 15px;
     padding-right: 15px;
     position: relative;
     float: left;
-    width: 75%;
+    width: 66.66666667%;
     float: none\0/ !important;
     float: none;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 20px;
-    padding-bottom: 20px;
+  }
+  .newsletter-inner {
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    float: left;
+    width: 50%;
+    float: none\0/ !important;
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
   }
   .footer {
     padding: 40px 0;
