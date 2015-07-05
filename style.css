@@ -1808,6 +1808,17 @@ li.L9 {
     margin-left: auto;
     margin-right: auto;
   }
+  .features-block {
+    text-align: center;
+  }
+  .features-block .feature-item {
+    text-align: left;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    float: left;
+    width: 25%;
+  }
   .newsletter {
     padding-left: 15px;
     padding-right: 15px;
