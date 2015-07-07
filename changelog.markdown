@@ -1,5 +1,11 @@
 # Base 2 Change Log
 
+## [2.1.3] - 2015-07-07
+### Base V2.1.3
+- Added .svg-fill() mixin for applying a custom fill colour to SVG images (embeds images within CSS too!) - See:
+  http://zslabs.com/articles/svg-background-fill/#update-2
+- Minor version bump on the style.less file
+
 ## [2.1.2] - 2015-06-12
 ### Base V2.1.2
 - Added container-full for tablet, desktop and HD (_grid.less and _minimal-grid.less)
