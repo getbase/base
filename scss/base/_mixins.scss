@@ -6,8 +6,8 @@
 @mixin font-size ($size) {
   $remValue: $size / 16;
   $pxValue: ($size);
-  font-size: $pxValue + 'px'; 
-  font-size: $remValue + 'rem';
+  font-size: $pxValue + px; 
+  font-size: $remValue + rem;
 }
 
 // Line height sizes (primary sizing in `rem` units with a fallback of `px`)
@@ -15,8 +15,8 @@
 @mixin line-height ($size) {
   $remValue: $size / 16;
   $pxValue: ($size);
-  font-size: $pxValue + 'px'; 
-  font-size: $remValue + 'rem';
+  line-height: $pxValue + px; 
+  line-height: $remValue + rem;
 }
 
 // Border Radius
@@ -30,9 +30,9 @@
 // Rotate (Transformation)
 // Example usage .rotate(180) || .rotate(-45);
 @mixin rotate($rotate) {
-  -ms-transform: rotate($rotate + 'deg');
-  -webkit-transform: rotate($rotate + 'deg');
-  transform: rotate($rotate + 'deg');
+  -ms-transform: rotate($rotate + deg);
+  -webkit-transform: rotate($rotate + deg);
+  transform: rotate($rotate + deg);
 }
 
 // SVG background with PNG fallback

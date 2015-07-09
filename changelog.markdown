@@ -1,5 +1,14 @@
 # Base 2 Change Log
 
+## [2.2.0] - 2015-07-10
+### Base V2.2.0
+- Added SCSS Support!
+- Updated Gulpfile to support SCSS compiling
+- Minor updates on package.json 
+- Minor syntax updates on _mixins.less
+- Minor version bump on the style.less file
+- Minor updates to changelog
+
 ## [2.1.3] - 2015-07-07
 ### Base V2.1.3
 - Added .svg-fill() mixin for applying a custom fill colour to SVG images (embeds images within CSS too!) - See:
@@ -45,7 +54,7 @@
 ## [2.0.7] - 2015-05-27
 ### Base V2.0.7
 - Added minimal grid version
-- Minor updates to readme.markdown and packages.json (links)
+- Minor updates to readme.markdown and package.json (links)
 - Minor version bump on the style.less file
 
 
@@ -83,7 +92,7 @@
 - Minor updates on readme
 - Added changelog.markdown
 - Removed .htaccess file
-- Updated packages.json to include a newer version of LESS (v3)
+- Updated package.json to include a newer version of LESS (v3)
 - Updated .gitignore to ignore node_modules
 - Minor version bump on the style.less file
 
@@ -92,7 +101,7 @@
 ### Base V2.0.2
 - Minor updates on readme
 - Minor version bump on the LESS file
-- Updated packages.json with latest dependencies
+- Updated package.json with latest dependencies
 
 
 ## [2.0.1] - 2015-03-27

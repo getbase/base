@@ -9,7 +9,7 @@ ul, ol {
   }
 }
 dl {
-  &:extend(.clear all);
+  &:before, &:after { content: " "; display: table; } &:after { clear: both; }
   dt {
     float: left;
     width: 25%;

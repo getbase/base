@@ -234,6 +234,14 @@ ul li,
 ol li {
   margin-bottom: 5px;
 }
+dl:before,
+dl:after {
+  content: " ";
+  display: table;
+}
+dl:after {
+  clear: both;
+}
 dl dt {
   float: left;
   width: 25%;
@@ -407,14 +415,11 @@ input::-moz-focus-inner {
   padding: 0;
 }
 .clear:before,
-.clear:after,
-dl:before,
-dl:after {
+.clear:after {
   content: " ";
   display: table;
 }
-.clear:after,
-dl:after {
+.clear:after {
   clear: both;
 }
 .row:before,
