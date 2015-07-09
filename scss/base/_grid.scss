@@ -1,0 +1,247 @@
+// ==========================================================================
+// Base – Mobile-First Grid
+// ==========================================================================
+
+// Micro Clearfix - http://nicolasgallagher.com/micro-clearfix-hack/
+.clear:before, .clear:after { content: " "; display: table; } .clear:after { clear: both; }
+.row:before, .row:after { content: ""; display: table; } .row:after { clear: both; }
+
+.row {
+  position: relative;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+// Mobile Container
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.container-full {
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+// Tablet Container
+@media only screen and (min-width: $tablet-breakpoint) {
+  .container, .container-full {
+    width: $tablet-container;
+  }
+  .tablet-container {
+    width: $tablet-container;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .tablet-container-full {
+    width: $tablet-container;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+// Desktop Container
+@media only screen and (min-width: $desktop-breakpoint) {
+  .container, .container-full {
+    width: $desktop-container;
+  }
+  .desktop-container {
+    width: $desktop-container;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .desktop-container-full {
+    width: $desktop-container;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+// HD Container
+@media only screen and (min-width: $hd-breakpoint) {
+  .container, .container-full {
+    width: $hd-container;
+  }
+  .hd-container {
+    width: $hd-container;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hd-container-full {
+    width: $hd-container;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+// Mobile-first Grid Columns - Global Rules
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  float: left;
+}
+
+// Mobile-first Grid
+$columns: 12;
+@for $i from 1 through $columns {
+  .col-#{$i} {
+    width: ($i / $columns) * 100%;
+  }
+}
+
+// Mobile Push Offsets
+@for $i from 1 through $columns - 1 {
+  .push-#{$i} {
+    left: ($i / $columns) * 100%;
+  }
+}
+
+// Mobile Pull Offsets
+@for $i from 1 through $columns - 1 {
+  .pull-#{$i} {
+    left: -($i / $columns) * 100%;
+  }
+}
+
+// Mobile Helpers
+.hide-mobile { display: none; }
+.show-mobile { display: block; }
+.show-mobile-inline-block { display: inline-block; }
+.show-mobile-inline { display: inline; }
+
+// Tablet Grid
+@media only screen and (min-width: $tablet-breakpoint) {
+  
+  // Tablet Grid Columns - Global Rules
+  .col-tablet-1, .col-tablet-2, .col-tablet-3, .col-tablet-4, .col-tablet-5, .col-tablet-6, .col-tablet-7, .col-tablet-8, .col-tablet-9, .col-tablet-10, .col-tablet-11, .col-tablet-12 {
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    float: left;
+  }
+
+  // Tablet Grid
+  $columns: 12;
+  @for $i from 1 through $columns {
+    .col-tablet-#{$i} {
+      width: ($i / $columns) * 100%;
+    }
+  }
+
+  // Tablet Push Offsets
+  @for $i from 1 through $columns - 1 {
+    .push-tablet-#{$i} {
+      left: ($i / $columns) * 100%;
+    }
+  }
+
+  // Tablet Pull Offsets
+  @for $i from 1 through $columns - 1 {
+    .pull-tablet-#{$i} {
+      left: -($i / $columns) * 100%;
+    }
+  }
+
+  // Tablet Helpers
+  .hide-tablet { display: none; }
+  .show-tablet { display: block; }
+  .show-tablet-inline-block { display: inline-block; }
+  .show-tablet-inline { display: inline; }
+  .tablet-no-padding { padding: 0; }
+  .tablet-no-push, .tablet-no-pull { left: 0; }
+}
+
+// Desktop Grid
+@media only screen and (min-width: $desktop-breakpoint) {
+  
+  // Desktop Grid Columns - Global Rules
+  .col-desktop-1, .col-desktop-2, .col-desktop-3, .col-desktop-4, .col-desktop-5, .col-desktop-6, .col-desktop-7, .col-desktop-8, .col-desktop-9, .col-desktop-10, .col-desktop-11, .col-desktop-12 {   padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    float: left;
+  }
+
+  // Desktop Grid
+  $columns: 12;
+  @for $i from 1 through $columns {
+    .col-desktop-#{$i} {
+      width: ($i / $columns) * 100%;
+    }
+  }
+
+  // Desktop Push Offsets
+  @for $i from 1 through $columns - 1 {
+    .push-desktop-#{$i} {
+      left: ($i / $columns) * 100%;
+    }
+  }
+
+  // Desktop Pull Offsets
+  @for $i from 1 through $columns - 1 {
+    .pull-desktop-#{$i} {
+      left: -($i / $columns) * 100%;
+    }
+  }
+
+  // Desktop Helpers
+  .hide-desktop { display: none; }
+  .show-desktop { display: block; }
+  .show-desktop-inline-block { display: inline-block; }
+  .show-desktop-inline { display: inline; }
+  .desktop-no-padding { padding: 0; }
+  .desktop-no-push, .desktop-no-pull { left: 0; }
+}
+
+// HD Grid
+@media only screen and (min-width: $hd-breakpoint) {
+  
+  // HD Grid Columns - Global Rules
+  .col-hd-1, .col-hd-2, .col-hd-3, .col-hd-4, .col-hd-5, .col-hd-6, .col-hd-7, .col-hd-8, .col-hd-9, .col-hd-10, .col-hd-11, .col-hd-12 {   padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    float: left;
+  }
+
+  // HD Grid
+  $columns: 12;
+  @for $i from 1 through $columns {
+    .col-hd-#{$i} {
+      width: ($i / $columns) * 100%;
+    }
+  }
+
+  // HD Push Offsets
+  @for $i from 1 through $columns - 1 {
+    .push-hd-#{$i} {
+      left: ($i / $columns) * 100%;
+    }
+  }
+
+  // HD Pull Offsets
+  @for $i from 1 through $columns - 1 {
+    .pull-hd-#{$i} {
+      left: -($i / $columns) * 100%;
+    }
+  }
+
+  // HD Helpers
+  .hide-hd { display: none; }
+  .show-hd { display: block; }
+  .show-hd-inline-block { display: inline-block; }
+  .show-hd-inline { display: inline; }
+  .hd-no-padding { padding: 0; }
+  .hd-no-push, .hd-no-pull { left: 0; }
+}

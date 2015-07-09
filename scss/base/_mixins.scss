@@ -1,0 +1,103 @@
+// ==========================================================================
+// Base – Mixins
+// ==========================================================================
+// Font sizes (primary sizing in `rem` units with a fallback of `px`)
+// Example usage .font-size(18);
+@mixin font-size ($size) {
+  $remValue: $size / 16;
+  $pxValue: ($size);
+  font-size: $pxValue + 'px'; 
+  font-size: $remValue + 'rem';
+}
+
+// Line height sizes (primary sizing in `rem` units with a fallback of `px`)
+// Example usage .line-height(22);
+@mixin line-height ($size) {
+  $remValue: $size / 16;
+  $pxValue: ($size);
+  font-size: $pxValue + 'px'; 
+  font-size: $remValue + 'rem';
+}
+
+// Border Radius
+// Example usage .border-radius(2px) || .border-radius(100%);
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+// Rotate (Transformation)
+// Example usage .rotate(180) || .rotate(-45);
+@mixin rotate($rotate) {
+  -ms-transform: rotate($rotate + 'deg');
+  -webkit-transform: rotate($rotate + 'deg');
+  transform: rotate($rotate + 'deg');
+}
+
+// SVG background with PNG fallback
+// Example Usage .svg-bg("img/banner.svg", "img/banner.png", 50%, 50%, no-repeat);
+@mixin bg-svg($svg, $png, $x: 0, $y: 0, $repeat: no-repeat) {
+  background: url(@svg) $x $y $repeat;
+  .no-svg & {
+    background: url(@png) $x $y $repeat;
+  }
+}
+
+// Background Color with Opacity
+// Example Usage: .bg-rgba(#111, 50%);
+@mixin bg-rgba($color, $alpha) {
+  $opacity: $alpha / 100%;
+  $rgba: rgba($color, $opacity);
+  background: $color;
+  background: rgba($color, $opacity);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#{$rgba}, endColorstr=#{$rgba});
+  -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#{$rgba}, endColorstr=#{$rgba});
+}
+
+// Opacity
+// Example Usage: .opacity(50%);
+@mixin opacity($percentOpacity: 50%) {
+  $opacity: $percentOpacity / 100%;
+  -webkit-opacity: $opacity;
+  -moz-opacity: $opacity;
+  opacity: $opacity;
+}
+
+// Animations
+// Example Usage .animation(1s);
+@mixin animate($duration: 1s) {
+  -webkit-animation-duration: $duration;
+  animation-duration: $duration;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+// Animation Delay
+// Example Usage .animation-delay(1s)
+@mixin animate-delay($delay: 1s) {
+  -webkit-animation-delay: $delay;
+  animation-delay: $delay;
+}
+
+// CSS Transitions
+// Example Usage .transition(0.3s)
+@mixin transition($speed: 0.3s) {
+  -webkit-transition: all $speed;
+   -moz-transition: all $speed;
+   transition: all $speed;
+}
+
+// Transition Delay
+// Example usage .transition-delay(.3s)
+@mixin transition-delay($speed: 0.3s) {
+  -webkit-transition-delay: $speed;
+  -moz-transition-delay: $speed;
+  transition-delay: $speed;
+}
+
+// SVG Fill - TO DO
+// Example usage: .svg-fill("img/icon.svg", "#555");
+
+
+// Not enough mixins? – Please make some suggestions or contribute more! :)

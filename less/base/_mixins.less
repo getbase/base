@@ -46,8 +46,8 @@
 
 // Background Color with Opacity
 // Example Usage: .bg-rgba(#111, 50%);
-.bg-rgba(@color,@alpha){
-  @rgba: rgba(red(@color),green(@color),blue(@color),@alpha);
+.bg-rgba(@color,@alpha) {
+  @rgba: rgba(red(@color), green(@color), blue(@color), @alpha);
   @argb: argb(@rgba);
   background-color: @color;
   background-color: @rgba;
@@ -66,7 +66,7 @@
 
 // Animations
 // Example Usage .animation(1s);
-.animate(@duration: 1s;) {
+.animate(@duration: 1s) {
   -webkit-animation-duration: @duration;
   animation-duration: @duration;
   -webkit-animation-fill-mode: both;
