@@ -25,21 +25,21 @@
   @import "_mobile-styles";
 
   // Tablet Styles
-  @media only screen and (min-width: @tablet-breakpoint) {
+  @media only screen and (min-width: $tablet-breakpoint) {
     @import "_tablet-styles";
   }
 
   // Desktop Styles
-  @media only screen and (min-width: @desktop-breakpoint) {
+  @media only screen and (min-width: $desktop-breakpoint) {
     @import "_desktop-styles";
   }
 
   // HD Styles
-  @media only screen and (min-width: @hd-breakpoint) {
+  @media only screen and (min-width: $hd-breakpoint) {
     @import "_hd-styles";
   }
   
-  // Helpers
+  // // Helpers
   @import "base/_helpers";
 
   // Animations

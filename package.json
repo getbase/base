@@ -1,6 +1,6 @@
 {
   "name": "base",
-  "version": "2.1.3",
+  "version": "2.2.0",
   "homepage": "http://getbase.org/",
   "repository": {
     "type": "git",
@@ -13,6 +13,7 @@
   "keywords": [
     "css",
     "less",
+    "scss",
     "framework",
     "mobile-first",
     "lightweight",
