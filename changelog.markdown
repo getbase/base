@@ -1,5 +1,16 @@
 # Base 2 Change Log
 
+## [2.3.0] - 2015-07-12
+### Base V2.3.0
+- Separated custom buttons and custom select from _helpers.less/_helpers.scss
+- Version bump on package.json 
+- Version bump on style.less/style.scss
+- Updated index.html template
+- Removed ie.min.js and modernizr.min.js
+- Updated to latest jQuery
+- Minor updates to the changelog.markdown
+
+
 ## [2.2.0] - 2015-07-10
 ### Base V2.2.0
 - Added SCSS Support!
@@ -9,11 +20,13 @@
 - Minor version bump on the style.less file
 - Minor updates to changelog
 
+
 ## [2.1.3] - 2015-07-07
 ### Base V2.1.3
 - Added .svg-fill() mixin for applying a custom fill colour to SVG images (embeds images within CSS too!) - See:
   http://zslabs.com/articles/svg-background-fill/#update-2
 - Minor version bump on the style.less file
+
 
 ## [2.1.2] - 2015-06-12
 ### Base V2.1.2
