@@ -1,9 +1,16 @@
 # Base 2 Change Log
 
+## [2.3.3] - 2015-07-13
+### Base V2.3.3
+- Updated input[type=phone] to input[type=tel] in _forms.less/_forms.scss
+- Version bump on package.json
+- Version bump on style.less/style.scss
+
+
 ## [2.3.2] - 2015-07-13
 ### Base V2.3.2
 - Updated tablet @media breakpoint
-- Version bump on package.json 
+- Version bump on package.json
 - Version bump on style.less/style.scss
 
 
@@ -17,7 +24,7 @@
 ## [2.3.0] - 2015-07-12
 ### Base V2.3.0
 - Moved custom buttons and custom select from _helpers.less/_helpers.scss into _assets.less/_assets.scss
-- Version bump on package.json 
+- Version bump on package.json
 - Version bump on style.less/style.scss
 - Updated index.html template
 - Removed ie.min.js and modernizr.min.js
@@ -29,7 +36,7 @@
 ### Base V2.2.0
 - Added SCSS Support!
 - Updated Gulpfile to support SCSS compiling
-- Minor updates on package.json 
+- Minor updates on package.json
 - Minor syntax updates on _mixins.less
 - Minor version bump on the style.less file
 - Minor updates to changelog

@@ -362,7 +362,7 @@ input {
 }
 input[type="text"],
 input[type="email"],
-input[type="phone"] {
+input[type="tel"] {
   height: 36px;
   padding: 0 .4em;
 }
