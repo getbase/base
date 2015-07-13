@@ -511,7 +511,7 @@ input::-moz-focus-inner {
   margin-left: auto;
   margin-right: auto;
 }
-@media only screen and (min-width: 719px) {
+@media only screen and (min-width: 740px) {
   .container,
   .container-full {
     width: 720px;
@@ -702,7 +702,7 @@ input::-moz-focus-inner {
 .show-mobile-inline {
   display: inline;
 }
-@media only screen and (min-width: 719px) {
+@media only screen and (min-width: 740px) {
   .col-tablet-1,
   .col-tablet-2,
   .col-tablet-3,

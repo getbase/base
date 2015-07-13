@@ -1,5 +1,12 @@
 # Base 2 Change Log
 
+## [2.3.2] - 2015-07-13
+### Base V2.3.2
+- Updated tablet @media breakpoint
+- Version bump on package.json 
+- Version bump on style.less/style.scss
+
+
 ## [2.3.1] - 2015-07-13
 ### Base V2.3.1
 - Fixed custom select (.select) issue in IE9+

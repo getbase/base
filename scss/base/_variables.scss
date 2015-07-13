@@ -70,6 +70,6 @@ $desktop-container:                             960px;
 $hd-container:                                  1120px;
 
 // Responsive Breakpoints
-$tablet-breakpoint:                             ($tablet-container - 1);
+$tablet-breakpoint:                             ($tablet-container + 20);
 $desktop-breakpoint:                            ($desktop-container + 20);
 $hd-breakpoint:                                 ($hd-container + 20);
