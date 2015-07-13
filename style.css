@@ -442,7 +442,7 @@ dl:after {
   margin-left: auto;
   margin-right: auto;
 }
-@media only screen and (min-width: 719px) {
+@media only screen and (min-width: 740px) {
   .container,
   .container-full {
     width: 720px;
@@ -633,7 +633,7 @@ dl:after {
 .show-mobile-inline {
   display: inline;
 }
-@media only screen and (min-width: 719px) {
+@media only screen and (min-width: 740px) {
   .col-tablet-1,
   .col-tablet-2,
   .col-tablet-3,
@@ -1321,6 +1321,13 @@ body {
   margin-top: 40px;
   border-top: 1px solid #f1f1f1;
 }
+.freebie {
+  border-bottom: 1px solid #f1f1f1;
+  padding-bottom: 20px;
+}
+.freebie-img {
+  display: none;
+}
 .newsletter-email {
   margin-bottom: 10px;
 }
@@ -1674,7 +1681,17 @@ li.L9 {
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
-@media only screen and (min-width: 719px) {
+.button.button-red {
+  color: #fff;
+  background: #ff7f50;
+}
+.button.button-red:hover {
+  background-color: #ff7f50;
+  background-color: rgba(255, 127, 80, 0.8);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ccff7f50, endColorstr=#ccff7f50);
+  -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ccff7f50, endColorstr=#ccff7f50);
+}
+@media only screen and (min-width: 740px) {
   .banner .lead-block {
     margin-left: auto;
     margin-right: auto;
@@ -1703,17 +1720,31 @@ li.L9 {
     width: 50%;
     border: 0;
   }
-  .newsletter {
-    text-align: center;
-    padding-left: 15px;
-    padding-right: 15px;
-    position: relative;
+  .freebie-heading,
+  .newsletter-heading {
+    margin-top: 0;
+  }
+  .freebie-img {
     float: left;
-    width: 75%;
-    float: none\0/ !important;
-    float: none;
-    margin-left: auto;
-    margin-right: auto;
+    display: block;
+    margin-right: 20px;
+  }
+  .freebie-img:hover {
+    opacity: .9;
+  }
+  .freebie-img img {
+    display: block;
+  }
+  .freebie-content {
+    overflow: hidden;
+  }
+  .newsletter {
+    margin-top: 20px;
+  }
+  .newsletter-row {
+    position: relative;
+    margin-left: -15px;
+    margin-right: -15px;
   }
   .newsletter-email {
     margin-bottom: 0;
@@ -1819,16 +1850,14 @@ li.L9 {
     float: left;
     width: 25%;
   }
+  .promotional-block {
+    padding-top: 50px;
+  }
+  .freebie {
+    border: 0;
+  }
   .newsletter {
-    padding-left: 15px;
-    padding-right: 15px;
-    position: relative;
-    float: left;
-    width: 50%;
-    float: none\0/ !important;
-    float: none;
-    margin-left: auto;
-    margin-right: auto;
+    margin-top: 0;
   }
   .footer {
     padding: 40px 0;
