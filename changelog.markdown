@@ -1,8 +1,15 @@
 # Base 2 Change Log
 
+## [2.3.1] - 2015-07-13
+### Base V2.3.1
+- Fixed custom select (.select) issue in IE9+
+- Version bump on package.json 
+- Version bump on style.less/style.scss
+
+
 ## [2.3.0] - 2015-07-12
 ### Base V2.3.0
-- Separated custom buttons and custom select from _helpers.less/_helpers.scss
+- Moved custom buttons and custom select from _helpers.less/_helpers.scss into _assets.less/_assets.scss
 - Version bump on package.json 
 - Version bump on style.less/style.scss
 - Updated index.html template

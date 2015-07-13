@@ -450,6 +450,7 @@ input::-moz-focus-inner {
   overflow: hidden;
   height: 36px;
   line-height: 32px;
+  padding: 0 .4em;
   position: relative;
   display: block;
 }
@@ -465,9 +466,10 @@ input::-moz-focus-inner {
 }
 .select select {
   -webkit-appearance: none;
-  width: 110%;
+  -moz-appearance: none;
+  width: 120%;
   height: 36px;
-  padding: 0 .4em;
+  padding: 0;
   line-height: normal;
   border: 0;
   background: transparent;
