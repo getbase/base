@@ -1,5 +1,12 @@
 # Base 2 Change Log
 
+## [2.3.4] - 2015-07-15
+### Base V2.3.4
+- Added display helpers for _print.less/_print.scss
+- Version bump on package.json
+- Version bump on style.less/style.scss
+
+
 ## [2.3.3] - 2015-07-13
 ### Base V2.3.3
 - Updated input[type=phone] to input[type=tel] in _forms.less/_forms.scss

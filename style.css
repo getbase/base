@@ -1594,4 +1594,16 @@ input::-moz-focus-inner {
   abbr[title]:after {
     content: " (" attr(title) ")";
   }
+  .hide-print {
+    display: none;
+  }
+  .show-print {
+    display: block;
+  }
+  .show-print-inline-block {
+    display: inline-block;
+  }
+  .show-print-inline {
+    display: inline;
+  }
 }
