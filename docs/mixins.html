@@ -131,13 +131,13 @@
         </tr>
         <tr>
           <td class="mobile-table-header" data-title="Mixin">
-            <span class="data-content"><code>.border-radius(number)</code></span>
+            <span class="data-content"><code>.border-radius(number px/%)</code></span>
           </td>
           <td data-title="Purpose">
             <span class="data-content">Applies rounded corners to an element and includes all browser prefixes</span>
           </td>
           <td data-title="Example">
-            <span class="data-content"><code>.border-radius(3)</code></span>
+            <span class="data-content"><code>.border-radius(3px)</code></span>
           </td>
           <td data-title="Outcome">
             <span class="data-content">Applies a border radius of 3px</span>
@@ -243,6 +243,18 @@
             <span class="data-content"><code>.transition-delay(0.3s)</code></span>
           </td>
           <td data-title="Output"><span class="data-content">CSS transition is delayed for 0.3 seconds</span></td>
+        </tr>
+        <tr>
+          <td class="mobile-table-header" data-title="Mixin">
+            <span class="data-content"><code>.svg-fill(svg-src, color)</code></span>
+          </td>
+          <td data-title="Purpose">
+            <span class="data-content">Embeds the SVG image into CSS using data-uri();</span>
+          </td>
+          <td data-title="Example">
+            <span class="data-content"><code>.svg-fill("img/twitter.svg", "#f30");</code></span>
+          </td>
+          <td data-title="Output"><span class="data-content">Original SVG is dark grey. New SVG will now render in orange: <span class="twitter-icon"></span> </span></td>
         </tr>
       </tbody>
     </table>

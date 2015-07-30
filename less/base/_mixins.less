@@ -46,8 +46,8 @@
 
 // Background Color with Opacity
 // Example Usage: .bg-rgba(#111, 50%);
-.bg-rgba(@color,@alpha){
-  @rgba: rgba(red(@color),green(@color),blue(@color),@alpha);
+.bg-rgba(@color,@alpha) {
+  @rgba: rgba(red(@color), green(@color), blue(@color), @alpha);
   @argb: argb(@rgba);
   background-color: @color;
   background-color: @rgba;
@@ -66,7 +66,7 @@
 
 // Animations
 // Example Usage .animation(1s);
-.animate(@duration: 1s;) {
+.animate(@duration: 1s) {
   -webkit-animation-duration: @duration;
   animation-duration: @duration;
   -webkit-animation-fill-mode: both;
@@ -94,6 +94,14 @@
   -webkit-transition-delay: @speed;
   -moz-transition-delay: @speed;
   transition-delay: @speed;
+}
+
+// SVG Fill - http://zslabs.com/articles/svg-background-fill/#update-2
+// Example usage: .svg-fill("img/icon.svg", "#555");
+.svg-fill(@src, @fill) {
+  @data-uri: data-uri('image/svg+xml;charset=UTF-8', "@{src}");
+  @replace-src: replace("@{data-uri}", "fill\%3D\%22\%23[\w]{3,6}\%22", escape('fill="@{fill}"'), "g");
+  background-image:e(@replace-src);
 }
 
 // Not enough mixins? – Please make some suggestions or contribute more! :)

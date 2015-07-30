@@ -1691,6 +1691,12 @@ li.L9 {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ccff7f50, endColorstr=#ccff7f50);
   -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ccff7f50, endColorstr=#ccff7f50);
 }
+.twitter-icon {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22utf-8%22%3F%3E%0A%3C!--%20Generated%20by%20IcoMoon.io%20--%3E%0A%3C!DOCTYPE%20svg%20PUBLIC%20%22-%2F%2FW3C%2F%2FDTD%20SVG%201.1%2F%2FEN%22%20%22http%3A%2F%2Fwww.w3.org%2FGraphics%2FSVG%2F1.1%2FDTD%2Fsvg11.dtd%22%3E%0A%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20width%3D%2215%22%20height%3D%2216%22%20viewBox%3D%220%200%2015%2016%22%3E%0A%3Cpath%20fill%3D%22%23f30%22%20d%3D%22M14.464%203.643q-0.598%200.875-1.446%201.491%200.009%200.125%200.009%200.375%200%201.161-0.339%202.317t-1.031%202.219-1.647%201.879-2.304%201.304-2.884%200.487q-2.42%200-4.429-1.295%200.313%200.036%200.696%200.036%202.009%200%203.58-1.232-0.938-0.018-1.679-0.576t-1.018-1.424q0.295%200.045%200.545%200.045%200.384%200%200.759-0.098-1-0.205-1.656-0.996t-0.656-1.835v-0.036q0.607%200.339%201.304%200.366-0.589-0.393-0.938-1.027t-0.348-1.375q0-0.786%200.393-1.455%201.080%201.33%202.629%202.129t3.317%200.888q-0.071-0.339-0.071-0.661%200-1.196%200.844-2.040t2.040-0.844q1.25%200%202.107%200.911%200.973-0.188%201.83-0.696-0.33%201.027-1.268%201.589%200.83-0.089%201.661-0.446z%22%3E%3C%2Fpath%3E%0A%3C%2Fsvg%3E%0A");
+}
 @media only screen and (min-width: 740px) {
   .banner .lead-block {
     margin-left: auto;
