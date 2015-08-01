@@ -1,5 +1,14 @@
 # Base 2 Change Log
 
+
+## [2.3.5] - 2015-08-01
+### Base V2.3.5
+- Fixed :active state on custom buttons in _assets.less/_assets.scss
+- Version bump on package.json
+- Version bump on style.less/style.scss
+- Added minor comment to gulpfile.js
+
+
 ## [2.3.4] - 2015-07-15
 ### Base V2.3.4
 - Added display helpers for _print.less/_print.scss

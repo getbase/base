@@ -426,11 +426,12 @@ input::-moz-focus-inner {
   -moz-transition: all 0.3s;
   transition: all 0.3s;
 }
+.button:hover,
+.button:active {
+  text-decoration: none;
+}
 .button:hover {
   background: #f9f9f9;
-}
-.button:active {
-  background: #fff;
 }
 .button-link {
   color: #cd5c5c;
