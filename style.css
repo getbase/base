@@ -1321,6 +1321,10 @@ body {
   margin-top: 40px;
   border-top: 1px solid #f1f1f1;
 }
+.freebies-heading {
+  margin-top: 0;
+  margin-bottom: 40px;
+}
 .freebie {
   border-bottom: 1px solid #f1f1f1;
   padding-bottom: 20px;
@@ -1726,9 +1730,17 @@ li.L9 {
     width: 50%;
     border: 0;
   }
+  .freebies-wrap {
+    position: relative;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
   .freebie-heading,
   .newsletter-heading {
     margin-top: 0;
+  }
+  .freebie {
+    padding-top: 20px;
   }
   .freebie-img {
     float: left;
@@ -1859,11 +1871,17 @@ li.L9 {
   .promotional-block {
     padding-top: 50px;
   }
+  .freebies-wrap {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #f1f1f1;
+  }
   .freebie {
     border: 0;
   }
   .newsletter {
-    margin-top: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
   .footer {
     padding: 40px 0;
