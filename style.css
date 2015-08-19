@@ -362,9 +362,14 @@ input {
 }
 input[type="text"],
 input[type="email"],
-input[type="tel"] {
+input[type="tel"],
+input[type="date"] {
   height: 36px;
   padding: 0 .4em;
+}
+input[type="date"]::-webkit-inner-spin-button {
+  display: none;
+  -webkit-appearance: none;
 }
 input[type="checkbox"],
 input[type="radio"] {
@@ -413,6 +418,18 @@ button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
   padding: 0;
+}
+input::-webkit-input-placeholder {
+  color: #999999;
+}
+input:-moz-placeholder {
+  color: #999999;
+}
+input::-moz-placeholder {
+  color: #999999;
+}
+input:-ms-input-placeholder {
+  color: #999999;
 }
 .button {
   border: 1px solid #d7d7d7;

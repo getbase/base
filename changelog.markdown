@@ -1,6 +1,15 @@
 # Base 2 Change Log
 
 
+## [2.3.6] - 2015-08-19
+### Base V2.3.6
+- Added input[type=date] in _forms.less/_forms.scss
+- Added new variable @base-placeholder-color for forms in _variables.less/_variables.scss
+- Added styles for default placeholder colour in _forms.less/_forms.scss
+- Version bump on package.json
+- Version bump on style.less/style.scss
+
+
 ## [2.3.5] - 2015-08-01
 ### Base V2.3.5
 - Fixed :active state on custom buttons in _assets.less/_assets.scss

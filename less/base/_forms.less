@@ -36,16 +36,24 @@ input { line-height: normal; }
 .input { width: 100%; }
 input[type="text"],
 input[type="email"],
-input[type="tel"] {
+input[type="tel"],
+input[type="date"] {
   height: 36px;
   padding: 0 .4em;
+}
+input[type="date"]::-webkit-inner-spin-button {
+  display: none;
+  -webkit-appearance: none;
 }
 input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box;
   padding: 0;
 }
-input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button { height: auto; }
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
 input[type="search"] {
   -webkit-appearance: textfield;
   -moz-box-sizing: content-box;
@@ -81,3 +89,9 @@ input::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
+
+// Placeholder Colour
+input::-webkit-input-placeholder { color: @base-placeholder-color; }
+input:-moz-placeholder { color: @base-placeholder-color; }
+input::-moz-placeholder { color: @base-placeholder-color; }
+input:-ms-input-placeholder { color: @base-placeholder-color; }
