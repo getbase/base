@@ -419,16 +419,16 @@ input::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
-input::-webkit-input-placeholder {
+::-webkit-input-placeholder {
   color: #999999;
 }
-input:-moz-placeholder {
+:-moz-placeholder {
   color: #999999;
 }
-input::-moz-placeholder {
+::-moz-placeholder {
   color: #999999;
 }
-input:-ms-input-placeholder {
+:-ms-input-placeholder {
   color: #999999;
 }
 .button {
