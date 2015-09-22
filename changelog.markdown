@@ -1,6 +1,13 @@
 # Base 2 Change Log
 
 
+## [2.4.0] - 2015-09-01
+### Base V2.4.0
+- Updated Gulp file to cater for image compression, ...
+- Version bump on package.json
+- Version bump on style.less/style.scss
+
+
 ## [2.3.7] - 2015-09-01
 ### Base V2.3.7
 - Removed input specific on placeholders in _forms.less/_forms.scss
