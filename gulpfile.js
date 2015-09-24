@@ -13,7 +13,7 @@ var gulp = require('gulp'),
 
 // Task to compile SCSS
 gulp.task('sass', function () {
-  gulp.src('./src/scss/style.scss')
+  return gulp.src('./src/scss/style.scss')
     .pipe(sass({
       errLogToConsole: false,
       paths: [ path.join(__dirname, 'scss', 'includes') ]
@@ -31,7 +31,7 @@ gulp.task('sass', function () {
 
 // Task to compile LESS
 gulp.task('less', function () {
-  gulp.src('./src/less/style.less')
+  return gulp.src('./src/less/style.less')
     .pipe(less({ paths: [ path.join(__dirname, 'less', 'includes') ]
   })
   .on('error', function(err) {
