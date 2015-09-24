@@ -29,7 +29,6 @@
   ],
   "devDependencies": {
     "browser-sync": "^2.9.6",
-    "del": "^2.0.2",
     "gulp": "^3.8.10",
     "gulp-cache": "^0.3.0",
     "gulp-imagemin": "^2.3.0",
@@ -38,6 +37,7 @@
     "gulp-notify": "^2.2.0",
     "gulp-sass": "^2.0.4",
     "gulp-watch": "^4.1.0",
-    "path": "^0.11.14"
+    "path": "^0.11.14",
+    "run-sequence": "^1.1.4"
   }
 }

@@ -9,11 +9,11 @@ var gulp = require('gulp'),
     browserSync = require('browser-sync'),
     imagemin = require('gulp-imagemin'),
     cache = require('gulp-cache'),
-    del = require('del');
+    runSequence = require('run-sequence');
 
 // Task to compile SCSS
 gulp.task('sass', function () {
-  gulp.src('./scss/style.scss')
+  gulp.src('./src/scss/style.scss')
     .pipe(sass({
       errLogToConsole: false,
       paths: [ path.join(__dirname, 'scss', 'includes') ]
@@ -21,7 +21,8 @@ gulp.task('sass', function () {
     .on("error", notify.onError(function(error) {
       return "Failed to Compile SCSS: " + error.message;
     })))
-    .pipe(gulp.dest('./dist'))
+    .pipe(gulp.dest('./src/'))
+    .pipe(gulp.dest('./'))
     .pipe(browserSync.reload({
       stream: true
     }))
@@ -30,7 +31,7 @@ gulp.task('sass', function () {
 
 // Task to compile LESS
 gulp.task('less', function () {
-  gulp.src('./less/style.less')
+  gulp.src('./src/less/style.less')
     .pipe(less({ paths: [ path.join(__dirname, 'less', 'includes') ]
   })
   .on('error', function(err) {
@@ -39,7 +40,8 @@ gulp.task('less', function () {
   .on("error", notify.onError(function(error) {
     return "Failed to Compile LESS: " + error.message;
   }))
-  .pipe(gulp.dest('./dist'))
+  .pipe(gulp.dest('./src/'))
+  .pipe(gulp.dest('./'))
   .pipe(browserSync.reload({
     stream: true
   }))
@@ -47,13 +49,13 @@ gulp.task('less', function () {
 });
 
 // Minify Images
-gulp.task('imagemin', function(){
-  return gulp.src('./img/**/*.+(png|jpg|jpeg|gif|svg)')
+gulp.task('imagemin', function (){
+  return gulp.src('./src/img/**/*.+(png|jpg|jpeg|gif|svg)')
   // Caching images that ran through imagemin
   .pipe(cache(imagemin({
       interlaced: true
     })))
-  .pipe(gulp.dest('./dist/img'))
+  .pipe(gulp.dest('./img'));
 });
 
 // BrowserSync Task (Live reload)
@@ -65,27 +67,26 @@ gulp.task('browserSync', function() {
   })
 });
 
+// Gulp Inline Source Task
 // Embed scripts, CSS or images inline (make sure to add an inline attribute to the linked files)
 // Eg: <script src="default.js" inline></script>
 // Will compile all inline within the html file (less http requests - woot!)
 gulp.task('inlinesource', function () {
-  return gulp.src('./*.html')
+  return gulp.src('./src/*.html')
     .pipe(inlinesource())
-    .pipe(gulp.dest('./dist/'));
+    .pipe(gulp.dest('./'));
 });
-
-
-// Clean up
-gulp.task('clean', function() {
-  del('./dist');
-})
 
 // Gulp Watch Task
 gulp.task('watch', ['browserSync'], function () {
-   gulp.watch('scss/**/*', ['sass']),
-   gulp.watch('less/**/*', ['less']);
+   gulp.watch('./src/scss/**/*', ['sass']),
+   gulp.watch('./src/less/**/*', ['less']);
 });
 
-// Gulp Tasks
+// Gulp Default Task
 gulp.task('default', ['watch']);
-gulp.task('build', ['sass', 'less', 'inlinesource']);
+
+// Gulp Build Task
+gulp.task('build', function() {
+  runSequence('sass', 'less', 'inlinesource');
+});
