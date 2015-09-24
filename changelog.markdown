@@ -1,9 +1,13 @@
 # Base 2 Change Log
 
 
-## [2.4.0] - 2015-09-01
+## [2.4.0] - 2015-09-25
 ### Base V2.4.0
-- Updated Gulp file to cater for image compression, ...
+- Updated GulpJS file to include browserSync (live reload), image compression and an option to embed scripts, CSS or images inline
+- Added `src` folder
+- Moved LESS/SCSS, JS, images and index.html into `src` folder
+- Added compiled LESS/SCSS file (style.css)
+- Added compiled index.html file
 - Version bump on package.json
 - Version bump on style.less/style.scss
 

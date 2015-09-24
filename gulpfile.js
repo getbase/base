@@ -88,5 +88,5 @@ gulp.task('default', ['watch']);
 
 // Gulp Build Task
 gulp.task('build', function() {
-  runSequence('sass', 'less', 'inlinesource');
+  runSequence('less', 'sass', 'inlinesource');
 });
