@@ -1,6 +1,15 @@
 # Base 2 Change Log
 
 
+## [2.4.1] - 2015-09-25
+### Base V2.4.1
+- Updated GulpJS file to include JS minification
+- Added compiled JS files
+- Added minified images
+- Version bump on package.json
+- Version bump on style.less/style.scss
+
+
 ## [2.4.0] - 2015-09-25
 ### Base V2.4.0
 - Updated GulpJS file to include browserSync (live reload), image compression and an option to embed scripts, CSS or images inline

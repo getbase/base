@@ -9,6 +9,7 @@ var gulp = require('gulp'),
     browserSync = require('browser-sync'),
     imagemin = require('gulp-imagemin'),
     cache = require('gulp-cache'),
+    uglify = require('gulp-uglify'),
     runSequence = require('run-sequence');
 
 // Task to compile SCSS
@@ -46,6 +47,13 @@ gulp.task('less', function () {
     stream: true
   }))
   .pipe(notify("LESS Compiled Successfully :)"));
+});
+
+// Task to Minify JS
+gulp.task('jsmin', function() {
+  return gulp.src('./src/js/**/*.js')
+    .pipe(uglify())
+    .pipe(gulp.dest('./js/'));
 });
 
 // Minify Images
