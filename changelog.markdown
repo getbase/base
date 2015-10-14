@@ -1,6 +1,17 @@
 # Base 2 Change Log
 
 
+## [2.4.2] - 2015-10-14
+### Base V2.4.2
+- Added `dist` folder
+- Updated GulpJS file to distribute updated files (ready for production) to a `dist` folder
+- Added Gulp task (movecss) to move compiled CSS into the `dist` folder
+- Updated Gulp build task
+- Minor updates on index.html: removed .no-js class and added reference to default.js (thanks to Michał Roszka for raising bug #50)
+- Version bump on package.json
+- Version bump on style.less/style.scss
+
+
 ## [2.4.1] - 2015-09-25
 ### Base V2.4.1
 - Updated GulpJS file to include JS minification

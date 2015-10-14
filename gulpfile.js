@@ -23,7 +23,7 @@ gulp.task('sass', function () {
       return "Failed to Compile SCSS: " + error.message;
     })))
     .pipe(gulp.dest('./src/'))
-    .pipe(gulp.dest('./'))
+    .pipe(gulp.dest('./dist/'))
     .pipe(browserSync.reload({
       stream: true
     }))
@@ -42,18 +42,24 @@ gulp.task('less', function () {
     return "Failed to Compile LESS: " + error.message;
   }))
   .pipe(gulp.dest('./src/'))
-  .pipe(gulp.dest('./'))
+  .pipe(gulp.dest('./dist/'))
   .pipe(browserSync.reload({
     stream: true
   }))
   .pipe(notify("LESS Compiled Successfully :)"));
 });
 
+// Task to move compiled CSS to `dist` folder
+gulp.task('movecss', function () {
+  return gulp.src('./src/style.css')
+    .pipe(gulp.dest('./dist/'));
+});
+
 // Task to Minify JS
 gulp.task('jsmin', function() {
   return gulp.src('./src/js/**/*.js')
     .pipe(uglify())
-    .pipe(gulp.dest('./js/'));
+    .pipe(gulp.dest('./dist/js/'));
 });
 
 // Minify Images
@@ -63,14 +69,14 @@ gulp.task('imagemin', function (){
   .pipe(cache(imagemin({
       interlaced: true
     })))
-  .pipe(gulp.dest('./img'));
+  .pipe(gulp.dest('./dist/img'));
 });
 
 // BrowserSync Task (Live reload)
 gulp.task('browserSync', function() {
   browserSync({
     server: {
-      baseDir: './'
+      baseDir: './src/'
     },
   })
 });
@@ -82,7 +88,7 @@ gulp.task('browserSync', function() {
 gulp.task('inlinesource', function () {
   return gulp.src('./src/*.html')
     .pipe(inlinesource())
-    .pipe(gulp.dest('./'));
+    .pipe(gulp.dest('./dist/'));
 });
 
 // Gulp Watch Task
@@ -96,5 +102,5 @@ gulp.task('default', ['watch']);
 
 // Gulp Build Task
 gulp.task('build', function() {
-  runSequence('less', 'sass', 'inlinesource');
+  runSequence('movecss', 'imagemin', 'jsmin', 'inlinesource');
 });
