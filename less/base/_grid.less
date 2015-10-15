@@ -26,19 +26,17 @@
   margin-right: auto;
 }
 // Tablet Container
-@media only screen and (min-width: @tablet-breakpoint) {
-  .container, .container-full {
-    width: @tablet-container;
-  }
-  .tablet-container {
-    width: @tablet-container;
+@media only screen and (min-width: @breakpoint-tablet) {
+  .container, .container-full { width: @container-tablet; }
+  .container-tablet {
+    width: @container-tablet;
     padding-left: 15px;
     padding-right: 15px;
     margin-left: auto;
     margin-right: auto;
   }
-  .tablet-container-full {
-    width: @tablet-container;
+  .container-full-tablet {
+    width: @container-tablet;
     margin-left: auto;
     margin-right: auto;
     padding-left: 0;
@@ -46,19 +44,17 @@
   }
 }
 // Desktop Container
-@media only screen and (min-width: @desktop-breakpoint) {
-  .container, .container-full {
-    width: @desktop-container;
-  }
-  .desktop-container {
-    width: @desktop-container;
+@media only screen and (min-width: @breakpoint-desktop) {
+  .container, .container-full { width: @container-desktop; }
+  .container-desktop {
+    width: @container-desktop;
     padding-left: 15px;
     padding-right: 15px;
     margin-left: auto;
     margin-right: auto;
   }
-  .desktop-container-full {
-    width: @desktop-container;
+  .container-full-desktop {
+    width: @container-desktop;
     margin-left: auto;
     margin-right: auto;
     padding-left: 0;
@@ -66,19 +62,17 @@
   }
 }
 // HD Container
-@media only screen and (min-width: @hd-breakpoint) {
-  .container, .container-full {
-    width: @hd-container;
-  }
-  .hd-container {
-    width: @hd-container;
+@media only screen and (min-width: @breakpoint-hd) {
+  .container, .container-full { width: @container-hd; }
+  .container-hd {
+    width: @container-hd;
     padding-left: 15px;
     padding-right: 15px;
     margin-left: auto;
     margin-right: auto;
   }
-  .hd-container-full {
-    width: @hd-container;
+  .container-full-hd {
+    width: @container-hd;
     margin-left: auto;
     margin-right: auto;
     padding-left: 0;
@@ -87,7 +81,18 @@
 }
 
 // Mobile-first Grid Columns - Global Rules
-.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-10,
+.col-11,
+.col-12 {
   padding-left: 15px;
   padding-right: 15px;
   position: relative;
@@ -121,17 +126,25 @@
   }
 }
 
-// Mobile Helpers
-.hide-mobile { display: none; }
-.show-mobile { display: block; }
-.show-mobile-inline-block { display: inline-block; }
-.show-mobile-inline { display: inline; }
+// Mobile Push / Pull Reset
+.no-push, .no-pull { left: 0; }
 
 // Tablet Grid
-@media only screen and (min-width: @tablet-breakpoint) {
+@media only screen and (min-width: @breakpoint-tablet) {
   
   // Tablet Grid Columns - Global Rules
-  .col-tablet-1, .col-tablet-2, .col-tablet-3, .col-tablet-4, .col-tablet-5, .col-tablet-6, .col-tablet-7, .col-tablet-8, .col-tablet-9, .col-tablet-10, .col-tablet-11, .col-tablet-12 {
+  .col-1-tablet,
+  .col-2-tablet,
+  .col-3-tablet,
+  .col-4-tablet,
+  .col-5-tablet,
+  .col-6-tablet,
+  .col-7-tablet,
+  .col-8-tablet,
+  .col-9-tablet,
+  .col-10-tablet,
+  .col-11-tablet,
+  .col-12-tablet {
     padding-left: 15px;
     padding-right: 15px;
     position: relative;
@@ -139,129 +152,138 @@
   }
 
   // Tablet Grid
-  .generate-tablet-grid (12);
-  .generate-tablet-grid (@index) when (@index > 0) {
-    .generate-tablet-grid (@index - 1);
-    .col-tablet-@{index} {
+  .generate-grid-tablet (12);
+  .generate-grid-tablet (@index) when (@index > 0) {
+    .generate-grid-tablet (@index - 1);
+    .col-@{index}-tablet {
       width: @index / 12 * 100%;
     }
   }
 
   // Tablet Push Offsets
-  .generate-tablet-push-offsets (11);
-  .generate-tablet-push-offsets (@index) when (@index > 0) {
-    .generate-tablet-push-offsets (@index - 1);
-    .push-tablet-@{index} {
+  .generate-push-offsets-tablet (11);
+  .generate-push-offsets-tablet (@index) when (@index > 0) {
+    .generate-push-offsets-tablet (@index - 1);
+    .push-@{index}-tablet {
       left: @index / 12 * 100%;
     }
   }
 
   // Tablet Pull Offsets
-  .generate-tablet-pull-offsets (11);
-  .generate-tablet-pull-offsets (@index) when (@index > 0) {
-    .generate-tablet-pull-offsets (@index - 1);
-    .pull-tablet-@{index} {
+  .generate-pull-offsets-tablet (11);
+  .generate-pull-offsets-tablet (@index) when (@index > 0) {
+    .generate-pull-offsets-tablet (@index - 1);
+    .pull-@{index}-tablet {
       left: -@index / 12 * 100%;
     }
   }
 
-  // Tablet Helpers
-  .hide-tablet { display: none; }
-  .show-tablet { display: block; }
-  .show-tablet-inline-block { display: inline-block; }
-  .show-tablet-inline { display: inline; }
-  .tablet-no-padding { padding: 0; }
-  .tablet-no-push, .tablet-no-pull { left: 0; }
+  // Tablet Push / Pull Reset
+  .no-push-tablet, .no-pull-tablet { left: 0; }
 }
 
 // Desktop Grid
-@media only screen and (min-width: @desktop-breakpoint) {
+@media only screen and (min-width: @breakpoint-desktop) {
   
   // Desktop Grid Columns - Global Rules
-  .col-desktop-1, .col-desktop-2, .col-desktop-3, .col-desktop-4, .col-desktop-5, .col-desktop-6, .col-desktop-7, .col-desktop-8, .col-desktop-9, .col-desktop-10, .col-desktop-11, .col-desktop-12 {   padding-left: 15px;
+  .col-1-desktop,
+  .col-2-desktop,
+  .col-3-desktop,
+  .col-4-desktop,
+  .col-5-desktop,
+  .col-6-desktop,
+  .col-7-desktop,
+  .col-8-desktop,
+  .col-9-desktop,
+  .col-10-desktop,
+  .col-11-desktop,
+  .col-12-desktop {
+    padding-left: 15px;
     padding-right: 15px;
     position: relative;
     float: left;
   }
 
   // Desktop Grid
-  .generate-desktop-grid (12);
-  .generate-desktop-grid (@index) when (@index > 0) {
-    .generate-desktop-grid (@index - 1);
-    .col-desktop-@{index} {
+  .generate-grid-desktop (12);
+  .generate-grid-desktop (@index) when (@index > 0) {
+    .generate-grid-desktop (@index - 1);
+    .col-@{index}-desktop {
       width: @index / 12 * 100%;
     }
   }
 
   // Desktop Push Offsets
-  .generate-desktop-push-offsets (11);
-  .generate-desktop-push-offsets (@index) when (@index > 0) {
-    .generate-desktop-push-offsets (@index - 1);
-    .push-desktop-@{index} {
+  .generate-push-offsets-desktop (11);
+  .generate-push-offsets-desktop (@index) when (@index > 0) {
+    .generate-push-offsets-desktop (@index - 1);
+    .push-@{index}-desktop {
       left: @index / 12 * 100%;
     }
   }
 
   // Desktop Pull Offsets
-  .generate-desktop-pull-offsets (11);
-  .generate-desktop-pull-offsets (@index) when (@index > 0) {
-    .generate-desktop-pull-offsets (@index - 1);
-    .pull-desktop-@{index} {
+  .generate-pull-offsets-desktop (11);
+  .generate-pull-offsets-desktop (@index) when (@index > 0) {
+    .generate-pull-offsets-desktop (@index - 1);
+    .pull-@{index}-desktop {
       left: -@index / 12 * 100%;
     }
   }
 
-  // Desktop Helpers
-  .hide-desktop { display: none; }
-  .show-desktop { display: block; }
-  .show-desktop-inline-block { display: inline-block; }
-  .show-desktop-inline { display: inline; }
-  .desktop-no-padding { padding: 0; }
-  .desktop-no-push, .desktop-no-pull { left: 0; }
+  // Desktop Push / Pull Reset
+  .no-push-desktop, .no-pull-desktop { left: 0; }
 }
 
 // HD Grid
-@media only screen and (min-width: @hd-breakpoint) {
+@media only screen and (min-width: @breakpoint-hd) {
   
   // HD Grid Columns - Global Rules
-  .col-hd-1, .col-hd-2, .col-hd-3, .col-hd-4, .col-hd-5, .col-hd-6, .col-hd-7, .col-hd-8, .col-hd-9, .col-hd-10, .col-hd-11, .col-hd-12 {   padding-left: 15px;
+  .col-1-hd,
+  .col-2-hd,
+  .col-3-hd,
+  .col-4-hd,
+  .col-5-hd,
+  .col-6-hd,
+  .col-7-hd,
+  .col-8-hd,
+  .col-9-hd,
+  .col-10-hd,
+  .col-11-hd,
+  .col-12-hd {
+    padding-left: 15px;
     padding-right: 15px;
     position: relative;
     float: left;
   }
 
   // HD Grid
-  .generate-hd-grid (12);
-  .generate-hd-grid (@index) when (@index > 0) {
-    .generate-hd-grid (@index - 1);
-    .col-hd-@{index} {
+  .generate-grid-hd (12);
+  .generate-grid-hd (@index) when (@index > 0) {
+    .generate-grid-hd (@index - 1);
+    .col-@{index}-hd {
       width: @index / 12 * 100%;
     }
   }
 
   // HD Push Offsets
-  .generate-hd-push-offsets (11);
-  .generate-hd-push-offsets (@index) when (@index > 0) {
-    .generate-hd-push-offsets (@index - 1);
-    .push-hd-@{index} {
+  .generate-push-offsets-hd (11);
+  .generate-push-offsets-hd (@index) when (@index > 0) {
+    .generate-push-offsets-hd (@index - 1);
+    .push-@{index}-hd {
       left: @index / 12 * 100%;
     }
   }
 
   // HD Pull Offsets
-  .generate-hd-pull-offsets (11);
-  .generate-hd-pull-offsets (@index) when (@index > 0) {
-    .generate-hd-pull-offsets (@index - 1);
-    .pull-hd-@{index} {
+  .generate-pull-offsets-hd (11);
+  .generate-pull-offsets-hd (@index) when (@index > 0) {
+    .generate-pull-offsets-hd (@index - 1);
+    .pull-@{index}-hd {
       left: -@index / 12 * 100%;
     }
   }
 
-  // HD Helpers
-  .hide-hd { display: none; }
-  .show-hd { display: block; }
-  .show-hd-inline-block { display: inline-block; }
-  .show-hd-inline { display: inline; }
-  .hd-no-padding { padding: 0; }
-  .hd-no-push, .hd-no-pull { left: 0; }
+  // HD Push / Pull Reset
+  .no-push-hd, .no-pull-hd { left: 0; }
 }
