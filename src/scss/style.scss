@@ -2,7 +2,7 @@
 
 // Base Stylesheet - http://getbase.org
 // Author: Matthew Hartman - http://www.matthewhartman.com.au/
-// Version: 2.4.2 - Last Updated: October 14, 2015
+// Version: 2.5.0 - Last Updated: October 15, 2015
 
 // ==========================================================================
   
@@ -22,22 +22,21 @@
 
   @import "base/_grid";
   // @import "base/_grid-non-responsive";
-  // @import "base/_grid-minimal";
 
   @import "_mobile-styles";
 
   // Tablet Styles
-  @media only screen and (min-width: $tablet-breakpoint) {
+  @media only screen and (min-width: $breakpoint-tablet) {
     @import "_tablet-styles";
   }
 
   // Desktop Styles
-  @media only screen and (min-width: $desktop-breakpoint) {
+  @media only screen and (min-width: $breakpoint-desktop) {
     @import "_desktop-styles";
   }
 
   // HD Styles
-  @media only screen and (min-width: $hd-breakpoint) {
+  @media only screen and (min-width: $breakpoint-hd) {
     @import "_hd-styles";
   }
   

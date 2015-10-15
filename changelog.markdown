@@ -1,6 +1,17 @@
 # Base 2 Change Log
 
 
+## [2.5.0] - 2015-10-15
+### Base V2.5.0
+- Major updates on variable names for tablet, desktop and hd containers + breakpoints (_variables.less/_variables.scss)
+- Major updates on column names, push and pull classes for tablet, desktop + hd (_grid.less/_grid.scss)
+- Moved helpers from _grid.less/_grid.scss to _helpers.less/_helpers.scss
+- Deleted _minimial-grid.less/_minimial-grid.scss
+- Updated _helpers file with new tablet, desktop and hd helpers (fixes bug #51)
+- Version bump on package.json
+- Version bump on style.less/style.scss
+
+
 ## [2.4.2] - 2015-10-14
 ### Base V2.4.2
 - Added `dist` folder
