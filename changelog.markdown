@@ -1,6 +1,14 @@
 # Base 2 Change Log
 
 
+## [2.5.1] - 2015-10-16
+### Base V2.5.1
+- Added `input[password]` to _forms.less/_forms.scss
+- Moved _helpers.less/_helpers.scss after the _grid includes
+- Version bump on package.json
+- Version bump on style.less/style.scss
+
+
 ## [2.5.0] - 2015-10-15
 ### Base V2.5.0
 - Major updates on variable names for tablet, desktop and hd containers + breakpoints (_variables.less/_variables.scss)
