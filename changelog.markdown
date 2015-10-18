@@ -1,6 +1,14 @@
 # Base 2 Change Log
 
 
+## [2.5.2] - 2015-10-18
+### Base V2.5.2
+- Added .fixed and .img-responsive helpers to _helpers.less/_helpers.scss
+- Added watch for HTML changes in the GulpJS config for browserSync
+- Version bump on package.json
+- Version bump on style.less/style.scss
+
+
 ## [2.5.1] - 2015-10-16
 ### Base V2.5.1
 - Added `input[password]` to _forms.less/_forms.scss

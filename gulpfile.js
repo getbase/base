@@ -95,6 +95,7 @@ gulp.task('inlinesource', function () {
 gulp.task('watch', ['browserSync'], function () {
    gulp.watch('./src/scss/**/*', ['sass']),
    gulp.watch('./src/less/**/*', ['less']);
+   gulp.watch('./src/*.html').on('change', browserSync.reload);
 });
 
 // Gulp Default Task

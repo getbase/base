@@ -1215,6 +1215,9 @@ input::-moz-focus-inner {
   padding: 0;
   display: inline-block;
 }
+.img-responsive {
+  max-width: 100%;
+}
 .img-left {
   float: left;
   margin-right: 20px;
