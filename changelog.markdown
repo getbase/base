@@ -1,6 +1,13 @@
 # Base 2 Change Log
 
 
+## [2.5.3] - 2015-10-18
+### Base V2.5.3
+- Fixed broken .svg-fill mixin in _mixins.less
+- Version bump on package.json
+- Version bump on style.less/style.scss
+
+
 ## [2.5.2] - 2015-10-18
 ### Base V2.5.2
 - Added .fixed and .img-responsive helpers to _helpers.less/_helpers.scss
