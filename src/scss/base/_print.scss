@@ -27,9 +27,3 @@ img { page-break-inside: avoid; max-width: 100%;}
 p, h2, h3 { orphans: 3; widows: 3; }
 h2, h3 { page-break-after: avoid; }
 abbr[title]:after { content: " (" attr(title) ")"; }
-
-// Display Types
-.hide-print { display: none; }
-.show-print { display: block; }
-.show-print-inline-block { display: inline-block; }
-.show-print-inline { display: inline; }

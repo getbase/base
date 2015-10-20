@@ -1,9 +1,18 @@
 # Base 2 Change Log
 
 
+## [2.5.5] - 2015-10-21
+### Base V2.5.5
+- Updated naming conventions for print helpers
+- Moved print helpers within _helpers.less/_helpers.scss
+- Added new print helpers for text alignment and display types
+- Version bump on package.json
+- Version bump on style.less/style.scss
+
+
 ## [2.5.4] - 2015-10-21
 ### Base V2.5.4
-- Updated Display Type helpers naming to be more consistent (tablet, desktop and HD)
+- Updated display type helpers naming to be more consistent (tablet, desktop and HD)
 - Added .fixed position helper to _helpers.less/_helpers.scss
 - Version bump on package.json
 - Version bump on style.less/style.scss

@@ -212,3 +212,24 @@
   .text-center-hd { text-align: center; }
   .text-justify-hd { text-align: justify; }
 }
+
+// Print Helpers
+@media print {
+
+  // General Resets
+  .no-float-print { float: none; }
+  .no-padding-print { padding: 0; }
+  .no-margin-print { margin: 0; }
+
+  // Display Types
+  .none-print { display: none; }
+  .block-print { display: block; }
+  .inline-block-print { display: inline-block; }
+  .inline-print { display: inline; }
+
+  // Text Alignments
+  .text-left-print { text-align: left; }
+  .text-right-print { text-align: right; }
+  .text-center-print { text-align: center; }
+  .text-justify-print { text-align: justify; }
+}
