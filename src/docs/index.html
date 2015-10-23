@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Base</title>
+  <link rel="canonical" href="http://getbase.org">
+  <script>
+  if (window.location.href.indexOf('http://matthewhartman.github.io') === 0) {
+    window.location.href = 'http://getbase.org/';
+  }
+  </script>
+  <meta name="description" content="Get started with Base and build a new web app or mobile-first website in no time.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="/img/favicon.png">
+  <link rel="apple-touch-icon" sizes="57x57" href="/img/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/img/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/img/apple-touch-icon-114x114.png">
+  <link inline rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<div class="banner">
+  <div class="container">
+    <div class="header clear">
+      <input type="checkbox" class="menu-checkbox" id="navigation" name="navigation">
+      <label class="menu-label animated fade-in-right" for="navigation" id="toggle-menu">
+        <span class="menu-label-inner">
+          <span class="menu-label-open">Menu</span>
+          <span class="menu-label-close">Close</span>
+        </span>
+      </label>
+      <a class="logo" href="/"><span class="sr">Base</span></a>
+      <div class="navigation" id="menu">
+        <div class="navigation-inner container-full">
+          <div class="menu container">
+            <div class="clear row">
+              <div class="col-4-tablet">
+                <strong class="menu-heading"><a class="menu-heading-link" href="/">Home</a></strong>
+                <ul class="menu-secondary">
+                  <li class="menu-item"><a href="https://github.com/matthewhartman/base/archive/master.zip" class="menu-item-link">Download Latest Build</a></li>
+                  <li class="menu-item"><a href="https://github.com/matthewhartman/base" class="menu-item-link">View Source on Github</a></li>
+                  <li class="menu-item"><a href="https://github.com/matthewhartman/base/issues" class="menu-item-link">Current Issues</a></li>
+                </ul>
+              </div>
+              <div class="col-4-tablet">
+                <strong class="menu-heading"><a class="menu-heading-link active" href="/docs/">Documentation</a></strong>
+                <ul class="menu-secondary">
+                  <li class="menu-item"><a href="/docs/" class="menu-item-link active">Introduction</a></li>
+                  <li class="menu-item"><a href="/docs/gulpjs.html" class="menu-item-link">GulpJS Config</a></li>
+                  <li class="menu-item"><a href="/docs/html.html" class="menu-item-link">HTML Template</a></li>
+                  <li class="menu-item"><a href="/docs/css.html" class="menu-item-link">LESS/SCSS/CSS</a></li>
+                  <li class="menu-item"><a href="/docs/assets.html" class="menu-item-link">Assets</a></li>
+                  <li class="menu-item"><a href="/docs/helpers.html" class="menu-item-link">Helpers</a></li>
+                  <li class="menu-item"><a href="/docs/grid.html" class="menu-item-link">The Grid</a></li>
+                  <li class="menu-item"><a href="/docs/mixins.html" class="menu-item-link">Mixins</a></li>
+                  <li class="menu-item"><a href="/docs/animations.html" class="menu-item-link">Animations</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="content container">
+  <div class="content-inner">
+    <div class="text-center col-11-tablet no-float center-element">
+      <h1>Welcome to Base!</h1>
+      <p class="lead">
+        Getting started with Base is very easy. Whether you're building a new web app or creating
+        a mobile-first website, it has got your back.
+      </p>
+    </div>
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- Base - Website Ads -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-9769834171202858"
+         data-ad-slot="5577415587"
+         data-ad-format="auto"></ins>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+    
+    <hr>
+
+
+    <div class="clear">
+      <div class="col-6-desktop">
+        <h2>Before you start coding</h2>
+        <p>
+          Please make sure you have the following:
+        </p>
+        <ul>
+          <li>Good understanding of HTML and CSS</li>
+          <li>Code editor such as <a rel="nofollow" href="http://www.sublimetext.com/">Sublime Text</a></li>
+          <li>LESS compiler such as <a rel="nofollow" href="http://alphapixels.com/prepros/">Prepros</a></li>
+          <li>A calm and open mind :)</li>
+        </ul>
+      </div>
+      <div class="col-6-desktop">
+        <h2>Grab the latest download</h2>
+        <p>
+          Below are a few ways to get the latest build:
+        </p>
+        
+        <ol>
+          <li>
+            Download the source code directly from <a href="https://github.com/matthewhartman/base/zipball/master">Github</a>
+          </li>
+          <li>
+            Install and manage Base using <a rel="nofollow" href="http://bower.io/">Bower</a> <br>
+            <pre>bower install base</pre>
+          </li>
+        </ol>
+      </div>
+    </div>
+    
+    <hr>
+
+    <h2>What's in the box?</h2>
+    <p>
+      After extracting Base, you will find the following folder / file structure:
+    </p>
+    <pre>base/
+  |-- index.html
+  |-- style.css
+  |-- readme.markdown
+  |-- changelog.markdown
+  |-- less/
+    |-- style.less
+    |-- base/
+      |-- _blockquotes.less
+      |-- _code.less
+      |-- _forms.less
+      |-- _global.less
+      |-- _grid.less
+      |-- _helpers.less
+      |-- _lists.less
+      |-- _mixins.less
+      |-- _print.less
+      |-- _resets.less
+      |-- _tables.less
+      |-- _variables.less
+      |-- animations/
+        |-- _bounce.less
+        |-- _fade.less
+        |-- _flip.less
+        |-- _zoom.less
+  |-- img/
+    |-- favicon.png
+    |-- apple-touch-icon.png
+    |-- apple-touch-icon-72x72.png
+    |-- apple-touch-icon-114x114.png
+  |-- js/
+    |-- default.js
+    |-- ie8.min.js
+    |-- vendor/
+      |-- jquery-1.11.3.min.js
+    </pre>
+
+    <hr class="hr">
+
+    <h2>Let's get moving!</h2>
+    <p>
+      Now that you have the latest download, let's take a closer look
+      at the <a href="/docs/html.html">HTML template</a>.
+    </p>
+
+    <hr class="hr">
+
+    <h2>Looking for V1 documentation?</h2>
+    <p>
+      View the <a href="/v1-docs/">old documentation</a>.
+    </p>
+  </div>
+</div>
+
+
+<div class="footer">
+  <div class="container">
+    <div class="clear">
+      <div class="col-6-desktop">
+        <p>
+          Built with love in the land down under by <a href="http://matthewhartman.com.au">Matthew Hartman</a>
+        </p>
+      </div>
+      <div class="col-6-desktop">
+        <ul class="footer-links list-inline">
+          <li><a href="https://github.com/matthewhartman/base">View Source on Github</a></li>
+          <li><a href="https://github.com/matthewhartman/base/issues">Current Issues</a></li>
+          <li><a href="/docs/">Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script inline src="../js/vendor/webfontloader.js"></script>
+<script inline src="../js/default.js"></script>
+
+<!-- Google Analytics -->
+<script>
+  (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+  function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+  e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+  e.src='//www.schedule-analytics.com/analytics.js';
+  r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+  ga('create','UA-34161986-1');ga('send','pageview');
+</script>
+
+</body>
+</html>

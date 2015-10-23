@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Base</title>
+  <link rel="canonical" href="http://getbase.org">
+  <script>
+  if (window.location.href.indexOf('http://matthewhartman.github.io') === 0) {
+    window.location.href = 'http://getbase.org/';
+  }
+  </script>
+  <meta name="description" content="A mobile-first, 12 column grid built for all devices big and small.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="../js/vendor/run_prettify.js"></script>
+  <link rel="shortcut icon" href="/img/favicon.png">
+  <link rel="apple-touch-icon" sizes="57x57" href="/img/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/img/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/img/apple-touch-icon-114x114.png">
+  <link inline rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<div class="banner">
+  <div class="container">
+    <div class="header clear">
+      <input type="checkbox" class="menu-checkbox" id="navigation" name="navigation">
+      <label class="menu-label animated fade-in-right" for="navigation" id="toggle-menu">
+        <span class="menu-label-inner">
+          <span class="menu-label-open">Menu</span>
+          <span class="menu-label-close">Close</span>
+        </span>
+      </label>
+      <a class="logo" href="/"><span class="sr">Base</span></a>
+      <div class="navigation" id="menu">
+        <div class="navigation-inner container-full">
+          <div class="menu container">
+            <div class="clear row">
+              <div class="col-4-tablet">
+                <strong class="menu-heading"><a class="menu-heading-link" href="/">Home</a></strong>
+                <ul class="menu-secondary">
+                  <li class="menu-item"><a href="https://github.com/matthewhartman/base/archive/master.zip" class="menu-item-link">Download Latest Build</a></li>
+                  <li class="menu-item"><a href="https://github.com/matthewhartman/base" class="menu-item-link">View Source on Github</a></li>
+                  <li class="menu-item"><a href="https://github.com/matthewhartman/base/issues" class="menu-item-link">Current Issues</a></li>
+                </ul>
+              </div>
+              <div class="col-4-tablet">
+                <strong class="menu-heading"><a class="menu-heading-link active" href="/docs/">Documentation</a></strong>
+                <ul class="menu-secondary">
+                  <li class="menu-item"><a href="/docs/" class="menu-item-link">Introduction</a></li>
+                  <li class="menu-item"><a href="/docs/gulpjs.html" class="menu-item-link">GulpJS Config</a></li>
+                  <li class="menu-item"><a href="/docs/html.html" class="menu-item-link">HTML Template</a></li>
+                  <li class="menu-item"><a href="/docs/css.html" class="menu-item-link">LESS/SCSS/CSS</a></li>
+                  <li class="menu-item"><a href="/docs/assets.html" class="menu-item-link">Assets</a></li>
+                  <li class="menu-item"><a href="/docs/helpers.html" class="menu-item-link">Helpers</a></li>
+                  <li class="menu-item"><a href="/docs/grid.html" class="menu-item-link active">The Grid</a></li>
+                  <li class="menu-item"><a href="/docs/mixins.html" class="menu-item-link">Mixins</a></li>
+                  <li class="menu-item"><a href="/docs/animations.html" class="menu-item-link">Animations</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="content container">
+  <div class="content-inner">
+
+    <div class="text-center">
+      <h1>Grid</h1>
+      <p class="lead">
+        A mobile-first, 12 column grid built for all devices big and small. The syntax is simple and
+        it works on all major browsers including Chrome, Safari, Firefox and Internet Explorer 8+.
+      </p>
+    </div>
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- Base - Website Ads -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-9769834171202858"
+         data-ad-slot="5577415587"
+         data-ad-format="auto"></ins>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+
+    <hr>
+
+    <h2>Overview</h2>
+    <p>
+      Base includes a flexible, 12-column grid that scales and supports nesting so you can get started right away.
+    </p>
+
+    <hr>
+
+    <h3>Creating a grid</h3>
+    <ol>
+      <li>
+        Create a new element with the class <code>.row</code> applied to ensure the grid columns are grouped and cleared correctly.
+      </li>
+      <li>
+        Columns can be created by adding new elements within <code>.row</code> and applying appropriate column classes
+        (<code>.col-1</code> - <code>.col-12</code>).
+      </li>
+    </ol>
+
+    <p>
+      Base is mobile-first, so code for small screens first, and larger devices will inherit those styles.
+    </p>
+
+    <hr class="hr">
+
+    <h4>By default, Base caters for 4 viewports:</h4>
+    <ul>
+      <li>Mobile devices (breakpoint set at max 719px width)</li>
+      <li>Tablet devices (breakpoint set at max 980px width)</li>
+      <li>Desktop devices (breakpoint set at max 1140px width)</li>
+      <li>HD devices</li>
+    </ul>
+
+    <hr class="hr">
+
+
+    <h3>Containers</h3>
+    <p>
+      There are 2 types of containers:
+    </p>
+    <ul>
+      <li>
+        <code>.container</code> - has a set width, is center aligned and applies a 15px gutter padding (left and right)
+      </li>
+      <li>
+        <code>.container-full</code> - has a set width, is center aligned and has no gutter padding (left and right)
+      </li>
+    </ul>
+
+    <p>
+      The width of containers and breakpoints for each viewport can be updated within
+      <code>_variables.less</code>.
+    </p>
+
+    <p>
+      A summary of the variables and there usage are as follows:
+    </p>
+    <table>
+      <caption>Container and Viewport Variables</caption>
+      <thead>
+        <tr>
+          <th>Variable</th>
+          <th>Default value</th>
+          <th>Purpose</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            @container-mobile
+          </td>
+          <td>
+            <code>100%</code>
+          </td>
+          <td>
+            Width applied to mobile container
+          </td>
+        </tr>
+        <tr>
+          <td>
+            @container-tablet
+          </td>
+          <td>
+            <code>720px</code>
+          </td>
+          <td>
+            Width applied to tablet container
+          </td>
+        </tr>
+        <tr>
+          <td>
+            @container-desktop
+          </td>
+          <td>
+            <code>960px</code>
+          </td>
+          <td>
+            Width applied to desktop container
+          </td>
+        </tr>
+        <tr>
+          <td>
+            @container-hd
+          </td>
+          <td>
+            <code>1120px</code>
+          </td>
+          <td>
+            Width applied to HD container
+          </td>
+        </tr>
+        <tr>
+          <td>
+            @breakpoint-tablet
+          </td>
+          <td>
+            <code>@container-tablet - 1 (719px)</code>
+          </td>
+          <td>
+            Tablet breakpoint width
+          </td>
+        </tr>
+        <tr>
+          <td>
+            @breakpoint-desktop
+          </td>
+          <td>
+            <code>@container-desktop + 20 (980px)</code>
+          </td>
+          <td>
+            Desktop breakpoint width
+          </td>
+        </tr>
+        <tr>
+          <td>
+            @breakpoint-hd
+          </td>
+          <td>
+            <code>@container-hd + 20 (1140px)</code>
+          </td>
+          <td>
+            HD breakpoint width
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <hr class="spacer">
+
+    <h3>Columns</h3>
+    <p>
+      A list of all available columns for each viewport are as follows:
+    </p>
+
+    <table class="column-example-list">
+    <thead>
+      <tr>
+        <th>Prefix</th>
+        <th class="text-center">Mobile</th>
+        <th class="text-center">Tablet</th>
+        <th class="text-center">Desktop</th>
+        <th class="text-center">HD</th>
+      </tr>
+    </thead>
+      <tbody>
+        <tr>
+          <td>
+            <code>.col-1</code> - <code>.col-12</code>
+          </td>
+          <td class="support available">
+            <span class="sr">Rules apply on mobile</span>
+          </td>
+          <td class="support available">
+            <span class="sr">Rules apply on tablet</span>
+          </td>
+          <td class="support available">
+            <span class="sr">Rules apply on desktop</span>
+          </td>
+          <td class="support available">
+            <span class="sr">Rules apply on HD</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>.col-1-tablet</code> - <code>.col-12-tablet</code>
+          </td>
+          <td class="support unavailable">
+            <span class="sr">Rules don't apply on mobile</span>
+          </td>
+          <td class="support available">
+            <span class="sr">Rules apply on tablet</span>
+          </td>
+          <td class="support available">
+            <span class="sr">Rules apply on desktop</span>
+          </td>
+          <td class="support available">
+            <span class="sr">Rules apply on HD</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>.col-1-desktop</code> - <code>.col-12-desktop</code>
+          </td>
+          <td class="support unavailable">
+            <span class="sr">Rules don't apply on mobile</span>
+          </td>
+          <td class="support unavailable">
+            <span class="sr">Rules don't apply on tablet</span>
+          </td>
+          <td class="support available">
+            <span class="sr">Rules apply on desktop</span>
+          </td>
+          <td class="support available">
+            <span class="sr">Rules apply on HD</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>.col-1-hd</code> - <code>.col-12-hd</code>
+          </td>
+          <td class="support unavailable">
+            <span class="sr">Rules don't apply on mobile</span>
+          </td>
+          <td class="support unavailable">
+            <span class="sr">Rules don't apply on tablet</span>
+          </td>
+          <td class="support unavailable">
+            <span class="sr">Rules don't apply on desktop</span>
+          </td>
+          <td class="support available">
+            <span class="sr">Rules apply on HD</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <hr class="spacer">
+
+    <h3>Mobile-First Grid Example</h3>
+    <div class="grid-example">
+      <div class="row">
+        <div class="col-1">
+          <span class="col-content">col-1</span>
+        </div>
+        <div class="col-11">
+          <span class="col-content">col-11</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-2">
+          <span class="col-content">col-2</span>
+        </div>
+        <div class="col-10">
+          <span class="col-content">col-10</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-3">
+          <span class="col-content">col-3</span>
+        </div>
+        <div class="col-9">
+          <span class="col-content">col-9</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-4">
+          <span class="col-content">col-4</span>
+        </div>
+        <div class="col-8">
+          <span class="col-content">col-8</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-5">
+          <span class="col-content">col-5</span>
+        </div>
+        <div class="col-7">
+          <span class="col-content">col-7</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <span class="col-content">col-6</span>
+        </div>
+        <div class="col-6">
+          <span class="col-content">col-6</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <span class="col-content">col-12</span>
+        </div>
+      </div>
+    </div>
+    
+    <pre class="prettyprint lang-html">
+&lt;div class="row"&gt;
+  &lt;div class="col-1"&gt;col-1&lt;/div&gt;
+  &lt;div class="col-11"&gt;col-11&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="row"&gt;
+  &lt;div class="col-2"&gt;col-2&lt;/div&gt;
+  &lt;div class="col-10"&gt;col-10&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="row"&gt;
+  &lt;div class="col-3"&gt;col-3&lt;/div&gt;
+  &lt;div class="col-9"&gt;col-9&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="row"&gt;
+  &lt;div class="col-4"&gt;col-4&lt;/div&gt;
+  &lt;div class="col-8"&gt;col-8&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="row"&gt;
+  &lt;div class="col-5"&gt;col-5&lt;/div&gt;
+  &lt;div class="col-7"&gt;col-7&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="row"&gt;
+  &lt;div class="col-6"&gt;col-6&lt;/div&gt;
+  &lt;div class="col-6"&gt;col-6&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="row"&gt;
+  &lt;div class="col-12"&gt;col-12&lt;/div&gt;
+&lt;/div&gt;    
+    </pre>
+
+    <hr>
+  
+    <h3>Mixed Grid Example</h3>
+    <div class="grid-example">
+      <div class="row">
+        <div class="col-6 col-3-tablet col-8-desktop col-2-hd">
+          <div class="col-content">
+            <span class="none-tablet">col 6</span>
+            <span class="none block-tablet none-desktop">col 3</span>
+            <span class="none block-desktop none-hd">col 8</span>
+            <span class="none block-hd">col 2</span>
+          </div>
+        </div>
+        <div class="col-6 col-9-tablet col-4-desktop col-10-hd">
+          <div class="col-content">
+            <span class="none-tablet">col 6</span>
+            <span class="none block-tablet none-desktop">col 9</span>
+            <span class="none block-desktop none-hd">col 4</span>
+            <span class="none block-hd">col 10</span>
+          </div>
+        </div>
+      </div>
+    </div>
+<pre class="prettyprint lang-html">
+&lt;div class="row"&gt;
+  &lt;div class="col-6 col-3-tablet col-8-desktop col-2-hd"&gt;
+    content...
+  &lt;/div&gt;
+  &lt;div class="col-6 col-9-tablet col-4-desktop col-10-hd"&gt;
+    content...
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+    <h3>Grid Offsets</h3>
+    <p>
+      The grid also includes offsets for pushing and pulling columns into place.
+    </p>
+
+    <p>
+      A list of all available offsets for each viewport are as follows:
+    </p>
+
+    <table class="column-example-list">
+    <thead>
+      <tr>
+        <th>Prefix</th>
+        <th class="text-center">Mobile</th>
+        <th class="text-center">Tablet</th>
+        <th class="text-center">Desktop</th>
+        <th class="text-center">HD</th>
+      </tr>
+    </thead>
+      <tbody>
+        <tr>
+          <td>
+            <code>.push-1</code> - <code>.push-11</code>
+          </td>
+          <td class="support available">
+            <span class="sr">Rules apply on mobile</span>
+          </td>
+          <td class="support available">
+            <span class="sr">Rules apply on tablet</span>
+          </td>
+          <td class="support available">
+            <span class="sr">Rules apply on desktop</span>
+          </td>
+          <td class="support available">
+            <span class="sr">Rules apply on HD</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>.pull-1</code> - <code>.pull-11</code>
+          </td>
+          <td class="support available">
+            <span class="sr">Rules apply on mobile</span>
+          </td>
+          <td class="support available">
+            <span class="sr">Rules apply on tablet</span>
+          </td>
+          <td class="support available">
+            <span class="sr">Rules apply on desktop</span>
+          </td>
+          <td class="support available">
+            <span class="sr">Rules apply on HD</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>.push-1-tablet</code> - <code>.push-11-tablet</code>
+          </td>
+          <td class="support unavailable">
+            <span class="sr">Rules don't apply on mobile</span>
+          </td>
+          <td class="support available">
+            <span class="sr">Rules apply on tablet</span>
+          </td>
+          <td class="support available">
+            <span class="sr">Rules apply on desktop</span>
+          </td>
+          <td class="support available">
+            <span class="sr">Rules apply on HD</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>.pull-1-tablet</code> - <code>.pull-11-tablet</code>
+          </td>
+          <td class="support unavailable">
+            <span class="sr">Rules don't apply on mobile</span>
+          </td>
+          <td class="support available">
+            <span class="sr">Rules apply on tablet</span>
+          </td>
+          <td class="support available">
+            <span class="sr">Rules apply on desktop</span>
+          </td>
+          <td class="support available">
+            <span class="sr">Rules apply on HD</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>.push-1-desktop</code> - <code>.push-11-desktop</code>
+          </td>
+          <td class="support unavailable">
+            <span class="sr">Rules don't apply on mobile</span>
+          </td>
+          <td class="support unavailable">
+            <span class="sr">Rules don't apply on tablet</span>
+          </td>
+          <td class="support available">
+            <span class="sr">Rules apply on desktop</span>
+          </td>
+          <td class="support available">
+            <span class="sr">Rules apply on HD</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>.pull-1-desktop</code> - <code>.pull-11-desktop</code>
+          </td>
+          <td class="support unavailable">
+            <span class="sr">Rules don't apply on mobile</span>
+          </td>
+          <td class="support unavailable">
+            <span class="sr">Rules don't apply on tablet</span>
+          </td>
+          <td class="support available">
+            <span class="sr">Rules apply on desktop</span>
+          </td>
+          <td class="support available">
+            <span class="sr">Rules apply on HD</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>.push-1-hd</code> - <code>.push-11-hd</code>
+          </td>
+          <td class="support unavailable">
+            <span class="sr">Rules don't apply on mobile</span>
+          </td>
+          <td class="support unavailable">
+            <span class="sr">Rules don't apply on tablet</span>
+          </td>
+          <td class="support unavailable">
+            <span class="sr">Rules don't apply on desktop</span>
+          </td>
+          <td class="support available">
+            <span class="sr">Rules apply on HD</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>.pull-1-hd</code> - <code>.pull-11-hd</code>
+          </td>
+          <td class="support unavailable">
+            <span class="sr">Rules don't apply on mobile</span>
+          </td>
+          <td class="support unavailable">
+            <span class="sr">Rules don't apply on tablet</span>
+          </td>
+          <td class="support unavailable">
+            <span class="sr">Rules don't apply on desktop</span>
+          </td>
+          <td class="support available">
+            <span class="sr">Rules apply on HD</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <hr class="hr">
+
+    <h3>Mixed Offset Example</h3>
+    <div class="grid-example">
+      <div class="row">
+        <div class="col-4 push-8 col-7-tablet push-5-tablet col-3-desktop push-9-desktop col-2-hd push-10-hd">
+          <div class="col-content">
+            <span class="none-tablet">col 4 with push 8</span>
+            <span class="none block-tablet none-desktop">col 7 with push 5</span>
+            <span class="none block-desktop none-hd">col 3 with push 9</span>
+            <span class="none block-hd">col 2 with push 10</span>
+          </div>
+        </div>
+        <div class="col-8 pull-4 col-5-tablet pull-7-tablet col-9-desktop pull-3-desktop col-10-hd pull-2-hd">
+          <div class="col-content">
+            <span class="none-tablet">col 8 with pull 8</span>
+            <span class="none block-tablet none-desktop">col 5 with pull 7</span>
+            <span class="none block-desktop none-hd">col 9 with pull 3</span>
+            <span class="none block-hd">col 10 with pull 2</span>
+          </div>
+        </div>
+      </div>
+    </div>
+<pre class="prettyprint lang-html">
+&lt;div class="row"&gt;
+  &lt;div class="col-4 push-8 col-7-tablet push-5-tablet col-3-desktop push-9-desktop col-2-hd push-10-hd"&gt;
+    content...
+  &lt;/div&gt;
+  &lt;div class="col-8 pull-4 col-5-tablet pull-7-tablet col-9-desktop pull-3-desktop col-10-hd pull-2-hd"&gt;
+    content...
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+    <hr class="hr">
+
+    <p>
+      In addition to the grid, there are extra helpers which can easily show / hide content and remove gutter spacing
+      on columns for specific devices.
+    </p>
+
+    <p>
+      Grid helpers are listed below.
+    </p>
+
+    <table>
+      <caption>Grid Helpers</caption>
+      <thead>
+        <tr>
+          <th>Class</th>
+          <th>Purpose</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <code>.none</code>
+          </td>
+          <td>Hides element on mobile devices and up</td>
+        </tr>
+        <tr>
+          <td>
+            <code>.block</code>
+          </td>
+          <td>Sets element to block on mobile devices and up</td>
+        </tr>
+        <tr>
+          <td>
+            <code>.inline-block</code>
+          </td>
+          <td>Sets element to inline block on mobile devices and up</td>
+        </tr>
+        <tr>
+          <td>
+            <code>.inline</code>
+          </td>
+          <td>Sets element to inline on mobile devices and up</td>
+        </tr>
+        <tr>
+          <td>
+            <code>.none-tablet</code>
+          </td>
+          <td>Hides element on tablet devices and up</td>
+        </tr>
+        <tr>
+          <td>
+            <code>.block-tablet</code>
+          </td>
+          <td>Sets element to block on tablet devices and up</td>
+        </tr>
+        <tr>
+          <td>
+            <code>.inline-block-tablet</code>
+          </td>
+          <td>Sets element to inline block on tablet devices and up</td>
+        </tr>
+        <tr>
+          <td>
+            <code>.inline-tablet</code>
+          </td>
+          <td>Sets element to inline on tablet devices and up</td>
+        </tr>
+        <tr>
+          <td>
+            <code>.no-padding-tablet</code>
+          </td>
+          <td>Removes padding for tablet devices and up</td>
+        </tr>
+        <tr>
+          <td>
+            <code>.no-push-tablet</code>
+          </td>
+          <td>Resets push for tablet devices and up</td>
+        </tr>
+        <tr>
+          <td>
+            <code>.no-pull-tablet</code>
+          </td>
+          <td>Resets pull for tablet devices and up</td>
+        </tr>
+        <tr>
+          <td>
+            <code>.none-desktop</code>
+          </td>
+          <td>Hides element on desktop devices and up</td>
+        </tr>
+        <tr>
+          <td>
+            <code>.block-desktop</code>
+          </td>
+          <td>Sets element to block on desktop devices and up</td>
+        </tr>
+        <tr>
+          <td>
+            <code>.inline-block-desktop</code>
+          </td>
+          <td>Sets element to inline block on desktop devices and up</td>
+        </tr>
+        <tr>
+          <td>
+            <code>.inline-desktop</code>
+          </td>
+          <td>Sets element to inline on desktop devices and up</td>
+        </tr>
+        <tr>
+          <td>
+            <code>.no-padding-desktop</code>
+          </td>
+          <td>Removes padding for desktop devices and up</td>
+        </tr>
+        <tr>
+          <td>
+            <code>.no-push-desktop</code>
+          </td>
+          <td>Resets push for desktop devices and up</td>
+        </tr>
+        <tr>
+          <td>
+            <code>.no-pull-desktop</code>
+          </td>
+          <td>Resets pull for desktop devices and up</td>
+        </tr>
+        <tr>
+          <td>
+            <code>.none-hd</code>
+          </td>
+          <td>Hides element on HD devices</td>
+        </tr>
+        <tr>
+          <td>
+            <code>.block-hd</code>
+          </td>
+          <td>Sets element to block on HD devices</td>
+        </tr>
+        <tr>
+          <td>
+            <code>.inline-block-hd</code>
+          </td>
+          <td>Sets element to inline block on HD devices</td>
+        </tr>
+        <tr>
+          <td>
+            <code>.inline-hd</code>
+          </td>
+          <td>Sets element to inline on HD devices</td>
+        </tr>
+        <tr>
+          <td>
+            <code>.no-padding-hd</code>
+          </td>
+          <td>Removes padding for HD devices</td>
+        </tr>
+        <tr>
+          <td>
+            <code>.no-push-hd</code>
+          </td>
+          <td>Resets push for HD devices</td>
+        </tr>
+        <tr>
+          <td>
+            <code>.no-pull-hd</code>
+          </td>
+          <td>Resets pull for HD devices</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <hr class="hr">
+
+    <h2 id="non-responsive-grid">Non-responsive grid</h2>
+    <p>
+      Sometimes, you may be required to create 2 separate versions of a website and may not need responsiveness.
+    </p>
+    <p>To disable responsiveness, please follow the below steps</p>
+
+    <ol>
+      <li>
+        Rename <code>_mobile-styles.less</code> to <code>_styles.less</code> within <code>less/base/</code>
+      </li>
+      <li>
+        Open up <code>style.less</code> in your favourite code editor
+      </li>
+      <li>
+        Comment out line 21: <code>@import "base/_grid";</code>
+      </li>
+      <li>
+        Uncomment out line 22: <code>@import "base/_grid-non-responsive";</code>
+      </li>
+      <li>
+        Replace line 24: <code>@import "_mobile-styles";</code> to <code>@import "_styles";</code>
+      </li>
+      <li>
+        Comment out lines 26 - 39 (Tablet Styles, Desktop Styles, HD Styles)
+      </li>
+      <li>
+        Save the above changes and close <code>_style.less</code>
+      </li>
+      <li>
+        Styles for your project are now stored within <code>_styles.less</code>
+      </li>
+      <li>
+        Open <code>index.html</code> and remove line 9: <br>
+        <code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code>
+      </li>
+      <li>
+        Save the above change and close <code>index.html</code>
+      </li>
+      <li>
+        See the <a href="non-responsive-grid.html">non-responsive grid</a> example in action
+      </li>
+    </ol>
+
+    <hr class="hr">
+
+    <h2 id="sub-pixel-issue">Sub-Pixel Issue</h2>
+    <p>
+      To get around the <a target="_blank" rel="nofollow" href="http://ejohn.org/blog/sub-pixel-problems-in-css/">sub-pixel problem</a>, make sure to add a class of <code>.right</code>
+      to the last column of a <code>.row</code>.
+    </p>
+    <p>
+      Example:
+<pre class="prettyprint lang-html">
+&lt;div class="row"&gt;
+  &lt;div class="col-8"&gt;col-8&lt;/div&gt;
+  &lt;div class="col-4 <strong>right</strong>"&gt;col-4 right&lt;/div&gt;
+&lt;/div&gt;    
+</pre>
+    </p>
+
+    <hr class="hr">
+
+    <h2>Mixins</h2>
+    <p>
+      A set of helpful <a href="/docs/mixins.html">mixins</a> to easily create SVG fallbacks, border radius,
+      opacity, animations and much more!
+    </p>
+
+  </div>
+</div>
+
+<div class="footer">
+  <div class="container">
+    <div class="clear">
+      <div class="col-6-desktop">
+        <p>
+          Built with love in the land down under by <a href="http://matthewhartman.com.au">Matthew Hartman</a>
+        </p>
+      </div>
+      <div class="col-6-desktop">
+        <ul class="footer-links list-inline">
+          <li><a href="https://github.com/matthewhartman/base">View Source on Github</a></li>
+          <li><a href="https://github.com/matthewhartman/base/issues">Current Issues</a></li>
+          <li><a href="/docs/">Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script inline src="../js/vendor/webfontloader.js"></script>
+<script inline src="../js/default.js"></script>
+
+<!-- Google Analytics -->
+<script>
+  (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+  function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+  e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+  e.src='//www.schedule-analytics.com/analytics.js';
+  r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+  ga('create','UA-34161986-1');ga('send','pageview');
+</script>
+
+</body>
+</html>

@@ -1,0 +1,1276 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Base</title>
+  <link rel="canonical" href="http://getbase.org">
+  <script>
+  if (window.location.href.indexOf('http://matthewhartman.github.io') === 0) {
+    window.location.href = 'http://getbase.org/';
+  }
+  </script>
+  <meta name="description" content="Global styles for typography, headings, lists, blockquotes, tables, code blocks, horizontal rules, forms and more">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="../js/vendor/run_prettify.js"></script>
+  <link rel="shortcut icon" href="/img/favicon.png">
+  <link rel="apple-touch-icon" sizes="57x57" href="/img/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/img/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/img/apple-touch-icon-114x114.png">
+  <link inline rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<div class="banner">
+  <div class="container">
+    <div class="header clear">
+      <input type="checkbox" class="menu-checkbox" id="navigation" name="navigation">
+      <label class="menu-label animated fade-in-right" for="navigation" id="toggle-menu">
+        <span class="menu-label-inner">
+          <span class="menu-label-open">Menu</span>
+          <span class="menu-label-close">Close</span>
+        </span>
+      </label>
+      <a class="logo" href="/"><span class="sr">Base</span></a>
+      <div class="navigation" id="menu">
+        <div class="navigation-inner container-full">
+          <div class="menu container">
+            <div class="clear row">
+              <div class="col-4-tablet">
+                <strong class="menu-heading"><a class="menu-heading-link" href="/">Home</a></strong>
+                <ul class="menu-secondary">
+                  <li class="menu-item"><a href="https://github.com/matthewhartman/base/archive/master.zip" class="menu-item-link">Download Latest Build</a></li>
+                  <li class="menu-item"><a href="https://github.com/matthewhartman/base" class="menu-item-link">View Source on Github</a></li>
+                  <li class="menu-item"><a href="https://github.com/matthewhartman/base/issues" class="menu-item-link">Current Issues</a></li>
+                </ul>
+              </div>
+              <div class="col-4-tablet">
+                <strong class="menu-heading"><a class="menu-heading-link active" href="/docs/">Documentation</a></strong>
+                <ul class="menu-secondary">
+                  <li class="menu-item"><a href="/docs/" class="menu-item-link">Introduction</a></li>
+                  <li class="menu-item"><a href="/docs/gulpjs.html" class="menu-item-link">GulpJS Config</a></li>
+                  <li class="menu-item"><a href="/docs/html.html" class="menu-item-link">HTML Template</a></li>
+                  <li class="menu-item"><a href="/docs/css.html" class="menu-item-link active">LESS/SCSS/CSS</a></li>
+                  <li class="menu-item"><a href="/docs/assets.html" class="menu-item-link">Assets</a></li>
+                  <li class="menu-item"><a href="/docs/helpers.html" class="menu-item-link">Helpers</a></li>
+                  <li class="menu-item"><a href="/docs/grid.html" class="menu-item-link">The Grid</a></li>
+                  <li class="menu-item"><a href="/docs/mixins.html" class="menu-item-link">Mixins</a></li>
+                  <li class="menu-item"><a href="/docs/animations.html" class="menu-item-link">Animations</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="content container">
+  <div class="content-inner">
+
+  <div class="text-center col-10-tablet no-float center-element">
+      <h1>CSS</h1>
+      <p class="lead">
+        Global styles for typography, headings, lists, blockquotes, tables, code blocks, horizontal rules, forms and more.
+      </p>
+    </div>
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- Base - Website Ads -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-9769834171202858"
+         data-ad-slot="5577415587"
+         data-ad-format="auto"></ins>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+
+    <hr>
+
+    <h2>Overview</h2>
+    <p>
+      Base includes a precompiled stylesheet which includes all the core ingredients to get you started on your next web project.
+    </p>
+
+
+    <h3 class="h4">So what is exactly in the core ingredients?!</h3>
+    <p>
+      The super slim, sexy CSS includes the following:
+    </p>
+    <ul>
+      <li><a href="#basic-resets">Basic resets</a></li>
+      <li><a href="#micro-clearfix">Micro clearfix</a></li>
+      <li><a href="#typography">Typography</a></li>
+      <li><a href="#headings">Headings</a></li>
+      <li><a href="#lists">Lists</a></li>
+      <li><a href="#blockquotes">Blockquotes</a></li>
+      <li><a href="#tables">Tables</a></li>
+      <li><a href="#code-blocks">Code blocks</a></li>
+      <li><a href="#forms">Forms</a></li>
+    </ul>
+
+    <h2 id="basic-resets">Basic resets</h2>
+    <p>
+      The basic resets include a customised version of <code><a rel="nofollow" href="http://necolas.github.io/normalize.css/">normalize.css</a></code> to ensure all elements behave correctly across all browsers supported.
+    </p>
+
+    <hr class="custom-hr">
+
+    <h2 id="micro-clearfix">Micro clearfix</h2>
+    <p>
+      The clearfix hack, by <a rel="nofollow" href="http://nicolasgallagher.com/micro-clearfix-hack/">@necolas</a>, is a quick
+      and easy way to contain floats without resorting to using presentational markup.
+    </p>
+    
+    <hr class="custom-hr">
+
+    <h2 id="typography">Typography</h2>
+    <p>
+      All font sizes and line heights use <code>rem</code> units with <code>px</code> fallbacks.
+    </p>
+    <p>
+      Base includes core styles for typography, links, headings (h1 - h6), code blocks, tables, blockquotes, forms and form elements.  
+    </p>
+
+    <p>
+      A full list of styled typography elements are listed below.
+    </p>
+
+    <table>
+      <caption>Global Typography Elements</caption>
+      <thead>
+        <tr>
+          <th>Element / Class</th>
+          <th>Example</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <code>&lt;b&gt;, &lt;strong&gt;</code>
+          </td>
+          <td>
+            <strong>Strong text</strong>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>&lt;em&gt;</code>
+          </td>
+          <td>
+            <em>Italic text</em>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>&lt;abbr&gt;</code>
+          </td>
+          <td>
+            <abbr title="As Soon As Possible">ASAP</abbr>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>&lt;dfn&gt;</code>
+          </td>
+          <td>
+            <dfn>Definition</dfn>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>&lt;mark&gt;</code>
+          </td>
+          <td>
+            <mark>Mark</mark>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>&lt;small&gt;</code>
+          </td>
+          <td>
+            <small>Small text</small>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>&lt;sub&gt;</code>
+          </td>
+          <td>
+            Text with <sub>Sub text</sub>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>&lt;sup&gt;</code>
+          </td>
+          <td>
+            Text with <sup>Sup text</sup>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>&lt;del&gt;</code>
+          </td>
+          <td>
+            <del>Deleted text</del>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>
+      Typography sizing, line heights, font weight and colors can easily be modified by adjusting the
+      variables in <code>_variables.less</code>.
+    </p>
+    <p>
+      A summary of the variables and there usage are as follows:
+    </p>
+    <table>
+      <caption>Global Typography Variables</caption>
+      <thead>
+        <tr>
+          <th>Variable</th>
+          <th>Default value</th>
+          <th>Purpose</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            @base-background-color
+          </td>
+          <td>
+            <code class="base-background-color">#fff</code>
+          </td>
+          <td>
+            Colour applied to the background body
+          </td>
+        </tr>
+        <tr>
+          <td>
+            @base-font-family
+          </td>
+          <td>
+            <code>sans-serif</code>
+          </td>
+          <td>
+            Global font family
+          </td>
+        </tr>
+        <tr>
+          <td>
+            @base-font-size
+          </td>
+          <td>
+            <code>16px</code>
+          </td>
+          <td>
+            Global font size
+          </td>
+        </tr>
+        <tr>
+          <td>
+            @base-line-height
+          </td>
+          <td>
+            <code>22px</code>
+          </td>
+          <td>
+            Global line height
+          </td>
+        </tr>
+        <tr>
+          <td>
+            @base-font-weight
+          </td>
+          <td>
+            <code>@font-regular</code>
+          </td>
+          <td>
+            Global font weight
+          </td>
+        </tr>
+        <tr>
+          <td>
+            @base-font-color
+          </td>
+          <td>
+            <code class="base-font-color">#585858</code>
+          </td>
+          <td>
+            Global font colour
+          </td>
+        </tr>
+        <tr>
+          <td>
+            @base-link-color
+          </td>
+          <td>
+            <code class="base-link-color">#cd5c5c</code>
+          </td>
+          <td>
+            Global link colour
+          </td>
+        </tr>
+        <tr>
+          <td>
+            @font-thin
+          </td>
+          <td>
+            <code>font weight: 100</code>
+          </td>
+          <td>
+            Font weight for thin text
+          </td>
+        </tr>
+        <tr>
+          <td>
+            @font-light
+          </td>
+          <td>
+            <code>font weight: 300</code>
+          </td>
+          <td>
+            Font weight for light text
+          </td>
+        </tr>
+        <tr>
+          <td>
+            @font-regular
+          </td>
+          <td>
+            <code>font weight: 400</code>
+          </td>
+          <td>
+            Font weight for regular text
+          </td>
+        </tr>
+        <tr>
+          <td>
+            @font-medium
+          </td>
+          <td>
+            <code>font weight: 500</code>
+          </td>
+          <td>
+            Font weight for medium text
+          </td>
+        </tr>
+        <tr>
+          <td>
+            @font-semi-bold
+          </td>
+          <td>
+            <code>font weight: 600</code>
+          </td>
+          <td>
+            Font weight for semi bold text
+          </td>
+        </tr>
+        <tr>
+          <td>
+            @font-bold
+          </td>
+          <td>
+            <code>font weight: 700</code>
+          </td>
+          <td>
+            Font weight for bold text
+          </td>
+        </tr>
+        <tr>
+          <td>
+            @font-extra-bold
+          </td>
+          <td>
+            <code>font weight: 800</code>
+          </td>
+          <td>
+            Font weight for extra bold text
+          </td>
+        </tr>
+        <tr>
+          <td>
+            @font-ultra-bold
+          </td>
+          <td>
+            <code>font weight: 900</code>
+          </td>
+          <td>
+            Font weight for ultra bold text
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+
+    <h2 id="headings">Headings</h2>
+    <p>
+      The font size, line height, font weight and color of headings can easily be configured
+      within <code>_variables.less</code>.
+    </p>
+    <p>
+      A summary of the headings variables and there usage are as follows:  
+    </p>
+    <table>
+      <caption>Heading Examples</caption>
+      <thead>
+        <tr>
+          <th>Element / Class</th>
+          <th>HTML Output</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <ul class="code-list">
+              <li>h1</li>
+              <li>.h1</li>
+            </ul>
+          </td>
+          <td>
+            <h2 class="h1">Heading 1</h2>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <ul class="code-list">
+            <li>h2</li>
+            <li>.h2</li>
+            </ul>
+          </td>
+          <td>
+            <h2>Heading 2</h2>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <ul class="code-list">
+              <li>h3</li>
+              <li>.h3</li>
+            </ul>
+          </td>
+          <td>
+            <h2 class="h3">Heading 3</h2>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <ul class="code-list">
+            <li>h4</li>
+            <li>.h4</li>
+            </ul>
+          </td>
+          <td>
+            <h2 class="h4">Heading 4</h2>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <ul class="code-list">
+              <li>h5</li>
+              <li>.h5</li>
+            </ul>
+          </td>
+          <td>
+            <h2 class="h3">Heading 5</h2>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <ul class="code-list">
+            <li>h6</li>
+            <li>.h6</li>
+            </ul>
+          </td>
+          <td>
+            <h2 class="h4">Heading 6</h2>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <hr class="spacer">
+
+    <table>
+      <caption>Heading Variables</caption>
+      <thead>
+        <tr>
+          <th>Variable</th>
+          <th>Default value</th>
+          <th>Purpose</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            @heading-font-family
+          </td>
+          <td>
+            <code>sans-serif</code>
+          </td>
+          <td>
+            Font family applied to all headings (h1 - h6)
+          </td>
+        </tr>
+        <tr>
+          <td>
+            @h1-font-size
+          </td>
+          <td>
+            <code>32px</code>
+          </td>
+          <td>
+            Heading 1 font size
+          </td>
+        </tr>
+        <tr>
+          <td>
+            @h1-line-height
+          </td>
+          <td>
+            <code>36px</code>
+          </td>
+          <td>
+            Heading 1 line height
+          </td>
+        </tr>
+        <tr>
+          <td>
+            @h1-font-weight
+          </td>
+          <td>
+            <code>@font-regular</code>
+          </td>
+          <td>
+            Heading 1 font weight
+          </td>
+        </tr>
+        <tr>
+          <td >
+            @h1-color
+          </td>
+          <td>
+            <code class="h1-color">#343434</code>
+          </td>
+          <td>
+            Heading 1 font color
+          </td>
+        </tr>
+        <tr>
+          <td>
+            @h2-font-size
+          </td>
+          <td>
+            <code>26px</code>
+          </td>
+          <td>
+            Heading 2 font size
+          </td>
+        </tr>
+        <tr>
+          <td>
+            @h2-line-height
+          </td>
+          <td>
+            <code>32px</code>
+          </td>
+          <td>
+            Heading 2 line height
+          </td>
+        </tr>
+        <tr>
+          <td>
+            @h2-font-weight
+          </td>
+          <td>
+            <code>@font-regular</code>
+          </td>
+          <td>
+            Heading 2 font weight
+          </td>
+        </tr>
+        <tr>
+          <td>
+            @h2-color
+          </td>
+          <td>
+            <code class="h2-color">#343434</code>
+          </td>
+          <td>
+            Heading 2 font color
+          </td>
+        </tr>
+        <tr>
+          <td>
+            @h3-font-size
+          </td>
+          <td>
+            <code>22px</code>
+          </td>
+          <td>
+            Heading 3 font size
+          </td>
+        </tr>
+        <tr>
+          <td>
+            @h3-line-height
+          </td>
+          <td>
+            <code>28px</code>
+          </td>
+          <td>
+            Heading 3 line height
+          </td>
+        </tr>
+        <tr>
+          <td>
+            @h3-font-weight
+          </td>
+          <td>
+            <code>@font-regular</code>
+          </td>
+          <td>
+            Heading 3 font weight
+          </td>
+        </tr>
+        <tr>
+          <td>
+            @h3-color
+          </td>
+          <td>
+            <code class="h3-color">#343434</code>
+          </td>
+          <td>
+            Heading 3 font color
+          </td>
+        </tr>
+        <tr>
+          <td>
+            @h4-font-size
+          </td>
+          <td>
+            <code>18px</code>
+          </td>
+          <td>
+            Heading 4 font size
+          </td>
+        </tr>
+        <tr>
+          <td>
+            @h4-line-height
+          </td>
+          <td>
+            <code>24px</code>
+          </td>
+          <td>
+            Heading 4 line height
+          </td>
+        </tr>
+        <tr>
+          <td>
+            @h4-font-weight
+          </td>
+          <td>
+            <code>@font-regular</code>
+          </td>
+          <td>
+            Heading 4 font weight
+          </td>
+        </tr>
+        <tr>
+          <td>
+            @h4-color
+          </td>
+          <td>
+            <code class="h4-color">#343434</code>
+          </td>
+          <td>
+            Heading 4 font color
+          </td>
+        </tr>
+        <tr>
+          <td>
+            @h5-font-size
+          </td>
+          <td>
+            <code>16px</code>
+          </td>
+          <td>
+            Heading 5 font size
+          </td>
+        </tr>
+        <tr>
+          <td>
+            @h5-line-height
+          </td>
+          <td>
+            <code>22px</code>
+          </td>
+          <td>
+            Heading 5 line height
+          </td>
+        </tr>
+        <tr>
+          <td>
+            @h5-font-weight
+          </td>
+          <td>
+            <code>@font-regular</code>
+          </td>
+          <td>
+            Heading 5 font weight
+          </td>
+        </tr>
+        <tr>
+          <td>
+            @h5-color
+          </td>
+          <td>
+            <code class="h5-color">#343434</code>
+          </td>
+          <td>
+            Heading 5 font color
+          </td>
+        </tr>
+        <tr>
+          <td>
+            @h6-font-size
+          </td>
+          <td>
+            <code>14px</code>
+          </td>
+          <td>
+            Heading 6 font size
+          </td>
+        </tr>
+        <tr>
+          <td>
+            @h6-line-height
+          </td>
+          <td>
+            <code>20px</code>
+          </td>
+          <td>
+            Heading 6 line height
+          </td>
+        </tr>
+        <tr>
+          <td>
+            @h6-font-weight
+          </td>
+          <td>
+            <code>@font-regular</code>
+          </td>
+          <td>
+            Heading 6 font weight
+          </td>
+        </tr>
+        <tr>
+          <td>
+            @h6-color
+          </td>
+          <td>
+            <code class="h6-color">#343434</code>
+          </td>
+          <td>
+            Heading 6 font color
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <hr class="spacer">
+    <hr class="hr">
+
+    <h2 id="lists">Lists</h2>
+    <p>
+      Styles for ordered, unordered, unstyled, and definition lists.
+    </p>
+    <div class="clear">
+      <div class="col-tablet-6">
+        <h3>Unordered List</h3>
+        <ul>
+          <li>Unordered List Item 1</li>
+          <li>Unordered List Item 2</li>
+          <li>Unordered List Item 3</li>
+        </ul>
+      </div>
+      <div class="col-tablet-6">
+        <h3>Ordered List</h3>
+        <ol>
+          <li>Ordered List Item 1</li>
+          <li>Ordered List Item 2</li>
+          <li>Ordered List Item 3</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="clear">
+      <div class="col-tablet-6">
+      <h3>No List Styling</h3>
+      <p>
+        To create a list with no styling, simply apply the <code>.list-unstyled</code> helper to a
+        <code>&lt;ul&gt;</code> or <code>&lt;ol&gt;</code> element.
+      </p>
+      <hr class="none block-tablet">
+      <strong>
+        Example:
+      </strong>
+        <ul class="list-unstyled">
+          <li>No List Item 1</li>
+          <li>No List Item 2</li>
+        </ul>
+      </div>
+
+      <hr class="hr none-tablet">
+
+      <div class="col-tablet-6">
+      <h3>Inline List</h3>
+      <p>
+        To create an inline list, simply apply the <code>.list-inline</code> helper to a
+        <code>&lt;ul&gt;</code> or <code>&lt;ol&gt;</code> element.
+      </p>
+      <hr class="none block-tablet">
+      <strong>
+        Example:
+      </strong>
+        <ul class="list-inline">
+          <li>List Inline Item 1</li>
+          <li>List Inline Item 2</li>
+          <li>List Inline Item 3</li>
+          <li>List Inline Item 4</li>
+          <li>List Inline Item 5</li>
+          <li>List Inline Item 6</li>
+        </ul>
+      </div>
+    </div>
+
+    <hr class="hr">
+    
+    <h3>Definition List</h3>      
+    <dl>
+      <dt>Definition List</dt>
+      <dd>The DL element should be used when you want incorporate a definition of a term in your document, it is often used in glossaries to define many terms, it is also used in “normal” documents when the author wishes to explain a term in a more detail (Like this definition).</dd>
+    </dl>
+    
+    <hr class="hr">
+
+    <h2 id="blockquotes">Blockquotes</h2>
+    <p>
+      Basic styling for blockquotes and quotes.
+    </p>
+
+    <blockquote>
+      <p>
+        This is an example blockquote with some dummy lorem ipsum text and random content...
+      </p>
+      <cite>John Doe - Founder of Doe Inc.</cite>
+    </blockquote>
+
+    <p>
+      The font size, line height, font weight and color of blockquotes can easily be configured in
+      <code>_variables.less</code>.
+    </p>
+
+    <table>
+      <caption>Blockquote Variables</caption>
+      <thead>
+        <tr>
+          <th>Variable</th>
+          <th>Default value</th>
+          <th>Purpose</th>
+        </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>@base-blockquote-font-family</td>
+        <td>
+          <code>sans-serif</code>
+        </td>
+        <td>
+          Font family applied to blockquotes
+        </td>
+      </tr>
+      <tr>
+        <td>@base-blockquote-font-size</td>
+        <td>
+          <code>22px</code>
+        </td>
+        <td>
+          Font size applied to blockquotes
+        </td>
+      </tr>
+      <tr>
+        <td>@base-blockquote-line-height</td>
+        <td>
+          <code>28px</code>
+        </td>
+        <td>
+          Line height applied to blockquotes
+        </td>
+      </tr>
+      <tr>
+        <td>@base-blockquote-color</td>
+        <td>
+          <code class="base-blockquote-color">#424242</code>
+        </td>
+        <td>
+          Font color applied to blockquotes
+        </td>
+      </tr>
+      <tr>
+        <td>@base-blockquote-cite-color</td>
+        <td>
+          <code class="base-blockquote-cite-color">#777</code>
+        </td>
+        <td>
+          Font color applied to the blockquote cite
+        </td>
+      </tr>
+      </tbody>
+    </table>
+
+    <hr class="spacer">
+
+    <h2 id="tables">Tables</h2>
+    <p>
+      There is 1 standard set of styling for tables. Line spearated table for presenting your data in the most simplistic way.
+    </p>
+    <p>
+      Feel free to add more variants of tables within <code>_helpers.less</code>.
+    </p>
+    <table>
+      <caption>Standard Table Example</caption>
+      <thead>
+        <tr>
+          <th>Table Head Title</th>
+          <th>Table Head Data</th>
+        </tr>
+      </thead>
+      <tfoot>
+        <tr>
+        <th>Table Footer Title</th>
+        <th>Table Footer Data</th>
+        </tr>
+      </tfoot>
+      <tbody>
+        <tr>
+        <td>Table Data</td>
+        <td>Table Data</td>
+        </tr>
+        <tr>
+          <td>Table Data</td>
+          <td>Table Data</td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <hr class="spacer">
+
+    <h2 id="code-blocks">Code blocks</h2>
+    <p>
+      Core styling for code and pre block elements.
+    </p>
+    <table>
+      <caption>Code Block Examples</caption>
+      <thead>
+        <tr>
+          <th>Element</th>
+          <th>HTML Output</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+        <td>code, kbd and samp</td>
+        <td>
+          <code>code, kbd and samp have the same styles applied</code>
+        </td>
+        </tr>
+        <tr>
+          <td>pre</td>
+          <td>
+            <pre>Pre example inherits the same styling as code, kbd and samp but
+caters for multi-line coding</pre>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>
+      Code blocks font family, font size, line height, color and background color can easily
+      be configured within <code>_variables.less</code>.
+    </p>
+
+    <p>
+      Default values for the above variables are listed below:
+    </p>
+
+    <table>
+      <caption>Code Block Variables</caption>
+      <thead>
+        <tr>
+          <th>Variable</th>
+          <th>Default Value</th>
+          <th>Purpose</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>@base-code-font-family</td>
+          <td>
+            <code>'courier new', monospace, serif</code>
+          </td>
+          <td>
+            Font family applied to code blocks
+          </td>
+        </tr>
+        <tr>
+          <td>@base-code-font-size</td>
+          <td>
+            <code>13px</code>
+          </td>
+          <td>
+            Font size applied to code blocks
+          </td>
+        </tr>
+        <tr>
+          <td>@base-code-line-height</td>
+          <td>
+            <code>16px</code>
+          </td>
+          <td>
+            Line height applied to code blocks
+          </td>
+        </tr>
+        <tr>
+          <td>@base-code-color</td>
+          <td>
+            <code class="base-code-color">#272727 (dark grey)</code>
+          </td>
+          <td>
+            Font color applied to code blocks
+          </td>
+        </tr>
+        <tr>
+          <td>@base-code-background-color</td>
+          <td>
+            <code class="base-code-background-color">#f1f1f1 (very light grey)</code>
+          </td>
+          <td>
+            Background color applied to code blocks
+          </td>
+        </tr>
+        <tr>
+          <td>@base-code-border-color</td>
+          <td>
+            <code class="base-code-border-color">#d7d7d7 (light grey)</code>
+          </td>
+          <td>
+            Border color applied to code blocks
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <hr class="spacer">
+
+    <h2 id="forms">Forms</h2>
+    <p>
+      Includes minimal styles for labels, input fields, select boxes and form buttons.
+    </p>
+
+    <form action="">
+      <fieldset>
+        <legend>Form example:</legend>
+        <div class="field-group clear row">
+          <label class="col-3" for="text-input">Text input</label>
+          <div class="col-9">
+            <input type="text" class="field" id="text-input" placeholder="Text input with dummy placeholder text">
+          </div>
+        </div>
+        <div class="field-group clear row">
+          <label class="col-3" for="select">Select</label>
+          <div class="col-9">
+            <select name="select" class="field" id="select">
+              <option value="-">Selected value</option>
+              <option value="-">Select option #1</option>
+              <option value="-">Select option #2</option>
+            </select>
+          </div>
+        </div>
+        <div class="field-group">
+          <label class="block strong" for="textarea">Textarea</label>
+          <textarea name="textarea" class="field" id="textarea" cols="30" rows="10"></textarea>
+        </div>
+      </fieldset>
+    </form>
+
+    <hr class="hr">
+
+    <p>
+      Default values for form variables are as follows:
+    </p>
+
+    <table>
+      <caption>Form Variables</caption>
+      <thead>
+        <tr>
+          <th>Variable</th>
+          <th>Default Value</th>
+          <th>Purpose</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>@base-placeholder-color</td>
+          <td>
+            <code>#999</code>
+          </td>
+          <td>
+            Colour applied to all placeholder text on input fields
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3 id="custom-buttons">Custom Buttons</h3>
+    <p>
+      Base includes core styling for a basic button to get you started. You can add your own within helpers or modify the existing button helpers (<code>.button-primary, .button-secondary, etc</code>. 
+    </p>
+    <a href="#" class="button">Default Button</a>
+
+    <h4 class="h6 strong">Code Snippet</h4>
+    <pre class="prettyprint lang-html">&lt;a href="#" class="button"&gt;Default Button&lt;/a&gt;</pre>
+
+    <hr>
+
+    <p>
+      There is also styling to convert a <code>&lt;button&gt;</code> element to look like a standard link. Simply add the <code>.button-link</code> class to the element to see it in action. 
+    </p>
+    <button class="button-link">Button with link styling</button>
+
+    <h4 class="h6 strong">Code Snippet</h4>
+    <pre class="prettyprint lang-html">&lt;button class="button-link"&gt;Button with link styling&lt;/button&gt;</pre>
+    
+    <hr>
+
+    <p>
+      To disable a button or link, add the <code>.disabled</code> class to the element.
+    </p>
+    <button class="button disabled">Button with disabled state</button>
+
+    <h4 class="h6 strong">Code Snippet</h4>
+    <pre class="prettyprint lang-html">&lt;button class="button-disabled"&gt;Button with disabled state&lt;/button&gt;</pre>
+
+
+    <hr class="hr">
+
+    <h2 id="form-helpers">Form Helpers</h2>
+    <p>
+      In addition to basic form styling, there are additional helpers which can help construct your forms to look neat and tidy.
+    </p>
+
+    <p>
+      A list of form helpers, there functions and code examples are listed below.
+    </p>
+
+        <h3 id="radio">Radio</h3>
+        <span class="radio">
+          <label for="radio-example">Radio example with multiple lines - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua.</label>
+          <input id="radio-example" type="radio">
+        </span>
+
+        <h4 class="h6 strong">Code Snippet</h4>
+<pre class="prettyprint lang-html">
+&lt;span class="radio"&gt;
+  &lt;label for="radio-example"&gt;Radio Example&lt;/label&gt;
+  &lt;input id="radio-example" type="radio"&gt;
+&lt;/span&gt;
+</pre>
+
+        <hr class="hr">
+
+        <h3 id="checkbox">Checkbox</h3>
+        <span class="checkbox">
+          <label for="checkbox-example">Checkbox example with multiple lines - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua.</label>
+          <input id="checkbox-example" type="checkbox">
+        </span>
+
+        <h4 class="h6 strong">Code Snippet</h4>
+<pre class="prettyprint lang-html">
+&lt;span class="checkbox"&gt;
+  &lt;label for="checkbox-example"&gt;Checkbox Example&lt;/label&gt;
+  &lt;input id="checkbox-example" type="checkbox"&gt;
+&lt;/span&gt;
+</pre>
+
+    <hr class="hr">
+    
+    <h3 id="custom-select">Custom Select</h3>
+    <span class="select">
+      <select name="custom-select" id="custom-select">
+        <option value="-">Please select an option</option>
+      </select>
+    </span>
+
+    <h4 class="h6 strong">Code Snippet</h4>
+<pre class="prettyprint lang-html">
+&lt;span class="select"&gt;
+  &lt;select name="custom-select" id="custom-select"&gt;
+    &lt;option value="-"&gt;Please select an option&lt;/option&gt;
+  &lt;/select&gt;
+&lt;/span&gt;
+</pre>
+
+    <hr class="spacer">
+    <hr class="hr">
+
+    <h2>CSS Helpers</h2>
+    <p>
+      A set of <a href="/docs/helpers.html">helpers</a> which can be used to style elements on the fly and make your life a whole lot easier.
+    </p>
+
+  </div>
+</div>
+
+<div class="footer">
+  <div class="container">
+    <div class="clear">
+      <div class="col-6-desktop">
+        <p>
+          Built with love in the land down under by <a href="http://matthewhartman.com.au">Matthew Hartman</a>
+        </p>
+      </div>
+      <div class="col-6-desktop">
+        <ul class="footer-links list-inline">
+          <li><a href="https://github.com/matthewhartman/base">View Source on Github</a></li>
+          <li><a href="https://github.com/matthewhartman/base/issues">Current Issues</a></li>
+          <li><a href="/docs/">Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script inline src="../js/vendor/webfontloader.js"></script>
+<script inline src="../js/default.js"></script>
+
+<!-- Google Analytics -->
+<script>
+  (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+  function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+  e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+  e.src='//www.schedule-analytics.com/analytics.js';
+  r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+  ga('create','UA-34161986-1');ga('send','pageview');
+</script>
+
+</body>
+</html>

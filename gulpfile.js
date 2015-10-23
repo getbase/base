@@ -86,7 +86,7 @@ gulp.task('browserSync', function() {
 // Eg: <script src="default.js" inline></script>
 // Will compile all inline within the html file (less http requests - woot!)
 gulp.task('inlinesource', function () {
-  return gulp.src('./src/*.html')
+  return gulp.src('./src/**/*.html')
     .pipe(inlinesource())
     .pipe(gulp.dest('./'));
 });
@@ -95,7 +95,7 @@ gulp.task('inlinesource', function () {
 gulp.task('watch', ['browserSync'], function () {
    gulp.watch('./src/scss/**/*', ['sass']),
    gulp.watch('./src/less/**/*', ['less']);
-   gulp.watch('./src/*.html').on('change', browserSync.reload);
+   gulp.watch('./src/**/*.html').on('change', browserSync.reload);
 });
 
 // Gulp Default Task
