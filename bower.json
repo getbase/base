@@ -1,0 +1,26 @@
+{
+  "name": "base",
+  "version": "2.6.0",
+  "homepage": "http://matthewhartman.github.io/base/",
+  "authors": [
+    "Matthew Hartman <hello@matthewhartman.com.au>"
+  ],
+  "description": "A Rock Solid, Responsive HTML/CSS Framework built to work on all devices big and small.",
+  "keywords": [
+    "css",
+    "less",
+    "scss",
+    "framework",
+    "mobile-first",
+    "lightweight",
+    "responsive"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

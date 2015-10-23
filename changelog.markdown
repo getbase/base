@@ -1,6 +1,17 @@
 # Base 2 Change Log
 
 
+## [2.6.0] - 2015-10-23
+### Base V2.6.0
+- Updated readme.markdown
+- Updated favicons
+- Updated Google Analytics snippet
+- Added bower.json file
+- Minor tweak on .travis build script
+- Version bump on package.json
+- Version bump on style.less/style.scss
+
+
 ## [2.5.5] - 2015-10-21
 ### Base V2.5.5
 - Updated naming conventions for print helpers
