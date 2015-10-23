@@ -2,10 +2,25 @@
 // Base – Assets
 // ==========================================================================
 
+// Custom Headings
+.h2-secondary {
+  .relative;
+  &:after {
+    margin-top: 10px;
+    content: "";
+    .block;
+    width: 50px;
+    height: 3px;
+    background: @darkestGrey;
+    margin-bottom: 20px;
+    .center-element;
+  }
+}
+
 // Custom Buttons
 .button {
-  border: 1px solid #d7d7d7;
-  background-color: #f3f3f3;
+  border: 0;
+  background-color: #fff;
   line-height: normal;
   padding: .5em 1em;
   text-decoration: none;
@@ -66,4 +81,19 @@
     display: block;
     &:focus { outline: 0; }
   }
+}
+
+// HR
+.hr {
+  width: 140px;
+  height: 2px;
+  background: @lightestGrey;
+  margin-bottom: 20px;
+}
+.hr-secondary {
+  width: 100%;
+  height: 1px;
+  background: @lightestGrey;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }

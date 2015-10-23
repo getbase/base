@@ -1,0 +1,87 @@
+// ==========================================================================
+// Tablet Custom Styles
+// ==========================================================================
+
+// Banner
+.banner-heading {
+  .font-size(60);
+  .line-height(68);
+}
+.banner-buttons {
+  .button {
+    .inline-block;
+    width: auto;
+    margin-left: 4px;
+    margin-right: 4px;
+  }
+}
+
+// Navigation
+.navigation-inner {
+  padding-top: 100px;
+}
+.menu {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+// Features
+.features {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.feature-item {
+  .col-6;
+  min-height: 200px;
+}
+
+// Newsletter
+.newsletter-form { padding-top: 30px; }
+
+// Showcase
+.showcase-work, .showcase-content {
+  .col-6;
+  .no-padding;
+}
+.showcase-content-inner {
+  max-width: 400px;
+  min-height: 370px;
+  padding: 50px;
+}
+.showcase-project {
+  .block;
+  min-height: 370px;
+}
+
+// Footer
+.footer {
+  p {
+    .no-margin;
+  }
+}
+
+// Docs
+// Mixins Table
+.mixins-table {
+  thead {
+    display: table-header-group;
+  }
+  tbody {
+    td {
+      display: table-cell;
+    }
+    .mobile-table-header {
+      background: transparent;
+      margin-top: 0;
+    }
+  }
+  [data-title]:before {
+    content: "";
+    display: none;
+  }
+  .data-content {
+    display: table-cell;
+    overflow: none;
+    padding-left: 0;
+  }
+}

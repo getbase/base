@@ -1,6 +1,6 @@
 {
   "name": "base",
-  "version": "2.5.1",
+  "version": "2.6.0",
   "homepage": "http://getbase.org/",
   "repository": {
     "type": "git",
@@ -33,7 +33,7 @@
     "gulp-cache": "^0.3.0",
     "gulp-imagemin": "^2.3.0",
     "gulp-inline-source": "^2.1.0",
-    "gulp-less": "^3.0.0",
+    "gulp-less": "^3.0.1",
     "gulp-notify": "^2.2.0",
     "gulp-sass": "^2.0.4",
     "gulp-uglify": "^1.4.1",
