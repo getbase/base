@@ -1,6 +1,13 @@
 # Base 2 Change Log
 
 
+## [2.6.1] - 2015-10-23
+### Base V2.6.1
+- Minor update on GulpJS file to cater for sub directories for build and watch tasks
+- Version bump on package.json
+- Version bump on style.less/style.scss
+
+
 ## [2.6.0] - 2015-10-23
 ### Base V2.6.0
 - Updated readme.markdown
