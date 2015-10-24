@@ -1835,7 +1835,7 @@ body {
   margin-left: 55px;
 }
 .showcase-work {
-  background: #777;
+  background: url(img/congruent_outline.png) #777;
 }
 .showcase-content {
   background: #f7c723;
