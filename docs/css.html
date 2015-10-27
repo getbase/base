@@ -95,13 +95,16 @@
     </p>
 
 
-    <h3 class="h4">So what is exactly in the core ingredients?!</h3>
+    <h3>What's in Base?</h3>
     <p>
-      The super slim, sexy CSS includes the following:
+      Base is built from <code><a rel="nofollow" href="http://necolas.github.io/normalize.css/">normalize.css</a></code> and includes core styles for typography, links, headings (h1 - h6), code blocks, tables, blockquotes, forms and form elements.  
     </p>
-    <ul>
+    <p>
+      Below is a list of the core includes:
+    </p>
+    <ol>
       <li><a href="#basic-resets">Basic resets</a></li>
-      <li><a href="#micro-clearfix">Micro clearfix</a></li>
+      <li><a href="#global">Global</a></li>
       <li><a href="#typography">Typography</a></li>
       <li><a href="#headings">Headings</a></li>
       <li><a href="#lists">Lists</a></li>
@@ -109,33 +112,24 @@
       <li><a href="#tables">Tables</a></li>
       <li><a href="#code-blocks">Code blocks</a></li>
       <li><a href="#forms">Forms</a></li>
-    </ul>
+    </ol>
 
     <h2 id="basic-resets">Basic resets</h2>
     <p>
-      The basic resets include a customised version of <code><a rel="nofollow" href="http://necolas.github.io/normalize.css/">normalize.css</a></code> to ensure all elements behave correctly across all browsers supported.
+      The basic resets ensures that <code>border-box</code> is applied globally and the core html elements are reset correctly to work across all browsers supported.
     </p>
 
     <hr class="custom-hr">
 
-    <h2 id="micro-clearfix">Micro clearfix</h2>
+    <h2 id="global">Global</h2>
     <p>
-      The clearfix hack, by <a rel="nofollow" href="http://nicolasgallagher.com/micro-clearfix-hack/">@necolas</a>, is a quick
-      and easy way to contain floats without resorting to using presentational markup.
-    </p>
-    
-    <hr class="custom-hr">
-
-    <h2 id="typography">Typography</h2>
-    <p>
-      All font sizes and line heights use <code>rem</code> units with <code>px</code> fallbacks.
+      The global file contains all the core styles for default body text, links, headings and most typography elements.
     </p>
     <p>
-      Base includes core styles for typography, links, headings (h1 - h6), code blocks, tables, blockquotes, forms and form elements.  
+      By default, all font sizes and line heights use <code>rem</code> units with <code>px</code> fallbacks.
     </p>
-
     <p>
-      A full list of styled typography elements are listed below.
+      A full list of typography elements are listed below.
     </p>
 
     <table>
@@ -223,8 +217,7 @@
     </table>
 
     <p>
-      Typography sizing, line heights, font weight and colors can easily be modified by adjusting the
-      variables in <code>_variables.less</code>.
+      Typography sizing, line heights, font weight and colors can easily be modified by adjusting the variables within <code>_variables.less</code> or <code>_variables.scss</code>.
     </p>
     <p>
       A summary of the variables and there usage are as follows:
@@ -410,11 +403,7 @@
 
     <h2 id="headings">Headings</h2>
     <p>
-      The font size, line height, font weight and color of headings can easily be configured
-      within <code>_variables.less</code>.
-    </p>
-    <p>
-      A summary of the headings variables and there usage are as follows:  
+      A summary of the headings and variable usage are as follows:  
     </p>
     <table>
       <caption>Heading Examples</caption>
@@ -814,8 +803,7 @@
       <div class="col-tablet-6">
       <h3>No List Styling</h3>
       <p>
-        To create a list with no styling, simply apply the <code>.list-unstyled</code> helper to a
-        <code>&lt;ul&gt;</code> or <code>&lt;ol&gt;</code> element.
+        To create a list with no styling, simply apply the <code>.list-unstyled</code> class helper to a <code>&lt;ul&gt;</code> or <code>&lt;ol&gt;</code> element.
       </p>
       <hr class="none block-tablet">
       <strong>
@@ -873,8 +861,7 @@
     </blockquote>
 
     <p>
-      The font size, line height, font weight and color of blockquotes can easily be configured in
-      <code>_variables.less</code>.
+      Default values for blockquote variables are as follows:
     </p>
 
     <table>
@@ -939,10 +926,7 @@
 
     <h2 id="tables">Tables</h2>
     <p>
-      There is 1 standard set of styling for tables. Line spearated table for presenting your data in the most simplistic way.
-    </p>
-    <p>
-      Feel free to add more variants of tables within <code>_helpers.less</code>.
+      Basic styling for tables - a simple line spearated table for presenting your data in the most efficient way.
     </p>
     <table>
       <caption>Standard Table Example</caption>
@@ -994,20 +978,14 @@
         <tr>
           <td>pre</td>
           <td>
-            <pre>Pre example inherits the same styling as code, kbd and samp but
-caters for multi-line coding</pre>
+            <pre>Pre example inherits the same styling as code, kbd and samp but caters for multi-line coding</pre>
           </td>
         </tr>
       </tbody>
     </table>
 
     <p>
-      Code blocks font family, font size, line height, color and background color can easily
-      be configured within <code>_variables.less</code>.
-    </p>
-
-    <p>
-      Default values for the above variables are listed below:
+      Default values for code variables are as follows:
     </p>
 
     <table>

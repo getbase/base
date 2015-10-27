@@ -70,12 +70,121 @@
     <div class="text-center col-11-tablet no-float center-element">
       <h1>GulpJS Configuration</h1>
       <p class="h3 col-10-desktop no-float center-element">
-        Docs coming soon...
-      </p>
-      <p>
-        Deep dive into the <a href="/docs/css.html">css</a>.
+        A powerful GulpJS config which compiles LESS/SCSS with live reload support, optimises images and can minify and inline CSS/JS code. 
       </p>
     </div>
+
+    <h2>GulpJS Tasks</h2>
+    <p>
+      The GulpJS file has a series of tasks which are listed below:
+    </p>
+    <ol>
+      <li><a href="#scss-compilation">SCSS Compilation</a></li>
+      <li><a href="#less-compilation">LESS Compilation</a></li>
+      <li><a href="#movecss">Move CSS</a></li>
+      <li><a href="#jsmin">JS Minification</a></li>
+      <li><a href="#imagemin">Image Minification</a></li>
+      <li><a href="#browser-sync">Browser Sync (Live Reload)</a></li>
+      <li><a href="#inline-source">Inline Source</a></li>
+      <li><a href="#watch-task">Watch Task (default)</a></li>
+      <li><a href="#build-task">Build Task</a></li>
+    </ol>
+
+    <hr class="custom-hr">
+
+    <h2 id="scss-compilation">SCSS Compilation</h2>
+    <p>
+      Compiles <code>style.scss</code> into <code>src/style.css</code>.
+    </p>
+
+    <hr class="custom-hr">
+
+    <h2 id="less-compilation">LESS Compilation</h2>
+    <p>
+      Compiles <code>style.less</code> into <code>src/style.css</code>.
+    </p>
+
+    <h2 id="movecss">Move CSS</h2>
+    <p>
+      Copies <code>src/style.css</code> into the <code>dist/</code> folder.
+    </p>
+
+    <hr class="custom-hr">
+
+    <h2 id="jsmin">JS Minification</h2>
+    <p>
+      All JS code located within the <code>/src/js/</code> is minified and compiled into the <code>dist/</code> folder.
+    </p>
+
+    <hr class="custom-hr">
+
+    <h2 id="imagemin">Image Minification</h2>
+    <p>
+      Compresses png, jpg, gif and svg files without sacrificing quality. It optimizes compression parameters, removes junk metadata and unnecessary color profiles to save bytes and make images load much faster.
+    </p>
+    <p>
+      The optimised images are compiled within the <code>dist/</code> folder.
+    </p>
+
+    <hr class="custom-hr">
+
+    <h2 id="browser-sync">Browser Sync (Live Reload)</h2>
+    <p>
+      Automatically reloads the browser whenever a LESS/SCSS or HTML file is saved within the <code>src/</code> folder.
+    </p>
+
+    <hr class="custom-hr">
+
+    <h2 id="inline-source">Inline Source</h2>
+    <p>
+      A task which embeds all <code>&lt;script&gt;</code>, <code>&lt;link&gt;</code> and <code>&lt;img&gt;</code> code inline within a HTML document. Will only occur to elements which have the <code>inline</code> attribute applied.
+    </p>
+    <p>
+      <strong>Examples:</strong>
+      <pre>&lt;link <strong>inline</strong> rel="stylesheet" href="style.css"&gt;</pre>
+      <pre>&lt;script <strong>inline</strong> src="jquery.js"&gt;</pre>
+    </p>
+    <p>
+      The compiled HTML files with the embedded code are saved in the <code>dist/</code> folder.
+    </p>
+
+    <hr class="custom-hr">
+
+    <h2 id="watch-task">Watch Task (default)</h2>
+    <p>
+      When gulp is run, the <code>watch</code> task (default) will automatically compile LESS/SCSS code on save and run Browser Sync (live reload) when any HTML or LESS/SCSS code is saved within the <code>src/</code> folder.
+    </p>
+    <p>
+      The default gulp task can be run in the root base folder using the following command:
+      <pre>gulp</pre>
+    </p>
+
+    <hr class="custom-hr">
+
+    <h2 id="build-task">Build Task</h2>
+    <p>
+      The build task runs the following tasks:
+    </p>
+    <ol>
+      <li><a href="#movecss">Move CSS</a></li>
+      <li><a href="#imagemin">Image Minification</a></li>
+      <li><a href="#jsmin">JS minification</a></li>
+      <li><a href="#inlinesource">Inline Source</a></li>
+    </ol>
+    <p>
+      The build task can be run in the root base folder using the following command:
+      <pre>gulp build</pre>
+    </p>
+    <p>
+      Once the build task is complete, the final application is located within the <code>dist/</code> folder.
+    </p>
+
+    <hr class="custom-hr">
+
+    <h2>The CSS</h2>
+    <p>
+      Now that you have a great understanding of the GulpJS config, it's time to deep dive into the <a href="/docs/css.html">CSS</a>.
+    </p>
 
 
   </div>
