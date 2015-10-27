@@ -140,7 +140,7 @@
 
     <p>
       The width of containers and breakpoints for each viewport can be updated within
-      <code>_variables.less</code>.
+      <code>_variables.less</code> or <code>_variables.scss</code>.
     </p>
 
     <p>
@@ -329,7 +329,7 @@
 
     <h3>Mobile-First Grid Example</h3>
     <div class="grid-example">
-      <div class="row">
+      <div class="clear">
         <div class="col-1">
           <span class="col-content">col-1</span>
         </div>
@@ -337,7 +337,7 @@
           <span class="col-content">col-11</span>
         </div>
       </div>
-      <div class="row">
+      <div class="clear">
         <div class="col-2">
           <span class="col-content">col-2</span>
         </div>
@@ -345,7 +345,7 @@
           <span class="col-content">col-10</span>
         </div>
       </div>
-      <div class="row">
+      <div class="clear">
         <div class="col-3">
           <span class="col-content">col-3</span>
         </div>
@@ -353,7 +353,7 @@
           <span class="col-content">col-9</span>
         </div>
       </div>
-      <div class="row">
+      <div class="clear">
         <div class="col-4">
           <span class="col-content">col-4</span>
         </div>
@@ -361,7 +361,7 @@
           <span class="col-content">col-8</span>
         </div>
       </div>
-      <div class="row">
+      <div class="clear">
         <div class="col-5">
           <span class="col-content">col-5</span>
         </div>
@@ -369,7 +369,7 @@
           <span class="col-content">col-7</span>
         </div>
       </div>
-      <div class="row">
+      <div class="clear">
         <div class="col-6">
           <span class="col-content">col-6</span>
         </div>
@@ -377,7 +377,7 @@
           <span class="col-content">col-6</span>
         </div>
       </div>
-      <div class="row">
+      <div class="clear">
         <div class="col-12">
           <span class="col-content">col-12</span>
         </div>
@@ -385,31 +385,31 @@
     </div>
     
     <pre class="prettyprint lang-html">
-&lt;div class="row"&gt;
+&lt;div class="clear"&gt;
   &lt;div class="col-1"&gt;col-1&lt;/div&gt;
   &lt;div class="col-11"&gt;col-11&lt;/div&gt;
 &lt;/div&gt;
-&lt;div class="row"&gt;
+&lt;div class="clear"&gt;
   &lt;div class="col-2"&gt;col-2&lt;/div&gt;
   &lt;div class="col-10"&gt;col-10&lt;/div&gt;
 &lt;/div&gt;
-&lt;div class="row"&gt;
+&lt;div class="clear"&gt;
   &lt;div class="col-3"&gt;col-3&lt;/div&gt;
   &lt;div class="col-9"&gt;col-9&lt;/div&gt;
 &lt;/div&gt;
-&lt;div class="row"&gt;
+&lt;div class="clear"&gt;
   &lt;div class="col-4"&gt;col-4&lt;/div&gt;
   &lt;div class="col-8"&gt;col-8&lt;/div&gt;
 &lt;/div&gt;
-&lt;div class="row"&gt;
+&lt;div class="clear"&gt;
   &lt;div class="col-5"&gt;col-5&lt;/div&gt;
   &lt;div class="col-7"&gt;col-7&lt;/div&gt;
 &lt;/div&gt;
-&lt;div class="row"&gt;
+&lt;div class="clear"&gt;
   &lt;div class="col-6"&gt;col-6&lt;/div&gt;
   &lt;div class="col-6"&gt;col-6&lt;/div&gt;
 &lt;/div&gt;
-&lt;div class="row"&gt;
+&lt;div class="clear"&gt;
   &lt;div class="col-12"&gt;col-12&lt;/div&gt;
 &lt;/div&gt;    
     </pre>
@@ -418,7 +418,7 @@
   
     <h3>Mixed Grid Example</h3>
     <div class="grid-example">
-      <div class="row">
+      <div class="clear">
         <div class="col-6 col-3-tablet col-8-desktop col-2-hd">
           <div class="col-content">
             <span class="none-tablet">col 6</span>
@@ -438,7 +438,7 @@
       </div>
     </div>
 <pre class="prettyprint lang-html">
-&lt;div class="row"&gt;
+&lt;div class="clear"&gt;
   &lt;div class="col-6 col-3-tablet col-8-desktop col-2-hd"&gt;
     content...
   &lt;/div&gt;
@@ -611,7 +611,7 @@
 
     <h3>Mixed Offset Example</h3>
     <div class="grid-example">
-      <div class="row">
+      <div class="clear">
         <div class="col-4 push-8 col-7-tablet push-5-tablet col-3-desktop push-9-desktop col-2-hd push-10-hd">
           <div class="col-content">
             <span class="none-tablet">col 4 with push 8</span>
@@ -631,7 +631,7 @@
       </div>
     </div>
 <pre class="prettyprint lang-html">
-&lt;div class="row"&gt;
+&lt;div class="clear"&gt;
   &lt;div class="col-4 push-8 col-7-tablet push-5-tablet col-3-desktop push-9-desktop col-2-hd push-10-hd"&gt;
     content...
   &lt;/div&gt;
@@ -864,12 +864,12 @@
     <h2 id="sub-pixel-issue">Sub-Pixel Issue</h2>
     <p>
       To get around the <a target="_blank" rel="nofollow" href="http://ejohn.org/blog/sub-pixel-problems-in-css/">sub-pixel problem</a>, make sure to add a class of <code>.right</code>
-      to the last column of a <code>.row</code>.
+      to the last column of a <code>.clear</code>.
     </p>
     <p>
       Example:
 <pre class="prettyprint lang-html">
-&lt;div class="row"&gt;
+&lt;div class="clear"&gt;
   &lt;div class="col-8"&gt;col-8&lt;/div&gt;
   &lt;div class="col-4 <strong>right</strong>"&gt;col-4 right&lt;/div&gt;
 &lt;/div&gt;    
