@@ -169,6 +169,8 @@ body { .relative; }
   .text-center;
 }
 .banner-heading {
+  .font-size(48);
+  .line-height(52);
   margin-top: 30px;
   margin-bottom: 30px;
 }
@@ -303,6 +305,7 @@ body { .relative; }
 .showcase-tab-radio-1:checked ~ .showcase-tab-1 { .block; }
 .showcase-tab-radio-2:checked ~ .showcase-tab-2 { .block; }
 .showcase-tab-radio-3:checked ~ .showcase-tab-3 { .block; }
+.showcase-tab-radio-4:checked ~ .showcase-tab-4 { .block; }
 
 .showcase-tab-label {
   position: absolute;
@@ -311,17 +314,18 @@ body { .relative; }
   left: 50%;
   .inline-block;
   height: 8px;
-  width: 50px;
+  width: 40px;
   .bg-rgba(@darkestGrey, 30%);
   cursor: pointer;
 }
 .showcase-tab-radio:checked + .showcase-tab-label { .bg-rgba(@darkestGrey, 100%); }
 
 .showcase-tab-label-1 { margin-left: -95px; }
-.showcase-tab-label-2 { margin-left: -25px; }
-.showcase-tab-label-3 { margin-left: 45px; }
+.showcase-tab-label-2 { margin-left: -45px; }
+.showcase-tab-label-3 { margin-left: 5px; }
+.showcase-tab-label-4 { margin-left: 55px; }
 
-.showcase-work { background: @lightGrey; }
+.showcase-work { background: url(img/congruent_outline.png) @lightGrey; }
 .showcase-content {
   background: @yellow;
   padding: 20px 40px;

@@ -102,10 +102,10 @@ h6,
 }
 h1,
 .h1 {
-  font-size: 48px;
-  font-size: 3rem;
-  line-height: 52px;
-  line-height: 3.25rem;
+  font-size: 36px;
+  font-size: 2.25rem;
+  line-height: 42px;
+  line-height: 2.625rem;
   margin-top: .7em;
   margin-bottom: .5em;
   color: #101010;
@@ -1643,6 +1643,10 @@ body {
   text-align: center;
 }
 .banner-heading {
+  font-size: 48px;
+  font-size: 3rem;
+  line-height: 52px;
+  line-height: 3.25rem;
   margin-top: 30px;
   margin-bottom: 30px;
 }
@@ -1800,6 +1804,9 @@ body {
 .showcase-tab-radio-3:checked ~ .showcase-tab-3 {
   display: block;
 }
+.showcase-tab-radio-4:checked ~ .showcase-tab-4 {
+  display: block;
+}
 .showcase-tab-label {
   position: absolute;
   bottom: 20px;
@@ -1807,7 +1814,7 @@ body {
   left: 50%;
   display: inline-block;
   height: 8px;
-  width: 50px;
+  width: 40px;
   background-color: #101010;
   background-color: rgba(16, 16, 16, 0.3);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#4d101010, endColorstr=#4d101010);
@@ -1823,13 +1830,16 @@ body {
   margin-left: -95px;
 }
 .showcase-tab-label-2 {
-  margin-left: -25px;
+  margin-left: -45px;
 }
 .showcase-tab-label-3 {
-  margin-left: 45px;
+  margin-left: 5px;
+}
+.showcase-tab-label-4 {
+  margin-left: 55px;
 }
 .showcase-work {
-  background: #777;
+  background: url(img/congruent_outline.png) #777;
 }
 .showcase-content {
   background: #f7c723;
