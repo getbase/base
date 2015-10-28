@@ -16,6 +16,7 @@
   <link rel="apple-touch-icon" sizes="57x57" href="/img/apple-touch-icon.png">
   <link rel="apple-touch-icon" sizes="72x72" href="/img/apple-touch-icon-72x72.png">
   <link rel="apple-touch-icon" sizes="114x114" href="/img/apple-touch-icon-114x114.png">
+  <script src="../js/vendor/run_prettify.js"></script>
   <link inline rel="stylesheet" href="../style.css">
 </head>
 <body>
@@ -70,13 +71,72 @@
     <div class="text-center col-11-tablet no-float center-element">
       <h1>Assets</h1>
       <p class="h3 col-10-desktop no-float center-element">
-        Docs coming soon...
-      </p>
-      <p>
-        Check out the <a href="/docs/helpers.html">helpers</a>.
+        Store your reusable assets and components in this special file. 
       </p>
     </div>
 
+    <h2>Overview</h2>
+    <p>
+      By default, the assets file is very small and has a few components to get you started.
+    </p>
+    <p>
+      You can populate the assets file with your own reusable modules and components.
+    </p>
+    <p>
+      Base includes a few assets which are as follows:
+    </p>
+    <ul>
+      <li><a href="#custom-buttons">Custom Buttons</a></li>
+      <li><a href="#custom-select">Custom Select</a></li>
+    </ul>
+  
+    <hr class="custom-hr">
+
+    <h3 id="custom-buttons">Custom Buttons</h3>
+    <p>
+      Base includes a basic button to get you started.
+    </p>
+    <p>
+      You can add more within the <code>_assets.less</code> or <code>_assets.scss</code> file or modify the existing button helpers (<code>.button-primary, .button-secondary</code>).
+    </p>
+    <p>
+      <a href="#" class="button">Default Button</a> <hr>
+      <a href="#" class="button button-primary">Primary Button</a> <hr>
+      <a href="#" class="button button-secondary">Secondary Button</a> <hr>
+      <a href="#" class="button button-link">Button styled as a link</a> <hr>
+    </p>
+    <p>
+      <h4 class="h6 strong">Code Snippet</h4>
+<pre class="prettyprint lang-html">&lt;a href="#" class="button"&gt;Default Button&lt;/a&gt;
+&lt;a href="#" class="button button-primary"&gt;Primary Button&lt;/a&gt;
+&lt;a href="#" class="button button-secondary"&gt;Secondary Button&lt;/a&gt;
+&lt;a href="#" class="button button-link"&gt;Button styled as a link&lt;/a&gt;</pre>
+    </p>
+
+    <hr class="custom-hr">
+
+    <h2 id="custom-select">Custom Select</h2>
+      <span class="select">
+        <select name="custom-select" id="custom-select">
+          <option value="-">Please select an option</option>
+        </select>
+      </span>
+
+      <h4 class="h6 strong">Code Snippet</h4>
+  <pre class="prettyprint lang-html">
+  &lt;span class="select"&gt;
+    &lt;select name="custom-select" id="custom-select"&gt;
+      &lt;option value="-"&gt;Please select an option&lt;/option&gt;
+    &lt;/select&gt;
+  &lt;/span&gt;
+  </pre>
+
+  <hr class="custom-hr">
+
+    <h2>CSS Helpers</h2>
+    <p>
+      Now that you have a better understanding of the assets, be sure to check out the <a href="/docs/helpers.html">helpers</a> to speed up your workflow.
+    </p>
 
   </div>
 </div>

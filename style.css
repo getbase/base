@@ -466,6 +466,13 @@ input::-moz-focus-inner {
 .button:hover {
   background: #f9f9f9;
 }
+.button-secondary {
+  background-color: #f9f9f9;
+  background-color: rgba(249, 249, 249, 0.95);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#f2f9f9f9, endColorstr=#f2f9f9f9);
+  -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#f2f9f9f9, endColorstr=#f2f9f9f9);
+  color: #000;
+}
 .button-link {
   color: #101010;
   text-decoration: underline;
@@ -475,6 +482,7 @@ input::-moz-focus-inner {
 }
 .button-link:hover {
   text-decoration: none;
+  background: transparent;
 }
 .button-link:active {
   outline: 0;
@@ -1671,13 +1679,6 @@ body {
 }
 .button-banner {
   padding: 1em 2em;
-}
-.button-secondary {
-  background-color: #f9f9f9;
-  background-color: rgba(249, 249, 249, 0.95);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#f2f9f9f9, endColorstr=#f2f9f9f9);
-  -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#f2f9f9f9, endColorstr=#f2f9f9f9);
-  color: #000;
 }
 .features-block {
   padding-top: 20px;
