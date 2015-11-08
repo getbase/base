@@ -8,6 +8,13 @@
 .no-float { float: none; }
 .no-background { background: transparent; }
 .no-border { border: 0; }
+.no-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default;
+}
 
 // Font Weights
 .font-thin { font-weight: @font-thin; }
@@ -138,15 +145,6 @@
     top: 4px;
     left: 0;
   }
-}
-
-// Select Box Reset
-.no-select {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  cursor: default;
 }
 
 // Animations
