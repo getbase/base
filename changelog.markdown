@@ -1,6 +1,14 @@
 # Base 2 Change Log
 
 
+## [2.6.3] - 2015-11-09
+### Base V2.6.3
+- Updated grid reset helpers .no-col-tablet, .no-col-desktop, .no-col-hd, .no-col-print within _helpers.less/_helpers.scss
+- Added new reset helper for select boxes (.no-select)
+- Version bump on package.json and bower.json
+- Version bump on style.less/style.scss
+
+
 ## [2.6.2] - 2015-11-08
 ### Base V2.6.2
 - Minor typo fix on _animations.less/_animations.scss

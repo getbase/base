@@ -140,6 +140,15 @@
   }
 }
 
+// Select Box Reset
+.no-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default;
+}
+
 // Animations
 .animate {
   @include animate(1s);
@@ -170,7 +179,7 @@
   .text-justify-tablet { text-align: justify; }
 
   // Grid Resets
-  .col-none-tablet {
+  .no-col-tablet {
     width: auto;
     float: none;
   }
@@ -198,7 +207,7 @@
   .text-justify-desktop { text-align: justify; }
 
   // Grid Resets
-  .col-none-desktop {
+  .no-col-desktop {
     width: auto;
     float: none;
   }
@@ -226,7 +235,7 @@
   .text-justify-hd { text-align: justify; }
 
   // Grid Resets
-  .col-none-hd {
+  .no-col-hd {
     width: auto;
     float: none;
   }
@@ -254,7 +263,7 @@
   .text-justify-print { text-align: justify; }
 
   // Grid Resets
-  .col-none-print {
+  .no-col-print {
     width: auto;
     float: none;
   }

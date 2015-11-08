@@ -1249,6 +1249,13 @@ input::-moz-focus-inner {
   top: 4px;
   left: 0;
 }
+.no-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default;
+}
 .animate {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
@@ -1293,7 +1300,7 @@ input::-moz-focus-inner {
   .text-justify-tablet {
     text-align: justify;
   }
-  .col-none-tablet {
+  .no-col-tablet {
     width: auto;
     float: none;
   }
@@ -1336,7 +1343,7 @@ input::-moz-focus-inner {
   .text-justify-desktop {
     text-align: justify;
   }
-  .col-none-desktop {
+  .no-col-desktop {
     width: auto;
     float: none;
   }
@@ -1379,7 +1386,7 @@ input::-moz-focus-inner {
   .text-justify-hd {
     text-align: justify;
   }
-  .col-none-hd {
+  .no-col-hd {
     width: auto;
     float: none;
   }
@@ -1422,7 +1429,7 @@ input::-moz-focus-inner {
   .text-justify-print {
     text-align: justify;
   }
-  .col-none-print {
+  .no-col-print {
     width: auto;
     float: none;
   }
