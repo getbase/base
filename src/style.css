@@ -1123,6 +1123,13 @@ input::-moz-focus-inner {
 .no-border {
   border: 0;
 }
+.no-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default;
+}
 .font-thin {
   font-weight: 200;
 }
@@ -1284,13 +1291,6 @@ input::-moz-focus-inner {
   position: absolute;
   top: 4px;
   left: 0;
-}
-.no-select {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  cursor: default;
 }
 .animate {
   -webkit-animation-duration: 1s;
