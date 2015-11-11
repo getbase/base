@@ -1169,6 +1169,9 @@ input::-moz-focus-inner {
 .inline {
   display: inline;
 }
+.flex {
+  display: flex;
+}
 .left {
   float: left;
 }
@@ -1288,6 +1291,9 @@ input::-moz-focus-inner {
   .inline-tablet {
     display: inline;
   }
+  .flex-tablet {
+    display: flex;
+  }
   .text-left-tablet {
     text-align: left;
   }
@@ -1330,6 +1336,9 @@ input::-moz-focus-inner {
   }
   .inline-desktop {
     display: inline;
+  }
+  .flex-desktop {
+    display: flex;
   }
   .text-left-desktop {
     text-align: left;
@@ -1374,6 +1383,9 @@ input::-moz-focus-inner {
   .inline-hd {
     display: inline;
   }
+  .flex-hd {
+    display: flex;
+  }
   .text-left-hd {
     text-align: left;
   }
@@ -1416,6 +1428,9 @@ input::-moz-focus-inner {
   }
   .inline-print {
     display: inline;
+  }
+  .flex-print {
+    display: flex;
   }
   .text-left-print {
     text-align: left;
