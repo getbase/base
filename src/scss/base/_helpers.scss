@@ -53,6 +53,17 @@
 .inline-block { display: inline-block; }
 .inline { display: inline; }
 
+// Flex Types
+.flex-row { flex-direction: row; }
+.flex-column { flex-direction: column; }
+.flex-space-around { justify-content: space-around; }
+.flex-space-between { justify-content: space-between; }
+.flex-start { justify-content:flex-start; }
+.flex-center { justify-content: center; }
+.flex-end { justify-content: flex-end; }
+.flex-wrap { flex-wrap: wrap; }
+.flex-nowrap { flex-wrap: nowrap; }
+
 // Floats
 .left { float: left; }
 .right { float: right; }
