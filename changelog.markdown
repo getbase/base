@@ -1,6 +1,13 @@
 # Base 2 Change Log
 
 
+## [2.6.5] - 2015-11-12
+### Base V2.6.5
+- Added flexbox helpers to _helpers.less/_helpers.scss
+- Version bump on package.json and bower.json
+- Version bump on style.less/style.scss
+
+
 ## [2.6.4] - 2015-11-09
 ### Base V2.6.4
 - Updated .no-select placement and removed misleading comment in _helpers.less/_helpers.scss
