@@ -1,6 +1,14 @@
 # Base 2 Change Log
 
 
+## [2.6.6] - 2015-11-13
+### Base V2.6.6
+- Updated font-weight variables to memorable names in _variables.less/_variables.scss
+- Updated .font-weight helpers to memorable names in _helpers.less/_helpers.scss
+- Version bump on package.json and bower.json
+- Version bump on style.less/style.scss
+
+
 ## [2.6.5] - 2015-11-12
 ### Base V2.6.5
 - Added flexbox helpers to _helpers.less/_helpers.scss

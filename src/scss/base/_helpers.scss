@@ -17,14 +17,15 @@
 }
 
 // Font Weights
-.font-thin { font-weight: $font-thin; }
-.font-light { font-weight: $font-light; }
-.font-regular { font-weight: $font-regular; }
-.font-medium { font-weight: $font-medium; }
-.font-semi-bold { font-weight: $font-semi-bold; }
-.font-bold { font-weight: $font-bold; }
-.font-extra-bold { font-weight: $font-extra-bold; }
-.font-ultra-bold { font-weight: $font-ultra-bold; }
+.font-100 { font-weight: $font-100; }
+.font-200 { font-weight: $font-200; }
+.font-300 { font-weight: $font-300; }
+.font-400 { font-weight: $font-400; }
+.font-500 { font-weight: $font-500; }
+.font-600 { font-weight: $font-600; }
+.font-700 { font-weight: $font-700; }
+.font-800 { font-weight: $font-800; }
+.font-900 { font-weight: $font-900; }
 
 // Font Styles
 .font-normal { font-style: normal; }
@@ -58,7 +59,7 @@
 .flex-column { flex-direction: column; }
 .flex-space-around { justify-content: space-around; }
 .flex-space-between { justify-content: space-between; }
-.flex-start { justify-content:flex-start; }
+.flex-start { justify-content: flex-start; }
 .flex-center { justify-content: center; }
 .flex-end { justify-content: flex-end; }
 .flex-wrap { flex-wrap: wrap; }

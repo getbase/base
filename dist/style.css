@@ -1094,28 +1094,31 @@ input::-moz-focus-inner {
   user-select: none;
   cursor: default;
 }
-.font-thin {
+.font-100 {
   font-weight: 100;
 }
-.font-light {
+.font-200 {
+  font-weight: 200;
+}
+.font-300 {
   font-weight: 300;
 }
-.font-regular {
+.font-400 {
   font-weight: 400;
 }
-.font-medium {
+.font-500 {
   font-weight: 500;
 }
-.font-semi-bold {
+.font-600 {
   font-weight: 600;
 }
-.font-bold {
+.font-700 {
   font-weight: 700;
 }
-.font-extra-bold {
+.font-800 {
   font-weight: 800;
 }
-.font-ultra-bold {
+.font-900 {
   font-weight: 900;
 }
 .font-normal {
