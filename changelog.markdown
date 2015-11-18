@@ -1,6 +1,14 @@
 # Base 2 Change Log
 
 
+## [2.6.7] - 2015-11-18
+### Base V2.6.7
+- Added float helpers for tablet, desktop and HD devices in _helpers.less/_helpers.scss
+- Removed _minimal-grid.less (general house cleaning)
+- Version bump on package.json and bower.json
+- Version bump on style.less/style.scss
+
+
 ## [2.6.6] - 2015-11-13
 ### Base V2.6.6
 - Updated font-weight variables to memorable names in _variables.less/_variables.scss

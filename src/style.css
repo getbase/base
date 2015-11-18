@@ -1354,6 +1354,12 @@ input::-moz-focus-inner {
   .inline-tablet {
     display: inline;
   }
+  .left-tablet {
+    float: left;
+  }
+  .right-tablet {
+    float: right;
+  }
   .text-left-tablet {
     text-align: left;
   }
@@ -1397,6 +1403,12 @@ input::-moz-focus-inner {
   .inline-desktop {
     display: inline;
   }
+  .left-desktop {
+    float: left;
+  }
+  .right-desktop {
+    float: right;
+  }
   .text-left-desktop {
     text-align: left;
   }
@@ -1439,6 +1451,12 @@ input::-moz-focus-inner {
   }
   .inline-hd {
     display: inline;
+  }
+  .left-hd {
+    float: left;
+  }
+  .right-hd {
+    float: right;
   }
   .text-left-hd {
     text-align: left;
