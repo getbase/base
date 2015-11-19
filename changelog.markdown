@@ -1,6 +1,14 @@
 # Base 2 Change Log
 
 
+## [2.6.8] - 2015-11-20
+### Base V2.6.8
+- Added .flex helper in _helpers.less/_helpers.scss
+- Updated .svg-fill mixin to cater for no fill scenario (_mixins.less)
+- Version bump on package.json and bower.json
+- Version bump on style.less/style.scss
+
+
 ## [2.6.7] - 2015-11-18
 ### Base V2.6.7
 - Added float helpers for tablet, desktop and HD devices in _helpers.less/_helpers.scss
