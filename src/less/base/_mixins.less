@@ -98,10 +98,16 @@
 
 // SVG Fill - http://zslabs.com/articles/svg-background-fill/#update-2
 // Example usage: .svg-fill("img/icon.svg", "#555");
-.svg-fill(@src, @fill) {
+.svg-fill(@src, @fill: ~"") when not (@fill = '') {
   @data-uri: data-uri('image/svg+xml;charset=UTF-8', "src/@{src}");
   @replace-src: replace("@{data-uri}", "fill\%3D\%22\%23[\w]{3,6}\%22", escape('fill="@{fill}"'), "g");
   background-image:e(@replace-src);
+}
+// SVG Fill - http://zslabs.com/articles/svg-background-fill/#update-2
+// Example usage: .svg-fill("img/icon.svg");
+.svg-fill(@src, @fill: ~"") when (@fill = ~'') {
+  @data-uri: data-uri('image/svg+xml;charset=UTF-8', "src/@{src}");
+  background-image:e("@{data-uri}");
 }
 
 // Not enough mixins? – Please make some suggestions or contribute more! :)

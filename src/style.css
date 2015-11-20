@@ -364,9 +364,12 @@ input[type="text"],
 input[type="email"],
 input[type="password"],
 input[type="tel"],
-input[type="date"] {
+input[type="date"],
+select {
   height: 36px;
   padding: 0 .4em;
+  background-color: #fff;
+  border: 1px solid #ccc;
 }
 input[type="date"]::-webkit-inner-spin-button {
   display: none;
@@ -392,6 +395,8 @@ input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 textarea {
+  background-color: #fff;
+  border: 1px solid #ccc;
   overflow: auto;
 }
 select {
@@ -1207,6 +1212,9 @@ input::-moz-focus-inner {
 }
 .inline {
   display: inline;
+}
+.flex {
+  display: flex;
 }
 .flex-row {
   flex-direction: row;
