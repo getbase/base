@@ -1,6 +1,14 @@
 # Base 2 Change Log
 
 
+## [2.6.9] - 2015-11-30
+### Base V2.6.9
+- Removed .input helper in _forms.less/_forms.scss as there is already a .field helper which does the same
+- Removed iOS styling on all input fields excluding input checkbox and radio
+- Version bump on package.json and bower.json
+- Version bump on style.less/style.scss
+
+
 ## [2.6.8] - 2015-11-20
 ### Base V2.6.8
 - Added .flex helper in _helpers.less/_helpers.scss
