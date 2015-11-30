@@ -33,7 +33,16 @@ textarea {
 
 // Inputs
 input { line-height: normal; }
-.input { width: 100%; }
+
+input:not([type=checkbox]),
+input:not([type=radio]) {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+
 input[type="text"],
 input[type="email"],
 input[type="password"],
