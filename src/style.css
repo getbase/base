@@ -357,24 +357,20 @@ textarea {
 input {
   line-height: normal;
 }
-input:not([type=checkbox]),
-input:not([type=radio]) {
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="date"] {
+  height: 36px;
+  padding: 0 .4em;
+  background-color: #fff;
+  border: 1px solid #ccc;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   -webkit-border-radius: 0;
   border-radius: 0;
-}
-input[type="text"],
-input[type="email"],
-input[type="password"],
-input[type="tel"],
-input[type="date"],
-select {
-  height: 36px;
-  padding: 0 .4em;
-  background-color: #fff;
-  border: 1px solid #ccc;
 }
 input[type="date"]::-webkit-inner-spin-button {
   display: none;
@@ -406,6 +402,10 @@ textarea {
 }
 select {
   text-transform: none;
+  height: 36px;
+  padding: 0 .4em;
+  background-color: #fff;
+  border: 1px solid #ccc;
 }
 optgroup {
   font-weight: 700;
