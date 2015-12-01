@@ -1,6 +1,13 @@
 # Base 2 Change Log
 
 
+## [2.7.0] - 2015-12-01
+### Base V2.7.0
+- Fixed broken input[radio] and input[checkbox] styles
+- Version bump on package.json and bower.json
+- Version bump on style.less/style.scss
+
+
 ## [2.6.9] - 2015-11-30
 ### Base V2.6.9
 - Removed .input helper in _forms.less/_forms.scss as there is already a .field helper which does the same
