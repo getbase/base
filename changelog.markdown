@@ -1,6 +1,15 @@
 # Base 2 Change Log
 
 
+## [2.7.1] - 2015-12-02
+### Base V2.7.1
+- Added input[number] to _forms.less/_forms.scss
+- Removed Mozilla specific styling on input fields for Firefox
+- Minor update to .travis.yml file
+- Version bump on package.json and bower.json
+- Version bump on style.less/style.scss
+
+
 ## [2.7.0] - 2015-12-01
 ### Base V2.7.0
 - Fixed broken input[radio] and input[checkbox] styles
