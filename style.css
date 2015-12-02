@@ -361,16 +361,21 @@ input[type="text"],
 input[type="email"],
 input[type="password"],
 input[type="tel"],
+input[type="number"],
 input[type="date"] {
   height: 36px;
   padding: 0 .4em;
   background-color: #fff;
   border: 1px solid #ccc;
   -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+  -moz-appearance: textfield;
   -webkit-border-radius: 0;
   border-radius: 0;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 input[type="date"]::-webkit-inner-spin-button {
   display: none;
@@ -387,6 +392,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 input[type="search"] {
   -webkit-appearance: textfield;
+  -moz-appearance: textfield;
   -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
