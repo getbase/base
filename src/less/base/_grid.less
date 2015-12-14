@@ -8,14 +8,14 @@
 
 .row {
   position: relative;
-  margin-left: -15px;
-  margin-right: -15px;
+  margin-left: -(@grid-gutter/2);
+  margin-right: -(@grid-gutter/2);
 }
 
 // Mobile Container
 .container {
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: (@grid-gutter/2);
+  padding-right: (@grid-gutter/2);
   margin-left: auto;
   margin-right: auto;
 }
@@ -30,8 +30,8 @@
   .container, .container-full { width: @container-tablet; }
   .container-tablet {
     width: @container-tablet;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: (@grid-gutter/2);
+    padding-right: (@grid-gutter/2);
     margin-left: auto;
     margin-right: auto;
   }
@@ -48,8 +48,8 @@
   .container, .container-full { width: @container-desktop; }
   .container-desktop {
     width: @container-desktop;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: (@grid-gutter/2);
+    padding-right: (@grid-gutter/2);
     margin-left: auto;
     margin-right: auto;
   }
@@ -66,8 +66,8 @@
   .container, .container-full { width: @container-hd; }
   .container-hd {
     width: @container-hd;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: (@grid-gutter/2);
+    padding-right: (@grid-gutter/2);
     margin-left: auto;
     margin-right: auto;
   }
@@ -93,8 +93,8 @@
 .col-10,
 .col-11,
 .col-12 {
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: (@grid-gutter/2);
+  padding-right: (@grid-gutter/2);
   position: relative;
   float: left;
 }
@@ -128,7 +128,7 @@
 
 // Tablet Grid
 @media only screen and (min-width: @breakpoint-tablet) {
-  
+
   // Tablet Grid Columns - Global Rules
   .col-1-tablet,
   .col-2-tablet,
@@ -142,8 +142,8 @@
   .col-10-tablet,
   .col-11-tablet,
   .col-12-tablet {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: (@grid-gutter/2);
+    padding-right: (@grid-gutter/2);
     position: relative;
     float: left;
   }
@@ -178,7 +178,7 @@
 
 // Desktop Grid
 @media only screen and (min-width: @breakpoint-desktop) {
-  
+
   // Desktop Grid Columns - Global Rules
   .col-1-desktop,
   .col-2-desktop,
@@ -192,8 +192,8 @@
   .col-10-desktop,
   .col-11-desktop,
   .col-12-desktop {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: (@grid-gutter/2);
+    padding-right: (@grid-gutter/2);
     position: relative;
     float: left;
   }
@@ -228,7 +228,7 @@
 
 // HD Grid
 @media only screen and (min-width: @breakpoint-hd) {
-  
+
   // HD Grid Columns - Global Rules
   .col-1-hd,
   .col-2-hd,
@@ -242,8 +242,8 @@
   .col-10-hd,
   .col-11-hd,
   .col-12-hd {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: (@grid-gutter/2);
+    padding-right: (@grid-gutter/2);
     position: relative;
     float: left;
   }
