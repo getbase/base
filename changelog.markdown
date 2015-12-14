@@ -1,5 +1,9 @@
 # Base 2 Change Log
 
+## [2.7.1] - 2015-12-14
+### Base V2.7.2
+- Added grid-gutter variable to change the padding for the grid (the value will be divided half - like Bootstrap 3)
+- Version bump on package.json and bower.json
 
 ## [2.7.1] - 2015-12-02
 ### Base V2.7.1

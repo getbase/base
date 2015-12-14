@@ -8,14 +8,14 @@
 
 .row {
   position: relative;
-  margin-left: -15px;
-  margin-right: -15px;
+  margin-left: -($grid-gutter/2);
+  margin-right: -($grid-gutter/2);
 }
 
 // Mobile Container
 .container {
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: ($grid-gutter/2);
+  padding-right: ($grid-gutter/2);
   margin-left: auto;
   margin-right: auto;
 }
@@ -32,8 +32,8 @@
   }
   .container-tablet {
     width: $container-tablet;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: ($grid-gutter/2);
+    padding-right: ($grid-gutter/2);
     margin-left: auto;
     margin-right: auto;
   }
@@ -52,8 +52,8 @@
   }
   .container-desktop {
     width: $container-desktop;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: ($grid-gutter/2);
+    padding-right: ($grid-gutter/2);
     margin-left: auto;
     margin-right: auto;
   }
@@ -72,8 +72,8 @@
   }
   .container-hd {
     width: $container-hd;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: ($grid-gutter/2);
+    padding-right: ($grid-gutter/2);
     margin-left: auto;
     margin-right: auto;
   }
@@ -99,8 +99,8 @@
 .col-10,
 .col-11,
 .col-12 {
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: ($grid-gutter/2);
+  padding-right: ($grid-gutter/2);
   position: relative;
   float: left;
 }
@@ -143,8 +143,8 @@ $columns: 12;
   .col-10-tablet,
   .col-11-tablet,
   .col-12-tablet {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: ($grid-gutter/2);
+    padding-right: ($grid-gutter/2);
     position: relative;
     float: left;
   }
@@ -188,8 +188,8 @@ $columns: 12;
   .col-10-desktop,
   .col-11-desktop,
   .col-12-desktop {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: ($grid-gutter/2);
+    padding-right: ($grid-gutter/2);
     position: relative;
     float: left;
   }
@@ -233,8 +233,8 @@ $columns: 12;
   .col-10-hd,
   .col-11-hd,
   .col-12-hd {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: ($grid-gutter/2);
+    padding-right: ($grid-gutter/2);
     position: relative;
     float: left;
   }
