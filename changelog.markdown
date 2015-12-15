@@ -1,6 +1,14 @@
 # Base 2 Change Log
 
 
+## [2.7.2] - 2015-12-15
+### Base V2.7.2
+- Added new variable for gutter spacing for mobile, tablet, desktop and HD
+- Minor update to .travis.yml file
+- Version bump on package.json and bower.json
+- Version bump on style.less/style.scss
+
+
 ## [2.7.1] - 2015-12-02
 ### Base V2.7.1
 - Added input[number] to _forms.less/_forms.scss
