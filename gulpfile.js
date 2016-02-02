@@ -10,6 +10,7 @@ var gulp = require('gulp'),
     imagemin = require('gulp-imagemin'),
     cache = require('gulp-cache'),
     uglify = require('gulp-uglify'),
+    autoprefixer = require('gulp-autoprefixer'),
     runSequence = require('run-sequence');
 
 // Task to compile SCSS
@@ -22,6 +23,7 @@ gulp.task('sass', function () {
     .on("error", notify.onError(function(error) {
       return "Failed to Compile SCSS: " + error.message;
     })))
+    .pipe(autoprefixer())
     .pipe(gulp.dest('./src/'))
     .pipe(gulp.dest('./dist/'))
     .pipe(browserSync.reload({
@@ -41,6 +43,7 @@ gulp.task('less', function () {
   .on("error", notify.onError(function(error) {
     return "Failed to Compile LESS: " + error.message;
   }))
+  .pipe(autoprefixer())
   .pipe(gulp.dest('./src/'))
   .pipe(gulp.dest('./dist/'))
   .pipe(browserSync.reload({

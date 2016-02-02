@@ -1,6 +1,6 @@
 {
   "name": "base",
-  "version": "2.7.2",
+  "version": "2.8.0",
   "homepage": "http://getbase.org/",
   "repository": {
     "type": "git",
@@ -30,6 +30,7 @@
   "devDependencies": {
     "browser-sync": "^2.9.6",
     "gulp": "^3.8.10",
+    "gulp-autoprefixer": "^3.1.0",
     "gulp-cache": "^0.3.0",
     "gulp-imagemin": "^2.3.0",
     "gulp-inline-source": "^2.1.0",
