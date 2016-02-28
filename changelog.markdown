@@ -1,5 +1,11 @@
 # Base 2 Change Log
 
+## [2.8.1] - 2016-02-28
+### Base V2.8.1
+- Added position helpers for tablet, desktop and HD devices
+- Version bump on package.json and bower.json
+- Version bump on style.less/style.scss
+
 
 ## [2.8.0] - 2016-02-02
 ### Base V2.8.0
@@ -10,7 +16,7 @@
 - Cleaned up _animations.less/_animations.scss as Autoprefixer handles vendor prefixing
 - Updated .img-responsive helper to .img-fluid
 - Added new row helpers (.row-top-x and .row-bottom-x)
-- Added !default to all variables to support fallbacks (_variables.scss)
+- Added !default to all variables to support overrides (_variables.scss)
 - Version bump on package.json and bower.json
 - Version bump on style.less/style.scss
 - Minor update on .gitignore
