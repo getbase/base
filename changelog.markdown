@@ -1,5 +1,13 @@
 # Base 2 Change Log
 
+
+## [2.8.2] - 2016-03-05
+### Base V2.8.2
+- Updated package.json and published getbase to NPM package
+- Version bump on package.json and bower.json
+- Version bump on style.less/style.scss
+
+
 ## [2.8.1] - 2016-02-28
 ### Base V2.8.1
 - Added position helpers for tablet, desktop and HD devices
