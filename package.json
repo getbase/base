@@ -1,15 +1,15 @@
 {
-  "name": "base",
-  "version": "2.7.1",
+  "name": "getbase",
+  "version": "2.8.2",
   "homepage": "http://getbase.org/",
   "repository": {
     "type": "git",
     "url": "https://github.com/matthewhartman/base.git"
   },
   "authors": [
-    "Matthew Hartman <hello@matthewhartman.com.au>"
+    "Matthew Hartman <matthewhartmanau@gmail.com>"
   ],
-  "description": "Base is a super simple, responsive framework, built to work on all devices big, small and in-between.",
+  "description": "A Rock Solid, Responsive HTML/CSS Framework built to work on all devices big and small.",
   "keywords": [
     "css",
     "less",
@@ -30,10 +30,11 @@
   "devDependencies": {
     "browser-sync": "^2.9.6",
     "gulp": "^3.8.10",
+    "gulp-autoprefixer": "^3.1.0",
     "gulp-cache": "^0.3.0",
     "gulp-imagemin": "^2.3.0",
     "gulp-inline-source": "^2.1.0",
-    "gulp-less": "^3.0.1",
+    "gulp-less": "^3.0.0",
     "gulp-notify": "^2.2.0",
     "gulp-sass": "^2.0.4",
     "gulp-uglify": "^1.4.1",

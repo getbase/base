@@ -1,4 +1,7 @@
-config.codekit
 .DS_Store
-images/.DS_Store
-node_modules
+.config.codekit
+.codekit.cache
+scss/.sass-cache
+config.codekit
+node_modules/
+bower_components/

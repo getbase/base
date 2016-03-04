@@ -10,6 +10,7 @@ var gulp = require('gulp'),
     imagemin = require('gulp-imagemin'),
     cache = require('gulp-cache'),
     uglify = require('gulp-uglify'),
+    autoprefixer = require('gulp-autoprefixer'),
     runSequence = require('run-sequence');
 
 // Task to compile SCSS
@@ -19,15 +20,16 @@ gulp.task('sass', function () {
       errLogToConsole: false,
       paths: [ path.join(__dirname, 'scss', 'includes') ]
     })
-    .on('error', notify.onError(function(error) {
-      return 'Failed to Compile SCSS: ' + error.message;
+    .on("error", notify.onError(function(error) {
+      return "Failed to Compile SCSS: " + error.message;
     })))
+    .pipe(autoprefixer())
     .pipe(gulp.dest('./src/'))
-    .pipe(gulp.dest('./'))
+    .pipe(gulp.dest('./dist/'))
     .pipe(browserSync.reload({
       stream: true
     }))
-    .pipe(notify('SCSS Compiled Successfully :)'));
+    .pipe(notify("SCSS Compiled Successfully :)"));
 });
 
 // Task to compile LESS
@@ -38,28 +40,29 @@ gulp.task('less', function () {
   .on('error', function(err) {
     this.emit('end');
   }))
-  .on('error', notify.onError(function(error) {
-    return 'Failed to Compile LESS: ' + error.message;
+  .on("error", notify.onError(function(error) {
+    return "Failed to Compile LESS: " + error.message;
   }))
+  .pipe(autoprefixer())
   .pipe(gulp.dest('./src/'))
-  .pipe(gulp.dest('./'))
+  .pipe(gulp.dest('./dist/'))
   .pipe(browserSync.reload({
     stream: true
   }))
-  .pipe(notify('LESS Compiled Successfully :)'));
+  .pipe(notify("LESS Compiled Successfully :)"));
 });
 
-// Task to move compiled CSS to root
+// Task to move compiled CSS to `dist` folder
 gulp.task('movecss', function () {
   return gulp.src('./src/style.css')
-    .pipe(gulp.dest('./'));
+    .pipe(gulp.dest('./dist/'));
 });
 
 // Task to Minify JS
 gulp.task('jsmin', function() {
   return gulp.src('./src/js/**/*.js')
     .pipe(uglify())
-    .pipe(gulp.dest('./js/'));
+    .pipe(gulp.dest('./dist/js/'));
 });
 
 // Minify Images
@@ -69,7 +72,7 @@ gulp.task('imagemin', function (){
   .pipe(cache(imagemin({
       interlaced: true
     })))
-  .pipe(gulp.dest('./img'));
+  .pipe(gulp.dest('./dist/img'));
 });
 
 // BrowserSync Task (Live reload)
@@ -88,7 +91,7 @@ gulp.task('browserSync', function() {
 gulp.task('inlinesource', function () {
   return gulp.src('./src/**/*.html')
     .pipe(inlinesource())
-    .pipe(gulp.dest('./'));
+    .pipe(gulp.dest('./dist/'));
 });
 
 // Gulp Watch Task

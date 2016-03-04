@@ -1,6 +1,43 @@
 # Base 2 Change Log
 
 
+## [2.8.2] - 2016-03-05
+### Base V2.8.2
+- Updated package.json and published getbase to NPM package
+- Version bump on package.json and bower.json
+- Version bump on style.less/style.scss
+
+
+## [2.8.1] - 2016-02-28
+### Base V2.8.1
+- Added position helpers for tablet, desktop and HD devices
+- Version bump on package.json and bower.json
+- Version bump on style.less/style.scss
+
+
+## [2.8.0] - 2016-02-02
+### Base V2.8.0
+- Cleaned up duplicate variables in _variables.scss
+- Updated .travis.tml file to use Node 4 LTS
+- Added Autoprefixer to handle vendor prefixes
+- Cleaned up _mixins.less/_mixins.scss as Autoprefixer handles vendor prefixing
+- Cleaned up _animations.less/_animations.scss as Autoprefixer handles vendor prefixing
+- Updated .img-responsive helper to .img-fluid
+- Added new row helpers (.row-top-x and .row-bottom-x)
+- Added !default to all variables to support overrides (_variables.scss)
+- Version bump on package.json and bower.json
+- Version bump on style.less/style.scss
+- Minor update on .gitignore
+
+
+## [2.7.2] - 2015-12-15
+### Base V2.7.2
+- Added new variable for gutter spacing for mobile, tablet, desktop and HD
+- Minor update to .travis.yml file
+- Version bump on package.json and bower.json
+- Version bump on style.less/style.scss
+
+
 ## [2.7.1] - 2015-12-02
 ### Base V2.7.1
 - Added input[number] to _forms.less/_forms.scss
