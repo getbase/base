@@ -2,7 +2,7 @@
 
 // Base Stylesheet - http://getbase.org
 // Author: Matthew Hartman - http://www.matthewhartman.com.au/
-// Version: 2.8.2 - Last Updated: March 05, 2016
+// Version: 2.8.3 - Last Updated: March 23, 2016
 
 ========================================================================== */
 *,
@@ -354,7 +354,7 @@ input,
 optgroup,
 select,
 textarea {
-  color: inherit;
+  color: #222;
   font: inherit;
   margin: 0;
 }
@@ -368,12 +368,21 @@ input[type="tel"],
 input[type="number"],
 input[type="date"] {
   height: 36px;
-  padding: 0 .4em;
+  padding: 0 10px;
   background-color: #fff;
   border: 1px solid #ccc;
   -webkit-appearance: none;
   -moz-appearance: textfield;
   border-radius: 0;
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus {
+  border-color: #f7c723;
+  outline: 0;
 }
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
@@ -407,12 +416,20 @@ textarea {
   border: 1px solid #ccc;
   overflow: auto;
 }
+textarea:focus {
+  border-color: #f7c723;
+  outline: 0;
+}
 select {
   text-transform: none;
   height: 36px;
-  padding: 0 .4em;
+  padding: 0 10px;
   background-color: #fff;
   border: 1px solid #ccc;
+}
+select:focus {
+  border-color: #f7c723;
+  outline: 0;
 }
 optgroup {
   font-weight: 700;
@@ -481,11 +498,7 @@ input::-moz-focus-inner {
   outline: 0;
 }
 .select {
-  border: 1px solid #ccc;
   overflow: hidden;
-  height: 36px;
-  line-height: 32px;
-  padding: 0 .4em;
   position: relative;
   display: block;
 }
@@ -502,16 +515,24 @@ input::-moz-focus-inner {
 .select select {
   -webkit-appearance: none;
   -moz-appearance: none;
-  width: 120%;
-  height: 36px;
-  padding: 0;
+  height: 35px;
+  width: 100%;
+  padding: 0 10px;
   line-height: normal;
-  border: 0;
-  background: transparent;
+  border: 1px solid #ccc;
+  background: #fff;
   display: block;
 }
+.select select::-ms-expand {
+  display: none;
+}
 .select select:focus {
-  outline: 0;
+  border-color: #f7c723;
+}
+.select select:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #222;
+  border-color: #f7c723;
 }
 .clear:before,
 .clear:after {

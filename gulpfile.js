@@ -37,7 +37,7 @@ gulp.task('less', function () {
   return gulp.src('./src/less/style.less')
     .pipe(less({ paths: [ path.join(__dirname, 'less', 'includes') ]
   })
-  .on('error', function(err) {
+  .on('error', function() {
     this.emit('end');
   }))
   .on("error", notify.onError(function(error) {
@@ -80,7 +80,7 @@ gulp.task('browserSync', function() {
   browserSync({
     server: {
       baseDir: './src/'
-    },
+    }
   })
 });
 
@@ -96,7 +96,7 @@ gulp.task('inlinesource', function () {
 
 // Gulp Watch Task
 gulp.task('watch', ['browserSync'], function () {
-   gulp.watch('./src/scss/**/*', ['sass']),
+   gulp.watch('./src/scss/**/*', ['sass']);
    gulp.watch('./src/less/**/*', ['less']);
    gulp.watch('./src/**/*.html').on('change', browserSync.reload);
 });

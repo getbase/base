@@ -26,7 +26,7 @@ input,
 optgroup,
 select,
 textarea {
-  color: inherit;
+  color: $base-field-color;
   font: inherit;
   margin: 0;
 }
@@ -41,13 +41,17 @@ input[type="tel"],
 input[type="number"],
 input[type="date"] {
   height: 36px;
-  padding: 0 .4em;
+  padding: 0 10px;
   background-color: #fff;
-  border: 1px solid #ccc;
+  border: 1px solid $base-field-border-color;
   -webkit-appearance: none;
   -moz-appearance: textfield;
   -webkit-border-radius: 0;
   border-radius: 0;
+  &:focus {
+    border-color: $base-field-border-color-focus;
+    outline: 0;
+  }
 }
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { 
@@ -82,17 +86,25 @@ input[type="search"]::-webkit-search-decoration {
 // Text Area
 textarea {
   background-color: #fff;
-  border: 1px solid #ccc;
+  border: 1px solid $base-field-border-color;
   overflow: auto;
+  &:focus {
+    border-color: $base-field-border-color-focus;
+    outline: 0;
+  }
 }
 
 // Select
 select {
   text-transform: none;
   height: 36px;
-  padding: 0 .4em;
+  padding: 0 10px;
   background-color: #fff;
-  border: 1px solid #ccc;
+  border: 1px solid $base-field-border-color;
+  &:focus {
+    border-color: $base-field-border-color-focus;
+    outline: 0;
+  }
 }
 optgroup { font-weight: $font-700; }
 
