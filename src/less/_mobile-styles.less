@@ -15,8 +15,8 @@ body { .relative; }
   height: 40px;
   .block;
   .left;
-  .transition;
   .relative;
+  transition: all .3s;
   z-index: 4000;
   .svg-fill("img/base.svg", ~"@{darkestGrey}");
   &:hover {
@@ -41,7 +41,7 @@ body { .relative; }
     background: @darkestGrey;
     .block;
     .absolute;
-    .transition;
+    transition: all .3s;
     top: 0;
     left: 0;
   }
@@ -87,7 +87,7 @@ body { .relative; }
 .navigation {
   opacity: 0;
   pointer-events: none;
-  .transition;
+  transition: all .3s;
   .absolute;
   .text-left;
   .bg-rgba(@darkestGrey, 95%);
@@ -129,7 +129,7 @@ body { .relative; }
   color: @smoke;
   border-bottom: 1px solid transparent;
   text-decoration: none;
-  .transition;
+  transition: all .3s;
   &:hover, &.active {
     border-color: @smoke;
   }
@@ -156,7 +156,7 @@ body { .relative; }
   text-decoration: none;
   border-bottom: 1px solid transparent;
   padding-bottom: 2px;
-  .transition;
+  transition: all .3s;
   &:hover, &.active {
     border-color: @white;
   }
@@ -343,7 +343,7 @@ body { .relative; }
 .showcase-project {
   .block;
   min-height: 300px;
-  .transition;
+  transition: all .3s;
   &:hover {
     opacity: .8;
   }

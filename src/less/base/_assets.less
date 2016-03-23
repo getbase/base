@@ -56,11 +56,7 @@
 
 // Custom Select
 .select {
-  border: 1px solid #ccc;
   overflow: hidden;
-  height: 36px;
-  line-height: 32px;
-  padding: 0 .4em;
   position: relative;
   display: block;
   &:before {
@@ -76,14 +72,22 @@
   select {
     -webkit-appearance: none;
     -moz-appearance: none;
-    width: 120%;
-    height: 36px;
-    padding: 0;
+    height: 35px;
+    width: 100%;
+    padding: 0 10px;
     line-height: normal;
-    border: 0;
-    background: transparent;
+    border: 1px solid @base-field-border-color;
+    background: #fff;
     display: block;
-    &:focus { outline: 0; }
+  }
+  select::-ms-expand {
+    display: none;
+  }
+  select:focus { border-color: @base-field-border-color-focus; }
+  select:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 @base-field-color;
+    border-color: @base-field-border-color-focus;
   }
 }
 
