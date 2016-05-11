@@ -20,16 +20,16 @@ gulp.task('sass', function () {
       errLogToConsole: false,
       paths: [ path.join(__dirname, 'scss', 'includes') ]
     })
-    .on("error", notify.onError(function(error) {
-      return "Failed to Compile SCSS: " + error.message;
+    .on('error', notify.onError(function(error) {
+      return 'Failed to Compile SCSS: ' + error.message;
     })))
     .pipe(autoprefixer())
     .pipe(gulp.dest('./src/'))
-    .pipe(gulp.dest('./dist/'))
+    .pipe(gulp.dest('./'))
     .pipe(browserSync.reload({
       stream: true
     }))
-    .pipe(notify("SCSS Compiled Successfully :)"));
+    .pipe(notify('SCSS Compiled Successfully :)'));
 });
 
 // Task to compile LESS
@@ -40,29 +40,28 @@ gulp.task('less', function () {
   .on('error', function(err) {
     this.emit('end');
   }))
-  .on("error", notify.onError(function(error) {
-    return "Failed to Compile LESS: " + error.message;
+  .on('error', notify.onError(function(error) {
+    return 'Failed to Compile LESS: ' + error.message;
   }))
-  .pipe(autoprefixer())
   .pipe(gulp.dest('./src/'))
-  .pipe(gulp.dest('./dist/'))
+  .pipe(gulp.dest('./'))
   .pipe(browserSync.reload({
     stream: true
   }))
-  .pipe(notify("LESS Compiled Successfully :)"));
+  .pipe(notify('LESS Compiled Successfully :)'));
 });
 
-// Task to move compiled CSS to `dist` folder
+// Task to move compiled CSS to root
 gulp.task('movecss', function () {
   return gulp.src('./src/style.css')
-    .pipe(gulp.dest('./dist/'));
+    .pipe(gulp.dest('./'));
 });
 
 // Task to Minify JS
 gulp.task('jsmin', function() {
   return gulp.src('./src/js/**/*.js')
     .pipe(uglify())
-    .pipe(gulp.dest('./dist/js/'));
+    .pipe(gulp.dest('./js/'));
 });
 
 // Minify Images
@@ -72,7 +71,7 @@ gulp.task('imagemin', function (){
   .pipe(cache(imagemin({
       interlaced: true
     })))
-  .pipe(gulp.dest('./dist/img'));
+  .pipe(gulp.dest('./img'));
 });
 
 // BrowserSync Task (Live reload)
@@ -91,7 +90,7 @@ gulp.task('browserSync', function() {
 gulp.task('inlinesource', function () {
   return gulp.src('./src/**/*.html')
     .pipe(inlinesource())
-    .pipe(gulp.dest('./dist/'));
+    .pipe(gulp.dest('./'));
 });
 
 // Gulp Watch Task
