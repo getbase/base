@@ -8,7 +8,7 @@ Lightweight and minimal code. Spend less time overriding styles and focus more t
 ## Installation
 Getting started is easy, simply install base using [NPM](https://www.npmjs.com/):
 
-    npm install --save base
+    npm install --save getbase
 
 Once you have the latest version of Base installed, head over to the [docs](http://getbase.org/docs/) to learn more.
 
@@ -16,6 +16,11 @@ Once you have the latest version of Base installed, head over to the [docs](http
 
 ## Support
 IE8+ and all other modern browsers
+
+* * *
+
+## LESS Version
+Base has a [LESS version](https://github.com/matthewhartman/base/tree/base-less)
 
 * * *
 

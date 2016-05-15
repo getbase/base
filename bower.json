@@ -1,6 +1,6 @@
 {
   "name": "base",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "homepage": "http://matthewhartman.github.io/base/",
   "authors": [
     "Matthew Hartman <matthewhartman@gmail.com>"
@@ -8,7 +8,6 @@
   "description": "A Rock Solid, Responsive HTML/CSS Framework built to work on all devices big and small.",
   "keywords": [
     "css",
-    "less",
     "scss",
     "framework",
     "mobile-first",

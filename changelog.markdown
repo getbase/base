@@ -1,6 +1,12 @@
 # Base 2 Change Log
 
 
+## [3.0.1] - 2016-05-15
+### Base V3.0.1
+- Minor tweak to readme
+- Version bump for style.scss, package.json and bower.json
+
+
 ## [3.0.0] - 2016-05-15
 ### Base V3.0.0
 - Refactored base to use normalize v4.1.1
