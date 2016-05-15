@@ -1,45 +1,40 @@
-# [Base](http://getbase.org) <br> [![Build Status](https://travis-ci.org/matthewhartman/base.svg?branch=master)](https://travis-ci.org/matthewhartman/base)
+# [Base](http://getbase.org)
 
 ## A Rock Solid, Responsive HTML/CSS Framework built to work on all devices big and small.
 Lightweight and minimal code. Spend less time overriding styles and focus more time on creating beautiful website applications.
 
-* * *
+[![Build Status](https://travis-ci.org/matthewhartman/base.svg?branch=master)](https://travis-ci.org/matthewhartman/base)
 
-## Features
+## Installation
+Getting started is easy, simply install base using [NPM](https://www.npmjs.com/):
 
-### Responsive Design
-Built mobile-first to ensure it works with all devices big and small.
+    npm install --save base
 
-### Solid Foundation
-Built from Normalize.css to ensure all basic rules are inherited.
-
-### Cross-Browser
-Perfected to work with older browsers and modern browsers.
-
-### Modular Code
-Independant modules. Include what you want and make it yours.
-
-### Automation Sensation
-Includes a GulpJS config to automate your workflow from build to go-live.
-
-### Awesome Docs
-Well [documented](http://getbase.org/docs/) for an excellent understanding of how it all works.
+Once you have the latest version of Base installed, head over to the [docs](http://getbase.org/docs/) to learn more.
 
 * * *
 
-## Looking for the old Base?
-Base 1 is still [available](http://getbase.org/v1-docs/). 
+## Support
+IE8+ and all other modern browsers
 
 * * *
 
-Base was built by Matthew Hartman [(@matthewhartmans)](http://twitter.com/matthewhartmans) - a passionate front end developer based in Melbourne, Australia.
+## Looking for old docs?
+- [Base 1 docs](http://getbase.org/v1-docs/)
+- [Base 2 docs](http://getbase.org/v2-docs/)
 
-## Thank You / Credits
-- [base_css-rails](https://github.com/rkrdo/base_css-rails) - a gem that adds the Base framework to the application's asset pipeline by Ricardo Cruz
-- Thanks to [HTML5 boilerplate](https://html5boilerplate.com/) for the base HTML template
+* * *
+
+## Thanks
+- [base_css-rails](https://github.com/rkrdo/base_css-rails) - Gem that adds the Base framework by Ricardo Cruz
+- [HTML5 boilerplate](https://html5boilerplate.com/) for the base HTML template
 - Daniel Eden for the CSS3 animations - [animate.css](http://daneden.github.io/animate.css/)
 - Nicolas Gallagher [@necolas](https://twitter.com/necolas) for normalize.css and micro clearfix
 - Tristan McNab for adding bower support
 
 ## License
 [MIT Open Source](https://opensource.org/licenses/MIT)
+
+* * *
+
+Base was built by Matthew Hartman [(@matthewhartmans)](http://twitter.com/matthewhartmans) - a passionate web developer based in Melbourne, Australia.

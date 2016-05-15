@@ -1,7 +1,12 @@
 {
   "name": "getbase",
-  "version": "2.8.3",
+  "version": "3.0.0",
+  "description": "A Rock Solid, Responsive HTML/CSS Framework built to work on all devices big and small.",
   "homepage": "http://getbase.org/",
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp build"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/matthewhartman/base.git"
@@ -9,10 +14,8 @@
   "authors": [
     "Matthew Hartman <matthewhartmanau@gmail.com>"
   ],
-  "description": "A Rock Solid, Responsive HTML/CSS Framework built to work on all devices big and small.",
   "keywords": [
     "css",
-    "less",
     "scss",
     "framework",
     "mobile-first",
@@ -28,18 +31,20 @@
     "tests"
   ],
   "devDependencies": {
-    "browser-sync": "^2.9.6",
-    "gulp": "^3.8.10",
+    "browser-sync": "^2.12.3",
+    "del": "^2.2.0",
+    "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
-    "gulp-cache": "^0.3.0",
-    "gulp-imagemin": "^2.3.0",
+    "gulp-cache": "^0.4.4",
+    "gulp-css-base64": "^1.3.4",
+    "gulp-imagemin": "^2.4.0",
     "gulp-inline-source": "^2.1.0",
-    "gulp-less": "^3.0.0",
     "gulp-notify": "^2.2.0",
-    "gulp-sass": "^2.0.4",
-    "gulp-uglify": "^1.4.1",
-    "gulp-watch": "^4.1.0",
-    "path": "^0.11.14",
-    "run-sequence": "^1.1.4"
+    "gulp-sass": "^2.3.1",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^1.5.3",
+    "gulp-watch": "^4.3.5",
+    "path": "^0.12.7",
+    "run-sequence": "^1.1.5"
   }
 }

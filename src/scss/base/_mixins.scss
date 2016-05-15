@@ -1,6 +1,21 @@
 // ==========================================================================
 // Base – Mixins
 // ==========================================================================
+
+// Breakpoint sizes
+// Example usage @include breakpoint(x) { ... }; - where x is the device
+@mixin breakpoint($bp) {
+  @if $bp == xl {
+    @media only screen and (min-width: $breakpoint-xl) { @content ; }
+  }
+  @else if $bp == l {
+    @media only screen and (min-width: $breakpoint-l) { @content ; }
+  }
+  @else if $bp == m {
+    @media only screen and (min-width: $breakpoint-m) { @content ; }
+  }
+}
+
 // Font sizes (primary sizing in `rem` units with a fallback of `px`)
 // Example usage @include font-size(18);
 @mixin font-size ($size) {
@@ -19,18 +34,9 @@
   line-height: $remValue + rem;
 }
 
-// SVG background with PNG fallback
-// Example Usage @include svg-bg("img/banner.svg", "img/banner.png", 50%, 50%, no-repeat);
-@mixin bg-svg($svg, $png, $x: 0, $y: 0, $repeat: no-repeat) {
-  background: url(@svg) $x $y $repeat;
-  .no-svg & {
-    background: url(@png) $x $y $repeat;
-  }
-}
-
 // Background Color with Opacity
 // Example Usage: @include bg-rgba(#111, 50%);
-@mixin bg-rgba($color, $alpha) {
+@mixin background-alpha($color, $alpha) {
   $opacity: $alpha / 100%;
   $rgba: rgba($color, $opacity);
   background: $color;
@@ -43,9 +49,5 @@
   animation-duration: $duration;
   animation-fill-mode: both;
 }
-
-// SVG Fill - TO DO
-// Example usage: .svg-fill("img/icon.svg", "#555");
-// https://github.com/lagden/sass-inline-svg-image
 
 // Not enough mixins? – Please make some suggestions or contribute more! :)

@@ -3,20 +3,18 @@
 // ==========================================================================
 
 // Form, Fieldset and Legend
-fieldset,
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
 legend {
-  border: 0;
-  margin: 0;
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
   padding: 0;
-}
-legend {
-  @include font-size($base-font-size + 2);
-  @include line-height($base-line-height + 2);
-  font-weight: $font-700;
-}
-.form {
-  padding-top: 1em;
-  padding-bottom: 1em;
+  white-space: normal;
 }
 
 // All Form Elements
@@ -26,70 +24,67 @@ input,
 optgroup,
 select,
 textarea {
-  color: $base-field-color;
+  color: $base-input-color;
   font: inherit;
   margin: 0;
 }
 
-// Inputs
-input { line-height: normal; }
-
-input[type="text"],
-input[type="email"],
-input[type="password"],
-input[type="tel"],
-input[type="number"],
-input[type="date"] {
-  height: 36px;
-  padding: 0 10px;
-  background-color: #fff;
-  border: 1px solid $base-field-border-color;
+// Mixed Input Fields
+[type="text"],
+[type="email"],
+[type="password"],
+[type="tel"],
+[type="number"],
+[type="date"] {
+  height: $base-input-height;
+  padding: 10px;
+  background-color: $base-input-background-color;
+  border: 1px solid $base-input-border-color;
   -webkit-appearance: none;
   -moz-appearance: textfield;
   -webkit-border-radius: 0;
   border-radius: 0;
   &:focus {
-    border-color: $base-field-border-color-focus;
+    background-color: $base-input-background-color-focus;
+    border-color: $base-input-border-color-focus;
     outline: 0;
   }
 }
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-  -webkit-appearance: none;
-  margin: 0;
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
 }
-input[type="date"]::-webkit-inner-spin-button {
+[type="date"]::-webkit-inner-spin-button {
   display: none;
   -webkit-appearance: none;
 }
-input[type="checkbox"],
-input[type="radio"] {
+[type="checkbox"],
+[type="radio"] {
   box-sizing: border-box;
   padding: 0;
 }
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
   height: auto;
 }
-input[type="search"] {
+[type="search"] {
   -webkit-appearance: textfield;
-  -moz-appearance: textfield;
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
-  box-sizing: content-box;
+  outline-offset: -2px;
 }
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
 // Text Area
 textarea {
-  background-color: #fff;
-  border: 1px solid $base-field-border-color;
+  padding: 10px;
+  background-color: $base-input-background-color;
+  border: 1px solid $base-input-border-color;
   overflow: auto;
   &:focus {
-    border-color: $base-field-border-color-focus;
+    background-color: $base-input-background-color-focus;
+    border-color: $base-input-border-color-focus;
     outline: 0;
   }
 }
@@ -97,12 +92,13 @@ textarea {
 // Select
 select {
   text-transform: none;
-  height: 36px;
+  height: $base-input-height;
   padding: 0 10px;
-  background-color: #fff;
-  border: 1px solid $base-field-border-color;
+  background-color: $base-input-background-color;
+  border: 1px solid $base-input-border-color;
   &:focus {
-    border-color: $base-field-border-color-focus;
+    background-color: $base-input-background-color-focus;
+    border-color: $base-input-border-color-focus;
     outline: 0;
   }
 }
@@ -112,22 +108,39 @@ optgroup { font-weight: $font-700; }
 button {
   overflow: visible;
   text-transform: none;
-}
-button, html input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-  -webkit-appearance: button;
   cursor: pointer;
 }
-button[disabled], html input[disabled] { cursor: default; }
+
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
 button::-moz-focus-inner,
-input::-moz-focus-inner {
-  border: 0;
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
   padding: 0;
 }
 
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+button[disabled],
+html input[disabled] {
+  cursor: not-allowed;
+}
+
+
 // Placeholder Colour
-::-webkit-input-placeholder { color: $base-placeholder-color; }
-:-moz-placeholder { color: $base-placeholder-color; }
-::-moz-placeholder { color: $base-placeholder-color; }
-:-ms-input-placeholder { color: $base-placeholder-color; }
+::-webkit-input-placeholder { color: $base-input-placeholder-color; }
+:-moz-placeholder { color: $base-input-placeholder-color; }
+::-moz-placeholder { color: $base-input-placeholder-color; }
+:-ms-input-placeholder { color: $base-input-placeholder-color; }
