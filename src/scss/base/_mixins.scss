@@ -1,0 +1,53 @@
+// ==========================================================================
+// Base – Mixins
+// ==========================================================================
+
+// Breakpoint sizes
+// Example usage @include breakpoint(x) { ... }; - where x is the device
+@mixin breakpoint($bp) {
+  @if $bp == xl {
+    @media only screen and (min-width: $breakpoint-xl) { @content ; }
+  }
+  @else if $bp == l {
+    @media only screen and (min-width: $breakpoint-l) { @content ; }
+  }
+  @else if $bp == m {
+    @media only screen and (min-width: $breakpoint-m) { @content ; }
+  }
+}
+
+// Font sizes (primary sizing in `rem` units with a fallback of `px`)
+// Example usage @include font-size(18);
+@mixin font-size ($size) {
+  $remValue: $size / 16;
+  $pxValue: ($size);
+  font-size: $pxValue + px; 
+  font-size: $remValue + rem;
+}
+
+// Line height sizes (primary sizing in `rem` units with a fallback of `px`)
+// Example usage @include line-height(22);
+@mixin line-height ($size) {
+  $remValue: $size / 16;
+  $pxValue: ($size);
+  line-height: $pxValue + px; 
+  line-height: $remValue + rem;
+}
+
+// Background Color with Opacity
+// Example Usage: @include bg-rgba(#111, 50%);
+@mixin background-alpha($color, $alpha) {
+  $opacity: $alpha / 100%;
+  $rgba: rgba($color, $opacity);
+  background: $color;
+  background: rgba($color, $opacity);
+}
+
+// Animations
+// Example Usage @mixin animate(1s);
+@mixin animate($duration: 1s) {
+  animation-duration: $duration;
+  animation-fill-mode: both;
+}
+
+// Not enough mixins? – Please make some suggestions or contribute more! :)

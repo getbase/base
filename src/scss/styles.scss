@@ -1,0 +1,216 @@
+// ==========================================================================
+// Your Website / App Stylesheet
+// ==========================================================================
+
+// Global Variables
+$base-font-family: Source Sans Pro;
+$base-heading-font-family: Source Sans Pro;
+$base-font-weight: 500;
+$base-font-color: #545454;
+
+// Colours
+$black: #000;
+$dark-grey: #545454;
+$yellow: #f7c824;
+$lightest-grey: #f9f9f9;
+$white: #fff;
+
+// Import Base
+@import "base.scss";
+
+// Styles
+
+// Banner
+.banner {
+  background-color: $yellow;
+  color: $black;
+}
+.logo {
+  background: url(../img/base.svg) 0 0 no-repeat;
+  width: 100px;
+  height: 40px;
+  display: block;
+}
+.banner-heading {
+  @include font-size(50);
+  @include line-height(56);
+  @include breakpoint(m) {
+    @include font-size(36);
+    @include line-height(42);
+  }
+  @include breakpoint(l) {
+    @include font-size(46);
+    @include line-height(50);
+  }
+}
+
+.button-banner {
+  color: $black;
+  @include background-alpha ($white, 90%);
+  border-color: transparent;
+  padding: 15px 20px;
+  display: block;
+  @include breakpoint(m) {
+    display: inline-block;
+  }
+  &:hover, &:focus {
+    @include background-alpha ($white, 100%);
+  }
+  &.button-secondary {
+    margin-top: 10px;
+    @include background-alpha ($white, 50%);
+    &:hover, &:focus {
+      @include background-alpha ($white, 100%);
+    }
+  }
+}
+
+.phone {
+  width: 240px;
+  height: 280px;
+  background-color: $white;
+  border-radius: 20px 20px 0 0;
+  padding: 30px 20px 0 20px;
+  position: relative;
+  @include breakpoint(l) {
+    width: 320px;
+    height: 320px;
+  }
+  @include breakpoint(xl) {
+    width: 500px;
+  }
+}
+.phone-inner {
+  background: #111;
+  height: 250px;
+  @include breakpoint(l) {
+    height: 290px;
+  }
+  &:before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: #111;
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    margin-left: -5px;
+    border-radius: 100%;
+  }
+}
+
+// Features
+.icon {
+  &:before {
+    content: "";
+    width: 50px;
+    height: 50px;
+    margin: 10px auto;
+    display: block;
+  }
+}
+.icon-foundation:before {
+  background: url(../img/column.svg) 50% 50% no-repeat;
+  background-size: cover;
+}
+.icon-browsers:before {
+  background: url(../img/globe.svg) 50% 50% no-repeat;
+  background-size: cover;
+}
+.icon-modular:before {
+  background: url(../img/atom.svg) 50% 50% no-repeat;
+  background-size: cover;
+}
+.icon-automated:before {
+  background: url(../img/paper-plane.svg) 50% 50% no-repeat;
+  background-size: cover;
+}
+
+// Showcase
+.showcase-block { background-color: $lightest-grey; }
+.showcase-panel {
+  background-color: $white;
+  margin-bottom: 20px;
+  @include breakpoint(m) {
+    min-height: 300px;
+  }
+  a {
+    text-decoration: none;
+    transition: all .4s;
+    &:hover {
+      transition: all .4s;
+      color: $dark-grey;
+    }
+  }
+}
+.showcase-image {
+  width: 100%;
+  height: 140px;
+  background-color: $black;
+  display: block;
+  position: relative;
+  &:before {
+    content: "";
+    width: 100%;
+    height: 140px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include background-alpha($white, 0%);
+    transition: all .4s;
+  }
+  &:hover {
+    &:before {
+      transition: all .4s;
+      @include background-alpha($white, 20%);
+    }
+  }
+}
+.showcase-event {
+  background: url(../img/event.jpg) 0 0 no-repeat;
+  background-size: cover
+}
+.showcase-business {
+  background: url(../img/business.jpg) 0 0 no-repeat;
+  background-size: cover
+}
+.showcase-restaurant {
+  background: url(../img/restaurant.jpg) 0 0 no-repeat;
+  background-size: cover
+}
+
+// Newsletter
+.newsletter-block {
+  background-color: $yellow;
+  fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+  }
+}
+.newsletter-content {
+  color: $black;
+  
+}
+.newsletter-email {
+  width: 100%;
+  height: 40px;
+}
+.newsletter-button { height: 40px; }
+
+// Footer
+.footer {
+  background-color: $black;
+  color: $white;
+  a {
+    color: $white;
+  }
+}
+.footer-links {
+  padding: 0;
+  margin: 0;
+  & > li:not(:first-child) {
+    margin-left: 6px;
+  }
+}

@@ -1,0 +1,368 @@
+// ==========================================================================
+// Base – Mobile-First Grid
+// ==========================================================================
+
+// Micro Clearfix - http://nicolasgallagher.com/micro-clearfix-hack/
+.clear:before, .clear:after { content: " "; display: table; } .clear:after { clear: both; }
+.row:before, .row:after { content: ""; display: table; } .row:after { clear: both; }
+
+// Rows
+.row {
+  position: relative;
+  margin-left: -$grid-gutter;
+  margin-right: -$grid-gutter;
+}
+// Medium Device Row
+@include breakpoint(m) {
+  .row-m {
+    position: relative;
+    margin-left: -$grid-gutter-m;
+    margin-right: -$grid-gutter-m;
+  }
+}
+// Large Device Row
+@include breakpoint(l) {
+  .row-l {
+    position: relative;
+    margin-left: -$grid-gutter-l;
+    margin-right: -$grid-gutter-l;
+  }
+}
+// Extra Large Device Row
+@include breakpoint(xl) {
+  .row-xl {
+    position: relative;
+    margin-left: -$grid-gutter-xl;
+    margin-right: -$grid-gutter-xl;
+  }
+}
+
+// Container
+.container {
+  padding-left: $grid-gutter;
+  padding-right: $grid-gutter;
+  margin-left: auto;
+  margin-right: auto;
+}
+.container-full {
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+// Medium Device Container
+@include breakpoint(m) {
+  .container, .container-full {
+    width: $container-m;
+  }
+  .container-m {
+    width: $container-m;
+    padding-left: $grid-gutter-m;
+    padding-right: $grid-gutter-m;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .container-full-m {
+    width: $container-m;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+// Large Device Container
+@include breakpoint(l) {
+  .container, .container-full {
+    width: $container-l;
+  }
+  .container-l {
+    width: $container-l;
+    padding-left: $grid-gutter-l;
+    padding-right: $grid-gutter-l;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .container-full-l {
+    width: $container-l;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+// Extra Large Device Container
+@include breakpoint(xl) {
+  .container, .container-full {
+    width: $container-xl;
+  }
+  .container-xl {
+    width: $container-xl;
+    padding-left: $grid-gutter-xl;
+    padding-right: $grid-gutter-xl;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .container-full-xl {
+    width: $container-xl;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+// Mobile-first Grid Columns - Global Rules
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-10,
+.col-11,
+.col-12,
+.col-1-2,
+.col-1-3,
+.col-2-3,
+.col-1-4,
+.col-3-4,
+.col-1-5,
+.col-2-5,
+.col-3-5,
+.col-4-5 {
+  padding-left: $grid-gutter;
+  padding-right: $grid-gutter;
+  position: relative;
+  float: left;
+}
+
+// Mobile-first Grid
+$columns: 12;
+@for $i from 1 through $columns {
+  .col-#{$i} {
+    width: ($i / $columns) * 100%;
+  }
+}
+.col-1-2 { width: (6 / 12) * 100%; }
+.col-1-3 { width: (4 / 12) * 100%; }
+.col-2-3 { width: (8 / 12) * 100%; }
+.col-1-4 { width: (3 / 12) * 100%; }
+.col-3-4 { width: (9 / 12) * 100%; }
+.col-1-5 { width: (2.4 / 12) * 100%; }
+.col-2-5 { width: (4.8 / 12) * 100%; }
+.col-3-5 { width: (7.2 / 12) * 100%; }
+.col-4-5 { width: (9.6 / 12) * 100%; }
+.col-full { width: 100%; }
+
+// Mobile Push Offsets
+@for $i from 1 through $columns - 1 {
+  .push-#{$i} {
+    left: ($i / $columns) * 100%;
+  }
+}
+
+// Mobile Pull Offsets
+@for $i from 1 through $columns - 1 {
+  .pull-#{$i} {
+    left: -($i / $columns) * 100%;
+  }
+}
+
+
+// Medium Device Grid
+@include breakpoint(m) {
+  
+  // Medium Device Grid Columns - Global Rules
+  .col-1-m,
+  .col-2-m,
+  .col-3-m,
+  .col-4-m,
+  .col-5-m,
+  .col-6-m,
+  .col-7-m,
+  .col-8-m,
+  .col-9-m,
+  .col-10-m,
+  .col-11-m,
+  .col-12-m,
+  .col-1-2-m,
+  .col-1-3-m,
+  .col-2-3-m,
+  .col-1-4-m,
+  .col-3-4-m,
+  .col-1-5-m,
+  .col-2-5-m,
+  .col-3-5-m,
+  .col-4-5-m {
+    padding-left: $grid-gutter-m;
+    padding-right: $grid-gutter-m;
+    position: relative;
+    float: left;
+  }
+
+  // Medium Device Grid
+  $columns: 12;
+  @for $i from 1 through $columns {
+    .col-#{$i}-m {
+      width: ($i / $columns) * 100%;
+    }
+  }
+  .col-1-2-m { width: (6 / 12) * 100%; }
+  .col-1-3-m { width: (4 / 12) * 100%; }
+  .col-2-3-m { width: (8 / 12) * 100%; }
+  .col-1-4-m { width: (3 / 12) * 100%; }
+  .col-3-4-m { width: (9 / 12) * 100%; }
+  .col-1-5-m { width: (2.4 / 12) * 100%; }
+  .col-2-5-m { width: (4.8 / 12) * 100%; }
+  .col-3-5-m { width: (7.2 / 12) * 100%; }
+  .col-4-5-m { width: (9.6 / 12) * 100%; }
+  .col-full-m { width: 100%; }
+
+  // Medium Device Push Offsets
+  @for $i from 1 through $columns - 1 {
+    .push-#{$i}-m {
+      left: ($i / $columns) * 100%;
+    }
+  }
+
+  // Medium Device Pull Offsets
+  @for $i from 1 through $columns - 1 {
+    .pull-#{$i}-m {
+      left: -($i / $columns) * 100%;
+    }
+  }
+
+}
+
+// Large Device Grid
+@include breakpoint(l) {
+  
+  // Large Device Grid Columns - Global Rules
+  .col-1-l,
+  .col-2-l,
+  .col-3-l,
+  .col-4-l,
+  .col-5-l,
+  .col-6-l,
+  .col-7-l,
+  .col-8-l,
+  .col-9-l,
+  .col-10-l,
+  .col-11-l,
+  .col-12-l,
+  .col-1-2-l,
+  .col-1-3-l,
+  .col-2-3-l,
+  .col-1-4-l,
+  .col-3-4-l,
+  .col-1-5-l,
+  .col-2-5-l,
+  .col-3-5-l,
+  .col-4-5-l {
+    padding-left: $grid-gutter-l;
+    padding-right: $grid-gutter-l;
+    position: relative;
+    float: left;
+  }
+
+  // Large Device Grid
+  $columns: 12;
+  @for $i from 1 through $columns {
+    .col-#{$i}-l {
+      width: ($i / $columns) * 100%;
+    }
+  }
+  .col-1-2-l { width: (6 / 12) * 100%; }
+  .col-1-3-l { width: (4 / 12) * 100%; }
+  .col-2-3-l { width: (8 / 12) * 100%; }
+  .col-1-4-l { width: (3 / 12) * 100%; }
+  .col-3-4-l { width: (9 / 12) * 100%; }
+  .col-1-5-l { width: (2.4 / 12) * 100%; }
+  .col-2-5-l { width: (4.8 / 12) * 100%; }
+  .col-3-5-l { width: (7.2 / 12) * 100%; }
+  .col-4-5-l { width: (9.6 / 12) * 100%; }
+  .col-full-l { width: 100%; }
+
+  // Large Device Push Offsets
+  @for $i from 1 through $columns - 1 {
+    .push-#{$i}-l {
+      left: ($i / $columns) * 100%;
+    }
+  }
+
+  // Large Device Pull Offsets
+  @for $i from 1 through $columns - 1 {
+    .pull-#{$i}-l {
+      left: -($i / $columns) * 100%;
+    }
+  }
+
+}
+
+// Extra Large Device Grid
+@include breakpoint(xl) {
+  
+  // Extra Large Device Grid Columns - Global Rules
+  .col-1-xl,
+  .col-2-xl,
+  .col-3-xl,
+  .col-4-xl,
+  .col-5-xl,
+  .col-6-xl,
+  .col-7-xl,
+  .col-8-xl,
+  .col-9-xl,
+  .col-10-xl,
+  .col-11-xl,
+  .col-12-xl,
+  .col-1-2-xl,
+  .col-1-3-xl,
+  .col-2-3-xl,
+  .col-1-4-xl,
+  .col-3-4-xl,
+  .col-1-5-xl,
+  .col-2-5-xl,
+  .col-3-5-xl,
+  .col-4-5-xl {
+    padding-left: $grid-gutter-xl;
+    padding-right: $grid-gutter-xl;
+    position: relative;
+    float: left;
+  }
+
+  // Extra Large Device Grid
+  $columns: 12;
+  @for $i from 1 through $columns {
+    .col-#{$i}-xl {
+      width: ($i / $columns) * 100%;
+    }
+  }
+  .col-1-2-xl { width: (6 / 12) * 100%; }
+  .col-1-3-xl { width: (4 / 12) * 100%; }
+  .col-2-3-xl { width: (8 / 12) * 100%; }
+  .col-1-4-xl { width: (3 / 12) * 100%; }
+  .col-3-4-xl { width: (9 / 12) * 100%; }
+  .col-1-5-xl { width: (2.4 / 12) * 100%; }
+  .col-2-5-xl { width: (4.8 / 12) * 100%; }
+  .col-3-5-xl { width: (7.2 / 12) * 100%; }
+  .col-4-5-xl { width: (9.6 / 12) * 100%; }
+  .col-full-xl { width: 100%; }
+
+  // Extra Large Device Push Offsets
+  @for $i from 1 through $columns - 1 {
+    .push-#{$i}-xl {
+      left: ($i / $columns) * 100%;
+    }
+  }
+
+  // Extra Large Device Pull Offsets
+  @for $i from 1 through $columns - 1 {
+    .pull-#{$i}-xl {
+      left: -($i / $columns) * 100%;
+    }
+  }
+
+}

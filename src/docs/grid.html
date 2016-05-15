@@ -18,7 +18,7 @@
   <link rel="apple-touch-icon" sizes="57x57" href="/img/apple-touch-icon.png">
   <link rel="apple-touch-icon" sizes="72x72" href="/img/apple-touch-icon-72x72.png">
   <link rel="apple-touch-icon" sizes="114x114" href="/img/apple-touch-icon-114x114.png">
-  <link inline rel="stylesheet" href="../style.css">
+  <link inline rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
 
@@ -832,51 +832,6 @@
         </tr>
       </tbody>
     </table>
-
-    <hr class="custom-hr">
-
-    <h2 id="non-responsive-grid">Non-responsive grid</h2>
-    <p>
-      Sometimes, you may be required to create 2 separate versions of a website and may not need responsiveness.
-    </p>
-    <p>To disable responsiveness, please follow the below steps</p>
-
-    <ol>
-      <li>
-        Rename <code>_mobile-styles.less</code> to <code>_styles.less</code> within <code>less/base/</code>
-      </li>
-      <li>
-        Open up <code>style.less</code> in your favourite code editor
-      </li>
-      <li>
-        Comment out line 21: <code>@import "base/_grid";</code>
-      </li>
-      <li>
-        Uncomment out line 22: <code>@import "base/_grid-non-responsive";</code>
-      </li>
-      <li>
-        Replace line 24: <code>@import "_mobile-styles";</code> to <code>@import "_styles";</code>
-      </li>
-      <li>
-        Comment out lines 26 - 39 (Tablet Styles, Desktop Styles, HD Styles)
-      </li>
-      <li>
-        Save the above changes and close <code>_style.less</code>
-      </li>
-      <li>
-        Styles for your project are now stored within <code>_styles.less</code>
-      </li>
-      <li>
-        Open <code>index.html</code> and remove line 9: <br>
-        <code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code>
-      </li>
-      <li>
-        Save the above change and close <code>index.html</code>
-      </li>
-      <li>
-        See the <a href="non-responsive-grid.html">non-responsive grid</a> example in action
-      </li>
-    </ol>
 
     <hr class="custom-hr">
 

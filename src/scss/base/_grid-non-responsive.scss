@@ -1,0 +1,58 @@
+// ==========================================================================
+// Base – Non-Responsive Grid
+// ==========================================================================
+
+// Micro Clearfix - http://nicolasgallagher.com/micro-clearfix-hack/
+.clear:before, .clear:after { content: " "; display: table; } .clear:after { clear: both; }
+.row:before, .row:after { content: ""; display: table; } .row:after { clear: both; }
+
+.row {
+  position: relative;
+  margin-left: -$grid-gutter;
+  margin-right: -$grid-gutter;
+}
+
+// Mobile Container
+.container {
+  padding-left: $grid-gutter;
+  padding-right: $grid-gutter;
+  margin-left: auto;
+  margin-right: auto;
+  width: $container-desktop;
+}
+.container-full {
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Grid Columns - Global Rules
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
+  padding-left: $grid-gutter;
+  padding-right: $grid-gutter;
+  position: relative;
+  float: left;
+}
+
+// Grid
+$columns: 12;
+@for $i from 1 through $columns {
+  .col-#{$i} {
+    width: ($i / $columns) * 100%;
+  }
+}
+
+// Push Offsets
+@for $i from 1 through $columns - 1 {
+  .push-#{$i} {
+    left: ($i / $columns) * 100%;
+  }
+}
+
+// Pull Offsets
+@for $i from 1 through $columns - 1 {
+  .pull-#{$i} {
+    left: -($i / $columns) * 100%;
+  }
+}

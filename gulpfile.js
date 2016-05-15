@@ -2,12 +2,14 @@
 var gulp = require('gulp'),
     watch = require('gulp-watch'),
     sass = require('gulp-sass'),
-    less = require('gulp-less'),
+    sourcemaps = require('gulp-sourcemaps'),
+    cssBase64 = require('gulp-css-base64'),
     path = require('path'),
     notify = require('gulp-notify'),
     inlinesource = require('gulp-inline-source'),
     browserSync = require('browser-sync'),
     imagemin = require('gulp-imagemin'),
+    del = require('del'),
     cache = require('gulp-cache'),
     uglify = require('gulp-uglify'),
     autoprefixer = require('gulp-autoprefixer'),
@@ -15,46 +17,44 @@ var gulp = require('gulp'),
 
 // Task to compile SCSS
 gulp.task('sass', function () {
-  return gulp.src('./src/scss/style.scss')
+  return gulp.src('./src/scss/styles.scss')
+    .pipe(sourcemaps.init())
     .pipe(sass({
       errLogToConsole: false,
       paths: [ path.join(__dirname, 'scss', 'includes') ]
     })
-    .on('error', notify.onError(function(error) {
-      return 'Failed to Compile SCSS: ' + error.message;
+    .on("error", notify.onError(function(error) {
+      return "Failed to Compile SCSS: " + error.message;
     })))
+    .pipe(cssBase64())
     .pipe(autoprefixer())
-    .pipe(gulp.dest('./src/'))
-    .pipe(gulp.dest('./'))
+    .pipe(sourcemaps.write('./'))
+    .pipe(gulp.dest('./src/css'))
+    .pipe(gulp.dest('./css'))
     .pipe(browserSync.reload({
       stream: true
     }))
-    .pipe(notify('SCSS Compiled Successfully :)'));
+    .pipe(notify("SCSS Compiled Successfully :)"));
 });
 
-// Task to compile LESS
-gulp.task('less', function () {
-  return gulp.src('./src/less/style.less')
-    .pipe(less({ paths: [ path.join(__dirname, 'less', 'includes') ]
+gulp.task('styleguide', function () {
+  return gulp.src('./src/scss/styleguide.scss')
+  .pipe(sourcemaps.init())
+  .pipe(sass({
+    errLogToConsole: false,
+    paths: [ path.join(__dirname, 'scss', 'includes') ]
   })
-  .on('error', function(err) {
-    this.emit('end');
-  }))
-  .on('error', notify.onError(function(error) {
-    return 'Failed to Compile LESS: ' + error.message;
-  }))
-  .pipe(gulp.dest('./src/'))
-  .pipe(gulp.dest('./'))
+  .on("error", notify.onError(function(error) {
+    return "Failed to Compile Styleguide SCSS: " + error.message;
+  })))
+  .pipe(cssBase64())
+  .pipe(autoprefixer())
+  .pipe(sourcemaps.write('./'))
+  .pipe(gulp.dest('./src/css/'))
   .pipe(browserSync.reload({
     stream: true
   }))
-  .pipe(notify('LESS Compiled Successfully :)'));
-});
-
-// Task to move compiled CSS to root
-gulp.task('movecss', function () {
-  return gulp.src('./src/style.css')
-    .pipe(gulp.dest('./'));
+  .pipe(notify("Styleguide SCSS Compiled Successfully :)"));
 });
 
 // Task to Minify JS
@@ -79,7 +79,7 @@ gulp.task('browserSync', function() {
   browserSync({
     server: {
       baseDir: './src/'
-    },
+    }
   })
 });
 
@@ -95,9 +95,17 @@ gulp.task('inlinesource', function () {
 
 // Gulp Watch Task
 gulp.task('watch', ['browserSync'], function () {
-   gulp.watch('./src/scss/**/*', ['sass']),
-   gulp.watch('./src/less/**/*', ['less']);
+   gulp.watch('./src/scss/**/*', ['sass', 'styleguide']);
    gulp.watch('./src/**/*.html').on('change', browserSync.reload);
+});
+
+// Gulp Clean Up Task
+gulp.task('clean', function() {
+  del('./css');
+  del('./docs');
+  del('./js');
+  del('./img');
+  del('./index.html');
 });
 
 // Gulp Default Task
@@ -105,5 +113,5 @@ gulp.task('default', ['watch']);
 
 // Gulp Build Task
 gulp.task('build', function() {
-  runSequence('movecss', 'imagemin', 'jsmin', 'inlinesource');
+  runSequence('sass', 'styleguide', 'imagemin', 'jsmin', 'inlinesource');
 });
