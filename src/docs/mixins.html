@@ -12,7 +12,7 @@
   </script>
   <meta name="description" content="A set of helpful mixins for setting font size, line heights, rounded borders, rotating elements, SVG backgrounds with PNG fallbacks, background colors with opacity and more.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#F7C723">
+  <meta name="theme-color" content="#f7c824">
   <link rel="shortcut icon" href="/img/favicon.png">
   <link rel="apple-touch-icon" sizes="57x57" href="/img/apple-touch-icon.png">
   <link rel="apple-touch-icon" sizes="72x72" href="/img/apple-touch-icon-72x72.png">
@@ -23,55 +23,28 @@
 
 <div class="banner">
   <div class="container">
-    <div class="header clear">
-      <input type="checkbox" class="menu-checkbox" id="navigation" name="navigation">
-      <label class="menu-label animated fade-in-right" for="navigation" id="toggle-menu">
-        <span class="menu-label-inner">
-          <span class="menu-label-open">Menu</span>
-          <span class="menu-label-close">Close</span>
-        </span>
-      </label>
-      <a class="logo" href="/"><span class="sr">Base</span></a>
-      <div class="navigation" id="menu">
-        <div class="navigation-inner container-full">
-          <div class="menu container">
-            <div class="clear row">
-              <div class="col-4-tablet">
-                <strong class="menu-heading"><a class="menu-heading-link" href="/">Home</a></strong>
-                <ul class="menu-secondary">
-                  <li class="menu-item"><a href="https://github.com/matthewhartman/base/archive/master.zip" class="menu-item-link">Download Latest Build</a></li>
-                  <li class="menu-item"><a href="https://github.com/matthewhartman/base" class="menu-item-link">View Source on Github</a></li>
-                  <li class="menu-item"><a href="https://github.com/matthewhartman/base/issues" class="menu-item-link">Current Issues</a></li>
-                </ul>
-              </div>
-              <div class="col-4-tablet">
-                <strong class="menu-heading"><a class="menu-heading-link active" href="/docs/">Documentation</a></strong>
-                <ul class="menu-secondary">
-                  <li class="menu-item"><a href="/docs/" class="menu-item-link">Introduction</a></li>
-                  <li class="menu-item"><a href="/docs/gulpjs.html" class="menu-item-link">GulpJS Config</a></li>
-                  <li class="menu-item"><a href="/docs/html.html" class="menu-item-link">HTML Template</a></li>
-                  <li class="menu-item"><a href="/docs/css.html" class="menu-item-link">LESS/SCSS/CSS</a></li>
-                  <li class="menu-item"><a href="/docs/assets.html" class="menu-item-link">Assets</a></li>
-                  <li class="menu-item"><a href="/docs/helpers.html" class="menu-item-link">Helpers</a></li>
-                  <li class="menu-item"><a href="/docs/grid.html" class="menu-item-link">The Grid</a></li>
-                  <li class="menu-item"><a href="/docs/mixins.html" class="menu-item-link active">Mixins</a></li>
-                  <li class="menu-item"><a href="/docs/animations.html" class="menu-item-link">Animations</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="header clear pad-top-30 pad-bottom-30">
+      <a class="logo left-l" href="/"><span class="sr">Base</span></a>
+      <ul class="menu right-l">
+        <li class="menu-item"><a href="/docs/" class="menu-item-link">Introduction</a></li>
+        <li class="menu-item"><a href="/docs/gulpjs.html" class="menu-item-link">GulpJS Config</a></li>
+        <li class="menu-item"><a href="/docs/html.html" class="menu-item-link">HTML</a></li>
+        <li class="menu-item"><a href="/docs/css.html" class="menu-item-link">SCSS/CSS</a></li>
+        <li class="menu-item"><a href="/docs/helpers.html" class="menu-item-link">Helpers</a></li>
+        <li class="menu-item"><a href="/docs/grid.html" class="menu-item-link">The Grid</a></li>
+        <li class="menu-item"><a href="/docs/mixins.html" class="menu-item-link active">Mixins</a></li>
+        <li class="menu-item"><a href="/docs/animations.html" class="menu-item-link">Animations</a></li>
+      </ul>
     </div>
   </div>
 </div>
 
-<div class="content container">
+<div class="pad-top-40 pad-bottom-40 container">
   <div class="content-inner">
 
-    <div class="text-center">
+    <div class="pad-bottom-20 text-center col-11-m no-float center-element">
       <h1>Mixins</h1>
-      <p class="h3 col-10-desktop no-float center-element">
+      <p class="fs-3 col-12 no-float center col-9-m no-float-m center-m">
       A set of helpful mixins for setting font size, line heights, rounded borders, rotating elements,
       SVG backgrounds with PNG fallbacks, background colors with opacity and more.
       </p>
@@ -92,10 +65,7 @@
 
     <h2>Overview</h2>
     <p>
-      All Mixins are stored within <code>_mixins.less</code>.
-    </p>
-    <p>
-      Below is a list of the current mixins.
+      Below is a list of all the current mixins which are stored in <code>_mixins.scss</code>.
     </p>
 
     <table class="mixins-table">
@@ -111,13 +81,13 @@
       <tbody>
         <tr>
           <td class="mobile-table-header" data-title="Mixin">
-            <span class="data-content"><code>.font-size(number)</code></span>
+            <span class="data-content"><code>@include font-size(number)</code></span>
           </td>
           <td data-title="Purpose">
             <span class="data-content">Applies font size in <code>rem</code> units with a <code>px</code> fallback</span>
           </td>
           <td data-title="Example">
-            <span class="data-content"><code>.font-size(16)</code></span>
+            <span class="data-content"><code>@include font-size(16)</code></span>
           </td>
           <td data-title="Outcome">
             <span class="data-content">Applies font size of 1rem with 16px fallback</span>
@@ -125,167 +95,64 @@
         </tr>
         <tr>
           <td class="mobile-table-header" data-title="Mixin">
-            <span class="data-content"><code>.line-height(number)</code></span>
+            <span class="data-content"><code>@include line-height(number)</code></span>
           </td>
           <td data-title="Purpose">
             <span class="data-content">Applies line height in <code>rem</code> units with a <code>px</code> fallback</span>
           </td>
           <td data-title="Example">
-            <span class="data-content"><code>.line-height(22)</code></span>
+            <span class="data-content"><code>@include line-height(22)</code></span>
           </td>
           <td data-title="Output"><span class="data-content">Applies line height of 1.375rem with 22px fallback</span></td>
         </tr>
         <tr>
           <td class="mobile-table-header" data-title="Mixin">
-            <span class="data-content"><code>.border-radius(number px/%)</code></span>
-          </td>
-          <td data-title="Purpose">
-            <span class="data-content">Applies rounded corners to an element and includes all browser prefixes</span>
-          </td>
-          <td data-title="Example">
-            <span class="data-content"><code>.border-radius(3px)</code></span>
-          </td>
-          <td data-title="Outcome">
-            <span class="data-content">Applies a border radius of 3px</span>
-          </td>
-        </tr>
-        <tr>
-          <td class="mobile-table-header" data-title="Mixin">
-            <span class="data-content"><code>.rotate(number)</code></span>
-          </td>
-          <td data-title="Purpose">
-            <span class="data-content">Applies rotate transform to an element and includes all browser prefixes</span>
-          </td>
-          <td data-title="Example">
-            <span class="data-content"><code>.rotate(45)</code></span>
-          </td>
-          <td data-title="Output"><span class="data-content">Rotates an element 45 degrees clockwise (note you can use negative values to rotate anti-clockwise)</span></td>
-        </tr>
-        <tr>
-          <td class="mobile-table-header" data-title="Mixin">
-            <span class="data-content"><code>.bg-svg("svg", "png", xPositon percentage, yPosition percentage, repeat mode)</code></span>
-          </td>
-          <td data-title="Purpose">
-            <span class="data-content">Applies an SVG background image with PNG fallback (needs modernizr to work 100%)</span>
-          </td>
-          <td data-title="Example">
-            <span class="data-content"><code>.bg-svg("img/logo.svg", "img/logo.png", 50%, 50%, no-repeat)</code></span>
-          </td>
-          <td data-title="Output">
-            <span class="data-content">
-              Applies a background image of logo.svg with a fallback of logo.png. The background x position is set
-              to 50% and the y position to 50% with no repeat
-            </span>
-          </td>
-        </tr>
-        <tr>
-          <td class="mobile-table-header" data-title="Mixin">
-            <span class="data-content"><code>.bg-rgba(hex, percentage)</code></span>
+            <span class="data-content"><code>@include background-alpha(hex, percentage)</code></span>
           </td>
           <td data-title="Purpose">
             <span class="data-content">Applies a background color with opacity</span>
           </td>
           <td data-title="Example">
-            <span class="data-content"><code>.bg-rgba(#000, 50%)</code></span>
+            <span class="data-content"><code>@include background-alpha(#000, 50%)</code></span>
           </td>
           <td data-title="Output"><span class="data-content">Applies a background color of black with opacity set to 50%</span></td>
         </tr>
         <tr>
           <td class="mobile-table-header" data-title="Mixin">
-            <span class="data-content"><code>.opacity(percentage)</code></span>
-          </td>
-          <td data-title="Purpose">
-            <span class="data-content">Applies opacity</span>
-          </td>
-          <td data-title="Example">
-            <span class="data-content"><code>.opacity(50%)</code></span>
-          </td>
-          <td data-title="Output"><span class="data-content">Applies an opacity of 50%</span></td>
-        </tr>
-        <tr>
-          <td class="mobile-table-header" data-title="Mixin">
-            <span class="data-content"><code>.animate(time)</code></span>
+            <span class="data-content"><code>@include animate(time)</code></span>
           </td>
           <td data-title="Purpose">
             <span class="data-content">Applies animation speed</span>
           </td>
           <td data-title="Example">
-            <span class="data-content"><code>.animate(2s)</code></span>
+            <span class="data-content"><code>@include animate(2s)</code></span>
           </td>
           <td data-title="Output"><span class="data-content">Animation will run for 2 seconds</span></td>
-        </tr>
-        <tr>
-          <td class="mobile-table-header" data-title="Mixin">
-            <span class="data-content"><code>.animate-delay(time)</code></span>
-          </td>
-          <td data-title="Purpose">
-            <span class="data-content">Applies animation delay</span>
-          </td>
-          <td data-title="Example">
-            <span class="data-content"><code>.animate-delay(2s)</code></span>
-          </td>
-          <td data-title="Output"><span class="data-content">Animation is delayed for 2 seconds until it runs</span></td>
-        </tr>
-        <tr>
-          <td class="mobile-table-header" data-title="Mixin">
-            <span class="data-content"><code>.transition(time)</code></span>
-          </td>
-          <td data-title="Purpose">
-            <span class="data-content">Applies CSS transition</span>
-          </td>
-          <td data-title="Example">
-            <span class="data-content"><code>.transition(0.3s)</code></span>
-          </td>
-          <td data-title="Output"><span class="data-content">CSS transition will run for 0.3 seconds</span></td>
-        </tr>
-        <tr>
-          <td class="mobile-table-header" data-title="Mixin">
-            <span class="data-content"><code>.transition-delay(time)</code></span>
-          </td>
-          <td data-title="Purpose">
-            <span class="data-content">Applies CSS transition delay</span>
-          </td>
-          <td data-title="Example">
-            <span class="data-content"><code>.transition-delay(0.3s)</code></span>
-          </td>
-          <td data-title="Output"><span class="data-content">CSS transition is delayed for 0.3 seconds</span></td>
-        </tr>
-        <tr>
-          <td class="mobile-table-header" data-title="Mixin">
-            <span class="data-content"><code>.svg-fill(svg-src, color)</code></span>
-          </td>
-          <td data-title="Purpose">
-            <span class="data-content">Embeds the SVG image into CSS using data-uri();</span>
-          </td>
-          <td data-title="Example">
-            <span class="data-content"><code>.svg-fill("img/twitter.svg", "#f30");</code></span>
-          </td>
-          <td data-title="Output"><span class="data-content">Original SVG is dark grey. New SVG will now render in orange: <span class="twitter-icon"></span> </span></td>
         </tr>
       </tbody>
     </table>
 
-    <hr class="spacer">
-
-    <h2>Animations</h2>
-    <p>
-      Check out the cool <a href="/docs/animations.html">animations</a> to give your website that pop!
-    </p>
+    <div class="pad-top-30">
+      <h2>Animations</h2>
+      <p>
+        Check out the cool <a href="/docs/animations.html">animations</a> to give your website that pop!
+      </p>
+    </div>
 
   </div>
 </div>
 
-<div class="footer">
+<div class="footer pad-top-20 pad-bottom-20 fs-6">
   <div class="container">
     <div class="clear">
-      <div class="col-6-desktop">
-        <p>
-          Built with love in the land down under by <a href="http://matthewhartman.com.au">Matthew Hartman</a>
+      <div class="col-6-m">
+        <p class="no-margin r-bottom-10">
+          Built in the land down under by <a href="http://matthewhartman.com.au">Matthew Hartman</a>
         </p>
       </div>
-      <div class="col-6-desktop">
-        <ul class="footer-links list-inline text-right-tablet">
-          <li><a href="https://github.com/matthewhartman/base">View Source on Github</a></li>
+      <div class="col-6-m">
+        <ul class="footer-links list-inline text-right-m">
+          <li><a href="https://github.com/matthewhartman/base">View on Github</a></li>
           <li><a href="https://github.com/matthewhartman/base/issues">Current Issues</a></li>
           <li><a href="/docs/">Documentation</a></li>
         </ul>

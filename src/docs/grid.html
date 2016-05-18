@@ -12,7 +12,7 @@
   </script>
   <meta name="description" content="A mobile-first, 12 column grid built for all devices big and small.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#F7C723">
+  <meta name="theme-color" content="#f7c824">
   <script src="../js/vendor/run_prettify.js"></script>
   <link rel="shortcut icon" href="/img/favicon.png">
   <link rel="apple-touch-icon" sizes="57x57" href="/img/apple-touch-icon.png">
@@ -24,55 +24,28 @@
 
 <div class="banner">
   <div class="container">
-    <div class="header clear">
-      <input type="checkbox" class="menu-checkbox" id="navigation" name="navigation">
-      <label class="menu-label animated fade-in-right" for="navigation" id="toggle-menu">
-        <span class="menu-label-inner">
-          <span class="menu-label-open">Menu</span>
-          <span class="menu-label-close">Close</span>
-        </span>
-      </label>
-      <a class="logo" href="/"><span class="sr">Base</span></a>
-      <div class="navigation" id="menu">
-        <div class="navigation-inner container-full">
-          <div class="menu container">
-            <div class="clear row">
-              <div class="col-4-tablet">
-                <strong class="menu-heading"><a class="menu-heading-link" href="/">Home</a></strong>
-                <ul class="menu-secondary">
-                  <li class="menu-item"><a href="https://github.com/matthewhartman/base/archive/master.zip" class="menu-item-link">Download Latest Build</a></li>
-                  <li class="menu-item"><a href="https://github.com/matthewhartman/base" class="menu-item-link">View Source on Github</a></li>
-                  <li class="menu-item"><a href="https://github.com/matthewhartman/base/issues" class="menu-item-link">Current Issues</a></li>
-                </ul>
-              </div>
-              <div class="col-4-tablet">
-                <strong class="menu-heading"><a class="menu-heading-link active" href="/docs/">Documentation</a></strong>
-                <ul class="menu-secondary">
-                  <li class="menu-item"><a href="/docs/" class="menu-item-link">Introduction</a></li>
-                  <li class="menu-item"><a href="/docs/gulpjs.html" class="menu-item-link">GulpJS Config</a></li>
-                  <li class="menu-item"><a href="/docs/html.html" class="menu-item-link">HTML Template</a></li>
-                  <li class="menu-item"><a href="/docs/css.html" class="menu-item-link">LESS/SCSS/CSS</a></li>
-                  <li class="menu-item"><a href="/docs/assets.html" class="menu-item-link">Assets</a></li>
-                  <li class="menu-item"><a href="/docs/helpers.html" class="menu-item-link">Helpers</a></li>
-                  <li class="menu-item"><a href="/docs/grid.html" class="menu-item-link active">The Grid</a></li>
-                  <li class="menu-item"><a href="/docs/mixins.html" class="menu-item-link">Mixins</a></li>
-                  <li class="menu-item"><a href="/docs/animations.html" class="menu-item-link">Animations</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="header clear pad-top-30 pad-bottom-30">
+      <a class="logo left-l" href="/"><span class="sr">Base</span></a>
+      <ul class="menu right-l">
+        <li class="menu-item"><a href="/docs/" class="menu-item-link">Introduction</a></li>
+        <li class="menu-item"><a href="/docs/gulpjs.html" class="menu-item-link">GulpJS Config</a></li>
+        <li class="menu-item"><a href="/docs/html.html" class="menu-item-link">HTML</a></li>
+        <li class="menu-item"><a href="/docs/css.html" class="menu-item-link">SCSS/CSS</a></li>
+        <li class="menu-item"><a href="/docs/helpers.html" class="menu-item-link">Helpers</a></li>
+        <li class="menu-item"><a href="/docs/grid.html" class="menu-item-link active">The Grid</a></li>
+        <li class="menu-item"><a href="/docs/mixins.html" class="menu-item-link">Mixins</a></li>
+        <li class="menu-item"><a href="/docs/animations.html" class="menu-item-link">Animations</a></li>
+      </ul>
     </div>
   </div>
 </div>
 
-<div class="content container">
+<div class="pad-top-40 pad-bottom-40 container">
   <div class="content-inner">
 
-    <div class="text-center">
+    <div class="pad-bottom-20 text-center col-11-m no-float center-element">
       <h1>Grid</h1>
-      <p class="h3 col-10-desktop no-float center-element">
+      <p class="fs-3 col-12 no-float center col-9-m no-float-m center-m">
         A mobile-first, 12 column grid built for all devices big and small. The syntax is simple and
         it works on all major browsers including Chrome, Safari, Firefox and Internet Explorer 8+.
       </p>
@@ -140,8 +113,7 @@
     </ul>
 
     <p>
-      The width of containers and breakpoints for each viewport can be updated within
-      <code>_variables.less</code> or <code>_variables.scss</code>.
+      The width of containers and breakpoints for each viewport can be updated within <code>_variables.scss</code>.
     </p>
 
     <p>
@@ -159,7 +131,7 @@
       <tbody>
         <tr>
           <td>
-            @container-mobile
+            $container
           </td>
           <td>
             <code>100%</code>
@@ -170,7 +142,7 @@
         </tr>
         <tr>
           <td>
-            @container-tablet
+            $container-m
           </td>
           <td>
             <code>720px</code>
@@ -181,7 +153,7 @@
         </tr>
         <tr>
           <td>
-            @container-desktop
+            $container-l
           </td>
           <td>
             <code>960px</code>
@@ -192,7 +164,7 @@
         </tr>
         <tr>
           <td>
-            @container-hd
+            $container-xl
           </td>
           <td>
             <code>1120px</code>
@@ -203,10 +175,10 @@
         </tr>
         <tr>
           <td>
-            @breakpoint-tablet
+            $breakpoint-m
           </td>
           <td>
-            <code>@container-tablet - 1 (719px)</code>
+            <code>$container-m + 20 (740px)</code>
           </td>
           <td>
             Tablet breakpoint width
@@ -214,10 +186,10 @@
         </tr>
         <tr>
           <td>
-            @breakpoint-desktop
+            $breakpoint-l
           </td>
           <td>
-            <code>@container-desktop + 20 (980px)</code>
+            <code>$container-l + 20 (980px)</code>
           </td>
           <td>
             Desktop breakpoint width
@@ -225,10 +197,10 @@
         </tr>
         <tr>
           <td>
-            @breakpoint-hd
+            $breakpoint-xl
           </td>
           <td>
-            <code>@container-hd + 20 (1140px)</code>
+            <code>$container-xl + 20 (1140px)</code>
           </td>
           <td>
             HD breakpoint width
@@ -274,7 +246,7 @@
         </tr>
         <tr>
           <td>
-            <code>.col-1-tablet</code> - <code>.col-12-tablet</code>
+            <code>.col-1-m</code> - <code>.col-12-m</code>
           </td>
           <td class="support unavailable">
             <span class="sr">Rules don't apply on mobile</span>
@@ -291,7 +263,7 @@
         </tr>
         <tr>
           <td>
-            <code>.col-1-desktop</code> - <code>.col-12-desktop</code>
+            <code>.col-1-l</code> - <code>.col-12-l</code>
           </td>
           <td class="support unavailable">
             <span class="sr">Rules don't apply on mobile</span>
@@ -308,7 +280,7 @@
         </tr>
         <tr>
           <td>
-            <code>.col-1-hd</code> - <code>.col-12-hd</code>
+            <code>.col-1-xl</code> - <code>.col-12-xl</code>
           </td>
           <td class="support unavailable">
             <span class="sr">Rules don't apply on mobile</span>
@@ -330,87 +302,87 @@
 
     <h3>Mobile-First Grid Example</h3>
     <div class="grid-example">
-      <div class="clear">
+      <div class="clear pad-top-5 pad-bottom-5">
         <div class="col-1">
-          <span class="col-content">col-1</span>
+          <span class="column-content">col-1</span>
         </div>
         <div class="col-11">
-          <span class="col-content">col-11</span>
+          <span class="column-content">col-11</span>
         </div>
       </div>
-      <div class="clear">
+      <div class="clear pad-top-5 pad-bottom-5">
         <div class="col-2">
-          <span class="col-content">col-2</span>
+          <span class="column-content">col-2</span>
         </div>
         <div class="col-10">
-          <span class="col-content">col-10</span>
+          <span class="column-content">col-10</span>
         </div>
       </div>
-      <div class="clear">
+      <div class="clear pad-top-5 pad-bottom-5">
         <div class="col-3">
-          <span class="col-content">col-3</span>
+          <span class="column-content">col-3</span>
         </div>
         <div class="col-9">
-          <span class="col-content">col-9</span>
+          <span class="column-content">col-9</span>
         </div>
       </div>
-      <div class="clear">
+      <div class="clear pad-top-5 pad-bottom-5">
         <div class="col-4">
-          <span class="col-content">col-4</span>
+          <span class="column-content">col-4</span>
         </div>
         <div class="col-8">
-          <span class="col-content">col-8</span>
+          <span class="column-content">col-8</span>
         </div>
       </div>
-      <div class="clear">
+      <div class="clear pad-top-5 pad-bottom-5">
         <div class="col-5">
-          <span class="col-content">col-5</span>
+          <span class="column-content">col-5</span>
         </div>
         <div class="col-7">
-          <span class="col-content">col-7</span>
+          <span class="column-content">col-7</span>
         </div>
       </div>
-      <div class="clear">
+      <div class="clear pad-top-5 pad-bottom-5">
         <div class="col-6">
-          <span class="col-content">col-6</span>
+          <span class="column-content">col-6</span>
         </div>
         <div class="col-6">
-          <span class="col-content">col-6</span>
+          <span class="column-content">col-6</span>
         </div>
       </div>
-      <div class="clear">
+      <div class="clear pad-top-5 pad-bottom-5">
         <div class="col-12">
-          <span class="col-content">col-12</span>
+          <span class="column-content">col-12</span>
         </div>
       </div>
     </div>
     
     <pre class="prettyprint lang-html">
-&lt;div class="clear"&gt;
+&lt;div class="clear pad-top-5 pad-bottom-5"&gt;
   &lt;div class="col-1"&gt;col-1&lt;/div&gt;
   &lt;div class="col-11"&gt;col-11&lt;/div&gt;
 &lt;/div&gt;
-&lt;div class="clear"&gt;
+&lt;div class="clear pad-top-5 pad-bottom-5"&gt;
   &lt;div class="col-2"&gt;col-2&lt;/div&gt;
   &lt;div class="col-10"&gt;col-10&lt;/div&gt;
 &lt;/div&gt;
-&lt;div class="clear"&gt;
+&lt;div class="clear pad-top-5 pad-bottom-5"&gt;
   &lt;div class="col-3"&gt;col-3&lt;/div&gt;
   &lt;div class="col-9"&gt;col-9&lt;/div&gt;
 &lt;/div&gt;
-&lt;div class="clear"&gt;
+&lt;div class="clear pad-top-5 pad-bottom-5"&gt;
   &lt;div class="col-4"&gt;col-4&lt;/div&gt;
   &lt;div class="col-8"&gt;col-8&lt;/div&gt;
 &lt;/div&gt;
-&lt;div class="clear"&gt;
+&lt;div class="clear pad-top-5 pad-bottom-5"&gt;
   &lt;div class="col-5"&gt;col-5&lt;/div&gt;
   &lt;div class="col-7"&gt;col-7&lt;/div&gt;
 &lt;/div&gt;
-&lt;div class="clear"&gt;
+&lt;div class="clear pad-top-5 pad-bottom-5"&gt;
   &lt;div class="col-6"&gt;col-6&lt;/div&gt;
   &lt;div class="col-6"&gt;col-6&lt;/div&gt;
 &lt;/div&gt;
-&lt;div class="clear"&gt;
+&lt;div class="clear pad-top-5 pad-bottom-5"&gt;
   &lt;div class="col-12"&gt;col-12&lt;/div&gt;
 &lt;/div&gt;    
     </pre>
@@ -419,31 +391,31 @@
   
     <h3>Mixed Grid Example</h3>
     <div class="grid-example">
-      <div class="clear">
-        <div class="col-6 col-3-tablet col-8-desktop col-2-hd">
-          <div class="col-content">
-            <span class="none-tablet">col 6</span>
-            <span class="none block-tablet none-desktop">col 3</span>
-            <span class="none block-desktop none-hd">col 8</span>
-            <span class="none block-hd">col 2</span>
+      <div class="clear pad-top-5 pad-bottom-5">
+        <div class="col-6 col-3-m col-8-l col-2-xl">
+          <div class="column-content">
+            <span class="none-m">col 6</span>
+            <span class="none block-m none-l">col 3</span>
+            <span class="none block-l none-xl">col 8</span>
+            <span class="none block-xl">col 2</span>
           </div>
         </div>
-        <div class="col-6 col-9-tablet col-4-desktop col-10-hd">
-          <div class="col-content">
-            <span class="none-tablet">col 6</span>
-            <span class="none block-tablet none-desktop">col 9</span>
-            <span class="none block-desktop none-hd">col 4</span>
-            <span class="none block-hd">col 10</span>
+        <div class="col-6 col-9-m col-4-l col-10-xl">
+          <div class="column-content">
+            <span class="none-m">col 6</span>
+            <span class="none block-m none-l">col 9</span>
+            <span class="none block-l none-xl">col 4</span>
+            <span class="none block-xl">col 10</span>
           </div>
         </div>
       </div>
     </div>
 <pre class="prettyprint lang-html">
-&lt;div class="clear"&gt;
-  &lt;div class="col-6 col-3-tablet col-8-desktop col-2-hd"&gt;
+&lt;div class="clear pad-top-5 pad-bottom-5"&gt;
+  &lt;div class="col-6 col-3-m col-8-l col-2-xl"&gt;
     content...
   &lt;/div&gt;
-  &lt;div class="col-6 col-9-tablet col-4-desktop col-10-hd"&gt;
+  &lt;div class="col-6 col-9-m col-4-l col-10-xl"&gt;
     content...
   &lt;/div&gt;
 &lt;/div&gt;
@@ -505,7 +477,7 @@
         </tr>
         <tr>
           <td>
-            <code>.push-1-tablet</code> - <code>.push-11-tablet</code>
+            <code>.push-1-m</code> - <code>.push-11-m</code>
           </td>
           <td class="support unavailable">
             <span class="sr">Rules don't apply on mobile</span>
@@ -522,7 +494,7 @@
         </tr>
         <tr>
           <td>
-            <code>.pull-1-tablet</code> - <code>.pull-11-tablet</code>
+            <code>.pull-1-m</code> - <code>.pull-11-m</code>
           </td>
           <td class="support unavailable">
             <span class="sr">Rules don't apply on mobile</span>
@@ -539,7 +511,7 @@
         </tr>
         <tr>
           <td>
-            <code>.push-1-desktop</code> - <code>.push-11-desktop</code>
+            <code>.push-1-l</code> - <code>.push-11-l</code>
           </td>
           <td class="support unavailable">
             <span class="sr">Rules don't apply on mobile</span>
@@ -556,7 +528,7 @@
         </tr>
         <tr>
           <td>
-            <code>.pull-1-desktop</code> - <code>.pull-11-desktop</code>
+            <code>.pull-1-l</code> - <code>.pull-11-l</code>
           </td>
           <td class="support unavailable">
             <span class="sr">Rules don't apply on mobile</span>
@@ -573,7 +545,7 @@
         </tr>
         <tr>
           <td>
-            <code>.push-1-hd</code> - <code>.push-11-hd</code>
+            <code>.push-1-xl</code> - <code>.push-11-xl</code>
           </td>
           <td class="support unavailable">
             <span class="sr">Rules don't apply on mobile</span>
@@ -590,7 +562,7 @@
         </tr>
         <tr>
           <td>
-            <code>.pull-1-hd</code> - <code>.pull-11-hd</code>
+            <code>.pull-1-xl</code> - <code>.pull-11-xl</code>
           </td>
           <td class="support unavailable">
             <span class="sr">Rules don't apply on mobile</span>
@@ -612,31 +584,31 @@
 
     <h3>Mixed Offset Example</h3>
     <div class="grid-example">
-      <div class="clear">
-        <div class="col-4 push-8 col-7-tablet push-5-tablet col-3-desktop push-9-desktop col-2-hd push-10-hd">
-          <div class="col-content">
-            <span class="none-tablet">col 4 with push 8</span>
-            <span class="none block-tablet none-desktop">col 7 with push 5</span>
-            <span class="none block-desktop none-hd">col 3 with push 9</span>
-            <span class="none block-hd">col 2 with push 10</span>
+      <div class="clear pad-top-5 pad-bottom-5">
+        <div class="col-4 push-8 col-7-m push-5-m col-3-l push-9-l col-2-xl push-10-xl">
+          <div class="column-content">
+            <span class="none-m">col 4 with push 8</span>
+            <span class="none block-m none-l">col 7 with push 5</span>
+            <span class="none block-l none-xl">col 3 with push 9</span>
+            <span class="none block-xl">col 2 with push 10</span>
           </div>
         </div>
-        <div class="col-8 pull-4 col-5-tablet pull-7-tablet col-9-desktop pull-3-desktop col-10-hd pull-2-hd">
-          <div class="col-content">
-            <span class="none-tablet">col 8 with pull 8</span>
-            <span class="none block-tablet none-desktop">col 5 with pull 7</span>
-            <span class="none block-desktop none-hd">col 9 with pull 3</span>
-            <span class="none block-hd">col 10 with pull 2</span>
+        <div class="col-8 pull-4 col-5-m pull-7-m col-9-l pull-3-l col-10-xl pull-2-xl">
+          <div class="column-content">
+            <span class="none-m">col 8 with pull 8</span>
+            <span class="none block-m none-l">col 5 with pull 7</span>
+            <span class="none block-l none-xl">col 9 with pull 3</span>
+            <span class="none block-xl">col 10 with pull 2</span>
           </div>
         </div>
       </div>
     </div>
 <pre class="prettyprint lang-html">
-&lt;div class="clear"&gt;
-  &lt;div class="col-4 push-8 col-7-tablet push-5-tablet col-3-desktop push-9-desktop col-2-hd push-10-hd"&gt;
+&lt;div class="clear pad-top-5 pad-bottom-5"&gt;
+  &lt;div class="col-4 push-8 col-7-m push-5-m col-3-l push-9-l col-2-xl push-10-xl"&gt;
     content...
   &lt;/div&gt;
-  &lt;div class="col-8 pull-4 col-5-tablet pull-7-tablet col-9-desktop pull-3-desktop col-10-hd pull-2-hd"&gt;
+  &lt;div class="col-8 pull-4 col-5-m pull-7-m col-9-l pull-3-l col-10-xl pull-2-xl"&gt;
     content...
   &lt;/div&gt;
 &lt;/div&gt;
@@ -688,145 +660,145 @@
         </tr>
         <tr>
           <td>
-            <code>.none-tablet</code>
+            <code>.none-m</code>
           </td>
           <td>Hides element on tablet devices and up</td>
         </tr>
         <tr>
           <td>
-            <code>.block-tablet</code>
+            <code>.block-m</code>
           </td>
           <td>Sets element to block on tablet devices and up</td>
         </tr>
         <tr>
           <td>
-            <code>.inline-block-tablet</code>
+            <code>.inline-block-m</code>
           </td>
           <td>Sets element to inline block on tablet devices and up</td>
         </tr>
         <tr>
           <td>
-            <code>.inline-tablet</code>
+            <code>.inline-m</code>
           </td>
           <td>Sets element to inline on tablet devices and up</td>
         </tr>
         <tr>
           <td>
-            <code>.no-padding-tablet</code>
+            <code>.no-padding-m</code>
           </td>
           <td>Removes padding for tablet devices and up</td>
         </tr>
         <tr>
           <td>
-            <code>.no-push-tablet</code>
+            <code>.no-push-m</code>
           </td>
           <td>Resets push for tablet devices and up</td>
         </tr>
         <tr>
           <td>
-            <code>.no-pull-tablet</code>
+            <code>.no-pull-m</code>
           </td>
           <td>Resets pull for tablet devices and up</td>
         </tr>
         <tr>
           <td>
-            <code>.col-none-tablet</code>
+            <code>.col-none-m</code>
           </td>
           <td>Removes float and resets width to auto for tablet devices and up</td>
         </tr>
         <tr>
           <td>
-            <code>.none-desktop</code>
+            <code>.none-l</code>
           </td>
           <td>Hides element on desktop devices and up</td>
         </tr>
         <tr>
           <td>
-            <code>.block-desktop</code>
+            <code>.block-l</code>
           </td>
           <td>Sets element to block on desktop devices and up</td>
         </tr>
         <tr>
           <td>
-            <code>.inline-block-desktop</code>
+            <code>.inline-block-l</code>
           </td>
           <td>Sets element to inline block on desktop devices and up</td>
         </tr>
         <tr>
           <td>
-            <code>.inline-desktop</code>
+            <code>.inline-l</code>
           </td>
           <td>Sets element to inline on desktop devices and up</td>
         </tr>
         <tr>
           <td>
-            <code>.no-padding-desktop</code>
+            <code>.no-padding-l</code>
           </td>
           <td>Removes padding for desktop devices and up</td>
         </tr>
         <tr>
           <td>
-            <code>.no-push-desktop</code>
+            <code>.no-push-l</code>
           </td>
           <td>Resets push for desktop devices and up</td>
         </tr>
         <tr>
           <td>
-            <code>.no-pull-desktop</code>
+            <code>.no-pull-l</code>
           </td>
           <td>Resets pull for desktop devices and up</td>
         </tr>
         <tr>
           <td>
-            <code>.col-none-desktop</code>
+            <code>.col-none-l</code>
           </td>
           <td>Removes float and resets width to auto for desktop devices and up</td>
         </tr>
         <tr>
           <td>
-            <code>.none-hd</code>
+            <code>.none-xl</code>
           </td>
           <td>Hides element on HD devices</td>
         </tr>
         <tr>
           <td>
-            <code>.block-hd</code>
+            <code>.block-xl</code>
           </td>
           <td>Sets element to block on HD devices</td>
         </tr>
         <tr>
           <td>
-            <code>.inline-block-hd</code>
+            <code>.inline-block-xl</code>
           </td>
           <td>Sets element to inline block on HD devices</td>
         </tr>
         <tr>
           <td>
-            <code>.inline-hd</code>
+            <code>.inline-xl</code>
           </td>
           <td>Sets element to inline on HD devices</td>
         </tr>
         <tr>
           <td>
-            <code>.no-padding-hd</code>
+            <code>.no-padding-xl</code>
           </td>
           <td>Removes padding for HD devices</td>
         </tr>
         <tr>
           <td>
-            <code>.no-push-hd</code>
+            <code>.no-push-xl</code>
           </td>
           <td>Resets push for HD devices</td>
         </tr>
         <tr>
           <td>
-            <code>.no-pull-hd</code>
+            <code>.no-pull-xl</code>
           </td>
           <td>Resets pull for HD devices</td>
         </tr>
         <tr>
           <td>
-            <code>.no-col-hd</code>
+            <code>.no-col-xl</code>
           </td>
           <td>Removes float and resets width to auto for HD devices and up</td>
         </tr>
@@ -854,24 +826,23 @@
 
     <h2>Mixins</h2>
     <p>
-      A set of helpful <a href="/docs/mixins.html">mixins</a> to easily create SVG fallbacks, border radius,
-      opacity, animations and much more!
+      A set of helpful <a href="/docs/mixins.html">mixins</a> to easily modify font sizes, line heights, animations and much more!
     </p>
 
   </div>
 </div>
 
-<div class="footer">
+<div class="footer pad-top-20 pad-bottom-20 fs-6">
   <div class="container">
     <div class="clear">
-      <div class="col-6-desktop">
-        <p>
-          Built with love in the land down under by <a href="http://matthewhartman.com.au">Matthew Hartman</a>
+      <div class="col-6-m">
+        <p class="no-margin r-bottom-10">
+          Built in the land down under by <a href="http://matthewhartman.com.au">Matthew Hartman</a>
         </p>
       </div>
-      <div class="col-6-desktop">
-        <ul class="footer-links list-inline text-right-tablet">
-          <li><a href="https://github.com/matthewhartman/base">View Source on Github</a></li>
+      <div class="col-6-m">
+        <ul class="footer-links list-inline text-right-m">
+          <li><a href="https://github.com/matthewhartman/base">View on Github</a></li>
           <li><a href="https://github.com/matthewhartman/base/issues">Current Issues</a></li>
           <li><a href="/docs/">Documentation</a></li>
         </ul>

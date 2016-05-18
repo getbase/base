@@ -12,7 +12,7 @@
   </script>
   <meta name="description" content="Global CSS helpers for removing styles, modifying typography, font weights, text positioning, general layout, form elements and accessibility helpers.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#F7C723">
+  <meta name="theme-color" content="#f7c824">
   <link rel="shortcut icon" href="/img/favicon.png">
   <link rel="apple-touch-icon" sizes="57x57" href="/img/apple-touch-icon.png">
   <link rel="apple-touch-icon" sizes="72x72" href="/img/apple-touch-icon-72x72.png">
@@ -23,55 +23,28 @@
 
 <div class="banner">
   <div class="container">
-    <div class="header clear">
-      <input type="checkbox" class="menu-checkbox" id="navigation" name="navigation">
-      <label class="menu-label animated fade-in-right" for="navigation" id="toggle-menu">
-        <span class="menu-label-inner">
-          <span class="menu-label-open">Menu</span>
-          <span class="menu-label-close">Close</span>
-        </span>
-      </label>
-      <a class="logo" href="/"><span class="sr">Base</span></a>
-      <div class="navigation" id="menu">
-        <div class="navigation-inner container-full">
-          <div class="menu container">
-            <div class="clear row">
-              <div class="col-4-tablet">
-                <strong class="menu-heading"><a class="menu-heading-link" href="/">Home</a></strong>
-                <ul class="menu-secondary">
-                  <li class="menu-item"><a href="https://github.com/matthewhartman/base/archive/master.zip" class="menu-item-link">Download Latest Build</a></li>
-                  <li class="menu-item"><a href="https://github.com/matthewhartman/base" class="menu-item-link">View Source on Github</a></li>
-                  <li class="menu-item"><a href="https://github.com/matthewhartman/base/issues" class="menu-item-link">Current Issues</a></li>
-                </ul>
-              </div>
-              <div class="col-4-tablet">
-                <strong class="menu-heading"><a class="menu-heading-link active" href="/docs/">Documentation</a></strong>
-                <ul class="menu-secondary">
-                  <li class="menu-item"><a href="/docs/" class="menu-item-link">Introduction</a></li>
-                  <li class="menu-item"><a href="/docs/gulpjs.html" class="menu-item-link">GulpJS Config</a></li>
-                  <li class="menu-item"><a href="/docs/html.html" class="menu-item-link">HTML Template</a></li>
-                  <li class="menu-item"><a href="/docs/css.html" class="menu-item-link">LESS/SCSS/CSS</a></li>
-                  <li class="menu-item"><a href="/docs/assets.html" class="menu-item-link">Assets</a></li>
-                  <li class="menu-item"><a href="/docs/helpers.html" class="menu-item-link active">Helpers</a></li>
-                  <li class="menu-item"><a href="/docs/grid.html" class="menu-item-link">The Grid</a></li>
-                  <li class="menu-item"><a href="/docs/mixins.html" class="menu-item-link">Mixins</a></li>
-                  <li class="menu-item"><a href="/docs/animations.html" class="menu-item-link">Animations</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="header clear pad-top-30 pad-bottom-30">
+      <a class="logo left-l" href="/"><span class="sr">Base</span></a>
+      <ul class="menu right-l">
+        <li class="menu-item"><a href="/docs/" class="menu-item-link">Introduction</a></li>
+        <li class="menu-item"><a href="/docs/gulpjs.html" class="menu-item-link">GulpJS Config</a></li>
+        <li class="menu-item"><a href="/docs/html.html" class="menu-item-link">HTML</a></li>
+        <li class="menu-item"><a href="/docs/css.html" class="menu-item-link">SCSS/CSS</a></li>
+        <li class="menu-item"><a href="/docs/helpers.html" class="menu-item-link active">Helpers</a></li>
+        <li class="menu-item"><a href="/docs/grid.html" class="menu-item-link">The Grid</a></li>
+        <li class="menu-item"><a href="/docs/mixins.html" class="menu-item-link">Mixins</a></li>
+        <li class="menu-item"><a href="/docs/animations.html" class="menu-item-link">Animations</a></li>
+      </ul>
     </div>
   </div>
 </div>
 
-<div class="content container">
+<div class="pad-top-40 pad-bottom-40 container">
   <div class="content-inner">
 
-    <div class="text-center">
+    <div class="pad-bottom-20 text-center col-11-m no-float center-element">
       <h1>CSS Helpers</h1>
-      <p class="h3 col-10-desktop no-float center-element">
+      <p class="fs-3 col-12 no-float center col-9-m no-float-m center-m">
         Global helpers for removing styles, modifying typography, font weights, text positioning, general layout, form elements and
         accessibility helpers.
       </p>
@@ -107,586 +80,588 @@
       <li><a href="#animation">Animation</a></li>
     </ul>
 
-    <table id="reset-helpers">
-      <caption>Reset Helpers</caption>
-      <thead>
-        <tr>
-          <th>Class</th>
-          <th>Purpose</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>
-            <code>.no-margin</code>
-          </td>
-          <td>
-            Removes all margin
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <code>.no-padding</code>
-          </td>
-          <td>
-            Removes all padding
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <code>.no-float</code>
-          </td>
-          <td>
-            Removes all floats
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <code>.no-background</code>
-          </td>
-          <td>
-            Removes background
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <code>.no-border</code>
-          </td>
-          <td>
-            Removes all borders
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <code>.no-select</code>
-          </td>
-          <td>Disables text selection</td>
-        </tr>
-      </tbody>
-    </table>
-    
-    <hr class="spacer">
-
-    <table id="typography-helpers">
-      <caption>Typography Helpers</caption>
-      <thead>
-        <tr>
-          <th>Class</th>
-          <th>Purpose</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>
-            <code>.strong</code>
-          </td>
-          <td>
-            <span class="strong">Applies strong styles</span>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <code>.em</code>
-          </td>
-          <td>
-            <span class="em">Applies italic styles</span>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <code>.abbr</code>
-          </td>
-          <td>
-            <span class="abbr" title="Abbreviation title">Applies abbreviation styles</span>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <code>.small</code>
-          </td>
-          <td>
-            <span class="small">Applies small styles</span>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <code>.mark</code>
-          </td>
-          <td>
-            <span class="mark">Applies mark styles</span>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <code>.sub</code>
-          </td>
-          <td>
-            Applies <span class="sub">sub styles</span>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <code>.sup</code>
-          </td>
-          <td>
-            Applies <span class="sup">sup styles</span>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <code>.del</code>
-          </td>
-          <td>
-            <span class="del">Applies del styles</span>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <code>.font-100</code>
-          </td>
-          <td>
-            <span class="font-100">Applies a font weight of 100</span>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <code>.font-200</code>
-          </td>
-          <td>
-            <span class="font-200">Applies a font weight of 200</span>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <code>.font-300</code>
-          </td>
-          <td>
-            <span class="font-300">Applies a font weight of 300</span>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <code>.font-400</code>
-          </td>
-          <td>
-            <span class="font-400">Applies a font weight of 400</span>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <code>.font-500</code>
-          </td>
-          <td>
-            <span class="font-500">Applies a font weight of 500</span>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <code>.font-600</code>
-          </td>
-          <td>
-            <span class="font-600">Applies a font weight of 600</span>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <code>.font-700</code>
-          </td>
-          <td>
-            <span class="font-700">Applies a font weight of 700</span>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <code>.font-800</code>
-          </td>
-          <td>
-            <span class="font-800">Applies a font weight of 800</span>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <code>.font-900</code>
-          </td>
-          <td>
-            <span class="font-900">Applies a font weight of 900</span>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <code>.font-normal</code>
-          </td>
-          <td>
-            <span class="font-normal">Applies normal font style</span>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <code>.font-italic</code>
-          </td>
-          <td>
-            <span class="font-italic">Applies italic font style</span>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <code>.uppercase</code>
-          </td>
-          <td>
-            <span class="uppercase">Transforms text to uppercase</span>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <code>.lowercase</code>
+    <div class="pad-top-20">
+      <table id="reset-helpers">
+        <caption>Reset Helpers</caption>
+        <thead>
+          <tr>
+            <th>Class</th>
+            <th>Purpose</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
             <td>
-              <span class="lowercase">Transforms text to lowercase</span>
+              <code>.no-margin</code>
             </td>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <code>.capitalize</code>
-          </td>
-          <td>
-            <span class="capitalize">Transforms text to capitalize</span>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <code>.text-left</code>
-          </td>
-          <td class="text-left">Left align text</td>
-        </tr>
-        <tr>
-          <td>
-            <code>.text-right</code>
-          </td>
-          <td class="text-right">Right align text</td>
-        </tr>
-        <tr>
-          <td>
-            <code>.text-center</code>
-          </td>
-          <td class="text-center">Center align text</td>
-        </tr>
-        <tr>
-          <td>
-            <code>.text-justify</code>
-          </td>
-          <td class="text-justify">Justifies text</td>
-        </tr>
-      </tbody>
-    </table>
+            <td>
+              Removes all margin
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>.no-padding</code>
+            </td>
+            <td>
+              Removes all padding
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>.no-float</code>
+            </td>
+            <td>
+              Removes all floats
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>.no-background</code>
+            </td>
+            <td>
+              Removes background
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>.no-border</code>
+            </td>
+            <td>
+              Removes all borders
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>.no-select</code>
+            </td>
+            <td>Disables text selection</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
-    <hr class="spacer">
+    <div class="pad-top-20">
+      <table id="typography-helpers">
+        <caption>Typography Helpers</caption>
+        <thead>
+          <tr>
+            <th>Class</th>
+            <th>Purpose</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <code>.strong</code>
+            </td>
+            <td>
+              <span class="strong">Applies strong styles</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>.em</code>
+            </td>
+            <td>
+              <span class="em">Applies italic styles</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>.abbr</code>
+            </td>
+            <td>
+              <span class="abbr" title="Abbreviation title">Applies abbreviation styles</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>.small</code>
+            </td>
+            <td>
+              <span class="small">Applies small styles</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>.mark</code>
+            </td>
+            <td>
+              <span class="mark">Applies mark styles</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>.sub</code>
+            </td>
+            <td>
+              Applies <span class="sub">sub styles</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>.sup</code>
+            </td>
+            <td>
+              Applies <span class="sup">sup styles</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>.del</code>
+            </td>
+            <td>
+              <span class="del">Applies del styles</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>.font-100</code>
+            </td>
+            <td>
+              <span class="font-100">Applies a font weight of 100</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>.font-200</code>
+            </td>
+            <td>
+              <span class="font-200">Applies a font weight of 200</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>.font-300</code>
+            </td>
+            <td>
+              <span class="font-300">Applies a font weight of 300</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>.font-400</code>
+            </td>
+            <td>
+              <span class="font-400">Applies a font weight of 400</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>.font-500</code>
+            </td>
+            <td>
+              <span class="font-500">Applies a font weight of 500</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>.font-600</code>
+            </td>
+            <td>
+              <span class="font-600">Applies a font weight of 600</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>.font-700</code>
+            </td>
+            <td>
+              <span class="font-700">Applies a font weight of 700</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>.font-800</code>
+            </td>
+            <td>
+              <span class="font-800">Applies a font weight of 800</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>.font-900</code>
+            </td>
+            <td>
+              <span class="font-900">Applies a font weight of 900</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>.font-normal</code>
+            </td>
+            <td>
+              <span class="font-normal">Applies normal font style</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>.font-italic</code>
+            </td>
+            <td>
+              <span class="font-italic">Applies italic font style</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>.uppercase</code>
+            </td>
+            <td>
+              <span class="uppercase">Transforms text to uppercase</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>.lowercase</code>
+              <td>
+                <span class="lowercase">Transforms text to lowercase</span>
+              </td>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>.capitalize</code>
+            </td>
+            <td>
+              <span class="capitalize">Transforms text to capitalize</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>.text-left</code>
+            </td>
+            <td class="text-left">Left align text</td>
+          </tr>
+          <tr>
+            <td>
+              <code>.text-right</code>
+            </td>
+            <td class="text-right">Right align text</td>
+          </tr>
+          <tr>
+            <td>
+              <code>.text-center</code>
+            </td>
+            <td class="text-center">Center align text</td>
+          </tr>
+          <tr>
+            <td>
+              <code>.text-justify</code>
+            </td>
+            <td class="text-justify">Justifies text</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
-    <table id="display-helpers">
-      <caption>Display Helpers</caption>
-      <thead>
-        <tr>
-          <th>Class</th>
-          <th>Purpose</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>
-            <code>.block</code>
-          </td>
-          <td>Sets element to display block</td>
-        </tr>
-        <tr>
-          <td>
-            <code>.inline-block</code>
-          </td>
-          <td>Sets element to display inline-block</td>
-        </tr>
-        <tr>
-          <td>
-            <code>.inline</code>
-          </td>
-          <td>Sets element to display inline</td>
-        </tr>
-        <tr>
-          <td>
-            <code>.none</code>
-          </td>
-          <td>Sets element to display none</td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="pad-top-20">
+      <table id="display-helpers">
+        <caption>Display Helpers</caption>
+        <thead>
+          <tr>
+            <th>Class</th>
+            <th>Purpose</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <code>.block</code>
+            </td>
+            <td>Sets element to display block</td>
+          </tr>
+          <tr>
+            <td>
+              <code>.inline-block</code>
+            </td>
+            <td>Sets element to display inline-block</td>
+          </tr>
+          <tr>
+            <td>
+              <code>.inline</code>
+            </td>
+            <td>Sets element to display inline</td>
+          </tr>
+          <tr>
+            <td>
+              <code>.none</code>
+            </td>
+            <td>Sets element to display none</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
-    <hr class="spacer">
-
-    <table id="flex-helpers">
-      <caption>Flex Helpers</caption>
-      <thead>
-        <tr>
-          <th>Class</th>
-          <th>Purpose</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>
-            <code>.flex-row</code>
-          </td>
-          <td>Sets elements flex direction to row</td>
-        </tr>
-        <tr>
-          <td>
-            <code>.flex-column</code>
-          </td>
-          <td>Sets elements flex direction to column</td>
-        </tr>
-        <tr>
-          <td>
-            <code>.flex-space-around</code>
-          </td>
-          <td>Sets element to justify content with space around</td>
-        </tr>
-        <tr>
-          <td>
-            <code>.flex-space-between</code>
-          </td>
-          <td>Sets element to justify content with space in between</td>
-        </tr>
-        <tr>
-          <td>
-            <code>.flex-start</code>
-          </td>
-          <td>Sets element to justify content to the left</td>
-        </tr>
-        <tr>
-          <td>
-            <code>.flex-center</code>
-          </td>
-          <td>Sets element to justify content to the center</td>
-        </tr>
-        <tr>
-          <td>
-            <code>.flex-end</code>
-          </td>
-          <td>Sets element to justify content to the right</td>
-        </tr>
-        <tr>
-          <td>
-            <code>.flex-wrap</code>
-          </td>
-          <td>Sets element to display all content to flow on multiple lines</td>
-        </tr>
-        <tr>
-          <td>
-            <code>.flex-nowrap</code>
-          </td>
-          <td>Sets element to display all content on a single line</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <hr class="spacer">
-
-    <table id="float-helpers">
-      <caption>Float Helpers</caption>
-      <thead>
-        <tr>
-          <th>Class</th>
-          <th>Purpose</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>
-            <code>.left</code>
-          </td>
-          <td>Sets element to float left for mobile devices and up</td>
-        </tr>
-        <tr>
-          <td>
-            <code>.right</code>
-          </td>
-          <td>Sets element to float right for mobile devices and up</td>
-        </tr>
-        <tr>
-          <td>
-            <code>.left-tablet</code>
-          </td>
-          <td>Sets element to float left for tablet devices and up</td>
-        </tr>
-        <tr>
-          <td>
-            <code>.right-tablet</code>
-          </td>
-          <td>Sets element to float right for tablet devices and up</td>
-        </tr>
-        <tr>
-          <td>
-            <code>.left-desktop</code>
-          </td>
-          <td>Sets element to float left for desktop devices and up</td>
-        </tr>
-        <tr>
-          <td>
-            <code>.right-desktop</code>
-          </td>
-          <td>Sets element to float right for desktop devices and up</td>
-        </tr>
-        <tr>
-          <td>
-            <code>.left-hd</code>
-          </td>
-          <td>Sets element to float left for HD devices and up</td>
-        </tr>
-        <tr>
-          <td>
-            <code>.right-hd</code>
-          </td>
-          <td>Sets element to float right for HD devices and up</td>
-        </tr>
-        <tr>
-          <td>
-            <code>.center-element</code>
-          </td>
-          <td>Center aligns an element with a width (removes float)</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <hr class="spacer">
-
-    <table id="position-helpers">
-      <caption>Position Helpers</caption>
-      <thead>
-        <tr>
-          <th>Class</th>
-          <th>Purpose</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>
-            <code>.relative</code>
-          </td>
-          <td>Sets element to position relative</td>
-        </tr>
-        <tr>
-          <td>
-            <code>.absolute</code>
-          </td>
-          <td>Sets element to position absolute</td>
-        </tr>
-        <tr>
-          <td>
-            <code>.static</code>
-          </td>
-          <td>Sets element to position static</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <hr class="spacer">
-
-    <table id="accessibility-helpers">
-      <caption>Accessibility Helpers</caption>
-      <thead>
-        <tr>
-          <th>Class</th>
-          <th>Purpose</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>
-            <code>.sr</code>
-          </td>
-          <td>Hides an element visually, but is available for screenreaders</td>
-        </tr>
-      </tbody>
-    </table>
+    
+    <div class="pad-top-20">
+      <table id="flex-helpers">
+        <caption>Flex Helpers</caption>
+        <thead>
+          <tr>
+            <th>Class</th>
+            <th>Purpose</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <code>.flex-row</code>
+            </td>
+            <td>Sets elements flex direction to row</td>
+          </tr>
+          <tr>
+            <td>
+              <code>.flex-column</code>
+            </td>
+            <td>Sets elements flex direction to column</td>
+          </tr>
+          <tr>
+            <td>
+              <code>.flex-space-around</code>
+            </td>
+            <td>Sets element to justify content with space around</td>
+          </tr>
+          <tr>
+            <td>
+              <code>.flex-space-between</code>
+            </td>
+            <td>Sets element to justify content with space in between</td>
+          </tr>
+          <tr>
+            <td>
+              <code>.flex-start</code>
+            </td>
+            <td>Sets element to justify content to the left</td>
+          </tr>
+          <tr>
+            <td>
+              <code>.flex-center</code>
+            </td>
+            <td>Sets element to justify content to the center</td>
+          </tr>
+          <tr>
+            <td>
+              <code>.flex-end</code>
+            </td>
+            <td>Sets element to justify content to the right</td>
+          </tr>
+          <tr>
+            <td>
+              <code>.flex-wrap</code>
+            </td>
+            <td>Sets element to display all content to flow on multiple lines</td>
+          </tr>
+          <tr>
+            <td>
+              <code>.flex-nowrap</code>
+            </td>
+            <td>Sets element to display all content on a single line</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
 
-    <hr class="spacer">
+    <div class="pad-top-20">
+      <table id="float-helpers">
+        <caption>Float Helpers</caption>
+        <thead>
+          <tr>
+            <th>Class</th>
+            <th>Purpose</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <code>.left</code>
+            </td>
+            <td>Sets element to float left for mobile devices and up</td>
+          </tr>
+          <tr>
+            <td>
+              <code>.right</code>
+            </td>
+            <td>Sets element to float right for mobile devices and up</td>
+          </tr>
+          <tr>
+            <td>
+              <code>.left-m</code>
+            </td>
+            <td>Sets element to float left for tablet devices and up</td>
+          </tr>
+          <tr>
+            <td>
+              <code>.right-m</code>
+            </td>
+            <td>Sets element to float right for tablet devices and up</td>
+          </tr>
+          <tr>
+            <td>
+              <code>.left-l</code>
+            </td>
+            <td>Sets element to float left for desktop devices and up</td>
+          </tr>
+          <tr>
+            <td>
+              <code>.right-l</code>
+            </td>
+            <td>Sets element to float right for desktop devices and up</td>
+          </tr>
+          <tr>
+            <td>
+              <code>.left-xl</code>
+            </td>
+            <td>Sets element to float left for HD devices and up</td>
+          </tr>
+          <tr>
+            <td>
+              <code>.right-xl</code>
+            </td>
+            <td>Sets element to float right for HD devices and up</td>
+          </tr>
+          <tr>
+            <td>
+              <code>.center-element</code>
+            </td>
+            <td>Center aligns an element with a width (removes float)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
-    <table id="image-placement-helpers">
-      <caption>Image Helpers</caption>
-      <thead>
-        <tr>
-          <th>Class</th>
-          <th>Purpose</th>
-        </tr>
-      </thead>
-      <tbody>
+    <div class="pad-top-20">
+      <table id="position-helpers">
+        <caption>Position Helpers</caption>
+        <thead>
+          <tr>
+            <th>Class</th>
+            <th>Purpose</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <code>.relative</code>
+            </td>
+            <td>Sets element to position relative</td>
+          </tr>
+          <tr>
+            <td>
+              <code>.absolute</code>
+            </td>
+            <td>Sets element to position absolute</td>
+          </tr>
+          <tr>
+            <td>
+              <code>.static</code>
+            </td>
+            <td>Sets element to position static</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="pad-top-20">
+      <table id="accessibility-helpers">
+        <caption>Accessibility Helpers</caption>
+        <thead>
+          <tr>
+            <th>Class</th>
+            <th>Purpose</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <code>.sr</code>
+            </td>
+            <td>Hides an element visually, but is available for screenreaders</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="pad-top-20">
+      <table id="image-placement-helpers">
+        <caption>Image Helpers</caption>
+        <thead>
+          <tr>
+            <th>Class</th>
+            <th>Purpose</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <code>.img-left</code>
+            </td>
+            <td>Floats an image left and applies a right margin of 20px</td>
+          </tr>
+          <tr>
+            <td>
+              <code>.img-right</code>
+            </td>
+            <td>Floats an image right and applies a left margin of 20px</td>
+          </tr>
+          <tr>
+            <td>
+              <code>.img-fluid</code>
+            </td>
+            <td>Adds a max width property of 100% so images shrink to device size.
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+    <div class="pad-top-20">
+      <table id="animation">
+        <caption>Animation Helpers</caption>
+        <thead>
+          <tr>
+            <th>Class</th>
+            <th>Purpose</th>
+          </tr>
+        </thead>
+        <tbody>
         <tr>
           <td>
-            <code>.img-left</code>
+            <code>.animate</code>
           </td>
-          <td>Floats an image left and applies a right margin of 20px</td>
+          <td>Applies an animation speed of 1 second</td>
         </tr>
-        <tr>
-          <td>
-            <code>.img-right</code>
-          </td>
-          <td>Floats an image right and applies a left margin of 20px</td>
-        </tr>
-        <tr>
-          <td>
-            <code>.img-fluid</code>
-          </td>
-          <td>Adds a max width property of 100% so images shrink to device size.
-        </tr>
-      </tbody>
-    </table>
+          <tr>
+            <td>
+              <code>.animate-infinite</code>
+            </td>
+            <td>Runs an animation infinite number of times (loop)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
-    <hr class="spacer">
-
-    <table id="animation">
-      <caption>Animation Helpers</caption>
-      <thead>
-        <tr>
-          <th>Class</th>
-          <th>Purpose</th>
-        </tr>
-      </thead>
-      <tbody>
-      <tr>
-        <td>
-          <code>.animate</code>
-        </td>
-        <td>Applies an animation speed of 1 second</td>
-      </tr>
-        <tr>
-          <td>
-            <code>.animate-infinite</code>
-          </td>
-          <td>Runs an animation infinite number of times (loop)</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <hr class="spacer">
-    <hr class="hr">
-
-    <h2>Grid</h2>
-    <p>
-      A powerful and <a href="/docs/grid.html">responsive grid</a> to easily create your page layout.
-    </p>
+    <div class="pad-top-30">
+      <h2>Grid</h2>
+      <p>
+        A powerful and <a href="/docs/grid.html">responsive grid</a> to easily create your page layout.
+      </p>
+    </div>
 
   </div>
 </div>
 
 
-<div class="footer">
+<div class="footer pad-top-20 pad-bottom-20 fs-6">
   <div class="container">
     <div class="clear">
-      <div class="col-6-desktop">
-        <p>
-          Built with love in the land down under by <a href="http://matthewhartman.com.au">Matthew Hartman</a>
+      <div class="col-6-m">
+        <p class="no-margin r-bottom-10">
+          Built in the land down under by <a href="http://matthewhartman.com.au">Matthew Hartman</a>
         </p>
       </div>
-      <div class="col-6-desktop">
-        <ul class="footer-links list-inline text-right-tablet">
-          <li><a href="https://github.com/matthewhartman/base">View Source on Github</a></li>
+      <div class="col-6-m">
+        <ul class="footer-links list-inline text-right-m">
+          <li><a href="https://github.com/matthewhartman/base">View on Github</a></li>
           <li><a href="https://github.com/matthewhartman/base/issues">Current Issues</a></li>
           <li><a href="/docs/">Documentation</a></li>
         </ul>

@@ -12,7 +12,7 @@
   </script>
   <meta name="description" content="A fully automated GulpJS configuration which will save you a bucket load of time.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#F7C723">
+  <meta name="theme-color" content="#f7c824">
   <link rel="shortcut icon" href="/img/favicon.png">
   <link rel="apple-touch-icon" sizes="57x57" href="/img/apple-touch-icon.png">
   <link rel="apple-touch-icon" sizes="72x72" href="/img/apple-touch-icon-72x72.png">
@@ -23,55 +23,28 @@
 
 <div class="banner">
   <div class="container">
-    <div class="header clear">
-      <input type="checkbox" class="menu-checkbox" id="navigation" name="navigation">
-      <label class="menu-label animated fade-in-right" for="navigation" id="toggle-menu">
-        <span class="menu-label-inner">
-          <span class="menu-label-open">Menu</span>
-          <span class="menu-label-close">Close</span>
-        </span>
-      </label>
-      <a class="logo" href="/"><span class="sr">Base</span></a>
-      <div class="navigation" id="menu">
-        <div class="navigation-inner container-full">
-          <div class="menu container">
-            <div class="clear row">
-              <div class="col-4-tablet">
-                <strong class="menu-heading"><a class="menu-heading-link" href="/">Home</a></strong>
-                <ul class="menu-secondary">
-                  <li class="menu-item"><a href="https://github.com/matthewhartman/base/archive/master.zip" class="menu-item-link">Download Latest Build</a></li>
-                  <li class="menu-item"><a href="https://github.com/matthewhartman/base" class="menu-item-link">View Source on Github</a></li>
-                  <li class="menu-item"><a href="https://github.com/matthewhartman/base/issues" class="menu-item-link">Current Issues</a></li>
-                </ul>
-              </div>
-              <div class="col-4-tablet">
-                <strong class="menu-heading"><a class="menu-heading-link active" href="/docs/">Documentation</a></strong>
-                <ul class="menu-secondary">
-                  <li class="menu-item"><a href="/docs/" class="menu-item-link">Introduction</a></li>
-                  <li class="menu-item"><a href="/docs/gulpjs.html" class="menu-item-link active">GulpJS Config</a></li>
-                  <li class="menu-item"><a href="/docs/html.html" class="menu-item-link">HTML Template</a></li>
-                  <li class="menu-item"><a href="/docs/css.html" class="menu-item-link">LESS/SCSS/CSS</a></li>
-                  <li class="menu-item"><a href="/docs/assets.html" class="menu-item-link">Assets</a></li>
-                  <li class="menu-item"><a href="/docs/helpers.html" class="menu-item-link">Helpers</a></li>
-                  <li class="menu-item"><a href="/docs/grid.html" class="menu-item-link">The Grid</a></li>
-                  <li class="menu-item"><a href="/docs/mixins.html" class="menu-item-link">Mixins</a></li>
-                  <li class="menu-item"><a href="/docs/animations.html" class="menu-item-link">Animations</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="header clear pad-top-30 pad-bottom-30">
+      <a class="logo left-l" href="/"><span class="sr">Base</span></a>
+      <ul class="menu right-l">
+        <li class="menu-item"><a href="/docs/" class="menu-item-link">Introduction</a></li>
+        <li class="menu-item"><a href="/docs/gulpjs.html" class="menu-item-link active">GulpJS Config</a></li>
+        <li class="menu-item"><a href="/docs/html.html" class="menu-item-link">HTML</a></li>
+        <li class="menu-item"><a href="/docs/css.html" class="menu-item-link">SCSS/CSS</a></li>
+        <li class="menu-item"><a href="/docs/helpers.html" class="menu-item-link">Helpers</a></li>
+        <li class="menu-item"><a href="/docs/grid.html" class="menu-item-link">The Grid</a></li>
+        <li class="menu-item"><a href="/docs/mixins.html" class="menu-item-link">Mixins</a></li>
+        <li class="menu-item"><a href="/docs/animations.html" class="menu-item-link">Animations</a></li>
+      </ul>
     </div>
   </div>
 </div>
 
-<div class="content container">
+<div class="pad-top-40 pad-bottom-40 container">
   <div class="content-inner">
-    <div class="text-center col-11-tablet no-float center-element">
+    <div class="pad-bottom-20 text-center col-11-m no-float center-element">
       <h1>GulpJS Configuration</h1>
-      <p class="h3 col-10-desktop no-float center-element">
-        A powerful GulpJS config which compiles LESS/SCSS with live reload support, optimises images and can minify and inline CSS/JS code. 
+      <p class="fs-3 col-12 no-float center col-9-m no-float-m center-m">
+        A powerful GulpJS config which compiles SCSS with live reload support, optimises images and can minify and inline CSS/JS code. 
       </p>
     </div>
 
@@ -94,8 +67,7 @@
     </p>
     <ol>
       <li><a href="#scss-compilation">SCSS Compilation</a></li>
-      <li><a href="#less-compilation">LESS Compilation</a></li>
-      <li><a href="#movecss">Move CSS</a></li>
+      <li><a href="#styleguide-compilation">Styleguide Compilation</a></li>
       <li><a href="#jsmin">JS Minification</a></li>
       <li><a href="#imagemin">Image Minification</a></li>
       <li><a href="#browser-sync">Browser Sync (Live Reload)</a></li>
@@ -104,117 +76,124 @@
       <li><a href="#build-task">Build Task</a></li>
     </ol>
 
-    <hr class="custom-hr">
+    <div id="scss-compilation" class="row-bordered pad-top-40 pad-bottom-20">
+      <h2>SCSS Compilation</h2>
+      <p>
+        Compiles <code>style.scss</code> into <code>src/css/style.css</code>.
+      </p>
+    </div>
 
-    <h2 id="scss-compilation">SCSS Compilation</h2>
-    <p>
-      Compiles <code>style.scss</code> into <code>src/style.css</code>.
-    </p>
+    <div id="styleguide-compilation" class="row-bordered pad-top-40 pad-bottom-20">
+      <h2>Styleguide Compilation</h2>
+      <p>
+        Compiles <code>styleguide.scss</code> into <code>src/css/styleguide.css</code>.
+      </p>
+    </div>
 
-    <hr class="custom-hr">
+    <div id="jsmin" class="row-bordered pad-top-40 pad-bottom-20">
+      <h2>JS Minification</h2>
+      <p>
+        All JS code located within the <code>/src/js/</code> is minified and compiled into the <code>dist/</code> folder.
+      </p>
+    </div>
 
-    <h2 id="less-compilation">LESS Compilation</h2>
-    <p>
-      Compiles <code>style.less</code> into <code>src/style.css</code>.
-    </p>
+    <div id="imagemin" class="row-bordered pad-top-40 pad-bottom-20">
+      <h2>Image Minification</h2>
+      <p>
+        Compresses png, jpg, gif and svg files without sacrificing quality. It optimizes compression parameters, removes junk metadata and unnecessary color profiles to save bytes and make images load much faster.
+      </p>
+      <p>
+        The optimised images are compiled within the <code>dist/</code> folder.
+      </p>
+    </div>
 
-    <h2 id="movecss">Move CSS</h2>
-    <p>
-      Copies <code>src/style.css</code> into the <code>dist/</code> folder.
-    </p>
+    <div id="browser-sync" class="row-bordered pad-top-40 pad-bottom-20">
+      <h2>Browser Sync (Live Reload)</h2>
+      <p>
+        Automatically reloads the browser whenever a SCSS or HTML file is saved within the <code>src/</code> folder.
+      </p>
+    </div>
 
-    <hr class="custom-hr">
+    <div id="inline-source" class="row-bordered pad-top-40 pad-bottom-20">
+      <h2>Inline Source</h2>
+      <p>
+        A task which embeds all <code>&lt;script&gt;</code>, <code>&lt;link&gt;</code> and <code>&lt;img&gt;</code> code inline within a HTML document. Will only occur to elements which have the <code>inline</code> attribute applied.
+      </p>
+      <p>
+        <strong>Examples:</strong>
+        <pre>&lt;link <strong>inline</strong> rel="stylesheet" href="style.css"&gt;</pre>
+        <pre>&lt;script <strong>inline</strong> src="jquery.js"&gt;</pre>
+      </p>
+      <p>
+        The compiled HTML files with the embedded code are saved in the <code>dist/</code> folder.
+      </p>
+    </div>
 
-    <h2 id="jsmin">JS Minification</h2>
-    <p>
-      All JS code located within the <code>/src/js/</code> is minified and compiled into the <code>dist/</code> folder.
-    </p>
+    <div id="watch-task" class="row-bordered pad-top-40 pad-bottom-20">
+      <h2>Watch Task (default)</h2>
+      <p>
+        When gulp is run, the <code>watch</code> task (default) will automatically compile SCSS code on save and run Browser Sync (live reload) when any HTML or SCSS code is saved within the <code>src/</code> folder.
+      </p>
+      <p>
+        The default gulp task can be run in the root base folder using the following command:
+        <pre>gulp</pre>
+      </p>
+    </div>
 
-    <hr class="custom-hr">
+    <div id="clean-task" class="row-bordered pad-top-40 pad-bottom-20">
+      <h2>Clean Task</h2>
+      <p>
+        When the clean task is run, it will delete the <code>dist/</code> folder.
+      </p>
+      <p>
+        The clean gulp task can be run in the root base folder using the following command:
+        <pre>gulp clean</pre>
+      </p>
+    </div>
+    
+    <div id="build-task" class="row-bordered pad-top-40 pad-bottom-20">
+      <h2>Build Task</h2>
+      <p>
+        The build task runs the following tasks:
+      </p>
+      <ol>
+        <li><a href="#scss-compilation">SCSS Compilation</a></li>
+        <li><a href="#styleguide-compilation">Styleguide Compilation</a></li>
+        <li><a href="#imagemin">Image Minification</a></li>
+        <li><a href="#jsmin">JS Minification</a></li>
+        <li><a href="#inline-source">Inline Source</a></li>
+      </ol>
+      <p>
+        The build task can be run in the root base folder using the following command:
+        <pre>gulp build</pre>
+      </p>
+      <p>
+        Once the build task is complete, the final application is located within the <code>dist/</code> folder.
+      </p>
+    </div>
 
-    <h2 id="imagemin">Image Minification</h2>
-    <p>
-      Compresses png, jpg, gif and svg files without sacrificing quality. It optimizes compression parameters, removes junk metadata and unnecessary color profiles to save bytes and make images load much faster.
-    </p>
-    <p>
-      The optimised images are compiled within the <code>dist/</code> folder.
-    </p>
-
-    <hr class="custom-hr">
-
-    <h2 id="browser-sync">Browser Sync (Live Reload)</h2>
-    <p>
-      Automatically reloads the browser whenever a LESS/SCSS or HTML file is saved within the <code>src/</code> folder.
-    </p>
-
-    <hr class="custom-hr">
-
-    <h2 id="inline-source">Inline Source</h2>
-    <p>
-      A task which embeds all <code>&lt;script&gt;</code>, <code>&lt;link&gt;</code> and <code>&lt;img&gt;</code> code inline within a HTML document. Will only occur to elements which have the <code>inline</code> attribute applied.
-    </p>
-    <p>
-      <strong>Examples:</strong>
-      <pre>&lt;link <strong>inline</strong> rel="stylesheet" href="style.css"&gt;</pre>
-      <pre>&lt;script <strong>inline</strong> src="jquery.js"&gt;</pre>
-    </p>
-    <p>
-      The compiled HTML files with the embedded code are saved in the <code>dist/</code> folder.
-    </p>
-
-    <hr class="custom-hr">
-
-    <h2 id="watch-task">Watch Task (default)</h2>
-    <p>
-      When gulp is run, the <code>watch</code> task (default) will automatically compile LESS/SCSS code on save and run Browser Sync (live reload) when any HTML or LESS/SCSS code is saved within the <code>src/</code> folder.
-    </p>
-    <p>
-      The default gulp task can be run in the root base folder using the following command:
-      <pre>gulp</pre>
-    </p>
-
-    <hr class="custom-hr">
-
-    <h2 id="build-task">Build Task</h2>
-    <p>
-      The build task runs the following tasks:
-    </p>
-    <ol>
-      <li><a href="#movecss">Move CSS</a></li>
-      <li><a href="#imagemin">Image Minification</a></li>
-      <li><a href="#jsmin">JS minification</a></li>
-      <li><a href="#inline-source">Inline Source</a></li>
-    </ol>
-    <p>
-      The build task can be run in the root base folder using the following command:
-      <pre>gulp build</pre>
-    </p>
-    <p>
-      Once the build task is complete, the final application is located within the <code>dist/</code> folder.
-    </p>
-
-    <hr class="custom-hr">
-
-    <h2>The HTML Template</h2>
-    <p>
-      Now that you have a great understanding of the GulpJS config, it's time to deep dive into the <a href="/docs/html.html">HTML Template</a>.
-    </p>
+    <div class="pad-top-40">
+      <h2>The HTML Template</h2>
+      <p>
+        Now that you have a great understanding of the GulpJS config, it's time to deep dive into the <a href="/docs/html.html">HTML Template</a>.
+      </p>
+    </div>
 
 
   </div>
 </div>
 
-<div class="footer">
+<div class="footer pad-top-20 pad-bottom-20 fs-6">
   <div class="container">
     <div class="clear">
-      <div class="col-6-desktop">
-        <p>
-          Built with love in the land down under by <a href="http://matthewhartman.com.au">Matthew Hartman</a>
+      <div class="col-6-m">
+        <p class="no-margin r-bottom-10">
+          Built in the land down under by <a href="http://matthewhartman.com.au">Matthew Hartman</a>
         </p>
       </div>
-      <div class="col-6-desktop">
-        <ul class="footer-links list-inline text-right-tablet">
-          <li><a href="https://github.com/matthewhartman/base">View Source on Github</a></li>
+      <div class="col-6-m">
+        <ul class="footer-links list-inline text-right-m">
+          <li><a href="https://github.com/matthewhartman/base">View on Github</a></li>
           <li><a href="https://github.com/matthewhartman/base/issues">Current Issues</a></li>
           <li><a href="/docs/">Documentation</a></li>
         </ul>

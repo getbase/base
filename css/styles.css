@@ -2135,7 +2135,34 @@ html input[disabled] {
   background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0ZWQgYnkgSWNvTW9vbi5pbyAtLT4KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIxMDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCAxMDAgNDAiPgo8cGF0aCBmaWxsPSIjMDAwMDAwIiBkPSJNMjcuNCAyNi4yYzAgMS4yLTAuMiAyLjEtMC43IDMtMC41IDAuOC0xLjEgMS41LTIgMi0wLjggMC41LTEuOCAwLjktMi45IDEuMnMtMi4zIDAuNC0zLjUgMC40aC0xMi43di0yNS42aDE0LjhjMC45IDAgMS43IDAuMiAyLjQgMC42czEuMyAwLjkgMS44IDEuNWMwLjUgMC42IDAuOSAxLjMgMS4yIDIuMXMwLjQgMS42IDAuNCAyLjRjMCAxLjItMC4zIDIuMy0wLjkgMy40cy0xLjUgMS45LTIuOCAyLjVjMS41IDAuNCAyLjYgMS4yIDMuNSAyLjJzMS40IDIuNSAxLjQgNC4zek0xMi42IDEzLjF2My45aDQuOGMwLjUgMCAwLjktMC4xIDEuMy0wLjRzMC42LTAuOCAwLjYtMS42YzAtMC43LTAuMi0xLjItMC41LTEuNXMtMC43LTAuNS0xLjItMC41aC01ek0yMC4yIDI0LjdjMC0wLjYtMC4yLTEuMS0wLjUtMS42LTAuMy0wLjQtMC44LTAuNi0xLjMtMC42aC01Ljh2NC4zaDUuNWMwLjYgMCAxLjEtMC4yIDEuNS0wLjUgMC40LTAuNCAwLjYtMC45IDAuNi0xLjZ6Ij48L3BhdGg+CjxwYXRoIGZpbGw9IiMwMDAwMDAiIGQ9Ik0yNy41IDMyLjdsOS41LTI1LjVoNS43bDkuNSAyNS42aC03LjRsLTEuNS01aC02LjhsLTEuNSA1aC03LjV6TTM5LjkgMTQuNWwtMi40IDguNWg0LjZsLTIuMi04LjV6Ij48L3BhdGg+CjxwYXRoIGZpbGw9IiMwMDAwMDAiIGQ9Ik02OS40IDE1LjVjLTAuNy0wLjQtMS41LTAuOC0yLjItMS4yLTAuNi0wLjMtMS40LTAuNi0yLjItMC44cy0xLjYtMC40LTIuNC0wLjRjLTAuNiAwLTEuMSAwLjEtMS41IDAuM3MtMC42IDAuNS0wLjYgMWMwIDAuMyAwLjEgMC42IDAuMyAwLjhzMC41IDAuNCAwLjkgMC42YzAuNCAwLjIgMC45IDAuNCAxLjUgMC41IDAuNiAwLjIgMS4zIDAuNCAyIDAuNiAxLjIgMC40IDIuMiAwLjggMy4yIDEuMnMxLjggMC45IDIuNCAxLjVjMC43IDAuNiAxLjIgMS4zIDEuNSAyLjEgMC40IDAuOCAwLjUgMS45IDAuNSAzLjEgMCAxLjUtMC4zIDIuOC0wLjggMy45LTAuNiAxLTEuMyAxLjktMi4yIDIuNXMtMiAxLjEtMy4xIDEuMy0yLjMgMC40LTMuNSAwLjRjLTAuOSAwLTEuOS0wLjEtMi45LTAuMnMtMi0wLjMtMi45LTAuNmMtMS0wLjMtMS45LTAuNi0yLjgtMC45LTAuOS0wLjQtMS43LTAuOC0yLjUtMS4ybDMtNi4yYzAuOCAwLjUgMS43IDEgMi42IDEuNCAwLjggMC40IDEuNiAwLjcgMi42IDFzMiAwLjQgMyAwLjRjMC44IDAgMS4zLTAuMSAxLjYtMC4zczAuNS0wLjUgMC41LTAuOGMwLTAuNC0wLjItMC43LTAuNS0wLjlzLTAuNy0wLjUtMS4yLTAuN2MtMC41LTAuMi0xLjEtMC40LTEuOC0wLjZzLTEuNC0wLjQtMi4yLTAuN2MtMS4xLTAuNC0yLjEtMC44LTIuOS0xLjJzLTEuNS0wLjktMi0xLjVjLTAuNS0wLjYtMC45LTEuMi0xLjItMS45cy0wLjQtMS41LTAuNC0yLjVjMC0xLjQgMC4zLTIuNyAwLjgtMy43IDAuNS0xLjEgMS4yLTIgMi4xLTIuN3MxLjktMS4zIDMtMS42IDIuMy0wLjYgMy42LTAuNmMwLjkgMCAxLjggMC4xIDIuNyAwLjNzMS43IDAuNCAyLjYgMC43YzAuOCAwLjMgMS42IDAuNiAyLjMgMC45czEuNCAwLjYgMS45IDAuOWwtMi44IDUuOHoiPjwvcGF0aD4KPHBhdGggZmlsbD0iIzAwMDAwMCIgZD0iTTk0LjQgMjYuNnY2LjFoLTE4LjJ2LTI1LjVoMTcuOHY2LjFoLTEwLjh2My42aDkuM3Y1LjdoLTkuM3Y0aDExLjJ6Ij48L3BhdGg+Cjwvc3ZnPgo=) 0 0 no-repeat;
   width: 100px;
   height: 40px;
-  display: block; }
+  display: block;
+  -webkit-transition: all .4s;
+  transition: all .4s; }
+  .logo:hover {
+    -webkit-transition: all .4s;
+    transition: all .4s;
+    opacity: 0.7; }
+
+.menu {
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 20px;
+  line-height: 1.25rem;
+  list-style: none;
+  padding: 20px 0 0 0;
+  margin: 0; }
+  @media only screen and (min-width: 980px) {
+    .menu {
+      padding: 10px 0 0 0; } }
+  .menu > li {
+    display: inline-block;
+    margin: 0 8px; }
+    .menu > li > a {
+      text-decoration: none; }
+      .menu > li > a:hover {
+        text-decoration: underline; }
+    .menu > li > a.active {
+      text-decoration: underline; }
 
 .banner-heading {
   font-size: 50px;
@@ -2313,5 +2340,27 @@ html input[disabled] {
   margin: 0; }
   .footer-links > li:not(:first-child) {
     margin-left: 6px; }
+
+.adsbygoogle {
+  text-decoration: none;
+  text-align: center;
+  margin-bottom: 60px; }
+  .adsbygoogle:before {
+    display: block;
+    content: 'Advertisement';
+    margin-bottom: 10px;
+    color: #999; }
+
+.row-bordered {
+  border-bottom: 1px solid #ccc; }
+
+.grid-example .column-content {
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 16px;
+  line-height: 1rem;
+  padding: 5px;
+  display: block;
+  background: #ccc; }
 
 /*# sourceMappingURL=styles.css.map */
