@@ -2363,4 +2363,11 @@ html input[disabled] {
   display: block;
   background: #ccc; }
 
+.data-list {
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+  .data-list > li {
+    border-bottom: 1px solid #ccc; }
+
 /*# sourceMappingURL=styles.css.map */

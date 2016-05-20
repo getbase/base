@@ -81,6 +81,20 @@
       <tbody>
         <tr>
           <td class="mobile-table-header" data-title="Mixin">
+            <span class="data-content"><code>@include breakpoint(x)</code></span>
+          </td>
+          <td data-title="Purpose">
+            <span class="data-content">Apply a breakpoint for a particular device. Accepts values <code>m</code>, <code>l</code> and <code>xl</code> (m: medium, l: large, xl: extra large)</span>
+          </td>
+          <td data-title="Example">
+            <span class="data-content"><code>.box { @include breakpoint(m) { ... } }</code></span>
+          </td>
+          <td data-title="Outcome">
+            <span class="data-content">Applies styles to <code>.box</code> for medium devices and up</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="mobile-table-header" data-title="Mixin">
             <span class="data-content"><code>@include font-size(number)</code></span>
           </td>
           <td data-title="Purpose">
