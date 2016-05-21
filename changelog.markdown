@@ -1,6 +1,16 @@
 # Base 2 Change Log
 
 
+## [3.0.2] - 2016-05-21
+### Base V3.0.2
+- Minor update to variable names for consistency ($base-link-color-hover to $base-link-hover-color, $base-input-background-color-focus to $base-input-background-focus-color and $base-input-border-color-focus to $base-input-border-focus-color)
+- Removed image position helpers img-left and img-right as grid can be used
+- Fixed issue where buttons would have rounded corners on Safari and small clean up with vendor prefixes in _forms.scss
+- Added clearfix rules to .row-m, .row-l, .row-xl
+- Added push/pull classes for .push-1-2-xl, .pull-1-2-xl, .push-1-3-xl, .pull-1-3-xl, .push-2-3-xl, .pull-2-3-xl, .push-1-4-xl, .pull-1-4-xl, .push-3-4-xl, .pull-3-4-xl, .push-1-5-xl, .pull-1-5-xl, .push-2-5-xl, .pull-2-5-xl, .push-3-5-xl, .pull-3-5-xl, .push-4-5-xl, .pull-4-5-xl
+- Version bump for style.scss, package.json and bower.json
+
+
 ## [3.0.1] - 2016-05-15
 ### Base V3.0.1
 - Minor tweak to readme

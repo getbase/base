@@ -42,11 +42,10 @@ textarea {
   border: 1px solid $base-input-border-color;
   -webkit-appearance: none;
   -moz-appearance: textfield;
-  -webkit-border-radius: 0;
   border-radius: 0;
   &:focus {
-    background-color: $base-input-background-color-focus;
-    border-color: $base-input-border-color-focus;
+    background-color: $base-input-background-focus-color;
+    border-color: $base-input-border-focus-color;
     outline: 0;
   }
 }
@@ -83,8 +82,8 @@ textarea {
   border: 1px solid $base-input-border-color;
   overflow: auto;
   &:focus {
-    background-color: $base-input-background-color-focus;
-    border-color: $base-input-border-color-focus;
+    background-color: $base-input-background-focus-color;
+    border-color: $base-input-border-focus-color;
     outline: 0;
   }
 }
@@ -97,8 +96,8 @@ select {
   background-color: $base-input-background-color;
   border: 1px solid $base-input-border-color;
   &:focus {
-    background-color: $base-input-background-color-focus;
-    border-color: $base-input-border-color-focus;
+    background-color: $base-input-background-focus-color;
+    border-color: $base-input-border-focus-color;
     outline: 0;
   }
 }
@@ -106,6 +105,7 @@ optgroup { font-weight: $font-700; }
 
 // Buttons
 button {
+  border-radius: 0;
   overflow: visible;
   text-transform: none;
   cursor: pointer;

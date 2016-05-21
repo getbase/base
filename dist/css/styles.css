@@ -2,7 +2,7 @@
 
 // Base Stylesheet - http://getbase.org
 // Author: Matthew Hartman - http://www.matthewhartman.com.au/
-// Version: 3.0.1 - Last Updated: May 15, 2016
+// Version: 3.0.2 - Last Updated: May 21, 2016
 
 ========================================================================== */
 *, *:before, *:after {
@@ -367,6 +367,7 @@ optgroup {
   font-weight: 700; }
 
 button {
+  border-radius: 0;
   overflow: visible;
   text-transform: none;
   cursor: pointer; }
@@ -456,19 +457,34 @@ html input[disabled] {
   .row-m {
     position: relative;
     margin-left: -15px;
-    margin-right: -15px; } }
+    margin-right: -15px; }
+    .row-m .row-m:before, .row-m .row-m:after {
+      content: "";
+      display: table; }
+    .row-m .row-m:after {
+      clear: both; } }
 
 @media only screen and (min-width: 980px) {
   .row-l {
     position: relative;
     margin-left: -15px;
-    margin-right: -15px; } }
+    margin-right: -15px; }
+  .row-l:before, .row-l:after {
+    content: "";
+    display: table; }
+  .row-l:after {
+    clear: both; } }
 
 @media only screen and (min-width: 1140px) {
   .row-xl {
     position: relative;
     margin-left: -15px;
-    margin-right: -15px; } }
+    margin-right: -15px; }
+  .row-xl:before, .row-xl:after {
+    content: "";
+    display: table; }
+  .row-xl:after {
+    clear: both; } }
 
 .container {
   padding-left: 15px;
@@ -655,6 +671,33 @@ html input[disabled] {
 .push-11 {
   left: 91.66667%; }
 
+.push-1-2 {
+  left: 50%; }
+
+.push-1-3 {
+  left: 33.33333%; }
+
+.push-2-3 {
+  left: 66.66667%; }
+
+.push-1-4 {
+  left: 25%; }
+
+.push-3-4 {
+  left: 75%; }
+
+.push-1-5 {
+  left: 20%; }
+
+.push-2-5 {
+  left: 40%; }
+
+.push-3-5 {
+  left: 60%; }
+
+.push-4-5 {
+  left: 80%; }
+
 .pull-1 {
   left: -8.33333%; }
 
@@ -687,6 +730,33 @@ html input[disabled] {
 
 .pull-11 {
   left: -91.66667%; }
+
+.pull-1-2 {
+  left: -50%; }
+
+.pull-1-3 {
+  left: -33.33333%; }
+
+.pull-2-3 {
+  left: -66.66667%; }
+
+.pull-1-4 {
+  left: -25%; }
+
+.pull-3-4 {
+  left: -75%; }
+
+.pull-1-5 {
+  left: -20%; }
+
+.pull-2-5 {
+  left: -40%; }
+
+.pull-3-5 {
+  left: -60%; }
+
+.pull-4-5 {
+  left: -80%; }
 
 @media only screen and (min-width: 740px) {
   .col-1-m,
@@ -780,6 +850,24 @@ html input[disabled] {
     left: 83.33333%; }
   .push-11-m {
     left: 91.66667%; }
+  .push-1-2-m {
+    left: 50%; }
+  .push-1-3-m {
+    left: 33.33333%; }
+  .push-2-3-m {
+    left: 66.66667%; }
+  .push-1-4-m {
+    left: 25%; }
+  .push-3-4-m {
+    left: 75%; }
+  .push-1-5-m {
+    left: 20%; }
+  .push-2-5-m {
+    left: 40%; }
+  .push-3-5-m {
+    left: 60%; }
+  .push-4-5-m {
+    left: 80%; }
   .pull-1-m {
     left: -8.33333%; }
   .pull-2-m {
@@ -801,7 +889,25 @@ html input[disabled] {
   .pull-10-m {
     left: -83.33333%; }
   .pull-11-m {
-    left: -91.66667%; } }
+    left: -91.66667%; }
+  .pull-1-2-m {
+    left: -50%; }
+  .pull-1-3-m {
+    left: -33.33333%; }
+  .pull-2-3-m {
+    left: -66.66667%; }
+  .pull-1-4-m {
+    left: -25%; }
+  .pull-3-4-m {
+    left: -75%; }
+  .pull-1-5-m {
+    left: -20%; }
+  .pull-2-5-m {
+    left: -40%; }
+  .pull-3-5-m {
+    left: -60%; }
+  .pull-4-5-m {
+    left: -80%; } }
 
 @media only screen and (min-width: 980px) {
   .col-1-l,
@@ -895,6 +1001,24 @@ html input[disabled] {
     left: 83.33333%; }
   .push-11-l {
     left: 91.66667%; }
+  .push-1-2-l {
+    left: 50%; }
+  .push-1-3-l {
+    left: 33.33333%; }
+  .push-2-3-l {
+    left: 66.66667%; }
+  .push-1-4-l {
+    left: 25%; }
+  .push-3-4-l {
+    left: 75%; }
+  .push-1-5-l {
+    left: 20%; }
+  .push-2-5-l {
+    left: 40%; }
+  .push-3-5-l {
+    left: 60%; }
+  .push-4-5-l {
+    left: 80%; }
   .pull-1-l {
     left: -8.33333%; }
   .pull-2-l {
@@ -916,7 +1040,25 @@ html input[disabled] {
   .pull-10-l {
     left: -83.33333%; }
   .pull-11-l {
-    left: -91.66667%; } }
+    left: -91.66667%; }
+  .pull-1-2-l {
+    left: -50%; }
+  .pull-1-3-l {
+    left: -33.33333%; }
+  .pull-2-3-l {
+    left: -66.66667%; }
+  .pull-1-4-l {
+    left: -25%; }
+  .pull-3-4-l {
+    left: -75%; }
+  .pull-1-5-l {
+    left: -20%; }
+  .pull-2-5-l {
+    left: -40%; }
+  .pull-3-5-l {
+    left: -60%; }
+  .pull-4-5-l {
+    left: -80%; } }
 
 @media only screen and (min-width: 1140px) {
   .col-1-xl,
@@ -1010,6 +1152,24 @@ html input[disabled] {
     left: 83.33333%; }
   .push-11-xl {
     left: 91.66667%; }
+  .push-1-2-xl {
+    left: 50%; }
+  .push-1-3-xl {
+    left: 33.33333%; }
+  .push-2-3-xl {
+    left: 66.66667%; }
+  .push-1-4-xl {
+    left: 25%; }
+  .push-3-4-xl {
+    left: 75%; }
+  .push-1-5-xl {
+    left: 20%; }
+  .push-2-5-xl {
+    left: 40%; }
+  .push-3-5-xl {
+    left: 60%; }
+  .push-4-5-xl {
+    left: 80%; }
   .pull-1-xl {
     left: -8.33333%; }
   .pull-2-xl {
@@ -1031,7 +1191,25 @@ html input[disabled] {
   .pull-10-xl {
     left: -83.33333%; }
   .pull-11-xl {
-    left: -91.66667%; } }
+    left: -91.66667%; }
+  .pull-1-2-xl {
+    left: -50%; }
+  .pull-1-3-xl {
+    left: -33.33333%; }
+  .pull-2-3-xl {
+    left: -66.66667%; }
+  .pull-1-4-xl {
+    left: -25%; }
+  .pull-3-4-xl {
+    left: -75%; }
+  .pull-1-5-xl {
+    left: -20%; }
+  .pull-2-5-xl {
+    left: -40%; }
+  .pull-3-5-xl {
+    left: -60%; }
+  .pull-4-5-xl {
+    left: -80%; } }
 
 @-webkit-keyframes fadeIn {
   0% {
@@ -1538,14 +1716,6 @@ html input[disabled] {
 
 .img-fluid {
   max-width: 100%; }
-
-.img-left {
-  float: left;
-  margin-right: 20px; }
-
-.img-right {
-  float: right;
-  margin-left: 20px; }
 
 .field {
   width: 100%; }

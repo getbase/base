@@ -151,16 +151,6 @@
 // Images
 .img-fluid { max-width: 100%; }
 
-// Image Positions
-.img-left {
-  float: left;
-  margin-right: 20px;
-}
-.img-right {
-  float: right;
-  margin-left: 20px;
-}
-
 // Form
 .field { width: 100%; }
 
@@ -227,11 +217,11 @@
   select::-ms-expand {
     display: none;
   }
-  select:focus { border-color: $base-input-border-color-focus; }
+  select:focus { border-color: $base-input-border-focus-color; }
   select:-moz-focusring {
     color: transparent;
     text-shadow: 0 0 0 $base-input-color;
-    border-color: $base-input-border-color-focus;
+    border-color: $base-input-border-focus-color;
   }
 }
 
