@@ -2369,5 +2369,7 @@ html input[disabled] {
   margin: 0; }
   .data-list > li {
     border-bottom: 1px solid #ccc; }
+    .data-list > li:first-child {
+      border-top: 1px solid #ccc; }
 
 /*# sourceMappingURL=styles.css.map */

@@ -279,5 +279,8 @@ $white: #fff;
   margin: 0;
   & > li {
     border-bottom: 1px solid $lighter-grey;
+    &:first-child {
+      border-top: 1px solid $lighter-grey;
+    }
   }
 }
