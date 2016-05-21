@@ -10,7 +10,7 @@ $base-line-height:                              22 !default;
 $base-font-weight:                              400 !default;
 $base-font-color:                               #000 !default;
 $base-link-color:                               #000 !default;
-$base-link-color-hover:                         #000 !default;
+$base-link-hover-color:                         #000 !default;
 
 // Font Weights
 $font-100:                                      100 !default;
@@ -68,9 +68,9 @@ $base-input-height:                             36px !default;
 $base-input-placeholder-color:                  #999 !default;
 $base-input-color:                              #000 !default;
 $base-input-background-color:                   #fff !default;
-$base-input-background-color-focus:             #fff !default;
+$base-input-background-focus-color:             #fff !default;
 $base-input-border-color:                       #ccc !default;
-$base-input-border-color-focus:                 #f7c723 !default;
+$base-input-border-focus-color:                 #f7c723 !default;
 $base-select-box-height:                        36px;
 
 // Grid Containers

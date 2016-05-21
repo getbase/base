@@ -22,7 +22,7 @@ a {
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
   &:active, &:hover {
-    color: $base-link-color-hover;
+    color: $base-link-hover-color;
     outline-width: 0;
     text-decoration: none;
   }
