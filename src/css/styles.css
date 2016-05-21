@@ -2364,6 +2364,10 @@ html input[disabled] {
   background: #ccc; }
 
 .data-list {
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 18px;
+  line-height: 1.125rem;
   list-style: none;
   padding: 0;
   margin: 0; }

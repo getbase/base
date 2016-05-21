@@ -274,6 +274,8 @@ $white: #fff;
 }
 
 .data-list {
+  @include font-size(14);
+  @include line-height(18);
   list-style: none;
   padding: 0;
   margin: 0;

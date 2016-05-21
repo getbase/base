@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Base Documentation - CSS / LESS / SCSS</title>
+  <title>Base Documentation - CSS / SCSS</title>
   <link rel="canonical" href="http://getbase.org">
   <script>
   if (window.location.href.indexOf('http://matthewhartman.github.io') === 0) {
@@ -42,10 +42,10 @@
 
 <div class="pad-top-40 pad-bottom-40 container">
   <div class="content-inner">
-  <div class="pad-bottom-20 col-10-m no-float-m">
-      <h1>CSS</h1>
+  <div class="pad-bottom-20 col-11-m no-float-m">
+      <h1>CSS / SCSS</h1>
       <p class="fs-3">
-        Global styles for typography, headings, lists, blockquotes, tables, code blocks, horizontal rules, forms and more.
+        Base includes a precompiled stylesheet which covers all the core ingredients such as typography, headings, lists, forms and more to get you started on your next web project.
       </p>
     </div>
 
@@ -64,20 +64,15 @@
 
     <h2>Overview</h2>
     <p>
-      Base includes a precompiled stylesheet which includes all the core ingredients to get you started on your next web project.
-    </p>
-
-
-    <h3>What's in Base?</h3>
-    <p>
-      Base is built from <code><a rel="nofollow" href="http://necolas.github.io/normalize.css/">normalize.css</a></code> and includes core styles for typography, links, headings, code blocks, tables, blockquotes, forms and form elements.  
+      Base is built up from <code><a rel="nofollow" href="http://necolas.github.io/normalize.css/">normalize.css</a></code> to ensure cross browser consistency.
     </p>
     <p>
       Below is a list of the core includes:
     </p>
     <ol>
       <li><a href="#basic-resets">Basic resets</a></li>
-      <li><a href="#global">Global</a></li>
+      <li><a href="#variables">Variables</a></li>
+      <li><a href="#typography">Typography</a></li>
       <li><a href="#headings">Headings</a></li>
       <li><a href="#lists">Lists</a></li>
       <li><a href="#blockquotes">Blockquotes</a></li>
@@ -86,306 +81,1041 @@
       <li><a href="#forms">Forms</a></li>
     </ol>
 
+    <hr>
+
     <h2 id="basic-resets">Basic resets</h2>
     <p>
-      The basic resets ensures that <code>border-box</code> is applied globally and the core html elements are reset correctly to work across all browsers supported.
+      The basic resets ensures that <code>border-box</code> is applied globally and core html elements are reset correctly to work across all browsers supported.
     </p>
 
-    <h2 id="global">Global</h2>
+    <hr>
+
+    <h2 id="variables">Variables</h2>
     <p>
-      The global file contains all the core styles for default body text, links, headings and most typography elements.
-    </p>
-    <p>
-      By default, all font sizes and line heights use <code>rem</code> units with <code>px</code> fallbacks.
-    </p>
-    <p>
-      A full list of typography elements are listed below.
+      Font sizes, line heights, font weights, colors and other basic styles are linked to variables within <code>_variables.scss</code>. Variables can be easily be overwritten by placing variable overrides at the top of the <code>/src/scss/styles.scss</code> file.
     </p>
 
-    <table>
-      <caption>Global Typography Elements</caption>
-      <thead>
-        <tr>
-          <th>Element / Class</th>
-          <th>Example</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>
-            <code>&lt;b&gt;, &lt;strong&gt;</code>
-          </td>
-          <td>
-            <strong>Strong text</strong>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <code>&lt;em&gt;</code>
-          </td>
-          <td>
-            <em>Italic text</em>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <code>&lt;abbr&gt;</code>
-          </td>
-          <td>
-            <abbr title="As Soon As Possible">ASAP</abbr>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <code>&lt;dfn&gt;</code>
-          </td>
-          <td>
-            <dfn>Definition</dfn>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <code>&lt;mark&gt;</code>
-          </td>
-          <td>
-            <mark>Mark</mark>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <code>&lt;small&gt;</code>
-          </td>
-          <td>
-            <small>Small text</small>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <code>&lt;sub&gt;</code>
-          </td>
-          <td>
-            Text with <sub>Sub text</sub>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <code>&lt;sup&gt;</code>
-          </td>
-          <td>
-            Text with <sup>Sup text</sup>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <code>&lt;del&gt;</code>
-          </td>
-          <td>
-            <del>Deleted text</del>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="pad-bottom-40">
+      <h3 class="fs-4">All Global Variables</h3>
+      <ul class="data-list">
+        <li class="pad-top-5 pad-bottom-5">
+          <div class="clear row-m">
+            <div class="col-4-m">
+              <code data-content="variable:">$base-background-color</code>
+            </div>
+            <div class="col-3-m">
+              <code data-content="default value:">#fff</code>
+            </div>
+            <div class="col-5-m">
+              color applied to the background body
+            </div>
+          </div>
+        </li>
+        <li class="pad-top-5 pad-bottom-5">
+          <div class="clear row-m">
+            <div class="col-4-m">
+              <code data-content="variable:">$base-font-family</code>
+            </div>
+            <div class="col-3-m">
+              <code data-content="default value:">sans-serif</code>
+            </div>
+            <div class="col-5-m">
+              Global font family
+            </div>
+          </div>
+        </li>
+        <li class="pad-top-5 pad-bottom-5">
+          <div class="clear row-m">
+            <div class="col-4-m">
+              <code data-content="variable:">$base-font-size</code>
+            </div>
+            <div class="col-3-m">
+              <code data-content="default value:">16px</code>
+            </div>
+            <div class="col-5-m">
+              Global font size
+            </div>
+          </div>
+        </li>
+        <li class="pad-top-5 pad-bottom-5">
+          <div class="clear row-m">
+            <div class="col-4-m">
+              <code data-content="variable:">$base-line-height</code>
+            </div>
+            <div class="col-3-m">
+              <code data-content="default value:">22px</code>
+            </div>
+            <div class="col-5-m">
+              Global line height
+            </div>
+          </div>
+        </li>
+        <li class="pad-top-5 pad-bottom-5">
+          <div class="clear row-m">
+            <div class="col-4-m">
+              <code data-content="variable:">$base-font-weight</code>
+            </div>
+            <div class="col-3-m">
+              <code data-content="default value:">400</code>
+            </div>
+            <div class="col-5-m">
+              Global font weight
+            </div>
+          </div>
+        </li>
+        <li class="pad-top-5 pad-bottom-5">
+          <div class="clear row-m">
+            <div class="col-4-m">
+              <code data-content="variable:">$base-font-color</code>
+            </div>
+            <div class="col-3-m">
+              <code data-content="default value:">#000</code>
+            </div>
+            <div class="col-5-m">
+              Global font color
+            </div>
+          </div>
+        </li>
+        <li class="pad-top-5 pad-bottom-5">
+          <div class="clear row-m">
+            <div class="col-4-m">
+              <code data-content="variable:">$base-link-color</code>
+            </div>
+            <div class="col-3-m">
+              <code data-content="default value:">#000</code>
+            </div>
+            <div class="col-5-m">
+              Global link color
+            </div>
+          </div>
+        </li>
+        <li class="pad-top-5 pad-bottom-5">
+          <div class="clear row-m">
+            <div class="col-4-m">
+              <code data-content="variable:">$base-link-hover-color</code>
+            </div>
+            <div class="col-3-m">
+              <code data-content="default value:">#000</code>
+            </div>
+            <div class="col-5-m">
+              Global link color
+            </div>
+          </div>
+        </li>
+        <li class="pad-top-5 pad-bottom-5">
+          <div class="clear row-m">
+            <div class="col-4-m">
+              <code data-content="variable:">$font-100</code>
+            </div>
+            <div class="col-3-m">
+              <code data-content="default value:">font weight: 100</code>
+            </div>
+            <div class="col-5-m">
+              Font weight for thin text
+            </div>
+          </div>
+        </li>
+        <li class="pad-top-5 pad-bottom-5">
+          <div class="clear row-m">
+            <div class="col-4-m">
+              <code data-content="variable:">$font-200</code>
+            </div>
+            <div class="col-3-m">
+              <code data-content="default value:">font weight: 200</code>
+            </div>
+            <div class="col-5-m">
+              Font weight for lighter text
+            </div>
+          </div>
+        </li>
+        <li class="pad-top-5 pad-bottom-5">
+          <div class="clear row-m">
+            <div class="col-4-m">
+              <code data-content="variable:">$font-300</code>
+            </div>
+            <div class="col-3-m">
+              <code data-content="default value:">font weight: 300</code>
+            </div>
+            <div class="col-5-m">
+              Font weight for light text
+            </div>
+          </div>
+        </li>
+        <li class="pad-top-5 pad-bottom-5">
+          <div class="clear row-m">
+            <div class="col-4-m">
+              <code data-content="variable:">$font-400</code>
+            </div>
+            <div class="col-3-m">
+              <code data-content="default value:">font weight: 400</code>
+            </div>
+            <div class="col-5-m">
+              Font weight for regular text
+            </div>
+          </div>
+        </li>
+        <li class="pad-top-5 pad-bottom-5">
+          <div class="clear row-m">
+            <div class="col-4-m">
+              <code data-content="variable:">$font-500</code>
+            </div>
+            <div class="col-3-m">
+              <code data-content="default value:">font weight: 500</code>
+            </div>
+            <div class="col-5-m">
+              Font weight for medium text
+            </div>
+          </div>
+        </li>
+        <li class="pad-top-5 pad-bottom-5">
+          <div class="clear row-m">
+            <div class="col-4-m">
+              <code data-content="variable:">$font-600</code>
+            </div>
+            <div class="col-3-m">
+              <code data-content="default value:">font weight: 600</code>
+            </div>
+            <div class="col-5-m">
+              Font weight for semi bold text
+            </div>
+          </div>
+        </li>
+        <li class="pad-top-5 pad-bottom-5">
+          <div class="clear row-m">
+            <div class="col-4-m">
+              <code data-content="variable:">$font-700</code>
+            </div>
+            <div class="col-3-m">
+              <code data-content="default value:">font weight: 700</code>
+            </div>
+            <div class="col-5-m">
+              Font weight for bold text
+            </div>
+          </div>
+        </li>
+        <li class="pad-top-5 pad-bottom-5">
+          <div class="clear row-m">
+            <div class="col-4-m">
+              <code data-content="variable:">$font-800</code>
+            </div>
+            <div class="col-3-m">
+              <code data-content="default value:">font weight: 800</code>
+            </div>
+            <div class="col-5-m">
+              Font weight for extra bold text
+            </div>
+          </div>
+        </li>
+        <li class="pad-top-5 pad-bottom-5">
+          <div class="clear row-m">
+            <div class="col-4-m">
+              <code data-content="variable:">$font-900</code>
+            </div>
+            <div class="col-3-m">
+              <code data-content="default value:">font weight: 900</code>
+            </div>
+            <div class="col-5-m">
+              Font weight for ultra bold text
+            </div>
+          </div>
+        </li>
+        <li class="pad-top-5 pad-bottom-5">
+          <div class="clear row-m">
+            <div class="col-4-m">
+              <code data-content="variable:">$base-heading-font-family</code>
+            </div>
+            <div class="col-3-m">
+              <code data-content="default value:">sans-serif</code>
+            </div>
+            <div class="col-5-m">
+              Font family applied to headings h1 - h6
+            </div>
+          </div>
+        </li>
+        <li class="pad-top-5 pad-bottom-5">
+          <div class="clear row-m">
+            <div class="col-4-m">
+              <code data-content="variable:">$base-h1-font-size</code>
+            </div>
+            <div class="col-3-m">
+              <code data-content="default value:">32</code>
+            </div>
+            <div class="col-5-m">
+              Heading 1 font size
+            </div>
+          </div>
+        </li>
+        <li class="pad-top-5 pad-bottom-5">
+          <div class="clear row-m">
+            <div class="col-4-m">
+              <code data-content="variable:">$base-h1-line-height</code>
+            </div>
+            <div class="col-3-m">
+              <code data-content="default value:">38</code>
+            </div>
+            <div class="col-5-m">
+              Heading 1 line height
+            </div>
+          </div>
+        </li>
+        <li class="pad-top-5 pad-bottom-5">
+          <div class="clear row-m">
+            <div class="col-4-m">
+              <code data-content="variable:">$base-h1-font-weight</code>
+            </div>
+            <div class="col-3-m">
+              <code data-content="default value:">700</code>
+            </div>
+            <div class="col-5-m">
+              Heading 1 font weight
+            </div>
+          </div>
+        </li>
+        <li class="pad-top-5 pad-bottom-5">
+          <div class="clear row-m">
+            <div class="col-4-m">
+              <code data-content="variable:">$base-h1-color</code>
+            </div>
+            <div class="col-3-m">
+              <code data-content="default value:">#000</code>
+            </div>
+            <div class="col-5-m">
+              Heading 1 color
+            </div>
+          </div>
+        </li>
+        <li class="pad-top-5 pad-bottom-5">
+          <div class="clear row-m">
+            <div class="col-4-m">
+              <code data-content="variable:">$base-h2-font-size</code>
+            </div>
+            <div class="col-3-m">
+              <code data-content="default value:">26</code>
+            </div>
+            <div class="col-5-m">
+              Heading 2 font size
+            </div>
+          </div>
+        </li>
+        <li class="pad-top-5 pad-bottom-5">
+          <div class="clear row-m">
+            <div class="col-4-m">
+              <code data-content="variable:">$base-h2-line-height</code>
+            </div>
+            <div class="col-3-m">
+              <code data-content="default value:">32</code>
+            </div>
+            <div class="col-5-m">
+              Heading 2 line height
+            </div>
+          </div>
+        </li>
+        <li class="pad-top-5 pad-bottom-5">
+          <div class="clear row-m">
+            <div class="col-4-m">
+              <code data-content="variable:">$base-h2-font-weight</code>
+            </div>
+            <div class="col-3-m">
+              <code data-content="default value:">700</code>
+            </div>
+            <div class="col-5-m">
+              Heading 1 font weight
+            </div>
+          </div>
+        </li>
+        <li class="pad-top-5 pad-bottom-5">
+          <div class="clear row-m">
+            <div class="col-4-m">
+              <code data-content="variable:">$base-h2-color</code>
+            </div>
+            <div class="col-3-m">
+              <code data-content="default value:">#000</code>
+            </div>
+            <div class="col-5-m">
+              Heading 2 color
+            </div>
+          </div>
+        </li>
+        <li class="pad-top-5 pad-bottom-5">
+          <div class="clear row-m">
+            <div class="col-4-m">
+              <code data-content="variable:">$base-h3-font-size</code>
+            </div>
+            <div class="col-3-m">
+              <code data-content="default value:">22</code>
+            </div>
+            <div class="col-5-m">
+              Heading 3 font size
+            </div>
+          </div>
+        </li>
+        <li class="pad-top-5 pad-bottom-5">
+          <div class="clear row-m">
+            <div class="col-4-m">
+              <code data-content="variable:">$base-h3-line-height</code>
+            </div>
+            <div class="col-3-m">
+              <code data-content="default value:">28</code>
+            </div>
+            <div class="col-5-m">
+              Heading 3 line height
+            </div>
+          </div>
+        </li>
+        <li class="pad-top-5 pad-bottom-5">
+          <div class="clear row-m">
+            <div class="col-4-m">
+              <code data-content="variable:">$base-h3-font-weight</code>
+            </div>
+            <div class="col-3-m">
+              <code data-content="default value:">700</code>
+            </div>
+            <div class="col-5-m">
+              Heading 3 font weight
+            </div>
+          </div>
+        </li>
+        <li class="pad-top-5 pad-bottom-5">
+          <div class="clear row-m">
+            <div class="col-4-m">
+              <code data-content="variable:">$base-h3-color</code>
+            </div>
+            <div class="col-3-m">
+              <code data-content="default value:">#000</code>
+            </div>
+            <div class="col-5-m">
+              Heading 3 color
+            </div>
+          </div>
+        </li>
+        <li class="pad-top-5 pad-bottom-5">
+          <div class="clear row-m">
+            <div class="col-4-m">
+              <code data-content="variable:">$base-h4-font-size</code>
+            </div>
+            <div class="col-3-m">
+              <code data-content="default value:">18</code>
+            </div>
+            <div class="col-5-m">
+              Heading 4 font size
+            </div>
+          </div>
+        </li>
+        <li class="pad-top-5 pad-bottom-5">
+          <div class="clear row-m">
+            <div class="col-4-m">
+              <code data-content="variable:">$base-h4-line-height</code>
+            </div>
+            <div class="col-3-m">
+              <code data-content="default value:">24</code>
+            </div>
+            <div class="col-5-m">
+              Heading 4 line height
+            </div>
+          </div>
+        </li>
+        <li class="pad-top-5 pad-bottom-5">
+          <div class="clear row-m">
+            <div class="col-4-m">
+              <code data-content="variable:">$base-h4-font-weight</code>
+            </div>
+            <div class="col-3-m">
+              <code data-content="default value:">700</code>
+            </div>
+            <div class="col-5-m">
+              Heading 4 font weight
+            </div>
+          </div>
+        </li>
+        <li class="pad-top-5 pad-bottom-5">
+          <div class="clear row-m">
+            <div class="col-4-m">
+              <code data-content="variable:">$base-h4-color</code>
+            </div>
+            <div class="col-3-m">
+              <code data-content="default value:">#000</code>
+            </div>
+            <div class="col-5-m">
+              Heading 4 color
+            </div>
+          </div>
+        </li>
+        <li class="pad-top-5 pad-bottom-5">
+          <div class="clear row-m">
+            <div class="col-4-m">
+              <code data-content="variable:">$base-h5-font-size</code>
+            </div>
+            <div class="col-3-m">
+              <code data-content="default value:">16</code>
+            </div>
+            <div class="col-5-m">
+              Heading 5 font size
+            </div>
+          </div>
+        </li>
+        <li class="pad-top-5 pad-bottom-5">
+          <div class="clear row-m">
+            <div class="col-4-m">
+              <code data-content="variable:">$base-h5-line-height</code>
+            </div>
+            <div class="col-3-m">
+              <code data-content="default value:">22</code>
+            </div>
+            <div class="col-5-m">
+              Heading 5 line height
+            </div>
+          </div>
+        </li>
+        <li class="pad-top-5 pad-bottom-5">
+          <div class="clear row-m">
+            <div class="col-4-m">
+              <code data-content="variable:">$base-h5-font-weight</code>
+            </div>
+            <div class="col-3-m">
+              <code data-content="default value:">700</code>
+            </div>
+            <div class="col-5-m">
+              Heading 5 font weight
+            </div>
+          </div>
+        </li>
+        <li class="pad-top-5 pad-bottom-5">
+          <div class="clear row-m">
+            <div class="col-4-m">
+              <code data-content="variable:">$base-h5-color</code>
+            </div>
+            <div class="col-3-m">
+              <code data-content="default value:">#000</code>
+            </div>
+            <div class="col-5-m">
+              Heading 5 color
+            </div>
+          </div>
+        </li>
+        <li class="pad-top-5 pad-bottom-5">
+          <div class="clear row-m">
+            <div class="col-4-m">
+              <code data-content="variable:">$base-h6-font-size</code>
+            </div>
+            <div class="col-3-m">
+              <code data-content="default value:">14</code>
+            </div>
+            <div class="col-5-m">
+              Heading 6 font size
+            </div>
+          </div>
+        </li>
+        <li class="pad-top-5 pad-bottom-5">
+          <div class="clear row-m">
+            <div class="col-4-m">
+              <code data-content="variable:">$base-h6-line-height</code>
+            </div>
+            <div class="col-3-m">
+              <code data-content="default value:">20</code>
+            </div>
+            <div class="col-5-m">
+              Heading 6 line height
+            </div>
+          </div>
+        </li>
+        <li class="pad-top-5 pad-bottom-5">
+          <div class="clear row-m">
+            <div class="col-4-m">
+              <code data-content="variable:">$base-h6-font-weight</code>
+            </div>
+            <div class="col-3-m">
+              <code data-content="default value:">700</code>
+            </div>
+            <div class="col-5-m">
+              Heading 6 font weight
+            </div>
+          </div>
+        </li>
+        <li class="pad-top-5 pad-bottom-5">
+          <div class="clear row-m">
+            <div class="col-4-m">
+              <code data-content="variable:">$base-h6-color</code>
+            </div>
+            <div class="col-3-m">
+              <code data-content="default value:">#000</code>
+            </div>
+            <div class="col-5-m">
+              Heading 6 color
+            </div>
+          </div>
+        </li>
+        <li class="pad-top-5 pad-bottom-5">
+          <div class="clear row-m">
+            <div class="col-4-m">
+              <code data-content="variable:">$base-blockquote-font-family</code>
+            </div>
+            <div class="col-3-m">
+              <code data-content="default value:">sans-serif</code>
+            </div>
+            <div class="col-5-m">
+              Font family applied to blockquotes
+            </div>
+          </div>
+        </li>
+        <li class="pad-top-5 pad-bottom-5">
+          <div class="clear row-m">
+            <div class="col-4-m">
+              <code data-content="variable:">$base-blockquote-font-size</code>
+            </div>
+            <div class="col-3-m">
+              <code data-content="default value:">22</code>
+            </div>
+            <div class="col-5-m">
+              Font size applied to blockquotes
+            </div>
+          </div>
+        </li>
+        <li class="pad-top-5 pad-bottom-5">
+          <div class="clear row-m">
+            <div class="col-4-m">
+              <code data-content="variable:">$base-blockquote-line-height</code>
+            </div>
+            <div class="col-3-m">
+              <code data-content="default value:">28</code>
+            </div>
+            <div class="col-5-m">
+              Line height applied to blockquotes
+            </div>
+          </div>
+        </li>
+        <li class="pad-top-5 pad-bottom-5">
+          <div class="clear row-m">
+            <div class="col-4-m">
+              <code data-content="variable:">$base-code-font-family</code>
+            </div>
+            <div class="col-3-m">
+              <code data-content="default value:">monospace, monospace</code>
+            </div>
+            <div class="col-5-m">
+              Font family applied to code blocks
+            </div>
+          </div>
+        </li>
+        <li class="pad-top-5 pad-bottom-5">
+          <div class="clear row-m">
+            <div class="col-4-m">
+              <code data-content="variable:">$base-code-font-size</code>
+            </div>
+            <div class="col-3-m">
+              <code data-content="default value:">13</code>
+            </div>
+            <div class="col-5-m">
+              Font size applied to code blocks
+            </div>
+          </div>
+        </li>
+        <li class="pad-top-5 pad-bottom-5">
+          <div class="clear row-m">
+            <div class="col-4-m">
+              <code data-content="variable:">$base-code-line-height</code>
+            </div>
+            <div class="col-3-m">
+              <code data-content="default value:">18</code>
+            </div>
+            <div class="col-5-m">
+              Line height applied to code blocks
+            </div>
+          </div>
+        </li>
+        <li class="pad-top-5 pad-bottom-5">
+          <div class="clear row-m">
+            <div class="col-4-m">
+              <code data-content="variable:">$base-code-color</code>
+            </div>
+            <div class="col-3-m">
+              <code data-content="default value:">#000</code>
+            </div>
+            <div class="col-5-m">
+              Font color applied to code blocks
+            </div>
+          </div>
+        </li>
+        <li class="pad-top-5 pad-bottom-5">
+          <div class="clear row-m">
+            <div class="col-4-m">
+              <code data-content="variable:">$base-code-background-color</code>
+            </div>
+            <div class="col-3-m">
+              <code data-content="default value:">transparent</code>
+            </div>
+            <div class="col-5-m">
+              Background color applied to code blocks
+            </div>
+          </div>
+        </li>
+        <li class="pad-top-5 pad-bottom-5">
+          <div class="clear row-m">
+            <div class="col-4-m">
+              <code data-content="variable:">$base-code-border-color</code>
+            </div>
+            <div class="col-3-m">
+              <code data-content="default value:">#d7d7d7</code>
+            </div>
+            <div class="col-5-m">
+              Border color applied to code blocks
+            </div>
+          </div>
+        </li>
+        <li class="pad-top-5 pad-bottom-5">
+          <div class="clear row-m">
+            <div class="col-4-m">
+              <code data-content="variable:">$base-input-height</code>
+            </div>
+            <div class="col-3-m">
+              <code data-content="default value:">36px</code>
+            </div>
+            <div class="col-5-m">
+              Height applied to input elements
+            </div>
+          </div>
+        </li>
+        <li class="pad-top-5 pad-bottom-5">
+          <div class="clear row-m">
+            <div class="col-4-m">
+              <code data-content="variable:">$base-input-placeholder-color</code>
+            </div>
+            <div class="col-3-m">
+              <code data-content="default value:">#999</code>
+            </div>
+            <div class="col-5-m">
+              Placeholder color for all input elements
+            </div>
+          </div>
+        </li>
+        <li class="pad-top-5 pad-bottom-5">
+          <div class="clear row-m">
+            <div class="col-4-m">
+              <code data-content="variable:">$base-input-color</code>
+            </div>
+            <div class="col-3-m">
+              <code data-content="default value:">#000</code>
+            </div>
+            <div class="col-5-m">
+              Font color for all input elements
+            </div>
+          </div>
+        </li>
+        <li class="pad-top-5 pad-bottom-5">
+          <div class="clear row-m">
+            <div class="col-4-m">
+              <code data-content="variable:">$base-input-background-color</code>
+            </div>
+            <div class="col-3-m">
+              <code data-content="default value:">#fff</code>
+            </div>
+            <div class="col-5-m">
+              Background color for all input elements
+            </div>
+          </div>
+        </li>
+        <li class="pad-top-5 pad-bottom-5">
+          <div class="clear row-m">
+            <div class="col-4-m">
+              <code data-content="variable:">$base-input-background-color-focus</code>
+            </div>
+            <div class="col-3-m">
+              <code data-content="default value:">#fff</code>
+            </div>
+            <div class="col-5-m">
+              Background color applied for all input elements when a focus state occurs
+            </div>
+          </div>
+        </li>
+        <li class="pad-top-5 pad-bottom-5">
+          <div class="clear row-m">
+            <div class="col-4-m">
+              <code data-content="variable:">$base-input-border-color</code>
+            </div>
+            <div class="col-3-m">
+              <code data-content="default value:">#ccc</code>
+            </div>
+            <div class="col-5-m">
+              Border color applied for all input elements
+            </div>
+          </div>
+        </li>
+        <li class="pad-top-5 pad-bottom-5">
+          <div class="clear row-m">
+            <div class="col-4-m">
+              <code data-content="variable:">$base-input-border-color-focus</code>
+            </div>
+            <div class="col-3-m">
+              <code data-content="default value:">#f7c723</code>
+            </div>
+            <div class="col-5-m">
+              Border color applied for all input elements when a focus state occurs
+            </div>
+          </div>
+        </li>
+        <li class="pad-top-5 pad-bottom-5">
+          <div class="clear row-m">
+            <div class="col-4-m">
+              <code data-content="variable:">$base-select-box-height</code>
+            </div>
+            <div class="col-3-m">
+              <code data-content="default value:">36px</code>
+            </div>
+            <div class="col-5-m">
+              Height for select element
+            </div>
+          </div>
+        </li>
+        <li class="pad-top-5 pad-bottom-5">
+          <div class="clear row-m">
+            <div class="col-4-m">
+              <code data-content="variable:">$container</code>
+            </div>
+            <div class="col-3-m">
+              <code data-content="default value:">100%</code>
+            </div>
+            <div class="col-5-m">
+              Small device (mobile) container width
+            </div>
+          </div>
+        </li>
+        <li class="pad-top-5 pad-bottom-5">
+          <div class="clear row-m">
+            <div class="col-4-m">
+              <code data-content="variable:">$container-m</code>
+            </div>
+            <div class="col-3-m">
+              <code data-content="default value:">720px</code>
+            </div>
+            <div class="col-5-m">
+              Medium device (tablet) container width
+            </div>
+          </div>
+        </li>
+        <li class="pad-top-5 pad-bottom-5">
+          <div class="clear row-m">
+            <div class="col-4-m">
+              <code data-content="variable:">$container-l</code>
+            </div>
+            <div class="col-3-m">
+              <code data-content="default value:">960px</code>
+            </div>
+            <div class="col-5-m">
+              Large device (desktop) container width
+            </div>
+          </div>
+        </li>
+        <li class="pad-top-5 pad-bottom-5">
+          <div class="clear row-m">
+            <div class="col-4-m">
+              <code data-content="variable:">$container-xl</code>
+            </div>
+            <div class="col-3-m">
+              <code data-content="default value:">1120px</code>
+            </div>
+            <div class="col-5-m">
+              Extra large device (HD) container width
+            </div>
+          </div>
+        </li>
+        <li class="pad-top-5 pad-bottom-5">
+          <div class="clear row-m">
+            <div class="col-4-m">
+              <code data-content="variable:">$grid-gutter</code>
+            </div>
+            <div class="col-3-m">
+              <code data-content="default value:">15px</code>
+            </div>
+            <div class="col-5-m">
+              Grid gutter spacing for small devices (mobile)
+            </div>
+          </div>
+        </li>
+        <li class="pad-top-5 pad-bottom-5">
+          <div class="clear row-m">
+            <div class="col-4-m">
+              <code data-content="variable:">$grid-gutter-m</code>
+            </div>
+            <div class="col-3-m">
+              <code data-content="default value:">15px</code>
+            </div>
+            <div class="col-5-m">
+              Grid gutter spacing for medium devices (tablet)
+            </div>
+          </div>
+        </li>
+        <li class="pad-top-5 pad-bottom-5">
+          <div class="clear row-m">
+            <div class="col-4-m">
+              <code data-content="variable:">$grid-gutter-l</code>
+            </div>
+            <div class="col-3-m">
+              <code data-content="default value:">15px</code>
+            </div>
+            <div class="col-5-m">
+              Grid gutter spacing for large devices (desktop)
+            </div>
+          </div>
+        </li>
+        <li class="pad-top-5 pad-bottom-5">
+          <div class="clear row-m">
+            <div class="col-4-m">
+              <code data-content="variable:">$grid-gutter-xl</code>
+            </div>
+            <div class="col-3-m">
+              <code data-content="default value:">15px</code>
+            </div>
+            <div class="col-5-m">
+              Grid gutter spacing for extra large devices (HD)
+            </div>
+          </div>
+        </li>
+        <li class="pad-top-5 pad-bottom-5">
+          <div class="clear row-m">
+            <div class="col-4-m">
+              <code data-content="variable:">$breakpoint-m</code>
+            </div>
+            <div class="col-3-m">
+              <code data-content="default value:">($container-m + 20)</code>
+            </div>
+            <div class="col-5-m">
+              Breakpoint value for medium devices (tablet)
+            </div>
+          </div>
+        </li>
+        <li class="pad-top-5 pad-bottom-5">
+          <div class="clear row-m">
+            <div class="col-4-m">
+              <code data-content="variable:">$breakpoint-l</code>
+            </div>
+            <div class="col-3-m">
+              <code data-content="default value:">($container-l + 20)</code>
+            </div>
+            <div class="col-5-m">
+              Breakpoint value for large devices (desktop)
+            </div>
+          </div>
+        </li>
+        <li class="pad-top-5 pad-bottom-5">
+          <div class="clear row-m">
+            <div class="col-4-m">
+              <code data-content="variable:">$breakpoint-xl</code>
+            </div>
+            <div class="col-3-m">
+              <code data-content="default value:">($container-xl + 20)</code>
+            </div>
+            <div class="col-5-m">
+              Breakpoint value for extra large devices (HD)
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
 
+    <h2 id="typography">Typography</h2>
     <p>
-      Typography sizing, line heights, font weight and colors can easily be modified by adjusting the variables within <code>_variables.less</code> or <code>_variables.scss</code>.
+      The typography file contains all styling for default body text, links, headings and other general typography elements.
     </p>
     <p>
-      A summary of the variables and there usage are as follows:
+      All font sizes and line heights use <code>rem</code> units with <code>px</code> fallbacks and a full list of all the typography elements are listed below.
     </p>
-    <table>
-      <caption>Global Typography Variables</caption>
-      <thead>
-        <tr>
-          <th>Variable</th>
-          <th>Default value</th>
-          <th>Purpose</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>
-            $base-background-color
-          </td>
-          <td>
-            <code class="base-background-color">#fff</code>
-          </td>
-          <td>
-            Colour applied to the background body
-          </td>
-        </tr>
-        <tr>
-          <td>
-            $base-font-family
-          </td>
-          <td>
-            <code>sans-serif</code>
-          </td>
-          <td>
-            Global font family
-          </td>
-        </tr>
-        <tr>
-          <td>
-            $base-font-size
-          </td>
-          <td>
-            <code>16px</code>
-          </td>
-          <td>
-            Global font size
-          </td>
-        </tr>
-        <tr>
-          <td>
-            $base-line-height
-          </td>
-          <td>
-            <code>22px</code>
-          </td>
-          <td>
-            Global line height
-          </td>
-        </tr>
-        <tr>
-          <td>
-            $base-font-weight
-          </td>
-          <td>
-            <code>$font-regular</code>
-          </td>
-          <td>
-            Global font weight
-          </td>
-        </tr>
-        <tr>
-          <td>
-            $base-font-color
-          </td>
-          <td>
-            <code class="base-font-color">#585858</code>
-          </td>
-          <td>
-            Global font colour
-          </td>
-        </tr>
-        <tr>
-          <td>
-            $base-link-color
-          </td>
-          <td>
-            <code class="base-link-color">#cd5c5c</code>
-          </td>
-          <td>
-            Global link colour
-          </td>
-        </tr>
-        <tr>
-          <td>
-            $font-100
-          </td>
-          <td>
-            <code>font weight: 100</code>
-          </td>
-          <td>
-            Font weight for thin text
-          </td>
-        </tr>
-        <tr>
-          <td>
-            $font-200
-          </td>
-          <td>
-            <code>font weight: 200</code>
-          </td>
-          <td>
-            Font weight for lighter text
-          </td>
-        </tr>
-        <tr>
-          <td>
-            $font-300
-          </td>
-          <td>
-            <code>font weight: 300</code>
-          </td>
-          <td>
-            Font weight for light text
-          </td>
-        </tr>
-        <tr>
-          <td>
-            $font-400
-          </td>
-          <td>
-            <code>font weight: 400</code>
-          </td>
-          <td>
-            Font weight for regular text
-          </td>
-        </tr>
-        <tr>
-          <td>
-            $font-500
-          </td>
-          <td>
-            <code>font weight: 500</code>
-          </td>
-          <td>
-            Font weight for medium text
-          </td>
-        </tr>
-        <tr>
-          <td>
-            $font-600
-          </td>
-          <td>
-            <code>font weight: 600</code>
-          </td>
-          <td>
-            Font weight for semi bold text
-          </td>
-        </tr>
-        <tr>
-          <td>
-            $font-700
-          </td>
-          <td>
-            <code>font weight: 700</code>
-          </td>
-          <td>
-            Font weight for bold text
-          </td>
-        </tr>
-        <tr>
-          <td>
-            $font-800
-          </td>
-          <td>
-            <code>font weight: 800</code>
-          </td>
-          <td>
-            Font weight for extra bold text
-          </td>
-        </tr>
-        <tr>
-          <td>
-            $font-900
-          </td>
-          <td>
-            <code>font weight: 900</code>
-          </td>
-          <td>
-            Font weight for ultra bold text
-          </td>
-        </tr>
-      </tbody>
-    </table>
+
+    <div class="pad-bottom-20">
+      <ul class="data-list">
+        <li class="pad-top-5 pad-bottom-5">
+          <div class="clear row-m">
+            <div class="col-3-m">
+              <code>&lt;b&gt;, &lt;strong&gt;</code>
+            </div>
+            <div class="col-9-m">
+              <strong>Strong</strong>
+            </div>
+          </div>
+        </li>
+        <li class="pad-top-5 pad-bottom-5">
+          <div class="clear row-m">
+            <div class="col-3-m">
+              <code>&lt;em&gt;</code>
+            </div>
+            <div class="col-9-m">
+              <em>Italic</em>
+            </div>
+          </div>
+        </li>
+        <li class="pad-top-5 pad-bottom-5">
+          <div class="clear row-m">
+            <div class="col-3-m">
+              <code>&lt;abbr&gt;</code>
+            </div>
+            <div class="col-9-m">
+              <abbr title="As Soon As Possible">ASAP</abbr>
+            </div>
+          </div>
+        </li>
+        <li class="pad-top-5 pad-bottom-5">
+          <div class="clear row-m">
+            <div class="col-3-m">
+              <code>&lt;dfn&gt;</code>
+            </div>
+            <div class="col-9-m">
+              <dfn>Definition</dfn>
+            </div>
+          </div>
+        </li>
+        <li class="pad-top-5 pad-bottom-5">
+          <div class="clear row-m">
+            <div class="col-3-m">
+              <code>&lt;mark&gt;</code>
+            </div>
+            <div class="col-9-m">
+              <mark>Mark</mark>
+            </div>
+          </div>
+        </li>
+        <li class="pad-top-5 pad-bottom-5">
+          <div class="clear row-m">
+            <div class="col-3-m">
+              <code>&lt;small&gt;</code>
+            </div>
+            <div class="col-9-m">
+              <small>Small text</small>
+            </div>
+          </div>
+        </li>
+        <li class="pad-top-5 pad-bottom-5">
+          <div class="clear row-m">
+            <div class="col-3-m">
+              <code>&lt;sub&gt;</code>
+            </div>
+            <div class="col-9-m">
+              Text with <sub>Sub text</sub>
+            </div>
+          </div>
+        </li>
+        <li class="pad-top-5 pad-bottom-5">
+          <div class="clear row-m">
+            <div class="col-3-m">
+              <code>&lt;sup&gt;</code>
+            </div>
+            <div class="col-9-m">
+              Text with <sup>Sup text</sup>
+            </div>
+          </div>
+        </li>
+        <li class="pad-top-5 pad-bottom-5">
+          <div class="clear row-m">
+            <div class="col-3-m">
+              <code>&lt;del&gt;</code>
+            </div>
+            <div class="col-9-m">
+              <del>Deleted text</del>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
 
 
     <h2 id="headings">Headings</h2>
-    <p>
-      A summary of the headings and variable usage are as follows:  
-    </p>
     <table>
       <caption>Heading Examples</caption>
       <thead>
@@ -464,293 +1194,7 @@
       </tbody>
     </table>
 
-    <table>
-      <caption>Heading Variables</caption>
-      <thead>
-        <tr>
-          <th>Variable</th>
-          <th>Default value</th>
-          <th>Purpose</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>
-            $heading-font-family
-          </td>
-          <td>
-            <code>sans-serif</code>
-          </td>
-          <td>
-            Font family applied to all headings (h1 - h6)
-          </td>
-        </tr>
-        <tr>
-          <td>
-            $h1-font-size
-          </td>
-          <td>
-            <code>32px</code>
-          </td>
-          <td>
-            Heading 1 font size
-          </td>
-        </tr>
-        <tr>
-          <td>
-            $h1-line-height
-          </td>
-          <td>
-            <code>36px</code>
-          </td>
-          <td>
-            Heading 1 line height
-          </td>
-        </tr>
-        <tr>
-          <td>
-            $h1-font-weight
-          </td>
-          <td>
-            <code>$font-regular</code>
-          </td>
-          <td>
-            Heading 1 font weight
-          </td>
-        </tr>
-        <tr>
-          <td >
-            $h1-color
-          </td>
-          <td>
-            <code class="h1-color">#343434</code>
-          </td>
-          <td>
-            Heading 1 font color
-          </td>
-        </tr>
-        <tr>
-          <td>
-            $h2-font-size
-          </td>
-          <td>
-            <code>26px</code>
-          </td>
-          <td>
-            Heading 2 font size
-          </td>
-        </tr>
-        <tr>
-          <td>
-            $h2-line-height
-          </td>
-          <td>
-            <code>32px</code>
-          </td>
-          <td>
-            Heading 2 line height
-          </td>
-        </tr>
-        <tr>
-          <td>
-            $h2-font-weight
-          </td>
-          <td>
-            <code>$font-regular</code>
-          </td>
-          <td>
-            Heading 2 font weight
-          </td>
-        </tr>
-        <tr>
-          <td>
-            $h2-color
-          </td>
-          <td>
-            <code class="h2-color">#343434</code>
-          </td>
-          <td>
-            Heading 2 font color
-          </td>
-        </tr>
-        <tr>
-          <td>
-            $h3-font-size
-          </td>
-          <td>
-            <code>22px</code>
-          </td>
-          <td>
-            Heading 3 font size
-          </td>
-        </tr>
-        <tr>
-          <td>
-            $h3-line-height
-          </td>
-          <td>
-            <code>28px</code>
-          </td>
-          <td>
-            Heading 3 line height
-          </td>
-        </tr>
-        <tr>
-          <td>
-            $h3-font-weight
-          </td>
-          <td>
-            <code>$font-regular</code>
-          </td>
-          <td>
-            Heading 3 font weight
-          </td>
-        </tr>
-        <tr>
-          <td>
-            $h3-color
-          </td>
-          <td>
-            <code class="h3-color">#343434</code>
-          </td>
-          <td>
-            Heading 3 font color
-          </td>
-        </tr>
-        <tr>
-          <td>
-            $h4-font-size
-          </td>
-          <td>
-            <code>18px</code>
-          </td>
-          <td>
-            Heading 4 font size
-          </td>
-        </tr>
-        <tr>
-          <td>
-            $h4-line-height
-          </td>
-          <td>
-            <code>24px</code>
-          </td>
-          <td>
-            Heading 4 line height
-          </td>
-        </tr>
-        <tr>
-          <td>
-            $h4-font-weight
-          </td>
-          <td>
-            <code>$font-regular</code>
-          </td>
-          <td>
-            Heading 4 font weight
-          </td>
-        </tr>
-        <tr>
-          <td>
-            $h4-color
-          </td>
-          <td>
-            <code class="h4-color">#343434</code>
-          </td>
-          <td>
-            Heading 4 font color
-          </td>
-        </tr>
-        <tr>
-          <td>
-            $h5-font-size
-          </td>
-          <td>
-            <code>16px</code>
-          </td>
-          <td>
-            Heading 5 font size
-          </td>
-        </tr>
-        <tr>
-          <td>
-            $h5-line-height
-          </td>
-          <td>
-            <code>22px</code>
-          </td>
-          <td>
-            Heading 5 line height
-          </td>
-        </tr>
-        <tr>
-          <td>
-            $h5-font-weight
-          </td>
-          <td>
-            <code>$font-regular</code>
-          </td>
-          <td>
-            Heading 5 font weight
-          </td>
-        </tr>
-        <tr>
-          <td>
-            $h5-color
-          </td>
-          <td>
-            <code class="h5-color">#343434</code>
-          </td>
-          <td>
-            Heading 5 font color
-          </td>
-        </tr>
-        <tr>
-          <td>
-            $h6-font-size
-          </td>
-          <td>
-            <code>14px</code>
-          </td>
-          <td>
-            Heading 6 font size
-          </td>
-        </tr>
-        <tr>
-          <td>
-            $h6-line-height
-          </td>
-          <td>
-            <code>20px</code>
-          </td>
-          <td>
-            Heading 6 line height
-          </td>
-        </tr>
-        <tr>
-          <td>
-            $h6-font-weight
-          </td>
-          <td>
-            <code>$font-regular</code>
-          </td>
-          <td>
-            Heading 6 font weight
-          </td>
-        </tr>
-        <tr>
-          <td>
-            $h6-color
-          </td>
-          <td>
-            <code class="h6-color">#343434</code>
-          </td>
-          <td>
-            Heading 6 font color
-          </td>
-        </tr>
-      </tbody>
-    </table>
+
 
     <h2 id="lists">Lists</h2>
     <p>
@@ -834,68 +1278,6 @@
       </p>
       <cite>John Doe - Founder of Doe Inc.</cite>
     </blockquote>
-
-    <p>
-      Default values for blockquote variables are as follows:
-    </p>
-
-    <table>
-      <caption>Blockquote Variables</caption>
-      <thead>
-        <tr>
-          <th>Variable</th>
-          <th>Default value</th>
-          <th>Purpose</th>
-        </tr>
-      </thead>
-      <tbody>
-      <tr>
-        <td>$base-blockquote-font-family</td>
-        <td>
-          <code>sans-serif</code>
-        </td>
-        <td>
-          Font family applied to blockquotes
-        </td>
-      </tr>
-      <tr>
-        <td>$base-blockquote-font-size</td>
-        <td>
-          <code>22px</code>
-        </td>
-        <td>
-          Font size applied to blockquotes
-        </td>
-      </tr>
-      <tr>
-        <td>$base-blockquote-line-height</td>
-        <td>
-          <code>28px</code>
-        </td>
-        <td>
-          Line height applied to blockquotes
-        </td>
-      </tr>
-      <tr>
-        <td>$base-blockquote-color</td>
-        <td>
-          <code class="base-blockquote-color">#424242</code>
-        </td>
-        <td>
-          Font color applied to blockquotes
-        </td>
-      </tr>
-      <tr>
-        <td>$base-blockquote-cite-color</td>
-        <td>
-          <code class="base-blockquote-cite-color">#777</code>
-        </td>
-        <td>
-          Font color applied to the blockquote cite
-        </td>
-      </tr>
-      </tbody>
-    </table>
 
     <hr>
 
@@ -1083,7 +1465,7 @@
             <code>#999</code>
           </td>
           <td>
-            Colour applied to all placeholder text on input fields
+            color applied to all placeholder text on input fields
           </td>
         </tr>
       </tbody>
