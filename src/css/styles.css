@@ -407,7 +407,7 @@ html input[disabled] {
 :-ms-input-placeholder {
   color: #999; }
 
-.button {
+.button, .animate-example {
   cursor: pointer;
   border: 1px solid #d7d7d7;
   background-color: #f3f3f3;
@@ -418,9 +418,9 @@ html input[disabled] {
   display: inline-block;
   -webkit-transition: all 0.3s;
   transition: all 0.3s; }
-  .button:hover, .button:active {
+  .button:hover, .animate-example:hover, .button:active, .animate-example:active {
     text-decoration: none; }
-  .button:hover {
+  .button:hover, .animate-example:hover {
     background: #f9f9f9; }
 
 .button-link {
@@ -1489,7 +1489,7 @@ html input[disabled] {
 .text-right {
   text-align: right; }
 
-.text-center {
+.text-center, .animate-example {
   text-align: center; }
 
 .text-justify {
@@ -1510,7 +1510,7 @@ html input[disabled] {
 .none {
   display: none; }
 
-.block {
+.block, .animate-example {
   display: block; }
 
 .inline-block {
@@ -2545,5 +2545,14 @@ html input[disabled] {
     border-bottom: 1px solid #ccc; }
     .data-list > li:first-child {
       border-top: 1px solid #ccc; }
+
+.animate-example {
+  cursor: pointer; }
+
+.animate {
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both; }
 
 /*# sourceMappingURL=styles.css.map */

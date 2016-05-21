@@ -286,3 +286,10 @@ $white: #fff;
     }
   }
 }
+.animate-example {
+  cursor: pointer;
+  @extend .button;
+  @extend .block;
+  @extend .text-center;
+}
+.animate { @include animate(1s); }
