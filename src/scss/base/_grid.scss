@@ -18,6 +18,7 @@
     position: relative;
     margin-left: -$grid-gutter-m;
     margin-right: -$grid-gutter-m;
+    .clear-m:before, .clear-m:after { content: ""; display: table; } .clear-m:after { clear: both; }
     .row-m:before, .row-m:after { content: ""; display: table; } .row-m:after { clear: both; }
   }
 }
@@ -28,6 +29,7 @@
     margin-left: -$grid-gutter-l;
     margin-right: -$grid-gutter-l;
   }
+  .clear-l:before, .clear-l:after { content: ""; display: table; } .clear-l:after { clear: both; }
   .row-l:before, .row-l:after { content: ""; display: table; } .row-l:after { clear: both; }
 }
 // Extra Large Device Row
@@ -37,6 +39,7 @@
     margin-left: -$grid-gutter-xl;
     margin-right: -$grid-gutter-xl;
   }
+  .clear-xl:before, .clear-xl:after { content: ""; display: table; } .clear-xl:after { clear: both; }
   .row-xl:before, .row-xl:after { content: ""; display: table; } .row-xl:after { clear: both; }
 }
 
