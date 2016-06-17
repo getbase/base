@@ -3,13 +3,13 @@
 // ==========================================================================
 
 // Import Base
-@import "base.scss";
+@import "base";
 
 
 // Website / App Styles
-@import "styles/variables-colors.scss";
-@import "styles/header.scss";
-@import "styles/footer.scss";
+@import "styles/variables-colors";
+@import "styles/header";
+@import "styles/footer";
 
 
 // Import Base Helpers

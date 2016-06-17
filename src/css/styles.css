@@ -2,7 +2,7 @@
 
 // Base Stylesheet - http://getbase.org
 // Author: Matthew Hartman - http://www.matthewhartman.com.au/
-// Version: 3.1.0 - Last Updated: June 17, 2016
+// Version: 3.1.1 - Last Updated: June 17, 2016
 
 ========================================================================== */
 *, *:before, *:after {
@@ -1795,7 +1795,6 @@ html input[disabled] {
     left: 0; }
 
 .select {
-  overflow: hidden;
   position: relative;
   display: block; }
   .select:before {

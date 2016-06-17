@@ -1,19 +1,25 @@
 # Base 2 Change Log
 
 
-## [3.1.0] - 2016-06-27
+## [3.1.1] - 2016-06-17
+### Base V3.1.1
+- Cleaned up styles.scss
+- Removed overflow hidden on pretty select (.select)
+- Version bump for style.scss, package.json and bower.json
+
+
+## [3.1.0] - 2016-06-17
 ### Base V3.1.0
 - Cleaned up vendor prefixes on .button
-- Removed overflow hidden on pretty select (.select)
-- Added variables to custom select (_variables.scss)
+- Added variables to custom select
 - Cleaned up font-weight variables
 - Added flex helpers for medium, large and extra large devices
 - Added clearfix for medium, large and extra large devices
 - Removed Styleguide
 - Minor update in SCSS structure
 - Moved _helpers.scss into styles.scss
-- Version bump for style.scss, package.json and bower.json
 - Updated default jQuery version to 1.12.4
+- Version bump for style.scss, package.json and bower.json
 
 
 ## [3.0.2] - 2016-05-21
