@@ -2,15 +2,15 @@
 // Website or App Stylesheet
 // ==========================================================================
 
+// Variables and Colors
+@import "styles/variables-colors";
+
 // Import Base
 @import "base";
 
-
 // Website / App Styles
-@import "styles/variables-colors";
 @import "styles/header";
 @import "styles/footer";
-
 
 // Import Base Helpers
 @import "base/_helpers";

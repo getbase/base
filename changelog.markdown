@@ -1,6 +1,12 @@
 # Base 2 Change Log
 
 
+## [3.1.2] - 2016-06-17
+### Base V3.1.2
+- Updated styles.scss
+- Version bump for style.scss, package.json and bower.json
+
+
 ## [3.1.1] - 2016-06-17
 ### Base V3.1.1
 - Cleaned up styles.scss
