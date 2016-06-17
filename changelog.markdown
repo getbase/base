@@ -1,6 +1,21 @@
 # Base 2 Change Log
 
 
+## [3.1.0] - 2016-06-27
+### Base V3.1.0
+- Cleaned up vendor prefixes on .button
+- Removed overflow hidden on pretty select (.select)
+- Added variables to custom select (_variables.scss)
+- Cleaned up font-weight variables
+- Added flex helpers for medium, large and extra large devices
+- Added clearfix for medium, large and extra large devices
+- Removed Styleguide
+- Minor update in SCSS structure
+- Moved _helpers.scss into styles.scss
+- Version bump for style.scss, package.json and bower.json
+- Updated default jQuery version to 1.12.4
+
+
 ## [3.0.2] - 2016-05-21
 ### Base V3.0.2
 - Minor update to variable names for consistency ($base-link-color-hover to $base-link-hover-color, $base-input-background-color-focus to $base-input-background-focus-color and $base-input-border-color-focus to $base-input-border-focus-color)

@@ -37,26 +37,6 @@ gulp.task('sass', function () {
     .pipe(notify("SCSS Compiled Successfully :)"));
 });
 
-gulp.task('styleguide', function () {
-  return gulp.src('./src/scss/styleguide.scss')
-  .pipe(sourcemaps.init())
-  .pipe(sass({
-    errLogToConsole: false,
-    paths: [ path.join(__dirname, 'scss', 'includes') ]
-  })
-  .on("error", notify.onError(function(error) {
-    return "Failed to Compile Styleguide SCSS: " + error.message;
-  })))
-  .pipe(cssBase64())
-  .pipe(autoprefixer())
-  .pipe(sourcemaps.write('./'))
-  .pipe(gulp.dest('./src/css/'))
-  .pipe(browserSync.reload({
-    stream: true
-  }))
-  .pipe(notify("Styleguide SCSS Compiled Successfully :)"));
-});
-
 // Task to Minify JS
 gulp.task('jsmin', function() {
   return gulp.src('./src/js/**/*.js')
@@ -95,7 +75,7 @@ gulp.task('inlinesource', function () {
 
 // Gulp Watch Task
 gulp.task('watch', ['browserSync'], function () {
-   gulp.watch('./src/scss/**/*', ['sass', 'styleguide']);
+   gulp.watch('./src/scss/**/*', ['sass']);
    gulp.watch('./src/**/*.html').on('change', browserSync.reload);
 });
 
@@ -109,5 +89,5 @@ gulp.task('default', ['watch']);
 
 // Gulp Build Task
 gulp.task('build', function() {
-  runSequence('clean', 'sass', 'styleguide', 'imagemin', 'jsmin', 'inlinesource');
+  runSequence('clean', 'sass', 'imagemin', 'jsmin', 'inlinesource');
 });

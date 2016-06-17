@@ -17,15 +17,15 @@
 }
 
 // Font Weights
-.font-100 { font-weight: $font-100; }
-.font-200 { font-weight: $font-200; }
-.font-300 { font-weight: $font-300; }
-.font-400 { font-weight: $font-400; }
-.font-500 { font-weight: $font-500; }
-.font-600 { font-weight: $font-600; }
-.font-700 { font-weight: $font-700; }
-.font-800 { font-weight: $font-800; }
-.font-900 { font-weight: $font-900; }
+.font-100 { font-weight: 100; }
+.font-200 { font-weight: 200; }
+.font-300 { font-weight: 300; }
+.font-400 { font-weight: 400; }
+.font-500 { font-weight: 500; }
+.font-600 { font-weight: 600; }
+.font-700 { font-weight: 700; }
+.font-800 { font-weight: 800; }
+.font-900 { font-weight: 900; }
 
 // Font Styles
 .font-normal { font-style: normal; }
@@ -211,7 +211,7 @@
     padding: 0 10px;
     line-height: normal;
     border: 1px solid $base-input-border-color;
-    background: #fff;
+    background: $base-input-background-color;
     display: block;
   }
   select::-ms-expand {
@@ -226,9 +226,7 @@
 }
 
 // Animations
-.animate {
-  @include animate(1s);
-}
+.animate { @include animate(1s); }
 .animate-infinite {
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
@@ -253,6 +251,18 @@
   .block-m { display: block; }
   .inline-block-m { display: inline-block; }
   .inline-m { display: inline; }
+
+  // Flex Types
+  .flex-m { display: flex; }
+  .flex-row-m { flex-direction: row; }
+  .flex-column-m { flex-direction: column; }
+  .flex-space-around-m { justify-content: space-around; }
+  .flex-space-between-m { justify-content: space-between; }
+  .flex-start-m { justify-content: flex-start; }
+  .flex-center-m { justify-content: center; }
+  .flex-end-m { justify-content: flex-end; }
+  .flex-wrap-m { flex-wrap: wrap; }
+  .flex-nowrap-m { flex-wrap: nowrap; }
 
   // Floats
   .left-m { float: left; }
@@ -340,6 +350,18 @@
   .inline-block-l { display: inline-block; }
   .inline-l { display: inline; }
 
+  // Flex Types
+  .flex-l { display: flex; }
+  .flex-row-l { flex-direction: row; }
+  .flex-column-l { flex-direction: column; }
+  .flex-space-around-l { justify-content: space-around; }
+  .flex-space-between-l { justify-content: space-between; }
+  .flex-start-l { justify-content: flex-start; }
+  .flex-center-l { justify-content: center; }
+  .flex-end-l { justify-content: flex-end; }
+  .flex-wrap-l { flex-wrap: wrap; }
+  .flex-nowrap-l { flex-wrap: nowrap; }
+
   // Floats
   .left-l { float: left; }
   .right-l { float: right; }
@@ -425,6 +447,18 @@
   .block-xl { display: block; }
   .inline-block-xl { display: inline-block; }
   .inline-xl { display: inline; }
+
+  // Flex Types
+  .flex-xl { display: flex; }
+  .flex-row-xl { flex-direction: row; }
+  .flex-column-xl { flex-direction: column; }
+  .flex-space-around-xl { justify-content: space-around; }
+  .flex-space-between-xl { justify-content: space-between; }
+  .flex-start-xl { justify-content: flex-start; }
+  .flex-center-xl { justify-content: center; }
+  .flex-end-xl { justify-content: flex-end; }
+  .flex-wrap-xl { flex-wrap: wrap; }
+  .flex-nowrap-xl { flex-wrap: nowrap; }
 
   // Floats
   .left-xl { float: left; }
