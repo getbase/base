@@ -2,7 +2,7 @@
 
 // Base Stylesheet - http://getbase.org
 // Author: Matthew Hartman - http://www.matthewhartman.com.au/
-// Version: 3.1.2 - Last Updated: June 17, 2016
+// Version: 3.1.3 - Last Updated: June 18, 2016
 
 ========================================================================== */
 *, *:before, *:after {
@@ -407,7 +407,7 @@ html input[disabled] {
 :-ms-input-placeholder {
   color: #999; }
 
-.button, .animate-example {
+.button, .animation-example {
   cursor: pointer;
   border: 1px solid #d7d7d7;
   background-color: #f3f3f3;
@@ -418,9 +418,9 @@ html input[disabled] {
   display: inline-block;
   -webkit-transition: all 0.3s;
   transition: all 0.3s; }
-  .button:hover, .animate-example:hover, .button:active, .animate-example:active {
+  .button:hover, .animation-example:hover, .button:active, .animation-example:active {
     text-decoration: none; }
-  .button:hover, .animate-example:hover {
+  .button:hover, .animation-example:hover {
     background: #f9f9f9; }
 
 .button-link {
@@ -1714,10 +1714,10 @@ html input[disabled] {
     .data-list > li:first-child {
       border-top: 1px solid #ccc; }
 
-.animate-example {
+.animation-example {
   cursor: pointer; }
 
-.animate {
+.animation {
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
   -webkit-animation-fill-mode: both;
@@ -1793,7 +1793,7 @@ html input[disabled] {
 .text-right {
   text-align: right; }
 
-.text-center, .animate-example {
+.text-center, .animation-example {
   text-align: center; }
 
 .text-justify {
@@ -1814,7 +1814,7 @@ html input[disabled] {
 .none {
   display: none; }
 
-.block, .animate-example {
+.block, .animation-example {
   display: block; }
 
 .inline-block {
@@ -2083,13 +2083,13 @@ html input[disabled] {
     text-shadow: 0 0 0 #000;
     border-color: #f7c723; }
 
-.animate {
+.animation {
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both; }
 
-.animate-infinite {
+.animation-infinite {
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite; }
 

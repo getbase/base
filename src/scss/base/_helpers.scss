@@ -225,8 +225,8 @@
 }
 
 // Animations
-.animate { @include animate(1s); }
-.animate-infinite {
+.animation { @include animation(1s); }
+.animation-infinite {
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }

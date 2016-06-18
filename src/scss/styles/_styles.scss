@@ -262,10 +262,10 @@
     }
   }
 }
-.animate-example {
+.animation-example {
   cursor: pointer;
   @extend .button;
   @extend .block;
   @extend .text-center;
 }
-.animate { @include animate(1s); }
+.animation { @include animation(1s); }

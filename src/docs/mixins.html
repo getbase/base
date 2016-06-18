@@ -135,15 +135,27 @@
         </tr>
         <tr>
           <td class="mobile-table-header" data-title="Mixin">
-            <span class="data-content"><code>@include animate(time)</code></span>
+            <span class="data-content"><code>@include animation(time)</code></span>
           </td>
           <td data-title="Purpose">
             <span class="data-content">Applies animation speed</span>
           </td>
           <td data-title="Example">
-            <span class="data-content"><code>@include animate(2s)</code></span>
+            <span class="data-content"><code>@include animation(2s)</code></span>
           </td>
           <td data-title="Output"><span class="data-content">Animation will run for 2 seconds</span></td>
+        </tr>
+        <tr>
+          <td class="mobile-table-header" data-title="Mixin">
+            <span class="data-content"><code>@include arrow(size, color, direction)</code></span>
+          </td>
+          <td data-title="Purpose">
+            <span class="data-content">Applies an arrow</span>
+          </td>
+          <td data-title="Example">
+            <span class="data-content"><code>@include animation(10px, #000, right)</code></span>
+          </td>
+          <td data-title="Output"><span class="data-content">Will apply a black right arrow to an element with a pixel size of 10px (note: element must be block and have a width and height for this to work)</span></td>
         </tr>
       </tbody>
     </table>
