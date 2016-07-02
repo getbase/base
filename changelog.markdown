@@ -1,10 +1,16 @@
 # Base 2 Change Log
 
 
+## [3.1.5] - 2016-07-02
+### Base V3.1.5
+- Fixed IE bug with placeholder color override
+- Version bump for style.scss, package.json and bower.json
+
+
 ## [3.1.4] - 2016-07-02
 ### Base V3.1.4
+- Removed rounded corners on buttons and inputs for Safari
 - Corrected .row-m, .row-l, .row-xl bug in grid.scss
-- Fixed IE bug with placeholder color override
 - Version bump for style.scss, package.json and bower.json
 
 

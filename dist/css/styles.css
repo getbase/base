@@ -2,7 +2,7 @@
 
 // Base Stylesheet - http://getbase.org
 // Author: Matthew Hartman - http://www.matthewhartman.com.au/
-// Version: 3.1.4 - Last Updated: July 02, 2016
+// Version: 3.1.5 - Last Updated: July 02, 2016
 
 ========================================================================== */
 *, *:before, *:after {
@@ -397,16 +397,16 @@ button[disabled],
 html input[disabled] {
   cursor: not-allowed; }
 
-::-webkit-input-placeholder {
+input::-webkit-input-placeholder {
   color: #999; }
 
-:-moz-placeholder {
+input:-moz-placeholder {
   color: #999; }
 
-::-moz-placeholder {
+input::-moz-placeholder {
   color: #999; }
 
-:-ms-input-placeholder {
+input:-ms-input-placeholder {
   color: #999; }
 
 .button {
