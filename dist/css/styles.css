@@ -2,7 +2,7 @@
 
 // Base Stylesheet - http://getbase.org
 // Author: Matthew Hartman - http://www.matthewhartman.com.au/
-// Version: 3.1.3 - Last Updated: June 18, 2016
+// Version: 3.1.4 - Last Updated: July 02, 2016
 
 ========================================================================== */
 *, *:before, *:after {
@@ -346,7 +346,8 @@ textarea {
   padding: 10px;
   background-color: #fff;
   border: 1px solid #ccc;
-  overflow: auto; }
+  overflow: auto;
+  border-radius: 0; }
   textarea:focus {
     background-color: #fff;
     border-color: #f7c723;
@@ -376,7 +377,8 @@ button,
 html [type="button"],
 [type="reset"],
 [type="submit"] {
-  -webkit-appearance: button; }
+  -webkit-appearance: button;
+  border-radius: 0; }
 
 button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
@@ -458,31 +460,31 @@ html input[disabled] {
     position: relative;
     margin-left: -15px;
     margin-right: -15px; }
-    .row-m .clear-m:before, .row-m .clear-m:after {
+    .row-m:before, .row-m:after {
       content: "";
       display: table; }
-    .row-m .clear-m:after {
+    .row-m:after {
       clear: both; }
-    .row-m .row-m:before, .row-m .row-m:after {
-      content: "";
-      display: table; }
-    .row-m .row-m:after {
-      clear: both; } }
+  .clear-m:before, .clear-m:after {
+    content: "";
+    display: table; }
+  .clear-m:after {
+    clear: both; } }
 
 @media only screen and (min-width: 980px) {
   .row-l {
     position: relative;
     margin-left: -15px;
     margin-right: -15px; }
+    .row-l:before, .row-l:after {
+      content: "";
+      display: table; }
+    .row-l:after {
+      clear: both; }
   .clear-l:before, .clear-l:after {
     content: "";
     display: table; }
   .clear-l:after {
-    clear: both; }
-  .row-l:before, .row-l:after {
-    content: "";
-    display: table; }
-  .row-l:after {
     clear: both; } }
 
 @media only screen and (min-width: 1140px) {
@@ -490,15 +492,15 @@ html input[disabled] {
     position: relative;
     margin-left: -15px;
     margin-right: -15px; }
+    .row-xl:before, .row-xl:after {
+      content: "";
+      display: table; }
+    .row-xl:after {
+      clear: both; }
   .clear-xl:before, .clear-xl:after {
     content: "";
     display: table; }
   .clear-xl:after {
-    clear: both; }
-  .row-xl:before, .row-xl:after {
-    content: "";
-    display: table; }
-  .row-xl:after {
     clear: both; } }
 
 .container {
