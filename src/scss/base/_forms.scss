@@ -81,6 +81,7 @@ textarea {
   background-color: $base-input-background-color;
   border: 1px solid $base-input-border-color;
   overflow: auto;
+  border-radius: 0;
   &:focus {
     background-color: $base-input-background-focus-color;
     border-color: $base-input-border-focus-color;
@@ -116,6 +117,7 @@ html [type="button"],
 [type="reset"],
 [type="submit"] {
   -webkit-appearance: button;
+  border-radius: 0;
 }
 
 button::-moz-focus-inner,
@@ -140,7 +142,7 @@ html input[disabled] {
 
 
 // Placeholder Colour
-::-webkit-input-placeholder { color: $base-input-placeholder-color; }
-:-moz-placeholder { color: $base-input-placeholder-color; }
-::-moz-placeholder { color: $base-input-placeholder-color; }
-:-ms-input-placeholder { color: $base-input-placeholder-color; }
+input::-webkit-input-placeholder { color: $base-input-placeholder-color; }
+input:-moz-placeholder { color: $base-input-placeholder-color; }
+input::-moz-placeholder { color: $base-input-placeholder-color; }
+input:-ms-input-placeholder { color: $base-input-placeholder-color; }

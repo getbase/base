@@ -18,9 +18,9 @@
     position: relative;
     margin-left: -$grid-gutter-m;
     margin-right: -$grid-gutter-m;
-    .clear-m:before, .clear-m:after { content: ""; display: table; } .clear-m:after { clear: both; }
-    .row-m:before, .row-m:after { content: ""; display: table; } .row-m:after { clear: both; }
+    &:before, &:after { content: ""; display: table; } &:after { clear: both; }
   }
+  .clear-m:before, .clear-m:after { content: ""; display: table; } .clear-m:after { clear: both; }
 }
 // Large Device Row
 @include breakpoint(l) {
@@ -28,9 +28,9 @@
     position: relative;
     margin-left: -$grid-gutter-l;
     margin-right: -$grid-gutter-l;
+    &:before, &:after { content: ""; display: table; } &:after { clear: both; }
   }
   .clear-l:before, .clear-l:after { content: ""; display: table; } .clear-l:after { clear: both; }
-  .row-l:before, .row-l:after { content: ""; display: table; } .row-l:after { clear: both; }
 }
 // Extra Large Device Row
 @include breakpoint(xl) {
@@ -38,9 +38,9 @@
     position: relative;
     margin-left: -$grid-gutter-xl;
     margin-right: -$grid-gutter-xl;
+    &:before, &:after { content: ""; display: table; } &:after { clear: both; }
   }
   .clear-xl:before, .clear-xl:after { content: ""; display: table; } .clear-xl:after { clear: both; }
-  .row-xl:before, .row-xl:after { content: ""; display: table; } .row-xl:after { clear: both; }
 }
 
 // Container
