@@ -1546,7 +1546,8 @@ input:-ms-input-placeholder {
 .phone {
   width: 240px;
   height: 280px;
-  background-color: #fff;
+  background: #fff;
+  background: rgba(255, 255, 255, 0.9);
   border-radius: 20px 20px 0 0;
   padding: 30px 20px 0 20px;
   position: relative; }
@@ -1559,8 +1560,15 @@ input:-ms-input-placeholder {
       width: 500px; } }
 
 .phone-inner {
-  background: #111;
-  height: 250px; }
+  background: url(../img/tourly.jpg) 0 0 no-repeat #111;
+  background-size: cover;
+  display: block;
+  cursor: pointer;
+  height: 250px;
+  -webkit-transition: all .3s;
+  transition: all .3s; }
+  .phone-inner:hover {
+    opacity: .8; }
   @media only screen and (min-width: 980px) {
     .phone-inner {
       height: 290px; } }
@@ -1608,6 +1616,12 @@ input:-ms-input-placeholder {
   @media only screen and (min-width: 740px) {
     .showcase-panel {
       min-height: 300px; } }
+  @media only screen and (min-width: 980px) {
+    .showcase-panel {
+      min-height: 360px; } }
+  @media only screen and (min-width: 1140px) {
+    .showcase-panel {
+      min-height: 320px; } }
   .showcase-panel a {
     text-decoration: none;
     -webkit-transition: all .4s;
@@ -1639,6 +1653,10 @@ input:-ms-input-placeholder {
     transition: all .4s;
     background: #fff;
     background: rgba(255, 255, 255, 0.2); }
+
+.showcase-tourly {
+  background: url(../img/tourly.jpg) 0 0 no-repeat;
+  background-size: cover; }
 
 .showcase-event {
   background: url(../img/event.jpg) 0 0 no-repeat;
