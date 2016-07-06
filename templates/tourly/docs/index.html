@@ -17,61 +17,148 @@
   <style type="text/css">
     body {
       background-color: white;
-      color: #111;
+      color: #545454;
       margin: 0;
-      font-family: sans-serif;
-      font-size: 16px;
-      line-height: 20px;
+      font-family: "Karma", sans-serif;
+      font-size: 20px;
+      line-height: 26px;
     }
     h1,h2,h3,h4,h5,h6 {
-      font-family: sans-serif;
+      font-family: "Montserrat", sans-serif;
+      color: #111;
     }
-    h1 { margin: 20px 0; }
-    h2 { margin: 20px 0; }
-    p { margin-bottom: 20px; }
+    h1 {
+      font-size: 56px;
+      line-height: 60px;
+      margin: 20px 0;
+    }
+    h2 {
+      font-size: 24px;
+      line-height: 28px;
+      margin: 20px 0;
+    }
+    h3 {
+      font-size: 18px;
+      line-height: 24px;
+      margin: 20px 0;
+    }
+    p { margin-bottom: 30px; }
     .container {
-      width: 800px;
+      width: 960px;
       margin: 0 auto;
     }
     .content {
+      width: 550px;
+      margin: 0 auto;
       padding-top: 20px;
       padding-bottom: 20px;
+    }
+    .big-copy {
+      font-size: 24px;
+      line-height: 32px;
+    }
+    hr {
+      border: 0;
+      height: 1px;
+      width: 100%;
+      background-color: #ccc;
+      margin: 40px 0;
+    }
+    ul {
+      padding: 0 0 0 40px;
+      margin: 0;
+    }
+    ul li {
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+    code {
+      font-family: monospace;
+      background-color: #f1f1f1;
+      padding: 0 10px;
+      border-radius: 4px;
+      display: inline-block;
+    }
+    pre {
+      font-family: monospace;
+      background-color: #f1f1f1;
+      padding: 0 10px;
+      border-radius: 4px;
+      display: block;
     }
   </style>
 
 </head>
 <body>
 
-  <div class="container content">
-    <h1>Tourly - Documentation</h1>
-    <p>
-      ...
+  <div class="content">
+    <h1>Tourly Template Documentation</h1>
+    <p class="big-copy">
+      <em>Thank you for purchasing the Tourly template! I hope you enjoy the template and make something beautiful from it.</em>
     </p>
-
+    <p>
+      Please read all the documentation below and feel free to <a href="mailto:matthewhartmanau@gmail.com">email me</a> if you have any further questions.
+    </p>
+    
+    <hr>
 
     <h2>Introduction</h2>
     <p>
-      ...
+      Before setting up the template, please make sure you have the following tools and basic knowledge:
     </p>
+    <ul>
+      <li>Good understanding of <a rel="nofollow" href="http://learn.shayhowe.com/html-css/">HTML and CSS</a></li>
+      <li>A good code editor such as <a href="http://www.sublimetext.com/">Sublime Text Editor</a></li>
+      <li>Latest installation of <a href="https://nodejs.org/en/">Node</a> and <a href="https://www.npmjs.com/">NPM</a></li>
+      <li>A terminal that supports *nix commands (<a href="https://git-for-windows.github.io/">Git Bash for Windows</a>)</li>
+      <li><a href="http://gulpjs.com/">GulpJS</a> installed globally</li>
+    </ul>
+
+    <hr>
 
 
-    <h2>Installation</h2>
+    <h2>Setting Up</h2>
     <p>
-      ...
+      To get started, unzip the Tourly files contents into an appropriate location.
     </p>
-
-
-    <h2>Getting Started</h2>
     <p>
-      ...
+      Open Git Bash for Windows or Terminal on Mac or Linux and <code>cd</code> into the Tourly template location.
     </p>
+    <h3>Example</h3>
+    <pre>cd dev/tourly-one-page-html-css-template</pre>
 
-
-    <h2>Website Structure</h2>
     <p>
-      ...
+      After you're in the working directory, run <code>npm install</code> and wait for all the packages to install.
     </p>
 
+    <p>
+      Once the packages have installed, run the command <code>gulp</code> and Tourly should automatically launch in a new browser window.
+    </p>
+
+    <hr>
+
+    <h2>Project Structure</h2>
+    <p>
+      When you go into the Tourly project, you should see 2 folders:
+    </p>
+    <ul>
+      <li>dist/</li>
+      <li>src/</li>
+    </ul>
+
+    <p>
+      During development, all work and modifications are to be made in the <code>src/</code> (short for source) folder.
+    </p>
+
+    <p>
+      The final website is compiled into the <code>dist/</code> (short for distribution) folder.
+    </p>
+
+    <p>
+      Note: You can run the <code>gulp clean</code> command to remove the dist folder and to republish your project in the dist folder, simply run <code>npm build</code>.
+    </p>
+
+    <hr>
 
     <h2>Banner</h2>
     <p>
