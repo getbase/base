@@ -15,6 +15,12 @@
   <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
 
   <style type="text/css">
+  *, *:before, *:after { box-sizing: border-box; }
+    html {
+      font-family: sans-serif;
+      -ms-text-size-adjust: 100%;
+      -webkit-text-size-adjust: 100%;
+    }
     body {
       background-color: white;
       color: #545454;
@@ -42,17 +48,12 @@
       line-height: 24px;
       margin: 20px 0;
     }
-    p { margin-bottom: 30px; }
+    p { margin: 0 0 30px 0; }
     .container {
-      width: 960px;
-      margin: 0 auto;
+      padding-left: 15px;
+      padding-right: 15px;
     }
-    .content {
-      width: 550px;
-      margin: 0 auto;
-      padding-top: 20px;
-      padding-bottom: 20px;
-    }
+    .content { padding: 20px 15px; }
     .big-copy {
       font-size: 24px;
       line-height: 32px;
@@ -85,6 +86,26 @@
       padding: 0 10px;
       border-radius: 4px;
       display: block;
+    }
+    @media only screen and (min-width: 740px) {
+      .container {
+        width: 700px;
+        margin: 0 auto;
+      }
+      .content {
+        width: 700px;
+        margin: 0 auto;
+      }
+    }
+    @media only screen and (min-width: 740px) {
+      .container {
+        width: 960px;
+        margin: 0 auto;
+      }
+      .content {
+        width: 550px;
+        margin: 0 auto;
+      }
     }
   </style>
 
