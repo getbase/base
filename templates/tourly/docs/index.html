@@ -34,9 +34,13 @@
       color: #111;
     }
     h1 {
-      font-size: 56px;
-      line-height: 60px;
+      font-size: 32px;
+      line-height: 38px;
       margin: 20px 0;
+      @media only screen and (min-width: 740px) {
+        font-size: 56px;
+        line-height: 60px;
+      }
     }
     h2 {
       font-size: 24px;
@@ -86,7 +90,7 @@
       padding: 0 10px;
       border-radius: 4px;
       display: block;
-      overflow: scroll;
+      overflow: hidden;
     }
     @media only screen and (min-width: 740px) {
       .container {
