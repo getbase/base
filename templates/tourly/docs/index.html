@@ -69,14 +69,19 @@
       background-color: #ccc;
       margin: 40px 0;
     }
-    ul {
+    ul, ol {
       padding: 0 0 0 40px;
-      margin: 0;
+      margin: 0 0 20px 0;
     }
-    ul li {
+    ul li,
+    ol li {
       margin-top: 5px;
       margin-bottom: 5px;
     }
+    .toc {
+      padding-left: 20px;
+    }
+    .no-margin { margin: 0; }
     code {
       font-family: monospace;
       background-color: #f1f1f1;
@@ -88,10 +93,15 @@
       font-family: monospace;
       background-color: #f1f1f1;
       padding: 0 10px;
+      margin: 10px 0;
       border-radius: 4px;
       display: block;
       overflow: auto;
     }
+    .pad-top-10 { padding-top: 10px; }
+    .pad-top-20 { padding-top: 20px; }
+    .pad-bottom-10 { padding-bottom: 10px; }
+    .pad-bottom-20 { padding-bottom: 20px; }
     @media only screen and (min-width: 740px) {
       .container {
         width: 700px;
@@ -125,25 +135,54 @@
     <p>
       Please read all the documentation below and feel free to <a href="mailto:matthewhartmanau@gmail.com">email me</a> if you have any further questions.
     </p>
+
+    <hr>
+    <h2>Table of Contents</h2>
+    <ol class="toc">
+      <li><a href="#Introduction">Introduction</a></li>
+      <li><a href="#Setting-Up">Setting Up</a></li>
+      <li><a href="#Project-Structure">Project Structure</a></li>
+      <li><a href="#Overview">Overview</a></li>
+      <li><a href="#Getting-Started">Getting-Started</a></li>
+      <li><a href="#Banner">Banner</a></li>
+      <li><a href="#Summary">Summary</a></li>
+      <li><a href="#Gallery">Gallery</a></li>
+      <li><a href="#Timetable">Timetable</a></li>
+      <li><a href="#Location">Location and Map</a></li>
+      <li><a href="#Booking">Booking Form</a></li>
+      <li><a href="#FAQs">FAQs</a></li>
+      <li><a href="#Credits">Credits</a></li>
+    </ol>
     
     <hr>
 
-    <h2>Introduction</h2>
+    <h2 id="Introduction">Introduction</h2>
     <p>
       Before setting up the template, please make sure you have the following tools and basic knowledge:
     </p>
     <ul>
-      <li>Good understanding of <a rel="nofollow" href="http://learn.shayhowe.com/html-css/">HTML and CSS</a></li>
-      <li>A good code editor such as <a href="http://www.sublimetext.com/">Sublime Text Editor</a></li>
-      <li>Latest installation of <a href="https://nodejs.org/en/">Node and NPM</a></li>
-      <li>A terminal that supports *nix commands (<a href="https://git-for-windows.github.io/">Git Bash for Windows</a>)</li>
-      <li><a href="http://gulpjs.com/">GulpJS</a> installed globally</li>
+      <li>
+        Good understanding of <a rel="nofollow" href="http://learn.shayhowe.com/html-css/">HTML and CSS</a>
+      </li>
+      <li>
+        A good code editor such as <a href="http://www.sublimetext.com/">Sublime Text Editor</a>
+      </li>
+      <li>
+        Latest installation of <a href="https://nodejs.org/en/">Node and NPM</a>
+      </li>
+      <li>
+        A terminal that supports *nix commands (<a href="https://git-for-windows.github.io/">Git Bash for Windows</a>)
+      </li>
+      <li>
+        <a href="http://gulpjs.com/">GulpJS</a> installed globally
+        <pre class="no-margin">sudo npm i gulp -g</pre>
+      </li>
     </ul>
 
     <hr>
 
 
-    <h2>Setting Up</h2>
+    <h2 id="Setting Up">Setting Up</h2>
     <p>
       To get started, unzip the Tourly files contents into an appropriate location.
     </p>
@@ -151,7 +190,9 @@
       Open Git Bash for Windows or Terminal on Mac or Linux and <code>cd</code> into the Tourly template location.
     </p>
     <h3>Example</h3>
-    <pre>cd dev/tourly-one-page-html-css-template</pre>
+    <div class="pad-bottom-20">
+      <pre>cd dev/tourly-one-page-html-css-template</pre>
+    </div>
 
     <p>
       After you're in the working directory, run <code>npm install</code> and wait for all the packages to install.
@@ -163,7 +204,7 @@
 
     <hr>
 
-    <h2>Project Structure</h2>
+    <h2 id="Project Structure">Project Structure</h2>
     <p>
       When you go into the Tourly project, you should see 2 folders:
     </p>
@@ -186,75 +227,96 @@
 
     <hr>
 
-    <h2>Overview</h2>
+    <h2 id="Overview">Overview</h2>
     <p>
-      Tourly is built on top of a minimal HTML/CSS framework called <a href="http://getbase.org">Base</a>. 
+      Tourly is built on top of <a href="http://getbase.org">Base</a> &ndash; a minimal HTML/CSS framework similar to Bootstrap and Foundation, but a lot more lightweight.
     </p>
+    <p>
+      It includes normalise, resets, typography, lists, blockquotes, code blocks, forms and a 12 column responsive grid. If you would like a better understanding of what's in the framework, please check out the <a href="http://getbase.org/docs/">Base Docs</a>
+    </p>
+
+    <hr>
+
+    <h2 id="Getting-Started">Getting Started</h2>
+    <p>
+      To get started, open terminal and <code>cd</code> into the <code>tourly-one-page-html-css-template</code> project.
+    </p>
+    <p>
+      Inside the project, run the command <code>gulp</code>.
+    </p>
+    <p>
+      Your web browser should launch with the Tourly website loaded.
+    </p>
+    <p>
+      You can know open the folder with Sublime and start making changes to files within the <code>src/</code> folder and you should notice the website auto reload everytime you make a change.
+    </p>
+
+    <hr>
+
+    <h2 id="Banner">Banner</h2>
+    <p class="no-margin">
+      The Banner backround image can be changed by navigating into the banner SCSS file
+    </p>
+    <pre>src/scss/styles/_banner.scss</pre>
+
     <p>
       ...
     </p>
 
     <hr>
 
-    <h2>Banner</h2>
+    <h2 id="Summary">Summary</h2>
     <p>
       ...
     </p>
 
     <hr>
 
-    <h2>Summary</h2>
+    <h2 id="Introduction">Introduction</h2>
     <p>
       ...
     </p>
 
     <hr>
 
-    <h2>Introduction</h2>
+    <h2 id="Gallery">Gallery</h2>
     <p>
       ...
     </p>
 
     <hr>
 
-    <h2>Gallery</h2>
+    <h2 id="Timetable">Timetable</h2>
     <p>
       ...
     </p>
 
     <hr>
 
-    <h2>Timetable</h2>
+    <h2 id="Location and Map">Location and Map</h2>
     <p>
       ...
     </p>
 
     <hr>
 
-    <h2>Location and Map</h2>
+    <h2 id="Booking Form">Booking Form</h2>
     <p>
       ...
     </p>
 
     <hr>
 
-    <h2>Booking Form</h2>
+    <h2 id="FAQs">FAQs</h2>
     <p>
       ...
     </p>
 
     <hr>
 
-    <h2>FAQs</h2>
+    <h2 id="Credits">Thanks!</h2>
     <p>
-      ...
-    </p>
-
-    <hr>
-
-    <h2>Thanks!</h2>
-    <p>
-      ...
+      Thank you for your support and if you have any support questions or would like to say hi, simply <a href="mailto:matthewhartmanau@gmail.com">email me</a>.
     </p>
   </div>
 
