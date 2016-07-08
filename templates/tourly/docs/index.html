@@ -52,12 +52,12 @@
       line-height: 24px;
       margin: 20px 0;
     }
-    p { margin: 0 0 30px 0; }
-    .container {
-      padding-left: 15px;
-      padding-right: 15px;
+    img {
+      display: block;
+      max-width: 100%;
     }
-    .content { padding: 20px 15px; }
+    p { margin: 0 0 30px 0; }
+    .container { padding: 20px 15px; }
     .big-copy {
       font-size: 24px;
       line-height: 32px;
@@ -107,17 +107,9 @@
         width: 700px;
         margin: 0 auto;
       }
-      .content {
-        width: 700px;
-        margin: 0 auto;
-      }
     }
     @media only screen and (min-width: 740px) {
       .container {
-        width: 960px;
-        margin: 0 auto;
-      }
-      .content {
         width: 550px;
         margin: 0 auto;
       }
@@ -127,7 +119,7 @@
 </head>
 <body>
 
-  <div class="content">
+  <div class="container">
     <h1>Tourly HTML Template Documentation</h1>
     <p class="big-copy">
       <em>Thank you for purchasing the Tourly template! I hope you enjoy the template and make something beautiful from it.</em>
@@ -137,6 +129,7 @@
     </p>
 
     <hr>
+
     <h2>Table of Contents</h2>
     <ol class="toc">
       <li><a href="#Introduction">Introduction</a></li>
@@ -295,15 +288,29 @@
 
     <h2 id="Location and Map">Location and Map</h2>
     <p>
-      ...
+      To change the map coordinates, open the default.js file in Sublime text editor.
     </p>
+    <div class="pad-bottom-20">
+      <pre>src/js/default.js</pre>
+    </div>
+    <p>
+      You can edit lines 45 and 53 to updates the geo coordinates.
+    </p>
+    <img src="img/google-map.png" alt="Google map">
 
     <hr>
 
     <h2 id="Booking Form">Booking Form</h2>
     <p>
-      ...
+      To change the email in the booking form, open index.html in Sublime text editor
     </p>
+    <div class="pad-bottom-20">
+      <pre>src/index.html</pre>
+    </div>
+    <p>
+      Modify the form spree URL.
+    </p>
+    <img src="img/booking-email.png" alt="Booking email">
 
     <hr>
 
