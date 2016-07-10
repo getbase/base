@@ -110,7 +110,7 @@
     }
     @media only screen and (min-width: 740px) {
       .container {
-        width: 550px;
+        width: 680px;
         margin: 0 auto;
       }
     }
@@ -136,14 +136,11 @@
       <li><a href="#Setting-Up">Setting Up</a></li>
       <li><a href="#Project-Structure">Project Structure</a></li>
       <li><a href="#Overview">Overview</a></li>
-      <li><a href="#Getting-Started">Getting-Started</a></li>
+      <li><a href="#Getting-Started">Getting Started</a></li>
       <li><a href="#Banner">Banner</a></li>
-      <li><a href="#Summary">Summary</a></li>
       <li><a href="#Gallery">Gallery</a></li>
-      <li><a href="#Timetable">Timetable</a></li>
-      <li><a href="#Location">Location and Map</a></li>
-      <li><a href="#Booking">Booking Form</a></li>
-      <li><a href="#FAQs">FAQs</a></li>
+      <li><a href="#Location-and-Map">Location and Map</a></li>
+      <li><a href="#Booking-Form">Booking Form</a></li>
       <li><a href="#Credits">Credits</a></li>
     </ol>
     
@@ -175,7 +172,7 @@
     <hr>
 
 
-    <h2 id="Setting Up">Setting Up</h2>
+    <h2 id="Setting-Up">Setting Up</h2>
     <p>
       To get started, unzip the Tourly files contents into an appropriate location.
     </p>
@@ -197,7 +194,7 @@
 
     <hr>
 
-    <h2 id="Project Structure">Project Structure</h2>
+    <h2 id="Project-Structure">Project Structure</h2>
     <p>
       When you go into the Tourly project, you should see 2 folders:
     </p>
@@ -247,28 +244,22 @@
     <hr>
 
     <h2 id="Banner">Banner</h2>
+    <p>
+      If you require a new banner image, it is recommended you have an optimised image with the dimensions: <code>1200px wide by at least 780px high</code>.
+    </p>
+    <p>
+      Put your new banner image in <code>src/img/</code> and restart your website (CTRL + C in terminal and re-run the <code>gulp</code> command).
+    </p>
     <p class="no-margin">
-      The Banner backround image can be changed by navigating into the banner SCSS file
+      Once your website is re-running, you will need to modify the banner SCSS file:
     </p>
-    <pre>src/scss/styles/_banner.scss</pre>
-
+    <div class="pad-bottom-20">
+      <pre>src/scss/styles/_banner.scss</pre>
+    </div>
     <p>
-      ...
+      If you have saved your new banner image as a new name, you will need to modify line 38 and update the banner image name.
     </p>
-
-    <hr>
-
-    <h2 id="Summary">Summary</h2>
-    <p>
-      ...
-    </p>
-
-    <hr>
-
-    <h2 id="Introduction">Introduction</h2>
-    <p>
-      ...
-    </p>
+    <img src="img/banner.png" alt="Banner">
 
     <hr>
 
@@ -279,28 +270,33 @@
 
     <hr>
 
-    <h2 id="Timetable">Timetable</h2>
+    <h2 id="Location-and-Map">Location and Map</h2>
     <p>
-      ...
+      To update the map location, you will need to find out the Latitude and Longitude coordinates.
     </p>
-
-    <hr>
-
-    <h2 id="Location and Map">Location and Map</h2>
     <p>
-      To change the map coordinates, open the default.js file in Sublime text editor.
+      To do this, open <a href="https://www.google.com.au/maps">https://www.google.com.au/maps</a> and type on the place you would like the map to start (eg: The Breezes Hotel).
+    </p>
+    <p>
+      When the search returns a result, the geo coordinates will be returned in the address bar of your browser.
+    </p>
+    <div class="pad-bottom-20">
+      <img src="img/geo-coordinates-map.jpg" alt="GEO Coordinates of Map">
+    </div>
+    <p>
+      Copy the coordinates and open the default.js file in Sublime text editor.
     </p>
     <div class="pad-bottom-20">
       <pre>src/js/default.js</pre>
     </div>
     <p>
-      Edit lines 45 and 53 to update the geo coordinates.
+      Jump to lines 45 and 53 and replace the geo coordinates with your new ones as required.
     </p>
     <img src="img/google-map.png" alt="Google map">
 
     <hr>
 
-    <h2 id="Booking Form">Booking Form</h2>
+    <h2 id="Booking-Form">Booking Form</h2>
     <p>
       To change the email in the booking form, open index.html in Sublime text editor
     </p>
@@ -314,10 +310,33 @@
 
     <hr>
 
-    <h2 id="FAQs">FAQs</h2>
+    <h2 id="Newsletter">Newsletter</h2>
     <p>
-      ...
+      To change the subscription URL for the newsletter, you will need a <a href="http://mailchimp.com/">MailChimp account</a>.
     </p>
+    <p>
+      Follow the <a rel="nofollow" href="http://kb.mailchimp.com/lists/signup-forms/add-a-signup-form-to-your-website">MailChimp guide</a> for setting up the initial form.
+    </p>
+    <p>
+      When you get the HTML for the embeddable form, grab the following 2 values from all the code:
+    </p>
+    <ul>
+      <li>The action URL in the <code>&lt;form&gt;</code> element</li>
+      <li>The <code>&lt;input&gt;</code> name value for the form bots</li>
+    </ul>
+    <div class="pad-bottom-20">
+      <img src="img/embeddable-newsletter-html.png" alt="Embeddable Newsletter HTML">
+    </div>
+    <p>
+      Once you have these values, open the <code>index.html</code> file.
+    </p>
+    <div class="pad-bottom-20">
+      <pre>src/index.html</pre>
+    </div>
+    <p>
+      Replace the form action URL (line 317) and form bot input value (line 329) with your own.
+    </p>
+    <img src="img/newsletter.png" alt="Newsletter">
 
     <hr>
 
