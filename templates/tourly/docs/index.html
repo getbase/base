@@ -245,7 +245,7 @@
 
     <h2 id="Banner">Banner</h2>
     <p>
-      If you require a new banner image, it is recommended you have an optimised image with the dimensions: <code>1200px wide by at least 780px high</code>.
+      If you require a new banner image, it is recommended you have an optimised image with the dimensions: <code>1200px wide by 780px+ high</code>.
     </p>
     <p>
       Put your new banner image in <code>src/img/</code> and restart your website (CTRL + C in terminal and re-run the <code>gulp</code> command).
@@ -265,7 +265,20 @@
 
     <h2 id="Gallery">Gallery</h2>
     <p>
-      ...
+      In order to wire up your gallery, you will need 2 sets of photos.
+    </p>
+    <p>
+      A set of thumbnails with a minimum recommended size of <code>600px wide by 380px+</code>.
+    </p>
+    <p>
+      A set of full sizes images with a minimum recommended size of <code>800px wide by 530px+</code>.
+    </p>
+    <p>
+      The caption below the lightbox uses the <code>title</code> attribute set on the <code>a.gallery-item-link</code>
+    </p>
+    <h3>Example:</h3>
+    <p>
+      <code>&lt;a <mark>title="A beautiful picture"</mark> href="img/photo-1.jpg" class="gallery-item-link"&gt;</code>
     </p>
 
     <hr>
