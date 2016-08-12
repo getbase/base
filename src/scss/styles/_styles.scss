@@ -145,6 +145,7 @@
 .showcase-panel {
   background-color: $white;
   margin-bottom: 20px;
+  position: relative;
   @include breakpoint(m) {
     min-height: 300px;
   }
@@ -286,3 +287,15 @@
   @extend .text-center;
 }
 .animation { @include animation(1s); }
+
+.opl {
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+.opl-feature {
+  top: 21px;
+  left: 0;
+}

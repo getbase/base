@@ -1612,7 +1612,8 @@ input:-ms-input-placeholder {
 
 .showcase-panel {
   background-color: #fff;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  position: relative; }
   @media only screen and (min-width: 740px) {
     .showcase-panel {
       min-height: 300px; } }
@@ -1742,6 +1743,17 @@ input:-ms-input-placeholder {
           animation-duration: 1s;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both; }
+
+.opl {
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  left: 0;
+  z-index: 1000; }
+
+.opl-feature {
+  top: 21px;
+  left: 0; }
 
 .no-margin {
   margin: 0; }
