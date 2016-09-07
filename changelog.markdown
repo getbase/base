@@ -1,6 +1,12 @@
 # Base 2 Change Log
 
 
+## [3.2.0] - 2016-09-07
+### Base V3.2.0
+- Fixed .container-full for mobile, tablet, desktop and HD devices
+- Version bump for style.scss, package.json and bower.json
+
+
 ## [3.1.5] - 2016-07-02
 ### Base V3.1.5
 - Fixed IE bug with placeholder color override

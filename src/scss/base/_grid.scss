@@ -44,76 +44,56 @@
 }
 
 // Container
-.container {
+.container, .container-full {
   padding-left: $grid-gutter;
   padding-right: $grid-gutter;
   margin-left: auto;
   margin-right: auto;
 }
-.container-full {
-  padding-left: 0;
-  padding-right: 0;
-  margin-left: auto;
-  margin-right: auto;
-}
+
 // Medium Device Container
 @include breakpoint(m) {
-  .container, .container-full {
+  .container {
     width: $container-m;
+  }
+  .container-m, .container-full-m {
+    padding-left: $grid-gutter;
+    padding-right: $grid-gutter;
+    margin-left: auto;
+    margin-right: auto;
   }
   .container-m {
     width: $container-m;
-    padding-left: $grid-gutter-m;
-    padding-right: $grid-gutter-m;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .container-full-m {
-    width: $container-m;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 0;
-    padding-right: 0;
   }
 }
 // Large Device Container
 @include breakpoint(l) {
-  .container, .container-full {
+  .container {
     width: $container-l;
+  }
+  .container-l, .container-full-l {
+    padding-left: $grid-gutter;
+    padding-right: $grid-gutter;
+    margin-left: auto;
+    margin-right: auto;
   }
   .container-l {
     width: $container-l;
-    padding-left: $grid-gutter-l;
-    padding-right: $grid-gutter-l;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .container-full-l {
-    width: $container-l;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 0;
-    padding-right: 0;
   }
 }
 // Extra Large Device Container
 @include breakpoint(xl) {
-  .container, .container-full {
+  .container {
     width: $container-xl;
+  }
+  .container-xl, .container-full-xl {
+    padding-left: $grid-gutter;
+    padding-right: $grid-gutter;
+    margin-left: auto;
+    margin-right: auto;
   }
   .container-xl {
     width: $container-xl;
-    padding-left: $grid-gutter-xl;
-    padding-right: $grid-gutter-xl;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .container-full-xl {
-    width: $container-xl;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 0;
-    padding-right: 0;
   }
 }
 
