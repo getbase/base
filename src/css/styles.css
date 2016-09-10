@@ -2,7 +2,7 @@
 
 // Base Stylesheet - http://getbase.org
 // Author: Matthew Hartman - http://www.matthewhartman.com.au/
-// Version: 3.1.5 - Last Updated: July 02, 2016
+// Version: 3.2.1 - Last Updated: September 10, 2016
 
 ========================================================================== */
 *, *:before, *:after {
@@ -503,65 +503,50 @@ input:-ms-input-placeholder {
   .clear-xl:after {
     clear: both; } }
 
-.container {
+.container, .container-full {
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto; }
 
-.container-full {
-  padding-left: 0;
-  padding-right: 0;
-  margin-left: auto;
-  margin-right: auto; }
-
 @media only screen and (min-width: 740px) {
-  .container, .container-full {
+  .container {
     width: 720px; }
-  .container-m {
-    width: 720px;
+  .container-m, .container-full-m {
     padding-left: 15px;
     padding-right: 15px;
     margin-left: auto;
     margin-right: auto; }
+  .container-m {
+    width: 720px; }
   .container-full-m {
-    width: 720px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 0;
-    padding-right: 0; } }
+    width: auto; } }
 
 @media only screen and (min-width: 980px) {
-  .container, .container-full {
+  .container {
     width: 960px; }
-  .container-l {
-    width: 960px;
+  .container-l, .container-full-l {
     padding-left: 15px;
     padding-right: 15px;
     margin-left: auto;
     margin-right: auto; }
+  .container-l {
+    width: 960px; }
   .container-full-l {
-    width: 960px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 0;
-    padding-right: 0; } }
+    width: auto; } }
 
 @media only screen and (min-width: 1140px) {
-  .container, .container-full {
+  .container {
     width: 1120px; }
-  .container-xl {
-    width: 1120px;
+  .container-xl, .container-full-xl {
     padding-left: 15px;
     padding-right: 15px;
     margin-left: auto;
     margin-right: auto; }
+  .container-xl {
+    width: 1120px; }
   .container-full-xl {
-    width: 1120px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 0;
-    padding-right: 0; } }
+    width: auto; } }
 
 .col-1,
 .col-2,
