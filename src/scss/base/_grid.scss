@@ -53,48 +53,39 @@
 
 // Medium Device Container
 @include breakpoint(m) {
-  .container {
-    width: $container-m;
-  }
+  .container { width: $container-m; }
   .container-m, .container-full-m {
     padding-left: $grid-gutter;
     padding-right: $grid-gutter;
     margin-left: auto;
     margin-right: auto;
   }
-  .container-m {
-    width: $container-m;
-  }
+  .container-m { width: $container-m; }
+  .container-full-m { width: auto; }
 }
 // Large Device Container
 @include breakpoint(l) {
-  .container {
-    width: $container-l;
-  }
+  .container { width: $container-l; }
   .container-l, .container-full-l {
     padding-left: $grid-gutter;
     padding-right: $grid-gutter;
     margin-left: auto;
     margin-right: auto;
   }
-  .container-l {
-    width: $container-l;
-  }
+  .container-l { width: $container-l; }
+  .container-full-l { width: auto; }
 }
 // Extra Large Device Container
 @include breakpoint(xl) {
-  .container {
-    width: $container-xl;
-  }
+  .container { width: $container-xl; }
   .container-xl, .container-full-xl {
     padding-left: $grid-gutter;
     padding-right: $grid-gutter;
     margin-left: auto;
     margin-right: auto;
   }
-  .container-xl {
-    width: $container-xl;
-  }
+  .container-xl { width: $container-xl; }
+  .container-full-xl { width: auto; }
 }
 
 // Mobile-first Grid Columns - Global Rules

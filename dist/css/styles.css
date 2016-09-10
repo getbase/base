@@ -2,7 +2,7 @@
 
 // Base Stylesheet - http://getbase.org
 // Author: Matthew Hartman - http://www.matthewhartman.com.au/
-// Version: 3.2.0 - Last Updated: September 07, 2016
+// Version: 3.2.1 - Last Updated: September 10, 2016
 
 ========================================================================== */
 *, *:before, *:after {
@@ -518,7 +518,9 @@ input:-ms-input-placeholder {
     margin-left: auto;
     margin-right: auto; }
   .container-m {
-    width: 720px; } }
+    width: 720px; }
+  .container-full-m {
+    width: auto; } }
 
 @media only screen and (min-width: 980px) {
   .container {
@@ -529,7 +531,9 @@ input:-ms-input-placeholder {
     margin-left: auto;
     margin-right: auto; }
   .container-l {
-    width: 960px; } }
+    width: 960px; }
+  .container-full-l {
+    width: auto; } }
 
 @media only screen and (min-width: 1140px) {
   .container {
@@ -540,7 +544,9 @@ input:-ms-input-placeholder {
     margin-left: auto;
     margin-right: auto; }
   .container-xl {
-    width: 1120px; } }
+    width: 1120px; }
+  .container-full-xl {
+    width: auto; } }
 
 .col-1,
 .col-2,
