@@ -166,13 +166,10 @@
 
 <!-- Google Analytics -->
 <script>
-  (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-  function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-  e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-  e.src='//www.schedule-analytics.com/analytics.js';
-  r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-  ga('create','UA-34161986-1');ga('send','pageview');
+  window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+  ga('create','UA-34161986-1','auto');ga('send','pageview')
 </script>
+<script src="https://www.google-analytics.com/analytics.js" async defer></script>
 
 </body>
 </html>
