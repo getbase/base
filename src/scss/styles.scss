@@ -6,10 +6,10 @@
 @import "styles/variables-colors";
 
 // Import Base
-@import "base";
+@import "node_modules/getbase/src/scss/base";
 
 // Website Styles
 @import "styles/styles";
 
 // Import Base Helpers
-@import "base/_helpers";
+@import "node_modules/getbase/src/scss/base/_helpers";
