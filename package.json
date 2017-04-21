@@ -1,8 +1,8 @@
 {
   "scripts": {
-    "start": "`npm bin`/gulp",
-    "clean": "`npm bin`/gulp clean",
-    "build": "`npm bin`/gulp build"
+    "start": "./node_modules/gulp/bin/gulp.js",
+    "clean": "./node_modules/gulp/bin/gulp.js clean",
+    "build": "./node_modules/gulp/bin/gulp.js build"
   },
   "authors": [
     "Matthew Hartman <matthewhartmanau@gmail.com>"
