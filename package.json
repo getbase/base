@@ -1,12 +1,12 @@
 {
   "name": "getbase",
-  "version": "3.2.3",
+  "version": "3.2.4",
   "description": "A Rock Solid, Responsive HTML/CSS Framework built to work on all devices big and small.",
   "homepage": "http://getbase.org/",
   "scripts": {
-    "start": "`npm bin`/gulp",
-    "clean": "`npm bin`/gulp clean",
-    "build": "`npm bin`/gulp build"
+    "start": "./node_modules/gulp/bin/gulp.js",
+    "clean": "./node_modules/gulp/bin/gulp.js clean",
+    "build": "./node_modules/gulp/bin/gulp.js build"
   },
   "repository": {
     "type": "git",
