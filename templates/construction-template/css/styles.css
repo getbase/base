@@ -1817,7 +1817,14 @@ input:-ms-input-placeholder {
 .testimonial-item {
   margin: 0;
   display: block;
-  color: #000; }
+  color: #000;
+  min-height: 260px; }
+  @media only screen and (min-width: 740px) {
+    .testimonial-item {
+      min-height: 200px; } }
+  @media only screen and (min-width: 980px) {
+    .testimonial-item {
+      min-height: 180px; } }
   .testimonial-item cite {
     display: inline-block;
     font-size: 14px;
