@@ -113,7 +113,7 @@
   padding-left: $grid-gutter;
   padding-right: $grid-gutter;
   position: relative;
-  float: left;
+  float: $grid-alignment;
 }
 
 // Mobile-first Grid
@@ -137,39 +137,39 @@ $columns: 12;
 // Mobile Push Offsets
 @for $i from 1 through $columns - 1 {
   .push-#{$i} {
-    left: ($i / $columns) * 100%;
+    $grid-alignment: ($i / $columns) * 100%;
   }
 }
-.push-1-2 { left: (6 / 12) * 100%; }
-.push-1-3 { left: (4 / 12) * 100%; }
-.push-2-3 { left: (8 / 12) * 100%; }
-.push-1-4 { left: (3 / 12) * 100%; }
-.push-3-4 { left: (9 / 12) * 100%; }
-.push-1-5 { left: (2.4 / 12) * 100%; }
-.push-2-5 { left: (4.8 / 12) * 100%; }
-.push-3-5 { left: (7.2 / 12) * 100%; }
-.push-4-5 { left: (9.6 / 12) * 100%; }
+.push-1-2 { $grid-alignment: (6 / 12) * 100%; }
+.push-1-3 { $grid-alignment: (4 / 12) * 100%; }
+.push-2-3 { $grid-alignment: (8 / 12) * 100%; }
+.push-1-4 { $grid-alignment: (3 / 12) * 100%; }
+.push-3-4 { $grid-alignment: (9 / 12) * 100%; }
+.push-1-5 { $grid-alignment: (2.4 / 12) * 100%; }
+.push-2-5 { $grid-alignment: (4.8 / 12) * 100%; }
+.push-3-5 { $grid-alignment: (7.2 / 12) * 100%; }
+.push-4-5 { $grid-alignment: (9.6 / 12) * 100%; }
 
 // Mobile Pull Offsets
 @for $i from 1 through $columns - 1 {
   .pull-#{$i} {
-    left: -($i / $columns) * 100%;
+    $grid-alignment: -($i / $columns) * 100%;
   }
 }
-.pull-1-2 { left: -(6 / 12) * 100%; }
-.pull-1-3 { left: -(4 / 12) * 100%; }
-.pull-2-3 { left: -(8 / 12) * 100%; }
-.pull-1-4 { left: -(3 / 12) * 100%; }
-.pull-3-4 { left: -(9 / 12) * 100%; }
-.pull-1-5 { left: -(2.4 / 12) * 100%; }
-.pull-2-5 { left: -(4.8 / 12) * 100%; }
-.pull-3-5 { left: -(7.2 / 12) * 100%; }
-.pull-4-5 { left: -(9.6 / 12) * 100%; }
+.pull-1-2 { $grid-alignment: -(6 / 12) * 100%; }
+.pull-1-3 { $grid-alignment: -(4 / 12) * 100%; }
+.pull-2-3 { $grid-alignment: -(8 / 12) * 100%; }
+.pull-1-4 { $grid-alignment: -(3 / 12) * 100%; }
+.pull-3-4 { $grid-alignment: -(9 / 12) * 100%; }
+.pull-1-5 { $grid-alignment: -(2.4 / 12) * 100%; }
+.pull-2-5 { $grid-alignment: -(4.8 / 12) * 100%; }
+.pull-3-5 { $grid-alignment: -(7.2 / 12) * 100%; }
+.pull-4-5 { $grid-alignment: -(9.6 / 12) * 100%; }
 
 
 // Medium Device Grid
 @include breakpoint(m) {
-  
+
   // Medium Device Grid Columns - Global Rules
   .col-1-m,
   .col-2-m,
@@ -195,7 +195,7 @@ $columns: 12;
     padding-left: $grid-gutter-m;
     padding-right: $grid-gutter-m;
     position: relative;
-    float: left;
+    float: $grid-alignment;
   }
 
   // Medium Device Grid
@@ -219,40 +219,40 @@ $columns: 12;
   // Medium Device Push Offsets
   @for $i from 1 through $columns - 1 {
     .push-#{$i}-m {
-      left: ($i / $columns) * 100%;
+      $grid-alignment: ($i / $columns) * 100%;
     }
   }
-  .push-1-2-m { left: (6 / 12) * 100%; }
-  .push-1-3-m { left: (4 / 12) * 100%; }
-  .push-2-3-m { left: (8 / 12) * 100%; }
-  .push-1-4-m { left: (3 / 12) * 100%; }
-  .push-3-4-m { left: (9 / 12) * 100%; }
-  .push-1-5-m { left: (2.4 / 12) * 100%; }
-  .push-2-5-m { left: (4.8 / 12) * 100%; }
-  .push-3-5-m { left: (7.2 / 12) * 100%; }
-  .push-4-5-m { left: (9.6 / 12) * 100%; }
+  .push-1-2-m { $grid-alignment: (6 / 12) * 100%; }
+  .push-1-3-m { $grid-alignment: (4 / 12) * 100%; }
+  .push-2-3-m { $grid-alignment: (8 / 12) * 100%; }
+  .push-1-4-m { $grid-alignment: (3 / 12) * 100%; }
+  .push-3-4-m { $grid-alignment: (9 / 12) * 100%; }
+  .push-1-5-m { $grid-alignment: (2.4 / 12) * 100%; }
+  .push-2-5-m { $grid-alignment: (4.8 / 12) * 100%; }
+  .push-3-5-m { $grid-alignment: (7.2 / 12) * 100%; }
+  .push-4-5-m { $grid-alignment: (9.6 / 12) * 100%; }
 
   // Medium Device Pull Offsets
   @for $i from 1 through $columns - 1 {
     .pull-#{$i}-m {
-      left: -($i / $columns) * 100%;
+      $grid-alignment: -($i / $columns) * 100%;
     }
   }
-  .pull-1-2-m { left: -(6 / 12) * 100%; }
-  .pull-1-3-m { left: -(4 / 12) * 100%; }
-  .pull-2-3-m { left: -(8 / 12) * 100%; }
-  .pull-1-4-m { left: -(3 / 12) * 100%; }
-  .pull-3-4-m { left: -(9 / 12) * 100%; }
-  .pull-1-5-m { left: -(2.4 / 12) * 100%; }
-  .pull-2-5-m { left: -(4.8 / 12) * 100%; }
-  .pull-3-5-m { left: -(7.2 / 12) * 100%; }
-  .pull-4-5-m { left: -(9.6 / 12) * 100%; }
+  .pull-1-2-m { $grid-alignment: -(6 / 12) * 100%; }
+  .pull-1-3-m { $grid-alignment: -(4 / 12) * 100%; }
+  .pull-2-3-m { $grid-alignment: -(8 / 12) * 100%; }
+  .pull-1-4-m { $grid-alignment: -(3 / 12) * 100%; }
+  .pull-3-4-m { $grid-alignment: -(9 / 12) * 100%; }
+  .pull-1-5-m { $grid-alignment: -(2.4 / 12) * 100%; }
+  .pull-2-5-m { $grid-alignment: -(4.8 / 12) * 100%; }
+  .pull-3-5-m { $grid-alignment: -(7.2 / 12) * 100%; }
+  .pull-4-5-m { $grid-alignment: -(9.6 / 12) * 100%; }
 
 }
 
 // Large Device Grid
 @include breakpoint(l) {
-  
+
   // Large Device Grid Columns - Global Rules
   .col-1-l,
   .col-2-l,
@@ -278,7 +278,7 @@ $columns: 12;
     padding-left: $grid-gutter-l;
     padding-right: $grid-gutter-l;
     position: relative;
-    float: left;
+    float: $grid-alignment;
   }
 
   // Large Device Grid
@@ -302,40 +302,40 @@ $columns: 12;
   // Large Device Push Offsets
   @for $i from 1 through $columns - 1 {
     .push-#{$i}-l {
-      left: ($i / $columns) * 100%;
+      $grid-alignment: ($i / $columns) * 100%;
     }
   }
-  .push-1-2-l { left: (6 / 12) * 100%; }
-  .push-1-3-l { left: (4 / 12) * 100%; }
-  .push-2-3-l { left: (8 / 12) * 100%; }
-  .push-1-4-l { left: (3 / 12) * 100%; }
-  .push-3-4-l { left: (9 / 12) * 100%; }
-  .push-1-5-l { left: (2.4 / 12) * 100%; }
-  .push-2-5-l { left: (4.8 / 12) * 100%; }
-  .push-3-5-l { left: (7.2 / 12) * 100%; }
-  .push-4-5-l { left: (9.6 / 12) * 100%; }
+  .push-1-2-l { $grid-alignment: (6 / 12) * 100%; }
+  .push-1-3-l { $grid-alignment: (4 / 12) * 100%; }
+  .push-2-3-l { $grid-alignment: (8 / 12) * 100%; }
+  .push-1-4-l { $grid-alignment: (3 / 12) * 100%; }
+  .push-3-4-l { $grid-alignment: (9 / 12) * 100%; }
+  .push-1-5-l { $grid-alignment: (2.4 / 12) * 100%; }
+  .push-2-5-l { $grid-alignment: (4.8 / 12) * 100%; }
+  .push-3-5-l { $grid-alignment: (7.2 / 12) * 100%; }
+  .push-4-5-l { $grid-alignment: (9.6 / 12) * 100%; }
 
   // Large Device Pull Offsets
   @for $i from 1 through $columns - 1 {
     .pull-#{$i}-l {
-      left: -($i / $columns) * 100%;
+      $grid-alignment: -($i / $columns) * 100%;
     }
   }
-  .pull-1-2-l { left: -(6 / 12) * 100%; }
-  .pull-1-3-l { left: -(4 / 12) * 100%; }
-  .pull-2-3-l { left: -(8 / 12) * 100%; }
-  .pull-1-4-l { left: -(3 / 12) * 100%; }
-  .pull-3-4-l { left: -(9 / 12) * 100%; }
-  .pull-1-5-l { left: -(2.4 / 12) * 100%; }
-  .pull-2-5-l { left: -(4.8 / 12) * 100%; }
-  .pull-3-5-l { left: -(7.2 / 12) * 100%; }
-  .pull-4-5-l { left: -(9.6 / 12) * 100%; }
+  .pull-1-2-l { $grid-alignment: -(6 / 12) * 100%; }
+  .pull-1-3-l { $grid-alignment: -(4 / 12) * 100%; }
+  .pull-2-3-l { $grid-alignment: -(8 / 12) * 100%; }
+  .pull-1-4-l { $grid-alignment: -(3 / 12) * 100%; }
+  .pull-3-4-l { $grid-alignment: -(9 / 12) * 100%; }
+  .pull-1-5-l { $grid-alignment: -(2.4 / 12) * 100%; }
+  .pull-2-5-l { $grid-alignment: -(4.8 / 12) * 100%; }
+  .pull-3-5-l { $grid-alignment: -(7.2 / 12) * 100%; }
+  .pull-4-5-l { $grid-alignment: -(9.6 / 12) * 100%; }
 
 }
 
 // Extra Large Device Grid
 @include breakpoint(xl) {
-  
+
   // Extra Large Device Grid Columns - Global Rules
   .col-1-xl,
   .col-2-xl,
@@ -361,7 +361,7 @@ $columns: 12;
     padding-left: $grid-gutter-xl;
     padding-right: $grid-gutter-xl;
     position: relative;
-    float: left;
+    float: $grid-alignment;
   }
 
   // Extra Large Device Grid
@@ -385,33 +385,33 @@ $columns: 12;
   // Extra Large Device Push Offsets
   @for $i from 1 through $columns - 1 {
     .push-#{$i}-xl {
-      left: ($i / $columns) * 100%;
+      $grid-alignment: ($i / $columns) * 100%;
     }
   }
-  .push-1-2-xl { left: (6 / 12) * 100%; }
-  .push-1-3-xl { left: (4 / 12) * 100%; }
-  .push-2-3-xl { left: (8 / 12) * 100%; }
-  .push-1-4-xl { left: (3 / 12) * 100%; }
-  .push-3-4-xl { left: (9 / 12) * 100%; }
-  .push-1-5-xl { left: (2.4 / 12) * 100%; }
-  .push-2-5-xl { left: (4.8 / 12) * 100%; }
-  .push-3-5-xl { left: (7.2 / 12) * 100%; }
-  .push-4-5-xl { left: (9.6 / 12) * 100%; }
+  .push-1-2-xl { $grid-alignment: (6 / 12) * 100%; }
+  .push-1-3-xl { $grid-alignment: (4 / 12) * 100%; }
+  .push-2-3-xl { $grid-alignment: (8 / 12) * 100%; }
+  .push-1-4-xl { $grid-alignment: (3 / 12) * 100%; }
+  .push-3-4-xl { $grid-alignment: (9 / 12) * 100%; }
+  .push-1-5-xl { $grid-alignment: (2.4 / 12) * 100%; }
+  .push-2-5-xl { $grid-alignment: (4.8 / 12) * 100%; }
+  .push-3-5-xl { $grid-alignment: (7.2 / 12) * 100%; }
+  .push-4-5-xl { $grid-alignment: (9.6 / 12) * 100%; }
 
   // Extra Large Device Pull Offsets
   @for $i from 1 through $columns - 1 {
     .pull-#{$i}-xl {
-      left: -($i / $columns) * 100%;
+      $grid-alignment: -($i / $columns) * 100%;
     }
   }
-  .pull-1-2-xl { left: -(6 / 12) * 100%; }
-  .pull-1-3-xl { left: -(4 / 12) * 100%; }
-  .pull-2-3-xl { left: -(8 / 12) * 100%; }
-  .pull-1-4-xl { left: -(3 / 12) * 100%; }
-  .pull-3-4-xl { left: -(9 / 12) * 100%; }
-  .pull-1-5-xl { left: -(2.4 / 12) * 100%; }
-  .pull-2-5-xl { left: -(4.8 / 12) * 100%; }
-  .pull-3-5-xl { left: -(7.2 / 12) * 100%; }
-  .pull-4-5-xl { left: -(9.6 / 12) * 100%; }
+  .pull-1-2-xl { $grid-alignment: -(6 / 12) * 100%; }
+  .pull-1-3-xl { $grid-alignment: -(4 / 12) * 100%; }
+  .pull-2-3-xl { $grid-alignment: -(8 / 12) * 100%; }
+  .pull-1-4-xl { $grid-alignment: -(3 / 12) * 100%; }
+  .pull-3-4-xl { $grid-alignment: -(9 / 12) * 100%; }
+  .pull-1-5-xl { $grid-alignment: -(2.4 / 12) * 100%; }
+  .pull-2-5-xl { $grid-alignment: -(4.8 / 12) * 100%; }
+  .pull-3-5-xl { $grid-alignment: -(7.2 / 12) * 100%; }
+  .pull-4-5-xl { $grid-alignment: -(9.6 / 12) * 100%; }
 
 }

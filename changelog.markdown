@@ -1,6 +1,12 @@
 # Base 2 Change Log
 
 
+## [3.3.0] - 2017-05-14
+### Base V3.3.0
+- Added RTL support in grid and non-responsive grid
+- Version bump for style.scss, package.json and bower.json
+
+
 ## [3.2.4] - 2017-04-21
 ### Base V3.2.4
 - Fixed scripts in package.json to use installed gulp verson

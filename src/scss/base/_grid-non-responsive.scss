@@ -28,7 +28,7 @@
   padding-left: $grid-gutter;
   padding-right: $grid-gutter;
   position: relative;
-  float: left;
+  float: $grid-alignment;
 }
 
 // Grid
