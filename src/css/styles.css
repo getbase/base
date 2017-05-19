@@ -2,7 +2,7 @@
 
 // Base Stylesheet - http://getbase.org
 // Author: Matthew Hartman - http://www.matthewhartman.com.au/
-// Version: 3.2.4 - Last Updated: April 21, 2017
+// Version: 3.4.0 - Last Updated: May 20, 2017
 
 ========================================================================== */
 *, *:before, *:after {
@@ -418,7 +418,6 @@ input:-ms-input-placeholder {
   text-decoration: none;
   color: #363636;
   display: inline-block;
-  -webkit-transition: all 0.3s;
   transition: all 0.3s; }
   .button:hover, .animation-example:hover, .button:active, .animation-example:active {
     text-decoration: none; }
@@ -1461,10 +1460,8 @@ input:-ms-input-placeholder {
   width: 100px;
   height: 40px;
   display: block;
-  -webkit-transition: all .4s;
   transition: all .4s; }
   .logo:hover {
-    -webkit-transition: all .4s;
     transition: all .4s;
     opacity: 0.7; }
 
@@ -1550,7 +1547,6 @@ input:-ms-input-placeholder {
   display: block;
   cursor: pointer;
   height: 250px;
-  -webkit-transition: all .3s;
   transition: all .3s; }
   .phone-inner:hover {
     opacity: .8; }
@@ -1610,10 +1606,8 @@ input:-ms-input-placeholder {
       min-height: 320px; } }
   .showcase-panel a {
     text-decoration: none;
-    -webkit-transition: all .4s;
     transition: all .4s; }
     .showcase-panel a:hover {
-      -webkit-transition: all .4s;
       transition: all .4s;
       color: #545454; }
 
@@ -1632,10 +1626,8 @@ input:-ms-input-placeholder {
     left: 0;
     background: #fff;
     background: rgba(255, 255, 255, 0);
-    -webkit-transition: all .4s;
     transition: all .4s; }
   .showcase-image:hover:before {
-    -webkit-transition: all .4s;
     transition: all .4s;
     background: #fff;
     background: rgba(255, 255, 255, 0.2); }

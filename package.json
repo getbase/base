@@ -32,6 +32,6 @@
     "run-sequence": "^1.1.5"
   },
   "dependencies": {
-    "getbase": "^3.2.4"
+    "getbase": "^3.4.0"
   }
 }
