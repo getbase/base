@@ -137,34 +137,34 @@ $columns: 12;
 // Mobile Push Offsets
 @for $i from 1 through $columns - 1 {
   .push-#{$i} {
-    $grid-alignment: ($i / $columns) * 100%;
+    #{$grid-alignment}: ($i / $columns) * 100%;
   }
 }
-.push-1-2 { $grid-alignment: (6 / 12) * 100%; }
-.push-1-3 { $grid-alignment: (4 / 12) * 100%; }
-.push-2-3 { $grid-alignment: (8 / 12) * 100%; }
-.push-1-4 { $grid-alignment: (3 / 12) * 100%; }
-.push-3-4 { $grid-alignment: (9 / 12) * 100%; }
-.push-1-5 { $grid-alignment: (2.4 / 12) * 100%; }
-.push-2-5 { $grid-alignment: (4.8 / 12) * 100%; }
-.push-3-5 { $grid-alignment: (7.2 / 12) * 100%; }
-.push-4-5 { $grid-alignment: (9.6 / 12) * 100%; }
+.push-1-2 { #{$grid-alignment}: (6 / 12) * 100%; }
+.push-1-3 { #{$grid-alignment}: (4 / 12) * 100%; }
+.push-2-3 { #{$grid-alignment}: (8 / 12) * 100%; }
+.push-1-4 { #{$grid-alignment}: (3 / 12) * 100%; }
+.push-3-4 { #{$grid-alignment}: (9 / 12) * 100%; }
+.push-1-5 { #{$grid-alignment}: (2.4 / 12) * 100%; }
+.push-2-5 { #{$grid-alignment}: (4.8 / 12) * 100%; }
+.push-3-5 { #{$grid-alignment}: (7.2 / 12) * 100%; }
+.push-4-5 { #{$grid-alignment}: (9.6 / 12) * 100%; }
 
 // Mobile Pull Offsets
 @for $i from 1 through $columns - 1 {
   .pull-#{$i} {
-    $grid-alignment: -($i / $columns) * 100%;
+    #{$grid-alignment}: -($i / $columns) * 100%;
   }
 }
-.pull-1-2 { $grid-alignment: -(6 / 12) * 100%; }
-.pull-1-3 { $grid-alignment: -(4 / 12) * 100%; }
-.pull-2-3 { $grid-alignment: -(8 / 12) * 100%; }
-.pull-1-4 { $grid-alignment: -(3 / 12) * 100%; }
-.pull-3-4 { $grid-alignment: -(9 / 12) * 100%; }
-.pull-1-5 { $grid-alignment: -(2.4 / 12) * 100%; }
-.pull-2-5 { $grid-alignment: -(4.8 / 12) * 100%; }
-.pull-3-5 { $grid-alignment: -(7.2 / 12) * 100%; }
-.pull-4-5 { $grid-alignment: -(9.6 / 12) * 100%; }
+.pull-1-2 { #{$grid-alignment}: -(6 / 12) * 100%; }
+.pull-1-3 { #{$grid-alignment}: -(4 / 12) * 100%; }
+.pull-2-3 { #{$grid-alignment}: -(8 / 12) * 100%; }
+.pull-1-4 { #{$grid-alignment}: -(3 / 12) * 100%; }
+.pull-3-4 { #{$grid-alignment}: -(9 / 12) * 100%; }
+.pull-1-5 { #{$grid-alignment}: -(2.4 / 12) * 100%; }
+.pull-2-5 { #{$grid-alignment}: -(4.8 / 12) * 100%; }
+.pull-3-5 { #{$grid-alignment}: -(7.2 / 12) * 100%; }
+.pull-4-5 { #{$grid-alignment}: -(9.6 / 12) * 100%; }
 
 
 // Medium Device Grid
@@ -219,34 +219,34 @@ $columns: 12;
   // Medium Device Push Offsets
   @for $i from 1 through $columns - 1 {
     .push-#{$i}-m {
-      $grid-alignment: ($i / $columns) * 100%;
+      #{$grid-alignment}: ($i / $columns) * 100%;
     }
   }
-  .push-1-2-m { $grid-alignment: (6 / 12) * 100%; }
-  .push-1-3-m { $grid-alignment: (4 / 12) * 100%; }
-  .push-2-3-m { $grid-alignment: (8 / 12) * 100%; }
-  .push-1-4-m { $grid-alignment: (3 / 12) * 100%; }
-  .push-3-4-m { $grid-alignment: (9 / 12) * 100%; }
-  .push-1-5-m { $grid-alignment: (2.4 / 12) * 100%; }
-  .push-2-5-m { $grid-alignment: (4.8 / 12) * 100%; }
-  .push-3-5-m { $grid-alignment: (7.2 / 12) * 100%; }
-  .push-4-5-m { $grid-alignment: (9.6 / 12) * 100%; }
+  .push-1-2-m { #{$grid-alignment}: (6 / 12) * 100%; }
+  .push-1-3-m { #{$grid-alignment}: (4 / 12) * 100%; }
+  .push-2-3-m { #{$grid-alignment}: (8 / 12) * 100%; }
+  .push-1-4-m { #{$grid-alignment}: (3 / 12) * 100%; }
+  .push-3-4-m { #{$grid-alignment}: (9 / 12) * 100%; }
+  .push-1-5-m { #{$grid-alignment}: (2.4 / 12) * 100%; }
+  .push-2-5-m { #{$grid-alignment}: (4.8 / 12) * 100%; }
+  .push-3-5-m { #{$grid-alignment}: (7.2 / 12) * 100%; }
+  .push-4-5-m { #{$grid-alignment}: (9.6 / 12) * 100%; }
 
   // Medium Device Pull Offsets
   @for $i from 1 through $columns - 1 {
     .pull-#{$i}-m {
-      $grid-alignment: -($i / $columns) * 100%;
+      #{$grid-alignment}: -($i / $columns) * 100%;
     }
   }
-  .pull-1-2-m { $grid-alignment: -(6 / 12) * 100%; }
-  .pull-1-3-m { $grid-alignment: -(4 / 12) * 100%; }
-  .pull-2-3-m { $grid-alignment: -(8 / 12) * 100%; }
-  .pull-1-4-m { $grid-alignment: -(3 / 12) * 100%; }
-  .pull-3-4-m { $grid-alignment: -(9 / 12) * 100%; }
-  .pull-1-5-m { $grid-alignment: -(2.4 / 12) * 100%; }
-  .pull-2-5-m { $grid-alignment: -(4.8 / 12) * 100%; }
-  .pull-3-5-m { $grid-alignment: -(7.2 / 12) * 100%; }
-  .pull-4-5-m { $grid-alignment: -(9.6 / 12) * 100%; }
+  .pull-1-2-m { #{$grid-alignment}: -(6 / 12) * 100%; }
+  .pull-1-3-m { #{$grid-alignment}: -(4 / 12) * 100%; }
+  .pull-2-3-m { #{$grid-alignment}: -(8 / 12) * 100%; }
+  .pull-1-4-m { #{$grid-alignment}: -(3 / 12) * 100%; }
+  .pull-3-4-m { #{$grid-alignment}: -(9 / 12) * 100%; }
+  .pull-1-5-m { #{$grid-alignment}: -(2.4 / 12) * 100%; }
+  .pull-2-5-m { #{$grid-alignment}: -(4.8 / 12) * 100%; }
+  .pull-3-5-m { #{$grid-alignment}: -(7.2 / 12) * 100%; }
+  .pull-4-5-m { #{$grid-alignment}: -(9.6 / 12) * 100%; }
 
 }
 
@@ -302,34 +302,34 @@ $columns: 12;
   // Large Device Push Offsets
   @for $i from 1 through $columns - 1 {
     .push-#{$i}-l {
-      $grid-alignment: ($i / $columns) * 100%;
+      #{$grid-alignment}: ($i / $columns) * 100%;
     }
   }
-  .push-1-2-l { $grid-alignment: (6 / 12) * 100%; }
-  .push-1-3-l { $grid-alignment: (4 / 12) * 100%; }
-  .push-2-3-l { $grid-alignment: (8 / 12) * 100%; }
-  .push-1-4-l { $grid-alignment: (3 / 12) * 100%; }
-  .push-3-4-l { $grid-alignment: (9 / 12) * 100%; }
-  .push-1-5-l { $grid-alignment: (2.4 / 12) * 100%; }
-  .push-2-5-l { $grid-alignment: (4.8 / 12) * 100%; }
-  .push-3-5-l { $grid-alignment: (7.2 / 12) * 100%; }
-  .push-4-5-l { $grid-alignment: (9.6 / 12) * 100%; }
+  .push-1-2-l { #{$grid-alignment}: (6 / 12) * 100%; }
+  .push-1-3-l { #{$grid-alignment}: (4 / 12) * 100%; }
+  .push-2-3-l { #{$grid-alignment}: (8 / 12) * 100%; }
+  .push-1-4-l { #{$grid-alignment}: (3 / 12) * 100%; }
+  .push-3-4-l { #{$grid-alignment}: (9 / 12) * 100%; }
+  .push-1-5-l { #{$grid-alignment}: (2.4 / 12) * 100%; }
+  .push-2-5-l { #{$grid-alignment}: (4.8 / 12) * 100%; }
+  .push-3-5-l { #{$grid-alignment}: (7.2 / 12) * 100%; }
+  .push-4-5-l { #{$grid-alignment}: (9.6 / 12) * 100%; }
 
   // Large Device Pull Offsets
   @for $i from 1 through $columns - 1 {
     .pull-#{$i}-l {
-      $grid-alignment: -($i / $columns) * 100%;
+      #{$grid-alignment}: -($i / $columns) * 100%;
     }
   }
-  .pull-1-2-l { $grid-alignment: -(6 / 12) * 100%; }
-  .pull-1-3-l { $grid-alignment: -(4 / 12) * 100%; }
-  .pull-2-3-l { $grid-alignment: -(8 / 12) * 100%; }
-  .pull-1-4-l { $grid-alignment: -(3 / 12) * 100%; }
-  .pull-3-4-l { $grid-alignment: -(9 / 12) * 100%; }
-  .pull-1-5-l { $grid-alignment: -(2.4 / 12) * 100%; }
-  .pull-2-5-l { $grid-alignment: -(4.8 / 12) * 100%; }
-  .pull-3-5-l { $grid-alignment: -(7.2 / 12) * 100%; }
-  .pull-4-5-l { $grid-alignment: -(9.6 / 12) * 100%; }
+  .pull-1-2-l { #{$grid-alignment}: -(6 / 12) * 100%; }
+  .pull-1-3-l { #{$grid-alignment}: -(4 / 12) * 100%; }
+  .pull-2-3-l { #{$grid-alignment}: -(8 / 12) * 100%; }
+  .pull-1-4-l { #{$grid-alignment}: -(3 / 12) * 100%; }
+  .pull-3-4-l { #{$grid-alignment}: -(9 / 12) * 100%; }
+  .pull-1-5-l { #{$grid-alignment}: -(2.4 / 12) * 100%; }
+  .pull-2-5-l { #{$grid-alignment}: -(4.8 / 12) * 100%; }
+  .pull-3-5-l { #{$grid-alignment}: -(7.2 / 12) * 100%; }
+  .pull-4-5-l { #{$grid-alignment}: -(9.6 / 12) * 100%; }
 
 }
 
@@ -385,33 +385,33 @@ $columns: 12;
   // Extra Large Device Push Offsets
   @for $i from 1 through $columns - 1 {
     .push-#{$i}-xl {
-      $grid-alignment: ($i / $columns) * 100%;
+      #{$grid-alignment}: ($i / $columns) * 100%;
     }
   }
-  .push-1-2-xl { $grid-alignment: (6 / 12) * 100%; }
-  .push-1-3-xl { $grid-alignment: (4 / 12) * 100%; }
-  .push-2-3-xl { $grid-alignment: (8 / 12) * 100%; }
-  .push-1-4-xl { $grid-alignment: (3 / 12) * 100%; }
-  .push-3-4-xl { $grid-alignment: (9 / 12) * 100%; }
-  .push-1-5-xl { $grid-alignment: (2.4 / 12) * 100%; }
-  .push-2-5-xl { $grid-alignment: (4.8 / 12) * 100%; }
-  .push-3-5-xl { $grid-alignment: (7.2 / 12) * 100%; }
-  .push-4-5-xl { $grid-alignment: (9.6 / 12) * 100%; }
+  .push-1-2-xl { #{$grid-alignment}: (6 / 12) * 100%; }
+  .push-1-3-xl { #{$grid-alignment}: (4 / 12) * 100%; }
+  .push-2-3-xl { #{$grid-alignment}: (8 / 12) * 100%; }
+  .push-1-4-xl { #{$grid-alignment}: (3 / 12) * 100%; }
+  .push-3-4-xl { #{$grid-alignment}: (9 / 12) * 100%; }
+  .push-1-5-xl { #{$grid-alignment}: (2.4 / 12) * 100%; }
+  .push-2-5-xl { #{$grid-alignment}: (4.8 / 12) * 100%; }
+  .push-3-5-xl { #{$grid-alignment}: (7.2 / 12) * 100%; }
+  .push-4-5-xl { #{$grid-alignment}: (9.6 / 12) * 100%; }
 
   // Extra Large Device Pull Offsets
   @for $i from 1 through $columns - 1 {
     .pull-#{$i}-xl {
-      $grid-alignment: -($i / $columns) * 100%;
+      #{$grid-alignment}: -($i / $columns) * 100%;
     }
   }
-  .pull-1-2-xl { $grid-alignment: -(6 / 12) * 100%; }
-  .pull-1-3-xl { $grid-alignment: -(4 / 12) * 100%; }
-  .pull-2-3-xl { $grid-alignment: -(8 / 12) * 100%; }
-  .pull-1-4-xl { $grid-alignment: -(3 / 12) * 100%; }
-  .pull-3-4-xl { $grid-alignment: -(9 / 12) * 100%; }
-  .pull-1-5-xl { $grid-alignment: -(2.4 / 12) * 100%; }
-  .pull-2-5-xl { $grid-alignment: -(4.8 / 12) * 100%; }
-  .pull-3-5-xl { $grid-alignment: -(7.2 / 12) * 100%; }
-  .pull-4-5-xl { $grid-alignment: -(9.6 / 12) * 100%; }
+  .pull-1-2-xl { #{$grid-alignment}: -(6 / 12) * 100%; }
+  .pull-1-3-xl { #{$grid-alignment}: -(4 / 12) * 100%; }
+  .pull-2-3-xl { #{$grid-alignment}: -(8 / 12) * 100%; }
+  .pull-1-4-xl { #{$grid-alignment}: -(3 / 12) * 100%; }
+  .pull-3-4-xl { #{$grid-alignment}: -(9 / 12) * 100%; }
+  .pull-1-5-xl { #{$grid-alignment}: -(2.4 / 12) * 100%; }
+  .pull-2-5-xl { #{$grid-alignment}: -(4.8 / 12) * 100%; }
+  .pull-3-5-xl { #{$grid-alignment}: -(7.2 / 12) * 100%; }
+  .pull-4-5-xl { #{$grid-alignment}: -(9.6 / 12) * 100%; }
 
 }

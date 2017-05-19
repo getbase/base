@@ -1,6 +1,12 @@
 # Base 2 Change Log
 
 
+## [3.4.0] - 2017-05-20
+### Base V3.4.0
+- Fixed breaking changes from previous RTL support in grid and non-responsive-grid
+- Version bump for style.scss, package.json and bower.json
+
+
 ## [3.3.0] - 2017-05-14
 ### Base V3.3.0
 - Added RTL support in grid and non-responsive grid
