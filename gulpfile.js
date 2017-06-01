@@ -8,7 +8,7 @@ var browserSync = require('browser-sync').create(),
     cache = require('gulp-cache'),
     cssBase64 = require('gulp-css-base64'),
     imagemin = require('gulp-imagemin'),
-    inlineSource = require('gulp-inline-source'),
+    inlinesource = require('gulp-inline-source'),
     notify = require('gulp-notify'),
     sass = require('gulp-sass'),
     sourcemaps = require('gulp-sourcemaps'),
@@ -71,7 +71,7 @@ gulp.task('browserSync', function () {
 // Will compile all inline within the html file (less http requests - woot!)
 gulp.task('inlinesource', function () {
   return gulp.src('./src/**/*.html')
-    .pipe(inlineSource())
+    .pipe(inlinesource())
     .pipe(gulp.dest('./dist/'));
 });
 
