@@ -6,7 +6,7 @@ var gulp = require('gulp'),
     path = require('path'),
     notify = require('gulp-notify'),
     inlinesource = require('gulp-inline-source'),
-    browserSync = require('browser-sync'),
+    browserSync = require('browser-sync').create(),
     imagemin = require('gulp-imagemin'),
     del = require('del'),
     cache = require('gulp-cache'),
@@ -20,46 +20,44 @@ gulp.task('sass', function () {
     .pipe(sourcemaps.init())
     .pipe(sass({
       errLogToConsole: false,
-      paths: [ path.join(__dirname, 'scss', 'includes') ]
+      paths: [path.join(__dirname, 'scss', 'includes')]
     })
-    .on("error", notify.onError(function(error) {
-      return "Failed to Compile SCSS: " + error.message;
-    })))
+      .on("error", notify.onError(function (error) {
+        return "Failed to Compile SCSS: " + error.message;
+      })))
     .pipe(cssBase64())
     .pipe(autoprefixer())
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('./src/css/'))
     .pipe(gulp.dest('./dist/css/'))
-    .pipe(browserSync.reload({
-      stream: true
-    }))
+    .pipe(browserSync.stream())
     .pipe(notify("SCSS Compiled Successfully :)"));
 });
 
 // Task to Minify JS
-gulp.task('jsmin', function() {
+gulp.task('jsmin', function () {
   return gulp.src('./src/js/**/*.js')
     .pipe(uglify())
     .pipe(gulp.dest('./dist/js/'));
 });
 
 // Minify Images
-gulp.task('imagemin', function (){
+gulp.task('imagemin', function () {
   return gulp.src('./src/img/**/*.+(png|jpg|jpeg|gif|svg)')
   // Caching images that ran through imagemin
-  .pipe(cache(imagemin({
+    .pipe(cache(imagemin({
       interlaced: true
     })))
-  .pipe(gulp.dest('./dist/img'));
+    .pipe(gulp.dest('./dist/img'));
 });
 
 // BrowserSync Task (Live reload)
-gulp.task('browserSync', function() {
-  browserSync({
+gulp.task('browser-sync', function () {
+  browserSync.init({
     server: {
-      baseDir: './src/'
+      baseDir: "./src/"
     }
-  })
+  });
 });
 
 // Gulp Inline Source Task
@@ -74,12 +72,12 @@ gulp.task('inlinesource', function () {
 
 // Gulp Watch Task
 gulp.task('watch', ['browserSync'], function () {
-   gulp.watch('./src/scss/**/*', ['sass']);
-   gulp.watch('./src/**/*.html').on('change', browserSync.reload);
+  gulp.watch('./src/scss/**/*', ['sass']);
+  gulp.watch('./src/**/*.html').on('change', browserSync.reload);
 });
 
 // Gulp Clean Up Task
-gulp.task('clean', function() {
+gulp.task('clean', function () {
   del('dist');
 });
 
@@ -87,6 +85,6 @@ gulp.task('clean', function() {
 gulp.task('default', ['watch']);
 
 // Gulp Build Task
-gulp.task('build', function() {
+gulp.task('build', function () {
   runSequence('clean', 'sass', 'imagemin', 'jsmin', 'inlinesource');
 });
