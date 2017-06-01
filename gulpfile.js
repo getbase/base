@@ -54,7 +54,7 @@ gulp.task('imagemin', function () {
 });
 
 // BrowserSync Task (Live reload)
-gulp.task('browser-sync', function () {
+gulp.task('browserSync', function () {
   browserSync.init({
     server: {
       baseDir: "./src/"
