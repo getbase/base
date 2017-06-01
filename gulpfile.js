@@ -1,6 +1,5 @@
 // Base Gulp File
 var gulp = require('gulp'),
-    watch = require('gulp-watch'),
     sass = require('gulp-sass'),
     sourcemaps = require('gulp-sourcemaps'),
     cssBase64 = require('gulp-css-base64'),
