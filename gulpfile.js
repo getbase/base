@@ -1,19 +1,19 @@
 // Base Gulp File
 'use strict';
 
-var gulp = require('gulp'),
+var browserSync = require('browser-sync').create(),
+    del = require('del'),
+    gulp = require('gulp'),
+    autoprefixer = require('gulp-autoprefixer'),
+    cache = require('gulp-cache'),
+    cssBase64 = require('gulp-css-base64'),
+    imagemin = require('gulp-imagemin'),
+    inlineSource = require('gulp-inline-source'),
+    notify = require('gulp-notify'),
     sass = require('gulp-sass'),
     sourcemaps = require('gulp-sourcemaps'),
-    cssBase64 = require('gulp-css-base64'),
-    path = require('path'),
-    notify = require('gulp-notify'),
-    inlinesource = require('gulp-inline-source'),
-    browserSync = require('browser-sync').create(),
-    imagemin = require('gulp-imagemin'),
-    del = require('del'),
-    cache = require('gulp-cache'),
     uglify = require('gulp-uglify'),
-    autoprefixer = require('gulp-autoprefixer'),
+    path = require('path'),
     runSequence = require('run-sequence');
 
 // Task to compile SCSS
@@ -53,7 +53,7 @@ gulp.task('imagemin', function () {
     .pipe(cache(imagemin({
       interlaced: true
     })))
-    .pipe(gulp.dest('./dist/img'));
+    .pipe(gulp.dest('./dist/img/'));
 });
 
 // BrowserSync Task (Live reload)
@@ -71,7 +71,7 @@ gulp.task('browserSync', function () {
 // Will compile all inline within the html file (less http requests - woot!)
 gulp.task('inlinesource', function () {
   return gulp.src('./src/**/*.html')
-    .pipe(inlinesource())
+    .pipe(inlineSource())
     .pipe(gulp.dest('./dist/'));
 });
 
