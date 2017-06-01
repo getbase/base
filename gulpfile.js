@@ -33,7 +33,10 @@ gulp.task('sass', function () {
     .pipe(gulp.dest('./src/css/'))
     .pipe(gulp.dest('./dist/css/'))
     .pipe(browserSync.stream())
-    .pipe(notify("SCSS Compiled Successfully :)"));
+    .pipe(notify({
+      message: "SCSS Compiled Successfully :)",
+      onLast: true
+    }));
 });
 
 // Task to Minify JS
@@ -46,7 +49,7 @@ gulp.task('jsmin', function () {
 // Minify Images
 gulp.task('imagemin', function () {
   return gulp.src('./src/img/**/*.+(png|jpg|jpeg|gif|svg)')
-  // Caching images that ran through imagemin
+    // Caching images that ran through imagemin
     .pipe(cache(imagemin({
       interlaced: true
     })))
@@ -80,13 +83,13 @@ gulp.task('watch', ['browserSync'], function () {
 
 // Gulp Clean Up Task
 gulp.task('clean', function () {
-  del('dist');
+  return del('dist');
 });
 
 // Gulp Default Task
 gulp.task('default', ['watch']);
 
 // Gulp Build Task
-gulp.task('build', function () {
-  runSequence('clean', 'sass', 'imagemin', 'jsmin', 'inlinesource');
+gulp.task('build', function (callback) {
+  runSequence('clean', 'sass', 'imagemin', 'jsmin', 'inlinesource', callback);
 });
