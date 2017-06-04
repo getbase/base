@@ -2,10 +2,11 @@
 
 // Base Stylesheet - http://getbase.org
 // Author: Matthew Hartman - http://www.matthewhartman.com.au/
-// Version: 3.4.0 - Last Updated: May 20, 2017
+// Version: 3.4.1 - Last Updated: June 04, 2017
 
 ========================================================================== */
 *, *:before, *:after {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
 html {
@@ -177,7 +178,8 @@ figure {
   margin: 1em 40px; }
 
 hr, .hr {
-  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
   height: 1px;
   background: #eee;
   border: 0;
@@ -277,7 +279,8 @@ fieldset {
   padding: 0.35em 0.625em 0.75em; }
 
 legend {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   color: inherit;
   display: table;
   max-width: 100%;
@@ -327,7 +330,8 @@ textarea {
 
 [type="checkbox"],
 [type="radio"] {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 0; }
 
 [type="number"]::-webkit-inner-spin-button,
@@ -418,6 +422,7 @@ input:-ms-input-placeholder {
   text-decoration: none;
   color: #363636;
   display: inline-block;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s; }
   .button:hover, .button:active {
     text-decoration: none; }
@@ -1426,7 +1431,8 @@ input:-ms-input-placeholder {
   *:after {
     background: transparent;
     color: #000;
-    box-shadow: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
     text-shadow: none; }
   a, a:visited {
     text-decoration: underline; }

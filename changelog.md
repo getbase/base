@@ -1,6 +1,14 @@
 # Base 2 Change Log
 
 
+## [3.4.1] - 2017-06-04
+### Base V3.4.1
+- Updated package dependencies and cleaned up gulp scripts
+- Integrated browserslist in package.json as suggested in by a new autoprefixer
+- Added nodejs v6 testing as it is an LTS release
+- Version bump for style.scss, package.json and bower.json
+
+
 ## [3.4.0] - 2017-05-20
 ### Base V3.4.0
 - Fixed breaking changes from previous RTL support in grid and non-responsive-grid
