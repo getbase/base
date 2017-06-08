@@ -20,7 +20,7 @@ gulp.task('sass', function () {
   return gulp.src('./src/scss/styles.scss')
     .pipe(sourcemaps.init())
     .pipe(sass({
-      outputStyle: 'compressed', // Accepted values: nested, expanded, compact, compressed
+      outputStyle: 'nested', // Accepted values: nested, expanded, compact, compressed
       errLogToConsole: false,
       paths: [path.join(__dirname, 'scss', 'includes')]
     })
