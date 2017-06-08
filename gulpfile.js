@@ -1,4 +1,3 @@
-// Base Gulp File
 'use strict';
 
 var browserSync = require('browser-sync').create(),
@@ -21,6 +20,7 @@ gulp.task('sass', function () {
   return gulp.src('./src/scss/styles.scss')
     .pipe(sourcemaps.init())
     .pipe(sass({
+      outputStyle: 'compressed', // Accepted values: nested, expanded, compact, compressed
       errLogToConsole: false,
       paths: [path.join(__dirname, 'scss', 'includes')]
     })
@@ -49,7 +49,7 @@ gulp.task('jsmin', function () {
 // Minify Images
 gulp.task('imagemin', function () {
   return gulp.src('./src/img/**/*.+(png|jpg|jpeg|gif|svg)')
-    // Caching images that ran through imagemin
+    // Caching images that run through imagemin
     .pipe(cache(imagemin({
       interlaced: true
     })))
