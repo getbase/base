@@ -20,7 +20,8 @@ Once you have the latest version of Base installed, head over to the [docs](http
 * * *
 
 ## Support
-IE8+ and all other modern browsers
+IE8+ and all other modern browsers.
+Please, specify browsers you need to support in `package.json` according to [browserslist docs](https://github.com/ai/browserslist#queries).
 
 * * *
 
