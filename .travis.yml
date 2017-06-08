@@ -1,7 +1,6 @@
+sudo: false
 language: node_js
 node_js:
-  - "4"
   - "6"
-before_script:
-  - npm install -g gulp-cli
-script: gulp build
+  - "4"
+script: npm run build
