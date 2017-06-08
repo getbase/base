@@ -3,7 +3,12 @@
 ## A Rock Solid, Responsive HTML/CSS Framework built to work on all devices big and small.
 Lightweight and minimal code. Spend less time overriding styles and focus more time on creating beautiful website applications.
 
-[![Build Status](https://travis-ci.org/matthewhartman/base.svg?branch=master)](https://travis-ci.org/matthewhartman/base)
+[![Travis Build Status][travis-img]][travis] [![David Dependencies Status][david-img]][david]
+
+[travis-img]:   https://img.shields.io/travis/matthewhartman/base.svg?branch=master
+[david-img]:    https://img.shields.io/david/dev/matthewhartman/base.svg?branch=master&label=dependencies
+[travis]:       https://travis-ci.org/matthewhartman/base
+[david]:        https://david-dm.org/matthewhartman/base?type=dev
 
 ## Installation
 Getting started is easy, simply install base using [NPM](https://www.npmjs.com/):
@@ -15,7 +20,8 @@ Once you have the latest version of Base installed, head over to the [docs](http
 * * *
 
 ## Support
-IE8+ and all other modern browsers
+IE8+ and all other modern browsers.
+Please, specify browsers you need to support in `package.json` according to [browserslist docs](https://github.com/ai/browserslist#queries).
 
 * * *
 

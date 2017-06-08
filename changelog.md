@@ -1,6 +1,13 @@
 # Base 2 Change Log
 
 
+## [3.4.2] - 2017-06-09
+### Base V3.4.2
+- Fix running tasks without gulp globally installed on Windows
+- Minor updates to readme.md and travis.yml
+- Version bump for style.scss, package.json and bower.json
+
+
 ## [3.4.1] - 2017-06-04
 ### Base V3.4.1
 - Updated package dependencies and cleaned up gulp scripts
