@@ -2,7 +2,7 @@
 
 // Base Stylesheet - http://getbase.org
 // Author: Matthew Hartman - http://www.matthewhartman.com.au/
-// Version: 3.4.0 - Last Updated: May 20, 2017
+// Version: 3.4.2 - Last Updated: June 09, 2017
 
 ========================================================================== */
 *, *:before, *:after {
@@ -1632,8 +1632,16 @@ input:-ms-input-placeholder {
     background: #fff;
     background: rgba(255, 255, 255, 0.2); }
 
+.showcase-nelus-oana {
+  background: url(../img/nelus-oana.jpg) 0 0 no-repeat;
+  background-size: cover; }
+
 .showcase-construct {
   background: url(../img/construction.jpg) 0 0 no-repeat;
+  background-size: cover; }
+
+.showcase-tourly {
+  background: url(../img/tourly.jpg) 0 0 no-repeat;
   background-size: cover; }
 
 .showcase-event {
