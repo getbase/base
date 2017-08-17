@@ -1,0 +1,144 @@
+// ==========================================================================
+// Base – Typography
+// ==========================================================================
+
+// Body
+body {
+  font-family: @base-font-family;
+  .font-size(@base-font-size);
+  .line-height(@base-line-height);
+  color: @base-font-color;
+  font-weight: @base-font-weight;
+  background: @base-background-color;
+}
+
+// Paragraph
+p { margin: 0 0 20px 0; }
+
+// Links
+a {
+  color: @base-link-color;
+  text-decoration: underline;
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+  &:active, &:hover {
+    color: @base-link-hover-color;
+    outline-width: 0;
+    text-decoration: none;
+  }
+}
+
+// Headings
+h1, h2, h3, h4, h5, h6 {
+  font-family: @base-heading-font-family;
+  margin: 0;
+}
+h1, .fs-1 {
+  .font-size(@base-h1-font-size);
+  .line-height(@base-h1-line-height);
+}
+h2, .fs-2 {
+  .font-size(@base-h2-font-size);
+  .line-height(@base-h2-line-height);
+}
+h3, .fs-3 {
+  .font-size(@base-h3-font-size);
+  .line-height(@base-h3-line-height);
+}
+h4, .fs-4 {
+  .font-size(@base-h4-font-size);
+  .line-height(@base-h4-line-height);
+}
+h5, .fs-5 {
+  .font-size(@base-h5-font-size);
+  .line-height(@base-h5-line-height);
+}
+h6, .fs-6 {
+  .font-size(@base-h6-font-size);
+  .line-height(@base-h6-line-height);
+}
+h1 {
+  margin-bottom: .5em;
+  color: @base-h1-color;
+  font-weight: @base-h1-font-weight;
+}
+h2 {
+  margin-bottom: .2em;
+  color: @base-h2-color;
+  font-weight: @base-h2-font-weight;
+}
+h3 {
+  margin-bottom: .2em;
+  color: @base-h3-color;
+  font-weight: @base-h3-font-weight;
+}
+h4 {
+  margin-bottom: .2em;
+  color: @base-h4-color;
+  font-weight: @base-h4-font-weight;
+}
+h5 {
+  margin-bottom: .1em;
+  color: @base-h5-color;
+  font-weight: @base-h5-font-weight;
+}
+h6 {
+  margin-bottom: .1em;
+  color: @base-h6-color;
+  font-weight: @base-h6-font-weight;
+}
+
+// Bold and Strong
+b, strong, .strong { font-weight: 700; }
+
+// Italics
+em, .em { font-style: italic; }
+
+// Abbreviation
+abbr[title], .abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  text-decoration: underline dotted;
+}
+
+// Definition
+dfn { font-style: italic; }
+
+// Small
+small, .small {
+  .font-size(13);
+  .line-height(16);
+}
+
+// Mark
+mark, .mark {
+  background-color: #ff0;
+  color: #000;
+}
+
+// Sub and Sup
+sub, .sub, sup, .sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sub, .sub { bottom: -0.25em; }
+sup, .sup { top: -0.5em; }
+
+// Del
+del, .del { text-decoration: line-through; }
+
+// Images
+figure { margin: 1em 40px; }
+
+// Horizontal Rules
+hr, .hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 1px;
+  background: #eee;
+  border: 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}

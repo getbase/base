@@ -1,0 +1,107 @@
+// ==========================================================================
+// Base – Non-Responsive Grid
+// ==========================================================================
+
+// Micro Clearfix - http://nicolasgallagher.com/micro-clearfix-hack/
+.clear:before, .clear:after { content: " "; display: table; } .clear:after { clear: both; }
+.row:before, .row:after { content: ""; display: table; } .row:after { clear: both; }
+
+.row {
+  position: relative;
+  margin-left: -@grid-gutter;
+  margin-right: -@grid-gutter;
+}
+
+// Mobile Container
+.container, .container-full {
+  padding-left: @grid-gutter;
+  padding-right: @grid-gutter;
+  margin-left: auto;
+  margin-right: auto;
+}
+.container {
+  width: @container-desktop;
+}
+
+// Grid Columns - Global Rules
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-10,
+.col-11,
+.col-12,
+.col-1-2,
+.col-1-3,
+.col-2-3,
+.col-1-4,
+.col-3-4,
+.col-1-5,
+.col-2-5,
+.col-3-5,
+.col-4-5 {
+  padding-left: @grid-gutter;
+  padding-right: @grid-gutter;
+  position: relative;
+  float: @grid-alignment;
+}
+
+// Grid
+.generate-grid (12);
+.generate-grid (@index) when (@index > 0) {
+  .generate-grid (@index - 1);
+  .col-@{index} {
+    width: @index / 12 * 100%;
+  }
+}
+.col-1-2 { width: (6 / 12) * 100%; }
+.col-1-3 { width: (4 / 12) * 100%; }
+.col-2-3 { width: (8 / 12) * 100%; }
+.col-1-4 { width: (3 / 12) * 100%; }
+.col-3-4 { width: (9 / 12) * 100%; }
+.col-1-5 { width: (2.4 / 12) * 100%; }
+.col-2-5 { width: (4.8 / 12) * 100%; }
+.col-3-5 { width: (7.2 / 12) * 100%; }
+.col-4-5 { width: (9.6 / 12) * 100%; }
+.col-full { width: 100%; }
+
+// Push Offsets
+.generate-push-offsets (11);
+.generate-push-offsets (@index) when (@index > 0) {
+  .generate-push-offsets (@index - 1);
+  .push-@{index} {
+    @{grid-alignment}: @index / 12 * 100%;
+  }
+}
+.push-1-2 { @{grid-alignment}: (6 / 12) * 100%; }
+.push-1-3 { @{grid-alignment}: (4 / 12) * 100%; }
+.push-2-3 { @{grid-alignment}: (8 / 12) * 100%; }
+.push-1-4 { @{grid-alignment}: (3 / 12) * 100%; }
+.push-3-4 { @{grid-alignment}: (9 / 12) * 100%; }
+.push-1-5 { @{grid-alignment}: (2.4 / 12) * 100%; }
+.push-2-5 { @{grid-alignment}: (4.8 / 12) * 100%; }
+.push-3-5 { @{grid-alignment}: (7.2 / 12) * 100%; }
+.push-4-5 { @{grid-alignment}: (9.6 / 12) * 100%; }
+
+// Pull Offsets
+.generate-pull-offsets (11);
+.generate-pull-offsets (@index) when (@index > 0) {
+  .generate-pull-offsets (@index - 1);
+  .pull-@{index} {
+    @{grid-alignment}: -@index / 12 * 100%;
+  }
+}
+.pull-1-2 { @{grid-alignment}: -(6 / 12) * 100%; }
+.pull-1-3 { @{grid-alignment}: -(4 / 12) * 100%; }
+.pull-2-3 { @{grid-alignment}: -(8 / 12) * 100%; }
+.pull-1-4 { @{grid-alignment}: -(3 / 12) * 100%; }
+.pull-3-4 { @{grid-alignment}: -(9 / 12) * 100%; }
+.pull-1-5 { @{grid-alignment}: -(2.4 / 12) * 100%; }
+.pull-2-5 { @{grid-alignment}: -(4.8 / 12) * 100%; }
+.pull-3-5 { @{grid-alignment}: -(7.2 / 12) * 100%; }
+.pull-4-5 { @{grid-alignment}: -(9.6 / 12) * 100%; }

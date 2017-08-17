@@ -1,4 +1,15 @@
-# Base 2 Change Log
+# Base Change Log
+
+
+## [3.5.0] - 2017-08-17
+### Base V3.5.0
+- Moved starter files (img, js and index.html template) into [base starter](https://github.com/matthewhartman/base-starter)
+- Added installation instructions to readme.md
+- Added base LESS files
+- Updated base LESS project to be up to date with the SASS version
+- Added dist task to package scripts
+- Added node 8 to travis.yml
+- Version bump for style.scss, package.json and bower.json
 
 
 ## [3.4.2] - 2017-06-09

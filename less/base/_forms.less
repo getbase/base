@@ -1,0 +1,148 @@
+// ==========================================================================
+// Base – Forms
+// ==========================================================================
+
+// Form, Fieldset and Legend
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+legend {
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+}
+
+// All Form Elements
+label,
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: @base-input-color;
+  font: inherit;
+  margin: 0;
+  border-radius: 0;
+}
+
+// Mixed Input Fields
+[type="text"],
+[type="email"],
+[type="password"],
+[type="tel"],
+[type="number"],
+[type="date"] {
+  height: @base-input-height;
+  padding: 10px;
+  background-color: @base-input-background-color;
+  border: 1px solid @base-input-border-color;
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+  border-radius: 0;
+  &:focus {
+    background-color: @base-input-background-focus-color;
+    border-color: @base-input-border-focus-color;
+    outline: 0;
+  }
+}
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+[type="date"]::-webkit-inner-spin-button {
+  display: none;
+  -webkit-appearance: none;
+}
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+[type="search"] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+// Text Area
+textarea {
+  padding: 10px;
+  background-color: @base-input-background-color;
+  border: 1px solid @base-input-border-color;
+  overflow: auto;
+  &:focus {
+    background-color: @base-input-background-focus-color;
+    border-color: @base-input-border-focus-color;
+    outline: 0;
+  }
+}
+
+// Select
+select {
+  text-transform: none;
+  height: @base-input-height;
+  padding: 0 10px;
+  background-color: @base-input-background-color;
+  border: 1px solid @base-input-border-color;
+  &:focus {
+    background-color: @base-input-background-focus-color;
+    border-color: @base-input-border-focus-color;
+    outline: 0;
+  }
+}
+optgroup { font-weight: 700; }
+
+// Buttons
+button {
+  border-radius: 0;
+  overflow: visible;
+  text-transform: none;
+  cursor: pointer;
+}
+
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  border-radius: 0;
+  -webkit-appearance: button;
+}
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+button[disabled],
+html input[disabled] {
+  cursor: not-allowed;
+}
+
+
+// Placeholder Colour
+input::-webkit-input-placeholder { color: @base-input-placeholder-color; }
+input:-moz-placeholder { color: @base-input-placeholder-color; }
+input::-moz-placeholder { color: @base-input-placeholder-color; }
+input:-ms-input-placeholder { color: @base-input-placeholder-color; }

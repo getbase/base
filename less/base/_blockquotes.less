@@ -1,0 +1,21 @@
+// ==========================================================================
+// Base – Blockquote
+// ==========================================================================
+blockquote,
+.blockquote {
+  font-family: @base-blockquote-font-family;
+  font-weight: @base-font-weight;
+  font-style: italic;
+  margin: 20px 0;
+  p {
+    .font-size(@base-blockquote-font-size);
+    .line-height(@base-blockquote-line-height);
+    margin-bottom: 20px;
+  }
+  cite {
+    .font-size(@base-font-size - 3);
+    .line-height(@base-line-height - 3);
+    font-weight: 700;
+    font-style: normal;
+  }
+}

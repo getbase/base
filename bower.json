@@ -1,6 +1,6 @@
 {
   "name": "base",
-  "version": "3.4.2",
+  "version": "3.5.0",
   "homepage": "http://matthewhartman.github.io/base/",
   "authors": [
     "Matthew Hartman <matthewhartman@gmail.com>"
@@ -9,6 +9,7 @@
   "keywords": [
     "css",
     "scss",
+    "less",
     "framework",
     "mobile-first",
     "lightweight",

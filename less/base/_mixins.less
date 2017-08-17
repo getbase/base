@@ -1,0 +1,73 @@
+// ==========================================================================
+// Base – Mixins
+// ==========================================================================
+
+// Font sizes (primary sizing in `rem` units with a fallback of `px`)
+// Example usage @include font-size(18);
+.font-size (@size) {
+  @remValue: @size / 16;
+  @pxValue: (@size);
+  font-size: ~"@{pxValue}px"; 
+  font-size: ~"@{remValue}rem";
+}
+
+// Line height sizes (primary sizing in `rem` units with a fallback of `px`)
+// Example usage @include line-height(22);
+.line-height (@size) {
+  @remValue: @size / 16;
+  @pxValue: (@size);
+  line-height: ~"@{pxValue}px"; 
+  line-height: ~"@{remValue}rem";
+}
+
+// Background Color with Opacity
+// Example Usage: @include bg-rgba(#111, 50%);
+.background-alpha(@color,@alpha) {
+  @rgba: rgba(red(@color), green(@color), blue(@color), @alpha);
+  @argb: argb(@rgba);
+  background-color: @color;
+  background-color: @rgba;
+}
+
+// Animations
+// Example Usage .animation(1s);
+.animation(@duration: 1s) {
+  animation-duration: @duration;
+  animation-fill-mode: both;
+}
+
+// Arrows
+// Example Usage .arrow(4px, #000, up);
+.arrow(@size: 5px, @color: #333, @direction: right) {
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    border: @size solid transparent;
+    z-index: -1;
+    & when (@direction = right) {
+      top: 50%;
+      left: 100%;
+      border-left-color: @color;
+      transform: translate3d(0, -50%, 0);
+    }
+    & when (@direction = left) {
+      top: 50%;
+      left: 0;
+      border-right-color: @color;
+      transform: translate3d(-100%, -50%, 0);
+    }
+    & when (@direction = down) {
+      top: 100%;
+      left: 50%;
+      border-top-color: @color;
+      transform: translate3d(-50%, 0, 0);
+    }
+    & when (@direction = up) {
+      top: 0;
+      left: 50%;
+      border-bottom-color: @color;
+      transform: translate3d(-50%, -100%, 0);
+    }
+  }
+}
