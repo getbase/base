@@ -11,42 +11,58 @@ Lightweight and minimal code. Spend less time overriding styles and focus more t
 [david]:        https://david-dm.org/matthewhartman/base?type=dev
 
 ## Getting Started
-...
+Whether you're building a new web application from scratch or creating a mobile-first, responsive website, Base is very easy to learn and use.
+
+Before diving into Base, please make sure you have the following tools and basic knowledge:
+
+* Good understanding of HTML and CSS
+* A good code editor such as [Sublime Text Editor](http://www.sublimetext.com/)
+* Latest installation of [Node and NPM](https://nodejs.org/en/)
+* A calm and open mind :)
 
 ## Installation
-If you are creating a new project from scratch, it is highly recommended you download the [base starter](https://github.com/matthewhartman/base-starter) template.
+If you are creating a new project from scratch, it is highly recommended you [download the base starter template](https://github.com/matthewhartman/base-starter).
 
 Or you can clone the starter-template directly:
 
-    git clone https://github.com/matthewhartman/base-starter.git && cd base-starter
-
-    npm install && npm start
+```bash
+git clone https://github.com/matthewhartman/base-starter.git yourwebsite && cd yourwebsite && rm -rf .git
+npm install && npm start
+```
 
 Alternatively, if you have an existing project, simply install base using [NPM](https://www.npmjs.com/):
 
-    npm install --save getbase
+```bash
+npm install --save getbase
+```
 
-Once you have Base installed, you can then include it into your website with one of the following methods:
-* Reference the CSS file directly into your website:
+Once you have Base installed, you can include it into your website with one of the following methods:
+### Reference the CSS file directly into your website:
 
-    <link rel="stylesheet" href="node_modules/getbase/css/styles.css">
+  ```html
+  <link rel="stylesheet" href="node_modules/getbase/css/styles.css">
+  ```
 
-* Via a SCSS file:
+### Import via SCSS file:
 
-    @import "node_modules/getbase/scss/base";
+  ```scss
+  @import "node_modules/getbase/scss/base";
 
-    // Your website styles
+  // Your website styles
 
-    @import "node_modules/getbase/scss/base/_helpers";
+  @import "node_modules/getbase/scss/base/_helpers";
+  ```
 
 
-* Via a LESS file:
+### Import via LESS file:
 
-    @import "node_modules/getbase/less/base";
+  ```css
+  @import "node_modules/getbase/less/base";
 
-    // Your website styles
+  /* Your website styles */
 
-    @import "node_modules/getbase/less/base/_helpers";
+  @import "node_modules/getbase/less/base/_helpers";
+  ```
 
 Want to know how what's under the hood? - head over to the [docs](http://getbase.org/docs/) to learn more.
 

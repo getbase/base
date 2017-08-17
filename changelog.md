@@ -1,6 +1,12 @@
 # Base Change Log
 
 
+## [3.5.1] - 2017-08-18
+### Base V3.5.1
+- Minor updates to readme
+- Version bump for style.scss, package.json and bower.json
+
+
 ## [3.5.0] - 2017-08-17
 ### Base V3.5.0
 - Moved starter files (img, js and index.html template) into [base starter](https://github.com/matthewhartman/base-starter)
