@@ -87,7 +87,7 @@
   }
 }
 .phone-inner {
-  background: url(../img/tourly.jpg) 0 0 no-repeat #111;
+  background: url(../img/gymphy.png) 0 0 no-repeat #111;
   background-size: cover;
   display: block;
   cursor: pointer;
@@ -186,6 +186,10 @@
       @include background-alpha($white, 20%);
     }
   }
+}
+.showcase-gymphy {
+  background: url(../img/gymphy.png) 0 0 no-repeat;
+  background-size: cover
 }
 .showcase-nelus-oana {
   background: url(../img/nelus-oana.jpg) 0 0 no-repeat;
@@ -304,6 +308,6 @@
   z-index: 1000;
 }
 .opl-feature {
-  top: 21px;
+  top: 0;
   left: 0;
 }

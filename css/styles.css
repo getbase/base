@@ -1551,7 +1551,7 @@ input:-ms-input-placeholder {
       width: 500px; } }
 
 .phone-inner {
-  background: url(../img/tourly.jpg) 0 0 no-repeat #111;
+  background: url(../img/gymphy.png) 0 0 no-repeat #111;
   background-size: cover;
   display: block;
   cursor: pointer;
@@ -1645,6 +1645,10 @@ input:-ms-input-placeholder {
     transition: all .4s;
     background: #fff;
     background: rgba(255, 255, 255, 0.2); }
+
+.showcase-gymphy {
+  background: url(../img/gymphy.png) 0 0 no-repeat;
+  background-size: cover; }
 
 .showcase-nelus-oana {
   background: url(../img/nelus-oana.jpg) 0 0 no-repeat;
@@ -1751,7 +1755,7 @@ input:-ms-input-placeholder {
   z-index: 1000; }
 
 .opl-feature {
-  top: 21px;
+  top: 0;
   left: 0; }
 
 .no-margin {
