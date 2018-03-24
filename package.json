@@ -1,8 +1,10 @@
 {
-  "name": "getbase",
-  "version": "3.5.1",
+  "name": "@getbase/getbase",
+  "version": "3.5.2",
   "description": "A Rock Solid, Responsive HTML/CSS Framework built to work on all devices big and small.",
   "homepage": "http://getbase.org/",
+  "main": "gulpfile.js",
+  "author": "Matthew Hartman",
   "scripts": {
     "start": "gulp",
     "less": "gulp less",
@@ -13,11 +15,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/matthewhartman/base.git"
+    "url": "git+https://github.com/matthewhartman/base.git"
   },
-  "authors": [
-    "Matthew Hartman <matthewhartmanau@gmail.com>"
-  ],
   "keywords": [
     "css",
     "scss",
@@ -39,19 +38,22 @@
     "npm": ">=2.0.0"
   },
   "devDependencies": {
-    "browser-sync": "^2.18.13",
+    "browser-sync": "^2.23.6",
+    "del": "^3.0.0",
     "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^4.0.0",
-    "gulp-notify": "^3.0.0",
-    "gulp-sass": "^3.1.0",
-    "gulp-sourcemaps": "^2.6.0",
-    "gulp-less": "^3.3.2",
-    "del": "^2.2.2",
-    "run-sequence": "^1.2.2"
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-sass": "^3.2.1",
+    "gulp-less": "^4.0.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "run-sequence": "^2.2.1"
   },
   "browserslist": [
     "> 1%",
     "last 2 versions",
     "Firefox ESR"
-  ]
+  ],
+  "bugs": {
+    "url": "https://github.com/matthewhartman/base/issues"
+  }
 }

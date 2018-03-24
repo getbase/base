@@ -1,6 +1,12 @@
 # Base Change Log
 
 
+## [3.5.2] - 2018-03-24
+### Base V3.5.2
+- Updated package.json
+- Version bump for style.scss, package.json and bower.json
+
+
 ## [3.5.1] - 2017-08-18
 ### Base V3.5.1
 - Minor updates to readme
