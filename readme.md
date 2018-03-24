@@ -49,8 +49,6 @@ Once you have Base installed, you can include it into your website with one of t
   @import "node_modules/getbase/scss/base";
 
   // Your website styles
-
-  @import "node_modules/getbase/scss/base/_helpers";
   ```
 
 
@@ -60,8 +58,6 @@ Once you have Base installed, you can include it into your website with one of t
   @import "node_modules/getbase/less/base";
 
   /* Your website styles */
-
-  @import "node_modules/getbase/less/base/_helpers";
   ```
 
 Want to know how what's under the hood? - head over to the [docs](http://getbase.org/docs/) to learn more.
@@ -69,7 +65,7 @@ Want to know how what's under the hood? - head over to the [docs](http://getbase
 * * *
 
 ## Support
-* IE10+ and all other modern browsers.
+* IE8+ and all other modern browsers.
 * Please, specify browsers you need to support in `package.json` according to [browserslist docs](https://github.com/ai/browserslist#queries).
 
 ## License
