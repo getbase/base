@@ -69,17 +69,8 @@ Want to know how what's under the hood? - head over to the [docs](http://getbase
 * * *
 
 ## Support
-* IE8+ and all other modern browsers.
+* IE10+ and all other modern browsers.
 * Please, specify browsers you need to support in `package.json` according to [browserslist docs](https://github.com/ai/browserslist#queries).
-
-* * *
-
-## Thanks
-- [base_css-rails](https://github.com/rkrdo/base_css-rails) - Gem that adds the Base framework by Ricardo Cruz
-- [HTML5 boilerplate](https://html5boilerplate.com/) for the base HTML template
-- Daniel Eden for the CSS3 animations - [animate.css](http://daneden.github.io/animate.css/)
-- Nicolas Gallagher [@necolas](https://twitter.com/necolas) for normalize.css and micro clearfix
-- Tristan McNab for adding bower support
 
 ## License
 [MIT Open Source](https://opensource.org/licenses/MIT)

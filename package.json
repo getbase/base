@@ -1,11 +1,10 @@
 {
   "name": "getbase",
-  "version": "3.5.1",
-  "description": "A Rock Solid, Responsive HTML/CSS Framework built to work on all devices big and small.",
+  "version": "4.0.0",
+  "description": "A Rock Solid, Responsive CSS Framework built to work on all devices big and small.",
   "homepage": "http://getbase.org/",
   "scripts": {
     "start": "gulp",
-    "less": "gulp less",
     "sass": "gulp sass",
     "clean": "gulp clean",
     "build": "gulp build",
@@ -38,16 +37,18 @@
     "node": ">=4.0.0",
     "npm": ">=2.0.0"
   },
+  "dependencies": {
+    "normalize.css": "^8.0.0"
+  },
   "devDependencies": {
-    "browser-sync": "^2.18.13",
+    "browser-sync": "^2.23.6",
+    "del": "^3.0.0",
     "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^4.0.0",
-    "gulp-notify": "^3.0.0",
-    "gulp-sass": "^3.1.0",
-    "gulp-sourcemaps": "^2.6.0",
-    "gulp-less": "^3.3.2",
-    "del": "^2.2.2",
-    "run-sequence": "^1.2.2"
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-sass": "^3.2.1",
+    "gulp-sourcemaps": "^2.6.4",
+    "run-sequence": "^2.2.1"
   },
   "browserslist": [
     "> 1%",

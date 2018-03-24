@@ -21,9 +21,15 @@ thead { display: table-header-group; }
 tr { page-break-inside: avoid; }
 
 // Images
-img { page-break-inside: avoid; max-width: 100%;}
+img {
+  page-break-inside: avoid;
+  max-width: 100%;
+}
 
 // Typography
-p, h2, h3 { orphans: 3; widows: 3; }
+h2, h3, p {
+  orphans: 3;
+  widows: 3;
+}
 h2, h3 { page-break-after: avoid; }
 abbr[title]:after { content: " (" attr(title) ")"; }
