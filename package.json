@@ -6,6 +6,7 @@
   "scripts": {
     "start": "gulp",
     "sass": "gulp sass",
+    "less": "gulp less",
     "clean": "gulp clean",
     "build": "gulp build",
     "dist": "gulp build"
@@ -20,6 +21,7 @@
   "keywords": [
     "css",
     "scss",
+    "less",
     "framework",
     "mobile-first",
     "lightweight",
@@ -47,6 +49,7 @@
     "gulp-autoprefixer": "^5.0.0",
     "gulp-notify": "^3.2.0",
     "gulp-sass": "^3.2.1",
+    "gulp-less": "^4.0.0",
     "gulp-sourcemaps": "^2.6.4",
     "run-sequence": "^2.2.1"
   },
