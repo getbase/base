@@ -11,9 +11,9 @@ Spend less time overriding styles and focus more time on creating beautiful webs
 [david]:        https://david-dm.org/matthewhartman/base?type=dev
 
 ## Introduction
-Base itself a very thin layer which includes normalize.css and a few mixins to get you started.
+Base itself is a very thin layer which includes normalize.css and a few mixins to get you started.
 
-You can then include what you need on top of Base such as typography, grids, individual components, etc.
+You can then include what you need on top of Base such as typography, grids, individual components, etc to make it yours.
 
 ## Getting Started
 Before diving in, please make sure you have the following prerequisites:
