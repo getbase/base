@@ -38,7 +38,7 @@ Alternatively, if you have an existing project, simply install base using [NPM](
 npm install --save @getbase/getbase
 ```
 
-Once you have Base installed, you can then build on top of it by including your own styles or add the ready made modules provided by Base:
+Once you have Base installed, you can then build on top of it by including your own styles or add the ready made packages provided by Base:
 
 ### Import via CSS file:
   ```html
@@ -55,10 +55,10 @@ Once you have Base installed, you can then build on top of it by including your 
 
   ```scss
   /* Import Base */
-  @import "node_modules/@getbase/getbase/scss/index";
+  @import "node_modules/@getbase/base/scss/index";
 
   /* Import Base Typography Module */
-  @import "node_modules/@getbase/getbase-typography/scss/index";
+  @import "node_modules/@getbase/typography/scss/index";
 
   /* Your Custom Website/App Styles */
   @import "main"
@@ -69,18 +69,19 @@ Once you have Base installed, you can then build on top of it by including your 
 
   ```css
   /* Import Base */
-  @import "node_modules/@getbase/getbase/scss/index";
+  @import "node_modules/@getbase/base/scss/index";
 
   /* Import Base Typography Module */
-  @import "node_modules/@getbase/getbase-typography/scss/index";
+  @import "node_modules/@getbase/typography/scss/index";
 
   /* Your Custom Website/App Styles */
+  @import "main"
   ```
 
 * * *
 
 ## Documentation
-You can head over to the [documentation](http://getbase.org/docs/) to learn all about the available modules and code examples.
+You can head over to the [documentation](http://getbase.org/docs/) to learn all about the available packages and code examples.
 
 * * *
 
