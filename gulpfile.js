@@ -13,7 +13,7 @@ let runSequence = require('run-sequence');
 
 // Task to compile SCSS
 gulp.task('sass', () => {
-  return gulp.src('./scss/styles.scss')
+  return gulp.src('./scss/index.scss')
     .pipe(sourcemaps.init())
     .pipe(sass({
       outputStyle: 'nested',
@@ -35,7 +35,7 @@ gulp.task('sass', () => {
 
 // Task to compile LESS
 gulp.task('less', () => {
-  return gulp.src('./less/styles.less')
+  return gulp.src('./less/index.less')
     .pipe(sourcemaps.init())
     .pipe(less({
       paths: [ path.join(__dirname, 'less', 'includes') ]

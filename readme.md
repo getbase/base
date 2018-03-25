@@ -1,66 +1,85 @@
 # [Base](http://getbase.org)
 
-## A Rock Solid, Responsive CSS Framework built to work on all devices big and small.
-Lightweight and minimal code. Spend less time overriding styles and focus more time on creating beautiful website applications.
+## A Rock Solid, Responsive CSS Framework built to work on all devices big, small and in-between.
+Spend less time overriding styles and focus more time on creating beautiful website applications.
 
 [![Travis Build Status][travis-img]][travis] [![David Dependencies Status][david-img]][david]
-
 [travis-img]:   https://img.shields.io/travis/matthewhartman/base.svg?branch=master
 [david-img]:    https://img.shields.io/david/dev/matthewhartman/base.svg?branch=master&label=dependencies
 [travis]:       https://travis-ci.org/matthewhartman/base
 [david]:        https://david-dm.org/matthewhartman/base?type=dev
 
+## Introduction
+Base itself a very thin layer which includes normalize.css and a few mixins to get you started.
+
+You can then include what you need on top of Base such as typography, grids, individual components, etc.
+
 ## Getting Started
-Whether you're building a new web application from scratch or creating a mobile-first, responsive website, Base is very easy to learn and use.
+Before diving in, please make sure you have the following prerequisites:
 
-Before diving into Base, please make sure you have the following tools and basic knowledge:
-
-* Good understanding of HTML and CSS
-* A good code editor such as [Sublime Text Editor](http://www.sublimetext.com/)
-* Latest installation of [Node and NPM](https://nodejs.org/en/)
+* A good understanding of HTML &amp; CSS
+* An awesome and fast code editor such as [Sublime Text Editor](http://www.sublimetext.com/)
+* Latest version of [Node and NPM](https://nodejs.org/en/)
 * A calm and open mind :)
 
 ## Installation
-If you are creating a new project from scratch, it is highly recommended you [download the base starter template](https://github.com/matthewhartman/base-starter).
-
-Or you can clone the starter-template directly:
+If you are creating a new project from scratch, it is highly recommended you [use the base starter template](https://github.com/matthewhartman/base-starter).
 
 ```bash
-git clone https://github.com/matthewhartman/base-starter.git yourwebsite && cd yourwebsite && rm -rf .git
+git clone https://github.com/matthewhartman/base-starter.git \
+new-website && cd new-website && rm -rf .git
 npm install && npm start
 ```
 
 Alternatively, if you have an existing project, simply install base using [NPM](https://www.npmjs.com/):
 
 ```bash
-npm install --save getbase
+npm install --save @getbase/getbase
 ```
 
-Once you have Base installed, you can include it into your website with one of the following methods:
-### Reference the CSS file directly into your website:
+Once you have Base installed, you can then build on top of it by including your own styles or add the ready made modules provided by Base:
 
+### Import via CSS file:
   ```html
-  <link rel="stylesheet" href="node_modules/getbase/css/styles.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/matthewhartman/base/master/css/index.css">
+  ```
+
+  OR
+
+  ```css
+    @import ("https://cdn.rawgit.com/matthewhartman/base/master/css/index.css")
   ```
 
 ### Import via SCSS file:
 
   ```scss
-  @import "node_modules/getbase/scss/base";
+  /* Import Base */
+  @import "node_modules/@getbase/getbase/scss/index";
 
-  // Your website styles
+  /* Import Base Typography Module */
+  @import "node_modules/@getbase/getbase-typography/scss/index";
+
+  /* Your Custom Website/App Styles */
+  @import "main"
   ```
 
 
 ### Import via LESS file:
 
   ```css
-  @import "node_modules/getbase/less/base";
+  /* Import Base */
+  @import "node_modules/@getbase/getbase/scss/index";
 
-  /* Your website styles */
+  /* Import Base Typography Module */
+  @import "node_modules/@getbase/getbase-typography/scss/index";
+
+  /* Your Custom Website/App Styles */
   ```
 
-Want to know how what's under the hood? - head over to the [docs](http://getbase.org/docs/) to learn more.
+* * *
+
+## Documentation
+You can head over to the [documentation](http://getbase.org/docs/) to learn all about the available modules and code examples.
 
 * * *
 
@@ -68,9 +87,12 @@ Want to know how what's under the hood? - head over to the [docs](http://getbase
 * IE8+ and all other modern browsers.
 * Please, specify browsers you need to support in `package.json` according to [browserslist docs](https://github.com/ai/browserslist#queries).
 
+* * *
+
 ## License
 [MIT Open Source](https://opensource.org/licenses/MIT)
 
 * * *
 
+## Credits
 Base was built by Matthew Hartman [(@matthewhartmans)](http://twitter.com/matthewhartmans) - a passionate web developer based in Melbourne, Australia.
