@@ -91,10 +91,9 @@ You can head over to the [documentation](http://getbase.org/docs/) to learn all 
 
 * * *
 
-## License
-[MIT Open Source](https://opensource.org/licenses/MIT)
+## Thanks / Credits
+- Thanks to Nicolas Gallagher (@necolas) for normalize.css
 
 * * *
-
-## Credits
-Base was built by Matthew Hartman [(@matthewhartmans)](http://twitter.com/matthewhartmans) - a passionate web developer based in Melbourne, Australia.
+## License
+[MIT Open Source](https://opensource.org/licenses/MIT)

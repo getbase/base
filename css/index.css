@@ -308,36 +308,4 @@ template {
 [hidden] {
   display: none; }
 
-@media print {
-  *,
-  *:before,
-  *:after {
-    background: transparent;
-    color: #000;
-    -webkit-box-shadow: none;
-            box-shadow: none;
-    text-shadow: none; }
-  a, a:visited {
-    text-decoration: underline; }
-  a[href]:after {
-    content: " (" attr(href) ")"; }
-  a[href^="#"]:after, a[href^="javascript:"]:after {
-    content: ""; }
-  pre, blockquote {
-    page-break-inside: avoid; }
-  thead {
-    display: table-header-group; }
-  tr {
-    page-break-inside: avoid; }
-  img {
-    page-break-inside: avoid;
-    max-width: 100%; }
-  h2, h3, p {
-    orphans: 3;
-    widows: 3; }
-  h2, h3 {
-    page-break-after: avoid; }
-  abbr[title]:after {
-    content: " (" attr(title) ")"; } }
-
 /*# sourceMappingURL=index.css.map */
