@@ -35,20 +35,20 @@ npm install && npm start
 Alternatively, if you have an existing project, simply install base using [NPM](https://www.npmjs.com/):
 
 ```bash
-npm install --save @getbase/getbase
+npm install --save @getbase/base
 ```
 
 Once you have Base installed, you can then build on top of it by including your own styles or add the ready made packages provided by Base:
 
 ### Import via CSS file:
   ```html
-    <link rel="stylesheet" href="https://cdn.rawgit.com/matthewhartman/base/master/css/index.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/getbase/base/master/css/index.css">
   ```
 
   OR
 
   ```css
-    @import ("https://cdn.rawgit.com/matthewhartman/base/master/css/index.css")
+    @import ("https://cdn.rawgit.com/matthewhartman/getbase/master/css/index.css")
   ```
 
 ### Import via SCSS file:
