@@ -24,10 +24,10 @@ Before diving in, please make sure you have the following prerequisites:
 * A calm and open mind :)
 
 ## Installation
-If you are creating a new project from scratch, it is highly recommended you [use the base starter template](https://github.com/getbase/starter-template).
+If you are creating a new project from scratch, it is highly recommended you [use the base starter template](https://github.com/getbase/starter).
 
 ```bash
-git clone https://github.com/getbase/starter-template.git \
+git clone https://github.com/getbase/starter.git \
 new-website && cd new-website && rm -rf .git
 npm install && npm start
 ```
