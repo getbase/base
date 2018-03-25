@@ -4,6 +4,7 @@
 Spend less time overriding styles and focus more time on creating beautiful website applications.
 
 [![Travis Build Status][travis-img]][travis] [![David Dependencies Status][david-img]][david]
+
 [travis-img]:   https://img.shields.io/travis/matthewhartman/base.svg?branch=master
 [david-img]:    https://img.shields.io/david/dev/matthewhartman/base.svg?branch=master&label=dependencies
 [travis]:       https://travis-ci.org/matthewhartman/base

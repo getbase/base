@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/matthewhartman/base.git"
+    "url": "https://github.com/matthewhartman/getbase.git"
   },
   "keywords": [
     "css",
@@ -58,6 +58,6 @@
     "Firefox ESR"
   ],
   "bugs": {
-    "url": "https://github.com/matthewhartman/base/issues"
+    "url": "https://github.com/matthewhartman/getbase/issues"
   }
 }
