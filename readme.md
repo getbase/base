@@ -5,10 +5,10 @@ Spend less time overriding styles and focus more time on creating beautiful webs
 
 [![Travis Build Status][travis-img]][travis] [![David Dependencies Status][david-img]][david]
 
-[travis-img]:   https://img.shields.io/travis/matthewhartman/base.svg?branch=master
-[david-img]:    https://img.shields.io/david/dev/matthewhartman/base.svg?branch=master&label=dependencies
-[travis]:       https://travis-ci.org/matthewhartman/base
-[david]:        https://david-dm.org/matthewhartman/base?type=dev
+[travis-img]:   https://img.shields.io/travis/getbase/base.svg?branch=master
+[david-img]:    https://img.shields.io/david/dev/getbase/base.svg?branch=master&label=dependencies
+[travis]:       https://travis-ci.org/getbase/base
+[david]:        https://david-dm.org/getbase/base?type=dev
 
 ## Introduction
 Base itself is a very thin layer which includes normalize.css and a few mixins to get you started.
@@ -24,10 +24,10 @@ Before diving in, please make sure you have the following prerequisites:
 * A calm and open mind :)
 
 ## Installation
-If you are creating a new project from scratch, it is highly recommended you [use the base starter template](https://github.com/matthewhartman/base-starter).
+If you are creating a new project from scratch, it is highly recommended you [use the base starter template](https://github.com/getbase/starter-template).
 
 ```bash
-git clone https://github.com/matthewhartman/base-starter.git \
+git clone https://github.com/getbase/starter-template.git \
 new-website && cd new-website && rm -rf .git
 npm install && npm start
 ```
@@ -48,7 +48,7 @@ Once you have Base installed, you can then build on top of it by including your 
   OR
 
   ```css
-    @import ("https://cdn.rawgit.com/matthewhartman/getbase/master/css/index.css")
+    @import ("https://cdn.rawgit.com/getbase/base/master/css/index.css")
   ```
 
 ### Import via SCSS file:
