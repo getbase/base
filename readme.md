@@ -98,7 +98,7 @@ Base includes the latest version of Normalize.css by default and includes a few 
 * * *
 
 ## Demo
-...
+View [page example]() with just the Base applied.
 
 * * *
 
