@@ -1,4 +1,4 @@
-# [Base](http://getbase.org)
+d# [Base](http://getbase.org)
 
 ### A Rock Solid, Responsive CSS Framework built to work on all devices big and small.
 
@@ -27,7 +27,7 @@ Lightweight and minimal code. Spend less time overriding styles and focus more t
 * * *
 
 ## Introduction
-Base itself is a very thin layer which includes normalize.css and a few mixins to get you started.
+Base itself is a very thin layer which includes Normalize.css and a few mixins to get you started.
 
 You can then include what you need on top of Base such as typography, grids, individual components, etc to make it yours.
 
@@ -77,7 +77,23 @@ Once you have Base installed, you can build on top of it by including your own c
 * * *
 
 ## Documentation
-...
+Base includes the latest version of Normalize.css by default and includes a few Mixins to get you started.
+
+
+### SCSS
+
+| Mixin | Purpose | Example | Outcome |
+| ----- | ------- | ------- | ------- |
+| `@include breakpoint(x)` | Apply a breakpoint for a particular device. Accepts values m, l and xl (m: medium, l: large, xl: extra large)  | `.box { @include breakpoint(m) { ... } }` | Applies styles to .box for medium devices and up |
+| `@include background-alpha(hex, percentage)` | Applies a background color with opacity | `@include background-alpha(#000, 50%)` | Applies a background color of black with opacity set to 50% |
+| `@include animation(time)` | Applies animation speed | `@include animation(2s)` | Animation will run for 2 seconds |
+
+### LESS
+
+| Mixin | Purpose | Example | Outcome |
+| ----- | ------- | ------- | ------- |
+| `.background-alpha(hex, percentage)` | Applies a background color with opacity | `.background-alpha(#000, 50%)` | Applies a background color of black with opacity set to 50% |
+| `.animation(time)` | Applies animation speed | `.animation(2s)` | Animation will run for 2 seconds |
 
 * * *
 
@@ -113,7 +129,7 @@ Once you have Base installed, you can build on top of it by including your own c
 * * *
 
 ## Credits
-* Thanks to [Nicolas Gallagher (@necolas)](https://github.com/necolas/) for normalize.css
+* Thanks to [Nicolas Gallagher (@necolas)](https://github.com/necolas/) for Normalize.css
 
 * * *
 
