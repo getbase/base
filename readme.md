@@ -1,13 +1,13 @@
 <div>
-  <a href="https://getbase.org/">
-    <img src="assets/base.svg" alt="Base" width=72 height=72>
-  </a>
-  <h1 style="font-size: 32px">Base</h1>
-  <p>
+  <h1 style="font-size: 32px;">
+    <img src="assets/base.svg" alt="Base" height=60>
+    <span style="position: relative; display: inline-block; top: 2px; padding-left: 8px;">Base</span>
+  </h1>
+  <p style="font-size: 20px;">
     A Rock Solid, Responsive CSS Framework built to work on all
     devices big, small and in-between.
   </p>
-  <p>
+  <p style="font-size: 16px;">
     Spend less time overriding styles and focus more time on creating beautiful website applications.
   </p>
 </div>
@@ -32,10 +32,14 @@
 - [Credits](#credits)
 - [Authors](#authors)
 
+* * *
+
 ## Introduction
 Base itself is a very thin layer which includes normalize.css and a few mixins to get you started.
 
 You can then include what you need on top of Base such as typography, grids, individual components, etc to make it yours.
+
+* * *
 
 ## Installation
 If you are creating a new project from scratch, it is highly recommended you [use the base starter template](https://github.com/getbase/starter).
