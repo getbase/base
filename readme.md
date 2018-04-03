@@ -29,6 +29,7 @@ Lightweight and minimal code. Spend less time overriding styles and focus more t
 * * *
 
 ## Introduction
+
 Base itself is a very thin layer which includes Normalize.css and a few mixins to get you started.
 
 You can then include what you need on top of Base such as typography, grids, individual components, etc and make it yours.
@@ -36,6 +37,7 @@ You can then include what you need on top of Base such as typography, grids, ind
 * * *
 
 ## Installation
+
 If you are creating a new project from scratch, it is highly recommended that you [use base starter](https://github.com/getbase/starter).
 
 ```bash
@@ -53,6 +55,7 @@ npm install --save @getbase/base
 Once you have Base installed, you can build on top of it by including your own custom styles or add the [ready made modules](#modules-and-components)
 
 #### CSS Import:
+
   ```css
   import url("https://cdn.rawgit.com/getbase/base/master/css/index.css");
   ```
@@ -79,12 +82,14 @@ Once you have Base installed, you can build on top of it by including your own c
 * * *
 
 ## Documentation
+
 Base includes the latest version of Normalize.css by default and includes a few Mixins to get you started.
 
 
 ### SCSS
 
 #### Variables
+
 | Variable | Default | Usage |
 | -------- | ------- | ----- |
 | `$breakpoint-m` | `740px` | Breakpoint value for medium devices (tablet) |
@@ -102,6 +107,7 @@ Base includes the latest version of Normalize.css by default and includes a few 
 ### LESS
 
 #### Variables
+
 | Variable | Default | Usage |
 | -------- | ------- | ----- |
 | `@breakpoint-m` | `740px` | Breakpoint value for medium devices (tablet) |
@@ -142,26 +148,33 @@ Base includes the latest version of Normalize.css by default and includes a few 
 * * *
 
 ## Templates
+
 There are a [collection of premium templates built with Base](https://gumroad.com/getbase) which are available to download on Gumroad.
 
+* * *
 
 ## Support
+
 * IE10+ and all other modern browsers.
 * Please, specify browsers you need to support in `package.json` according to [browserslist docs](https://github.com/ai/browserslist#queries).
 
 * * *
 
 ## Credits
+
 * Thanks to [Nicolas Gallagher (@necolas)](https://github.com/necolas/) for Normalize.css
 
 * * *
 
 ## Authors
+
 #### Matthew Hartman
+
 * [https://twitter.com/matthewhartmans](https://twitter.com/matthewhartmans)
 * [https://github.com/matthewhartman](https://github.com/matthewhartman)
 
 * * *
 
 ## License
+
 Code released under the [MIT Open Source](https://opensource.org/licenses/MIT) license.
