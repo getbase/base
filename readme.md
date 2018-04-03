@@ -17,9 +17,6 @@ Lightweight and minimal code. Spend less time overriding styles and focus more t
 
 * [Introduction](#introduction)
 * [Installation](#installation)
-  * [CSS Import](#css-import)
-  * [SCSS Import](#scss-import)
-  * [LESS Import](#less-import)
 * [Documentation](#documentation)
 * [Demo](#demo)
 * [Modules and Components](#modules-and-components)
