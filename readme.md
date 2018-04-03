@@ -18,7 +18,6 @@ Lightweight and minimal code. Spend less time overriding styles and focus more t
 * [Introduction](#introduction)
 * [Installation](#installation)
 * [Documentation](#documentation)
-* [Demo](#demo)
 * [Modules and Components](#modules-and-components)
 * [Support](#support)
 * [Authors](#authors)
@@ -95,10 +94,9 @@ Base includes the latest version of Normalize.css by default and includes a few 
 | `.background-alpha(hex, percentage)` | Applies a background color with opacity | `.background-alpha(#000, 50%)` | Applies a background color of black with opacity set to 50% |
 | `.animation(time)` | Applies animation speed | `.animation(2s)` | Animation will run for 2 seconds |
 
-* * *
+### Demo
 
-## Demo
-View [page example]() with just the Base applied.
+View [page example](https://cdn.rawgit.com/getbase/base/v4-dev/index.html) with just the Base applied.
 
 * * *
 
