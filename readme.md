@@ -90,8 +90,8 @@ Base includes the latest version of Normalize.css by default and includes a few 
 
 #### Variables
 
-| Variable | Default | Usage |
-| -------- | ------- | ----- |
+| Variable | Default | Purpose |
+| -------- | ------- | ------- |
 | `$breakpoint-m` | `740px` | Breakpoint value for medium devices (tablet) |
 | `$breakpoint-l` | `960px` | Breakpoint value for large devices (desktop) |
 | `$breakpoint-x` | `1120px` | Breakpoint value for extra large devices (HD) |
@@ -108,8 +108,8 @@ Base includes the latest version of Normalize.css by default and includes a few 
 
 #### Variables
 
-| Variable | Default | Usage |
-| -------- | ------- | ----- |
+| Variable | Default | Purpose |
+| -------- | ------- | ------- |
 | `@breakpoint-m` | `740px` | Breakpoint value for medium devices (tablet) |
 | `@breakpoint-l` | `960px` | Breakpoint value for large devices (desktop) |
 | `@breakpoint-x` | `1120px` | Breakpoint value for extra large devices (HD) |
