@@ -15,17 +15,17 @@ Lightweight and minimal code. Spend less time overriding styles and focus more t
 
 ## Table of contents
 
-- [Introduction](#introduction)
-- [Installation](#installation)
-  - [CSS Import](#css-import)
-  - [SCSS Import](#scss-import)
-  - [LESS Import](#less-import)
-- [Documentation](#documentation)
-- [Demo](#demo)
-- [Modules and Components](#modules-and-components)
-- [Support](#support)
-- [Credits](#credits)
-- [Authors](#authors)
+* [Introduction](#introduction)
+* [Installation](#installation)
+  * [CSS Import](#css-import)
+  * [SCSS Import](#scss-import)
+  * [LESS Import](#less-import)
+* [Documentation](#documentation)
+* [Demo](#demo)
+* [Modules and Components](#modules-and-components)
+* [Support](#support)
+* [Credits](#credits)
+* [Authors](#authors)
 
 ## Introduction
 Base itself is a very thin layer which includes normalize.css and a few mixins to get you started.
@@ -111,7 +111,7 @@ Once you have Base installed, you can then build on top of it by including your 
 * * *
 
 ## Credits
-- Thanks to [Nicolas Gallagher (@necolas)](https://github.com/necolas/) for normalize.css
+* Thanks to [Nicolas Gallagher (@necolas)](https://github.com/necolas/) for normalize.css
 
 * * *
 ## License
@@ -120,4 +120,6 @@ Once you have Base installed, you can then build on top of it by including your 
 * * *
 
 ## Authors
-- [Matthew Hartman](https://twitter.com/matthewhartmans)
+#### Matthew Hartman
+* [https://twitter.com/matthewhartmans](https://twitter.com/matthewhartmans)
+* [https://github.com/matthewhartman](https://github.com/matthewhartman)
