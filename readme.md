@@ -1,6 +1,6 @@
 # [Base](http://getbase.org)
 
-### A Rock Solid, Responsive CSS Framework built to work on all devices big and small.
+### A Rock Solid, Responsive CSS Framework built to work on all devices big, small and in-between.
 
 Lightweight and minimal code. Spend less time overriding styles and focus more time on creating beautiful website applications.
 
@@ -81,6 +81,15 @@ Base includes the latest version of Normalize.css by default and includes a few 
 
 ### SCSS
 
+#### Variables
+| Variable | Default | Usage |
+| -------- | ------- | ----- |
+| `$breakpoint-m` | `740px` | Breakpoint value for medium devices (tablet) |
+| `$breakpoint-l` | `960px` | Breakpoint value for large devices (desktop) |
+| `$breakpoint-x` | `1120px` | Breakpoint value for extra large devices (HD) |
+
+#### Mixins
+
 | Mixin | Purpose | Example | Outcome |
 | ----- | ------- | ------- | ------- |
 | `@include breakpoint(x)` | Apply a breakpoint for a particular device. Accepts values m, l and xl (m: medium, l: large, xl: extra large)  | `.box { @include breakpoint(m) { ... } }` | Applies styles to .box for medium devices and up |
@@ -88,6 +97,15 @@ Base includes the latest version of Normalize.css by default and includes a few 
 | `@include animation(time)` | Applies animation speed | `@include animation(2s)` | Animation will run for 2 seconds |
 
 ### LESS
+
+#### Variables
+| Variable | Default | Usage |
+| -------- | ------- | ----- |
+| `@breakpoint-m` | `740px` | Breakpoint value for medium devices (tablet) |
+| `@breakpoint-l` | `960px` | Breakpoint value for large devices (desktop) |
+| `@breakpoint-x` | `1120px` | Breakpoint value for extra large devices (HD) |
+
+#### Mixins
 
 | Mixin | Purpose | Example | Outcome |
 | ----- | ------- | ------- | ------- |
@@ -115,8 +133,6 @@ Base includes the latest version of Normalize.css by default and includes a few 
 * [Grid Helpers (Legacy)](#grid-helpers-legacy)
 * [Grid Non Responsive (Legacy)](#grid-non-responsive-legacy)
 * [Buttons](#buttons)
-
-...
 
 * * *
 
