@@ -20,7 +20,7 @@ Lightweight and minimal code. Spend less time overriding styles and focus more t
 * [Documentation](#documentation)
 * [Demo](#demo)
 * [Modules and Components](#modules-and-components)
-* [Themes](#themes)
+* [Templates](#templates)
 * [Support](#support)
 * [Authors](#authors)
 * [Credits](#credits)
@@ -125,24 +125,24 @@ Base includes the latest version of Normalize.css by default and includes a few 
 
 ## Modules and Components
 
-* [Typography](#typography)
-* [Typography Helpers](#typography-helpers)
-* [Tables](#tables)
-* [Animations](#animations)
-* [Layout Helpers](#layout-helpers)
-* [Containers](#containers)
-* [Grid](#grid)
-* [Grid Helpers](#grid-helpers)
-* [Grid Non Responsive](#grid-non-responsive)
-* [Grid (Legacy)](#grid-legacy)
-* [Grid Helpers (Legacy)](#grid-helpers-legacy)
-* [Grid Non Responsive (Legacy)](#grid-non-responsive-legacy)
-* [Buttons](#buttons)
+* [Typography](#)
+* [Typography Helpers](#)
+* [Tables](#)
+* [Animations](#)
+* [Layout Helpers](#)
+* [Containers](#)
+* [Grid](#)
+* [Grid Helpers](#)
+* [Grid Non Responsive](#)
+* [Grid (Legacy)](#)
+* [Grid Helpers (Legacy)](#)
+* [Grid Non Responsive (Legacy)](#)
+* [Buttons](#)
 
 * * *
 
-## Themes
-There are a [collection of premium themes built with Base](https://gumroad.com/getbase) which are available on Gumroad.
+## Templates
+There are a [collection of premium templates built with Base](https://gumroad.com/getbase) which are available to download on Gumroad.
 
 
 ## Support
