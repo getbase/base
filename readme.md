@@ -23,9 +23,22 @@ Lightweight and minimal code. Spend less time overriding styles and focus more t
 * [Documentation](#documentation)
 * [Demo](#demo)
 * [Modules and Components](#modules-and-components)
+  * [Typography](#typography)
+  * [Typography Helpers](#typography-helpers)
+  * [Tables](#tables)
+  * [Animations](#animations)
+  * [Layout Helpers](#layout-helpers
+  * [Containers](#containers)
+  * [Grid](#grid)
+  * [Grid Helpers](#grid-helpers)
+  * [Grid Non Responsive](#grid-non-responsive)
+  * [Grid (Legacy)](#grid-legacy)
+  * [Grid Helpers (Legacy)](#grid-helpers-legacy)
+  * [Grid Non Responsive (Legacy)](#grid-non-responsive-legacy)
+  * [Buttons](#buttons)
 * [Support](#support)
-* [Credits](#credits)
 * [Authors](#authors)
+* [Credits](#credits)
 
 ## Introduction
 Base itself is a very thin layer which includes normalize.css and a few mixins to get you started.
@@ -100,6 +113,44 @@ Once you have Base installed, you can then build on top of it by including your 
 * * *
 
 ## Modules and Components
+
+### Typography
+...
+
+### Typography Helpers
+...
+
+### Tables
+...
+
+### Animations
+...
+
+### Layout Helpers
+...
+
+### Containers
+...
+
+### Grid
+...
+
+### Grid Helpers)
+...
+
+### Grid Non Responsive
+...
+
+### Grid (Legacy)
+...
+
+### Grid Helpers (Legacy)
+...
+
+### Grid Non Responsive (Legacy)
+...
+
+### Buttons
 ...
 
 * * *
