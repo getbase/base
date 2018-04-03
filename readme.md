@@ -2,7 +2,7 @@
 
 ### A Rock Solid, Responsive CSS Framework built to work on all devices big and small.
 
-#### Lightweight and minimal code. Spend less time overriding styles and focus more time on creating beautiful website applications.
+Lightweight and minimal code. Spend less time overriding styles and focus more time on creating beautiful website applications.
 
 [![Travis Build Status][travis-img]][travis] [![David Dependencies Status][david-img]][david]
 
