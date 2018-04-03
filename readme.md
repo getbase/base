@@ -28,12 +28,12 @@ Lightweight and minimal code. Spend less time overriding styles and focus more t
 ## Introduction
 Base itself is a very thin layer which includes Normalize.css and a few mixins to get you started.
 
-You can then include what you need on top of Base such as typography, grids, individual components, etc to make it yours.
+You can then include what you need on top of Base such as typography, grids, individual components, etc and make it yours.
 
 * * *
 
 ## Installation
-If you are creating a new project from scratch, it is highly recommended you [use the base starter template](https://github.com/getbase/starter).
+If you are creating a new project from scratch, it is highly recommended that you [use base starter](https://github.com/getbase/starter).
 
 ```bash
 git clone https://github.com/getbase/starter.git \
@@ -41,7 +41,7 @@ new-website && cd new-website && rm -rf .git
 npm install && npm start
 ```
 
-For existing projects, simply install base using [NPM](https://www.npmjs.com/):
+For existing projects, simply install base using NPM.
 
 ```bash
 npm install --save @getbase/base
@@ -96,7 +96,7 @@ Base includes the latest version of Normalize.css by default and includes a few 
 
 ### Demo
 
-View [page example](https://cdn.rawgit.com/getbase/base/v4-dev/index.html) with just the Base applied.
+[View page example](https://cdn.rawgit.com/getbase/base/v4-dev/index.html) with just Base stylesheet applied.
 
 * * *
 
