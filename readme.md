@@ -20,9 +20,11 @@ Lightweight and minimal code. Spend less time overriding styles and focus more t
 * [Documentation](#documentation)
 * [Demo](#demo)
 * [Modules and Components](#modules-and-components)
+* [Themes](#themes)
 * [Support](#support)
 * [Authors](#authors)
 * [Credits](#credits)
+* [Licence](#licence)
 
 * * *
 
@@ -138,6 +140,10 @@ Base includes the latest version of Normalize.css by default and includes a few 
 * [Buttons](#buttons)
 
 * * *
+
+## Themes
+There are a [collection of premium themes built with Base](https://gumroad.com/getbase) which are available on Gumroad.
+
 
 ## Support
 * IE10+ and all other modern browsers.
