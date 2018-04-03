@@ -27,7 +27,7 @@ Lightweight and minimal code. Spend less time overriding styles and focus more t
   * [Typography Helpers](#typography-helpers)
   * [Tables](#tables)
   * [Animations](#animations)
-  * [Layout Helpers](#layout-helpers
+  * [Layout Helpers](#layout-helpers)
   * [Containers](#containers)
   * [Grid](#grid)
   * [Grid Helpers](#grid-helpers)
