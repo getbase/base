@@ -40,10 +40,14 @@ Lightweight and minimal code. Spend less time overriding styles and focus more t
 * [Authors](#authors)
 * [Credits](#credits)
 
+* * *
+
 ## Introduction
 Base itself is a very thin layer which includes normalize.css and a few mixins to get you started.
 
 You can then include what you need on top of Base such as typography, grids, individual components, etc to make it yours.
+
+* * *
 
 ## Installation
 If you are creating a new project from scratch, it is highly recommended you [use the base starter template](https://github.com/getbase/starter).
