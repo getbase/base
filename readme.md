@@ -1,8 +1,8 @@
 <div>
-  <h1 style="font-size: 32px;">
+  <span style="display: block; font-size: 32px;">
     <img src="assets/base.svg" alt="Base" height=60>
     <span style="position: relative; display: inline-block; top: 2px; padding-left: 8px;">Base</span>
-  </h1>
+  </span>
   <p style="font-size: 20px;">
     A Rock Solid, Responsive CSS Framework built to work on all
     devices big, small and in-between.
