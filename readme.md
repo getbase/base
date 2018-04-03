@@ -17,6 +17,9 @@ Lightweight and minimal code. Spend less time overriding styles and focus more t
 
 - [Introduction](#introduction)
 - [Installation](#installation)
+  - [CSS Import](#css-import)
+  - [SCSS Import](#scss-import)
+  - [LESS Import](#less-import)
 - [Documentation](#documentation)
 - [Demo](#demo)
 - [Modules and Components](#modules-and-components)
@@ -46,7 +49,7 @@ npm install --save @getbase/base
 
 Once you have Base installed, you can then build on top of it by including your own styles or add the ready made packages provided by Base:
 
-### Import via CSS file:
+### CSS Import:
   ```html
     <link rel="stylesheet" href="https://cdn.rawgit.com/getbase/base/master/css/index.css">
   ```
@@ -57,7 +60,7 @@ Once you have Base installed, you can then build on top of it by including your 
     @import ("https://cdn.rawgit.com/getbase/base/master/css/index.css")
   ```
 
-### Import via SCSS file:
+### SCSS Import:
 
   ```scss
   /* Import Base */
@@ -71,7 +74,7 @@ Once you have Base installed, you can then build on top of it by including your 
   ```
 
 
-### Import via LESS file:
+### LESS Import:
 
   ```css
   /* Import Base */
