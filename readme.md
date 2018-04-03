@@ -24,7 +24,7 @@ Lightweight and minimal code. Spend less time overriding styles and focus more t
 * [Support](#support)
 * [Authors](#authors)
 * [Credits](#credits)
-* [Licence](#licence)
+* [License](#license)
 
 * * *
 
@@ -125,19 +125,19 @@ Base includes the latest version of Normalize.css by default and includes a few 
 
 ## Modules and Components
 
-* [Typography](#)
-* [Typography Helpers](#)
-* [Tables](#)
-* [Animations](#)
-* [Layout Helpers](#)
-* [Containers](#)
-* [Grid](#)
-* [Grid Helpers](#)
-* [Grid Non Responsive](#)
-* [Grid (Legacy)](#)
-* [Grid Helpers (Legacy)](#)
-* [Grid Non Responsive (Legacy)](#)
-* [Buttons](#)
+* [Typography](https://github.com/getbase/typography)
+* [Typography Helpers](https://github.com/getbase/typography-helpers)
+* [Tables](https://github.com/getbase/tables)
+* [Animations](https://github.com/getbase/animations)
+* [Layout Helpers](https://github.com/getbase/layout-helpers)
+* [Containers](https://github.com/getbase/containers)
+* [Grid](https://github.com/getbase/grid)
+* [Grid Helpers](https://github.com/getbase/grid-helpers)
+* [Grid Non Responsive](https://github.com/getbase/grid-non-responsive)
+* [Grid (Legacy)](https://github.com/getbase/grid-legacy)
+* [Grid Helpers (Legacy)](https://github.com/getbase/grid-helpers-legacy)
+* [Grid Non Responsive (Legacy)](https://github.com/getbase/grid-non-responsive-legacy)
+* [Buttons](https://github.com/getbase/buttons)
 
 * * *
 
