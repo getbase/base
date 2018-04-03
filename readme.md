@@ -66,12 +66,12 @@ npm install --save @getbase/base
 
 Once you have Base installed, you can then build on top of it by including your own styles or add the ready made packages provided by Base:
 
-### CSS Import:
+#### CSS Import:
   ```css
   import url("https://cdn.rawgit.com/getbase/base/master/css/index.css");
   ```
 
-### SCSS Import:
+#### SCSS Import:
 
   ```scss
   /* Import Base */
@@ -81,7 +81,7 @@ Once you have Base installed, you can then build on top of it by including your 
   ```
 
 
-### LESS Import:
+#### LESS Import:
 
   ```css
   /* Import Base */
