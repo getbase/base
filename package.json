@@ -1,7 +1,7 @@
 {
   "name": "@getbase/base",
-  "version": "4.0.3-dev",
-  "description": "A Rock Solid, Responsive CSS Framework built to work on all devices big and small.",
+  "version": "4.0.0-dev",
+  "description": "A Rock Solid, Responsive CSS Framework built to work on all devices big, small and in-between.",
   "homepage": "http://getbase.org/",
   "main": "gulpfile.js",
   "author": "Matthew Hartman",

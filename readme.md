@@ -90,17 +90,17 @@ Base includes the latest version of Normalize.css by default and includes a few 
 
 #### Variables
 
-| Variable | Default | Purpose |
+| Variable | Purpose | Default | 
 | -------- | ------- | ------- |
-| `$breakpoint-m` | `740px` | Breakpoint value for medium devices (tablet) |
-| `$breakpoint-l` | `960px` | Breakpoint value for large devices (desktop) |
-| `$breakpoint-x` | `1120px` | Breakpoint value for extra large devices (HD) |
+| `$breakpoint-m` | Breakpoint value for medium devices (tablet) | `740px` |
+| `$breakpoint-l` | Breakpoint value for large devices (desktop) | `960px` |
+| `$breakpoint-x` | Breakpoint value for extra large devices (HD) | `1120px` |
 
 #### Mixins
 
 | Mixin | Purpose | Example | Outcome |
 | ----- | ------- | ------- | ------- |
-| `@include breakpoint(x)` | Apply a breakpoint for a particular device. Accepts values m, l and xl (m: medium, l: large, xl: extra large)  | `.box { @include breakpoint(m) { ... } }` | Applies styles to .box for medium devices and up |
+| `@include breakpoint(x)` | Apply a breakpoint for a particular device. Accepts values `m`, `l` and `xl` (m: medium, l: large, xl: extra large)  | `.box { @include breakpoint(m) { ... } }` | Applies styles to `.box` for medium devices and up |
 | `@include background-alpha(hex, percentage)` | Applies a background color with opacity | `@include background-alpha(#000, 50%)` | Applies a background color of black with opacity set to 50% |
 | `@include animation(time)` | Applies animation speed | `@include animation(2s)` | Animation will run for 2 seconds |
 
@@ -108,11 +108,11 @@ Base includes the latest version of Normalize.css by default and includes a few 
 
 #### Variables
 
-| Variable | Default | Purpose |
+| Variable | Purpose | Default |
 | -------- | ------- | ------- |
-| `@breakpoint-m` | `740px` | Breakpoint value for medium devices (tablet) |
-| `@breakpoint-l` | `960px` | Breakpoint value for large devices (desktop) |
-| `@breakpoint-x` | `1120px` | Breakpoint value for extra large devices (HD) |
+| `@breakpoint-m` | Breakpoint value for medium devices (tablet) | `740px` |
+| `@breakpoint-l` | Breakpoint value for large devices (desktop) | `960px` |
+| `@breakpoint-x` | Breakpoint value for extra large devices (HD) | `1120px` |
 
 #### Mixins
 
@@ -140,9 +140,6 @@ Base includes the latest version of Normalize.css by default and includes a few 
 * [Grid](https://github.com/getbase/grid)
 * [Grid Helpers](https://github.com/getbase/grid-helpers)
 * [Grid Non Responsive](https://github.com/getbase/grid-non-responsive)
-* [Grid (Legacy)](https://github.com/getbase/grid-legacy)
-* [Grid Helpers (Legacy)](https://github.com/getbase/grid-helpers-legacy)
-* [Grid Non Responsive (Legacy)](https://github.com/getbase/grid-non-responsive-legacy)
 * [Buttons](https://github.com/getbase/buttons)
 
 * * *
