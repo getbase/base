@@ -1,15 +1,8 @@
-<div>
-  <a href="https://getbase.org/">
-    <h1 style="font-size: 32px">Base</h1>
-  </a>
-  <p>
-    A Rock Solid, Responsive CSS Framework built to work on all
-    devices big, small and in-between.
-  </p>
-  <p>
-    Spend less time overriding styles and focus more time on creating beautiful website applications.
-  </p>
-</div>
+# [Base](http://getbase.org)
+
+### A Rock Solid, Responsive CSS Framework built to work on all devices big and small.
+
+#### Lightweight and minimal code. Spend less time overriding styles and focus more time on creating beautiful website applications.
 
 [![Travis Build Status][travis-img]][travis] [![David Dependencies Status][david-img]][david]
 
