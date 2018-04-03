@@ -1,7 +1,16 @@
-# [Base](http://getbase.org)
-
-## A Rock Solid, Responsive CSS Framework built to work on all devices big, small and in-between.
-Spend less time overriding styles and focus more time on creating beautiful website applications.
+<div>
+  <a href="https://getbase.org/">
+    <img src="assets/base.svg" alt="Base" width=72 height=72>
+  </a>
+  <h1 style="font-size: 32px">Base</h1>
+  <p>
+    A Rock Solid, Responsive CSS Framework built to work on all
+    devices big, small and in-between.
+  </p>
+  <p>
+    Spend less time overriding styles and focus more time on creating beautiful website applications.
+  </p>
+</div>
 
 [![Travis Build Status][travis-img]][travis] [![David Dependencies Status][david-img]][david]
 
@@ -10,18 +19,23 @@ Spend less time overriding styles and focus more time on creating beautiful webs
 [travis]:       https://travis-ci.org/getbase/base
 [david]:        https://david-dm.org/getbase/base?type=dev
 
+* * *
+
+## Table of contents
+
+- [Introduction](#introduction)
+- [Installation](#installation)
+- [Documentation](#documentation)
+- [Demo](#demo)
+- [Modules and Components](#modules-and-components)
+- [Support](#support)
+- [Credits](#credits)
+- [Authors](#authors)
+
 ## Introduction
 Base itself is a very thin layer which includes normalize.css and a few mixins to get you started.
 
 You can then include what you need on top of Base such as typography, grids, individual components, etc to make it yours.
-
-## Getting Started
-Before diving in, please make sure you have the following prerequisites:
-
-* A good understanding of HTML &amp; CSS
-* An awesome and fast code editor such as [Sublime Text Editor](http://www.sublimetext.com/)
-* Latest version of [Node and NPM](https://nodejs.org/en/)
-* A calm and open mind :)
 
 ## Installation
 If you are creating a new project from scratch, it is highly recommended you [use the base starter template](https://github.com/getbase/starter).
@@ -81,19 +95,34 @@ Once you have Base installed, you can then build on top of it by including your 
 * * *
 
 ## Documentation
-You can head over to the [documentation](http://getbase.org/docs/) to learn all about the available packages and code examples.
+...
+
+* * *
+
+## Demo
+...
+
+* * *
+
+## Modules and Components
+...
 
 * * *
 
 ## Support
-* IE8+ and all other modern browsers.
+* IE10+ and all other modern browsers.
 * Please, specify browsers you need to support in `package.json` according to [browserslist docs](https://github.com/ai/browserslist#queries).
 
 * * *
 
-## Thanks / Credits
-- Thanks to Nicolas Gallagher (@necolas) for normalize.css
+## Credits
+- Thanks to [Nicolas Gallagher (@necolas)](https://github.com/necolas/) for normalize.css
 
 * * *
 ## License
 [MIT Open Source](https://opensource.org/licenses/MIT)
+
+* * *
+
+## Authors
+- [Matthew Hartman](https://twitter.com/matthewhartmans)
