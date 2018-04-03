@@ -42,13 +42,13 @@ new-website && cd new-website && rm -rf .git
 npm install && npm start
 ```
 
-Alternatively, if you have an existing project, simply install base using [NPM](https://www.npmjs.com/):
+For existing projects, simply install base using [NPM](https://www.npmjs.com/):
 
 ```bash
 npm install --save @getbase/base
 ```
 
-Once you have Base installed, you can then build on top of it by including your own styles or add the ready made packages provided by Base:
+Once you have Base installed, you can build on top of it by including your own custom styles or add the [ready made modules](#modules-and-components)
 
 #### CSS Import:
   ```css
