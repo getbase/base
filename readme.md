@@ -114,12 +114,13 @@ Once you have Base installed, you can then build on top of it by including your 
 * Thanks to [Nicolas Gallagher (@necolas)](https://github.com/necolas/) for normalize.css
 
 * * *
-## License
-[MIT Open Source](https://opensource.org/licenses/MIT)
-
-* * *
 
 ## Authors
 #### Matthew Hartman
 * [https://twitter.com/matthewhartmans](https://twitter.com/matthewhartmans)
 * [https://github.com/matthewhartman](https://github.com/matthewhartman)
+
+* * *
+
+## License
+Code released under the [MIT Open Source](https://opensource.org/licenses/MIT) license.
