@@ -1,4 +1,4 @@
-d# [Base](http://getbase.org)
+# [Base](http://getbase.org)
 
 ### A Rock Solid, Responsive CSS Framework built to work on all devices big and small.
 
