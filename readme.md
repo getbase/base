@@ -15,7 +15,7 @@ Lightweight and minimal code. Spend less time overriding styles and focus more t
 
 ## Table of contents
 
-* [Introduction](#introduction)
+* [Overview](#overview)
 * [Installation](#installation)
 * [Documentation](#documentation)
 * [Demo](#demo)
@@ -28,7 +28,7 @@ Lightweight and minimal code. Spend less time overriding styles and focus more t
 
 * * *
 
-## Introduction
+## Overview
 
 Base itself is a very thin layer which includes Normalize.css and a few mixins to get you started.
 
