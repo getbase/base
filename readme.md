@@ -65,7 +65,7 @@ Once you have Base installed, you can build on top of it by including your own c
   ```scss
   /* Import Base */
   @import "node_modules/@getbase/base/scss/index";
-  /* Your Custom Website/App Styles */
+  /* Your Other Styles */
   @import "main"
   ```
 
@@ -75,7 +75,7 @@ Once you have Base installed, you can build on top of it by including your own c
   ```css
   /* Import Base */
   @import "node_modules/@getbase/base/scss/index";
-  /* Your Custom Website/App Styles */
+  /* Your Other Styles */
   @import "main"
   ```
 
