@@ -69,7 +69,6 @@ Once you have Base installed, you can build on top of it by including your own c
   @import "main"
   ```
 
-
 #### LESS Import:
 
   ```css
@@ -85,7 +84,6 @@ Once you have Base installed, you can build on top of it by including your own c
 
 Base includes the latest version of Normalize.css by default and includes a few Mixins to get you started.
 
-
 ### SCSS
 
 #### Variables
@@ -100,7 +98,7 @@ Base includes the latest version of Normalize.css by default and includes a few 
 
 | Mixin | Purpose | Example | Outcome |
 | ----- | ------- | ------- | ------- |
-| `@include breakpoint(x)` | Apply a breakpoint for a particular device. Accepts values `m`, `l` and `xl` (m: medium, l: large, xl: extra large)  | `.box { @include breakpoint(m) { ... } }` | Applies styles to `.box` for medium devices and up |
+| `@include breakpoint(x)` | Apply a breakpoint for a particular device. Accepts values `m`, `l` and `xl` (m: medium, l: large, xl: extra large) | `.box { @include breakpoint(m) { ... } }` | Applies styles to `.box` for medium devices and up |
 | `@include background-alpha(hex, percentage)` | Applies a background color with opacity | `@include background-alpha(#000, 50%)` | Applies a background color of black with opacity set to 50% |
 | `@include animation(time)` | Applies animation speed | `@include animation(2s)` | Animation will run for 2 seconds |
 
@@ -153,7 +151,7 @@ There are a [collection of premium templates built with Base](https://gumroad.co
 ## Support
 
 * IE10+ and all other modern browsers.
-* Please, specify browsers you need to support in `package.json` according to [browserslist docs](https://github.com/ai/browserslist#queries).
+* Please specify browsers you need to support in `package.json` according to [browserslist docs](https://github.com/ai/browserslist#queries).
 
 * * *
 
