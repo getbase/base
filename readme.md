@@ -1,89 +1,175 @@
 # [Base](http://getbase.org)
 
-## A Rock Solid, Responsive CSS Framework built to work on all devices big and small.
+### A Rock Solid, Responsive CSS Framework built to work on all devices big, small and in-between.
+
 Lightweight and minimal code. Spend less time overriding styles and focus more time on creating beautiful website applications.
 
 [![Travis Build Status][travis-img]][travis] [![David Dependencies Status][david-img]][david]
 
-[travis-img]:   https://img.shields.io/travis/matthewhartman/base.svg?branch=master
-[david-img]:    https://img.shields.io/david/dev/matthewhartman/base.svg?branch=master&label=dependencies
-[travis]:       https://travis-ci.org/matthewhartman/base
-[david]:        https://david-dm.org/matthewhartman/base?type=dev
+[travis-img]:   https://img.shields.io/travis/getbase/base.svg?branch=master
+[david-img]:    https://img.shields.io/david/dev/getbase/base.svg?branch=master&label=dependencies
+[travis]:       https://travis-ci.org/getbase/base
+[david]:        https://david-dm.org/getbase/base?type=dev
 
-## Getting Started
-Whether you're building a new web application from scratch or creating a mobile-first, responsive website, Base is very easy to learn and use.
+* * *
 
-Before diving into Base, please make sure you have the following tools and basic knowledge:
+## Table of contents
 
-* Good understanding of HTML and CSS
-* A good code editor such as [Sublime Text Editor](http://www.sublimetext.com/)
-* Latest installation of [Node and NPM](https://nodejs.org/en/)
-* A calm and open mind :)
+* [Overview](#overview)
+* [Installation](#installation)
+* [Documentation](#documentation)
+* [Demo](#demo)
+* [Modules and Components](#modules-and-components)
+* [Templates](#templates)
+* [Support](#support)
+* [Authors](#authors)
+* [Credits](#credits)
+* [License](#license)
+
+* * *
+
+## Overview
+
+Base itself is a very thin layer which includes Normalize.css and a few mixins to get you started.
+
+You can then include what you need on top of Base such as typography, grids, individual components, etc and make it yours.
+
+* * *
 
 ## Installation
-If you are creating a new project from scratch, it is highly recommended you [download the base starter template](https://github.com/matthewhartman/base-starter).
 
-Or you can clone the starter-template directly:
+If you are creating a new project from scratch, it is highly recommended that you [use base starter](https://github.com/getbase/starter).
 
 ```bash
-git clone https://github.com/matthewhartman/base-starter.git yourwebsite && cd yourwebsite && rm -rf .git
+git clone https://github.com/getbase/starter.git \
+new-website && cd new-website && rm -rf .git
 npm install && npm start
 ```
 
-Alternatively, if you have an existing project, simply install base using [NPM](https://www.npmjs.com/):
+For existing projects, simply install base using NPM.
 
 ```bash
-npm install --save getbase
+npm install --save @getbase/base
 ```
 
-Once you have Base installed, you can include it into your website with one of the following methods:
-### Reference the CSS file directly into your website:
+Once you have Base installed, you can build on top of it by including your own custom styles or add the [ready made modules](#modules-and-components)
 
-  ```html
-  <link rel="stylesheet" href="node_modules/getbase/css/styles.css">
-  ```
-
-### Import via SCSS file:
-
-  ```scss
-  @import "node_modules/getbase/scss/base";
-
-  // Your website styles
-
-  @import "node_modules/getbase/scss/base/_helpers";
-  ```
-
-
-### Import via LESS file:
+#### CSS Import:
 
   ```css
-  @import "node_modules/getbase/less/base";
-
-  /* Your website styles */
-
-  @import "node_modules/getbase/less/base/_helpers";
+  import url("https://cdn.rawgit.com/getbase/base/master/css/index.css");
   ```
 
-Want to know how what's under the hood? - head over to the [docs](http://getbase.org/docs/) to learn more.
+#### SCSS Import:
+
+  ```scss
+  /* Import Base */
+  @import "node_modules/@getbase/base/scss/index";
+  /* Your Other Styles */
+  @import "main"
+  ```
+
+#### LESS Import:
+
+  ```css
+  /* Import Base */
+  @import "node_modules/@getbase/base/scss/index";
+  /* Your Other Styles */
+  @import "main"
+  ```
+
+* * *
+
+## Documentation
+
+Base includes the latest version of Normalize.css by default and includes a few Mixins to get you started.
+
+### SCSS
+
+#### Variables
+
+| Variable | Purpose | Default | 
+| -------- | ------- | ------- |
+| `$breakpoint-m` | Breakpoint value for medium devices (tablet) | `740px` |
+| `$breakpoint-l` | Breakpoint value for large devices (desktop) | `960px` |
+| `$breakpoint-x` | Breakpoint value for extra large devices (HD) | `1120px` |
+
+#### Mixins
+
+| Mixin | Purpose | Example | Outcome |
+| ----- | ------- | ------- | ------- |
+| `@include breakpoint(x)` | Apply a breakpoint for a particular device. Accepts values `m`, `l` and `xl` (m: medium, l: large, xl: extra large) | `.box { @include breakpoint(m) { ... } }` | Applies styles to `.box` for medium devices and up |
+| `@include background-alpha(hex, percentage)` | Applies a background color with opacity | `@include background-alpha(#000, 50%)` | Applies a background color of black with opacity set to 50% |
+| `@include animation(time)` | Applies animation speed | `@include animation(2s)` | Animation will run for 2 seconds |
+
+### LESS
+
+#### Variables
+
+| Variable | Purpose | Default |
+| -------- | ------- | ------- |
+| `@breakpoint-m` | Breakpoint value for medium devices (tablet) | `740px` |
+| `@breakpoint-l` | Breakpoint value for large devices (desktop) | `960px` |
+| `@breakpoint-x` | Breakpoint value for extra large devices (HD) | `1120px` |
+
+#### Mixins
+
+| Mixin | Purpose | Example | Outcome |
+| ----- | ------- | ------- | ------- |
+| `.background-alpha(hex, percentage)` | Applies a background color with opacity | `.background-alpha(#000, 50%)` | Applies a background color of black with opacity set to 50% |
+| `.animation(time)` | Applies animation speed | `.animation(2s)` | Animation will run for 2 seconds |
+
+* * *
+
+## Demo
+
+[View page example](https://cdn.rawgit.com/getbase/base/master/index.html) with just Base stylesheet applied.
+
+* * *
+
+## Modules and Components
+
+* [Typography](https://github.com/getbase/typography)
+* [Typography Helpers](https://github.com/getbase/typography-helpers)
+* [Tables](https://github.com/getbase/tables)
+* [Animations](https://github.com/getbase/animations)
+* [Layout Helpers](https://github.com/getbase/layout-helpers)
+* [Containers](https://github.com/getbase/containers)
+* [Grid](https://github.com/getbase/grid)
+* [Grid Helpers](https://github.com/getbase/grid-helpers)
+* [Grid Non Responsive](https://github.com/getbase/grid-non-responsive)
+* [Buttons](https://github.com/getbase/buttons)
+
+* * *
+
+## Templates
+
+There are a [collection of premium templates built with Base](https://gumroad.com/getbase) which are available to download on Gumroad.
 
 * * *
 
 ## Support
-* IE8+ and all other modern browsers.
-* Please, specify browsers you need to support in `package.json` according to [browserslist docs](https://github.com/ai/browserslist#queries).
+
+* IE10+ and all other modern browsers.
+* Please specify browsers you need to support in `package.json` according to [browserslist docs](https://github.com/ai/browserslist#queries).
 
 * * *
 
-## Thanks
-- [base_css-rails](https://github.com/rkrdo/base_css-rails) - Gem that adds the Base framework by Ricardo Cruz
-- [HTML5 boilerplate](https://html5boilerplate.com/) for the base HTML template
-- Daniel Eden for the CSS3 animations - [animate.css](http://daneden.github.io/animate.css/)
-- Nicolas Gallagher [@necolas](https://twitter.com/necolas) for normalize.css and micro clearfix
-- Tristan McNab for adding bower support
+## Credits
+
+* Thanks to [Nicolas Gallagher (@necolas)](https://github.com/necolas/) for Normalize.css
+
+* * *
+
+## Authors
+
+#### Matthew Hartman
+
+* [https://twitter.com/matthewhartmans](https://twitter.com/matthewhartmans)
+* [https://github.com/matthewhartman](https://github.com/matthewhartman)
+
+* * *
 
 ## License
-[MIT Open Source](https://opensource.org/licenses/MIT)
 
-* * *
-
-Base was built by Matthew Hartman [(@matthewhartmans)](http://twitter.com/matthewhartmans) - a passionate web developer based in Melbourne, Australia.
+Code released under the [MIT Open Source](https://opensource.org/licenses/MIT) license.

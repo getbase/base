@@ -1,0 +1,31 @@
+// Mixins
+
+// Breakpoint sizes
+// Example usage @include breakpoint(x) { ... }; - where x is the device
+@mixin breakpoint($bp) {
+  @if $bp == xl {
+    @media only screen and (min-width: $breakpoint-xl) { @content ; }
+  }
+  @else if $bp == l {
+    @media only screen and (min-width: $breakpoint-l) { @content ; }
+  }
+  @else if $bp == m {
+    @media only screen and (min-width: $breakpoint-m) { @content ; }
+  }
+}
+
+// Background Color with Opacity
+// Example Usage: @include bg-rgba(#111, 50%);
+@mixin background-alpha($color, $alpha) {
+  $opacity: $alpha / 100%;
+  $rgba: rgba($color, $opacity);
+  background: $color;
+  background: rgba($color, $opacity);
+}
+
+// Animations
+// Example Usage @mixin animation(1s);
+@mixin animation($duration: 1s) {
+  animation-duration: $duration;
+  animation-fill-mode: both;
+}
