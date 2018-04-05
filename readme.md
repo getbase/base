@@ -123,7 +123,7 @@ Base includes the latest version of Normalize.css by default and includes a few 
 
 ## Demo
 
-[View page example](https://cdn.rawgit.com/getbase/base/v4-dev/index.html) with just Base stylesheet applied.
+[View page example](https://cdn.rawgit.com/getbase/base/master/index.html) with just Base stylesheet applied.
 
 * * *
 
