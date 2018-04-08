@@ -90,9 +90,9 @@ Base includes the latest version of Normalize.css by default and includes a few 
 
 | Variable | Purpose | Default | 
 | -------- | ------- | ------- |
-| `$breakpoint-m` | Breakpoint value for medium devices (tablet) | `740px` |
-| `$breakpoint-l` | Breakpoint value for large devices (desktop) | `960px` |
-| `$breakpoint-x` | Breakpoint value for extra large devices (HD) | `1120px` |
+| `$breakpoint-m` | Breakpoint value for medium devices (tablet) | `768px` |
+| `$breakpoint-l` | Breakpoint value for large devices (desktop) | `980px` |
+| `$breakpoint-x` | Breakpoint value for extra large devices (HD) | `1200px` |
 
 #### Mixins
 
@@ -108,9 +108,9 @@ Base includes the latest version of Normalize.css by default and includes a few 
 
 | Variable | Purpose | Default |
 | -------- | ------- | ------- |
-| `@breakpoint-m` | Breakpoint value for medium devices (tablet) | `740px` |
-| `@breakpoint-l` | Breakpoint value for large devices (desktop) | `960px` |
-| `@breakpoint-x` | Breakpoint value for extra large devices (HD) | `1120px` |
+| `@breakpoint-m` | Breakpoint value for medium devices (tablet) | `768px` |
+| `@breakpoint-l` | Breakpoint value for large devices (desktop) | `980px` |
+| `@breakpoint-x` | Breakpoint value for extra large devices (HD) | `1200px` |
 
 #### Mixins
 

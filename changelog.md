@@ -1,5 +1,10 @@
 # Base Change Log
 
+## [4.0.1] - 2018-04-08
+### Base V4.0.1
+- Minor correction on the breakpoint variables
+- Minor version bump for style.scss and package.json
+
 ## [4.0.0] - 2018-04-06
 ### Base V4.0.0
 - Removed all modules from Base and moved them into independent modules / packages (review readme for more information)
