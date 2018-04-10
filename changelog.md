@@ -1,9 +1,14 @@
 # Base Change Log
 
+## [4.0.2] - 2018-04-11
+### Base V4.0.2
+- Added screen reader helper (`.sr`) to core and updated docs
+- Minor version bump for index.scss/less and package.json
+
 ## [4.0.1] - 2018-04-08
 ### Base V4.0.1
 - Minor correction on the breakpoint variables
-- Minor version bump for style.scss and package.json
+- Minor version bump for index.scss/less and package.json
 
 ## [4.0.0] - 2018-04-06
 ### Base V4.0.0
@@ -11,4 +16,4 @@
 - Updated Base to use latest version of Normalize.css
 - Updated Mixins and Variables
 - Removed support for bower (R.I.P)
-- Major version bump for style.scss and package.json
+- Major version bump for index.scss/less and package.json

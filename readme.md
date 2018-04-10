@@ -84,6 +84,13 @@ Once you have Base installed, you can build on top of it by including your own c
 
 Base includes the latest version of Normalize.css by default and includes a few Mixins to get you started.
 
+#### Helpers (Applies to SCSS/LESS)
+
+| Helper Class | Purpose | Example | Outcome |
+| ------------ | ------- | ------- | ------- |
+| `.sr` | Apply a class of `.sr` for screen reader copy | `<div class="sr">Content only visible to screen readers but hidden from the user</div>` | Hide element visually, but have it still available for screenreaders |
+
+
 ### SCSS
 
 #### Variables
