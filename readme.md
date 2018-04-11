@@ -136,16 +136,33 @@ Base includes the latest version of Normalize.css by default and includes a few 
 
 ## Modules and Components
 
-* [Typography](https://github.com/getbase/typography)
-* [Typography Helpers](https://github.com/getbase/typography-helpers)
-* [Tables](https://github.com/getbase/tables)
-* [Animations](https://github.com/getbase/animations)
-* [Layout Helpers](https://github.com/getbase/layout-helpers)
-* [Containers](https://github.com/getbase/containers)
-* [Grid](https://github.com/getbase/grid)
-* [Grid Helpers](https://github.com/getbase/grid-helpers)
-* [Grid Non Responsive](https://github.com/getbase/grid-non-responsive)
-* [Buttons](https://github.com/getbase/buttons)
+### [Buttons](https://github.com/getbase/buttons)
+
+Base buttons is a very thin layer which includes styles for decorating buttons and links.
+
+### [Containers](https://github.com/getbase/containers)
+
+Base Containers is a very thin layer which contains styles for containers for all breakpoints.
+
+### [Layout Helpers](https://github.com/getbase/layout-helpers)
+
+Base Layout Helpers contains styles for adding spaced rows (`.pad-top-5`, `.pad-bottom-20`, etc), spaced layout (`.pad-5`, `.pad-20`, etc), resetting margins, resetting paddings, resetting floats, setting position types and flex helpers for all breakpoints.
+
+### [Tables](https://github.com/getbase/tables)
+
+Base Tables is a very thin layer which contains styles for tables for all breakpoints.
+
+### [Forms](https://github.com/getbase/forms)
+
+Base Forms contains styles for inputs, textarea, radios, checkboxes and other form elements.
+
+### [Typography Helpers](https://github.com/getbase/typography-helpers)
+
+Base Typography Helpers contains styles for adjusting font weights, text transformations and aligning copy for all breakpoints.
+
+### [Typography](https://github.com/getbase/typography)
+
+Base Typography contains styles for headings, copy, blockquotes, codeblocks, lists and all other standard typography.
 
 * * *
 

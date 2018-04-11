@@ -1,5 +1,10 @@
 # Base Change Log
 
+## [4.0.3] - 2018-04-11
+### Base V4.0.3
+- Minor tweaks to readme
+- Minor version bump for index.scss/less and package.json
+
 ## [4.0.2] - 2018-04-11
 ### Base V4.0.2
 - Added screen reader helper (`.sr`) to core and updated docs
