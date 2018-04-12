@@ -1,5 +1,10 @@
 # Base Change Log
 
+## [4.0.4] - 2018-04-13
+### Base V4.0.4
+- Minor tweaks to readme
+- Minor version bump for index.scss/less and package.json
+
 ## [4.0.3] - 2018-04-11
 ### Base V4.0.3
 - Minor tweaks to readme
