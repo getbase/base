@@ -16,10 +16,11 @@
     "tests"
   ],
   "devDependencies": {
-    "@getbase/base": "4.0.2",
+    "@getbase/base": "4.0.4",
     "@getbase/buttons": "4.0.0",
     "@getbase/containers": "4.0.0",
     "@getbase/forms": "4.0.0",
+    "@getbase/grid": "4.0.2",
     "@getbase/layout-helpers": "4.0.0",
     "@getbase/tables": "4.0.0",
     "@getbase/typography": "4.0.2",

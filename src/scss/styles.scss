@@ -15,4 +15,6 @@
 // Website Styles
 @import "styles/website";
 
+// Base Grid and Layout Helpers
+@import "../../node_modules/@getbase/grid/scss/index";
 @import "../../node_modules/@getbase/layout-helpers/scss/index";

@@ -3,17 +3,6 @@
   background-color: $yellow;
   color: $black;
 }
-.banner-col-1 {
-  @include breakpoint(m) {
-    padding-left: 15px;
-    padding-right: 15px;
-    float: left;
-    width: 60%;
-  }
-  @include breakpoint(xl) {
-    width: 50%;
-  }
-}
 .logo {
   background: url(../img/base.svg) 0 0 no-repeat;
   width: 80px;
@@ -23,7 +12,8 @@
   transition: all .4s;
   @include breakpoint(m) {
     width: 50px;
-    float: left;
+    display: inline-block;
+    margin: 0;
     background-size: 100%;
   }
   &:hover {
@@ -319,65 +309,5 @@
     display: inline-block;
     margin: 0;
     padding: 0;
-  }
-}
-
-// Clear
-.clear:before, .clear:after { content: " "; display: table; } .clear:after { clear: both; }
-
-// Grid Helpers
-@include breakpoint(m) {
-  .col-6-m,
-  .col-1-2-m {
-    padding-left: 15px;
-    padding-right: 15px;
-    float: left;
-    width: 50%;
-  }
-  .col-8-m {
-    padding-left: 15px;
-    padding-right: 15px;
-    float: left;
-    width: 66.66667%;
-  }
-  .col-10-m {
-    padding-left: 15px;
-    padding-right: 15px;
-    float: left;
-    width: 83.33333%;
-  }
-}
-@include breakpoint(l) {
-  .col-1-3-l {
-    padding-left: 15px;
-    padding-right: 15px;
-    width: 33.333333%;
-    float: left;
-  }
-  .col-1-4-l {
-    padding-left: 15px;
-    padding-right: 15px;
-    width: 25%;
-    float: left;
-  }
-  .col-9-l {
-    padding-left: 15px;
-    padding-right: 15px;
-    float: left;
-    width: 75%;
-  }
-  .col-10-l {
-    padding-left: 15px;
-    padding-right: 15px;
-    float: left;
-    width: 83.33333%;
-  }
-}
-@include breakpoint(xl) {
-  .col-6-xl {
-    padding-left: 15px;
-    padding-right: 15px;
-    float: left;
-    width: 50%;
   }
 }
