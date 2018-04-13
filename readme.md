@@ -136,6 +136,10 @@ Base includes the latest version of Normalize.css by default and includes a few 
 
 ## Modules and Components
 
+### [Animations](https://github.com/getbase/animations)
+
+Base Animations is a very thin layer which includes animations for fading in content.
+
 ### [Buttons](https://github.com/getbase/buttons)
 
 Base buttons is a very thin layer which includes styles for decorating buttons and links.
