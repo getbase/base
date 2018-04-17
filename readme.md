@@ -158,7 +158,11 @@ Base Grid contains styles for flex grids with rows and columns for your layout f
 
 ### [Layout Helpers](https://github.com/getbase/layout-helpers)
 
-Base Layout Helpers contains styles for adding spaced rows (`.pad-top-5`, `.pad-bottom-20`, etc), spaced layout (`.pad-5`, `.pad-20`, etc), resetting margins, resetting paddings, resetting floats, setting position types and flex helpers for all breakpoints.
+Base Layout Helpers contains styles for resetting margins, resetting paddings, resetting floats, setting position types and flex helpers for all breakpoints.
+
+### [Layout Spacers](https://github.com/getbase/layout-spacers)
+
+Base Layout Spacers contains styles for adding spaced rows (`.pad-top-5`, `.pad-bottom-20`, etc) and spaced layout (`.pad-5`, `.pad-20`, etc) for all breakpoints.
 
 ### [Tables](https://github.com/getbase/tables)
 
