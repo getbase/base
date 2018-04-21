@@ -1,5 +1,10 @@
 # Base Change Log
 
+## [4.0.8] - 2018-04-22
+### Base V4.0.8
+- Fixed bug with background-alpha mixin in mixins.scss
+- Minor version bump for index.scss/less and package.json
+
 ## [4.0.7] - 2018-04-19
 ### Base V4.0.7
 - Minor tweaks to readme

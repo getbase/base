@@ -19,8 +19,8 @@
 @mixin background-alpha($color, $alpha) {
   $opacity: $alpha / 100%;
   $rgba: rgba($color, $opacity);
-  background: $color;
-  background: rgba($color, $opacity);
+  background-color: $color;
+  background-color: rgba($color, $opacity);
 }
 
 // Animations
