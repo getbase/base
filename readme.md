@@ -107,7 +107,7 @@ Base includes the latest version of Normalize.css by default and includes a few 
 | ----- | ------- | ------- | ------- |
 | `@include breakpoint(x)` | Apply a breakpoint for a particular device. Accepts values `m`, `l` and `xl` (m: medium, l: large, xl: extra large) | `.box { @include breakpoint(m) { ... } }` | Applies styles to `.box` for medium devices and up |
 | `@include background-alpha(hex, percentage)` | Applies a background color with opacity | `@include background-alpha(#000, 50%)` | Applies a background color of black with opacity set to 50% |
-| `@include animation(time)` | Applies animation speed | `@include animation(2s)` | Animation will run for 2 seconds |
+| `@include animate(time)` | Applies animation speed | `@include animate(2s)` | Animation will run for 2 seconds |
 
 ### LESS
 
@@ -124,7 +124,7 @@ Base includes the latest version of Normalize.css by default and includes a few 
 | Mixin | Purpose | Example | Outcome |
 | ----- | ------- | ------- | ------- |
 | `.background-alpha(hex, percentage)` | Applies a background color with opacity | `.background-alpha(#000, 50%)` | Applies a background color of black with opacity set to 50% |
-| `.animation(time)` | Applies animation speed | `.animation(2s)` | Animation will run for 2 seconds |
+| `.animate(time)` | Applies animation speed | `.animate(2s)` | Animation will run for 2 seconds |
 
 * * *
 

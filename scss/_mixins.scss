@@ -24,8 +24,8 @@
 }
 
 // Animations
-// Example Usage @mixin animation(1s);
-@mixin animation($duration: 1s) {
+// Example Usage @mixin animate(1s);
+@mixin animate($duration: 1s) {
   animation-duration: $duration;
   animation-fill-mode: both;
 }
