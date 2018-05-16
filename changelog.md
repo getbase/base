@@ -1,5 +1,10 @@
 # Base Change Log
 
+## [4.0.10] - 2018-05-17
+### Base V4.0.10
+- Added Postinstall script to fix normalize.css import issue
+- Minor version bump for index.scss/less and package.json
+
 ## [4.0.9] - 2018-04-24
 ### Base V4.0.9
 - Updated name of animation mixin to animate

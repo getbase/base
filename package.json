@@ -1,11 +1,12 @@
 {
   "name": "@getbase/base",
-  "version": "4.0.9",
+  "version": "4.0.10",
   "description": "A Rock Solid, Responsive CSS Framework built to work on all devices big, small and in-between.",
   "homepage": "http://getbase.org/",
   "main": "gulpfile.js",
   "author": "Matthew Hartman",
   "scripts": {
+    "postinstall": "cp ./node_modules/normalize.css/normalize.css ./scss/normalize.scss && cp ./node_modules/normalize.css/normalize.css ./less/normalize.less",
     "start": "gulp",
     "sass": "gulp sass",
     "less": "gulp less",
