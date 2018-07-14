@@ -57,7 +57,7 @@ Once you have Base installed, you can build on top of it by including your own c
 #### CSS Import:
 
   ```css
-  import url("https://cdn.rawgit.com/getbase/base/master/css/index.css");
+  @import url("https://cdn.rawgit.com/getbase/base/master/css/index.css");
   ```
 
 #### SCSS Import:
