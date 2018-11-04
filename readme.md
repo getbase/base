@@ -57,7 +57,7 @@ Once you have Base installed, you can build on top of it by including your own c
 #### CSS Import:
 
   ```css
-  import url("https://cdn.rawgit.com/getbase/base/master/css/index.css");
+  import url("https://cdn.jsdelivr.net/gh/getbase/base/css/index.css");
   ```
 
 #### SCSS Import:
@@ -130,7 +130,7 @@ Base includes the latest version of Normalize.css by default and includes a few 
 
 ## Demo
 
-[View page example](https://cdn.rawgit.com/getbase/base/master/index.html) with just Base stylesheet applied.
+[View page example](https://500p7zmq9n.codesandbox.io/) with just Base stylesheet applied.
 
 * * *
 
