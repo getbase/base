@@ -1,4 +1,3 @@
-/*** webpack.config.js ***/
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const path = require('path')
@@ -7,7 +6,7 @@ const webpack = require('webpack')
 module.exports = {
   entry: [`./${process.env.LANGUAGE}/index.${process.env.LANGUAGE}`],
   output: {
-    path: path.resolve(__dirname, 'css'),
+    path: path.resolve(__dirname, './'),
     filename: 'index.css'
   },
   devtool: 'source-map',
@@ -51,7 +50,7 @@ module.exports = {
   },
   plugins: [
     new ExtractTextPlugin('index.css'),
-    new CleanWebpackPlugin(['css']),
+    new CleanWebpackPlugin(['./index.css', './index.css.map']),
     new webpack.optimize.ModuleConcatenationPlugin(),
     new webpack.EnvironmentPlugin({LANGUAGE: 'scss'})
   ],
