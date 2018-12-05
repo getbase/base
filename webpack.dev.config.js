@@ -1,7 +1,11 @@
 /*** webpack.config.js ***/
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const HtmlWebpackReloadPlugin = require('html-webpack-reload-plugin')
+const LiveReloadPlugin = require('webpack-livereload-plugin')
 const path = require('path')
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
 const webpack = require('webpack')
 
 module.exports = {
@@ -60,9 +64,16 @@ module.exports = {
     ]
   },
   plugins: [
+    new UglifyJSPlugin(),
     new ExtractTextPlugin('index.css'),
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, './index.html'),
+      inject: true,
+    }),
     new CleanWebpackPlugin(['css']),
-    new webpack.optimize.ModuleConcatenationPlugin()
+    new webpack.optimize.ModuleConcatenationPlugin(),
+    new LiveReloadPlugin(),
+    new HtmlWebpackReloadPlugin()
   ],
   devServer: {
     contentBase: path.join(__dirname, './'),

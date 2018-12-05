@@ -6,8 +6,9 @@
   "author": "Matthew Hartman",
   "main": "./css/index.css",
   "scripts": {
-    "start": "webpack-dev-server --mode development",
-    "build": "webpack --mode production"
+    "start": "webpack-dev-server --mode development --config webpack.dev.config.js",
+    "build": "webpack --mode production",
+    "dist": "webpack --mode production"
   },
   "repository": {
     "type": "git",
