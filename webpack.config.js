@@ -10,6 +10,7 @@ module.exports = {
     path: path.resolve(__dirname, 'css'),
     filename: 'index.css'
   },
+  devtool: 'source-map',
   module: {
     rules: [
       {
