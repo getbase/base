@@ -9,7 +9,7 @@ const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
 const webpack = require('webpack')
 
 module.exports = {
-  entry: './scss/index.scss',
+  entry: ['./scss/index.scss', './less/index.less'],
   output: {
     path: path.resolve(__dirname, 'css'),
     filename: 'index.css'
@@ -27,6 +27,20 @@ module.exports = {
               }
             },
             'sass-loader'
+          ]
+        })
+      },
+      {
+        test: /\.less$/,
+        use: ExtractTextPlugin.extract({
+          use: [
+            {
+              loader: 'css-loader',
+              options: {
+                minimize: true
+              }
+            },
+            'less-loader'
           ]
         })
       },
