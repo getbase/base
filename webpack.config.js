@@ -23,7 +23,8 @@ module.exports = {
             {
               loader: 'css-loader',
               options: {
-                minimize: true
+                minimize: true,
+                sourceMap: true
               }
             },
             'sass-loader'
@@ -37,7 +38,8 @@ module.exports = {
             {
               loader: 'css-loader',
               options: {
-                minimize: true
+                minimize: true,
+                sourceMap: true
               }
             },
             'less-loader'
@@ -46,7 +48,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: ["style-loader", "css-loader"]
+        use: ['style-loader', 'css-loader']
       },
       {
         test: /\.(jpeg|png|gif|svg)$/,
