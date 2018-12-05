@@ -7,8 +7,9 @@
   "main": "./css/index.css",
   "scripts": {
     "start": "webpack-dev-server --mode development --config webpack.dev.config.js",
-    "build": "webpack --mode production",
-    "dist": "webpack --mode production"
+    "build:scss": "./node_modules/.bin/cross-env PROCESS=scss webpack --mode production",
+    "build:less": "./node_modules/.bin/cross-env PROCESS=less webpack --mode production",
+    "build": "npm run build:scss"
   },
   "repository": {
     "type": "git",
@@ -40,6 +41,7 @@
   },
   "devDependencies": {
     "clean-webpack-plugin": "^1.0.0",
+    "cross-env": "^5.2.0",
     "css-loader": "^1.0.1",
     "extract-text-webpack-plugin": "^4.0.0-alpha",
     "file-loader": "^2.0.0",

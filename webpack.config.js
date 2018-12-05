@@ -5,7 +5,7 @@ const path = require('path')
 const webpack = require('webpack')
 
 module.exports = {
-  entry: ['./scss/index.scss', './less/index.less'],
+  entry: [`./${process.env.PROCESS}/index.${process.env.PROCESS}`],
   output: {
     path: path.resolve(__dirname, 'css'),
     filename: 'index.css'
@@ -62,7 +62,8 @@ module.exports = {
   plugins: [
     new ExtractTextPlugin('index.css'),
     new CleanWebpackPlugin(['css']),
-    new webpack.optimize.ModuleConcatenationPlugin()
+    new webpack.optimize.ModuleConcatenationPlugin(),
+    new webpack.EnvironmentPlugin({PROCESS: 'scss'})
   ],
   devServer: {
     contentBase: path.join(__dirname, './'),
