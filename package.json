@@ -1,18 +1,13 @@
 {
   "name": "@getbase/base",
-  "version": "4.0.10",
+  "version": "4.1.0",
   "description": "A Rock Solid, Responsive CSS Framework built to work on all devices big, small and in-between.",
   "homepage": "http://getbase.org/",
-  "main": "gulpfile.js",
   "author": "Matthew Hartman",
+  "main": "./css/index.css",
   "scripts": {
-    "postinstall": "cp ./node_modules/normalize.css/normalize.css ./scss/normalize.scss && cp ./node_modules/normalize.css/normalize.css ./less/normalize.less",
-    "start": "gulp",
-    "sass": "gulp sass",
-    "less": "gulp less",
-    "clean": "gulp clean",
-    "build": "gulp build",
-    "dist": "gulp build"
+    "start": "webpack-dev-server --mode development",
+    "build": "webpack --mode production"
   },
   "repository": {
     "type": "git",
@@ -43,15 +38,22 @@
     "normalize.css": "^8.0.0"
   },
   "devDependencies": {
-    "browser-sync": "^2.23.6",
-    "del": "^3.0.0",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^5.0.0",
-    "gulp-notify": "^3.2.0",
-    "gulp-sass": "^3.2.1",
-    "gulp-less": "^4.0.0",
-    "gulp-sourcemaps": "^2.6.4",
-    "run-sequence": "^2.2.1"
+    "clean-webpack-plugin": "^1.0.0",
+    "css-loader": "^1.0.1",
+    "extract-text-webpack-plugin": "^4.0.0-alpha",
+    "file-loader": "^2.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "html-webpack-reload-plugin": "^2.0.0",
+    "image-webpack-loader": "^4.6.0",
+    "imagemin-pngcrush": "^6.0.0",
+    "node-sass": "^4.10.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "uglifyjs-webpack-plugin": "^2.0.1",
+    "webpack": "^4.26.0",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10",
+    "webpack-livereload-plugin": "^2.1.1"
   },
   "browserslist": [
     "> 1%",
