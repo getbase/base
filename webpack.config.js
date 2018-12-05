@@ -5,7 +5,7 @@ const path = require('path')
 const webpack = require('webpack')
 
 module.exports = {
-  entry: [`./${process.env.PROCESS}/index.${process.env.PROCESS}`],
+  entry: [`./${process.env.LANGUAGE}/index.${process.env.LANGUAGE}`],
   output: {
     path: path.resolve(__dirname, 'css'),
     filename: 'index.css'
@@ -45,17 +45,6 @@ module.exports = {
       {
         test: /\.css$/,
         use: ['style-loader', 'css-loader']
-      },
-      {
-        test: /\.(jpeg|png|gif|svg)$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: '[name].[ext]'
-            }
-          }, 'image-webpack-loader'
-        ]
       }
     ]
   },
@@ -63,7 +52,7 @@ module.exports = {
     new ExtractTextPlugin('index.css'),
     new CleanWebpackPlugin(['css']),
     new webpack.optimize.ModuleConcatenationPlugin(),
-    new webpack.EnvironmentPlugin({PROCESS: 'scss'})
+    new webpack.EnvironmentPlugin({LANGUAGE: 'scss'})
   ],
   devServer: {
     contentBase: path.join(__dirname, './'),

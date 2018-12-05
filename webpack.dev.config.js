@@ -5,11 +5,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const HtmlWebpackReloadPlugin = require('html-webpack-reload-plugin')
 const LiveReloadPlugin = require('webpack-livereload-plugin')
 const path = require('path')
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
 const webpack = require('webpack')
 
 module.exports = {
-  entry: ['./scss/index.scss', './less/index.less'],
+  entry: [`./${process.env.LANGUAGE}/index.${process.env.LANGUAGE}`],
   output: {
     path: path.resolve(__dirname, 'css'),
     filename: 'index.css'
@@ -19,52 +18,22 @@ module.exports = {
       {
         test: /\.scss$/,
         use: ExtractTextPlugin.extract({
-          use: [
-            {
-              loader: 'css-loader',
-              options: {
-                minimize: true,
-                sourceMap: true
-              }
-            },
-            'sass-loader'
-          ]
+          use: ['css-loader','sass-loader']
         })
       },
       {
         test: /\.less$/,
         use: ExtractTextPlugin.extract({
-          use: [
-            {
-              loader: 'css-loader',
-              options: {
-                minimize: true,
-                sourceMap: true
-              }
-            },
-            'less-loader'
-          ]
+          use: ['css-loader', 'less-loader']
         })
       },
       {
         test: /\.css$/,
         use: ['style-loader', 'css-loader']
-      },
-      {
-        test: /\.(jpeg|png|gif|svg)$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: '[name].[ext]'
-            }
-          }, 'image-webpack-loader'
-        ]
       }
     ]
   },
   plugins: [
-    new UglifyJSPlugin(),
     new ExtractTextPlugin('index.css'),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, './index.html'),
@@ -73,7 +42,8 @@ module.exports = {
     new CleanWebpackPlugin(['css']),
     new webpack.optimize.ModuleConcatenationPlugin(),
     new LiveReloadPlugin(),
-    new HtmlWebpackReloadPlugin()
+    new HtmlWebpackReloadPlugin(),
+    new webpack.EnvironmentPlugin({LANGUAGE: 'scss'})
   ],
   devServer: {
     contentBase: path.join(__dirname, './'),
