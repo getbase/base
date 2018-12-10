@@ -1,7 +1,7 @@
 # Base Change Log
 
 ## [4.1.0] - 2018-12-10
-### Base V4.0.10
+### Base V4.1.0
 - Removed gulp and replaced with webpack
 - Updated scripts in package.json
 - Minor documentation fixes
