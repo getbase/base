@@ -57,7 +57,7 @@ Once you have Base installed, you can build on top of it by including your own c
 #### CSS Import:
 
   ```css
-  import url("https://cdn.rawgit.com/getbase/base/master/css/index.css");
+  @import url("https://unpkg.com/@getbase/base@4.1.0/index.css");
   ```
 
 #### SCSS Import:
@@ -71,9 +71,9 @@ Once you have Base installed, you can build on top of it by including your own c
 
 #### LESS Import:
 
-  ```css
+  ```less
   /* Import Base */
-  @import "node_modules/@getbase/base/scss/index";
+  @import "node_modules/@getbase/base/less/index";
   /* Your Other Styles */
   @import "main"
   ```
@@ -130,7 +130,7 @@ Base includes the latest version of Normalize.css by default and includes a few 
 
 ## Demo
 
-[View page example](https://cdn.rawgit.com/getbase/base/master/index.html) with just Base stylesheet applied.
+[View page example](https://unpkg.com/@getbase/base@4.1.0/index.html) with just Base stylesheet applied.
 
 * * *
 
