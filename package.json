@@ -1,10 +1,10 @@
 {
   "name": "@getbase/base",
-  "version": "4.1.0",
+  "version": "4.1.1",
   "description": "A Rock Solid, Responsive CSS Framework built to work on all devices big, small and in-between.",
   "homepage": "http://getbase.org/",
   "author": "Matthew Hartman",
-  "main": "./css/index.css",
+  "main": "index.css",
   "scripts": {
     "start": "./node_modules/.bin/cross-env LANGUAGE=scss webpack-dev-server --mode development --config webpack.dev.config.js",
     "start:less": "./node_modules/.bin/cross-env LANGUAGE=less webpack-dev-server --mode development --config webpack.dev.config.js",
