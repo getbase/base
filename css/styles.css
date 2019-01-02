@@ -729,7 +729,7 @@ blockquote,
       width: 500px; } }
 
 .device-inner {
-  background: url(../img/gymphy.png) 0 0 no-repeat #111;
+  background: url(../img/nelus-oana.jpg) 0 0 no-repeat #111;
   background-size: cover;
   display: block;
   cursor: pointer;
@@ -824,12 +824,12 @@ blockquote,
     background: #fff;
     background: rgba(255, 255, 255, 0.2); }
 
-.showcase-gymphy {
-  background: url(../img/gymphy.png) 0 0 no-repeat;
-  background-size: cover; }
-
 .showcase-nelus-oana {
   background: url(../img/nelus-oana.jpg) 0 0 no-repeat;
+  background-size: cover; }
+
+.showcase-tattoo {
+  background: url(../img/tattoo.jpg) 0 0 no-repeat;
   background-size: cover; }
 
 .showcase-construct {
