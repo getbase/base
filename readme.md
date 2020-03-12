@@ -30,19 +30,17 @@ Lightweight and minimal code. Spend less time overriding styles and focus more t
 
 ## Overview
 
-Base itself is a very thin layer which includes Normalize.css and a few mixins to get you started.
-
-You can then include what you need on top of Base such as typography, grids, individual components, etc and make it yours.
+Base itself is a pretty thin CSS framework built on top of Normalize. Include what you need on top of Base such as custom typography, custom grids, components and make it yours.
 
 * * *
 
 ## Installation
 
-If you are creating a new project from scratch, it is highly recommended that you [use base starter](https://github.com/getbase/starter).
+If you are creating a new project from scratch, it is recommended that you [use the base starter](https://github.com/getbase/starter).
 
 ```bash
 git clone https://github.com/getbase/starter.git \
-new-website && cd new-website && rm -rf .git
+new-website && cd new-website && rm -rf .git && \
 npm install && npm start
 ```
 
@@ -52,30 +50,47 @@ For existing projects, simply install base using NPM.
 npm install --save @getbase/base
 ```
 
-Once you have Base installed, you can build on top of it by including your own custom styles or add the [ready made modules](#modules-and-components)
+Once you have Base installed, you can choose what to import and include your own custom styles.
 
 #### CSS Import:
 
   ```css
+  /* Import the entire Base Framework */
   @import url("https://unpkg.com/@getbase/base/index.css");
+
+  /* OR import only what you need */
+  @import url("https://unpkg.com/@getbase/base/css/core.css");
+  @import url("https://unpkg.com/@getbase/base/css/grid.css");
   ```
 
 #### SCSS Import:
 
   ```scss
-  /* Import Base */
+  /* Import the entire Base Framework */
   @import "~@getbase/base/scss/index";
+
+  /* OR import only what you need */
+  @import "~getbase/base/scss/mixins";
+  @import "~getbase/base/scss/core";
+  @import "~getbase/base/scss/grid";
+
   /* Your Other Styles */
-  @import "main"
+  @import "main";
   ```
 
 #### LESS Import:
 
   ```less
-  /* Import Base */
+  /* Import the entire Base Framework */
   @import "~@getbase/base/less/index";
+
+  /* OR import only what you need */
+  @import "~getbase/base/less/mixins";
+  @import "~getbase/base/less/core";
+  @import "~getbase/base/less/grid";
+
   /* Your Other Styles */
-  @import "main"
+  @import "main";
   ```
 
 * * *
@@ -84,7 +99,7 @@ Once you have Base installed, you can build on top of it by including your own c
 
 Base includes the latest version of Normalize.css by default and includes a few Mixins to get you started.
 
-#### Helpers (Applies to SCSS/LESS)
+#### Helpers
 
 | Helper Class | Purpose | Example | Outcome |
 | ------------ | ------- | ------- | ------- |
@@ -123,7 +138,7 @@ Base includes the latest version of Normalize.css by default and includes a few 
 
 | Mixin | Purpose | Example | Outcome |
 | ----- | ------- | ------- | ------- |
-| `.background-alpha(hex, percentage)` | Applies a background color with opacity | `.background-alpha(#000, 50%)` | Applies a background color of black with opacity set to 50% |
+| `.background-rgba(hex, decimal)` | Applies a background color with opacity | `.background-rgba(#000, .5)` | Applies a background color of black with opacity set to 50% |
 | `.animate(time)` | Applies animation speed | `.animate(2s)` | Animation will run for 2 seconds |
 
 * * *
@@ -136,49 +151,51 @@ Base includes the latest version of Normalize.css by default and includes a few 
 
 ## Modules and Components
 
-### [Animations](https://github.com/getbase/animations)
+### Animations
 
-Base Animations is a very thin layer which includes animations for fading in content.
+Animations for fading in elements or content.
 
-### [Buttons](https://github.com/getbase/buttons)
+### Buttons
 
-Base buttons is a very thin layer which includes styles for decorating buttons and links.
+A basic set of styles for buttons and links.
 
-### [Containers](https://github.com/getbase/containers)
+### Containers
 
-Base Containers is a very thin layer which contains styles for containers for all breakpoints.
+Containers for all breakpoints.
 
-### [Forms](https://github.com/getbase/forms)
+### Forms
 
-Base Forms contains styles for inputs, textarea, radios, checkboxes and other form elements.
+Inputs (text, number, etc), textarea, radio boxes and checkboxes.
 
-### [Grid](https://github.com/getbase/grid)
+### Grid
 
-Base Grid contains styles for flex grids with rows and columns for your layout for all breakpoints.
+A grid built with flexbox that includes a 12 column, percentage layout for all breakpoints.
 
-### [Layout Helpers](https://github.com/getbase/layout-helpers)
+### Layout Helpers
 
-Base Layout Helpers contains styles for resetting margins, resetting paddings, resetting floats, setting position types and flex helpers for all breakpoints.
+Styles for resetting margins, resetting paddings, resetting floats, setting position types and flex helpers for all breakpoints.
 
-### [Layout Spacers](https://github.com/getbase/layout-spacers)
+### Layout Spacers
 
-Base Layout Spacers contains styles for adding spaced rows (`.pad-top-5`, `.pad-bottom-20`, etc) and spaced layout (`.pad-5`, `.pad-20`, etc) for all breakpoints.
+Spacing utilities (`.padding-top-0-5rem`, `.padding-bottom-0-5rem`, `.padding-1rem`, `.padding-1rem`, etc) for all breakpoints.
 
-### [Micro Grid](https://github.com/getbase/micro-grid)
+### Tables
 
-Base Micro Grid contains styles for flex grids with rows and basic columns for all breakpoints.
+A basic style for all tables.
 
-### [Tables](https://github.com/getbase/tables)
+### Typography
 
-Base Tables is a very thin layer which contains styles for tables for all breakpoints.
+Essential for copy and headings (paragraphs, lists, headings).
 
-### [Typography Helpers](https://github.com/getbase/typography-helpers)
+## Blockquotes
+Styles for blockquotes
 
-Base Typography Helpers contains styles for adjusting font weights, text transformations and aligning copy for all breakpoints.
+## Codeblocks
+A basic set of styles for all types of code blocks.
 
-### [Typography](https://github.com/getbase/typography)
+### Typography Helpers
 
-Base Typography contains styles for headings, copy, blockquotes, codeblocks, lists and all other standard typography.
+Adjust font weights, text transformations and helpers for aligning copy for all breakpoints.
 
 * * *
 
@@ -197,7 +214,7 @@ There are a [collection of premium templates built with Base](https://gumroad.co
 
 ## Credits
 
-* Thanks to [Nicolas Gallagher (@necolas)](https://github.com/necolas/) for Normalize.css
+* Thanks to [Nicolas Gallagher (@necolas)](https://github.com/necolas/) for (Normalize.css)[https://github.com/necolas/normalize.css/]
 
 * * *
 
