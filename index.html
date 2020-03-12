@@ -9,9 +9,153 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="index.css">
+  <style type="text/css">
+    .header { background: #ffeb3b; }
+    .logo {
+      font-weight: 700;
+      color: #212121;
+      text-decoration: none;
+      transition: .2s all;
+    }
+    .logo:hover, .logo:focus, .logo:visited, .logo:active {
+      color: #212121;
+      opacity: .9;
+    }
+    .card {
+      border: 1px solid #eee;
+    }
+  </style>
   
 </head>
 <body>
+  <div class="header">
+    <div class="container">
+      <div class="flex flex-align-items-center flex-space-between padding-top-1rem padding-bottom-1rem">
+        <a class="flex flex-align-items-center logo block" href="index.html">
+          <img style="height: 30px; margin-right: .5rem;" class="block" src="logo.svg" alt="Base">
+          <span>Base Styleguide</span>
+        </a>
+        <a href="#">
+          Menu
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="padding-top-2rem padding-bottom-2rem">
+    <div id="colors" class="container">
+      <h1 class="h2">Colors</h1>
+      <div class="row">
+        <div class="col-1-2 padding-bottom-1rem col-1-3-m col-1-4-l">
+          <div class="card">
+            <div style="background: #fff;">
+              <div class="padding-0-5rem">
+                <code style="color: #121212;">$base-background-color<br>@base-background-color<br>color: #fff</code>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-1-2 padding-bottom-1rem col-1-3-m col-1-4-l">
+          <div class="card">
+            <div style="background: #121212;">
+              <div class="padding-0-5rem">
+                <code style="color: #fff;">$base-font-color<br>@base-font-color<br>color: #121212</code>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-1-2 padding-bottom-1rem col-1-3-m col-1-4-l">
+          <div class="card">
+            <div style="background: #00e;">
+              <div class="padding-0-5rem">
+                <code style="color: #fff;">$base-link-color<br>@base-link-color<br>color: #00e</code>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-1-2 padding-bottom-1rem col-1-3-m col-1-4-l">
+          <div class="card">
+            <div style="background: #00e;">
+              <div class="padding-0-5rem">
+                <code style="color: #fff;">$base-link-hover-color<br>@base-link-hover-color<br>color: #00e</code>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-1-2 padding-bottom-1rem col-1-3-m col-1-4-l">
+          <div class="card">
+            <div style="background: #121212;">
+              <div class="padding-0-5rem">
+                <code style="color: #fff;">$base-link-active-color<br>@base-link-active-color<br>color: #121212</code>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-1-2 padding-bottom-1rem col-1-3-m col-1-4-l">
+          <div class="card">
+            <div style="background: #551a8b;">
+              <div class="padding-0-5rem">
+                <code style="color: #fff;">$base-link-visited-color<br>@base-link-visited-color<br>color: #551a8b</code>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-1-2 padding-bottom-1rem col-1-3-m col-1-4-l">
+          <div class="card">
+            <div style="background: #121212;">
+              <div class="padding-0-5rem">
+                <code style="color: #fff;">$base-h1-color<br>@base-h1-color<br>color: #121212</code>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-1-2 padding-bottom-1rem col-1-3-m col-1-4-l">
+          <div class="card">
+            <div style="background: #121212;">
+              <div class="padding-0-5rem">
+                <code style="color: #fff;">$base-h2-color<br>@base-h2-color<br>color: #121212</code>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-1-2 padding-bottom-1rem col-1-3-m col-1-4-l">
+          <div class="card">
+            <div style="background: #121212;">
+              <div class="padding-0-5rem">
+                <code style="color: #fff;">$base-h3-color<br>@base-h3-color<br>color: #121212</code>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-1-2 padding-bottom-1rem col-1-3-m col-1-4-l">
+          <div class="card">
+            <div style="background: #121212;">
+              <div class="padding-0-5rem">
+                <code style="color: #fff;">$base-h4-color<br>@base-h4-color<br>color: #121212</code>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-1-2 padding-bottom-1rem col-1-3-m col-1-4-l">
+          <div class="card">
+            <div style="background: #121212;">
+              <div class="padding-0-5rem">
+                <code style="color: #fff;">$base-h5-color<br>@base-h5-color<br>color: #121212</code>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-1-2 padding-bottom-1rem col-1-3-m col-1-4-l">
+          <div class="card">
+            <div style="background: #121212;">
+              <div class="padding-0-5rem">
+                <code style="color: #fff;">$base-h6-color<br>@base-h6-color<br>color: #121212</code>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <h1>Heading 1</h1>
   <h2>Heading 2</h2>
   <h3>Heading 3</h3>

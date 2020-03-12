@@ -1,0 +1,18 @@
+blockquote,
+.blockquote {
+  font-family: $base-blockquote-font-family;
+  font-style: italic;
+  margin: 1.5rem 0;
+  p {
+    font-size: $base-blockquote-font-size;
+    line-height: $base-blockquote-line-height;
+    font-weight: $base-blockquote-font-weight;
+    margin-bottom: 1.5rem;
+  }
+  cite {
+    font-size: $base-blockquote-font-size - 3;
+    line-height: $base-blockquote-font-size - 3;
+    font-weight: $base-blockquote-cite-font-weight;
+    font-style: normal;
+  }
+}

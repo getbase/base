@@ -1,6 +1,6 @@
 // Mixins
 
-// Breakpoint Utils
+// Breakpoints
 // Example: .component { @include breakpoint(m) { background: red; } };
 // Output: .component { @media only screen and (min-width: 720px) { background: red; } }
 @mixin breakpoint($bp) {

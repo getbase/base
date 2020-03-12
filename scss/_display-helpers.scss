@@ -1,0 +1,33 @@
+.block { display: block; }
+.inline-block { display: inline-block; }
+.inline { display: inline; }
+.flex { display: flex; }
+.flex-align-items-center { align-items: center; }
+.flex-space-between { justify-content: space-between; }
+
+@include breakpoint(m) {
+  .block-m { display: block; }
+  .inline-block-m { display: inline-block; }
+  .inline-m { display: inline; }
+  .flex-m { display: flex; }
+  .flex-align-items-center-m { align-items: center; }
+  .flex-space-between-m { justify-content: space-between; }
+}
+
+@include breakpoint(l) {
+  .block-l { display: block; }
+  .inline-block-l { display: inline-block; }
+  .inline-l { display: inline; }
+  .flex-l { display: flex; }
+  .flex-align-items-center-l { align-items: center; }
+  .flex-space-between-l { justify-content: space-between; }
+}
+
+@include breakpoint(xl) {
+  .block-xl { display: block; }
+  .inline-block-xl { display: inline-block; }
+  .inline-xl { display: inline; }
+  .flex-xl { display: flex; }
+  .flex-align-items-center-xl { align-items: center; }
+  .flex-space-between-xl { justify-content: space-between; }
+}

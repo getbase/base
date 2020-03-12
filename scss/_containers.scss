@@ -1,0 +1,39 @@
+.container, .container-full {
+  padding-left: $grid-gutter;
+  padding-right: $grid-gutter;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@include breakpoint(m) {
+  .container-m, .container-full-m {
+    padding-left: $grid-gutter;
+    padding-right: $grid-gutter;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .container, .container-m { width: $container-m; }
+  .container-full-m { width: auto; }
+}
+
+@include breakpoint(l) {
+  .container-l, .container-full-l {
+    padding-left: $grid-gutter;
+    padding-right: $grid-gutter;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .container, .container-l { width: $container-l; }
+  .container-full-l { width: auto; }
+}
+
+@include breakpoint(xl) {
+  .container-xl, .container-full-xl {
+    padding-left: $grid-gutter;
+    padding-right: $grid-gutter;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .container, .container-xl { width: $container-xl; }
+  .container-full-xl { width: auto; }
+}
