@@ -10,22 +10,32 @@
 
   <link rel="stylesheet" href="index.css">
   <style type="text/css">
-    .header { background: #ffeb3b; }
+    .header { background: #f6e58d; }
     .logo {
       font-weight: 700;
-      color: #212121;
+      color: #121212;
       text-decoration: none;
       transition: .2s all;
     }
     .logo:hover, .logo:focus, .logo:visited, .logo:active {
-      color: #212121;
+      color: #121212;
       opacity: .9;
+    }
+    .navigation-link {
+      color: #121212;
+      margin-left: 8px;
+    }
+    .navigation-link:hover,
+    .navigation-link:focus,
+    .navigation-link:visited,
+    .navigation-link:active {
+      color: #121212;
     }
     .card {
       border: 1px solid #eee;
     }
   </style>
-  
+
 </head>
 <body>
   <div class="header">
@@ -35,15 +45,39 @@
           <img style="height: 30px; margin-right: .5rem;" class="block" src="logo.svg" alt="Base">
           <span>Base Styleguide</span>
         </a>
-        <a href="#">
-          Menu
-        </a>
+        <div class="navigation">
+          <a class="navigation-link" href="#typography">Typography</a>
+          <a class="navigation-link" href="#headings">Headings</a>
+          <a class="navigation-link" href="#colors">Colors</a>
+        </div>
       </div>
     </div>
   </div>
-  <div class="padding-top-2rem padding-bottom-2rem">
-    <div id="typography" class="container">
+  <div id="typography" class="padding-top-2rem">
+    <div class="container">
       <h1 class="h2">Typography</h1>
+      <div class="row">
+        <div class="col-12">
+          <div class="card">
+            <div style="border-bottom: 1px solid #eee;" class="flex flex-align-items-center flex-space-between padding-1rem">
+              <strong class="h1">Sans Serif</strong>
+              <span class="h1 block">Aa <small class="h6">Regular</small></span>
+              <strong class="h1 block">Aa <small class="h6 font-400">Bold</small></strong>
+            </div>
+            <div class="padding-1rem">
+              <p>
+                Lead copy with some lorem ipsum amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam.
+              </p>
+              <code class="block">$base-font-family: sans-serif<br>$base-font-size: 16px<br>$base-line-height: 22px<br>$base-font-weight: 400<br>$base-font-color: #121212<br></code>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="headings" class="padding-top-2rem">
+    <div class="container">
+      <h1 class="h2">Headings</h1>
       <div class="row">
         <div class="col-12 padding-bottom-1rem">
           <div class="card">
@@ -104,8 +138,8 @@
       </div>
     </div>
   </div>
-  <div class="padding-top-2rem padding-bottom-2rem">
-    <div id="colors" class="container">
+  <div id="colors" class="padding-top-2rem">
+    <div class="container">
       <h1 class="h2">Colors</h1>
       <div class="row">
         <div class="col-12 padding-bottom-1rem col-1-3-m col-1-4-l">
