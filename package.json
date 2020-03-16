@@ -8,9 +8,10 @@
   "scripts": {
     "start": "./node_modules/gulp/bin/gulp.js",
     "start:less": "",
-    "build:scss": "",
+    "build:scss": "./node_modules/gulp/bin/gulp.js compileScssModulesToCss",
     "build:less": "",
-    "build": ""
+    "build": "./node_modules/gulp/bin/gulp.js build",
+    "clean": "./node_modules/gulp/bin/gulp.js clean"
   },
   "repository": {
     "type": "git",
@@ -43,8 +44,7 @@
     "del": "^5.1.0",
     "gulp": "^4.0.2",
     "gulp-postcss": "^8.0.0",
-    "gulp-sass": "^4.0.2",
-    "gulp-sourcemaps": "^2.6.5"
+    "gulp-sass": "^4.0.2"
   },
   "browserslist": [
     "> 1%",
