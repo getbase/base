@@ -11,10 +11,13 @@
   <style type="text/css">
     .header { background: #f6e58d; }
     .logo {
+      font-size: 16px;
+      line-height: normal;
       font-weight: 700;
       color: #121212;
       text-decoration: none;
       transition: .2s all;
+      margin: 0;
     }
     .logo:hover, .logo:focus, .logo:visited, .logo:active {
       color: #121212;
@@ -42,10 +45,10 @@
   <div class="header">
     <div class="container">
       <div class="flex flex-align-items-center flex-space-between padding-top-1rem padding-bottom-1rem">
-        <a class="flex flex-align-items-center logo block" href="index.html">
+        <h1 class="flex flex-align-items-center logo block">
           <img style="height: 30px; margin-right: .5rem;" class="block" src="logo.svg" alt="Base">
           <span>Base Styleguide</span>
-        </a>
+        </h1>
         <div class="navigation">
           <a class="navigation-link" href="#typography">Typography</a>
           <a class="navigation-link" href="#headings">Headings</a>
@@ -57,7 +60,7 @@
   </div>
   <div id="typography" class="padding-top-2rem">
     <div class="container">
-      <h1 class="h2">Typography</h1>
+      <h2>Typography</h2>
       <div class="row">
         <div class="col-12">
           <div class="card">
@@ -67,9 +70,10 @@
               <strong class="h1 block">Aa <small class="h6 font-400">Bold</small></strong>
             </div>
             <div style="border-bottom: 1px solid #eee; border-top: 1px solid #eee;" class="padding-1rem">
-              <code class="block">base-font-family: sans-serif<br>base-font-size: 16px<br>base-line-height: 22px</code>
+              <code class="block h6">base-font-family: sans-serif<br>base-font-size: 16px<br>base-line-height: 22px</code>
             </div>
             <div class="padding-1rem">
+              <h3>Body &amp; Elements</h3>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -100,6 +104,12 @@
               </p>
               <hr>
               <address>Address: this is an example of how the address element looks</address>
+              <hr>
+<pre>
+  &lt;pre&gt;
+    This is a pre block and code is awesome!
+  &lt;/pre&gt;
+</pre>
             </div>
           </div>
         </div>
@@ -108,13 +118,15 @@
   </div>
   <div id="headings" class="padding-top-2rem">
     <div class="container">
-      <h1 class="h2">Headings</h1>
+      <h2>Headings</h2>
       <div class="row">
         <div class="col-12 padding-bottom-1rem">
           <div class="card">
             <div class="padding-0-5rem">
-              <strong class="h1">All Headings</strong>
-              <code class="block">base-heading-font-family: sans-serif</code>
+              <div class="padding-bottom-0-5rem">
+                <strong class="h1">All Headings</strong>
+              </div>
+              <code class="block h6">base-heading-font-family: sans-serif</code>
             </div>
           </div>
         </div>
@@ -122,11 +134,11 @@
           <div class="card">
             <div class="padding-0-5rem padding-bottom-1rem">
               <strong style="min-height: 50px;" class="block h1">Heading 1 <small>&lt;h1&gt;</small></strong>
-              <code class="block">base-h1-font-size: 32px<br>base-h1-line-height: 38px<br>base-h1-font-weight: 700<br>base-h1-color: #121212</code>
+              <code class="block h6">base-h1-font-size: 32px<br>base-h1-line-height: 38px<br>base-h1-font-weight: 700<br>base-h1-color: #121212</code>
             </div>
             <div style="border-top: 1px solid #eee;" class="padding-0-5rem">
               <strong style="min-height: 50px;" class="block h1">class .h1</strong>
-              <code class="block">base-h1-font-size: 32px<br>base-h1-line-height: 38px;</code>
+              <code class="block h6">base-h1-font-size: 32px<br>base-h1-line-height: 38px;</code>
             </div>
           </div>
         </div>
@@ -134,11 +146,11 @@
           <div class="card">
             <div class="padding-0-5rem padding-bottom-1rem">
               <strong style="min-height: 50px;" class="block h2">Heading 2 <small>&lt;h2&gt;</small></strong>
-              <code class="block">base-h2-font-size: 26px<br>base-h2-line-height: 32px<br>base-h2-font-weight: 700<br>base-h2-color: #121212</code>
+              <code class="block h6">base-h2-font-size: 26px<br>base-h2-line-height: 32px<br>base-h2-font-weight: 700<br>base-h2-color: #121212</code>
             </div>
             <div style="border-top: 1px solid #eee;" class="padding-0-5rem">
               <strong style="min-height: 50px;" class="block h2">class .h2</strong>
-              <code class="block">base-h2-font-size: 26px<br>base-h2-line-height: 32px</code>
+              <code class="block h6">base-h2-font-size: 26px<br>base-h2-line-height: 32px</code>
             </div>
           </div>
         </div>
@@ -146,11 +158,11 @@
           <div class="card">
             <div class="padding-0-5rem padding-bottom-1rem">
               <strong style="min-height: 50px;" class="block h3">Heading 3 <small>&lt;h3&gt;</small></strong>
-              <code class="block">base-h3-font-size: 22px<br>base-h3-line-height: 28px<br>base-h3-font-weight: 700<br>base-h3-color: #121212</code>
+              <code class="block h6">base-h3-font-size: 22px<br>base-h3-line-height: 28px<br>base-h3-font-weight: 700<br>base-h3-color: #121212</code>
             </div>
             <div style="border-top: 1px solid #eee;" class="padding-0-5rem">
               <strong style="min-height: 50px;" class="block h3">class .h3</strong>
-              <code class="block">base-h3-font-size: 22px<br>base-h3-line-height: 28px</code>
+              <code class="block h6">base-h3-font-size: 22px<br>base-h3-line-height: 28px</code>
             </div>
           </div>
         </div>
@@ -158,11 +170,11 @@
           <div class="card">
             <div class="padding-0-5rem padding-bottom-1rem">
               <strong style="min-height: 50px;" class="block h4">Heading 4 <small>&lt;h4&gt;</small></strong>
-              <code class="block">base-h4-font-size: 18px<br>base-h4-line-height: 24px<br>base-h4-font-weight: 700<br>base-h4-color: #121212</code>
+              <code class="block h6">base-h4-font-size: 18px<br>base-h4-line-height: 24px<br>base-h4-font-weight: 700<br>base-h4-color: #121212</code>
             </div>
             <div style="border-top: 1px solid #eee;" class="padding-0-5rem">
               <strong style="min-height: 50px;" class="block h4">class .h4</strong>
-              <code class="block">base-h4-font-size: 18px<br>base-h4-line-height: 24px</code>
+              <code class="block h6">base-h4-font-size: 18px<br>base-h4-line-height: 24px</code>
             </div>
           </div>
         </div>
@@ -170,11 +182,11 @@
           <div class="card">
             <div class="padding-0-5rem padding-bottom-1rem">
               <strong style="min-height: 50px;" class="block h4">Heading 5 <small>&lt;h5&gt;</small></strong>
-              <code class="block">base-h5-font-size: 16px<br>base-h5-line-height: 22px<br>base-h5-font-weight: 700<br>base-h5-color: #121212</code>
+              <code class="block h6">base-h5-font-size: 16px<br>base-h5-line-height: 22px<br>base-h5-font-weight: 700<br>base-h5-color: #121212</code>
             </div>
             <div style="border-top: 1px solid #eee;" class="padding-0-5rem">
               <strong style="min-height: 50px;" class="block h5">class .h5</strong>
-              <code class="block">base-h5-font-size: 16px<br>base-h5-line-height: 22px</code>
+              <code class="block h6">base-h5-font-size: 16px<br>base-h5-line-height: 22px</code>
             </div>
           </div>
         </div>
@@ -182,11 +194,11 @@
           <div class="card">
             <div class="padding-0-5rem padding-bottom-1rem">
               <strong style="min-height: 50px;" class="block h4">Heading 6 <small>&lt;h6&gt;</small></strong>
-              <code class="block">base-h6-font-size: 14px<br>base-h6-line-height: 20px<br>base-h6-font-weight: 700<br>base-h6-color: #121212</code>
+              <code class="block h6">base-h6-font-size: 14px<br>base-h6-line-height: 20px<br>base-h6-font-weight: 700<br>base-h6-color: #121212</code>
             </div>
             <div style="border-top: 1px solid #eee;" class="padding-0-5rem">
               <strong style="min-height: 50px;" class="block h6">class .h6</strong>
-              <code class="block">base-h6-font-size: 14px<br>base-h6-line-height: 20px</code>
+              <code class="block h6">base-h6-font-size: 14px<br>base-h6-line-height: 20px</code>
             </div>
           </div>
         </div>
@@ -195,7 +207,7 @@
   </div>
   <div id="colors" class="padding-top-2rem">
     <div class="container">
-      <h1 class="h2">Colors</h1>
+      <h2>Colors</h2>
       <div class="row">
         <div class="col-12 padding-bottom-1rem col-1-3-m col-1-4-l">
           <div class="card">
@@ -310,7 +322,7 @@
   </div>
   <div id="typography-helpers" class="padding-top-2rem">
     <div class="container">
-      <h1 class="h2">Typography Helpers</h1>
+      <h2>Typography Helpers</h2>
       <div class="row">
         <div class="col-12">
           <div class="card">
@@ -324,7 +336,7 @@
               <tbody>
                 <tr>
                   <td>
-                    <code>.font-100</code>
+                    <code class="h6">.font-100</code>
                   </td>
                   <td>
                     <span class="block font-100">Sets a font weight of 100 for mobile devices and up</span>
@@ -332,7 +344,7 @@
                 </tr>
                 <tr>
                   <td>
-                    <code>.font-200</code>
+                    <code class="h6">.font-200</code>
                   </td>
                   <td>
                     <span class="block font-200">Sets a font weight of 200 for mobile devices and up</span>
@@ -340,7 +352,7 @@
                 </tr>
                 <tr>
                   <td>
-                    <code>.font-300</code>
+                    <code class="h6">.font-300</code>
                   </td>
                   <td>
                     <span class="block font-300">Sets a font weight of 300 for mobile devices and up</span>
@@ -348,7 +360,7 @@
                 </tr>
                 <tr>
                   <td>
-                    <code>.font-400</code>
+                    <code class="h6">.font-400</code>
                   </td>
                   <td>
                     <span class="block font-400">Sets a font weight of 400 for mobile devices and up</span>
@@ -356,7 +368,7 @@
                 </tr>
                 <tr>
                   <td>
-                    <code>.font-500</code>
+                    <code class="h6">.font-500</code>
                   </td>
                   <td>
                     <span class="block font-500">Sets a font weight of 500 for mobile devices and up</span>
@@ -364,7 +376,7 @@
                 </tr>
                 <tr>
                   <td>
-                    <code>.font-600</code>
+                    <code class="h6">.font-600</code>
                   </td>
                   <td>
                     <span class="block font-600">Sets a font weight of 600 for mobile devices and up</span>
@@ -372,7 +384,7 @@
                 </tr>
                 <tr>
                   <td>
-                    <code>.font-700</code>
+                    <code class="h6">.font-700</code>
                   </td>
                   <td>
                     <span class="block font-700">Sets a font weight of 700 for mobile devices and up</span>
@@ -380,7 +392,7 @@
                 </tr>
                 <tr>
                   <td>
-                    <code>.font-800</code>
+                    <code class="h6">.font-800</code>
                   </td>
                   <td>
                     <span class="block font-800">Sets a font weight of 800 for mobile devices and up</span>
@@ -388,7 +400,7 @@
                 </tr>
                 <tr>
                   <td>
-                    <code>.font-900</code>
+                    <code class="h6">.font-900</code>
                   </td>
                   <td>
                     <span class="block font-900">Sets a font weight of 900 for mobile devices and up</span>
@@ -396,7 +408,7 @@
                 </tr>
                 <tr>
                   <td>
-                    <code>.no-select</code>
+                    <code class="h6">.no-select</code>
                   </td>
                   <td>
                     <span class="block no-select">Disables highlighting and selection for all devices</span>
@@ -404,7 +416,7 @@
                 </tr>
                 <tr>
                   <td>
-                    <code>.uppercase</code>
+                    <code class="h6">.uppercase</code>
                   </td>
                   <td>
                     <span class="block uppercase">Sets text to Uppercase for all devices</span>
@@ -412,7 +424,7 @@
                 </tr>
                 <tr>
                   <td>
-                    <code>.lowercase</code>
+                    <code class="h6">.lowercase</code>
                   </td>
                   <td>
                     <span class="block lowercase">Sets text to Lowercase for all devices</span>
@@ -420,7 +432,7 @@
                 </tr>
                 <tr>
                   <td>
-                    <code>.capitalize</code>
+                    <code class="h6">.capitalize</code>
                   </td>
                   <td>
                     <span class="block capitalize">Sets text to capitalize for all devices</span>
@@ -428,7 +440,7 @@
                 </tr>
                 <tr>
                   <td>
-                    <code>.text-left</code>
+                    <code class="h6">.text-left</code>
                   </td>
                   <td>
                     <span class="block text-left">Aligns text to the left for all devices</span>
@@ -436,7 +448,7 @@
                 </tr>
                 <tr>
                   <td>
-                    <code>.text-right</code>
+                    <code class="h6">.text-right</code>
                   </td>
                   <td>
                     <span class="block text-right">Aligns text to the right for all devices</span>
@@ -444,7 +456,7 @@
                 </tr>
                 <tr>
                   <td>
-                    <code>.text-center</code>
+                    <code class="h6">.text-center</code>
                   </td>
                   <td>
                     <span class="block text-center">Aligns text to the center for all devices</span>
@@ -452,7 +464,7 @@
                 </tr>
                 <tr>
                   <td>
-                    <code>.text-left-m</code>
+                    <code class="h6">.text-left-m</code>
                   </td>
                   <td>
                     <span class="block text-left-m">Aligns text to the left for medium devices and up</span>
@@ -460,7 +472,7 @@
                 </tr>
                 <tr>
                   <td>
-                    <code>.text-right-m</code>
+                    <code class="h6">.text-right-m</code>
                   </td>
                   <td>
                     <span class="block text-right-m">Aligns text to the right for medium devices and up</span>
@@ -468,7 +480,7 @@
                 </tr>
                 <tr>
                   <td>
-                    <code>.text-center-m</code>
+                    <code class="h6">.text-center-m</code>
                   </td>
                   <td>
                     <span class="block text-center-m">Aligns text to the center for medium devices and up</span>
@@ -476,7 +488,7 @@
                 </tr>
                 <tr>
                   <td>
-                    <code>.text-left-l</code>
+                    <code class="h6">.text-left-l</code>
                   </td>
                   <td>
                     <span class="block text-left-l">Aligns text to the left for large devices and up</span>
@@ -484,7 +496,7 @@
                 </tr>
                 <tr>
                   <td>
-                    <code>.text-right-l</code>
+                    <code class="h6">.text-right-l</code>
                   </td>
                   <td>
                     <span class="block text-right-l">Aligns text to the right for large devices and up</span>
@@ -492,7 +504,7 @@
                 </tr>
                 <tr>
                   <td>
-                    <code>.text-center-l</code>
+                    <code class="h6">.text-center-l</code>
                   </td>
                   <td>
                     <span class="block text-center-l">Aligns text to the center for large devices and up</span>
@@ -500,7 +512,7 @@
                 </tr>
                 <tr>
                   <td>
-                    <code>.text-left-xl</code>
+                    <code class="h6">.text-left-xl</code>
                   </td>
                   <td>
                     <span class="block text-left-xl">Aligns text to the left for extra large devices and up</span>
@@ -508,7 +520,7 @@
                 </tr>
                 <tr>
                   <td>
-                    <code>.text-right-xl</code>
+                    <code class="h6">.text-right-xl</code>
                   </td>
                   <td>
                     <span class="block text-right-xl">Aligns text to the right for extra large devices and up</span>
@@ -516,7 +528,7 @@
                 </tr>
                 <tr>
                   <td>
-                    <code>.text-center-xl</code>
+                    <code class="h6">.text-center-xl</code>
                   </td>
                   <td>
                     <span class="block text-center-xl">Aligns text to the center for extra large devices and up</span>
@@ -529,6 +541,15 @@
       </div>
     </div>
   </div>
-
+  <div id="tables" class="padding-top-2rem">
+    <div class="container">
+      <h2>Tables</h2>
+      <div class="row">
+        <div class="col-12">
+          <h3>Table Example</h3>
+        </div>
+      </div>
+    </div>
+  </div>
   </body>
 </html>
