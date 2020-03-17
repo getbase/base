@@ -17,10 +17,8 @@ a {
   color: $base-link-color;
   text-decoration: underline;
   background-color: transparent;
-  -webkit-text-decoration-skip: objects;
   &:hover, &:focus {
     color: $base-link-hover-color;
-    outline-width: 0;
     text-decoration: none;
   }
   &:active {

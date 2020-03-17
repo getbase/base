@@ -5,6 +5,8 @@
 .inline-block { display: inline-block; }
 .inline { display: inline; }
 .flex { display: flex; }
+.flex-wrap { flex-wrap: wrap; }
+.flex-no-wrap { flex-wrap: nowrap; }
 .flex-align-items-center { align-items: center; }
 .flex-space-between { justify-content: space-between; }
 
@@ -13,6 +15,8 @@
   .inline-block-m { display: inline-block; }
   .inline-m { display: inline; }
   .flex-m { display: flex; }
+  .flex-wrap-m { flex-wrap: wrap; }
+  .flex-no-wrap-m { flex-wrap: nowrap; }
   .flex-align-items-center-m { align-items: center; }
   .flex-space-between-m { justify-content: space-between; }
 }
@@ -22,6 +26,8 @@
   .inline-block-l { display: inline-block; }
   .inline-l { display: inline; }
   .flex-l { display: flex; }
+  .flex-wrap-l { flex-wrap: wrap; }
+  .flex-no-wrap-l { flex-wrap: nowrap; }
   .flex-align-items-center-l { align-items: center; }
   .flex-space-between-l { justify-content: space-between; }
 }
@@ -31,6 +37,8 @@
   .inline-block-xl { display: inline-block; }
   .inline-xl { display: inline; }
   .flex-xl { display: flex; }
+  .flex-wrap-xl { flex-wrap: wrap; }
+  .flex-no-wrap-xl { flex-wrap: nowrap; }
   .flex-align-items-center-xl { align-items: center; }
   .flex-space-between-xl { justify-content: space-between; }
 }
