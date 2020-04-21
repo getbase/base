@@ -4,7 +4,7 @@ caption {
   font-weight: 700;
   text-align: left;
   padding: 1rem;
-  border-bottom: 1px solid #e9e9e9;
+  border-bottom: 1px solid $base-table-border-color;
 }
 table {
   font-size: $base-font-size;
@@ -13,15 +13,21 @@ table {
   width: 100%;
   margin: 0;
   text-align: left;
-  border: 1px solid #e9e9e9;
+  border: 1px solid $base-table-border-color;
   thead,
   tbody,
   tfoot {
     td,
     th {
       padding: 1rem;
-      border-bottom: 1px solid #e9e9e9;
-      // border-right: 1px solid #e9e9e9;
+      border-bottom: 1px solid $base-table-border-color;
+      border-right: 1px solid $base-table-border-color;
     }
+  }
+  thead th {
+    background: $base-table-header-background-color;
+    color: #fff;
+    border-bottom: 1px solid $base-table-border-color;
+    border-right: 1px solid $base-table-border-color;
   }
 }

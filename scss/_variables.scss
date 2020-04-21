@@ -54,6 +54,10 @@ $base-code-color:                               #000 !default;
 $base-code-background-color:                    transparent !default;
 $base-code-border-color:                        #e7e7e7 !default;
 
+// Tables
+$base-table-border-color:                       #e9e9e9 !default;
+$base-table-header-background-color:            #343434 !default;
+
 // Layout - Responsive Breakpoints
 $breakpoint-m:  768px !default;
 $breakpoint-l:  980px !default;
@@ -61,7 +65,3 @@ $breakpoint-xl: 1200px !default;
 
 // Grid
 $grid-gutter: 12px !default;
-
-$container-m: ($breakpoint-m - ($grid-gutter * 2)) !default;
-$container-l: ($breakpoint-l - ($grid-gutter * 2)) !default;
-$container-xl: ($breakpoint-xl - ($grid-gutter * 2)) !default;

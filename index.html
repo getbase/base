@@ -9,18 +9,20 @@
 
   <link rel="stylesheet" href="index.css">
   <style type="text/css">
-    .header { background: #f6e58d; }
+    .header {
+      background: #121212;
+    }
     .logo {
       font-size: 16px;
       line-height: normal;
       font-weight: 700;
-      color: #121212;
+      color: #fff;
       text-decoration: none;
       transition: .2s all;
       margin: 0;
     }
     .logo:hover, .logo:focus, .logo:visited, .logo:active {
-      color: #121212;
+      color: #fff;
       opacity: .9;
     }
     .navigation {
@@ -34,7 +36,7 @@
     .navigation-link {
       font-size: 14px;
       line-height: 20px;
-      color: #121212;
+      color: #fff;
       margin: 8px;
       display: block;
     }
@@ -42,7 +44,7 @@
     .navigation-link:focus,
     .navigation-link:visited,
     .navigation-link:active {
-      color: #121212;
+      color: #fff;
     }
     .card {
       border: 1px solid #eee;
@@ -229,9 +231,9 @@
         </div>
         <div class="col-12 padding-bottom-1rem col-1-3-m col-1-4-l">
           <div class="card">
-            <div style="background: #121212;">
+            <div style="background: #343434;">
               <div class="padding-0-5rem">
-                <code class="block h6" style="color: #fff;">base-font-color<br>color: #121212</code>
+                <code class="block h6" style="color: #fff;">base-font-color<br>color: #343434</code>
               </div>
             </div>
           </div>
@@ -256,18 +258,18 @@
         </div>
         <div class="col-12 padding-bottom-1rem col-1-3-m col-1-4-l">
           <div class="card">
-            <div style="background: #121212;">
+            <div style="background: #00e;">
               <div class="padding-0-5rem">
-                <code class="block h6" style="color: #fff;">base-link-active-color<br>color: #121212</code>
+                <code class="block h6" style="color: #fff;">base-link-focus-color<br>color: #00e</code>
               </div>
             </div>
           </div>
         </div>
         <div class="col-12 padding-bottom-1rem col-1-3-m col-1-4-l">
           <div class="card">
-            <div style="background: #551a8b;">
+            <div style="background: #121212;">
               <div class="padding-0-5rem">
-                <code class="block h6" style="color: #fff;">base-link-visited-color<br>color: #551a8b</code>
+                <code class="block h6" style="color: #fff;">base-link-active-color<br>color: #121212</code>
               </div>
             </div>
           </div>
@@ -577,9 +579,33 @@
   </div>
   <div id="containers" class="padding-top-2rem">
     <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <h2>Containers</h2>
+      <h2>Containers</h2>
+    </div>
+    <div class="container">
+      <div style="margin-bottom: 1rem; border: 1px solid #ccc;">
+        <div class="padding-0-5rem">
+          This is a <code>.container</code> which is applied for mobile and above breakpoints
+        </div>
+      </div>
+    </div>
+    <div class="container-m">
+      <div style="margin-bottom: 1rem; border: 1px solid #ccc;">
+        <div class="padding-0-5rem">
+          This is a <code>.container-m</code> which is applied for medium devices and above (full width for mobile. Medium width for medium devices and above)
+        </div>
+      </div>
+    </div>
+    <div class="container-l">
+      <div style="margin-bottom: 1rem; border: 1px solid #ccc;">
+        <div class="padding-0-5rem">
+          This is a <code>.container-l</code> which is applied for large devices and above (full width for mobile. Large width for large devices and above)
+        </div>
+      </div>
+    </div>
+    <div class="container-xl">
+      <div style="margin-bottom: 1rem; border: 1px solid #ccc;">
+        <div class="padding-0-5rem">
+          This is a <code>.container-xl</code> which is applied for extra large devices and above (full width for mobile. Extra Large width for extra large devices and above)
         </div>
       </div>
     </div>

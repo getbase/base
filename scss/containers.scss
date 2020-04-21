@@ -1,7 +1,8 @@
 @import "_variables";
 @import "_mixins";
 
-.container, .container-full {
+.container {
+  max-width: ($breakpoint-xl - $grid-gutter * 2);
   padding-left: $grid-gutter;
   padding-right: $grid-gutter;
   margin-left: auto;
@@ -9,34 +10,34 @@
 }
 
 @include breakpoint(m) {
-  .container-m, .container-full-m {
+  .container-m {
+    width: ($breakpoint-m - $grid-gutter * 2);
+    max-width: auto;
     padding-left: $grid-gutter;
     padding-right: $grid-gutter;
     margin-left: auto;
     margin-right: auto;
   }
-  .container, .container-m { width: $container-m; }
-  .container-full-m { width: auto; }
 }
 
 @include breakpoint(l) {
-  .container-l, .container-full-l {
+  .container-l {
+    width: ($breakpoint-l - $grid-gutter * 2);
+    max-width: auto;
     padding-left: $grid-gutter;
     padding-right: $grid-gutter;
     margin-left: auto;
     margin-right: auto;
   }
-  .container, .container-l { width: $container-l; }
-  .container-full-l { width: auto; }
 }
 
 @include breakpoint(xl) {
-  .container-xl, .container-full-xl {
+  .container-xl {
+    width: ($breakpoint-xl - $grid-gutter * 2);
+    max-width: auto;
     padding-left: $grid-gutter;
     padding-right: $grid-gutter;
     margin-left: auto;
     margin-right: auto;
   }
-  .container, .container-xl { width: $container-xl; }
-  .container-full-xl { width: auto; }
 }
