@@ -65,6 +65,8 @@
           <a class="navigation-link" href="#headings">Headings</a>
           <a class="navigation-link" href="#colors">Colors</a>
           <a class="navigation-link" href="#typography-helpers">Typography Helpers</a>
+          <a class="navigation-link" href="#tables">Tables</a>
+          <a class="navigation-link" href="#containers">Containers</a>
         </div>
       </div>
     </div>
@@ -610,5 +612,16 @@
       </div>
     </div>
   </div>
+  <script>
+    document.addEventListener('click', function(e) {
+      e.preventDefault();
+      var element = event.target;
+      if (element.closest('.navigation-link') !== null) {
+        var id = element.href.split('#')[1];
+        var target = document.getElementById(id);
+        target.scrollIntoView({ behavior: 'smooth' })
+      }
+    })
+  </script>
 </body>
 </html>
