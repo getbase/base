@@ -1,0 +1,88 @@
+@import "_variables";
+
+.field { width: 100%; }
+
+// All Form Elements
+label,
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: $base-input-color;
+  font: inherit;
+  margin: 0;
+  border-radius: 0;
+  transition: .3s all;
+}
+
+// Inputs
+[type="text"],
+[type="email"],
+[type="password"],
+[type="tel"],
+[type="number"],
+[type="date"],
+[type="search"]
+[type="url"] {
+  height: $base-input-height;
+  padding: 8px;
+  background-color: $base-input-background-color;
+  border: $base-input-border-size solid $base-input-border-color;
+  border-radius: $base-input-border-radius;
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+  &:focus {
+    background-color: $base-input-background-focus-color;
+    border-color: $base-input-border-focus-color;
+    outline: 0;
+  }
+}
+
+// Textarea
+textarea {
+  padding: 8px;
+  background-color: $base-input-background-color;
+  border: $base-input-border-size solid $base-input-border-color;
+  border-radius: $base-input-border-radius;
+  overflow: auto;
+  &:focus {
+    background-color: $base-input-background-focus-color;
+    border-color: $base-input-border-focus-color;
+    outline: 0;
+  }
+}
+
+// Select
+select {
+  text-transform: none;
+  height: $base-input-height;
+  padding: 0 8px;
+  background-color: $base-input-background-color;
+  border: $base-input-border-size solid $base-input-border-color;
+  border-radius: $base-input-border-radius;
+  &:focus {
+    background-color: $base-input-background-focus-color;
+    border-color: $base-input-border-focus-color;
+    outline: 0;
+  }
+}
+
+// Buttons
+button {
+  border-radius: 0;
+  overflow: visible;
+  text-transform: none;
+  cursor: pointer;
+}
+
+.disabled,
+[disabled] {
+  opacity: .4;
+  user-select: none;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+// Placeholder
+::placeholder { color: $base-input-placeholder-color; }

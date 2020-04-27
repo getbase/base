@@ -1,3 +1,5 @@
+@import "_variables";
+
 // Font Weights
 .font-100 { font-weight: 100; }
 .font-200 { font-weight: 200; }
@@ -11,9 +13,6 @@
 
 // No Selection
 .no-select {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
   cursor: default;
 }

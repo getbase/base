@@ -23,6 +23,14 @@ function scss() {
 }
 
 // SCSS Modules
+function animationsScss() {
+  return src('./scss/animations.scss')
+    .pipe(sass())
+    .on('error', sass.logError)
+    .pipe(postcss([autoprefixer(), cssnano()]))
+    .pipe(dest('./'))
+}
+
 function coreScss() {
   return src('./scss/core.scss')
     .pipe(sass())
@@ -87,6 +95,22 @@ function gridScss() {
     .pipe(dest('./'))
 }
 
+function microGridScss() {
+  return src('./scss/micro-grid.scss')
+    .pipe(sass())
+    .on('error', sass.logError)
+    .pipe(postcss([autoprefixer(), cssnano()]))
+    .pipe(dest('./'))
+}
+
+function formsScss() {
+  return src('./scss/forms.scss')
+    .pipe(sass())
+    .on('error', sass.logError)
+    .pipe(postcss([autoprefixer(), cssnano()]))
+    .pipe(dest('./'))
+}
+
 function layoutSpacersScss() {
   return src('./scss/layout-spacers.scss')
     .pipe(sass())
@@ -106,6 +130,7 @@ function displayHelpersScss() {
 // Clean Up (deleted `dist` folder)
 function clean() {
   return del([
+    './animations.css',
     './index.css',
     './core.css',
     './typography.css',
@@ -115,6 +140,8 @@ function clean() {
     './tables.css',
     './containers.css',
     './grid.css',
+    './micro-grid.css',
+    './forms.css',
     './layout-spacers.css',
     './display-helpers.css'
   ]);
@@ -135,6 +162,7 @@ function server() {
 exports.clean = clean;
 exports.compileScssModulesToCss = parallel(
   coreScss,
+  animationsScss,
   typographyScss,
   typographyHelpersScss,
   codeScss,
@@ -142,6 +170,8 @@ exports.compileScssModulesToCss = parallel(
   tablesScss,
   containersScss,
   gridScss,
+  microGridScss,
+  formsScss,
   layoutSpacersScss,
   displayHelpersScss
 );
@@ -149,6 +179,7 @@ exports.build = parallel(
   html,
   scss,
   coreScss,
+  animationsScss,
   typographyScss,
   typographyHelpersScss,
   codeScss,
@@ -156,6 +187,8 @@ exports.build = parallel(
   tablesScss,
   containersScss,
   gridScss,
+  microGridScss,
+  formsScss,
   layoutSpacersScss,
   displayHelpersScss
 );

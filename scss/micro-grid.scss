@@ -1,5 +1,6 @@
 @import "_variables";
 @import "_mixins";
+
 // Rows
 .row {
   display: flex;
@@ -9,18 +10,6 @@
   margin-right: -$grid-gutter;
 }
 // Columns
-.col-1,
-.col-2,
-.col-3,
-.col-4,
-.col-5,
-.col-6,
-.col-7,
-.col-8,
-.col-9,
-.col-10,
-.col-11,
-.col-12,
 .col-1-2,
 .col-1-3,
 .col-2-3,
@@ -36,13 +25,6 @@
 }
 
 // Columns
-$columns: 12;
-@for $i from 1 through $columns {
-  .col-#{$i} {
-    flex: 0 0 ($i / $columns) * 100%;
-    max-width: ($i / $columns) * 100%;
-  }
-}
 .col-1-2 {
   flex: 0 0 (6 / 12) * 100%;
   max-width: (6 / 12) * 100%;
@@ -95,18 +77,6 @@ $columns: 12;
     margin-right: -$grid-gutter;
   }
   // Columns (Medium Devices)
-  .col-1-m,
-  .col-2-m,
-  .col-3-m,
-  .col-4-m,
-  .col-5-m,
-  .col-6-m,
-  .col-7-m,
-  .col-8-m,
-  .col-9-m,
-  .col-10-m,
-  .col-11-m,
-  .col-12-m,
   .col-1-2-m,
   .col-1-3-m,
   .col-2-3-m,
@@ -122,13 +92,6 @@ $columns: 12;
   }
 
   // Columns (Medium Devices)
-  $columns: 12;
-  @for $i from 1 through $columns {
-    .col-#{$i}-m {
-      flex: 0 0 ($i / $columns) * 100%;
-      max-width: ($i / $columns) * 100%;
-    }
-  }
   .col-1-2-m {
     flex: 0 0 (6 / 12) * 100%;
     max-width: (6 / 12) * 100%;
@@ -182,18 +145,6 @@ $columns: 12;
     margin-right: -$grid-gutter;
   }
   // Columns (Large Devices)
-  .col-1-l,
-  .col-2-l,
-  .col-3-l,
-  .col-4-l,
-  .col-5-l,
-  .col-6-l,
-  .col-7-l,
-  .col-8-l,
-  .col-9-l,
-  .col-10-l,
-  .col-11-l,
-  .col-12-l,
   .col-1-2-l,
   .col-1-3-l,
   .col-2-3-l,
@@ -209,13 +160,6 @@ $columns: 12;
   }
 
   // Columns (Large Devices)
-  $columns: 12;
-  @for $i from 1 through $columns {
-    .col-#{$i}-l {
-      flex: 0 0 ($i / $columns) * 100%;
-      max-width: ($i / $columns) * 100%;
-    }
-  }
   .col-1-2-l {
     flex: 0 0 (6 / 12) * 100%;
     max-width: (6 / 12) * 100%;
@@ -269,18 +213,6 @@ $columns: 12;
     margin-right: -$grid-gutter;
   }
   // Columns (Extra Large Devices)
-  .col-1-xl,
-  .col-2-xl,
-  .col-3-xl,
-  .col-4-xl,
-  .col-5-xl,
-  .col-6-xl,
-  .col-7-xl,
-  .col-8-xl,
-  .col-9-xl,
-  .col-10-xl,
-  .col-11-xl,
-  .col-12-xl,
   .col-1-2-xl,
   .col-1-3-xl,
   .col-2-3-xl,
@@ -296,13 +228,6 @@ $columns: 12;
   }
 
   // Columns (Extra Large Devices)
-  $columns: 12;
-  @for $i from 1 through $columns {
-    .col-#{$i}-xl {
-      flex: 0 0 ($i / $columns) * 100%;
-      max-width: ($i / $columns) * 100%;
-    }
-  }
   .col-1-2-xl {
     flex: 0 0 (6 / 12) * 100%;
     max-width: (6 / 12) * 100%;
