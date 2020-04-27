@@ -5,8 +5,11 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+html { line-height: 1.15; }
 
-// Hide visually, but have it available for screenreaders: : h5bp.com/v
+body { margin: 0; }
+
+// Hide visually, but have it available for screenreaders
 .sr {
   border: 0;
   clip: rect(0 0 0 0);
