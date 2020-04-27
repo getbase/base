@@ -17,8 +17,12 @@ a {
   color: $base-link-color;
   text-decoration: underline;
   background-color: transparent;
-  &:hover, &:focus {
+  &:hover {
     color: $base-link-hover-color;
+    text-decoration: none;
+  }
+  &:focus {
+    color: $base-link-focus-color;
     text-decoration: none;
   }
   &:active {
