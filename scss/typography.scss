@@ -1,13 +1,10 @@
-@import "_mixins";
-@import "_variables";
-
 body {
-  font-family: $base-font-family;
-  font-size: $base-font-size;
-  line-height: $base-line-height;
-  color: $base-font-color;
-  font-weight: $base-font-weight;
-  background: $base-background-color;
+  font-family: sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  color: #333;
+  font-weight: 400;
+  background: #fff;
 }
 
 main, details { display: block; }
