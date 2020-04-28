@@ -21,13 +21,14 @@ Lightweight and minimal code. Spend less time overriding styles and focus more t
 * [Templates](#templates)
 * [Support](#support)
 * [Authors](#authors)
+* [Credits](#credits)
 * [License](#license)
 
 * * *
 
 ## Overview
 
-Base itself is a pretty thin CSS framework built for modern browsers. Include what you need on top of Base such as custom typography, custom grids, components and make it yours.
+Base itself is a pretty thin CSS framework built on top of Normalize CSS. Include what you need on top of Base such as custom typography, custom grids, components and make it yours.
 
 * * *
 
@@ -94,6 +95,8 @@ Once you have Base installed, you can choose what to import and include your own
 
 The best way to get started is to view the [Base Styleguide](#)
 
+* * *
+
 ## Templates
 
 There are a [collection of free templates built with Base](https://gumroad.com/getbase) which are available to download on Gumroad.
@@ -102,8 +105,14 @@ There are a [collection of free templates built with Base](https://gumroad.com/g
 
 ## Support
 
-* IE11+ and all other modern browsers.
+* IE10+ and all other modern browsers.
 * Please specify browsers you need to support in `package.json` according to [browserslist docs](https://github.com/ai/browserslist#queries).
+
+* * *
+
+## Credits
+
+* Thanks to [Nicolas Gallagher (@necolas)](https://github.com/necolas/) for (Normalize.css)[https://github.com/necolas/normalize.css/]
 
 * * *
 

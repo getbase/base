@@ -23,14 +23,6 @@ function scss() {
 }
 
 // SCSS Modules
-function animationsScss() {
-  return src('./scss/animations.scss')
-    .pipe(sass())
-    .on('error', sass.logError)
-    .pipe(postcss([autoprefixer(), cssnano()]))
-    .pipe(dest('./'))
-}
-
 function coreScss() {
   return src('./scss/core.scss')
     .pipe(sass())
@@ -47,8 +39,16 @@ function typographyScss() {
     .pipe(dest('./'))
 }
 
-function typographyHelpersScss() {
-  return src('./scss/typography-helpers.scss')
+function headingsScss() {
+  return src('./scss/headings.scss')
+    .pipe(sass())
+    .on('error', sass.logError)
+    .pipe(postcss([autoprefixer(), cssnano()]))
+    .pipe(dest('./'))
+}
+
+function tablesScss() {
+  return src('./scss/tables.scss')
     .pipe(sass())
     .on('error', sass.logError)
     .pipe(postcss([autoprefixer(), cssnano()]))
@@ -63,16 +63,8 @@ function codeScss() {
     .pipe(dest('./'))
 }
 
-function blockquotesScss() {
-  return src('./scss/blockquotes.scss')
-    .pipe(sass())
-    .on('error', sass.logError)
-    .pipe(postcss([autoprefixer(), cssnano()]))
-    .pipe(dest('./'))
-}
-
-function tablesScss() {
-  return src('./scss/tables.scss')
+function formsScss() {
+  return src('./scss/forms.scss')
     .pipe(sass())
     .on('error', sass.logError)
     .pipe(postcss([autoprefixer(), cssnano()]))
@@ -95,16 +87,32 @@ function gridScss() {
     .pipe(dest('./'))
 }
 
-function formsScss() {
-  return src('./scss/forms.scss')
+function horizontalSpacersScss() {
+  return src('./scss/horizontal-spacers.scss')
     .pipe(sass())
     .on('error', sass.logError)
     .pipe(postcss([autoprefixer(), cssnano()]))
     .pipe(dest('./'))
 }
 
-function layoutSpacersScss() {
-  return src('./scss/layout-spacers.scss')
+function verticalSpacersScss() {
+  return src('./scss/vertical-spacers.scss')
+    .pipe(sass())
+    .on('error', sass.logError)
+    .pipe(postcss([autoprefixer(), cssnano()]))
+    .pipe(dest('./'))
+}
+
+function spacersScss() {
+  return src('./scss/spacers.scss')
+    .pipe(sass())
+    .on('error', sass.logError)
+    .pipe(postcss([autoprefixer(), cssnano()]))
+    .pipe(dest('./'))
+}
+
+function typographyHelpersScss() {
+  return src('./scss/typography-helpers.scss')
     .pipe(sass())
     .on('error', sass.logError)
     .pipe(postcss([autoprefixer(), cssnano()]))
@@ -119,22 +127,32 @@ function displayHelpersScss() {
     .pipe(dest('./'))
 }
 
+function flexHelpersScss() {
+  return src('./scss/flex-helpers.scss')
+    .pipe(sass())
+    .on('error', sass.logError)
+    .pipe(postcss([autoprefixer(), cssnano()]))
+    .pipe(dest('./'))
+}
+
 // Clean Up (deleted `dist` folder)
 function clean() {
   return del([
-    './animations.css',
     './index.css',
     './core.css',
     './typography.css',
-    './typography-helpers.css',
-    './code.css',
-    './blockquotes.css',
+    './headings.css',
     './tables.css',
+    './code.css',
     './containers.css',
     './grid.css',
     './forms.css',
-    './layout-spacers.css',
-    './display-helpers.css'
+    './horizontal-spacers.css',
+    './vertical-spacers.css',
+    './spacers.css',
+    './typography-helpers.css',
+    './display-helpers.css',
+    './flex-helpers.css'
   ]);
 }
 
@@ -153,33 +171,37 @@ function server() {
 exports.clean = clean;
 exports.compileScssModulesToCss = parallel(
   coreScss,
-  animationsScss,
   typographyScss,
-  typographyHelpersScss,
-  codeScss,
-  blockquotesScss,
+  headingsScss,
   tablesScss,
+  codeScss,
+  formsScss,
   containersScss,
   gridScss,
-  formsScss,
-  layoutSpacersScss,
-  displayHelpersScss
+  horizontalSpacersScss,
+  verticalSpacersScss,
+  spacersScss,
+  typographyHelpersScss,
+  displayHelpersScss,
+  flexHelpersScss
 );
 exports.build = parallel(
   html,
   scss,
   coreScss,
-  animationsScss,
   typographyScss,
-  typographyHelpersScss,
-  codeScss,
-  blockquotesScss,
+  headingsScss,
   tablesScss,
+  codeScss,
+  formsScss,
   containersScss,
   gridScss,
-  formsScss,
-  layoutSpacersScss,
-  displayHelpersScss
+  horizontalSpacersScss,
+  verticalSpacersScss,
+  spacersScss,
+  typographyHelpersScss,
+  displayHelpersScss,
+  flexHelpersScss
 );
 exports.default = parallel(
   html,

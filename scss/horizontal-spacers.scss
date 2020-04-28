@@ -1,0 +1,57 @@
+@import "_mixins";
+
+.padding-left-0-25rem { padding-left: 0.25rem; }
+.padding-left-0-5rem { padding-left: 0.5rem; }
+.padding-left-1rem { padding-left: 1rem; }
+.padding-left-1-5rem { padding-left: 1.5rem; }
+.padding-left-2rem { padding-left: 2rem; }
+.padding-right-0-25rem { padding-right: 0.25rem; }
+.padding-right-0-5rem { padding-right: 0.5rem; }
+.padding-right-1rem { padding-right: 1rem; }
+.padding-right-1-5rem { padding-right: 1.5rem; }
+.padding-right-2rem { padding-right: 2rem; }
+
+@include breakpoint(m) {
+  .padding-left-0-m { padding-left: 0; }
+  .padding-left-0-25rem-m { padding-left: 0.25rem; }
+  .padding-left-0-5rem-m { padding-left: 0.5rem; }
+  .padding-left-1rem-m { padding-left: 1rem; }
+  .padding-left-1-5rem-m { padding-left: 1.5rem; }
+  .padding-left-2rem-m { padding-left: 2rem; }
+  .padding-right-0-m { padding-right: 0; }
+  .padding-right-0-25rem-m { padding-right: 0.25rem; }
+  .padding-right-0-5rem-m { padding-right: 0.5rem; }
+  .padding-right-1rem-m { padding-right: 1rem; }
+  .padding-right-1-5rem-m { padding-right: 1.5rem; }
+  .padding-right-2rem-m { padding-right: 2rem; }
+}
+
+@include breakpoint(l) {
+  .padding-left-0-l { padding-left: 0; }
+  .padding-left-0-25rem-l { padding-left: 0.25rem; }
+  .padding-left-0-5rem-l { padding-left: 0.5rem; }
+  .padding-left-1rem-l { padding-left: 1rem; }
+  .padding-left-1-5rem-l { padding-left: 1.5rem; }
+  .padding-left-2rem-l { padding-left: 2rem; }
+  .padding-right-0-l { padding-right: 0; }
+  .padding-right-0-25rem-l { padding-right: 0.25rem; }
+  .padding-right-0-5rem-l { padding-right: 0.5rem; }
+  .padding-right-1rem-l { padding-right: 1rem; }
+  .padding-right-1-5rem-l { padding-right: 1.5rem; }
+  .padding-right-2rem-l { padding-right: 2rem; }
+}
+
+@include breakpoint(xl) {
+  .padding-left-0-xl { padding-left: 0; }
+  .padding-left-0-25rem-xl { padding-left: 0.25rem; }
+  .padding-left-0-5rem-xl { padding-left: 0.5rem; }
+  .padding-left-1rem-xl { padding-left: 1rem; }
+  .padding-left-1-5rem-xl { padding-left: 1.5rem; }
+  .padding-left-2rem-xl { padding-left: 2rem; }
+  .padding-right-0-xl { padding-right: 0; }
+  .padding-right-0-25rem-xl { padding-right: 0.25rem; }
+  .padding-right-0-5rem-xl { padding-right: 0.5rem; }
+  .padding-right-1rem-xl { padding-right: 1rem; }
+  .padding-right-1-5rem-xl { padding-right: 1.5rem; }
+  .padding-right-2rem-xl { padding-right: 2rem; }
+}

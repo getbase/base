@@ -1,0 +1,54 @@
+@import "_variables";
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $base-heading-font-family;
+  margin: 0.67rem 0;
+}
+h1, .h1 {
+  font-size: $base-h1-font-size;
+  line-height: $base-h1-line-height;
+}
+h2, .h2 {
+  font-size: $base-h2-font-size;
+  line-height: $base-h2-line-height;
+}
+h3, .h3 {
+  font-size: $base-h3-font-size;
+  line-height: $base-h3-line-height;
+}
+h4, .h4 {
+  font-size: $base-h4-font-size;
+  line-height: $base-h4-line-height;
+}
+h5, .h5 {
+  font-size: $base-h5-font-size;
+  line-height: $base-h5-line-height;
+}
+h6, .h6 {
+  font-size: $base-h6-font-size;
+  line-height: $base-h6-line-height;
+}
+h1 {
+  color: $base-h1-color;
+  font-weight: $base-h1-font-weight;
+}
+h2 {
+  color: $base-h2-color;
+  font-weight: $base-h2-font-weight;
+}
+h3 {
+  color: $base-h3-color;
+  font-weight: $base-h3-font-weight;
+}
+h4 {
+  color: $base-h4-color;
+  font-weight: $base-h4-font-weight;
+}
+h5 {
+  color: $base-h5-color;
+  font-weight: $base-h5-font-weight;
+}
+h6 {
+  color: $base-h6-color;
+  font-weight: $base-h6-font-weight;
+}

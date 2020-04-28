@@ -1,0 +1,30 @@
+@import "_mixins";
+
+.flex-wrap { flex-wrap: wrap; }
+.flex-no-wrap { flex-wrap: nowrap; }
+.flex-align-items-center { align-items: center; }
+.flex-space-between { justify-content: space-between; }
+
+@include breakpoint(m) {
+  .flex-m { display: flex; }
+  .flex-wrap-m { flex-wrap: wrap; }
+  .flex-no-wrap-m { flex-wrap: nowrap; }
+  .flex-align-items-center-m { align-items: center; }
+  .flex-space-between-m { justify-content: space-between; }
+}
+
+@include breakpoint(l) {
+  .flex-l { display: flex; }
+  .flex-wrap-l { flex-wrap: wrap; }
+  .flex-no-wrap-l { flex-wrap: nowrap; }
+  .flex-align-items-center-l { align-items: center; }
+  .flex-space-between-l { justify-content: space-between; }
+}
+
+@include breakpoint(xl) {
+  .flex-xl { display: flex; }
+  .flex-wrap-xl { flex-wrap: wrap; }
+  .flex-no-wrap-xl { flex-wrap: nowrap; }
+  .flex-align-items-center-xl { align-items: center; }
+  .flex-space-between-xl { justify-content: space-between; }
+}

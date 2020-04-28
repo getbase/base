@@ -1,13 +1,15 @@
 *, *:before, *:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-html { line-height: 1.15; }
+
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+}
 
 body { margin: 0; }
 
-// Hide visually, but have it available for screenreaders
+// Hide visually, but make it readable for screenreaders
 .sr {
   border: 0;
   clip: rect(0 0 0 0);

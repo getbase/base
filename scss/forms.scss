@@ -1,116 +1,80 @@
-@import "_mixins";
-@import "_variables";
-
-// All Form Elements
-fieldset {
-  padding: 0;
-  border: 0;
-}
-
-legend {
-  box-sizing: border-box;
-  color: inherit;
-  display: table;
-  max-width: 100%;
-  padding: 0;
-  white-space: normal;
-}
-
-label { cursor: pointer; }
-
-label,
 button,
 input,
 optgroup,
 select,
 textarea {
-  color: $base-input-color;
-  font: inherit;
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
   margin: 0;
-  border-radius: 0;
-  transition: .3s all;
 }
 
-// Inputs
-[type="text"],
-[type="email"],
-[type="password"],
-[type="tel"],
-[type="number"],
-[type="date"],
-[type="search"],
-[type="url"] {
-  height: $base-input-height;
-  padding: 8px;
-  background-color: $base-input-background-color;
-  border: $base-input-border-size solid $base-input-border-color;
-  border-radius: $base-input-border-radius;
-  appearance: none;
-  width: 100%;
-  display: block;
-  &:focus {
-    background-color: $base-input-background-focus-color;
-    border-color: $base-input-border-focus-color;
-    outline: 0;
-  }
-}
+button, input { overflow: visible; }
 
-// Textarea
-textarea {
-  padding: 8px;
-  background-color: $base-input-background-color;
-  border: $base-input-border-size solid $base-input-border-color;
-  border-radius: $base-input-border-radius;
-  overflow: auto;
-  width: 100%;
-  display: block;
-  &:focus {
-    background-color: $base-input-background-focus-color;
-    border-color: $base-input-border-focus-color;
-    outline: 0;
-  }
-}
+button, select { text-transform: none; }
 
-// Select
-select {
-  text-transform: none;
-  height: $base-input-height;
-  padding: 0 8px;
-  background-color: $base-input-background-color;
-  border: $base-input-border-size solid $base-input-border-color;
-  border-radius: $base-input-border-radius;
-  width: 100%;
-  display: block;
-  &:focus {
-    background-color: $base-input-background-focus-color;
-    border-color: $base-input-border-focus-color;
-    outline: 0;
-  }
-}
-
-// Buttons
 button,
+[type="button"],
+[type="reset"],
 [type="submit"] {
-  border-radius: $base-button-border-radius;
-  overflow: visible;
-  text-transform: none;
-  cursor: pointer;
-  background: $base-button-background-color;
-  border: $base-button-border-size solid $base-button-border-color;
-  padding: 6px 24px;
-  &:hover, &:focus {
-    border-color: $base-button-border-focus-color;
-    background: $base-button-background-focus-color;
-  }
+  -webkit-appearance: button;
 }
 
-.disabled,
-[disabled] {
-  opacity: .4;
-  user-select: none;
-  pointer-events: none;
-  cursor: not-allowed;
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
 }
 
-// Placeholder
-::placeholder { color: $base-input-placeholder-color; }
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+legend {
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+
+progress {
+  vertical-align: baseline;
+}
+
+textarea {
+  overflow: auto;
+}
+
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type="search"] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
