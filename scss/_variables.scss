@@ -59,6 +59,18 @@ $base-code-border-color:                        #e7e7e7 !default;
 $base-table-border-color:                       #e9e9e9 !default;
 $base-table-header-background-color:            #343434 !default;
 
+// Forms
+$base-input-height:                             36px !default;
+$base-input-placeholder-color:                  #999 !default;
+$base-input-border-size:                        1px !default;
+$base-input-color:                              #000 !default;
+$base-input-background-color:                   #fff !default;
+$base-input-background-focus-color:             #fff !default;
+$base-input-border-radius:                      0px !default;
+$base-input-border-color:                       #ccc !default;
+$base-input-border-focus-color:                 #000 !default;
+$base-select-box-height:                        36px !default;
+
 // Layout - Responsive Breakpoints
 $breakpoint-m:  768px !default;
 $breakpoint-l:  980px !default;
