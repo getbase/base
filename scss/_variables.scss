@@ -64,19 +64,20 @@ $base-table-secondary-background-color:         #f6f8fa !default;
 $base-input-height:                             36px !default;
 $base-input-placeholder-color:                  #999 !default;
 $base-input-border-size:                        1px !default;
-$base-input-color:                              #000 !default;
+$base-input-color:                              #121212 !default;
 $base-input-background-color:                   #fff !default;
 $base-input-background-focus-color:             #fff !default;
 $base-input-border-radius:                      0px !default;
-$base-input-border-color:                       #777 !default;
-$base-input-border-focus-color:                 #000 !default;
+$base-input-border-color:                       #ccc !default;
+$base-input-border-focus-color:                 #555 !default;
 $base-select-box-height:                        36px !default;
 $base-button-color:                             #121212 !default;
 $base-button-background-color:                  #fff !default;
 $base-button-border-radius:                     0px !default;
 $base-button-border-size:                       1px !default;
-$base-button-border-color:                      #777 !default;
-$base-button-border-focus-color:                #ccc !default;
+$base-button-border-color:                      #ccc !default;
+$base-button-border-focus-color:                #eee !default;
+$base-button-background-focus-color:            #eee !default;
 
 // Layout - Responsive Breakpoints
 $breakpoint-m:  768px !default;
