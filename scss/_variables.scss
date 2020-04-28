@@ -67,9 +67,15 @@ $base-input-color:                              #000 !default;
 $base-input-background-color:                   #fff !default;
 $base-input-background-focus-color:             #fff !default;
 $base-input-border-radius:                      0px !default;
-$base-input-border-color:                       #ccc !default;
+$base-input-border-color:                       #777 !default;
 $base-input-border-focus-color:                 #000 !default;
 $base-select-box-height:                        36px !default;
+$base-button-color:                             #121212 !default;
+$base-button-background-color:                  #fff !default;
+$base-button-border-radius:                     0px !default;
+$base-button-border-size:                       1px !default;
+$base-button-border-color:                      #777 !default;
+$base-button-border-focus-color:                #ccc !default;
 
 // Layout - Responsive Breakpoints
 $breakpoint-m:  768px !default;

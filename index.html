@@ -8,22 +8,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="index.css">
-  <style type="text/css">
+  <style>
     .header {
       background: #121212;
     }
     .logo {
-      font-size: 16px;
+      font-size: 18px;
       line-height: normal;
       font-weight: 700;
       color: #fff;
       text-decoration: none;
-      transition: .2s all;
+      transition: .3s all;
       margin: 0;
+      cursor: pointer;
     }
-    .logo:hover, .logo:focus, .logo:visited, .logo:active {
+    .logo:hover, .logo:focus {
       color: #fff;
-      opacity: .9;
+      transform: scale(1.02);
     }
     .navigation {
       padding-top: 12px;
@@ -57,8 +58,9 @@
     <div class="container">
       <div class="flex-m flex-align-items-center-m flex-space-between-m padding-top-1rem padding-bottom-1rem">
         <h1 class="flex flex-align-items-center logo block">
-          <img style="height: 30px; margin-right: .5rem;" class="block" src="logo.svg" alt="Base">
-          <span>Base Styleguide</span>
+          <img style="height: 30px; margin-right: 0.825rem;" class="block" src="logo.svg" alt="Base">
+          <span class="sr">Base </span>
+          <span>Styleguide</span>
         </h1>
         <div class="navigation flex-m">
           <a class="navigation-link" href="#typography">Typography</a>
@@ -66,6 +68,7 @@
           <a class="navigation-link" href="#colors">Colors</a>
           <a class="navigation-link" href="#typography-helpers">Typography Helpers</a>
           <a class="navigation-link" href="#tables">Tables</a>
+          <a class="navigation-link" href="#forms">Forms</a>
           <a class="navigation-link" href="#containers">Containers</a>
         </div>
       </div>
@@ -579,6 +582,87 @@
       </div>
     </div>
   </div>
+  <div id="forms" class="padding-top-2rem">
+    <div class="container">
+      <h2>Forms</h2>
+      <div class="col-6 padding-0">
+        <form>
+          <fieldset>
+            <legend class="h3 strong">Legend</legend>
+            <div class="padding-top-1rem">
+              <label for="inputtext">input text label</label>
+              <input placeholder="text" type="text" name="inputtext" id="inputtext">
+            </div>
+            <div class="padding-top-1rem">
+              <label for="inputemail">input email label</label>
+              <input placeholder="email" type="email" name="inputemail" id="inputemail">
+            </div>
+            <div class="padding-top-1rem">
+              <label for="inputpassword">input password label</label>
+              <input placeholder="password" type="password" name="inputpassword" id="inputpassword">
+            </div>
+            <div class="padding-top-1rem">
+              <label for="inputtel">input tel label</label>
+              <input placeholder="tel" type="tel" name="inputtel" id="inputtel">
+            </div>
+            <div class="padding-top-1rem">
+              <label for="inputnumber">input number label</label>
+              <input placeholder="number" type="number" name="inputnumber" id="inputnumber">
+            </div>
+            <div class="padding-top-1rem">
+              <label for="inputdate">input date label</label>
+              <input type="date" name="inputdate" id="inputdate">
+            </div>
+            <div class="padding-top-1rem">
+              <label for="inputsearch">input search label</label>
+              <input placeholder="search" type="search" name="inputsearch" id="inputsearch">
+            </div>
+            <div class="padding-top-1rem">
+              <label for="inputurl">input url label</label>
+              <input placeholder="url" type="url" name="inputurl" id="inputurl">
+            </div>
+            <div class="padding-top-1rem">
+              <label for="textarea">textarea label</label>
+              <textarea name="textarea" id="textarea"></textarea>
+            </div>
+            <div class="padding-top-1rem">
+              <label for="select">select label</label>
+              <select name="select" id="select">
+                <option value="" hidden>Select</option>
+                <option value="html">HTML</option>
+                <option value="css">CSS</option>
+                <option value="js">JS</option>
+              </select>
+            </div>
+            <div class="padding-top-1rem">
+              <div class="flex flex-align-items-center padding-top-0-25rem">
+                <input type="radio" name="radio" id="radio1">
+                <label for="radio1" class="padding-left-0-5rem">radio label 1</label>
+              </div>
+              <div class="flex flex-align-items-center padding-top-0-25rem">
+                <input type="radio" name="radio" id="radio2">
+                <label for="radio2" class="padding-left-0-5rem">radio label 2</label>
+              </div>
+            </div>
+            <div class="padding-top-1rem">
+              <div class="flex flex-align-items-center padding-top-0-25rem">
+                <input type="checkbox" name="checkbox" id="checkbox1">
+                <label for="checkbox1" class="padding-left-0-5rem">checkbox label 1</label>
+              </div>
+              <div class="flex flex-align-items-center padding-top-0-25rem">
+                <input type="checkbox" name="checkbox" id="checkbox2">
+                <label for="checkbox2" class="padding-left-0-5rem">checkbox label 2</label>
+              </div>
+            </div>
+            <div class="padding-top-1rem">
+              <button type="button">Button</button>
+              <input type="submit" value="Submit">
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
   <div id="containers" class="padding-top-2rem">
     <div class="container">
       <h2>Containers</h2>
@@ -614,9 +698,9 @@
   </div>
   <script>
     document.addEventListener('click', function(e) {
-      e.preventDefault();
       var element = event.target;
       if (element.closest('.navigation-link') !== null) {
+        e.preventDefault();
         var id = element.href.split('#')[1];
         var target = document.getElementById(id);
         target.scrollIntoView({ behavior: 'smooth' })

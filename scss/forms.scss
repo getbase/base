@@ -1,9 +1,23 @@
 @import "_mixins";
 @import "_variables";
 
-.field { width: 100%; }
-
 // All Form Elements
+fieldset {
+  padding: 0;
+  border: 0;
+}
+
+legend {
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+}
+
+label { cursor: pointer; }
+
 label,
 button,
 input,
@@ -24,15 +38,16 @@ textarea {
 [type="tel"],
 [type="number"],
 [type="date"],
-[type="search"]
+[type="search"],
 [type="url"] {
   height: $base-input-height;
   padding: 8px;
   background-color: $base-input-background-color;
   border: $base-input-border-size solid $base-input-border-color;
   border-radius: $base-input-border-radius;
-  -webkit-appearance: none;
-  -moz-appearance: textfield;
+  appearance: none;
+  width: 100%;
+  display: block;
   &:focus {
     background-color: $base-input-background-focus-color;
     border-color: $base-input-border-focus-color;
@@ -47,6 +62,8 @@ textarea {
   border: $base-input-border-size solid $base-input-border-color;
   border-radius: $base-input-border-radius;
   overflow: auto;
+  width: 100%;
+  display: block;
   &:focus {
     background-color: $base-input-background-focus-color;
     border-color: $base-input-border-focus-color;
@@ -62,6 +79,8 @@ select {
   background-color: $base-input-background-color;
   border: $base-input-border-size solid $base-input-border-color;
   border-radius: $base-input-border-radius;
+  width: 100%;
+  display: block;
   &:focus {
     background-color: $base-input-background-focus-color;
     border-color: $base-input-border-focus-color;
@@ -70,11 +89,18 @@ select {
 }
 
 // Buttons
-button {
-  border-radius: 0;
+button,
+[type="submit"] {
+  border-radius: $base-button-border-radius;
   overflow: visible;
   text-transform: none;
   cursor: pointer;
+  background: $base-button-background-color;
+  border: $base-button-border-size solid $base-button-border-color;
+  padding: 6px 24px;
+  &:hover, &:focus {
+    border-color: $base-button-border-focus-color;
+  }
 }
 
 .disabled,
