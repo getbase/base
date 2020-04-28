@@ -26,8 +26,10 @@ table {
   }
   thead th {
     background: $base-table-header-background-color;
-    color: #fff;
     border-bottom: 1px solid $base-table-border-color;
     border-right: 1px solid $base-table-border-color;
+  }
+  tr:nth-child(2n) {
+    background-color: $base-table-secondary-background-color;
   }
 }

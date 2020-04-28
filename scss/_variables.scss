@@ -52,12 +52,13 @@ $base-code-font-family:                         monospace, monospace !default;
 $base-code-font-size:                           16px !default;
 $base-code-line-height:                         22px !default;
 $base-code-color:                               #000 !default;
-$base-code-background-color:                    transparent !default;
-$base-code-border-color:                        #e7e7e7 !default;
+$base-code-background-color:                    #f1f1f1 !default;
+$base-code-border-color:                        #e9e9e9 !default;
 
 // Tables
 $base-table-border-color:                       #e9e9e9 !default;
-$base-table-header-background-color:            #343434 !default;
+$base-table-header-background-color:            #fff !default;
+$base-table-secondary-background-color:         #f6f8fa !default;
 
 // Forms
 $base-input-height:                             36px !default;

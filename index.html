@@ -50,6 +50,9 @@
     .card {
       border: 1px solid #eee;
     }
+    .table-responsive {
+      overflow-x: auto;
+    }
   </style>
 
 </head>
@@ -95,6 +98,14 @@
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
               </p>
+              <div class="padding-top-1rem padding-bottom-1rem">
+                <blockquote>
+                  <p>
+                    Some blockquote text from a famous author / poet / artist
+                  </p>
+                  <cite>Unknown author</cite>
+                </blockquote>
+              </div>
               <p>
                 The <a href="#">a element</a> example<br>
                 The <abbr>abbr element</abbr> and <abbr title="Title text">abbr element with title</abbr> examples<br>
@@ -123,10 +134,9 @@
               <address>Address: this is an example of how the address element looks</address>
               <hr>
               <pre>
-                &lt;pre&gt;
-                This is a pre block and code is awesome!
-                &lt;/pre&gt;
-              </pre>
+  &lt;pre&gt;
+    This is a pre block and code is awesome!
+  &lt;/pre&gt;</pre>
             </div>
           </div>
         </div>
@@ -670,9 +680,47 @@
       <p>
         Base Containers is a very thin layer which contains styles for containers for all breakpoints.
       </p>
+      <div class="table-responsive">
+        <table>
+          <thead>
+            <tr>
+              <th>Class</th>
+              <th>Purpose</th>
+              <th>Example</th>
+              <th>Outcome</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>.container</code></td>
+              <td>Apply a <code>.container</code></td>
+              <td><code>&lt;div class="container"&gt;This is a container for all breakpoints&lt;/div&gt;</code></td>
+              <td>Applies a <code>.container</code> to a <code>div</code> element for all breakpoints</td>
+            </tr>
+            <tr>
+              <td><code>.container-m</code></td>
+              <td>Apply a <code>.container-m</code></td>
+              <td><code>&lt;div class="container-m"&gt;This is a container for medium devices and above&lt;/div&gt;</code></td>
+              <td>Applies a <code>.container-m</code> to a <code>div</code> element for medium devices and above</td>
+            </tr>
+            <tr>
+              <td><code>.container-l</code></td>
+              <td>Apply a <code>.container-l</code></td>
+              <td><code>&lt;div class="container-l"&gt;This is a container for large devices and above&lt;/div&gt;</code></td>
+              <td>Applies a <code>.container-l</code> to a <code>div</code> element for large devices and above</td>
+            </tr>
+            <tr>
+              <td><code>.container-xl</code></td>
+              <td>Apply a <code>.container-xl</code></td>
+              <td><code>&lt;div class="container-xl"&gt;This is a container for extra large devices and above&lt;/div&gt;</code></td>
+              <td>Applies a <code>.container-xl</code> to a <code>div</code> element for extra large devices and above</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
     <div class="container">
-      <div style="margin-bottom: 1rem; border: 1px solid #ccc;">
+      <div style="margin-top: 2rem; margin-bottom: 1rem; border: 1px solid #ccc;">
         <div class="padding-0-5rem">
           This is a <code>.container</code> which is applied for mobile and above breakpoints
         </div>
@@ -706,10 +754,576 @@
       <p>
         Base Micro Grid contains styles for flex grids with rows and basic columns for all breakpoints.
       </p>
+      <div class="table-responsive">
+        <table>
+          <thead>
+            <tr>
+              <th>Class</th>
+              <th>Purpose</th>
+              <th>Example</th>
+              <th>Outcome</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>.row</code></td>
+              <td>Apply a <code>.row</code> when wrapping columns</td>
+              <td><code>&lt;div class="row"&gt;This needs to be wrapped around columns.&lt;/div&gt;</code></td>
+              <td>Applies a <code>.row</code> to a <code>div</code> element which has a negative margin left and right of the gutter spacing for all breakpoints</td>
+            </tr>
+            <tr>
+              <td><code>.col-1</code></td>
+              <td>Apply a <code>.col-1</code></td>
+              <td><code>&lt;div class="col-1"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-1</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 8.33333% for all breakpoints</td>
+            </tr>
+            <tr>
+              <td><code>.col-2</code></td>
+              <td>Apply a <code>.col-2</code></td>
+              <td><code>&lt;div class="col-2"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-2</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 16.66667% for all breakpoints</td>
+            </tr>
+            <tr>
+              <td><code>.col-3</code></td>
+              <td>Apply a <code>.col-3</code></td>
+              <td><code>&lt;div class="col-3"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-3</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 25%</td>
+            </tr>
+            <tr>
+              <td><code>.col-4</code></td>
+              <td>Apply a <code>.col-4</code></td>
+              <td><code>&lt;div class="col-4"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-4</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 33.33333% for all breakpoints</td>
+            </tr>
+            <tr>
+              <td><code>.col-5</code></td>
+              <td>Apply a <code>.col-5</code></td>
+              <td><code>&lt;div class="col-5"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-5</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 41.66667% for all breakpoints</td>
+            </tr>
+            <tr>
+              <td><code>.col-6</code></td>
+              <td>Apply a <code>.col-6</code></td>
+              <td><code>&lt;div class="col-6"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-6</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 50% for all breakpoints</td>
+            </tr>
+            <tr>
+              <td><code>.col-7</code></td>
+              <td>Apply a <code>.col-7</code></td>
+              <td><code>&lt;div class="col-7"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-7</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 58.33333% for all breakpoints</td>
+            </tr>
+            <tr>
+              <td><code>.col-8</code></td>
+              <td>Apply a <code>.col-8</code></td>
+              <td><code>&lt;div class="col-8"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-8</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 66.66667% for all breakpoints</td>
+            </tr>
+            <tr>
+              <td><code>.col-9</code></td>
+              <td>Apply a <code>.col-9</code></td>
+              <td><code>&lt;div class="col-9"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-9</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 75% for all breakpoints</td>
+            </tr>
+            <tr>
+              <td><code>.col-10</code></td>
+              <td>Apply a <code>.col-10</code></td>
+              <td><code>&lt;div class="col-10"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-10</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 83.33333% for all breakpoints</td>
+            </tr>
+            <tr>
+              <td><code>.col-11</code></td>
+              <td>Apply a <code>.col-11</code></td>
+              <td><code>&lt;div class="col-11"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-11</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 91.66667% for all breakpoints</td>
+            </tr>
+            <tr>
+              <td><code>.col-12</code></td>
+              <td>Apply a <code>.col-12</code></td>
+              <td><code>&lt;div class="col-12"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-12</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 100% for all breakpoints</td>
+            </tr>
+            <tr>
+              <td><code>.col-1-2</code></td>
+              <td>Apply a <code>.col-1-2</code></td>
+              <td><code>&lt;div class="col-1-2"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-1-2</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 50% for all breakpoints</td>
+            </tr>
+            <tr>
+              <td><code>.col-1-3</code></td>
+              <td>Apply a <code>.col-1-3</code></td>
+              <td><code>&lt;div class="col-1-3"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-1-3</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 33.33333% for all breakpoints</td>
+            </tr>
+            <tr>
+              <td><code>.col-2-3</code></td>
+              <td>Apply a <code>.col-2-3</code></td>
+              <td><code>&lt;div class="col-2-3"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-2-3</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 66.66667% for all breakpoints</td>
+            </tr>
+            <tr>
+              <td><code>.col-1-4</code></td>
+              <td>Apply a <code>.col-1-4</code></td>
+              <td><code>&lt;div class="col-1-4"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-1-4</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 25% for all breakpoints</td>
+            </tr>
+            <tr>
+              <td><code>.col-3-4</code></td>
+              <td>Apply a <code>.col-3-4</code></td>
+              <td><code>&lt;div class="col-3-4"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-3-4</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 75% for all breakpoints</td>
+            </tr>
+            <tr>
+              <td><code>.col-1-5</code></td>
+              <td>Apply a <code>.col-1-5</code></td>
+              <td><code>&lt;div class="col-1-5"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-1-5</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 20% for all breakpoints</td>
+            </tr>
+            <tr>
+              <td><code>.col-2-5</code></td>
+              <td>Apply a <code>.col-2-5</code></td>
+              <td><code>&lt;div class="col-2-5"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-2-5</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 40% for all breakpoints</td>
+            </tr>
+            <tr>
+              <td><code>.col-3-5</code></td>
+              <td>Apply a <code>.col-3-5</code></td>
+              <td><code>&lt;div class="col-3-5"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-3-5</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 60% for all breakpoints</td>
+            </tr>
+            <tr>
+              <td><code>.col-4-5</code></td>
+              <td>Apply a <code>.col-4-5</code></td>
+              <td><code>&lt;div class="col-4-5"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-4-5</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 80% for all breakpoints</td>
+            </tr>
+            <tr>
+              <td><code>.col-full</code></td>
+              <td>Apply a <code>.col-full</code></td>
+              <td><code>&lt;div class="col-full"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-full</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 100% for all breakpoints</td>
+            </tr>
+            <tr>
+              <td><code>.row-m</code></td>
+              <td>Apply a <code>.row-m</code> when wrapping columns</td>
+              <td><code>&lt;div class="row-m"&gt;This needs to be wrapped around columns.&lt;/div&gt;</code></td>
+              <td>Applies a <code>.row-m</code> to a <code>div</code> element which has a negative margin left and right of the gutter spacing for medium devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-1-m</code></td>
+              <td>Apply a <code>.col-1-m</code></td>
+              <td><code>&lt;div class="col-1-m"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-1-m</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 8.33333% for medium devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-2-m</code></td>
+              <td>Apply a <code>.col-2-m</code></td>
+              <td><code>&lt;div class="col-2-m"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-2-m</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 16.66667% for medium devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-3-m</code></td>
+              <td>Apply a <code>.col-3-m</code></td>
+              <td><code>&lt;div class="col-3-m"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-3-m</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 25%</td>
+            </tr>
+            <tr>
+              <td><code>.col-4-m</code></td>
+              <td>Apply a <code>.col-4-m</code></td>
+              <td><code>&lt;div class="col-4-m"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-4-m</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 33.33333% for medium devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-5-m</code></td>
+              <td>Apply a <code>.col-5-m</code></td>
+              <td><code>&lt;div class="col-5-m"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-5-m</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 41.66667% for medium devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-6-m</code></td>
+              <td>Apply a <code>.col-6-m</code></td>
+              <td><code>&lt;div class="col-6-m"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-6-m</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 50% for medium devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-7-m</code></td>
+              <td>Apply a <code>.col-7-m</code></td>
+              <td><code>&lt;div class="col-7-m"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-7-m</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 58.33333% for medium devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-8-m</code></td>
+              <td>Apply a <code>.col-8-m</code></td>
+              <td><code>&lt;div class="col-8-m"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-8-m</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 66.66667% for medium devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-9-m</code></td>
+              <td>Apply a <code>.col-9-m</code></td>
+              <td><code>&lt;div class="col-9-m"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-9-m</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 75% for medium devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-10-m</code></td>
+              <td>Apply a <code>.col-10-m</code></td>
+              <td><code>&lt;div class="col-10-m"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-10-m</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 83.33333% for medium devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-11-m</code></td>
+              <td>Apply a <code>.col-11-m</code></td>
+              <td><code>&lt;div class="col-11-m"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-11-m</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 91.66667% for medium devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-12-m</code></td>
+              <td>Apply a <code>.col-12-m</code></td>
+              <td><code>&lt;div class="col-12-m"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-12-m</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 100% for medium devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-1-2-m</code></td>
+              <td>Apply a <code>.col-1-2-m</code></td>
+              <td><code>&lt;div class="col-1-2-m"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-1-2-m</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 50% for medium devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-1-3-m</code></td>
+              <td>Apply a <code>.col-1-3-m</code></td>
+              <td><code>&lt;div class="col-1-3-m"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-1-3-m</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 33.33333% for medium devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-2-3-m</code></td>
+              <td>Apply a <code>.col-2-3-m</code></td>
+              <td><code>&lt;div class="col-2-3-m"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-2-3-m</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 66.66667% for medium devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-1-4-m</code></td>
+              <td>Apply a <code>.col-1-4-m</code></td>
+              <td><code>&lt;div class="col-1-4-m"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-1-4-m</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 25% for medium devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-3-4-m</code></td>
+              <td>Apply a <code>.col-3-4-m</code></td>
+              <td><code>&lt;div class="col-3-4-m"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-3-4-m</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 75% for medium devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-1-5-m</code></td>
+              <td>Apply a <code>.col-1-5-m</code></td>
+              <td><code>&lt;div class="col-1-5-m"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-1-5-m</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 20% for medium devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-2-5-m</code></td>
+              <td>Apply a <code>.col-2-5-m</code></td>
+              <td><code>&lt;div class="col-2-5-m"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-2-5-m</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 40% for medium devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-3-5-m</code></td>
+              <td>Apply a <code>.col-3-5-m</code></td>
+              <td><code>&lt;div class="col-3-5-m"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-3-5-m</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 60% for medium devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-4-5-m</code></td>
+              <td>Apply a <code>.col-4-5-m</code></td>
+              <td><code>&lt;div class="col-4-5-m"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-4-5-m</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 80% for medium devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-full-m</code></td>
+              <td>Apply a <code>.col-full-m</code></td>
+              <td><code>&lt;div class="col-full-m"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-full-m</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 100% for medium devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.row-l</code></td>
+              <td>Apply a <code>.row-l</code> when wrapping columns</td>
+              <td><code>&lt;div class="row-l"&gt;This needs to be wrapped around columns.&lt;/div&gt;</code></td>
+              <td>Applies a <code>.row-l</code> to a <code>div</code> element which has a negative margin left and right of the gutter spacing for large devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-1-l</code></td>
+              <td>Apply a <code>.col-1-l</code></td>
+              <td><code>&lt;div class="col-1-l"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-1-l</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 8.33333% for large devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-2-l</code></td>
+              <td>Apply a <code>.col-2-l</code></td>
+              <td><code>&lt;div class="col-2-l"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-2-l</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 16.66667% for large devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-3-l</code></td>
+              <td>Apply a <code>.col-3-l</code></td>
+              <td><code>&lt;div class="col-3-l"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-3-l</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 25%</td>
+            </tr>
+            <tr>
+              <td><code>.col-4-l</code></td>
+              <td>Apply a <code>.col-4-l</code></td>
+              <td><code>&lt;div class="col-4-l"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-4-l</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 33.33333% for large devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-5-l</code></td>
+              <td>Apply a <code>.col-5-l</code></td>
+              <td><code>&lt;div class="col-5-l"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-5-l</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 41.66667% for large devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-6-l</code></td>
+              <td>Apply a <code>.col-6-l</code></td>
+              <td><code>&lt;div class="col-6-l"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-6-l</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 50% for large devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-7-l</code></td>
+              <td>Apply a <code>.col-7-l</code></td>
+              <td><code>&lt;div class="col-7-l"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-7-l</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 58.33333% for large devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-8-l</code></td>
+              <td>Apply a <code>.col-8-l</code></td>
+              <td><code>&lt;div class="col-8-l"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-8-l</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 66.66667% for large devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-9-l</code></td>
+              <td>Apply a <code>.col-9-l</code></td>
+              <td><code>&lt;div class="col-9-l"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-9-l</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 75% for large devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-10-l</code></td>
+              <td>Apply a <code>.col-10-l</code></td>
+              <td><code>&lt;div class="col-10-l"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-10-l</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 83.33333% for large devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-11-l</code></td>
+              <td>Apply a <code>.col-11-l</code></td>
+              <td><code>&lt;div class="col-11-l"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-11-l</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 91.66667% for large devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-12-l</code></td>
+              <td>Apply a <code>.col-12-l</code></td>
+              <td><code>&lt;div class="col-12-l"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-12-l</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 100% for large devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-1-2-l</code></td>
+              <td>Apply a <code>.col-1-2-l</code></td>
+              <td><code>&lt;div class="col-1-2-l"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-1-2-l</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 50% for large devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-1-3-l</code></td>
+              <td>Apply a <code>.col-1-3-l</code></td>
+              <td><code>&lt;div class="col-1-3-l"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-1-3-l</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 33.33333% for large devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-2-3-l</code></td>
+              <td>Apply a <code>.col-2-3-l</code></td>
+              <td><code>&lt;div class="col-2-3-l"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-2-3-l</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 66.66667% for large devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-1-4-l</code></td>
+              <td>Apply a <code>.col-1-4-l</code></td>
+              <td><code>&lt;div class="col-1-4-l"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-1-4-l</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 25% for large devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-3-4-l</code></td>
+              <td>Apply a <code>.col-3-4-l</code></td>
+              <td><code>&lt;div class="col-3-4-l"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-3-4-l</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 75% for large devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-1-5-l</code></td>
+              <td>Apply a <code>.col-1-5-l</code></td>
+              <td><code>&lt;div class="col-1-5-l"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-1-5-l</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 20% for large devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-2-5-l</code></td>
+              <td>Apply a <code>.col-2-5-l</code></td>
+              <td><code>&lt;div class="col-2-5-l"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-2-5-l</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 40% for large devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-3-5-l</code></td>
+              <td>Apply a <code>.col-3-5-l</code></td>
+              <td><code>&lt;div class="col-3-5-l"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-3-5-l</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 60% for large devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-4-5-l</code></td>
+              <td>Apply a <code>.col-4-5-l</code></td>
+              <td><code>&lt;div class="col-4-5-l"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-4-5-l</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 80% for large devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-full-l</code></td>
+              <td>Apply a <code>.col-full-l</code></td>
+              <td><code>&lt;div class="col-full-l"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-full-l</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 100% for large devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.row-xl</code></td>
+              <td>Apply a <code>.row-xl</code> when wrapping columns</td>
+              <td><code>&lt;div class="row-xl"&gt;This needs to be wrapped around columns.&lt;/div&gt;</code></td>
+              <td>Applies a <code>.row-xl</code> to a <code>div</code> element which has a negative margin left and right of the gutter spacing for extra large devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-1-xl</code></td>
+              <td>Apply a <code>.col-1-xl</code></td>
+              <td><code>&lt;div class="col-1-xl"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-1-xl</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 8.33333% for extra large devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-2-xl</code></td>
+              <td>Apply a <code>.col-2-xl</code></td>
+              <td><code>&lt;div class="col-2-xl"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-2-xl</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 16.66667% for extra large devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-3-xl</code></td>
+              <td>Apply a <code>.col-3-xl</code></td>
+              <td><code>&lt;div class="col-3-xl"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-3-xl</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 25%</td>
+            </tr>
+            <tr>
+              <td><code>.col-4-xl</code></td>
+              <td>Apply a <code>.col-4-xl</code></td>
+              <td><code>&lt;div class="col-4-xl"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-4-xl</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 33.33333% for extra large devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-5-xl</code></td>
+              <td>Apply a <code>.col-5-xl</code></td>
+              <td><code>&lt;div class="col-5-xl"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-5-xl</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 41.66667% for extra large devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-6-xl</code></td>
+              <td>Apply a <code>.col-6-xl</code></td>
+              <td><code>&lt;div class="col-6-xl"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-6-xl</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 50% for extra large devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-7-xl</code></td>
+              <td>Apply a <code>.col-7-xl</code></td>
+              <td><code>&lt;div class="col-7-xl"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-7-xl</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 58.33333% for extra large devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-8-xl</code></td>
+              <td>Apply a <code>.col-8-xl</code></td>
+              <td><code>&lt;div class="col-8-xl"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-8-xl</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 66.66667% for extra large devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-9-xl</code></td>
+              <td>Apply a <code>.col-9-xl</code></td>
+              <td><code>&lt;div class="col-9-xl"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-9-xl</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 75% for extra large devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-10-xl</code></td>
+              <td>Apply a <code>.col-10-xl</code></td>
+              <td><code>&lt;div class="col-10-xl"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-10-xl</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 83.33333% for extra large devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-11-xl</code></td>
+              <td>Apply a <code>.col-11-xl</code></td>
+              <td><code>&lt;div class="col-11-xl"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-11-xl</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 91.66667% for extra large devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-12-xl</code></td>
+              <td>Apply a <code>.col-12-xl</code></td>
+              <td><code>&lt;div class="col-12-xl"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-12-xl</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 100% for extra large devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-1-2-xl</code></td>
+              <td>Apply a <code>.col-1-2-xl</code></td>
+              <td><code>&lt;div class="col-1-2-xl"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-1-2-xl</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 50% for extra large devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-1-3-xl</code></td>
+              <td>Apply a <code>.col-1-3-xl</code></td>
+              <td><code>&lt;div class="col-1-3-xl"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-1-3-xl</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 33.33333% for extra large devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-2-3-xl</code></td>
+              <td>Apply a <code>.col-2-3-xl</code></td>
+              <td><code>&lt;div class="col-2-3-xl"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-2-3-xl</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 66.66667% for extra large devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-1-4-xl</code></td>
+              <td>Apply a <code>.col-1-4-xl</code></td>
+              <td><code>&lt;div class="col-1-4-xl"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-1-4-xl</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 25% for extra large devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-3-4-xl</code></td>
+              <td>Apply a <code>.col-3-4-xl</code></td>
+              <td><code>&lt;div class="col-3-4-xl"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-3-4-xl</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 75% for extra large devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-1-5-xl</code></td>
+              <td>Apply a <code>.col-1-5-xl</code></td>
+              <td><code>&lt;div class="col-1-5-xl"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-1-5-xl</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 20% for extra large devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-2-5-xl</code></td>
+              <td>Apply a <code>.col-2-5-xl</code></td>
+              <td><code>&lt;div class="col-2-5-xl"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-2-5-xl</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 40% for extra large devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-3-5-xl</code></td>
+              <td>Apply a <code>.col-3-5-xl</code></td>
+              <td><code>&lt;div class="col-3-5-xl"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-3-5-xl</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 60% for extra large devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-4-5-xl</code></td>
+              <td>Apply a <code>.col-4-5-xl</code></td>
+              <td><code>&lt;div class="col-4-5-xl"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-4-5-xl</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 80% for extra large devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-full-xl</code></td>
+              <td>Apply a <code>.col-full-xl</code></td>
+              <td><code>&lt;div class="col-full-xl"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-full-xl</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 100% for extra large devices and up</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
     <div class="container">
       <div style="padding-bottom: 50px;">
-        <h3 class="h4">Grid (<code>.col-*</code>)</h3>
+        <h3 style="margin-top: 2rem; margin-bottom: 1rem;" class="h4">Grid (<code>.col-*</code>)</h3>
         <div class="row" style="margin-top: 8px; padding-bottom: 8px; border-bottom: 1px solid #ccc;">
           <div class="col-1">
             <div style="background: #333; color: #fff; text-align: center;">
@@ -1067,7 +1681,7 @@
         </div>
       </div>
       <div style="padding-bottom: 50px;">
-        <h3 class="h4">Grid (Medium Devices - <code>.col-*-m</code>)</h3>
+        <h3 style="margin-bottom: 1rem;" class="h4">Grid (Medium Devices - <code>.col-*-m</code>)</h3>
         <div class="row-m" style="margin-top: 8px; padding-bottom: 8px; border-bottom: 1px solid #ccc;">
           <div class="col-1-m">
             <div style="background: #333; color: #fff; text-align: center;">
@@ -1425,7 +2039,7 @@
         </div>
       </div>
       <div>
-        <h3 class="h4">Grid (Large Devices - <code>.col-*-l</code>)</h3>
+        <h3 style="margin-bottom: 1rem;" class="h4">Grid (Large Devices - <code>.col-*-l</code>)</h3>
         <div class="row-l" style="margin-top: 8px; padding-bottom: 8px; border-bottom: 1px solid #ccc;">
           <div class="col-1-l">
             <div style="background: #333; color: #fff; text-align: center;">
@@ -1783,7 +2397,7 @@
         </div>
       </div>
       <div>
-        <h3 class="h4">Grid (Extra Large Devices - <code>.col-*-xl</code>)</h3>
+        <h3 style="margin-bottom: 1rem;" class="h4">Grid (Extra Large Devices - <code>.col-*-xl</code>)</h3>
         <div class="row-xl" style="margin-top: 8px; padding-bottom: 8px; border-bottom: 1px solid #ccc;">
           <div class="col-1-xl">
             <div style="background: #333; color: #fff; text-align: center;">
