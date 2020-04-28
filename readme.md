@@ -120,8 +120,8 @@ There are a [collection of free templates built with Base](https://gumroad.com/g
 
 #### Matthew Hartman
 
-* [https://twitter.com/matthewhartmans](https://twitter.com/matthewhartmans)
 * [https://github.com/matthewhartman](https://github.com/matthewhartman)
+* [https://twitter.com/matthewhartmans](https://twitter.com/matthewhartmans)
 
 * * *
 
