@@ -95,14 +95,6 @@ function gridScss() {
     .pipe(dest('./'))
 }
 
-function microGridScss() {
-  return src('./scss/micro-grid.scss')
-    .pipe(sass())
-    .on('error', sass.logError)
-    .pipe(postcss([autoprefixer(), cssnano()]))
-    .pipe(dest('./'))
-}
-
 function formsScss() {
   return src('./scss/forms.scss')
     .pipe(sass())
@@ -140,7 +132,6 @@ function clean() {
     './tables.css',
     './containers.css',
     './grid.css',
-    './micro-grid.css',
     './forms.css',
     './layout-spacers.css',
     './display-helpers.css'
@@ -170,7 +161,6 @@ exports.compileScssModulesToCss = parallel(
   tablesScss,
   containersScss,
   gridScss,
-  microGridScss,
   formsScss,
   layoutSpacersScss,
   displayHelpersScss
@@ -187,7 +177,6 @@ exports.build = parallel(
   tablesScss,
   containersScss,
   gridScss,
-  microGridScss,
   formsScss,
   layoutSpacersScss,
   displayHelpersScss
