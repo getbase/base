@@ -10,6 +10,9 @@
 .padding-right-1rem { padding-right: 1rem; }
 .padding-right-1-5rem { padding-right: 1.5rem; }
 .padding-right-2rem { padding-right: 2rem; }
+.padding-right-3rem { padding-right: 3rem; }
+.padding-right-4rem { padding-right: 4rem; }
+.padding-right-5rem { padding-right: 5rem; }
 
 @include breakpoint(m) {
   .padding-left-0-m { padding-left: 0; }
@@ -18,12 +21,18 @@
   .padding-left-1rem-m { padding-left: 1rem; }
   .padding-left-1-5rem-m { padding-left: 1.5rem; }
   .padding-left-2rem-m { padding-left: 2rem; }
+  .padding-left-3rem-m { padding-left: 3rem; }
+  .padding-left-4rem-m { padding-left: 4rem; }
+  .padding-left-5rem-m { padding-left: 5rem; }
   .padding-right-0-m { padding-right: 0; }
   .padding-right-0-25rem-m { padding-right: 0.25rem; }
   .padding-right-0-5rem-m { padding-right: 0.5rem; }
   .padding-right-1rem-m { padding-right: 1rem; }
   .padding-right-1-5rem-m { padding-right: 1.5rem; }
   .padding-right-2rem-m { padding-right: 2rem; }
+  .padding-right-3rem-m { padding-right: 3rem; }
+  .padding-right-4rem-m { padding-right: 4rem; }
+  .padding-right-5rem-m { padding-right: 5rem; }
 }
 
 @include breakpoint(l) {
@@ -39,6 +48,9 @@
   .padding-right-1rem-l { padding-right: 1rem; }
   .padding-right-1-5rem-l { padding-right: 1.5rem; }
   .padding-right-2rem-l { padding-right: 2rem; }
+  .padding-right-3rem-l { padding-right: 3rem; }
+  .padding-right-4rem-l { padding-right: 4rem; }
+  .padding-right-5rem-l { padding-right: 5rem; }
 }
 
 @include breakpoint(xl) {
@@ -54,4 +66,7 @@
   .padding-right-1rem-xl { padding-right: 1rem; }
   .padding-right-1-5rem-xl { padding-right: 1.5rem; }
   .padding-right-2rem-xl { padding-right: 2rem; }
+  .padding-right-3rem-xl { padding-right: 3rem; }
+  .padding-right-4rem-xl { padding-right: 4rem; }
+  .padding-right-5rem-xl { padding-right: 5rem; }
 }
