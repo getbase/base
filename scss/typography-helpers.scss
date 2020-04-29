@@ -1,5 +1,11 @@
 @import "_mixins";
 
+// No Selection
+.no-select {
+  user-select: none;
+  cursor: default;
+}
+
 // Font Weights
 .font-100 { font-weight: 100; }
 .font-200 { font-weight: 200; }
@@ -10,12 +16,6 @@
 .font-700 { font-weight: 700; }
 .font-800 { font-weight: 800; }
 .font-900 { font-weight: 900; }
-
-// No Selection
-.no-select {
-  user-select: none;
-  cursor: default;
-}
 
 // Text Modifications
 .uppercase { text-transform: uppercase; }

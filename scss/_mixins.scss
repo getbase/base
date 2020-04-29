@@ -1,4 +1,9 @@
-@import "_variables";
+$breakpoint-m:  768px !default;
+$breakpoint-l:  980px !default;
+$breakpoint-xl: 1200px !default;
+
+$grid-gutter: 12px !default;
+
 // Mixins
 
 // Breakpoints

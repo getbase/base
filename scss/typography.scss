@@ -1,10 +1,17 @@
+$base-font-family: sans-serif !default;
+$base-font-size: 16px !default;
+$base-line-height: 22px !default;
+$base-font-color: #333 !default;
+$base-font-weight: 400 !default;
+$base-background-color: #fff !default;
+
 body {
-  font-family: sans-serif;
-  font-size: 16px;
-  line-height: 22px;
-  color: #333;
-  font-weight: 400;
-  background: #fff;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  color: $base-font-color;
+  font-weight: $base-font-weight;
+  background: $base-background-color;
 }
 
 main, details { display: block; }
@@ -27,7 +34,7 @@ abbr[title] {
   text-decoration: underline dotted;
 }
 
-small, .small { font-size: 80%; }
+small, .small { font-size: .8125rem; }
 
 sub,
 sup {
