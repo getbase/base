@@ -1,11 +1,13 @@
 @import "_mixins";
 
+.none { display: none; }
 .block { display: block; }
 .inline-block { display: inline-block; }
 .inline { display: inline; }
 .flex { display: flex; }
 
 @include breakpoint(m) {
+  .none-m { display: none; }
   .block-m { display: block; }
   .inline-block-m { display: inline-block; }
   .inline-m { display: inline; }
@@ -13,6 +15,7 @@
 }
 
 @include breakpoint(l) {
+  .none-l { display: none; }
   .block-l { display: block; }
   .inline-block-l { display: inline-block; }
   .inline-l { display: inline; }
@@ -20,6 +23,7 @@
 }
 
 @include breakpoint(xl) {
+  .none-xl { display: block; }
   .block-xl { display: block; }
   .inline-block-xl { display: inline-block; }
   .inline-xl { display: inline; }

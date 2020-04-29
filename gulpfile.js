@@ -111,14 +111,6 @@ function spacersScss() {
     .pipe(dest('./'))
 }
 
-function typographyHelpersScss() {
-  return src('./scss/typography-helpers.scss')
-    .pipe(sass())
-    .on('error', sass.logError)
-    .pipe(postcss([autoprefixer(), cssnano()]))
-    .pipe(dest('./'))
-}
-
 function displayHelpersScss() {
   return src('./scss/display-helpers.scss')
     .pipe(sass())
@@ -129,6 +121,22 @@ function displayHelpersScss() {
 
 function flexHelpersScss() {
   return src('./scss/flex-helpers.scss')
+    .pipe(sass())
+    .on('error', sass.logError)
+    .pipe(postcss([autoprefixer(), cssnano()]))
+    .pipe(dest('./'))
+}
+
+function positionHelpersScss() {
+  return src('./scss/position-helpers.scss')
+    .pipe(sass())
+    .on('error', sass.logError)
+    .pipe(postcss([autoprefixer(), cssnano()]))
+    .pipe(dest('./'))
+}
+
+function typographyHelpersScss() {
+  return src('./scss/typography-helpers.scss')
     .pipe(sass())
     .on('error', sass.logError)
     .pipe(postcss([autoprefixer(), cssnano()]))
@@ -150,9 +158,10 @@ function clean() {
     './horizontal-spacers.css',
     './vertical-spacers.css',
     './spacers.css',
-    './typography-helpers.css',
     './display-helpers.css',
-    './flex-helpers.css'
+    './flex-helpers.css',
+    './position-helpers.css',
+    './typography-helpers.css'
   ]);
 }
 
@@ -181,9 +190,10 @@ exports.compileScssModulesToCss = parallel(
   horizontalSpacersScss,
   verticalSpacersScss,
   spacersScss,
-  typographyHelpersScss,
   displayHelpersScss,
-  flexHelpersScss
+  flexHelpersScss,
+  positionHelpersScss,
+  typographyHelpersScss
 );
 exports.build = parallel(
   html,
@@ -198,10 +208,10 @@ exports.build = parallel(
   gridScss,
   horizontalSpacersScss,
   verticalSpacersScss,
-  spacersScss,
-  typographyHelpersScss,
   displayHelpersScss,
-  flexHelpersScss
+  flexHelpersScss,
+  positionHelpersScss,
+  typographyHelpersScss
 );
 exports.default = parallel(
   html,

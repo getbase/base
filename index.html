@@ -6,53 +6,21 @@
   <title>Base Styleguide</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <link rel="stylesheet" href="index.css">
   <style>
-    .header {
-      background: #121212;
-    }
+    .header { background: #ffeb3b; }
     .logo {
-      font-size: 18px;
-      line-height: normal;
-      font-weight: 700;
-      color: #fff;
       text-decoration: none;
-      transition: .3s all;
       margin: 0;
       cursor: pointer;
+      transition: .3s all;
     }
-    .logo:hover, .logo:focus {
-      color: #fff;
-      transform: scale(1.02);
-    }
-    .navigation {
-      padding-top: 12px;
-    }
-    @media only screen and (min-width: 768px) {
-      .navigation {
-        padding-top: 0;
-      }
-    }
-    .navigation-link {
-      font-size: 14px;
-      line-height: 20px;
-      color: #fff;
-      margin: 8px;
-      display: block;
-    }
-    .navigation-link:hover,
-    .navigation-link:focus,
-    .navigation-link:visited,
-    .navigation-link:active {
-      color: #fff;
-    }
-    .card {
-      border: 1px solid #eee;
-    }
-    .table-responsive {
-      overflow-x: auto;
-    }
+    .logo:hover, .logo:focus { transform: scale(1.02); }
+    .navigation { list-style: none; }
+    .navigation-link, .logo { color: #010101; }
+    .navigation-link:hover, .navigation-link:focus { text-decoration: none; }
+    .card { border: 1px solid #eee; }
+    .table-responsive { overflow-x: auto; }
   </style>
 
 </head>
@@ -60,23 +28,45 @@
   <div class="header">
     <div class="container">
       <div class="flex-m flex-align-items-center-m flex-space-between-m padding-top-1rem padding-bottom-1rem">
-        <h1 class="flex flex-align-items-center logo block">
-          <img style="height: 30px; margin-right: 0.825rem;" class="block" src="logo.svg" alt="Base">
-          <span class="sr">Base </span>
-          <span>Styleguide</span>
+        <h1 class="logo h4 flex flex-align-items-center block">
+          <img class="block" src="logo.svg" alt="Base">
+          <span class="block padding-left-1rem">
+            <span class="sr">Base </span>
+            <span>Styleguide</span>
+          </span>
         </h1>
-        <div class="navigation flex-m">
-          <a class="navigation-link" href="#typography">Typography</a>
-          <a class="navigation-link" href="#headings">Headings</a>
-          <a class="navigation-link" href="#typography-helpers">Typography Helpers</a>
-          <a class="navigation-link" href="#tables">Tables</a>
-          <a class="navigation-link" href="#forms">Forms</a>
-          <a class="navigation-link" href="#containers">Containers</a>
-          <a class="navigation-link" href="#grid">Grid</a>
-          <a class="navigation-link" href="#horizontal-spacers">Horizontal Spacers</a>
-          <a class="navigation-link" href="#vertical-spacers">Vertical Spacers</a>
-          <a class="navigation-link" href="#spacers">Spacers</a>
-        </div>
+        <ul class="navigation small flex-m padding-top-1rem padding-top-0-m">
+          <li class="padding-right-0-5rem-m">
+            <a class="navigation-link" href="#typography">Typography</a>
+          </li>
+          <li class="padding-right-0-5rem-m">
+            <a class="navigation-link" href="#headings">Headings</a>
+          </li>
+          <li class="padding-right-0-5rem-m">
+            <a class="navigation-link" href="#typography-helpers">Typography Helpers</a>
+          </li>
+          <li class="padding-right-0-5rem-m">
+            <a class="navigation-link" href="#tables">Tables</a>
+          </li>
+          <li class="padding-right-0-5rem-m">
+            <a class="navigation-link" href="#forms">Forms</a>
+          </li>
+          <li class="padding-right-0-5rem-m">
+            <a class="navigation-link" href="#containers">Containers</a>
+          </li>
+          <li class="padding-right-0-5rem-m">
+            <a class="navigation-link" href="#grid">Grid</a>
+          </li>
+          <li class="padding-right-0-5rem-m">
+            <a class="navigation-link" href="#horizontal-spacers">Horizontal Spacers</a>
+          </li>
+          <li class="padding-right-0-5rem-m">
+            <a class="navigation-link" href="#vertical-spacers">Vertical Spacers</a>
+          </li>
+          <li class="padding-right-0-5rem-m">
+            <a class="navigation-link" href="#spacers">Spacers</a>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
