@@ -1,6 +1,6 @@
 {
   "name": "@getbase/base",
-  "version": "5.0.0",
+  "version": "5.0.0-alpha1",
   "description": "A Rock Solid, Responsive CSS Framework built to work on all devices big, small and in-between.",
   "homepage": "http://getbase.org/",
   "author": "Matthew Hartman",
@@ -35,13 +35,13 @@
     "tests"
   ],
   "devDependencies": {
-    "autoprefixer": "^9.7.4",
+    "autoprefixer": "^9.7.6",
     "browser-sync": "^2.26.7",
     "cssnano": "^4.1.10",
     "del": "^5.1.0",
     "gulp": "^4.0.2",
     "gulp-postcss": "^8.0.0",
-    "gulp-sass": "^4.0.2"
+    "gulp-sass": "^4.1.0"
   },
   "browserslist": [
     "> 1%",
