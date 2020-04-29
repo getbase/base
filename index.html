@@ -15,8 +15,8 @@
       cursor: pointer;
       transition: .3s all;
     }
-    .logo:hover, .logo:focus { transform: scale(1.02); }
-    .navigation { list-style: none; margin: 0; padding-left: 0; padding-right: 0; }
+    .logo:hover, .logo:focus { opacity: .8; }
+    .navigation { list-style: none; margin: 0; }
     .navigation-link, .logo { color: #010101; }
     .navigation-link:hover, .navigation-link:focus { text-decoration: none; }
     .card { border: 1px solid #eee; }
@@ -27,46 +27,48 @@
 <body>
   <div class="header padding-top-0-5rem padding-bottom-0-5rem">
     <div class="container">
-      <div class="flex-m flex-align-items-center-m flex-space-between-m padding-top-1rem padding-bottom-1rem">
-        <h1 class="logo h4 flex flex-align-items-center block">
+      <div class="padding-top-1rem padding-bottom-1rem">
+        <h1 class="logo h4 flex flex-align-items-center">
           <img class="block" src="logo.svg" alt="Base">
           <span class="block padding-left-1rem">
             <span class="sr">Base </span>
             <span>Styleguide</span>
           </span>
         </h1>
-        <ul class="navigation small flex-m padding-top-1rem padding-top-0-m">
-          <li class="padding-right-1rem-m">
-            <a class="navigation-link" href="#typography">Typography</a>
-          </li>
-          <li class="padding-right-1rem-m">
-            <a class="navigation-link" href="#headings">Headings</a>
-          </li>
-          <li class="padding-right-1rem-m">
-            <a class="navigation-link" href="#typography-helpers">Typography Helpers</a>
-          </li>
-          <li class="padding-right-1rem-m">
-            <a class="navigation-link" href="#tables">Tables</a>
-          </li>
-          <li class="padding-right-1rem-m">
-            <a class="navigation-link" href="#forms">Forms</a>
-          </li>
-          <li class="padding-right-1rem-m">
-            <a class="navigation-link" href="#containers">Containers</a>
-          </li>
-          <li class="padding-right-1rem-m">
-            <a class="navigation-link" href="#grid">Grid</a>
-          </li>
-          <li class="padding-right-1rem-m">
-            <a class="navigation-link" href="#horizontal-spacers">Horizontal Spacers</a>
-          </li>
-          <li class="padding-right-1rem-m">
-            <a class="navigation-link" href="#vertical-spacers">Vertical Spacers</a>
-          </li>
-          <li class="padding-right-1rem-m">
-            <a class="navigation-link" href="#spacers">Spacers</a>
-          </li>
-        </ul>
+        <div class="padding-top-1rem">
+          <ul class="navigation small flex-m padding-0">
+            <li class="padding-right-1rem-m">
+              <a class="navigation-link" href="#typography">Typography</a>
+            </li>
+            <li class="padding-right-1rem-m">
+              <a class="navigation-link" href="#headings">Headings</a>
+            </li>
+            <li class="padding-right-1rem-m">
+              <a class="navigation-link" href="#typography-helpers">Typography Helpers</a>
+            </li>
+            <li class="padding-right-1rem-m">
+              <a class="navigation-link" href="#tables">Tables</a>
+            </li>
+            <li class="padding-right-1rem-m">
+              <a class="navigation-link" href="#forms">Forms</a>
+            </li>
+            <li class="padding-right-1rem-m">
+              <a class="navigation-link" href="#containers">Containers</a>
+            </li>
+            <li class="padding-right-1rem-m">
+              <a class="navigation-link" href="#grid">Grid</a>
+            </li>
+            <li class="padding-right-1rem-m">
+              <a class="navigation-link" href="#horizontal-spacers">Horizontal Spacers</a>
+            </li>
+            <li class="padding-right-1rem-m">
+              <a class="navigation-link" href="#vertical-spacers">Vertical Spacers</a>
+            </li>
+            <li class="padding-right-1rem-m">
+              <a class="navigation-link" href="#spacers">Spacers</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
