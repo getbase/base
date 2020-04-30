@@ -22,7 +22,15 @@
     .card { border: 1px solid #eee; }
     .table-responsive { overflow-x: auto; }
   </style>
-
+  <link rel="stylesheet" href="containers.css">
+  <link rel="stylesheet" href="grid.css">
+  <link rel="stylesheet" href="horizontal-spacers.css">
+  <link rel="stylesheet" href="vertical-spacers.css">
+  <link rel="stylesheet" href="spacers.css">
+  <link rel="stylesheet" href="display-helpers.css">
+  <link rel="stylesheet" href="flex-helpers.css">
+  <link rel="stylesheet" href="position-helpers.css">
+  <link rel="stylesheet" href="typography-helpers.css">
 </head>
 <body>
   <div class="header padding-top-0-5rem padding-bottom-0-5rem">
@@ -161,7 +169,7 @@
         </div>
         <div class="col-12 padding-bottom-1rem col-1-2-m">
           <div class="card">
-            <div style="border-top: 1px solid #eee;" class="padding-0-5rem">
+            <div class="padding-0-5rem">
               <strong class="block h1">class .h1</strong>
               <code class="block small padding-top-0-5rem">base-h1-font-size: 32px<br>base-h1-line-height: 38px</code>
             </div>
@@ -3359,217 +3367,181 @@
               <td><code>.padding-0</code></td>
               <td>Applies padding of 0 for all devices</td>
               <td><code>&lt;div class="padding-0"&gt;&lt;div&gt;</code></td>
-              <td><div class="padding-0">Content<div></td>
             </tr>
             <tr>
               <td><code>.padding-0-25rem</code></td>
               <td>Applies padding of 0.25rem for all devices</td>
               <td><code>&lt;div class="padding-0-25rem"&gt;&lt;div&gt;</code></td>
-              <td><div class="padding-0-25rem">Content<div></td>
             </tr>
             <tr>
               <td><code>.padding-0-5rem</code></td>
               <td>Applies padding of 0.5rem for all devices</td>
               <td><code>&lt;div class="padding-0-5rem"&gt;&lt;div&gt;</code></td>
-              <td><div class="padding-0-5rem">Content<div></td>
             </tr>
             <tr>
               <td><code>.padding-1rem</code></td>
               <td>Applies padding of 1rem for all devices</td>
               <td><code>&lt;div class="padding-1rem"&gt;&lt;div&gt;</code></td>
-              <td><div class="padding-1rem">Content<div></td>
             </tr>
             <tr>
               <td><code>.padding-1-5rem</code></td>
               <td>Applies padding of 1.5rem for all devices</td>
               <td><code>&lt;div class="padding-1-5rem"&gt;&lt;div&gt;</code></td>
-              <td><div class="padding-1-5rem">Content<div></td>
             </tr>
             <tr>
               <td><code>.padding-2rem</code></td>
               <td>Applies padding of 2rem for all devices</td>
               <td><code>&lt;div class="padding-2rem"&gt;&lt;div&gt;</code></td>
-              <td><div class="padding-2rem">Content<div></td>
             </tr>
             <tr>
               <td><code>.padding-3rem</code></td>
               <td>Applies padding of 3rem for all devices</td>
               <td><code>&lt;div class="padding-3rem"&gt;&lt;div&gt;</code></td>
-              <td><div class="padding-3rem">Content<div></td>
             </tr>
             <tr>
               <td><code>.padding-4rem</code></td>
               <td>Applies padding of 4rem for all devices</td>
               <td><code>&lt;div class="padding-4rem"&gt;&lt;div&gt;</code></td>
-              <td><div class="padding-4rem">Content<div></td>
             </tr>
             <tr>
               <td><code>.padding-5rem</code></td>
               <td>Applies padding of 5rem for all devices</td>
               <td><code>&lt;div class="padding-5rem"&gt;&lt;div&gt;</code></td>
-              <td><div class="padding-5rem">Content<div></td>
             </tr>
             <tr>
               <td><code>.padding-0-m</code></td>
               <td>Applies padding of 0 for medium devices and up</td>
               <td><code>&lt;div class="padding-0-m"&gt;&lt;div&gt;</code></td>
-              <td><div class="padding-0-m">Content<div></td>
             </tr>
             <tr>
               <td><code>.padding-0-25rem-m</code></td>
               <td>Applies padding of 0.25rem for medium devices and up</td>
               <td><code>&lt;div class="padding-0-25rem-m"&gt;&lt;div&gt;</code></td>
-              <td><div class="padding-0-25rem-m">Content<div></td>
             </tr>
             <tr>
               <td><code>.padding-0-5rem-m</code></td>
               <td>Applies padding of 0.5rem for medium devices and up</td>
               <td><code>&lt;div class="padding-0-5rem-m"&gt;&lt;div&gt;</code></td>
-              <td><div class="padding-0-5rem-m">Content<div></td>
             </tr>
             <tr>
               <td><code>.padding-1rem-m</code></td>
               <td>Applies padding of 1rem for medium devices and up</td>
               <td><code>&lt;div class="padding-1rem-m"&gt;&lt;div&gt;</code></td>
-              <td><div class="padding-1rem-m">Content<div></td>
             </tr>
             <tr>
               <td><code>.padding-1-5rem-m</code></td>
               <td>Applies padding of 1.5rem for medium devices and up</td>
               <td><code>&lt;div class="padding-1-5rem-m"&gt;&lt;div&gt;</code></td>
-              <td><div class="padding-1-5rem-m">Content<div></td>
             </tr>
             <tr>
               <td><code>.padding-2rem-m</code></td>
               <td>Applies padding of 2rem for medium devices and up</td>
               <td><code>&lt;div class="padding-2rem-m"&gt;&lt;div&gt;</code></td>
-              <td><div class="padding-2rem-m">Content<div></td>
             </tr>
             <tr>
               <td><code>.padding-3rem-m</code></td>
               <td>Applies padding of 3rem for medium devices and up</td>
               <td><code>&lt;div class="padding-3rem-m"&gt;&lt;div&gt;</code></td>
-              <td><div class="padding-3rem-m">Content<div></td>
             </tr>
             <tr>
               <td><code>.padding-4rem-m</code></td>
               <td>Applies padding of 4rem for medium devices and up</td>
               <td><code>&lt;div class="padding-4rem-m"&gt;&lt;div&gt;</code></td>
-              <td><div class="padding-4rem-m">Content<div></td>
             </tr>
             <tr>
               <td><code>.padding-5rem-m</code></td>
               <td>Applies padding of 5rem for medium devices and up</td>
               <td><code>&lt;div class="padding-5rem-m"&gt;&lt;div&gt;</code></td>
-              <td><div class="padding-5rem-m">Content<div></td>
             </tr>
             <tr>
               <td><code>.padding-0-l</code></td>
               <td>Applies padding of 0 for large devices and up</td>
               <td><code>&lt;div class="padding-0-l"&gt;&lt;div&gt;</code></td>
-              <td><div class="padding-0-l">Content<div></td>
             </tr>
             <tr>
               <td><code>.padding-0-25rem-l</code></td>
               <td>Applies padding of 0.25rem for large devices and up</td>
               <td><code>&lt;div class="padding-0-25rem-l"&gt;&lt;div&gt;</code></td>
-              <td><div class="padding-0-25rem-l">Content<div></td>
             </tr>
             <tr>
               <td><code>.padding-0-5rem-l</code></td>
               <td>Applies padding of 0.5rem for large devices and up</td>
               <td><code>&lt;div class="padding-0-5rem-l"&gt;&lt;div&gt;</code></td>
-              <td><div class="padding-0-5rem-l">Content<div></td>
             </tr>
             <tr>
               <td><code>.padding-1rem-l</code></td>
               <td>Applies padding of 1rem for large devices and up</td>
               <td><code>&lt;div class="padding-1rem-l"&gt;&lt;div&gt;</code></td>
-              <td><div class="padding-1rem-l">Content<div></td>
             </tr>
             <tr>
               <td><code>.padding-1-5rem-l</code></td>
               <td>Applies padding of 1.5rem for large devices and up</td>
               <td><code>&lt;div class="padding-1-5rem-l"&gt;&lt;div&gt;</code></td>
-              <td><div class="padding-1-5rem-l">Content<div></td>
             </tr>
             <tr>
               <td><code>.padding-2rem-l</code></td>
               <td>Applies padding of 2rem for large devices and up</td>
               <td><code>&lt;div class="padding-2rem-l"&gt;&lt;div&gt;</code></td>
-              <td><div class="padding-2rem-l">Content<div></td>
             </tr>
             <tr>
               <td><code>.padding-3rem-l</code></td>
               <td>Applies padding of 3rem for large devices and up</td>
               <td><code>&lt;div class="padding-3rem-l"&gt;&lt;div&gt;</code></td>
-              <td><div class="padding-3rem-l">Content<div></td>
             </tr>
             <tr>
               <td><code>.padding-4rem-l</code></td>
               <td>Applies padding of 4rem for large devices and up</td>
               <td><code>&lt;div class="padding-4rem-l"&gt;&lt;div&gt;</code></td>
-              <td><div class="padding-4rem-l">Content<div></td>
             </tr>
             <tr>
               <td><code>.padding-5rem-l</code></td>
               <td>Applies padding of 5rem for large devices and up</td>
               <td><code>&lt;div class="padding-5rem-l"&gt;&lt;div&gt;</code></td>
-              <td><div class="padding-5rem-l">Content<div></td>
             </tr>
             <tr>
               <td><code>.padding-0-xl</code></td>
               <td>Applies padding of 0 for extra large devices and up</td>
               <td><code>&lt;div class="padding-0-xl"&gt;&lt;div&gt;</code></td>
-              <td><div class="padding-0-xl">Content<div></td>
             </tr>
             <tr>
               <td><code>.padding-0-25rem-xl</code></td>
               <td>Applies padding of 0.25rem for extra large devices and up</td>
               <td><code>&lt;div class="padding-0-25rem-xl"&gt;&lt;div&gt;</code></td>
-              <td><div class="padding-0-25rem-xl">Content<div></td>
             </tr>
             <tr>
               <td><code>.padding-0-5rem-xl</code></td>
               <td>Applies padding of 0.5rem for extra large devices and up</td>
               <td><code>&lt;div class="padding-0-5rem-xl"&gt;&lt;div&gt;</code></td>
-              <td><div class="padding-0-5rem-xl">Content<div></td>
             </tr>
             <tr>
               <td><code>.padding-1rem-xl</code></td>
               <td>Applies padding of 1rem for extra large devices and up</td>
               <td><code>&lt;div class="padding-1rem-xl"&gt;&lt;div&gt;</code></td>
-              <td><div class="padding-1rem-xl">Content<div></td>
             </tr>
             <tr>
               <td><code>.padding-1-5rem-xl</code></td>
               <td>Applies padding of 1.5rem for extra large devices and up</td>
               <td><code>&lt;div class="padding-1-5rem-xl"&gt;&lt;div&gt;</code></td>
-              <td><div class="padding-1-5rem-xl">Content<div></td>
             </tr>
             <tr>
               <td><code>.padding-2rem-xl</code></td>
               <td>Applies padding of 2rem for extra large devices and up</td>
               <td><code>&lt;div class="padding-2rem-xl"&gt;&lt;div&gt;</code></td>
-              <td><div class="padding-2rem-xl">Content<div></td>
             </tr>
             <tr>
               <td><code>.padding-3rem-xl</code></td>
               <td>Applies padding of 3rem for extra large devices and up</td>
               <td><code>&lt;div class="padding-3rem-xl"&gt;&lt;div&gt;</code></td>
-              <td><div class="padding-3rem-xl">Content<div></td>
             </tr>
             <tr>
               <td><code>.padding-4rem-xl</code></td>
               <td>Applies padding of 4rem for extra large devices and up</td>
               <td><code>&lt;div class="padding-4rem-xl"&gt;&lt;div&gt;</code></td>
-              <td><div class="padding-4rem-xl">Content<div></td>
             </tr>
             <tr>
               <td><code>.padding-5rem-xl</code></td>
               <td>Applies padding of 5rem for extra large devices and up</td>
               <td><code>&lt;div class="padding-5rem-xl"&gt;&lt;div&gt;</code></td>
-              <td><div class="padding-5rem-xl">Content<div></td>
             </tr>
           </tbody>
         </table>
