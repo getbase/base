@@ -22,7 +22,7 @@
   },
   "scripts": {
     "start": "NODE_ENV=development parcel src/index.html --open",
-    "build": "NODE_ENV=production rm -rf dist && parcel build --no-content-hash src/index.html",
+    "build": "NODE_ENV=production parcel build --no-content-hash src/index.html --public-url ./ --out-dir ./",
     "clean": "rm -rf dist"
   }
 }
