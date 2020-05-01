@@ -53,33 +53,64 @@ Once you have Base installed, you can choose what to import and include your own
 #### CSS Import:
 
   ```css
-  /* Import the entire Base Framework */
+  /* Import Base */
   @import url("https://unpkg.com/@getbase/base/index.css");
 
-  /* OR import only what you need */
-  @import url("https://unpkg.com/@getbase/base/css/core.css");
-  @import url("https://unpkg.com/@getbase/base/css/grid.css");
+  /* Import Base Common */
+  @import url("https://unpkg.com/@getbase/base/code.css");
+  @import url("https://unpkg.com/@getbase/base/forms.css");
+  @import url("https://unpkg.com/@getbase/base/tables.css");
+  @import url("https://unpkg.com/@getbase/base/typography.css");
+  @import url("https://unpkg.com/@getbase/base/headings.css");
+
+  /* Add Your Website / App Styles */
+  /* ... */
+
+  /* Add Additional Modules */
+  @import url("https://unpkg.com/@getbase/base/containers.css");
+  @import url("https://unpkg.com/@getbase/base/grid.css");
+  @import url("https://unpkg.com/@getbase/base/horizontal-spacers.css");
+  @import url("https://unpkg.com/@getbase/base/vertical-spacers.css");
+  @import url("https://unpkg.com/@getbase/base/spacers.css");
+  @import url("https://unpkg.com/@getbase/base/display-helpers.css");
+  @import url("https://unpkg.com/@getbase/base/flex-helpers.css");
+  @import url("https://unpkg.com/@getbase/base/position-helpers.css");
+  @import url("https://unpkg.com/@getbase/base/typography-helpers.css");
   ```
 
 #### SCSS Import:
 
   ```scss
-  /* Import the entire Base Framework */
-  @import "~@getbase/base/scss/index";
+  /* Import Base */
+  @import "core";
 
-  /* OR import only what you need */
-  @import "~getbase/base/scss/core";
-  @import "~getbase/base/scss/grid";
+  /* Import Base Common */
+  @import "code";
+  @import "forms";
+  @import "tables";
+  @import "typography";
+  @import "headings";
 
-  /* Your Other Styles */
+  /* Add Your Website / App Styles */
   @import "main";
+
+  /* Add Additional Modules */
+  @import "containers";
+  @import "grid";
+  @import "horizontal-spacers";
+  @import "vertical-spacers";
+  @import "spacers";
+  @import "display-helpers";
+  @import "flex-helpers";
+  @import "position-helpers";
+  @import "typography-helpers";
   ```
 
 * * *
 
 ## Documentation
 
-The best way to get started is to view the [Base Styleguide](#)
+The best way to get started is to view the [Base Styleguide](https://getbase.org/styleguide)
 
 * * *
 

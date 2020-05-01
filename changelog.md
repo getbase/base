@@ -1,5 +1,10 @@
 # Base Change Log
 
+## [5.0.1] - 2020-05-01
+### Base V5.0.1
+- Updating readme and links
+- Minor version bump for index.scss and package.json
+
 ## [5.0.0] - 2020-05-01
 ### Base V5.0.0
 - Updated build tool from Webpack to Gulp 4
