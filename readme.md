@@ -120,35 +120,36 @@ Once you have Base installed, you can choose what to import and include your own
 
   ```scss
   /* Import Base */
-  @import "core";
-
+  @import "~@getbase/base/scss/_mixins";
+  @import "~@getbase/base/scss/core";
+  
   /* Import Base Common */
-  @import "code";
-  @import "forms";
-  @import "tables";
-  @import "typography";
-  @import "headings";
+  @import "~@getbase/base/scss/code";
+  @import "~@getbase/base/scss/forms";
+  @import "~@getbase/base/scss/tables";
+  @import "~@getbase/base/scss/typography";
+  @import "~@getbase/base/scss/headings";
 
   /* Add Your Website / App Styles */
   @import "main";
 
-  /* Add Additional Modules */
-  @import "containers";
-  @import "grid";
-  @import "horizontal-spacers";
-  @import "vertical-spacers";
-  @import "spacers";
-  @import "display-helpers";
-  @import "flex-helpers";
-  @import "position-helpers";
-  @import "typography-helpers";
+  // Add Additional Modules
+  @import "~@getbase/base/scss/containers";
+  @import "~@getbase/base/scss/grid";
+  @import "~@getbase/base/scss/horizontal-spacers";
+  @import "~@getbase/base/scss/vertical-spacers";
+  @import "~@getbase/base/scss/spacers";
+  @import "~@getbase/base/scss/typography-helpers";
+  @import "~@getbase/base/scss/display-helpers";
+  @import "~@getbase/base/scss/flex-helpers";
+  @import "~@getbase/base/scss/position-helpers";
   ```
 
 * * *
 
 ## Documentation
 
-The best way to get started is to view the [Base Styleguide](https://getbase.org/styleguide)
+The best way to get started is to view the [Base Styleguide](//unpkg.com/@getbase/base/index.html)
 
 * * *
 
