@@ -50,6 +50,44 @@ npm install --save @getbase/base
 
 Once you have Base installed, you can choose what to import and include your own custom styles.
 
+#### HTML/CSS References:
+
+  ```html
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website / App </title>
+    <!-- Base -->
+    <link ref="stylesheet" href="https://unpkg.com/@getbase/base/index.css">
+    <!-- Base Common -->
+    <link ref="stylesheet" href="https://unpkg.com/@getbase/base/code.css">
+    <link ref="stylesheet" href="https://unpkg.com/@getbase/base/forms.css">
+    <link ref="stylesheet" href="https://unpkg.com/@getbase/base/tables.css">
+    <link ref="stylesheet" href="https://unpkg.com/@getbase/base/typography.css">
+    <link ref="stylesheet" href="https://unpkg.com/@getbase/base/headings.css">
+    <!-- Add Your Website / App Stylesheet -->
+    <!-- ... -->
+    <!-- Add Additional Modules -->
+    <link ref="stylesheet" href="https://unpkg.com/@getbase/base/containers.css">
+    <link ref="stylesheet" href="https://unpkg.com/@getbase/base/grid.css">
+    <link ref="stylesheet" href="https://unpkg.com/@getbase/base/horizontal-spacers.css">
+    <link ref="stylesheet" href="https://unpkg.com/@getbase/base/vertical-spacers.css">
+    <link ref="stylesheet" href="https://unpkg.com/@getbase/base/spacers.css">
+    <link ref="stylesheet" href="https://unpkg.com/@getbase/base/display-helpers.css">
+    <link ref="stylesheet" href="https://unpkg.com/@getbase/base/flex-helpers.css">
+    <link ref="stylesheet" href="https://unpkg.com/@getbase/base/position-helpers.css">
+    <link ref="stylesheet" href="https://unpkg.com/@getbase/base/typography-helpers.css">
+  </head>
+  <body>
+    <p>
+      Base!
+    </p>
+  </body>
+  </html>
+  ```
+
 #### CSS Import:
 
   ```css
