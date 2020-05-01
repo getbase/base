@@ -1,7 +1,14 @@
+$breakpoint-m:  768px !default;
+$breakpoint-l:  980px !default;
+$breakpoint-xl: 1200px !default;
+
+$grid-gutter: 16px !default;
+
 // Mixins
 
-// Breakpoint sizes
-// Example usage @include breakpoint(x) { ... }; - where x is the device
+// Breakpoints
+// Example: .component { @include breakpoint(m) { background: red; } };
+// Output: .component { @media only screen and (min-width: 720px) { background: red; } }
 @mixin breakpoint($bp) {
   @if $bp == xl {
     @media only screen and (min-width: $breakpoint-xl) { @content ; }
@@ -15,16 +22,16 @@
 }
 
 // Background Color with Opacity
-// Example Usage: @include bg-rgba(#111, 50%);
-@mixin background-alpha($color, $alpha) {
-  $opacity: $alpha / 100%;
-  $rgba: rgba($color, $opacity);
+// Example: .element { @include background-rgba(#000000, .5); }}
+// Output: .element { background: rgba(0, 0, 0, .5); }
+@mixin background-rgba($color, $alpha) {
   background-color: $color;
-  background-color: rgba($color, $opacity);
+  background-color: rgba($color, $alpha);
 }
 
 // Animations
-// Example Usage @mixin animate(1s);
+// Example: .fade { @mixin animate(1s); }
+// Output: .fade { animation-duration: 1s; animation-fill-mode: both; }
 @mixin animate($duration: 1s) {
   animation-duration: $duration;
   animation-fill-mode: both;

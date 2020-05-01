@@ -1,0 +1,34 @@
+@import "_mixins";
+
+.relative { position: relative; }
+.absolute { position: absolute; }
+.static { position: static; }
+.fixed { position: fixed; }
+.sticky { position: sticky; }
+
+// Tablet Helpers
+@include breakpoint(m) {
+  .relative-m { position: relative; }
+  .absolute-m { position: absolute; }
+  .static-m { position: static; }
+  .fixed-m { position: fixed; }
+  .sticky-m { position: sticky; }  
+}
+
+// Desktop Helpers
+@include breakpoint(l) {
+  .relative-l { position: relative; }
+  .absolute-l { position: absolute; }
+  .static-l { position: static; }
+  .fixed-l { position: fixed; }
+  .sticky-l { position: sticky; }  
+}
+
+// HD Helpers
+@include breakpoint(xl) {
+  .relative-xl { position: relative; }
+  .absolute-xl { position: absolute; }
+  .static-xl { position: static; }
+  .fixed-xl { position: fixed; }
+  .sticky-xl { position: sticky; }  
+}

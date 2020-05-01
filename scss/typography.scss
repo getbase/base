@@ -1,0 +1,51 @@
+$base-font-family: sans-serif !default;
+$base-font-size: 16px !default;
+$base-line-height: 22px !default;
+$base-font-color: #232323 !default;
+$base-font-weight: 400 !default;
+$base-background-color: #fff !default;
+
+body {
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  color: $base-font-color;
+  font-weight: $base-font-weight;
+  background: $base-background-color;
+}
+
+main, details { display: block; }
+
+a { background-color: transparent; }
+
+b, .b, strong, .strong { font-weight: 700; }
+
+em, .em { font-style: italic; }
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  text-decoration: underline dotted;
+}
+
+small, .small { font-size: .8125rem; }
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sub { bottom: -0.25em; }
+sup { top: -0.5em; }
+
+img { border-style: none; }
+
+template, [hidden] { display: none; }

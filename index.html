@@ -3,346 +3,3566 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Base</title>
-
+  <title>Base Styleguide</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="stylesheet" href="https://unpkg.com/@getbase/base/index.css">
-  
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="code.css">
+  <link rel="stylesheet" href="forms.css">
+  <link rel="stylesheet" href="tables.css">
+  <link rel="stylesheet" href="typography.css">
+  <link rel="stylesheet" href="headings.css">
+  <style>
+    .header { background: #ffeb3b; }
+    .logo {
+      text-decoration: none;
+      margin: 0;
+      cursor: pointer;
+      transition: .3s all;
+    }
+    .logo:hover, .logo:focus { opacity: .8; }
+    .navigation { list-style: none; margin: 0; }
+    .navigation-link, .logo { color: #010101; }
+    .navigation-link:hover, .navigation-link:focus { text-decoration: none; }
+    .card { border: 1px solid #eee; }
+    .table-responsive { overflow-x: auto; }
+  </style>
+  <link rel="stylesheet" href="containers.css">
+  <link rel="stylesheet" href="grid.css">
+  <link rel="stylesheet" href="horizontal-spacers.css">
+  <link rel="stylesheet" href="vertical-spacers.css">
+  <link rel="stylesheet" href="spacers.css">
+  <link rel="stylesheet" href="display-helpers.css">
+  <link rel="stylesheet" href="flex-helpers.css">
+  <link rel="stylesheet" href="position-helpers.css">
+  <link rel="stylesheet" href="typography-helpers.css">
 </head>
 <body>
-  <h1>Heading 1</h1>
-  <h2>Heading 2</h2>
-  <h3>Heading 3</h3>
-  <h4>Heading 4</h4>
-  <h5>Heading 5</h5>
-  <h6>Heading 6</h6>
-
-  <section>
-    <h1>Heading 1 (in section)</h1>
-    <h2>Heading 2 (in section)</h2>
-    <h3>Heading 3 (in section)</h3>
-    <h4>Heading 4 (in section)</h4>
-    <h5>Heading 5 (in section)</h5>
-    <h6>Heading 6 (in section)</h6>
-  </section>
-
-  <article>
-    <h1>Heading 1 (in article)</h1>
-    <h2>Heading 2 (in article)</h2>
-    <h3>Heading 3 (in article)</h3>
-    <h4>Heading 4 (in article)</h4>
-    <h5>Heading 5 (in article)</h5>
-    <h6>Heading 6 (in article)</h6>
-  </article>
-
-  <header>
-    <hgroup>
-      <h1>Heading 1 (in hgroup)</h1>
-      <h2>Heading 2 (in hgroup)</h2>
-    </hgroup>
-    <nav>
-      <ul>
-        <li><a href="#">navigation item #1</a></li>
-        <li><a href="#">navigation item #2</a></li>
-        <li><a href="#">navigation item #3</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <h1>Text-level semantics</h1>
-
-  <p hidden>This should be hidden in all browsers, apart from IE6</p>
-
-  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et m. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et m. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et m.</p>
-  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et m. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et m. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et m.</p>
-
-  <address>Address: somewhere, world</address>
-
-  <hr>
-
-  <hr style="height:4px; border:solid #000; border-width:1px 0;">
-
-  <p>
-    The <a href="#">a element</a> example<br>
-    The <abbr>abbr element</abbr> and <abbr title="Title text">abbr element with title</abbr> examples<br>
-    The <b>b element</b> example<br>
-    The <cite>cite element</cite> example<br>
-    The <code>code element</code> example<br>
-    The <del>del element</del> example<br>
-    The <dfn>dfn element</dfn> and <dfn title="Title text">dfn element with title</dfn> examples<br>
-    The <em>em element</em> example<br>
-    The <i>i element</i> example<br>
-    The img element <img src="https://getbase.org/img/construction.jpg" width="16" height="16" alt=""> example<br>
-    The <ins>ins element</ins> example<br>
-    The <kbd>kbd element</kbd> example<br>
-    The <mark>mark element</mark> example<br>
-    The <q>q element <q>inside</q> a q element</q> example<br>
-    The <s>s element</s> example<br>
-    The <samp>samp element</samp> example<br>
-    The <small>small element</small> example<br>
-    The <span>span element</span> example<br>
-    The <strong>strong element</strong> example<br>
-    The <sub>sub element</sub> example<br>
-    The <sup>sup element</sup> example<br>
-    The <u>u element</u> example<br>
-    The <var>var element</var> example
-  </p>
-
-  <h1>Embedded content</h1>
-
-  <h3>audio</h3>
-
-  <audio controls></audio>
-  <audio></audio>
-
-  <h3>img</h3>
-
-  <img src="https://getbase.org/img/construction.jpg" width="100" height="100" alt="">
-  <a href="#"><img src="https://getbase.org/img/construction.jpg" width="100" height="100" alt=""></a>
-
-  <h3>svg</h3>
-
-  <svg width="100px" height="100px">
-    <circle cx="100" cy="100" r="100" fill="#ff0000" />
-  </svg>
-
-  <h3>video</h3>
-
-  <video controls></video>
-  <video></video>
-
-  <h1>Interactive content</h1>
-
-  <h3>details / summary</h3>
-  <details>
-    <summary>More info</summary>
-    <p>Additional information</p>
-    <ul>
-      <li>Point 1</li>
-      <li>Point 2</li>
-    </ul>
-  </details>
-
-  <h1>Grouping content</h1>
-
-  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et m.</p>
-
-  <h3>pre</h3>
-
-  <pre>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et me.</pre>
-
-  <pre><code>&lt;html>
-    &lt;head>
-    &lt;/head>
-    &lt;body>
-    &lt;div class="main"> &lt;div>
-    &lt;/body>
-    &lt;/html></code></pre>
-
-    <h3>blockquote</h3>
-
-    <blockquote>
-      <p>Some sort of famous witty quote marked up with a &lt;blockquote> and a child &lt;p> element.</p>
-    </blockquote>
-
-    <blockquote>Even better philosophical quote marked up with just a &lt;blockquote> element.</blockquote>
-
-    <h3>ordered list</h3>
-
-    <ol>
-      <li>list item 1</li>
-      <li>list item 1
-        <ol>
-          <li>list item 2</li>
-          <li>list item 2
-            <ol>
-              <li>list item 3</li>
-              <li>list item 3</li>
-            </ol>
-          </li>
-          <li>list item 2</li>
-          <li>list item 2</li>
-        </ol>
-      </li>
-      <li>list item 1</li>
-      <li>list item 1</li>
-    </ol>
-
-    <h3>unordered list</h3>
-
-    <ul>
-      <li>list item 1</li>
-      <li>list item 1
-        <ul>
-          <li>list item 2</li>
-          <li>list item 2
-            <ul>
-              <li>list item 3</li>
-              <li>list item 3</li>
-            </ul>
-          </li>
-          <li>list item 2</li>
-          <li>list item 2</li>
-        </ul>
-      </li>
-      <li>list item 1</li>
-      <li>list item 1</li>
-    </ul>
-
-    <h3>description list</h3>
-
-    <dl>
-      <dt>Description name</dt>
-      <dd>Description value</dd>
-      <dt>Description name</dt>
-      <dd>Description value</dd>
-      <dd>Description value</dd>
-      <dt>Description name</dt>
-      <dt>Description name</dt>
-      <dd>Description value</dd>
-    </dl>
-
-    <h3>figure</h3>
-
-    <figure>
-      <img src="https://getbase.org/img/construction.jpg" width="400" height="200" alt="">
-      <figcaption>Figcaption content</figcaption>
-    </figure>
-
-    <h1>Tabular data</h1>
-
-    <table>
-      <caption>Jimi Hendrix - albums</caption>
-      <thead>
-        <tr>
-          <th>Album</th>
-          <th>Year</th>
-          <th>Price</th>
-        </tr>
-      </thead>
-      <tfoot>
-        <tr>
-          <th>Album</th>
-          <th>Year</th>
-          <th>Price</th>
-        </tr>
-      </tfoot>
-      <tbody>
-        <tr>
-          <td>Are You Experienced</td>
-          <td>1967</td>
-          <td>$10.00</td>
-        </tr>
-        <tr>
-          <td>Axis: Bold as Love</td>
-          <td>1967</td>
-          <td>$12.00</td>
-        </tr>
-        <tr>
-          <td>Electric Ladyland</td>
-          <td>1968</td>
-          <td>$10.00</td>
-        </tr>
-        <tr>
-          <td>Band of Gypsys</td>
-          <td>1970</td>
-          <td>$12.00</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <h1>Forms</h1>
-
-    <form>
-      <fieldset>
-        <legend>Inputs as descendents of labels (form legend). This doubles up as a long legend that can test word wrapping.</legend>
-        <p><label>Text input <input type="text" value="default value that goes on and on without stopping or punctuation"></label></p>
-        <p><label>Email input <input type="email"></label></p>
-        <p><label>Search input <input type="search"></label></p>
-        <p><label>Tel input <input type="tel"></label></p>
-        <p><label>URL input <input type="url" placeholder="https://"></label></p>
-        <p><label>Password input <input type="password" value="password"></label></p>
-        <p><label>File input <input type="file"></label></p>
-
-        <p><label>Radio input <input type="radio" name="rad"></label></p>
-        <p><label>Checkbox input <input type="checkbox"></label></p>
-        <p><label><input type="radio" name="rad"> Radio input</label></p>
-        <p><label><input type="checkbox"> Checkbox input</label></p>
-
-        <p><label>Select field <select><option>Option 01</option><option>Option 02</option></select></label></p>
-        <p><label>Textarea <textarea cols="30" rows="5" >Textarea text</textarea></label></p>
-      </fieldset>
-
-      <fieldset>
-        <legend>Inputs as siblings of labels</legend>
-        <p><label for="ic">Color input</label> <input type="color" id="ic" value="#000000"></p>
-        <p><label for="in">Number input</label> <input type="number" id="in" min="0" max="10" value="5"></p>
-        <p><label for="ir">Range input</label> <input type="range" id="ir" value="10"></p>
-        <p><label for="idd">Date input</label> <input type="date" id="idd" value="1970-01-01"></p>
-        <p><label for="idm">Month input</label> <input type="month" id="idm" value="1970-01"></p>
-        <p><label for="idw">Week input</label> <input type="week" id="idw" value="1970-W01"></p>
-        <p><label for="idt">Datetime input</label> <input type="datetime" id="idt" value="1970-01-01T00:00:00Z"></p>
-        <p><label for="idtl">Datetime-local input</label> <input type="datetime-local" id="idtl" value="1970-01-01T00:00"></p>
-
-        <p><label for="irb">Radio input</label> <input type="radio" id="irb" name="rad"></p>
-        <p><label for="icb">Checkbox input</label> <input type="checkbox" id="icb"></p>
-        <p><input type="radio" id="irb2" name="rad"> <label for="irb2">Radio input</label></p>
-        <p><input type="checkbox" id="icb2"> <label for="icb2">Checkbox input</label></p>
-
-        <p><label for="s">Select field</label> <select id="s"><option>Option 01</option><option>Option 02</option></select></p>
-        <p><label for="t">Textarea</label> <textarea id="t" cols="30" rows="5" >Textarea text</textarea></p>
-      </fieldset>
-
-      <fieldset>
-        <legend>Clickable inputs and buttons</legend>
-        <p><input type="image" src="https://getbase.org/img/construction.jpg" width="90" height="24" alt="Image (input)"></p>
-        <p><input type="reset" value="Reset (input)"></p>
-        <p><input type="button" value="Button (input)"></p>
-        <p><input type="submit" value="Submit (input)"></p>
-        <p><input type="submit" value="Disabled (input)" disabled></p>
-
-
-        <p><button type="reset">Reset (button)</button></p>
-        <p><button type="button">Button (button)</button></p>
-        <p><button type="submit">Submit (button)</button></p>
-        <p><button type="submit" disabled>Disabled (button)</button></p>
-      </fieldset>
-
-      <fieldset id="boxsize">
-        <legend>box-sizing tests</legend>
-        <div><input type="text" value="text"></div>
-        <div><input type="email" value="email"></div>
-        <div><input type="search" value="search"></div>
-        <div><input type="url" value="https://example.com"></div>
-        <div><input type="password" value="password"></div>
-
-        <div><input type="color" value="#000000"></div>
-        <div><input type="number" value="5"></div>
-        <div><input type="range" value="10"></div>
-        <div><input type="date" value="1970-01-01"></div>
-        <div><input type="month" value="1970-01"></div>
-        <div><input type="week" value="1970-W01"></div>
-        <div><input type="datetime" value="1970-01-01T00:00:00Z"></div>
-        <div><input type="datetime-local" value="1970-01-01T00:00"></div>
-
-        <div><input type="radio"></div>
-        <div><input type="checkbox"></div>
-
-        <div><select><option>Option 01</option><option>Option 02</option></select></div>
-        <div><textarea cols="30" rows="5">Textarea text</textarea></div>
-
-        <div><input type="image" src="https://getbase.org/img/construction.jpg" width="90" height="24" alt="Image (input)"></div>
-        <div><input type="reset" value="Reset (input)"></div>
-        <div><input type="button" value="Button (input)"></div>
-        <div><input type="submit" value="Submit (input)"></div>
-
-        <div><button type="reset">Reset (button)</button></div>
-        <div><button type="button">Button (button)</button></div>
-        <div><button type="submit">Submit (button)</button></div>
-      </fieldset>
-    </form>
-
-  </body>
+  <div class="header padding-top-0-5rem padding-bottom-0-5rem">
+    <div class="container">
+      <div class="padding-top-1rem padding-bottom-1rem">
+        <h1 class="logo h4 flex flex-align-items-center">
+          <img class="block" src="logo.svg" alt="Base">
+          <span class="block padding-left-1rem">
+            <span class="sr">Base </span>
+            <span>Styleguide</span>
+          </span>
+        </h1>
+        <div class="padding-top-1rem">
+          <ul class="navigation small flex-l padding-0">
+            <li class="padding-right-1rem-m">
+              <a class="navigation-link" href="#typography">Typography</a>
+            </li>
+            <li class="padding-right-1rem-m">
+              <a class="navigation-link" href="#headings">Headings</a>
+            </li>
+            <li class="padding-right-1rem-m">
+              <a class="navigation-link" href="#typography-helpers">Typography Helpers</a>
+            </li>
+            <li class="padding-right-1rem-m">
+              <a class="navigation-link" href="#tables">Tables</a>
+            </li>
+            <li class="padding-right-1rem-m">
+              <a class="navigation-link" href="#forms">Forms</a>
+            </li>
+            <li class="padding-right-1rem-m">
+              <a class="navigation-link" href="#containers">Containers</a>
+            </li>
+            <li class="padding-right-1rem-m">
+              <a class="navigation-link" href="#grid">Grid</a>
+            </li>
+            <li class="padding-right-1rem-m">
+              <a class="navigation-link" href="#horizontal-spacers">Horizontal Spacers</a>
+            </li>
+            <li class="padding-right-1rem-m">
+              <a class="navigation-link" href="#vertical-spacers">Vertical Spacers</a>
+            </li>
+            <li class="padding-right-1rem-m">
+              <a class="navigation-link" href="#spacers">Spacers</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="typography" class="padding-top-2rem">
+    <div class="container">
+      <h2>Typography</h2>
+      <div class="row">
+        <div class="col-12">
+          <div class="card">
+            <div class="flex flex-align-items-center flex-space-between padding-1rem">
+              <strong class="h1">Sans Serif</strong>
+              <span class="h1 block">Aa <small class="h6">Regular</small></span>
+              <strong class="h1 block">Aa <small class="h6 font-400">Bold</small></strong>
+            </div>
+            <div style="border-bottom: 1px solid #eee; border-top: 1px solid #eee;">
+              <code class="block small padding-1rem">base-font-family: sans-serif<br>base-font-size: 16px<br>base-line-height: 22px<br>base-font-color: #333<br>base-font-weight: 400<br>base-background-color: #fff</code>
+            </div>
+            <div class="padding-1rem">
+              <h3>Body &amp; Elements</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+              <div class="padding-top-1rem padding-bottom-1rem">
+                <blockquote>
+                  <p>
+                    This is a blockquote in all its awesomeness and this text can be from a famous author / poet / artist
+                  </p>
+                  <cite>Unknown author</cite>
+                </blockquote>
+              </div>
+              <p>
+                The <a href="#">a element</a> example<br>
+                The <abbr>abbr element</abbr> and <abbr title="Title text">abbr element with title</abbr> examples<br>
+                The <b>b element</b> example<br>
+                The <strong>strong element</strong> example<br>
+                The <cite>cite element</cite> example<br>
+                The <code>code element</code> example<br>
+                The <del>del element</del> example<br>
+                The <dfn>dfn element</dfn> and <dfn title="Title text">dfn element with title</dfn> examples<br>
+                The <em>em element</em> example<br>
+                The <i>i element</i> example<br>
+                The <ins>ins element</ins> example<br>
+                The <kbd>kbd element</kbd> example<br>
+                The <mark>mark element</mark> example<br>
+                The <q>q element <q>inside</q> a q element</q> example<br>
+                The <s>s element</s> example<br>
+                The <samp>samp element</samp> example<br>
+                The <small>small element</small> example<br>
+                The <span>span element</span> example<br>
+                The <sub>sub element</sub> example<br>
+                The <sup>sup element</sup> example<br>
+                The <u>u element</u> example<br>
+                The <var>var element</var> example
+              </p>
+              <address>Address: this is an example of how the address element looks</address>
+              <pre>
+  &lt;pre&gt;
+    html
+  &lt;/pre&gt;</pre>
+              <p>
+                Below is a Horizontal Rule
+              </p>
+              <hr>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="headings" class="padding-top-2rem">
+    <div class="container">
+      <h2>Headings</h2>
+      <div class="row">
+        <div class="col-12 padding-bottom-1rem">
+          <div class="card">
+            <div class="padding-0-5rem">
+              <strong class="h1">All Headings</strong>
+              <code class="block small padding-top-0-5rem">base-heading-font-family: sans-serif</code>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 padding-bottom-1rem col-1-2-m">
+          <div class="card">
+            <div class="padding-0-5rem">
+              <strong class="block h1">Heading 1 <small>&lt;h1&gt;</small></strong>
+              <code class="block small padding-top-0-5rem">base-h1-font-size: 32px<br>base-h1-line-height: 38px</code>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 padding-bottom-1rem col-1-2-m">
+          <div class="card">
+            <div class="padding-0-5rem">
+              <strong class="block h1">class .h1</strong>
+              <code class="block small padding-top-0-5rem">base-h1-font-size: 32px<br>base-h1-line-height: 38px</code>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 padding-bottom-1rem col-1-2-m">
+          <div class="card">
+            <div class="padding-0-5rem">
+              <strong class="block h2">Heading 2 <small>&lt;h2&gt;</small></strong>
+              <code class="block small padding-top-0-5rem">base-h2-font-size: 26px<br>base-h2-line-height: 32px</code>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 padding-bottom-1rem col-1-2-m">
+          <div class="card">
+            <div class="padding-0-5rem">
+              <strong class="block h2">class .h2</strong>
+              <code class="block small padding-top-0-5rem">base-h2-font-size: 26px<br>base-h2-line-height: 32px</code>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 padding-bottom-1rem col-1-2-m">
+          <div class="card">
+            <div class="padding-0-5rem">
+              <strong class="block h3">Heading 3 <small>&lt;h3&gt;</small></strong>
+              <code class="block small padding-top-0-5rem">base-h3-font-size: 22px<br>base-h3-line-height: 28px</code>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 padding-bottom-1rem col-1-2-m">
+          <div class="card">
+            <div class="padding-0-5rem">
+              <strong class="block h3">class .h3</strong>
+              <code class="block small padding-top-0-5rem">base-h3-font-size: 22px<br>base-h3-line-height: 28px</code>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 padding-bottom-1rem col-1-2-m">
+          <div class="card">
+            <div class="padding-0-5rem">
+              <strong class="block h4">Heading 4 <small>&lt;h4&gt;</small></strong>
+              <code class="block small padding-top-0-5rem">base-h4-font-size: 18px<br>base-h4-line-height: 24px</code>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 padding-bottom-1rem col-1-2-m">
+          <div class="card">
+            <div class="padding-0-5rem">
+              <strong class="block h4">class .h4 <small>&lt;h4&gt;</small></strong>
+              <code class="block small padding-top-0-5rem">base-h4-font-size: 18px<br>base-h4-line-height: 24px</code>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 padding-bottom-1rem col-1-2-m">
+          <div class="card">
+            <div class="padding-0-5rem">
+              <strong class="block h4">Heading 5 <small>&lt;h5&gt;</small></strong>
+              <code class="block small padding-top-0-5rem">base-h5-font-size: 16px<br>base-h5-line-height: 22px</code>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 padding-bottom-1rem col-1-2-m">
+          <div class="card">
+            <div class="padding-0-5rem">
+              <strong class="block h4">class .h5</strong>
+              <code class="block small padding-top-0-5rem">base-h5-font-size: 16px<br>base-h5-line-height: 22px</code>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 padding-bottom-1rem col-1-2-m">
+          <div class="card">
+            <div class="padding-0-5rem">
+              <strong class="block h4">Heading 6 <small>&lt;h6&gt;</small></strong>
+              <code class="block small padding-top-0-5rem">base-h6-font-size: 14px<br>base-h6-line-height: 20px</code>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 padding-bottom-1rem col-1-2-m">
+          <div class="card">
+            <div class="padding-0-5rem">
+              <strong class="block h4">class .h6</strong>
+              <code class="block small padding-top-0-5rem">base-h6-font-size: 14px<br>base-h6-line-height: 20px</code>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="typography-helpers" class="padding-top-2rem">
+    <div class="container">
+      <h2>Typography Helpers</h2>
+      <div class="table-responsive">
+        <table>
+          <thead>
+            <tr>
+              <th>Class</th>
+              <th>Outcome</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <code>.no-select</code>
+              </td>
+              <td>
+                <span class="block no-select">Disables highlighting and selection for all devices</span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <code>.font-100</code>
+              </td>
+              <td>
+                <span class="block font-100">Sets a font weight of 100 for mobile devices and up</span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <code>.font-200</code>
+              </td>
+              <td>
+                <span class="block font-200">Sets a font weight of 200 for mobile devices and up</span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <code>.font-300</code>
+              </td>
+              <td>
+                <span class="block font-300">Sets a font weight of 300 for mobile devices and up</span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <code>.font-400</code>
+              </td>
+              <td>
+                <span class="block font-400">Sets a font weight of 400 for mobile devices and up</span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <code>.font-500</code>
+              </td>
+              <td>
+                <span class="block font-500">Sets a font weight of 500 for mobile devices and up</span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <code>.font-600</code>
+              </td>
+              <td>
+                <span class="block font-600">Sets a font weight of 600 for mobile devices and up</span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <code>.font-700</code>
+              </td>
+              <td>
+                <span class="block font-700">Sets a font weight of 700 for mobile devices and up</span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <code>.font-800</code>
+              </td>
+              <td>
+                <span class="block font-800">Sets a font weight of 800 for mobile devices and up</span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <code>.font-900</code>
+              </td>
+              <td>
+                <span class="block font-900">Sets a font weight of 900 for mobile devices and up</span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <code>.uppercase</code>
+              </td>
+              <td>
+                <span class="block uppercase">Sets text to Uppercase for all devices</span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <code>.lowercase</code>
+              </td>
+              <td>
+                <span class="block lowercase">Sets text to Lowercase for all devices</span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <code>.capitalize</code>
+              </td>
+              <td>
+                <span class="block capitalize">Sets text to capitalize for all devices</span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <code>.text-left</code>
+              </td>
+              <td>
+                <span class="block text-left">Aligns text to the left for all devices</span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <code>.text-right</code>
+              </td>
+              <td>
+                <span class="block text-right">Aligns text to the right for all devices</span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <code>.text-center</code>
+              </td>
+              <td>
+                <span class="block text-center">Aligns text to the center for all devices</span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <code>.text-left-m</code>
+              </td>
+              <td>
+                <span class="block text-left-m">Aligns text to the left for medium devices and up</span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <code>.text-right-m</code>
+              </td>
+              <td>
+                <span class="block text-right-m">Aligns text to the right for medium devices and up</span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <code>.text-center-m</code>
+              </td>
+              <td>
+                <span class="block text-center-m">Aligns text to the center for medium devices and up</span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <code>.text-left-l</code>
+              </td>
+              <td>
+                <span class="block text-left-l">Aligns text to the left for large devices and up</span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <code>.text-right-l</code>
+              </td>
+              <td>
+                <span class="block text-right-l">Aligns text to the right for large devices and up</span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <code>.text-center-l</code>
+              </td>
+              <td>
+                <span class="block text-center-l">Aligns text to the center for large devices and up</span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <code>.text-left-xl</code>
+              </td>
+              <td>
+                <span class="block text-left-xl">Aligns text to the left for extra large devices and up</span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <code>.text-right-xl</code>
+              </td>
+              <td>
+                <span class="block text-right-xl">Aligns text to the right for extra large devices and up</span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <code>.text-center-xl</code>
+              </td>
+              <td>
+                <span class="block text-center-xl">Aligns text to the center for extra large devices and up</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div id="tables" class="padding-top-2rem">
+    <div class="container">
+      <h2>Tables</h2>
+      <div class="table-responsive">
+        <table>
+          <thead>
+            <tr>
+              <th>Table Heading 1</th>
+              <th>Table Heading 2</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Table data cell</td>
+              <td>Table data cell</td>
+            </tr>
+            <tr>
+              <td>Table data cell</td>
+              <td>Table data cell</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div id="forms" class="padding-top-2rem">
+    <div class="container">
+      <h2>Forms</h2>
+      <div class="">
+        <form>
+          <fieldset>
+            <legend class="h3 strong">Legend</legend>
+            <div class="padding-top-1rem">
+              <label for="inputtext">input text label</label>
+              <input placeholder="text" type="text" name="inputtext" id="inputtext">
+            </div>
+            <div class="padding-top-1rem">
+              <label for="inputemail">input email label</label>
+              <input placeholder="email" type="email" name="inputemail" id="inputemail">
+            </div>
+            <div class="padding-top-1rem">
+              <label for="inputpassword">input password label</label>
+              <input placeholder="password" type="password" name="inputpassword" id="inputpassword">
+            </div>
+            <div class="padding-top-1rem">
+              <label for="inputtel">input tel label</label>
+              <input placeholder="tel" type="tel" name="inputtel" id="inputtel">
+            </div>
+            <div class="padding-top-1rem">
+              <label for="inputnumber">input number label</label>
+              <input placeholder="number" type="number" name="inputnumber" id="inputnumber">
+            </div>
+            <div class="padding-top-1rem">
+              <label for="inputdate">input date label</label>
+              <input type="date" name="inputdate" id="inputdate">
+            </div>
+            <div class="padding-top-1rem">
+              <label for="inputsearch">input search label</label>
+              <input placeholder="search" type="search" name="inputsearch" id="inputsearch">
+            </div>
+            <div class="padding-top-1rem">
+              <label for="inputurl">input url label</label>
+              <input placeholder="url" type="url" name="inputurl" id="inputurl">
+            </div>
+            <div class="padding-top-1rem">
+              <label for="textarea">textarea label</label>
+              <textarea name="textarea" id="textarea"></textarea>
+            </div>
+            <div class="padding-top-1rem">
+              <label for="select">select label</label>
+              <select name="select" id="select">
+                <option value="" hidden>Select</option>
+                <option value="html">HTML</option>
+                <option value="css">CSS</option>
+                <option value="js">JS</option>
+              </select>
+            </div>
+            <div class="padding-top-1rem">
+              <div class="flex flex-align-items-center padding-top-0-25rem">
+                <input type="radio" name="radio" id="radio1">
+                <label for="radio1" class="padding-left-0-5rem">radio label 1</label>
+              </div>
+              <div class="flex flex-align-items-center padding-top-0-25rem">
+                <input type="radio" name="radio" id="radio2">
+                <label for="radio2" class="padding-left-0-5rem">radio label 2</label>
+              </div>
+            </div>
+            <div class="padding-top-1rem">
+              <div class="flex flex-align-items-center padding-top-0-25rem">
+                <input type="checkbox" name="checkbox" id="checkbox1">
+                <label for="checkbox1" class="padding-left-0-5rem">checkbox label 1</label>
+              </div>
+              <div class="flex flex-align-items-center padding-top-0-25rem">
+                <input type="checkbox" name="checkbox" id="checkbox2">
+                <label for="checkbox2" class="padding-left-0-5rem">checkbox label 2</label>
+              </div>
+            </div>
+            <div class="padding-top-1rem">
+              <button type="button">Button</button>
+              <button type="button" disabled>Button [disabled]</button>
+              <input type="submit" value="Submit">
+              <input type="submit" disabled value="Submit [disabled]">
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div id="containers" class="padding-top-2rem">
+    <div class="container">
+      <h2>Containers</h2>
+      <p>
+        Styles for containers for all breakpoints.
+      </p>
+      <div class="table-responsive">
+        <table>
+          <thead>
+            <tr>
+              <th>Class</th>
+              <th>Purpose</th>
+              <th>Example</th>
+              <th>Outcome</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>.container</code></td>
+              <td>Apply a <code>.container</code></td>
+              <td><code>&lt;div class="container"&gt;This is a container for all breakpoints&lt;/div&gt;</code></td>
+              <td>Applies a <code>.container</code> to a <code>div</code> element for all breakpoints</td>
+            </tr>
+            <tr>
+              <td><code>.container-m</code></td>
+              <td>Apply a <code>.container-m</code></td>
+              <td><code>&lt;div class="container-m"&gt;This is a container for medium devices and above&lt;/div&gt;</code></td>
+              <td>Applies a <code>.container-m</code> to a <code>div</code> element for medium devices and above</td>
+            </tr>
+            <tr>
+              <td><code>.container-l</code></td>
+              <td>Apply a <code>.container-l</code></td>
+              <td><code>&lt;div class="container-l"&gt;This is a container for large devices and above&lt;/div&gt;</code></td>
+              <td>Applies a <code>.container-l</code> to a <code>div</code> element for large devices and above</td>
+            </tr>
+            <tr>
+              <td><code>.container-xl</code></td>
+              <td>Apply a <code>.container-xl</code></td>
+              <td><code>&lt;div class="container-xl"&gt;This is a container for extra large devices and above&lt;/div&gt;</code></td>
+              <td>Applies a <code>.container-xl</code> to a <code>div</code> element for extra large devices and above</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="container">
+      <div style="margin-top: 2rem; margin-bottom: 1rem; border: 1px solid #ccc;">
+        <div class="padding-0-5rem">
+          This is a <code>.container</code> which is applied for mobile and above breakpoints
+        </div>
+      </div>
+    </div>
+    <div class="container-m">
+      <div style="margin-bottom: 1rem; border: 1px solid #ccc;">
+        <div class="padding-0-5rem">
+          This is a <code>.container-m</code> which is applied for medium devices and above (full width for mobile. Medium width for medium devices and above)
+        </div>
+      </div>
+    </div>
+    <div class="container-l">
+      <div style="margin-bottom: 1rem; border: 1px solid #ccc;">
+        <div class="padding-0-5rem">
+          This is a <code>.container-l</code> which is applied for large devices and above (full width for mobile. Large width for large devices and above)
+        </div>
+      </div>
+    </div>
+    <div class="container-xl">
+      <div style="margin-bottom: 1rem; border: 1px solid #ccc;">
+        <div class="padding-0-5rem">
+          This is a <code>.container-xl</code> which is applied for extra large devices and above (full width for mobile. Extra Large width for extra large devices and above)
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="grid" class="padding-top-2rem">
+    <div class="container">
+      <h2>Grid</h2>
+      <p>
+        Contains styles for flex grids, rows and basic columns for all breakpoints.
+      </p>
+      <div class="table-responsive">
+        <table>
+          <thead>
+            <tr>
+              <th>Class</th>
+              <th>Purpose</th>
+              <th>Example</th>
+              <th>Outcome</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>.row</code></td>
+              <td>Apply a <code>.row</code> when wrapping columns</td>
+              <td><code>&lt;div class="row"&gt;This needs to be wrapped around columns.&lt;/div&gt;</code></td>
+              <td>Applies a <code>.row</code> to a <code>div</code> element which has a negative margin left and right of the gutter spacing for all breakpoints</td>
+            </tr>
+            <tr>
+              <td><code>.col-1</code></td>
+              <td>Apply a <code>.col-1</code></td>
+              <td><code>&lt;div class="col-1"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-1</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 8.33333% for all breakpoints</td>
+            </tr>
+            <tr>
+              <td><code>.col-2</code></td>
+              <td>Apply a <code>.col-2</code></td>
+              <td><code>&lt;div class="col-2"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-2</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 16.66667% for all breakpoints</td>
+            </tr>
+            <tr>
+              <td><code>.col-3</code></td>
+              <td>Apply a <code>.col-3</code></td>
+              <td><code>&lt;div class="col-3"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-3</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 25%</td>
+            </tr>
+            <tr>
+              <td><code>.col-4</code></td>
+              <td>Apply a <code>.col-4</code></td>
+              <td><code>&lt;div class="col-4"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-4</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 33.33333% for all breakpoints</td>
+            </tr>
+            <tr>
+              <td><code>.col-5</code></td>
+              <td>Apply a <code>.col-5</code></td>
+              <td><code>&lt;div class="col-5"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-5</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 41.66667% for all breakpoints</td>
+            </tr>
+            <tr>
+              <td><code>.col-6</code></td>
+              <td>Apply a <code>.col-6</code></td>
+              <td><code>&lt;div class="col-6"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-6</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 50% for all breakpoints</td>
+            </tr>
+            <tr>
+              <td><code>.col-7</code></td>
+              <td>Apply a <code>.col-7</code></td>
+              <td><code>&lt;div class="col-7"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-7</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 58.33333% for all breakpoints</td>
+            </tr>
+            <tr>
+              <td><code>.col-8</code></td>
+              <td>Apply a <code>.col-8</code></td>
+              <td><code>&lt;div class="col-8"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-8</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 66.66667% for all breakpoints</td>
+            </tr>
+            <tr>
+              <td><code>.col-9</code></td>
+              <td>Apply a <code>.col-9</code></td>
+              <td><code>&lt;div class="col-9"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-9</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 75% for all breakpoints</td>
+            </tr>
+            <tr>
+              <td><code>.col-10</code></td>
+              <td>Apply a <code>.col-10</code></td>
+              <td><code>&lt;div class="col-10"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-10</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 83.33333% for all breakpoints</td>
+            </tr>
+            <tr>
+              <td><code>.col-11</code></td>
+              <td>Apply a <code>.col-11</code></td>
+              <td><code>&lt;div class="col-11"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-11</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 91.66667% for all breakpoints</td>
+            </tr>
+            <tr>
+              <td><code>.col-12</code></td>
+              <td>Apply a <code>.col-12</code></td>
+              <td><code>&lt;div class="col-12"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-12</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 100% for all breakpoints</td>
+            </tr>
+            <tr>
+              <td><code>.col-1-2</code></td>
+              <td>Apply a <code>.col-1-2</code></td>
+              <td><code>&lt;div class="col-1-2"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-1-2</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 50% for all breakpoints</td>
+            </tr>
+            <tr>
+              <td><code>.col-1-3</code></td>
+              <td>Apply a <code>.col-1-3</code></td>
+              <td><code>&lt;div class="col-1-3"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-1-3</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 33.33333% for all breakpoints</td>
+            </tr>
+            <tr>
+              <td><code>.col-2-3</code></td>
+              <td>Apply a <code>.col-2-3</code></td>
+              <td><code>&lt;div class="col-2-3"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-2-3</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 66.66667% for all breakpoints</td>
+            </tr>
+            <tr>
+              <td><code>.col-1-4</code></td>
+              <td>Apply a <code>.col-1-4</code></td>
+              <td><code>&lt;div class="col-1-4"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-1-4</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 25% for all breakpoints</td>
+            </tr>
+            <tr>
+              <td><code>.col-3-4</code></td>
+              <td>Apply a <code>.col-3-4</code></td>
+              <td><code>&lt;div class="col-3-4"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-3-4</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 75% for all breakpoints</td>
+            </tr>
+            <tr>
+              <td><code>.col-1-5</code></td>
+              <td>Apply a <code>.col-1-5</code></td>
+              <td><code>&lt;div class="col-1-5"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-1-5</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 20% for all breakpoints</td>
+            </tr>
+            <tr>
+              <td><code>.col-2-5</code></td>
+              <td>Apply a <code>.col-2-5</code></td>
+              <td><code>&lt;div class="col-2-5"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-2-5</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 40% for all breakpoints</td>
+            </tr>
+            <tr>
+              <td><code>.col-3-5</code></td>
+              <td>Apply a <code>.col-3-5</code></td>
+              <td><code>&lt;div class="col-3-5"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-3-5</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 60% for all breakpoints</td>
+            </tr>
+            <tr>
+              <td><code>.col-4-5</code></td>
+              <td>Apply a <code>.col-4-5</code></td>
+              <td><code>&lt;div class="col-4-5"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-4-5</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 80% for all breakpoints</td>
+            </tr>
+            <tr>
+              <td><code>.col-full</code></td>
+              <td>Apply a <code>.col-full</code></td>
+              <td><code>&lt;div class="col-full"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-full</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 100% for all breakpoints</td>
+            </tr>
+            <tr>
+              <td><code>.row-m</code></td>
+              <td>Apply a <code>.row-m</code> when wrapping columns</td>
+              <td><code>&lt;div class="row-m"&gt;This needs to be wrapped around columns.&lt;/div&gt;</code></td>
+              <td>Applies a <code>.row-m</code> to a <code>div</code> element which has a negative margin left and right of the gutter spacing for medium devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-1-m</code></td>
+              <td>Apply a <code>.col-1-m</code></td>
+              <td><code>&lt;div class="col-1-m"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-1-m</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 8.33333% for medium devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-2-m</code></td>
+              <td>Apply a <code>.col-2-m</code></td>
+              <td><code>&lt;div class="col-2-m"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-2-m</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 16.66667% for medium devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-3-m</code></td>
+              <td>Apply a <code>.col-3-m</code></td>
+              <td><code>&lt;div class="col-3-m"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-3-m</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 25%</td>
+            </tr>
+            <tr>
+              <td><code>.col-4-m</code></td>
+              <td>Apply a <code>.col-4-m</code></td>
+              <td><code>&lt;div class="col-4-m"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-4-m</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 33.33333% for medium devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-5-m</code></td>
+              <td>Apply a <code>.col-5-m</code></td>
+              <td><code>&lt;div class="col-5-m"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-5-m</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 41.66667% for medium devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-6-m</code></td>
+              <td>Apply a <code>.col-6-m</code></td>
+              <td><code>&lt;div class="col-6-m"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-6-m</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 50% for medium devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-7-m</code></td>
+              <td>Apply a <code>.col-7-m</code></td>
+              <td><code>&lt;div class="col-7-m"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-7-m</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 58.33333% for medium devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-8-m</code></td>
+              <td>Apply a <code>.col-8-m</code></td>
+              <td><code>&lt;div class="col-8-m"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-8-m</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 66.66667% for medium devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-9-m</code></td>
+              <td>Apply a <code>.col-9-m</code></td>
+              <td><code>&lt;div class="col-9-m"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-9-m</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 75% for medium devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-10-m</code></td>
+              <td>Apply a <code>.col-10-m</code></td>
+              <td><code>&lt;div class="col-10-m"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-10-m</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 83.33333% for medium devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-11-m</code></td>
+              <td>Apply a <code>.col-11-m</code></td>
+              <td><code>&lt;div class="col-11-m"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-11-m</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 91.66667% for medium devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-12-m</code></td>
+              <td>Apply a <code>.col-12-m</code></td>
+              <td><code>&lt;div class="col-12-m"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-12-m</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 100% for medium devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-1-2-m</code></td>
+              <td>Apply a <code>.col-1-2-m</code></td>
+              <td><code>&lt;div class="col-1-2-m"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-1-2-m</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 50% for medium devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-1-3-m</code></td>
+              <td>Apply a <code>.col-1-3-m</code></td>
+              <td><code>&lt;div class="col-1-3-m"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-1-3-m</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 33.33333% for medium devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-2-3-m</code></td>
+              <td>Apply a <code>.col-2-3-m</code></td>
+              <td><code>&lt;div class="col-2-3-m"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-2-3-m</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 66.66667% for medium devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-1-4-m</code></td>
+              <td>Apply a <code>.col-1-4-m</code></td>
+              <td><code>&lt;div class="col-1-4-m"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-1-4-m</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 25% for medium devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-3-4-m</code></td>
+              <td>Apply a <code>.col-3-4-m</code></td>
+              <td><code>&lt;div class="col-3-4-m"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-3-4-m</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 75% for medium devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-1-5-m</code></td>
+              <td>Apply a <code>.col-1-5-m</code></td>
+              <td><code>&lt;div class="col-1-5-m"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-1-5-m</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 20% for medium devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-2-5-m</code></td>
+              <td>Apply a <code>.col-2-5-m</code></td>
+              <td><code>&lt;div class="col-2-5-m"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-2-5-m</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 40% for medium devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-3-5-m</code></td>
+              <td>Apply a <code>.col-3-5-m</code></td>
+              <td><code>&lt;div class="col-3-5-m"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-3-5-m</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 60% for medium devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-4-5-m</code></td>
+              <td>Apply a <code>.col-4-5-m</code></td>
+              <td><code>&lt;div class="col-4-5-m"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-4-5-m</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 80% for medium devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-full-m</code></td>
+              <td>Apply a <code>.col-full-m</code></td>
+              <td><code>&lt;div class="col-full-m"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-full-m</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 100% for medium devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.row-l</code></td>
+              <td>Apply a <code>.row-l</code> when wrapping columns</td>
+              <td><code>&lt;div class="row-l"&gt;This needs to be wrapped around columns.&lt;/div&gt;</code></td>
+              <td>Applies a <code>.row-l</code> to a <code>div</code> element which has a negative margin left and right of the gutter spacing for large devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-1-l</code></td>
+              <td>Apply a <code>.col-1-l</code></td>
+              <td><code>&lt;div class="col-1-l"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-1-l</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 8.33333% for large devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-2-l</code></td>
+              <td>Apply a <code>.col-2-l</code></td>
+              <td><code>&lt;div class="col-2-l"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-2-l</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 16.66667% for large devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-3-l</code></td>
+              <td>Apply a <code>.col-3-l</code></td>
+              <td><code>&lt;div class="col-3-l"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-3-l</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 25%</td>
+            </tr>
+            <tr>
+              <td><code>.col-4-l</code></td>
+              <td>Apply a <code>.col-4-l</code></td>
+              <td><code>&lt;div class="col-4-l"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-4-l</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 33.33333% for large devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-5-l</code></td>
+              <td>Apply a <code>.col-5-l</code></td>
+              <td><code>&lt;div class="col-5-l"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-5-l</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 41.66667% for large devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-6-l</code></td>
+              <td>Apply a <code>.col-6-l</code></td>
+              <td><code>&lt;div class="col-6-l"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-6-l</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 50% for large devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-7-l</code></td>
+              <td>Apply a <code>.col-7-l</code></td>
+              <td><code>&lt;div class="col-7-l"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-7-l</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 58.33333% for large devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-8-l</code></td>
+              <td>Apply a <code>.col-8-l</code></td>
+              <td><code>&lt;div class="col-8-l"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-8-l</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 66.66667% for large devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-9-l</code></td>
+              <td>Apply a <code>.col-9-l</code></td>
+              <td><code>&lt;div class="col-9-l"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-9-l</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 75% for large devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-10-l</code></td>
+              <td>Apply a <code>.col-10-l</code></td>
+              <td><code>&lt;div class="col-10-l"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-10-l</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 83.33333% for large devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-11-l</code></td>
+              <td>Apply a <code>.col-11-l</code></td>
+              <td><code>&lt;div class="col-11-l"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-11-l</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 91.66667% for large devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-12-l</code></td>
+              <td>Apply a <code>.col-12-l</code></td>
+              <td><code>&lt;div class="col-12-l"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-12-l</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 100% for large devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-1-2-l</code></td>
+              <td>Apply a <code>.col-1-2-l</code></td>
+              <td><code>&lt;div class="col-1-2-l"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-1-2-l</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 50% for large devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-1-3-l</code></td>
+              <td>Apply a <code>.col-1-3-l</code></td>
+              <td><code>&lt;div class="col-1-3-l"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-1-3-l</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 33.33333% for large devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-2-3-l</code></td>
+              <td>Apply a <code>.col-2-3-l</code></td>
+              <td><code>&lt;div class="col-2-3-l"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-2-3-l</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 66.66667% for large devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-1-4-l</code></td>
+              <td>Apply a <code>.col-1-4-l</code></td>
+              <td><code>&lt;div class="col-1-4-l"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-1-4-l</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 25% for large devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-3-4-l</code></td>
+              <td>Apply a <code>.col-3-4-l</code></td>
+              <td><code>&lt;div class="col-3-4-l"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-3-4-l</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 75% for large devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-1-5-l</code></td>
+              <td>Apply a <code>.col-1-5-l</code></td>
+              <td><code>&lt;div class="col-1-5-l"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-1-5-l</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 20% for large devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-2-5-l</code></td>
+              <td>Apply a <code>.col-2-5-l</code></td>
+              <td><code>&lt;div class="col-2-5-l"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-2-5-l</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 40% for large devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-3-5-l</code></td>
+              <td>Apply a <code>.col-3-5-l</code></td>
+              <td><code>&lt;div class="col-3-5-l"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-3-5-l</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 60% for large devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-4-5-l</code></td>
+              <td>Apply a <code>.col-4-5-l</code></td>
+              <td><code>&lt;div class="col-4-5-l"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-4-5-l</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 80% for large devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-full-l</code></td>
+              <td>Apply a <code>.col-full-l</code></td>
+              <td><code>&lt;div class="col-full-l"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-full-l</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 100% for large devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.row-xl</code></td>
+              <td>Apply a <code>.row-xl</code> when wrapping columns</td>
+              <td><code>&lt;div class="row-xl"&gt;This needs to be wrapped around columns.&lt;/div&gt;</code></td>
+              <td>Applies a <code>.row-xl</code> to a <code>div</code> element which has a negative margin left and right of the gutter spacing for extra large devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-1-xl</code></td>
+              <td>Apply a <code>.col-1-xl</code></td>
+              <td><code>&lt;div class="col-1-xl"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-1-xl</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 8.33333% for extra large devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-2-xl</code></td>
+              <td>Apply a <code>.col-2-xl</code></td>
+              <td><code>&lt;div class="col-2-xl"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-2-xl</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 16.66667% for extra large devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-3-xl</code></td>
+              <td>Apply a <code>.col-3-xl</code></td>
+              <td><code>&lt;div class="col-3-xl"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-3-xl</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 25%</td>
+            </tr>
+            <tr>
+              <td><code>.col-4-xl</code></td>
+              <td>Apply a <code>.col-4-xl</code></td>
+              <td><code>&lt;div class="col-4-xl"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-4-xl</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 33.33333% for extra large devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-5-xl</code></td>
+              <td>Apply a <code>.col-5-xl</code></td>
+              <td><code>&lt;div class="col-5-xl"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-5-xl</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 41.66667% for extra large devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-6-xl</code></td>
+              <td>Apply a <code>.col-6-xl</code></td>
+              <td><code>&lt;div class="col-6-xl"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-6-xl</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 50% for extra large devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-7-xl</code></td>
+              <td>Apply a <code>.col-7-xl</code></td>
+              <td><code>&lt;div class="col-7-xl"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-7-xl</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 58.33333% for extra large devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-8-xl</code></td>
+              <td>Apply a <code>.col-8-xl</code></td>
+              <td><code>&lt;div class="col-8-xl"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-8-xl</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 66.66667% for extra large devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-9-xl</code></td>
+              <td>Apply a <code>.col-9-xl</code></td>
+              <td><code>&lt;div class="col-9-xl"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-9-xl</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 75% for extra large devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-10-xl</code></td>
+              <td>Apply a <code>.col-10-xl</code></td>
+              <td><code>&lt;div class="col-10-xl"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-10-xl</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 83.33333% for extra large devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-11-xl</code></td>
+              <td>Apply a <code>.col-11-xl</code></td>
+              <td><code>&lt;div class="col-11-xl"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-11-xl</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 91.66667% for extra large devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-12-xl</code></td>
+              <td>Apply a <code>.col-12-xl</code></td>
+              <td><code>&lt;div class="col-12-xl"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-12-xl</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 100% for extra large devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-1-2-xl</code></td>
+              <td>Apply a <code>.col-1-2-xl</code></td>
+              <td><code>&lt;div class="col-1-2-xl"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-1-2-xl</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 50% for extra large devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-1-3-xl</code></td>
+              <td>Apply a <code>.col-1-3-xl</code></td>
+              <td><code>&lt;div class="col-1-3-xl"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-1-3-xl</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 33.33333% for extra large devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-2-3-xl</code></td>
+              <td>Apply a <code>.col-2-3-xl</code></td>
+              <td><code>&lt;div class="col-2-3-xl"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-2-3-xl</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 66.66667% for extra large devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-1-4-xl</code></td>
+              <td>Apply a <code>.col-1-4-xl</code></td>
+              <td><code>&lt;div class="col-1-4-xl"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-1-4-xl</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 25% for extra large devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-3-4-xl</code></td>
+              <td>Apply a <code>.col-3-4-xl</code></td>
+              <td><code>&lt;div class="col-3-4-xl"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-3-4-xl</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 75% for extra large devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-1-5-xl</code></td>
+              <td>Apply a <code>.col-1-5-xl</code></td>
+              <td><code>&lt;div class="col-1-5-xl"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-1-5-xl</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 20% for extra large devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-2-5-xl</code></td>
+              <td>Apply a <code>.col-2-5-xl</code></td>
+              <td><code>&lt;div class="col-2-5-xl"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-2-5-xl</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 40% for extra large devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-3-5-xl</code></td>
+              <td>Apply a <code>.col-3-5-xl</code></td>
+              <td><code>&lt;div class="col-3-5-xl"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-3-5-xl</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 60% for extra large devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-4-5-xl</code></td>
+              <td>Apply a <code>.col-4-5-xl</code></td>
+              <td><code>&lt;div class="col-4-5-xl"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-4-5-xl</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 80% for extra large devices and up</td>
+            </tr>
+            <tr>
+              <td><code>.col-full-xl</code></td>
+              <td>Apply a <code>.col-full-xl</code></td>
+              <td><code>&lt;div class="col-full-xl"&gt;Column&lt;/div&gt;</code></td>
+              <td>Applies a <code>.col-full-xl</code> to a <code>div</code> element which has a padding left and right of gutter spacing and a width of 100% for extra large devices and up</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="container">
+      <div style="padding-bottom: 50px;">
+        <h3 style="margin-top: 2rem; margin-bottom: 1rem;" class="h4">Grid <code>.col-*</code></h3>
+        <div class="row" style="margin-top: 8px; padding-bottom: 8px; border-bottom: 1px solid #ccc;">
+          <div class="col-1">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1</small>
+            </div>
+          </div>
+          <div class="col-1">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1</small>
+            </div>
+          </div>
+          <div class="col-1">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1</small>
+            </div>
+          </div>
+          <div class="col-1">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1</small>
+            </div>
+          </div>
+          <div class="col-1">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1</small>
+            </div>
+          </div>
+          <div class="col-1">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1</small>
+            </div>
+          </div>
+          <div class="col-1">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1</small>
+            </div>
+          </div>
+          <div class="col-1">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1</small>
+            </div>
+          </div>
+          <div class="col-1">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1</small>
+            </div>
+          </div>
+          <div class="col-1">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1</small>
+            </div>
+          </div>
+          <div class="col-1">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1</small>
+            </div>
+          </div>
+          <div class="col-1">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1</small>
+            </div>
+          </div>
+        </div>
+        <div class="row" style="margin-top: 8px; padding-bottom: 8px; border-bottom: 1px solid #ccc;">
+          <div class="col-2">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">2</small>
+            </div>
+          </div>
+          <div class="col-2">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">2</small>
+            </div>
+          </div>
+          <div class="col-2">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">2</small>
+            </div>
+          </div>
+          <div class="col-2">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">2</small>
+            </div>
+          </div>
+          <div class="col-2">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">2</small>
+            </div>
+          </div>
+          <div class="col-2">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">2</small>
+            </div>
+          </div>
+        </div>
+        <div class="row" style="margin-top: 8px; padding-bottom: 8px; border-bottom: 1px solid #ccc;">
+          <div class="col-3">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">3</small>
+            </div>
+          </div>
+          <div class="col-3">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">3</small>
+            </div>
+          </div>
+          <div class="col-3">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">3</small>
+            </div>
+          </div>
+          <div class="col-3">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">3</small>
+            </div>
+          </div>
+        </div>
+        <div class="row" style="margin-top: 8px; padding-bottom: 8px; border-bottom: 1px solid #ccc;">
+          <div class="col-4">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">4</small>
+            </div>
+          </div>
+          <div class="col-4">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">4</small>
+            </div>
+          </div>
+          <div class="col-4">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">4</small>
+            </div>
+          </div>
+        </div>
+        <div class="row" style="margin-top: 8px; padding-bottom: 8px; border-bottom: 1px solid #ccc;">
+          <div class="col-5">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">5</small>
+            </div>
+          </div>
+          <div class="col-2">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">2</small>
+            </div>
+          </div>
+          <div class="col-5">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">5</small>
+            </div>
+          </div>
+        </div>
+        <div class="row" style="margin-top: 8px; padding-bottom: 8px; border-bottom: 1px solid #ccc;">
+          <div class="col-6">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">6</small>
+            </div>
+          </div>
+          <div class="col-6">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">6</small>
+            </div>
+          </div>
+        </div>
+        <div class="row" style="margin-top: 8px; padding-bottom: 8px; border-bottom: 1px solid #ccc;">
+          <div class="col-7">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">7</small>
+            </div>
+          </div>
+          <div class="col-5">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">5</small>
+            </div>
+          </div>
+        </div>
+        <div class="row" style="margin-top: 8px; padding-bottom: 8px; border-bottom: 1px solid #ccc;">
+          <div class="col-8">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">8</small>
+            </div>
+          </div>
+          <div class="col-4">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">4</small>
+            </div>
+          </div>
+        </div>
+        <div class="row" style="margin-top: 8px; padding-bottom: 8px; border-bottom: 1px solid #ccc;">
+          <div class="col-9">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">9</small>
+            </div>
+          </div>
+          <div class="col-3">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">3</small>
+            </div>
+          </div>
+        </div>
+        <div class="row" style="margin-top: 8px; padding-bottom: 8px; border-bottom: 1px solid #ccc;">
+          <div class="col-10">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">10</small>
+            </div>
+          </div>
+          <div class="col-2">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">2</small>
+            </div>
+          </div>
+        </div>
+        <div class="row" style="margin-top: 8px; padding-bottom: 8px; border-bottom: 1px solid #ccc;">
+          <div class="col-11">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">11</small>
+            </div>
+          </div>
+          <div class="col-1">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1</small>
+            </div>
+          </div>
+        </div>
+        <div class="row" style="margin-top: 8px; padding-bottom: 8px; border-bottom: 1px solid #ccc;">
+          <div class="col-12">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">12</small>
+            </div>
+          </div>
+        </div>
+        <div class="row" style="margin-top: 8px; padding-bottom: 8px; border-bottom: 1px solid #ccc;">
+          <div class="col-1-2">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1-2</small>
+            </div>
+          </div>
+          <div class="col-1-2">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1-2</small>
+            </div>
+          </div>
+        </div>
+        <div class="row" style="margin-top: 8px; padding-bottom: 8px; border-bottom: 1px solid #ccc;">
+          <div class="col-1-3">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1-3</small>
+            </div>
+          </div>
+          <div class="col-1-3">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1-3</small>
+            </div>
+          </div>
+          <div class="col-1-3">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1-3</small>
+            </div>
+          </div>
+        </div>
+        <div class="row" style="margin-top: 8px; padding-bottom: 8px; border-bottom: 1px solid #ccc;">
+          <div class="col-1-4">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1-4</small>
+            </div>
+          </div>
+          <div class="col-1-4">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1-4</small>
+            </div>
+          </div>
+          <div class="col-1-4">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1-4</small>
+            </div>
+          </div>
+          <div class="col-1-4">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1-4</small>
+            </div>
+          </div>
+        </div>
+        <div class="row" style="margin-top: 8px; padding-bottom: 8px; border-bottom: 1px solid #ccc;">
+          <div class="col-1-5">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1-5</small>
+            </div>
+          </div>
+          <div class="col-1-5">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1-5</small>
+            </div>
+          </div>
+          <div class="col-1-5">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1-5</small>
+            </div>
+          </div>
+          <div class="col-1-5">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1-5</small>
+            </div>
+          </div>
+          <div class="col-1-5">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1-5</small>
+            </div>
+          </div>
+        </div>
+        <div class="row" style="margin-top: 8px; padding-bottom: 8px; border-bottom: 1px solid #ccc;">
+          <div class="col-2-3">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">2-3</small>
+            </div>
+          </div>
+          <div class="col-1-3">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1-3</small>
+            </div>
+          </div>
+        </div>
+        <div class="row" style="margin-top: 8px; padding-bottom: 8px; border-bottom: 1px solid #ccc;">
+          <div class="col-3-4">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">3-4</small>
+            </div>
+          </div>
+          <div class="col-1-4">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1-4</small>
+            </div>
+          </div>
+        </div>
+        <div class="row" style="margin-top: 8px; padding-bottom: 8px; border-bottom: 1px solid #ccc;">
+          <div class="col-2-5">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">2-5</small>
+            </div>
+          </div>
+          <div class="col-3-5">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">3-5</small>
+            </div>
+          </div>
+        </div>
+        <div class="row" style="margin-top: 8px; padding-bottom: 8px; border-bottom: 1px solid #ccc;">
+          <div class="col-4-5">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">4-5</small>
+            </div>
+          </div>
+          <div class="col-1-5">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1-5</small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="padding-bottom: 50px;">
+        <h3 style="margin-top: 2rem; margin-bottom: 1rem;" class="h4">Grid Medium Devices - <code>.col-*-m</code></h3>
+        <div class="row-m" style="margin-top: 8px; padding-bottom: 8px; border-bottom: 1px solid #ccc;">
+          <div class="col-1-m">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1</small>
+            </div>
+          </div>
+          <div class="col-1-m">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1</small>
+            </div>
+          </div>
+          <div class="col-1-m">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1</small>
+            </div>
+          </div>
+          <div class="col-1-m">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1</small>
+            </div>
+          </div>
+          <div class="col-1-m">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1</small>
+            </div>
+          </div>
+          <div class="col-1-m">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1</small>
+            </div>
+          </div>
+          <div class="col-1-m">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1</small>
+            </div>
+          </div>
+          <div class="col-1-m">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1</small>
+            </div>
+          </div>
+          <div class="col-1-m">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1</small>
+            </div>
+          </div>
+          <div class="col-1-m">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1</small>
+            </div>
+          </div>
+          <div class="col-1-m">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1</small>
+            </div>
+          </div>
+          <div class="col-1-m">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1</small>
+            </div>
+          </div>
+        </div>
+        <div class="row-m" style="margin-top: 8px; padding-bottom: 8px; border-bottom: 1px solid #ccc;">
+          <div class="col-2-m">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">2</small>
+            </div>
+          </div>
+          <div class="col-2-m">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">2</small>
+            </div>
+          </div>
+          <div class="col-2-m">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">2</small>
+            </div>
+          </div>
+          <div class="col-2-m">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">2</small>
+            </div>
+          </div>
+          <div class="col-2-m">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">2</small>
+            </div>
+          </div>
+          <div class="col-2-m">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">2</small>
+            </div>
+          </div>
+        </div>
+        <div class="row-m" style="margin-top: 8px; padding-bottom: 8px; border-bottom: 1px solid #ccc;">
+          <div class="col-3-m">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">3</small>
+            </div>
+          </div>
+          <div class="col-3-m">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">3</small>
+            </div>
+          </div>
+          <div class="col-3-m">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">3</small>
+            </div>
+          </div>
+          <div class="col-3-m">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">3</small>
+            </div>
+          </div>
+        </div>
+        <div class="row-m" style="margin-top: 8px; padding-bottom: 8px; border-bottom: 1px solid #ccc;">
+          <div class="col-4-m">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">4</small>
+            </div>
+          </div>
+          <div class="col-4-m">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">4</small>
+            </div>
+          </div>
+          <div class="col-4-m">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">4</small>
+            </div>
+          </div>
+        </div>
+        <div class="row-m" style="margin-top: 8px; padding-bottom: 8px; border-bottom: 1px solid #ccc;">
+          <div class="col-5-m">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">5</small>
+            </div>
+          </div>
+          <div class="col-2-m">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">2</small>
+            </div>
+          </div>
+          <div class="col-5-m">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">5</small>
+            </div>
+          </div>
+        </div>
+        <div class="row-m" style="margin-top: 8px; padding-bottom: 8px; border-bottom: 1px solid #ccc;">
+          <div class="col-6-m">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">6</small>
+            </div>
+          </div>
+          <div class="col-6-m">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">6</small>
+            </div>
+          </div>
+        </div>
+        <div class="row-m" style="margin-top: 8px; padding-bottom: 8px; border-bottom: 1px solid #ccc;">
+          <div class="col-7-m">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">7</small>
+            </div>
+          </div>
+          <div class="col-5-m">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">5</small>
+            </div>
+          </div>
+        </div>
+        <div class="row-m" style="margin-top: 8px; padding-bottom: 8px; border-bottom: 1px solid #ccc;">
+          <div class="col-8-m">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">8</small>
+            </div>
+          </div>
+          <div class="col-4-m">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">4</small>
+            </div>
+          </div>
+        </div>
+        <div class="row-m" style="margin-top: 8px; padding-bottom: 8px; border-bottom: 1px solid #ccc;">
+          <div class="col-9-m">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">9</small>
+            </div>
+          </div>
+          <div class="col-3-m">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">3</small>
+            </div>
+          </div>
+        </div>
+        <div class="row-m" style="margin-top: 8px; padding-bottom: 8px; border-bottom: 1px solid #ccc;">
+          <div class="col-10-m">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">10</small>
+            </div>
+          </div>
+          <div class="col-2-m">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">2</small>
+            </div>
+          </div>
+        </div>
+        <div class="row-m" style="margin-top: 8px; padding-bottom: 8px; border-bottom: 1px solid #ccc;">
+          <div class="col-11-m">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">11</small>
+            </div>
+          </div>
+          <div class="col-1-m">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1</small>
+            </div>
+          </div>
+        </div>
+        <div class="row-m" style="margin-top: 8px; padding-bottom: 8px; border-bottom: 1px solid #ccc;">
+          <div class="col-12-m">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">12</small>
+            </div>
+          </div>
+        </div>
+        <div class="row-m" style="margin-top: 8px; padding-bottom: 8px; border-bottom: 1px solid #ccc;">
+          <div class="col-1-2-m">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1-2</small>
+            </div>
+          </div>
+          <div class="col-1-2-m">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1-2</small>
+            </div>
+          </div>
+        </div>
+        <div class="row-m" style="margin-top: 8px; padding-bottom: 8px; border-bottom: 1px solid #ccc;">
+          <div class="col-1-3-m">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1-3</small>
+            </div>
+          </div>
+          <div class="col-1-3-m">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1-3</small>
+            </div>
+          </div>
+          <div class="col-1-3-m">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1-3</small>
+            </div>
+          </div>
+        </div>
+        <div class="row-m" style="margin-top: 8px; padding-bottom: 8px; border-bottom: 1px solid #ccc;">
+          <div class="col-1-4-m">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1-4</small>
+            </div>
+          </div>
+          <div class="col-1-4-m">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1-4</small>
+            </div>
+          </div>
+          <div class="col-1-4-m">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1-4</small>
+            </div>
+          </div>
+          <div class="col-1-4-m">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1-4</small>
+            </div>
+          </div>
+        </div>
+        <div class="row-m" style="margin-top: 8px; padding-bottom: 8px; border-bottom: 1px solid #ccc;">
+          <div class="col-1-5-m">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1-5</small>
+            </div>
+          </div>
+          <div class="col-1-5-m">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1-5</small>
+            </div>
+          </div>
+          <div class="col-1-5-m">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1-5</small>
+            </div>
+          </div>
+          <div class="col-1-5-m">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1-5</small>
+            </div>
+          </div>
+          <div class="col-1-5-m">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1-5</small>
+            </div>
+          </div>
+        </div>
+        <div class="row-m" style="margin-top: 8px; padding-bottom: 8px; border-bottom: 1px solid #ccc;">
+          <div class="col-2-3-m">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">2-3</small>
+            </div>
+          </div>
+          <div class="col-1-3-m">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1-3</small>
+            </div>
+          </div>
+        </div>
+        <div class="row-m" style="margin-top: 8px; padding-bottom: 8px; border-bottom: 1px solid #ccc;">
+          <div class="col-3-4-m">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">3-4</small>
+            </div>
+          </div>
+          <div class="col-1-4-m">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1-4</small>
+            </div>
+          </div>
+        </div>
+        <div class="row-m" style="margin-top: 8px; padding-bottom: 8px; border-bottom: 1px solid #ccc;">
+          <div class="col-2-5-m">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">2-5</small>
+            </div>
+          </div>
+          <div class="col-3-5-m">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">3-5</small>
+            </div>
+          </div>
+        </div>
+        <div class="row-m" style="margin-top: 8px; padding-bottom: 8px; border-bottom: 1px solid #ccc;">
+          <div class="col-4-5-m">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">4-5</small>
+            </div>
+          </div>
+          <div class="col-1-5-m">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1-5</small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3 style="margin-top: 2rem; margin-bottom: 1rem;" class="h4">Grid Large Devices - <code>.col-*-l</code></h3>
+        <div class="row-l" style="margin-top: 8px; padding-bottom: 8px; border-bottom: 1px solid #ccc;">
+          <div class="col-1-l">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1</small>
+            </div>
+          </div>
+          <div class="col-1-l">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1</small>
+            </div>
+          </div>
+          <div class="col-1-l">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1</small>
+            </div>
+          </div>
+          <div class="col-1-l">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1</small>
+            </div>
+          </div>
+          <div class="col-1-l">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1</small>
+            </div>
+          </div>
+          <div class="col-1-l">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1</small>
+            </div>
+          </div>
+          <div class="col-1-l">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1</small>
+            </div>
+          </div>
+          <div class="col-1-l">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1</small>
+            </div>
+          </div>
+          <div class="col-1-l">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1</small>
+            </div>
+          </div>
+          <div class="col-1-l">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1</small>
+            </div>
+          </div>
+          <div class="col-1-l">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1</small>
+            </div>
+          </div>
+          <div class="col-1-l">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1</small>
+            </div>
+          </div>
+        </div>
+        <div class="row-l" style="margin-top: 8px; padding-bottom: 8px; border-bottom: 1px solid #ccc;">
+          <div class="col-2-l">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">2</small>
+            </div>
+          </div>
+          <div class="col-2-l">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">2</small>
+            </div>
+          </div>
+          <div class="col-2-l">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">2</small>
+            </div>
+          </div>
+          <div class="col-2-l">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">2</small>
+            </div>
+          </div>
+          <div class="col-2-l">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">2</small>
+            </div>
+          </div>
+          <div class="col-2-l">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">2</small>
+            </div>
+          </div>
+        </div>
+        <div class="row-l" style="margin-top: 8px; padding-bottom: 8px; border-bottom: 1px solid #ccc;">
+          <div class="col-3-l">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">3</small>
+            </div>
+          </div>
+          <div class="col-3-l">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">3</small>
+            </div>
+          </div>
+          <div class="col-3-l">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">3</small>
+            </div>
+          </div>
+          <div class="col-3-l">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">3</small>
+            </div>
+          </div>
+        </div>
+        <div class="row-l" style="margin-top: 8px; padding-bottom: 8px; border-bottom: 1px solid #ccc;">
+          <div class="col-4-l">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">4</small>
+            </div>
+          </div>
+          <div class="col-4-l">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">4</small>
+            </div>
+          </div>
+          <div class="col-4-l">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">4</small>
+            </div>
+          </div>
+        </div>
+        <div class="row-l" style="margin-top: 8px; padding-bottom: 8px; border-bottom: 1px solid #ccc;">
+          <div class="col-5-l">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">5</small>
+            </div>
+          </div>
+          <div class="col-2-l">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">2</small>
+            </div>
+          </div>
+          <div class="col-5-l">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">5</small>
+            </div>
+          </div>
+        </div>
+        <div class="row-l" style="margin-top: 8px; padding-bottom: 8px; border-bottom: 1px solid #ccc;">
+          <div class="col-6-l">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">6</small>
+            </div>
+          </div>
+          <div class="col-6-l">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">6</small>
+            </div>
+          </div>
+        </div>
+        <div class="row-l" style="margin-top: 8px; padding-bottom: 8px; border-bottom: 1px solid #ccc;">
+          <div class="col-7-l">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">7</small>
+            </div>
+          </div>
+          <div class="col-5-l">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">5</small>
+            </div>
+          </div>
+        </div>
+        <div class="row-l" style="margin-top: 8px; padding-bottom: 8px; border-bottom: 1px solid #ccc;">
+          <div class="col-8-l">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">8</small>
+            </div>
+          </div>
+          <div class="col-4-l">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">4</small>
+            </div>
+          </div>
+        </div>
+        <div class="row-l" style="margin-top: 8px; padding-bottom: 8px; border-bottom: 1px solid #ccc;">
+          <div class="col-9-l">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">9</small>
+            </div>
+          </div>
+          <div class="col-3-l">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">3</small>
+            </div>
+          </div>
+        </div>
+        <div class="row-l" style="margin-top: 8px; padding-bottom: 8px; border-bottom: 1px solid #ccc;">
+          <div class="col-10-l">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">10</small>
+            </div>
+          </div>
+          <div class="col-2-l">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">2</small>
+            </div>
+          </div>
+        </div>
+        <div class="row-l" style="margin-top: 8px; padding-bottom: 8px; border-bottom: 1px solid #ccc;">
+          <div class="col-11-l">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">11</small>
+            </div>
+          </div>
+          <div class="col-1-l">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1</small>
+            </div>
+          </div>
+        </div>
+        <div class="row-l" style="margin-top: 8px; padding-bottom: 8px; border-bottom: 1px solid #ccc;">
+          <div class="col-12-l">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">12</small>
+            </div>
+          </div>
+        </div>
+        <div class="row-l" style="margin-top: 8px; padding-bottom: 8px; border-bottom: 1px solid #ccc;">
+          <div class="col-1-2-l">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1-2</small>
+            </div>
+          </div>
+          <div class="col-1-2-l">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1-2</small>
+            </div>
+          </div>
+        </div>
+        <div class="row-l" style="margin-top: 8px; padding-bottom: 8px; border-bottom: 1px solid #ccc;">
+          <div class="col-1-3-l">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1-3</small>
+            </div>
+          </div>
+          <div class="col-1-3-l">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1-3</small>
+            </div>
+          </div>
+          <div class="col-1-3-l">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1-3</small>
+            </div>
+          </div>
+        </div>
+        <div class="row-l" style="margin-top: 8px; padding-bottom: 8px; border-bottom: 1px solid #ccc;">
+          <div class="col-1-4-l">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1-4</small>
+            </div>
+          </div>
+          <div class="col-1-4-l">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1-4</small>
+            </div>
+          </div>
+          <div class="col-1-4-l">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1-4</small>
+            </div>
+          </div>
+          <div class="col-1-4-l">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1-4</small>
+            </div>
+          </div>
+        </div>
+        <div class="row-l" style="margin-top: 8px; padding-bottom: 8px; border-bottom: 1px solid #ccc;">
+          <div class="col-1-5-l">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1-5</small>
+            </div>
+          </div>
+          <div class="col-1-5-l">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1-5</small>
+            </div>
+          </div>
+          <div class="col-1-5-l">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1-5</small>
+            </div>
+          </div>
+          <div class="col-1-5-l">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1-5</small>
+            </div>
+          </div>
+          <div class="col-1-5-l">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1-5</small>
+            </div>
+          </div>
+        </div>
+        <div class="row-l" style="margin-top: 8px; padding-bottom: 8px; border-bottom: 1px solid #ccc;">
+          <div class="col-2-3-l">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">2-3</small>
+            </div>
+          </div>
+          <div class="col-1-3-l">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1-3</small>
+            </div>
+          </div>
+        </div>
+        <div class="row-l" style="margin-top: 8px; padding-bottom: 8px; border-bottom: 1px solid #ccc;">
+          <div class="col-3-4-l">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">3-4</small>
+            </div>
+          </div>
+          <div class="col-1-4-l">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1-4</small>
+            </div>
+          </div>
+        </div>
+        <div class="row-l" style="margin-top: 8px; padding-bottom: 8px; border-bottom: 1px solid #ccc;">
+          <div class="col-2-5-l">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">2-5</small>
+            </div>
+          </div>
+          <div class="col-3-5-l">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">3-5</small>
+            </div>
+          </div>
+        </div>
+        <div class="row-l" style="margin-top: 8px; padding-bottom: 8px; border-bottom: 1px solid #ccc;">
+          <div class="col-4-5-l">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">4-5</small>
+            </div>
+          </div>
+          <div class="col-1-5-l">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1-5</small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3 style="margin-top: 2rem; margin-bottom: 1rem;" class="h4">Grid Extra Large Devices - <code>.col-*-xl</code></h3>
+        <div class="row-xl" style="margin-top: 8px; padding-bottom: 8px; border-bottom: 1px solid #ccc;">
+          <div class="col-1-xl">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1</small>
+            </div>
+          </div>
+          <div class="col-1-xl">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1</small>
+            </div>
+          </div>
+          <div class="col-1-xl">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1</small>
+            </div>
+          </div>
+          <div class="col-1-xl">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1</small>
+            </div>
+          </div>
+          <div class="col-1-xl">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1</small>
+            </div>
+          </div>
+          <div class="col-1-xl">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1</small>
+            </div>
+          </div>
+          <div class="col-1-xl">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1</small>
+            </div>
+          </div>
+          <div class="col-1-xl">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1</small>
+            </div>
+          </div>
+          <div class="col-1-xl">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1</small>
+            </div>
+          </div>
+          <div class="col-1-xl">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1</small>
+            </div>
+          </div>
+          <div class="col-1-xl">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1</small>
+            </div>
+          </div>
+          <div class="col-1-xl">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1</small>
+            </div>
+          </div>
+        </div>
+        <div class="row-xl" style="margin-top: 8px; padding-bottom: 8px; border-bottom: 1px solid #ccc;">
+          <div class="col-2-xl">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">2</small>
+            </div>
+          </div>
+          <div class="col-2-xl">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">2</small>
+            </div>
+          </div>
+          <div class="col-2-xl">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">2</small>
+            </div>
+          </div>
+          <div class="col-2-xl">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">2</small>
+            </div>
+          </div>
+          <div class="col-2-xl">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">2</small>
+            </div>
+          </div>
+          <div class="col-2-xl">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">2</small>
+            </div>
+          </div>
+        </div>
+        <div class="row-xl" style="margin-top: 8px; padding-bottom: 8px; border-bottom: 1px solid #ccc;">
+          <div class="col-3-xl">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">3</small>
+            </div>
+          </div>
+          <div class="col-3-xl">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">3</small>
+            </div>
+          </div>
+          <div class="col-3-xl">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">3</small>
+            </div>
+          </div>
+          <div class="col-3-xl">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">3</small>
+            </div>
+          </div>
+        </div>
+        <div class="row-xl" style="margin-top: 8px; padding-bottom: 8px; border-bottom: 1px solid #ccc;">
+          <div class="col-4-xl">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">4</small>
+            </div>
+          </div>
+          <div class="col-4-xl">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">4</small>
+            </div>
+          </div>
+          <div class="col-4-xl">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">4</small>
+            </div>
+          </div>
+        </div>
+        <div class="row-xl" style="margin-top: 8px; padding-bottom: 8px; border-bottom: 1px solid #ccc;">
+          <div class="col-5-xl">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">5</small>
+            </div>
+          </div>
+          <div class="col-2-xl">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">2</small>
+            </div>
+          </div>
+          <div class="col-5-xl">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">5</small>
+            </div>
+          </div>
+        </div>
+        <div class="row-xl" style="margin-top: 8px; padding-bottom: 8px; border-bottom: 1px solid #ccc;">
+          <div class="col-6-xl">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">6</small>
+            </div>
+          </div>
+          <div class="col-6-xl">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">6</small>
+            </div>
+          </div>
+        </div>
+        <div class="row-xl" style="margin-top: 8px; padding-bottom: 8px; border-bottom: 1px solid #ccc;">
+          <div class="col-7-xl">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">7</small>
+            </div>
+          </div>
+          <div class="col-5-xl">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">5</small>
+            </div>
+          </div>
+        </div>
+        <div class="row-xl" style="margin-top: 8px; padding-bottom: 8px; border-bottom: 1px solid #ccc;">
+          <div class="col-8-xl">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">8</small>
+            </div>
+          </div>
+          <div class="col-4-xl">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">4</small>
+            </div>
+          </div>
+        </div>
+        <div class="row-xl" style="margin-top: 8px; padding-bottom: 8px; border-bottom: 1px solid #ccc;">
+          <div class="col-9-xl">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">9</small>
+            </div>
+          </div>
+          <div class="col-3-xl">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">3</small>
+            </div>
+          </div>
+        </div>
+        <div class="row-xl" style="margin-top: 8px; padding-bottom: 8px; border-bottom: 1px solid #ccc;">
+          <div class="col-10-xl">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">10</small>
+            </div>
+          </div>
+          <div class="col-2-xl">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">2</small>
+            </div>
+          </div>
+        </div>
+        <div class="row-xl" style="margin-top: 8px; padding-bottom: 8px; border-bottom: 1px solid #ccc;">
+          <div class="col-11-xl">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">11</small>
+            </div>
+          </div>
+          <div class="col-1-xl">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1</small>
+            </div>
+          </div>
+        </div>
+        <div class="row-xl" style="margin-top: 8px; padding-bottom: 8px; border-bottom: 1px solid #ccc;">
+          <div class="col-12-xl">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">12</small>
+            </div>
+          </div>
+        </div>
+        <div class="row-xl" style="margin-top: 8px; padding-bottom: 8px; border-bottom: 1px solid #ccc;">
+          <div class="col-1-2-xl">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1-2</small>
+            </div>
+          </div>
+          <div class="col-1-2-xl">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1-2</small>
+            </div>
+          </div>
+        </div>
+        <div class="row-xl" style="margin-top: 8px; padding-bottom: 8px; border-bottom: 1px solid #ccc;">
+          <div class="col-1-3-xl">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1-3</small>
+            </div>
+          </div>
+          <div class="col-1-3-xl">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1-3</small>
+            </div>
+          </div>
+          <div class="col-1-3-xl">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1-3</small>
+            </div>
+          </div>
+        </div>
+        <div class="row-xl" style="margin-top: 8px; padding-bottom: 8px; border-bottom: 1px solid #ccc;">
+          <div class="col-1-4-xl">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1-4</small>
+            </div>
+          </div>
+          <div class="col-1-4-xl">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1-4</small>
+            </div>
+          </div>
+          <div class="col-1-4-xl">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1-4</small>
+            </div>
+          </div>
+          <div class="col-1-4-xl">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1-4</small>
+            </div>
+          </div>
+        </div>
+        <div class="row-xl" style="margin-top: 8px; padding-bottom: 8px; border-bottom: 1px solid #ccc;">
+          <div class="col-1-5-xl">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1-5</small>
+            </div>
+          </div>
+          <div class="col-1-5-xl">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1-5</small>
+            </div>
+          </div>
+          <div class="col-1-5-xl">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1-5</small>
+            </div>
+          </div>
+          <div class="col-1-5-xl">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1-5</small>
+            </div>
+          </div>
+          <div class="col-1-5-xl">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1-5</small>
+            </div>
+          </div>
+        </div>
+        <div class="row-xl" style="margin-top: 8px; padding-bottom: 8px; border-bottom: 1px solid #ccc;">
+          <div class="col-2-3-xl">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">2-3</small>
+            </div>
+          </div>
+          <div class="col-1-3-xl">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1-3</small>
+            </div>
+          </div>
+        </div>
+        <div class="row-xl" style="margin-top: 8px; padding-bottom: 8px; border-bottom: 1px solid #ccc;">
+          <div class="col-3-4-xl">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">3-4</small>
+            </div>
+          </div>
+          <div class="col-1-4-xl">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1-4</small>
+            </div>
+          </div>
+        </div>
+        <div class="row-xl" style="margin-top: 8px; padding-bottom: 8px; border-bottom: 1px solid #ccc;">
+          <div class="col-2-5-xl">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">2-5</small>
+            </div>
+          </div>
+          <div class="col-3-5-xl">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">3-5</small>
+            </div>
+          </div>
+        </div>
+        <div class="row-xl" style="margin-top: 8px; padding-bottom: 8px; border-bottom: 1px solid #ccc;">
+          <div class="col-4-5-xl">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">4-5</small>
+            </div>
+          </div>
+          <div class="col-1-5-xl">
+            <div style="background: #ffeb3b; color: #010101; text-align: center;">
+              <small class="strong">1-5</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="horizontal-spacers" class="padding-top-2rem">
+    <div class="container">
+      <h2>Horizontal Spacers</h2>
+      <p>
+        Includes helpers for adding horizontally spaced rows (.padding-left-0-25rem, .padding-right-1-5rem, etc) for all breakpoints.
+      </p>
+      <div class="table-responsive">
+        <table>
+          <thead>
+            <tr>
+              <th>Class</th>
+              <th>Purpose</th>
+              <th>Example</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>.padding-left-0-25rem</code></td>
+              <td>Applies padding left of 0.25rem for all devices</td>
+              <td><code>&lt;div class="padding-left-0-25rem"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-left-0-5rem</code></td>
+              <td>Applies padding left of 0.5rem for all devices</td>
+              <td><code>&lt;div class="padding-left-0-5rem"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-left-1rem</code></td>
+              <td>Applies padding left of 1rem for all devices</td>
+              <td><code>&lt;div class="padding-left-1rem"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-left-1-5rem</code></td>
+              <td>Applies padding left of 1.5rem for all devices</td>
+              <td><code>&lt;div class="padding-left-1-5rem"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-left-2rem</code></td>
+              <td>Applies padding left of 2rem for all devices</td>
+              <td><code>&lt;div class="padding-left-2rem"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-left-3rem</code></td>
+              <td>Applies padding left of 3rem for all devices</td>
+              <td><code>&lt;div class="padding-left-3rem"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-left-4rem</code></td>
+              <td>Applies padding left of 4rem for all devices</td>
+              <td><code>&lt;div class="padding-left-4rem"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-left-5rem</code></td>
+              <td>Applies padding left of 5rem for all devices</td>
+              <td><code>&lt;div class="padding-left-5rem"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-right-0-25rem</code></td>
+              <td>Applies padding right of 0.25rem for all devices</td>
+              <td><code>&lt;div class="padding-right-0-25rem"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-right-0-5rem</code></td>
+              <td>Applies padding right of 0.5rem for all devices</td>
+              <td><code>&lt;div class="padding-right-0-5rem"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-right-1rem</code></td>
+              <td>Applies padding right of 1rem for all devices</td>
+              <td><code>&lt;div class="padding-right-1rem"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-right-1-5rem</code></td>
+              <td>Applies padding right of 1.5rem for all devices</td>
+              <td><code>&lt;div class="padding-right-1-5rem"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-right-2rem</code></td>
+              <td>Applies padding right of 2rem for all devices</td>
+              <td><code>&lt;div class="padding-right-2rem"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-right-3rem</code></td>
+              <td>Applies padding right of 3rem for all devices</td>
+              <td><code>&lt;div class="padding-right-3rem"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-right-4rem</code></td>
+              <td>Applies padding right of 4rem for all devices</td>
+              <td><code>&lt;div class="padding-right-4rem"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-right-5rem</code></td>
+              <td>Applies padding right of 5rem for all devices</td>
+              <td><code>&lt;div class="padding-right-5rem"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-left-0-25rem-m</code></td>
+              <td>Applies padding left of 0.25rem for medium devices and up</td>
+              <td><code>&lt;div class="padding-left-0-25rem-m"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-left-0-5rem-m</code></td>
+              <td>Applies padding left of 0.5rem for medium devices and up</td>
+              <td><code>&lt;div class="padding-left-0-5rem-m"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-left-1rem-m</code></td>
+              <td>Applies padding left of 1rem for medium devices and up</td>
+              <td><code>&lt;div class="padding-left-1rem-m"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-left-1-5rem-m</code></td>
+              <td>Applies padding left of 1.5rem for medium devices and up</td>
+              <td><code>&lt;div class="padding-left-1-5rem-m"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-left-2rem-m</code></td>
+              <td>Applies padding left of 2rem for medium devices and up</td>
+              <td><code>&lt;div class="padding-left-2rem-m"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-left-3rem-m</code></td>
+              <td>Applies padding left of 3rem for medium devices and up</td>
+              <td><code>&lt;div class="padding-left-3rem-m"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-left-4rem-m</code></td>
+              <td>Applies padding left of 4rem for medium devices and up</td>
+              <td><code>&lt;div class="padding-left-4rem-m"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-left-5rem-m</code></td>
+              <td>Applies padding left of 5rem for medium devices and up</td>
+              <td><code>&lt;div class="padding-left-5rem-m"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-right-0-25rem-m</code></td>
+              <td>Applies padding right of 0.25rem for medium devices and up</td>
+              <td><code>&lt;div class="padding-right-0-25rem-m"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-right-0-5rem-m</code></td>
+              <td>Applies padding right of 0.5rem for medium devices and up</td>
+              <td><code>&lt;div class="padding-right-0-5rem-m"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-right-1rem-m</code></td>
+              <td>Applies padding right of 1rem for medium devices and up</td>
+              <td><code>&lt;div class="padding-right-1rem-m"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-right-1-5rem-m</code></td>
+              <td>Applies padding right of 1.5rem for medium devices and up</td>
+              <td><code>&lt;div class="padding-right-1-5rem-m"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-right-2rem-m</code></td>
+              <td>Applies padding right of 2rem for medium devices and up</td>
+              <td><code>&lt;div class="padding-right-2rem-m"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-right-3rem-m</code></td>
+              <td>Applies padding right of 3rem for medium devices and up</td>
+              <td><code>&lt;div class="padding-right-3rem-m"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-right-4rem-m</code></td>
+              <td>Applies padding right of 4rem for medium devices and up</td>
+              <td><code>&lt;div class="padding-right-4rem-m"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-right-5rem-m</code></td>
+              <td>Applies padding right of 5rem for medium devices and up</td>
+              <td><code>&lt;div class="padding-right-5rem-m"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-left-0-25rem-l</code></td>
+              <td>Applies padding left of 0.25rem for large devices and up</td>
+              <td><code>&lt;div class="padding-left-0-25rem-l"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-left-0-5rem-l</code></td>
+              <td>Applies padding left of 0.5rem for large devices and up</td>
+              <td><code>&lt;div class="padding-left-0-5rem-l"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-left-1rem-l</code></td>
+              <td>Applies padding left of 1rem for large devices and up</td>
+              <td><code>&lt;div class="padding-left-1rem-l"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-left-1-5rem-l</code></td>
+              <td>Applies padding left of 1.5rem for large devices and up</td>
+              <td><code>&lt;div class="padding-left-1-5rem-l"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-left-2rem-l</code></td>
+              <td>Applies padding left of 2rem for large devices and up</td>
+              <td><code>&lt;div class="padding-left-2rem-l"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-left-3rem-l</code></td>
+              <td>Applies padding left of 3rem for large devices and up</td>
+              <td><code>&lt;div class="padding-left-3rem-l"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-left-4rem-l</code></td>
+              <td>Applies padding left of 4rem for large devices and up</td>
+              <td><code>&lt;div class="padding-left-4rem-l"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-left-5rem-l</code></td>
+              <td>Applies padding left of 5rem for large devices and up</td>
+              <td><code>&lt;div class="padding-left-5rem-l"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-right-0-25rem-l</code></td>
+              <td>Applies padding right of 0.25rem for large devices and up</td>
+              <td><code>&lt;div class="padding-right-0-25rem-l"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-right-0-5rem-l</code></td>
+              <td>Applies padding right of 0.5rem for large devices and up</td>
+              <td><code>&lt;div class="padding-right-0-5rem-l"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-right-1rem-l</code></td>
+              <td>Applies padding right of 1rem for large devices and up</td>
+              <td><code>&lt;div class="padding-right-1rem-l"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-right-1-5rem-l</code></td>
+              <td>Applies padding right of 1.5rem for large devices and up</td>
+              <td><code>&lt;div class="padding-right-1-5rem-l"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-right-2rem-l</code></td>
+              <td>Applies padding right of 2rem for large devices and up</td>
+              <td><code>&lt;div class="padding-right-2rem-l"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-right-3rem-l</code></td>
+              <td>Applies padding right of 3rem for large devices and up</td>
+              <td><code>&lt;div class="padding-right-3rem-l"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-right-4rem-l</code></td>
+              <td>Applies padding right of 4rem for large devices and up</td>
+              <td><code>&lt;div class="padding-right-4rem-l"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-right-5rem-l</code></td>
+              <td>Applies padding right of 5rem for large devices and up</td>
+              <td><code>&lt;div class="padding-right-5rem-l"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-left-0-25rem-xl</code></td>
+              <td>Applies padding left of 0.25rem for extra large devices and up</td>
+              <td><code>&lt;div class="padding-left-0-25rem-xl"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-left-0-5rem-xl</code></td>
+              <td>Applies padding left of 0.5rem for extra large devices and up</td>
+              <td><code>&lt;div class="padding-left-0-5rem-xl"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-left-1rem-xl</code></td>
+              <td>Applies padding left of 1rem for extra large devices and up</td>
+              <td><code>&lt;div class="padding-left-1rem-xl"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-left-1-5rem-xl</code></td>
+              <td>Applies padding left of 1.5rem for extra large devices and up</td>
+              <td><code>&lt;div class="padding-left-1-5rem-xl"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-left-2rem-xl</code></td>
+              <td>Applies padding left of 2rem for extra large devices and up</td>
+              <td><code>&lt;div class="padding-left-2rem-xl"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-left-3rem-xl</code></td>
+              <td>Applies padding left of 3rem for extra large devices and up</td>
+              <td><code>&lt;div class="padding-left-3rem-xl"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-left-4rem-xl</code></td>
+              <td>Applies padding left of 4rem for extra large devices and up</td>
+              <td><code>&lt;div class="padding-left-4rem-xl"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-left-5rem-xl</code></td>
+              <td>Applies padding left of 5rem for extra large devices and up</td>
+              <td><code>&lt;div class="padding-left-5rem-xl"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-right-0-25rem-xl</code></td>
+              <td>Applies padding right of 0.25rem for extra large devices and up</td>
+              <td><code>&lt;div class="padding-right-0-25rem-xl"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-right-0-5rem-xl</code></td>
+              <td>Applies padding right of 0.5rem for extra large devices and up</td>
+              <td><code>&lt;div class="padding-right-0-5rem-xl"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-right-1rem-xl</code></td>
+              <td>Applies padding right of 1rem for extra large devices and up</td>
+              <td><code>&lt;div class="padding-right-1rem-xl"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-right-1-5rem-xl</code></td>
+              <td>Applies padding right of 1.5rem for extra large devices and up</td>
+              <td><code>&lt;div class="padding-right-1-5rem-xl"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-right-2rem-xl</code></td>
+              <td>Applies padding right of 2rem for extra large devices and up</td>
+              <td><code>&lt;div class="padding-right-2rem-xl"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-right-3rem-xl</code></td>
+              <td>Applies padding right of 3rem for extra large devices and up</td>
+              <td><code>&lt;div class="padding-right-3rem-xl"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-right-4rem-xl</code></td>
+              <td>Applies padding right of 4rem for extra large devices and up</td>
+              <td><code>&lt;div class="padding-right-4rem-xl"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-right-5rem-xl</code></td>
+              <td>Applies padding right of 5rem for extra large devices and up</td>
+              <td><code>&lt;div class="padding-right-5rem-xl"&gt;&lt;div&gt;</code></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div id="vertical-spacers" class="padding-top-2rem">
+    <div class="container">
+      <h2>Vertical Spacers</h2>
+      <p>
+        Includes helpers for adding vertical spaced rows (.padding-top-0-25rem, .padding-bottom-1-5rem, etc) for all breakpoints.
+      </p>
+      <div class="table-responsive">
+        <table>
+          <thead>
+            <tr>
+              <th>Class</th>
+              <th>Purpose</th>
+              <th>Example</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>.padding-top-0-25rem</code></td>
+              <td>Applies padding top of 0.25rem for all devices</td>
+              <td><code>&lt;div class="padding-top-0-25rem"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-top-0-5rem</code></td>
+              <td>Applies padding top of 0.5rem for all devices</td>
+              <td><code>&lt;div class="padding-top-0-5rem"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-top-1rem</code></td>
+              <td>Applies padding top of 1rem for all devices</td>
+              <td><code>&lt;div class="padding-top-1rem"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-top-1-5rem</code></td>
+              <td>Applies padding top of 1.5rem for all devices</td>
+              <td><code>&lt;div class="padding-top-1-5rem"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-top-2rem</code></td>
+              <td>Applies padding top of 2rem for all devices</td>
+              <td><code>&lt;div class="padding-top-2rem"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-top-3rem</code></td>
+              <td>Applies padding top of 3rem for all devices</td>
+              <td><code>&lt;div class="padding-top-3rem"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-top-4rem</code></td>
+              <td>Applies padding top of 4rem for all devices</td>
+              <td><code>&lt;div class="padding-top-4rem"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-top-5rem</code></td>
+              <td>Applies padding top of 5rem for all devices</td>
+              <td><code>&lt;div class="padding-top-5rem"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-bottom-0-25rem</code></td>
+              <td>Applies padding bottom of 0.25rem for all devices</td>
+              <td><code>&lt;div class="padding-bottom-0-25rem"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-bottom-0-5rem</code></td>
+              <td>Applies padding bottom of 0.5rem for all devices</td>
+              <td><code>&lt;div class="padding-bottom-0-5rem"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-bottom-1rem</code></td>
+              <td>Applies padding bottom of 1rem for all devices</td>
+              <td><code>&lt;div class="padding-bottom-1rem"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-bottom-1-5rem</code></td>
+              <td>Applies padding bottom of 1.5rem for all devices</td>
+              <td><code>&lt;div class="padding-bottom-1-5rem"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-bottom-2rem</code></td>
+              <td>Applies padding bottom of 2rem for all devices</td>
+              <td><code>&lt;div class="padding-bottom-2rem"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-bottom-3rem</code></td>
+              <td>Applies padding bottom of 3rem for all devices</td>
+              <td><code>&lt;div class="padding-bottom-3rem"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-bottom-4rem</code></td>
+              <td>Applies padding bottom of 4rem for all devices</td>
+              <td><code>&lt;div class="padding-bottom-4rem"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-bottom-5rem</code></td>
+              <td>Applies padding bottom of 5rem for all devices</td>
+              <td><code>&lt;div class="padding-bottom-5rem"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-top-0-25rem-m</code></td>
+              <td>Applies padding top of 0.25rem for medium devices and up</td>
+              <td><code>&lt;div class="padding-top-0-25rem-m"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-top-0-5rem-m</code></td>
+              <td>Applies padding top of 0.5rem for medium devices and up</td>
+              <td><code>&lt;div class="padding-top-0-5rem-m"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-top-1rem-m</code></td>
+              <td>Applies padding top of 1rem for medium devices and up</td>
+              <td><code>&lt;div class="padding-top-1rem-m"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-top-1-5rem-m</code></td>
+              <td>Applies padding top of 1.5rem for medium devices and up</td>
+              <td><code>&lt;div class="padding-top-1-5rem-m"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-top-2rem-m</code></td>
+              <td>Applies padding top of 2rem for medium devices and up</td>
+              <td><code>&lt;div class="padding-top-2rem-m"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-top-3rem-m</code></td>
+              <td>Applies padding top of 3rem for medium devices and up</td>
+              <td><code>&lt;div class="padding-top-3rem-m"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-top-4rem-m</code></td>
+              <td>Applies padding top of 4rem for medium devices and up</td>
+              <td><code>&lt;div class="padding-top-4rem-m"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-top-5rem-m</code></td>
+              <td>Applies padding top of 5rem for medium devices and up</td>
+              <td><code>&lt;div class="padding-top-5rem-m"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-bottom-0-25rem-m</code></td>
+              <td>Applies padding bottom of 0.25rem for medium devices and up</td>
+              <td><code>&lt;div class="padding-bottom-0-25rem-m"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-bottom-0-5rem-m</code></td>
+              <td>Applies padding bottom of 0.5rem for medium devices and up</td>
+              <td><code>&lt;div class="padding-bottom-0-5rem-m"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-bottom-1rem-m</code></td>
+              <td>Applies padding bottom of 1rem for medium devices and up</td>
+              <td><code>&lt;div class="padding-bottom-1rem-m"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-bottom-1-5rem-m</code></td>
+              <td>Applies padding bottom of 1.5rem for medium devices and up</td>
+              <td><code>&lt;div class="padding-bottom-1-5rem-m"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-bottom-2rem-m</code></td>
+              <td>Applies padding bottom of 2rem for medium devices and up</td>
+              <td><code>&lt;div class="padding-bottom-2rem-m"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-bottom-3rem-m</code></td>
+              <td>Applies padding bottom of 3rem for medium devices and up</td>
+              <td><code>&lt;div class="padding-bottom-3rem-m"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-bottom-4rem-m</code></td>
+              <td>Applies padding bottom of 4rem for medium devices and up</td>
+              <td><code>&lt;div class="padding-bottom-4rem-m"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-bottom-5rem-m</code></td>
+              <td>Applies padding bottom of 5rem for medium devices and up</td>
+              <td><code>&lt;div class="padding-bottom-5rem-m"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-top-0-25rem-l</code></td>
+              <td>Applies padding top of 0.25rem for large devices and up</td>
+              <td><code>&lt;div class="padding-top-0-25rem-l"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-top-0-5rem-l</code></td>
+              <td>Applies padding top of 0.5rem for large devices and up</td>
+              <td><code>&lt;div class="padding-top-0-5rem-l"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-top-1rem-l</code></td>
+              <td>Applies padding top of 1rem for large devices and up</td>
+              <td><code>&lt;div class="padding-top-1rem-l"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-top-1-5rem-l</code></td>
+              <td>Applies padding top of 1.5rem for large devices and up</td>
+              <td><code>&lt;div class="padding-top-1-5rem-l"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-top-2rem-l</code></td>
+              <td>Applies padding top of 2rem for large devices and up</td>
+              <td><code>&lt;div class="padding-top-2rem-l"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-top-3rem-l</code></td>
+              <td>Applies padding top of 3rem for large devices and up</td>
+              <td><code>&lt;div class="padding-top-3rem-l"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-top-4rem-l</code></td>
+              <td>Applies padding top of 4rem for large devices and up</td>
+              <td><code>&lt;div class="padding-top-4rem-l"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-top-5rem-l</code></td>
+              <td>Applies padding top of 5rem for large devices and up</td>
+              <td><code>&lt;div class="padding-top-5rem-l"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-bottom-0-25rem-l</code></td>
+              <td>Applies padding bottom of 0.25rem for large devices and up</td>
+              <td><code>&lt;div class="padding-bottom-0-25rem-l"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-bottom-0-5rem-l</code></td>
+              <td>Applies padding bottom of 0.5rem for large devices and up</td>
+              <td><code>&lt;div class="padding-bottom-0-5rem-l"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-bottom-1rem-l</code></td>
+              <td>Applies padding bottom of 1rem for large devices and up</td>
+              <td><code>&lt;div class="padding-bottom-1rem-l"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-bottom-1-5rem-l</code></td>
+              <td>Applies padding bottom of 1.5rem for large devices and up</td>
+              <td><code>&lt;div class="padding-bottom-1-5rem-l"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-bottom-2rem-l</code></td>
+              <td>Applies padding bottom of 2rem for large devices and up</td>
+              <td><code>&lt;div class="padding-bottom-2rem-l"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-bottom-3rem-l</code></td>
+              <td>Applies padding bottom of 3rem for large devices and up</td>
+              <td><code>&lt;div class="padding-bottom-3rem-l"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-bottom-4rem-l</code></td>
+              <td>Applies padding bottom of 4rem for large devices and up</td>
+              <td><code>&lt;div class="padding-bottom-4rem-l"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-bottom-5rem-l</code></td>
+              <td>Applies padding bottom of 5rem for large devices and up</td>
+              <td><code>&lt;div class="padding-bottom-5rem-l"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-top-0-25rem-xl</code></td>
+              <td>Applies padding top of 0.25rem for extra large devices and up</td>
+              <td><code>&lt;div class="padding-top-0-25rem-xl"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-top-0-5rem-xl</code></td>
+              <td>Applies padding top of 0.5rem for extra large devices and up</td>
+              <td><code>&lt;div class="padding-top-0-5rem-xl"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-top-1rem-xl</code></td>
+              <td>Applies padding top of 1rem for extra large devices and up</td>
+              <td><code>&lt;div class="padding-top-1rem-xl"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-top-1-5rem-xl</code></td>
+              <td>Applies padding top of 1.5rem for extra large devices and up</td>
+              <td><code>&lt;div class="padding-top-1-5rem-xl"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-top-2rem-xl</code></td>
+              <td>Applies padding top of 2rem for extra large devices and up</td>
+              <td><code>&lt;div class="padding-top-2rem-xl"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-top-3rem-xl</code></td>
+              <td>Applies padding top of 3rem for extra large devices and up</td>
+              <td><code>&lt;div class="padding-top-3rem-xl"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-top-4rem-xl</code></td>
+              <td>Applies padding top of 4rem for extra large devices and up</td>
+              <td><code>&lt;div class="padding-top-4rem-xl"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-top-5rem-xl</code></td>
+              <td>Applies padding top of 5rem for extra large devices and up</td>
+              <td><code>&lt;div class="padding-top-5rem-xl"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-bottom-0-25rem-xl</code></td>
+              <td>Applies padding bottom of 0.25rem for extra large devices and up</td>
+              <td><code>&lt;div class="padding-bottom-0-25rem-xl"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-bottom-0-5rem-xl</code></td>
+              <td>Applies padding bottom of 0.5rem for extra large devices and up</td>
+              <td><code>&lt;div class="padding-bottom-0-5rem-xl"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-bottom-1rem-xl</code></td>
+              <td>Applies padding bottom of 1rem for extra large devices and up</td>
+              <td><code>&lt;div class="padding-bottom-1rem-xl"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-bottom-1-5rem-xl</code></td>
+              <td>Applies padding bottom of 1.5rem for extra large devices and up</td>
+              <td><code>&lt;div class="padding-bottom-1-5rem-xl"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-bottom-2rem-xl</code></td>
+              <td>Applies padding bottom of 2rem for extra large devices and up</td>
+              <td><code>&lt;div class="padding-bottom-2rem-xl"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-bottom-3rem-xl</code></td>
+              <td>Applies padding bottom of 3rem for extra large devices and up</td>
+              <td><code>&lt;div class="padding-bottom-3rem-xl"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-bottom-4rem-xl</code></td>
+              <td>Applies padding bottom of 4rem for extra large devices and up</td>
+              <td><code>&lt;div class="padding-bottom-4rem-xl"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-bottom-5rem-xl</code></td>
+              <td>Applies padding bottom of 5rem for extra large devices and up</td>
+              <td><code>&lt;div class="padding-bottom-5rem-xl"&gt;&lt;div&gt;</code></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div id="spacers" class="padding-top-2rem">
+    <div class="container">
+      <h2>Spacers</h2>
+      <p>
+        Includes helpers for adding spacing (.padding-0-5rem, .padding-2rem, etc) for all breakpoints.
+      </p>
+      <div class="table-responsive">
+        <table>
+          <thead>
+            <tr>
+              <th>Class</th>
+              <th>Purpose</th>
+              <th>Example</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>.padding-0</code></td>
+              <td>Applies padding of 0 for all devices</td>
+              <td><code>&lt;div class="padding-0"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-0-25rem</code></td>
+              <td>Applies padding of 0.25rem for all devices</td>
+              <td><code>&lt;div class="padding-0-25rem"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-0-5rem</code></td>
+              <td>Applies padding of 0.5rem for all devices</td>
+              <td><code>&lt;div class="padding-0-5rem"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-1rem</code></td>
+              <td>Applies padding of 1rem for all devices</td>
+              <td><code>&lt;div class="padding-1rem"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-1-5rem</code></td>
+              <td>Applies padding of 1.5rem for all devices</td>
+              <td><code>&lt;div class="padding-1-5rem"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-2rem</code></td>
+              <td>Applies padding of 2rem for all devices</td>
+              <td><code>&lt;div class="padding-2rem"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-3rem</code></td>
+              <td>Applies padding of 3rem for all devices</td>
+              <td><code>&lt;div class="padding-3rem"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-4rem</code></td>
+              <td>Applies padding of 4rem for all devices</td>
+              <td><code>&lt;div class="padding-4rem"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-5rem</code></td>
+              <td>Applies padding of 5rem for all devices</td>
+              <td><code>&lt;div class="padding-5rem"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-0-m</code></td>
+              <td>Applies padding of 0 for medium devices and up</td>
+              <td><code>&lt;div class="padding-0-m"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-0-25rem-m</code></td>
+              <td>Applies padding of 0.25rem for medium devices and up</td>
+              <td><code>&lt;div class="padding-0-25rem-m"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-0-5rem-m</code></td>
+              <td>Applies padding of 0.5rem for medium devices and up</td>
+              <td><code>&lt;div class="padding-0-5rem-m"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-1rem-m</code></td>
+              <td>Applies padding of 1rem for medium devices and up</td>
+              <td><code>&lt;div class="padding-1rem-m"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-1-5rem-m</code></td>
+              <td>Applies padding of 1.5rem for medium devices and up</td>
+              <td><code>&lt;div class="padding-1-5rem-m"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-2rem-m</code></td>
+              <td>Applies padding of 2rem for medium devices and up</td>
+              <td><code>&lt;div class="padding-2rem-m"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-3rem-m</code></td>
+              <td>Applies padding of 3rem for medium devices and up</td>
+              <td><code>&lt;div class="padding-3rem-m"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-4rem-m</code></td>
+              <td>Applies padding of 4rem for medium devices and up</td>
+              <td><code>&lt;div class="padding-4rem-m"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-5rem-m</code></td>
+              <td>Applies padding of 5rem for medium devices and up</td>
+              <td><code>&lt;div class="padding-5rem-m"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-0-l</code></td>
+              <td>Applies padding of 0 for large devices and up</td>
+              <td><code>&lt;div class="padding-0-l"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-0-25rem-l</code></td>
+              <td>Applies padding of 0.25rem for large devices and up</td>
+              <td><code>&lt;div class="padding-0-25rem-l"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-0-5rem-l</code></td>
+              <td>Applies padding of 0.5rem for large devices and up</td>
+              <td><code>&lt;div class="padding-0-5rem-l"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-1rem-l</code></td>
+              <td>Applies padding of 1rem for large devices and up</td>
+              <td><code>&lt;div class="padding-1rem-l"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-1-5rem-l</code></td>
+              <td>Applies padding of 1.5rem for large devices and up</td>
+              <td><code>&lt;div class="padding-1-5rem-l"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-2rem-l</code></td>
+              <td>Applies padding of 2rem for large devices and up</td>
+              <td><code>&lt;div class="padding-2rem-l"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-3rem-l</code></td>
+              <td>Applies padding of 3rem for large devices and up</td>
+              <td><code>&lt;div class="padding-3rem-l"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-4rem-l</code></td>
+              <td>Applies padding of 4rem for large devices and up</td>
+              <td><code>&lt;div class="padding-4rem-l"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-5rem-l</code></td>
+              <td>Applies padding of 5rem for large devices and up</td>
+              <td><code>&lt;div class="padding-5rem-l"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-0-xl</code></td>
+              <td>Applies padding of 0 for extra large devices and up</td>
+              <td><code>&lt;div class="padding-0-xl"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-0-25rem-xl</code></td>
+              <td>Applies padding of 0.25rem for extra large devices and up</td>
+              <td><code>&lt;div class="padding-0-25rem-xl"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-0-5rem-xl</code></td>
+              <td>Applies padding of 0.5rem for extra large devices and up</td>
+              <td><code>&lt;div class="padding-0-5rem-xl"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-1rem-xl</code></td>
+              <td>Applies padding of 1rem for extra large devices and up</td>
+              <td><code>&lt;div class="padding-1rem-xl"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-1-5rem-xl</code></td>
+              <td>Applies padding of 1.5rem for extra large devices and up</td>
+              <td><code>&lt;div class="padding-1-5rem-xl"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-2rem-xl</code></td>
+              <td>Applies padding of 2rem for extra large devices and up</td>
+              <td><code>&lt;div class="padding-2rem-xl"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-3rem-xl</code></td>
+              <td>Applies padding of 3rem for extra large devices and up</td>
+              <td><code>&lt;div class="padding-3rem-xl"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-4rem-xl</code></td>
+              <td>Applies padding of 4rem for extra large devices and up</td>
+              <td><code>&lt;div class="padding-4rem-xl"&gt;&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>.padding-5rem-xl</code></td>
+              <td>Applies padding of 5rem for extra large devices and up</td>
+              <td><code>&lt;div class="padding-5rem-xl"&gt;&lt;div&gt;</code></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <script>
+    document.addEventListener('click', function(e) {
+      var element = event.target;
+      if (element.closest('.navigation-link') !== null) {
+        e.preventDefault();
+        var id = element.href.split('#')[1];
+        var target = document.getElementById(id);
+        target.scrollIntoView({ behavior: 'smooth' })
+      }
+    })
+  </script>
+</body>
 </html>
