@@ -37,7 +37,7 @@ Base itself is a pretty thin CSS framework built on top of Normalize CSS. Includ
 If you are creating a new project from scratch, it is recommended that you [use the base starter](https://github.com/getbase/starter).
 
 ```bash
-git clone https://github.com/getbase/starter.git \
+git clone https://github.com/getbase/starter.git --depth=1 \
 new-website && cd new-website && rm -rf .git && \
 npm install && npm start
 ```
@@ -70,20 +70,6 @@ Once you have Base installed, you can choose what to import and include your own
   /* OR import only what you need */
   @import "~getbase/base/scss/core";
   @import "~getbase/base/scss/grid";
-
-  /* Your Other Styles */
-  @import "main";
-  ```
-
-#### LESS Import:
-
-  ```less
-  /* Import the entire Base Framework */
-  @import "~@getbase/base/less/index";
-
-  /* OR import only what you need */
-  @import "~getbase/base/less/core";
-  @import "~getbase/base/less/grid";
 
   /* Your Other Styles */
   @import "main";
