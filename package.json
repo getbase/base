@@ -1,47 +1,28 @@
 {
-  "scripts": {
-    "start": "gulp",
-    "clean": "gulp clean",
-    "build": "gulp build",
-    "dist": "gulp build"
-  },
-  "authors": [
-    "Matthew Hartman <matthewhartmanau@gmail.com>"
-  ],
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ],
-  "devDependencies": {
-    "@getbase/base": "4.0.4",
-    "@getbase/buttons": "4.0.0",
-    "@getbase/containers": "4.0.0",
-    "@getbase/forms": "4.0.0",
-    "@getbase/grid": "4.0.2",
-    "@getbase/layout-helpers": "4.0.0",
-    "@getbase/tables": "4.0.0",
-    "@getbase/typography": "4.0.2",
-    "@getbase/typography-helpers": "4.0.2",
-    "browser-sync": "^2.23.6",
-    "del": "^3.0.0",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^5.0.0",
-    "gulp-cache": "^1.0.2",
-    "gulp-css-base64": "^1.3.4",
-    "gulp-imagemin": "^4.1.0",
-    "gulp-inline-source": "^3.1.0",
-    "gulp-notify": "^3.2.0",
-    "gulp-sass": "^4.0.1",
-    "gulp-sourcemaps": "^2.6.4",
-    "gulp-uglify": "^3.0.0",
-    "run-sequence": "^2.2.1"
-  },
+  "author": "Matthew Hartman <matthewhartmanau@gmail.com>",
   "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "Firefox ESR"
-  ]
+    ">1%",
+    "last 4 versions",
+    "Firefox ESR",
+    "ie >= 10"
+  ],
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "dependencies": {
+    "@getbase/base": "^5.0.2",
+    "webfontloader": "^1.6.28"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.7.6",
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.26.5"
+  },
+  "scripts": {
+    "start": "NODE_ENV=development parcel src/index.html --open",
+    "build": "NODE_ENV=production rm -rf dist && parcel build --no-content-hash src/index.html",
+    "clean": "rm -rf dist"
+  }
 }

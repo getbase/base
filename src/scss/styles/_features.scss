@@ -1,0 +1,24 @@
+// Features
+.icon:before {
+  content: "";
+  width: 50px;
+  height: 50px;
+  margin: 10px auto;
+  display: block;
+}
+.icon-foundation:before {
+  background: url(../img/column.svg) 50% 50% no-repeat;
+  background-size: cover;
+}
+.icon-browsers:before {
+  background: url(../img/globe.svg) 50% 50% no-repeat;
+  background-size: cover;
+}
+.icon-modular:before {
+  background: url(../img/atom.svg) 50% 50% no-repeat;
+  background-size: cover;
+}
+.icon-automated:before {
+  background: url(../img/paper-plane.svg) 50% 50% no-repeat;
+  background-size: cover;
+}

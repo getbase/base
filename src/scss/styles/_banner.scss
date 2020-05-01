@@ -1,0 +1,92 @@
+// Banner
+.banner {
+  background-color: $yellow;
+  color: $darkest-grey;
+}
+.logo {
+  background: url(../img/base.svg) 50% 50% no-repeat;
+  width: 100px;
+  height: 100px;
+  display: block;
+  margin: 0 auto;
+  transition: all .3s;
+  @include breakpoint(l) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  &:hover, &:focus {
+    transition: all .3s;
+    transform: scale(1.1);
+  }
+}
+.banner-heading {
+  font-size: 46px;
+  line-height: 50px;
+}
+
+.button-banner {
+  transition: all .3s;
+  text-decoration: none;
+  color: $darkest-grey;
+  @include background-rgba ($white, .9);
+  border-color: transparent;
+  padding: 15px 20px;
+  display: block;
+  @include breakpoint(m) {
+    display: inline-block;
+  }
+  &:hover, &:focus {
+    @include background-rgba ($white, 1);
+  }
+  &.button-secondary {
+    margin-top: 10px;
+    @include background-rgba ($white, .5);
+    &:hover, &:focus {
+      @include background-rgba ($white, 1);
+    }
+  }
+}
+
+.device {
+  width: 90%;
+  height: 320px;
+  margin: 0 auto;
+  @include background-rgba($white, .9);
+  border-radius: 12px 12px 0 0;
+  padding: 30px 20px 0 20px;
+  position: relative;
+  @include breakpoint(l) {
+    width: 450px;
+    height: 430px;
+  }
+  @include breakpoint(xl) {
+    width: 580px;
+    height: 400px;
+  }
+}
+.device-inner {
+  background: url(../img/opposites-game.png) 0 0 no-repeat #111;
+  background-size: cover;
+  display: block;
+  cursor: pointer;
+  height: 280px;
+  transition: all .3s;
+  &:hover {
+    opacity: .8;
+  }
+  @include breakpoint(l) {
+    height: 320px;
+  }
+  &:before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: #111;
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    margin-left: -5px;
+    border-radius: 100%;
+  }
+}

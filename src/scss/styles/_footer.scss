@@ -1,0 +1,22 @@
+// Footer
+.footer {
+  background-color: $darkest-grey;
+  color: $white;
+  a {
+    color: $white;
+    &:hover, &:focus {
+      text-decoration: none;
+    }
+  }
+}
+.footer-links {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  & > li {
+    display: inline-block;
+  }
+  & > li:not(:first-child) {
+    margin-left: 6px;
+  }
+}

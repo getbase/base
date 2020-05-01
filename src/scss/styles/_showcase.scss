@@ -1,0 +1,83 @@
+// Showcase
+.showcase-block { background-color: $lightest-grey; }
+.showcase-panel {
+  background-color: $white;
+  margin-bottom: 20px;
+  position: relative;
+  @include breakpoint(m) {
+    min-height: 300px;
+  }
+  @include breakpoint(l) {
+    min-height: 360px;
+  }
+  @include breakpoint(xl) {
+    min-height: 320px;
+  }
+  a {
+    text-decoration: none;
+    transition: all .3s;
+    &:hover {
+      transition: all .3s;
+      color: $dark-grey;
+    }
+  }
+}
+.showcase-image {
+  width: 100%;
+  height: 140px;
+  background-color: $darkest-grey;
+  display: block;
+  position: relative;
+  &:before {
+    content: "";
+    width: 100%;
+    height: 140px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include background-rgba($white, 0);
+    transition: all .3s;
+  }
+  &:hover {
+    &:before {
+      transition: all .3s;
+      @include background-rgba($white, .2);
+    }
+  }
+}
+.showcase-tattoo {
+  background: url(../img/tattoo.jpg) 0 0 no-repeat;
+  background-size: cover
+}
+.showcase-construct {
+  background: url(../img/construction.jpg) 0 0 no-repeat;
+  background-size: cover
+}
+.showcase-tourly {
+  background: url(../img/tourly.jpg) 0 0 no-repeat;
+  background-size: cover
+}
+.showcase-event {
+  background: url(../img/event.jpg) 0 0 no-repeat;
+  background-size: cover
+}
+.showcase-business {
+  background: url(../img/business.jpg) 0 0 no-repeat;
+  background-size: cover
+}
+.showcase-restaurant {
+  background: url(../img/restaurant.jpg) 0 0 no-repeat;
+  background-size: cover
+}
+.showcase-nelus-oana {
+  background: url(../img/nelus-oana.jpg) 0 0 no-repeat;
+  background-size: cover
+}
+.showcase-gymphy {
+  background: url(../img/gymphy.png) 0 0 no-repeat;
+  background-size: cover
+}
+.showcase-atoz-driving-school {
+  background: url(../img/atoz-driving-school.jpg) 0 0 no-repeat;
+  background-size: cover
+}
