@@ -1,4 +1,6 @@
-a { color: $darkest-grey; }
+a {
+  color: $darkest-grey;
+}
 
 .margin-0 { margin: 0; }
 
@@ -12,4 +14,20 @@ a { color: $darkest-grey; }
 .opl-feature {
   top: 0;
   left: 0;
+}
+
+.button {
+  text-decoration: none;
+  padding: 12px 20px;
+  box-shadow: 4px 4px 0 0 #000;
+  border: 2px solid #000;
+  display: block;
+  transition: all .2s;
+  &:hover, &:focus {
+    background: #f1f1f1;
+  }
+  &:active {
+    box-shadow: 0 0 0 0 #000;
+    transform: translate(2px, 2px);
+  }
 }

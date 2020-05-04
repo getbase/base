@@ -25,12 +25,12 @@
 }
 
 .button-banner {
+  margin-right: 12px;
   transition: all .3s;
   text-decoration: none;
   color: $darkest-grey;
   @include background-rgba ($white, .9);
   border-color: transparent;
-  padding: 15px 20px;
   display: block;
   @include breakpoint(m) {
     display: inline-block;
@@ -48,45 +48,29 @@
 }
 
 .device {
-  width: 90%;
-  height: 320px;
-  margin: 0 auto;
-  @include background-rgba($white, .9);
-  border-radius: 12px 12px 0 0;
-  padding: 30px 20px 0 20px;
+  width: 480px;
+  height: 400px;
+  background: #fff;
+  border-radius: 12px;
   position: relative;
-  @include breakpoint(l) {
-    width: 450px;
-    height: 430px;
-  }
-  @include breakpoint(xl) {
-    width: 580px;
-    height: 400px;
-  }
-}
-.device-inner {
-  background: url(../img/opposites-game.png) 0 0 no-repeat #111;
-  background-size: cover;
-  display: block;
-  cursor: pointer;
-  height: 280px;
-  transition: all .3s;
-  &:hover {
-    opacity: .8;
-  }
-  @include breakpoint(l) {
-    height: 320px;
-  }
+  padding: 40px 10px 10px 10px;
   &:before {
     content: "";
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
     background-color: #111;
     display: block;
     position: absolute;
-    top: 10px;
+    top: 16px;
     left: 50%;
-    margin-left: -5px;
+    margin-left: -4px;
     border-radius: 100%;
+  }
+  .device-inner {
+    background: url(../img/5-minutes-workout.png) 50% 50% no-repeat #333;
+    width: 440px;
+    height: 340px;
+    margin: 0 auto;
+    display: block;
   }
 }
