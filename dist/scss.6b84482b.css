@@ -1155,6 +1155,12 @@ h6, .h6 {
   height: 340px;
   margin: 0 auto;
   display: block;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.device .device-inner:hover, .device .device-inner:focus {
+  opacity: 0.9;
 }
 
 .icon:before {
@@ -1250,6 +1256,11 @@ h6, .h6 {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
+.showcase-beauty {
+  background: url(/beauty.b36c5f8b.jpg) 0 0 no-repeat;
+  background-size: cover;
+}
+
 .showcase-tattoo {
   background: url(/tattoo.8d6a5436.jpg) 0 0 no-repeat;
   background-size: cover;
@@ -1305,6 +1316,10 @@ h6, .h6 {
 
 a {
   color: #010101;
+}
+
+p {
+  margin: 0.5rem 0 1.5rem 0;
 }
 
 .margin-0 {

@@ -72,5 +72,9 @@
     height: 340px;
     margin: 0 auto;
     display: block;
+    transition: all .3s;
+    &:hover, &:focus {
+      opacity: .9;
+    }
   }
 }
