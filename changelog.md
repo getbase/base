@@ -1,5 +1,10 @@
 # Base Change Log
 
+## [5.0.4] - 2020-05-07
+### Base V5.0.4
+- Added missing horizontal spacers for large and extra large devices
+- Minor version bump for package.json
+
 ## [5.0.3] - 2020-05-01
 ### Base V5.0.3
 - Updating readme examples
