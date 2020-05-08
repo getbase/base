@@ -1,5 +1,10 @@
 # Base Change Log
 
+## [5.1.1] - 2020-05-08
+### Base V5.1.1
+- Corrected documentation
+- Minor version bump for package.json
+
 ## [5.1.0] - 2020-05-08
 ### Base V5.1.0
 - Added Base LESS
