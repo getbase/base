@@ -5,8 +5,8 @@
   display: flex;
   flex-wrap: wrap;
   position: relative;
-  margin-left: -$grid-gutter;
-  margin-right: -$grid-gutter;
+  margin-left: -@grid-gutter;
+  margin-right: -@grid-gutter;
 }
 // Columns
 .col-1,
@@ -31,16 +31,16 @@
 .col-3-5,
 .col-4-5 {
   flex: 0 0 auto;
-  padding-left: $grid-gutter;
-  padding-right: $grid-gutter;
+  padding-left: @grid-gutter;
+  padding-right: @grid-gutter;
 }
 
 // Columns
-$columns: 12;
-@for $i from 1 through $columns {
-  .col-#{$i} {
-    flex: 0 0 ($i / $columns) * 100%;
-    max-width: ($i / $columns) * 100%;
+.generate-grid (12);
+.generate-grid (@index) when (@index > 0) {
+  .generate-grid (@index - 1);
+  .col-@{index} {
+    width: @index / 12 * 100%;
   }
 }
 .col-1-2 {
@@ -85,14 +85,14 @@ $columns: 12;
   max-width: 100%;
 }
 
-@include breakpoint(m) {
+.breakpoint(m, {
   // Rows (Medium Devices)
   .row-m {
     display: flex;
     flex-wrap: wrap;
     position: relative;
-    margin-left: -$grid-gutter;
-    margin-right: -$grid-gutter;
+    margin-left: -@grid-gutter;
+    margin-right: -@grid-gutter;
   }
   // Columns (Medium Devices)
   .col-1-m,
@@ -117,16 +117,16 @@ $columns: 12;
   .col-3-5-m,
   .col-4-5-m {
     flex: 0 0 auto;
-    padding-left: $grid-gutter;
-    padding-right: $grid-gutter;
+    padding-left: @grid-gutter;
+    padding-right: @grid-gutter;
   }
 
   // Columns (Medium Devices)
-  $columns: 12;
-  @for $i from 1 through $columns {
-    .col-#{$i}-m {
-      flex: 0 0 ($i / $columns) * 100%;
-      max-width: ($i / $columns) * 100%;
+  .generate-grid-m (12);
+  .generate-grid-m (@index) when (@index > 0) {
+    .generate-grid-m (@index - 1);
+    .col-@{index}-m {
+      width: @index / 12 * 100%;
     }
   }
   .col-1-2-m {
@@ -170,16 +170,16 @@ $columns: 12;
     flex-basis: 0;
     max-width: 100%;
   }
-}
+});
 
-@include breakpoint(l) {
+.breakpoint(l, {
   // Rows (Large Devices)
   .row-l {
     display: flex;
     flex-wrap: wrap;
     position: relative;
-    margin-left: -$grid-gutter;
-    margin-right: -$grid-gutter;
+    margin-left: -@grid-gutter;
+    margin-right: -@grid-gutter;
   }
   // Columns (Large Devices)
   .col-1-l,
@@ -204,16 +204,16 @@ $columns: 12;
   .col-3-5-l,
   .col-4-5-l {
     flex: 0 0 auto;
-    padding-left: $grid-gutter;
-    padding-right: $grid-gutter;
+    padding-left: @grid-gutter;
+    padding-right: @grid-gutter;
   }
 
   // Columns (Large Devices)
-  $columns: 12;
-  @for $i from 1 through $columns {
-    .col-#{$i}-l {
-      flex: 0 0 ($i / $columns) * 100%;
-      max-width: ($i / $columns) * 100%;
+  .generate-grid-l (12);
+  .generate-grid-l (@index) when (@index > 0) {
+    .generate-grid-l (@index - 1);
+    .col-@{index}-l {
+      width: @index / 12 * 100%;
     }
   }
   .col-1-2-l {
@@ -257,16 +257,16 @@ $columns: 12;
     flex-basis: 0;
     max-width: 100%;
   }
-}
+});
 
-@include breakpoint(xl) {
+.breakpoint(xl, {
   // Rows (Extra Large Devices)
   .row-xl {
     display: flex;
     flex-wrap: wrap;
     position: relative;
-    margin-left: -$grid-gutter;
-    margin-right: -$grid-gutter;
+    margin-left: -@grid-gutter;
+    margin-right: -@grid-gutter;
   }
   // Columns (Extra Large Devices)
   .col-1-xl,
@@ -291,16 +291,16 @@ $columns: 12;
   .col-3-5-xl,
   .col-4-5-xl {
     flex: 0 0 auto;
-    padding-left: $grid-gutter;
-    padding-right: $grid-gutter;
+    padding-left: @grid-gutter;
+    padding-right: @grid-gutter;
   }
 
   // Columns (Extra Large Devices)
-  $columns: 12;
-  @for $i from 1 through $columns {
-    .col-#{$i}-xl {
-      flex: 0 0 ($i / $columns) * 100%;
-      max-width: ($i / $columns) * 100%;
+  .generate-grid-xl (12);
+  .generate-grid-xl (@index) when (@index > 0) {
+    .generate-grid-xl (@index - 1);
+    .col-@{index}-xl {
+      width: @index / 12 * 100%;
     }
   }
   .col-1-2-xl {
@@ -344,4 +344,4 @@ $columns: 12;
     flex-basis: 0;
     max-width: 100%;
   }
-}
+});

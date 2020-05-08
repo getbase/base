@@ -1,0 +1,44 @@
+@breakpoint-m:  768px;
+@breakpoint-l:  980px;
+@breakpoint-xl: 1200px;
+
+@grid-gutter: 16px;
+
+// Mixins
+
+// Breakpoints
+// Example: .component { @include breakpoint(m) { background: red; } };
+// Output: .component { @media only screen and (min-width: 720px) { background: red; } }
+.breakpoint(@bp, @content) {
+  & when (@bp = xl) {
+    @media only screen and (min-width: @breakpoint-xl) {
+      @content();
+    }
+  }
+  & when (@bp = l) {
+    @media only screen and (min-width: @breakpoint-l) {
+      @content();
+    }
+  }
+  & when (@bp = m) {
+    @media only screen and (min-width: @breakpoint-m) {
+      @content();
+    }
+  }
+}
+
+// Background Color with Opacity
+// Example: .element { @include background-rgba(#000000, .5); }}
+// Output: .element { background: rgba(0, 0, 0, .5); }
+.background-rgba(@color, @alpha) {
+  background-color: @color;
+  background-color: rgba(@color, @alpha);
+}
+
+// Animations
+// Example: .fade { @mixin animate(1s); }
+// Output: .fade { animation-duration: 1s; animation-fill-mode: both; }
+.animate(@duration: 1s) {
+  animation-duration: @duration;
+  animation-fill-mode: both;
+}

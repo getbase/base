@@ -145,6 +145,35 @@ Once you have Base installed, you can choose what to import and include your own
   @import "~@getbase/base/scss/position-helpers";
   ```
 
+#### LESS Import:
+
+  ```less
+  /* Import Base */
+  @import "~@getbase/base/less/_mixins";
+  @import "~@getbase/base/less/core";
+  
+  /* Import Base Common */
+  @import "~@getbase/base/less/code";
+  @import "~@getbase/base/less/forms";
+  @import "~@getbase/base/less/tables";
+  @import "~@getbase/base/less/typography";
+  @import "~@getbase/base/less/headings";
+
+  /* Add Your Website / App Styles */
+  @import "main";
+
+  // Add Additional Modules
+  @import "~@getbase/base/less/containers";
+  @import "~@getbase/base/less/grid";
+  @import "~@getbase/base/less/horizontal-spacers";
+  @import "~@getbase/base/less/vertical-spacers";
+  @import "~@getbase/base/less/spacers";
+  @import "~@getbase/base/less/typography-helpers";
+  @import "~@getbase/base/less/display-helpers";
+  @import "~@getbase/base/less/flex-helpers";
+  @import "~@getbase/base/less/position-helpers";
+  ```
+
 * * *
 
 ## Documentation

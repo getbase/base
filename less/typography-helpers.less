@@ -1,0 +1,49 @@
+@import "_mixins";
+
+// No Selection
+.no-select {
+  user-select: none;
+  cursor: default;
+}
+
+// Font Weights
+.font-100 { font-weight: 100; }
+.font-200 { font-weight: 200; }
+.font-300 { font-weight: 300; }
+.font-400 { font-weight: 400; }
+.font-500 { font-weight: 500; }
+.font-600 { font-weight: 600; }
+.font-700 { font-weight: 700; }
+.font-800 { font-weight: 800; }
+.font-900 { font-weight: 900; }
+
+// Text Modifications
+.uppercase { text-transform: uppercase; }
+.lowercase { text-transform: lowercase; }
+.capitalize { text-transform: capitalize; }
+
+// Text Alignments
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+.text-center { text-align: center; }
+
+.breakpoint(m, {
+  // Text Alignments - Tablet
+  .text-left-m { text-align: left; }
+  .text-right-m { text-align: right; }
+  .text-center-m { text-align: center; }
+});
+
+.breakpoint(l, {
+  // Text Alignments - Tablet
+  .text-left-l { text-align: left; }
+  .text-right-l { text-align: right; }
+  .text-center-l { text-align: center; }
+});
+
+.breakpoint(xl, {
+  // Text Alignments - Tablet
+  .text-left-xl { text-align: left; }
+  .text-right-xl { text-align: right; }
+  .text-center-xl { text-align: center; }
+});
