@@ -59,8 +59,8 @@ Once you have Base installed, you can choose what to import and include your own
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Website / App </title>
-    <!-- Base -->
-    <link rel="stylesheet" href="https://unpkg.com/@getbase/base/index.css">
+    <!-- Base Core -->
+    <link rel="stylesheet" href="https://unpkg.com/@getbase/base/core.css">
     <!-- Base Common -->
     <link rel="stylesheet" href="https://unpkg.com/@getbase/base/code.css">
     <link rel="stylesheet" href="https://unpkg.com/@getbase/base/forms.css">
@@ -92,7 +92,7 @@ Once you have Base installed, you can choose what to import and include your own
 
   ```css
   /* Import Base */
-  @import url("https://unpkg.com/@getbase/base/index.css");
+  @import url("https://unpkg.com/@getbase/base/core.css");
 
   /* Import Base Common */
   @import url("https://unpkg.com/@getbase/base/code.css");

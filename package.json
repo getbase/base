@@ -1,10 +1,10 @@
 {
   "name": "@getbase/base",
-  "version": "5.1.1",
+  "version": "5.2.0",
   "description": "A Rock Solid, Responsive CSS Framework built to work on all devices big, small and in-between.",
   "homepage": "http://getbase.org/",
   "author": "Matthew Hartman",
-  "main": "index.css",
+  "main": "core.css",
   "scripts": {
     "start": "./node_modules/gulp/bin/gulp.js",
     "build:scss": "./node_modules/gulp/bin/gulp.js compileScssModulesToCss",

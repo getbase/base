@@ -1,5 +1,12 @@
 # Base Change Log
 
+## [5.2.0] - 2020-05-10
+### Base V5.2.0
+- Updated index.scss/less to include all modules for index.css (use core.css for minimal Base)
+- Updated readme and styleguide references
+- Minor version bump for package.json
+- Updated entrypoint from index.css to core.css within package.json
+
 ## [5.1.1] - 2020-05-08
 ### Base V5.1.1
 - Corrected documentation
