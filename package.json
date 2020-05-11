@@ -12,7 +12,7 @@
     }
   },
   "dependencies": {
-    "@getbase/base": "^5.0.2",
+    "@getbase/base": "^5.1.0",
     "webfontloader": "^1.6.28"
   },
   "devDependencies": {

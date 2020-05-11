@@ -67,14 +67,15 @@
     border-radius: 100%;
   }
   .device-inner {
-    background: url(../img/5-minutes-workout.png) 50% 50% no-repeat #333;
+    background: url(../img/nonsense.svg) 50% 50% no-repeat #333;
     width: 440px;
     height: 340px;
     margin: 0 auto;
     display: block;
+    border-radius: 10px;
     transition: all .3s;
     &:hover, &:focus {
-      opacity: .9;
+      opacity: .7;
     }
   }
 }

@@ -1150,17 +1150,18 @@ h6, .h6 {
   border-radius: 100%;
 }
 .device .device-inner {
-  background: url(/5-minutes-workout.e4085b32.png) 50% 50% no-repeat #333;
+  background: url(/nonsense.00c41668.svg) 50% 50% no-repeat #333;
   width: 440px;
   height: 340px;
   margin: 0 auto;
   display: block;
+  border-radius: 10px;
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
 }
 .device .device-inner:hover, .device .device-inner:focus {
-  opacity: 0.9;
+  opacity: 0.7;
 }
 
 .icon:before {
@@ -1523,6 +1524,18 @@ p {
     padding-left: 2rem;
   }
 
+  .padding-left-3rem-l {
+    padding-left: 3rem;
+  }
+
+  .padding-left-4rem-l {
+    padding-left: 4rem;
+  }
+
+  .padding-left-5rem-l {
+    padding-left: 5rem;
+  }
+
   .padding-right-0-l {
     padding-right: 0;
   }
@@ -1582,6 +1595,18 @@ p {
 
   .padding-left-2rem-xl {
     padding-left: 2rem;
+  }
+
+  .padding-left-3rem-xl {
+    padding-left: 3rem;
+  }
+
+  .padding-left-4rem-xl {
+    padding-left: 4rem;
+  }
+
+  .padding-left-5rem-xl {
+    padding-left: 5rem;
   }
 
   .padding-right-0-xl {
