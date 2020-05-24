@@ -4,12 +4,14 @@
 
 Lightweight and minimal code. Spend less time overriding styles and focus more time on creating beautiful website applications.
 
-[![Travis Build Status][travis-img]][travis] [![David Dependencies Status][david-img]][david]
+[![Travis Build Status][travis-img]][travis] [![David Dependencies Status][david-img]][david] [![Financial Contributors on Open Collective](oc-img)](oc) 
 
 [travis-img]:   https://img.shields.io/travis/getbase/base.svg?branch=master
 [david-img]:    https://img.shields.io/david/dev/getbase/base.svg?branch=master&label=dependencies
 [travis]:       https://travis-ci.org/getbase/base
 [david]:        https://david-dm.org/getbase/base?type=dev
+[oc-img]:       https://opencollective.com/base/all/badge.svg?label=financial+contributors
+[oc]:           https://opencollective.com/base
 
 * * *
 
@@ -198,6 +200,30 @@ There are a [collection of free templates built with Base](https://gumroad.com/g
 ## Credits
 
 * Thanks to [Nicolas Gallagher (@necolas)](https://github.com/necolas/) for (Normalize.css)[https://github.com/necolas/normalize.css/]
+
+## Contributors
+
+### Code Contributors
+
+This project exists thanks to all the people who contribute. [[Contribute](CONTRIBUTING.md)].
+
+<a href="https://github.com/getbase/base/graphs/contributors"><img src="https://opencollective.com/base/contributors.svg?width=890&button=false" /></a>
+
+### Financial Contributors
+
+Become a financial contributor and help us sustain our community. [[Contribute](https://opencollective.com/base/contribute)]
+
+#### Individuals
+
+<a href="https://opencollective.com/base"><img src="https://opencollective.com/base/individuals.svg?width=890"></a>
+
+#### Organizations
+
+Support this project with your organization. Your logo will show up here with a link to your website. [[Contribute](https://opencollective.com/base/contribute)]
+
+<a href="https://opencollective.com/base/organization/0/website"><img src="https://opencollective.com/base/organization/0/avatar.svg"></a>
+
+
 
 * * *
 
