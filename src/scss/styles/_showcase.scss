@@ -45,8 +45,26 @@
     }
   }
 }
+.showcase-sponsor {
+  &:after {
+    content: "Sponsored";
+    font-size: 12px;
+    line-height: normal;
+    width: 80px;
+    padding: 4px 8px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #ffcc00;
+    color: #111;
+  }
+}
 .showcase-beauty {
   background: url(../img/beauty.jpg) 0 0 no-repeat;
+  background-size: cover
+}
+.showcase-budherd {
+  background: url(../img/budherd.jpg) 50% 50% no-repeat;
   background-size: cover
 }
 .showcase-tattoo {

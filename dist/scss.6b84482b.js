@@ -189,7 +189,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./../img/base.svg":[["base.77916a29.svg","img/base.svg"],"img/base.svg"],"./../img/atoz-driving-school.jpg":[["atoz-driving-school.a3cd4713.jpg","img/atoz-driving-school.jpg"],"img/atoz-driving-school.jpg"],"./../img/column.svg":[["column.c9d5ae9e.svg","img/column.svg"],"img/column.svg"],"./../img/globe.svg":[["globe.66ee0b64.svg","img/globe.svg"],"img/globe.svg"],"./../img/atom.svg":[["atom.76225600.svg","img/atom.svg"],"img/atom.svg"],"./../img/paper-plane.svg":[["paper-plane.3e207fe8.svg","img/paper-plane.svg"],"img/paper-plane.svg"],"./../img/beauty.jpg":[["beauty.b36c5f8b.jpg","img/beauty.jpg"],"img/beauty.jpg"],"./../img/tattoo.jpg":[["tattoo.8d6a5436.jpg","img/tattoo.jpg"],"img/tattoo.jpg"],"./../img/construction.jpg":[["construction.72c4e10d.jpg","img/construction.jpg"],"img/construction.jpg"],"./../img/tourly.jpg":[["tourly.73d1f095.jpg","img/tourly.jpg"],"img/tourly.jpg"],"./../img/event.jpg":[["event.aa2d5cd1.jpg","img/event.jpg"],"img/event.jpg"],"./../img/business.jpg":[["business.4ba01ada.jpg","img/business.jpg"],"img/business.jpg"],"./../img/restaurant.jpg":[["restaurant.decd8a56.jpg","img/restaurant.jpg"],"img/restaurant.jpg"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./../img/base.svg":[["base.77916a29.svg","img/base.svg"],"img/base.svg"],"./../img/atoz-driving-school.jpg":[["atoz-driving-school.a3cd4713.jpg","img/atoz-driving-school.jpg"],"img/atoz-driving-school.jpg"],"./../img/column.svg":[["column.c9d5ae9e.svg","img/column.svg"],"img/column.svg"],"./../img/globe.svg":[["globe.66ee0b64.svg","img/globe.svg"],"img/globe.svg"],"./../img/atom.svg":[["atom.76225600.svg","img/atom.svg"],"img/atom.svg"],"./../img/paper-plane.svg":[["paper-plane.3e207fe8.svg","img/paper-plane.svg"],"img/paper-plane.svg"],"./../img/beauty.jpg":[["beauty.b36c5f8b.jpg","img/beauty.jpg"],"img/beauty.jpg"],"./../img/budherd.jpg":[["budherd.12c2dfe3.jpg","img/budherd.jpg"],"img/budherd.jpg"],"./../img/tattoo.jpg":[["tattoo.8d6a5436.jpg","img/tattoo.jpg"],"img/tattoo.jpg"],"./../img/construction.jpg":[["construction.72c4e10d.jpg","img/construction.jpg"],"img/construction.jpg"],"./../img/tourly.jpg":[["tourly.73d1f095.jpg","img/tourly.jpg"],"img/tourly.jpg"],"./../img/event.jpg":[["event.aa2d5cd1.jpg","img/event.jpg"],"img/event.jpg"],"./../img/business.jpg":[["business.4ba01ada.jpg","img/business.jpg"],"img/business.jpg"],"./../img/restaurant.jpg":[["restaurant.decd8a56.jpg","img/restaurant.jpg"],"img/restaurant.jpg"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -217,7 +217,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "43047" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "37035" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
