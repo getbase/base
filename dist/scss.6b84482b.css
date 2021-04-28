@@ -1150,7 +1150,7 @@ h6, .h6 {
   border-radius: 100%;
 }
 .device .device-inner {
-  background: url(/nonsense.00c41668.svg) 50% 50% no-repeat #333;
+  background: url(/atoz-driving-school.a3cd4713.jpg) 0 0 no-repeat #333;
   width: 440px;
   height: 340px;
   margin: 0 auto;
@@ -1342,7 +1342,7 @@ p {
 
 .button {
   text-decoration: none;
-  padding: 12px 20px;
+  padding: 1rem;
   -webkit-box-shadow: 4px 4px 0 0 #000;
           box-shadow: 4px 4px 0 0 #000;
   border: 2px solid #000;
