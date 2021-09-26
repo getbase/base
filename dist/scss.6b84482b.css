@@ -1064,7 +1064,7 @@ h6, .h6 {
 }
 
 .banner {
-  background-color: #ffcc00;
+  background-color: #ffdd68;
   color: #010101;
 }
 
@@ -1150,7 +1150,8 @@ h6, .h6 {
   border-radius: 100%;
 }
 .device .device-inner {
-  background: url(/atoz-driving-school.a3cd4713.jpg) 0 0 no-repeat #333;
+  background: url(/blank.373ac74a.jpg) 0 0 no-repeat #333;
+  background-size: 100%;
   width: 440px;
   height: 340px;
   margin: 0 auto;
