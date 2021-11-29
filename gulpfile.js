@@ -4,7 +4,7 @@ const browserSync = require('browser-sync');
 const cssnano = require('cssnano');
 const del = require('del');
 const postcss = require('gulp-postcss');
-const gulpSass = require('gulp-sass');
+const gulpSass = require('gulp-sass')(require('sass'));
 const gulpLess = require('gulp-less');
 
 // Watch HTML Files
