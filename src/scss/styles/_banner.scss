@@ -48,12 +48,25 @@
 }
 
 .device {
-  width: 480px;
-  height: 400px;
+  width: 100%;
+  height: 200px;
   background: #fff;
-  border-radius: 12px;
+  border-radius: 12px 12px 0 0;
   position: relative;
   padding: 40px 10px 10px 10px;
+  @include breakpoint(m) {
+    width: 480px;
+    height: 280px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @include breakpoint(l) {
+    width: 480px;
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 12px;
+  }
   &:before {
     content: "";
     width: 8px;
@@ -67,16 +80,27 @@
     border-radius: 100%;
   }
   .device-inner {
-    background: url(../img/blank.jpg) 0 0 no-repeat #333;
-    background-size: 100%;
-    width: 440px;
-    height: 340px;
+    background: url(../img/peak-crypto.svg) 50% 50% no-repeat #1f2937;
+    background-size: 60%;
+    width: 100%;
+    height: 160px;
     margin: 0 auto;
     display: block;
-    border-radius: 10px;
+    border-radius: 0;
     transition: all .3s;
     &:hover, &:focus {
       opacity: .7;
+    }
+    @include breakpoint(m) {
+      width: 440px;
+      height: 240px;
+      border-radius: 0;
+      background-size: 90%;
+    }
+    @include breakpoint(l) {
+      width: 440px;
+      height: 340px;
+      border-radius: 10px;
     }
   }
 }

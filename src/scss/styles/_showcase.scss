@@ -4,15 +4,7 @@
   background-color: $white;
   margin-bottom: 20px;
   position: relative;
-  @include breakpoint(m) {
-    min-height: 300px;
-  }
-  @include breakpoint(l) {
-    min-height: 360px;
-  }
-  @include breakpoint(xl) {
-    min-height: 320px;
-  }
+  min-height: 360px;
   a {
     text-decoration: none;
     transition: all .3s;
@@ -57,6 +49,13 @@
     right: 0;
     background: #ffcc00;
     color: #111;
+  }
+}
+.showcase-peak-crypto {
+  background: url(../img/peak-crypto.svg) 50% 50% no-repeat #1f2937;
+  background-size: 50%;
+  @include breakpoint(m) {
+    background-size: 80%;
   }
 }
 .showcase-beauty {
